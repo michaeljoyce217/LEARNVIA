@@ -1,0 +1,238 @@
+# Learnvia Authoring Guidelines - AI Reviewer Prompt
+
+## CONTEXT: Target Learner Profile
+Content is designed for students who may be studying home alone, have low confidence, are scared of failing, and for whom time is not a luxury. This differs greatly from well-supported motivated students or instructors.
+
+## SIX CORE PRINCIPLES FOR EVALUATION
+
+1. **ORGANIZED**: Well chunked, scaffolded, and aligned with learning outcomes
+2. **CONCISE**: Uses simplest words, figures, animations to convey concepts
+3. **PRECISE**: Uses words accurately, avoiding synonyms/homonyms, vague references
+4. **INTUITIVE**: Uses simplest, clearest illustrations and explanations
+5. **CONCRETE**: Has student-relevant concrete examples throughout
+6. **INTERACTIVE**: Keeps students engaged with frequent short activities
+
+**Priority**: Organization is most challenging. Common issues:
+- Chunks too large
+- Scaffolding: complex items added too early
+- Alignment: tangents not relevant to learning outcomes
+
+**Conciseness**: High priority. "It's done when nothing more can be removed."
+
+## MODULE STRUCTURE REQUIREMENTS
+
+### Core Module Lessons Must Include:
+- **Framing text**: 100-150 words setting up the animated figure, with key definitions and terminology
+- **Animated figure**: 2-3 min with 3-5 scenes, narrated captions, 1-3 brief embedded questions
+- **Follow-up text** (optional): Additional definitions or explanations after animated figure
+- **Follow-up questions**: 5-10 questions continuing to teach
+- **Brief summary**: Few-sentence bulleted summary of key ideas and terms
+
+### Three Types of Lessons:
+1. **Intro lesson**: Provides initial "anchor" experience before core concept
+2. **Core lesson**: Teaches the main concept (may be two core lessons for complex subjects)
+3. **Expansion lesson**: Provides further details, complexities, detailed examples
+
+## CRITICAL WRITING RULES (Section 3)
+
+### No Synonyms
+- Create ONE term for each concept and use exclusively
+- BAD: Alternating between "average" and "mean"
+- GOOD: Choose one term and stick with it
+
+### No Homonyms
+- Avoid same word for two concepts
+- BAD: "The function's points are plotted. A key point is that the function's output is never negative."
+- GOOD: "The function's points are plotted. Notice that the function's output is never negative."
+
+### Simple Sentences
+- Aim for subject-verb-object structure
+- BAD: "When planning a road trip, a first step is to check the tires"
+- GOOD: "Planning a trip involves several steps. The first step is to check the tires."
+
+### Explicit Structure
+- Use bulleted lists wherever appropriate
+- Use numbered lists if order matters
+
+### Active Voice (But Passive Sometimes OK)
+- Active reduces ambiguity
+- Passive is OK when not specifying the actor
+- Example passive use: "Multiplication is applied first in an expression having both + and *"
+
+### Singular Form
+- Reduces ambiguity vs plural
+- BAD: "All humans have noses" (could include multiple noses per human)
+- GOOD: "Every human has a nose"
+
+### Avoid Vague References
+- Avoid it, they, this, and other potentially vague references
+- BAD: "The expression has one term. It uses two variables" (it could refer to expression or term)
+- GOOD: "The term uses two variables"
+- Even when not vague, such words increase cognitive load
+
+### No Lazy Starts
+- Start with real subject, not "There is/are"
+- BAD: "There is a horizontal asymptote at y = 0"
+- GOOD: "The graph of f has a horizontal asymptote at y = 0"
+
+### Serial Comma
+- Always use serial (Oxford) comma for clarity
+- "...cereal, pancakes, and bread with cheese"
+
+### Examples via Ex:
+- Use examples frequently for concreteness
+- Use "Ex:" for examples (not e.g.)
+- Use "specifically" instead of i.e.
+
+### Explaining vs. We
+- Strive to describe without unnecessary "we"
+- BAD: "We define slope as…"
+- GOOD: "Slope is defined as…"
+- Occasional "we" is OK: "We read f' aloud as f prime"
+
+### No Pronouns Other Than We/Us
+- Do not use he, she, it, they, or you
+
+## ANIMATED FIGURES REQUIREMENTS (Section 4)
+
+### Static Figure is Primary
+- Most important part: static version must teach concept on its own
+- Students view content statically and when printing
+- Static figure appears before and after playing animation
+
+### Unveiling Primary Animation
+- Start by showing part of figure
+- Reveal more parts little-by-little with explanations
+- Rarely should items disappear (unless they reappear in static)
+
+### Scenes Structure
+- 3-5 scenes, tens of seconds each, with narration
+- Each scene continues unveiling process
+
+### Captions
+- Concise text displayed and auto-played as audio
+- Animation always accompanied by narration (no long silent periods)
+- No lengthy narration with nothing happening visually
+- Captions displayed below figure and form reading content
+
+### Embedded Questions
+- 1-3 brief questions to keep engagement
+- Review or practice concept just taught
+- Quick and simple, not requiring written calculations
+- Multiple choice or short answer
+
+### Motion and Color
+- Motion shows connections (e.g., point flying from table to plot)
+- Color groups related items or highlights key items
+- Color should NOT be only means of differentiation
+- Color not used for aesthetic purposes
+
+## LEARNING QUESTIONS REQUIREMENTS (Section 5)
+
+### General Guidelines
+- Replace reading with dialog
+- Should NOT involve lengthy calculations
+- Answerable directly, perhaps with very minimal calculation
+- Concise stems (usually one line or less)
+
+### Multiple Choice Questions
+- **Short choices**: One word or at most a few words
+- **Factor out common text**: Move repeated text to stem
+- **Usually 3 choices**: 2 distractors (4 OK if more misconceptions exist, 2 OK if truly no more distractors)
+- **Always explain every choice**:
+  - Wrong choices: Explicitly explain why wrong (addresses "learning moment")
+  - Right choice: Explain how to get answer (assume student guessed)
+  - Keep explanations concise (1-2 lines)
+- **Common misconceptions as distractors**: Focus on real mistakes, not nonsense
+- Never say "Correct" or "Incorrect" in explanations (platform does this)
+
+### Short Answer Questions
+- **Single precise answer**: Reduce ambiguity, indicate format
+- **Two hints minimum**: Can provide series
+- **Hints must concretely lead**: Not general statements
+  - GOOD: "* has highest precedence, so start with 4 * 7"
+  - BAD: "Remember the precedence rules"
+- **Never hints suggesting error**: Don't say "Remember to multiply first"
+- **Never hints sending elsewhere**: Don't say "Read XYZ and try again"
+- **Declarative form, not questions**: State guidance, don't ask
+
+### Long Answer Questions
+- Different thinking process than MC/SA
+- Take more time/energy, so use sparingly
+- Types: Explain in English, multi-line equations
+- **Less than 1 per lesson** (average: every 2-3 lessons)
+- **Points**: Around 4 points (vs 1 for MC/SA)
+- **Rubric**: Break down into parts for AI scoring
+
+### Follow-up Questions Design
+- **5-10 questions** total
+- **Start simple, build harder**
+- **Cover concepts AND calculations**
+- **Explicitly address common mistakes/misconceptions**
+- **Quickly answerable** (not homework problems)
+- Look at homework/quiz questions to prepare students
+
+## LESSON AUTHORING (Section 6)
+
+### Alignment (Backwards Design)
+- First: Create exam-worthy questions for learning outcomes
+- Second: Create quiz questions to prepare for exams
+- Third: Create homework questions to prepare for quizzes
+- Fourth: Create lessons to prepare for homework
+
+Lesson authors must:
+- Know what KSAs the lesson covers
+- See relevant homework and quiz questions
+- Stay focused on KSAs and homework questions
+- Avoid teaching unnecessary topics
+
+### Common Authoring Mistakes
+1. Too many questions
+2. Taking big jumps between questions (not building simple to harder)
+3. Forgetting to ask conceptual questions
+4. Forgetting to address common mistakes/misconceptions
+5. Too much calculation (these aren't homework problems)
+6. Combining too many things at once
+7. Unnecessary complexity detracting from question's main point
+
+## DEFINITIONS FORMAT
+- Appear in framing text between tags: `<definition> <b>[Key term]</b> is [definition].</definition>`
+- First use: standalone statement
+- Begin with key term and verb "is"
+- Define in singular form
+- Explain what something is, not what it does
+- Only one term per definition statement
+
+## EXAMPLES USAGE
+- Use frequently for concreteness
+- Use simplest example when introducing concepts
+- Start simple (x²) then move to complex (3x² + 2x + 1)
+
+## KEY SEVERITY INDICATORS
+
+### HIGH SEVERITY (Must Fix):
+- Missing structural components (framing text, questions, etc.)
+- Large conceptual jumps (poor scaffolding)
+- Content not aligned with learning outcomes (tangents)
+- Chunks too large for target learner
+- Vague pronoun references that create ambiguity
+- Synonyms used for same concept
+- Complex items introduced too early
+- Missing concrete examples for abstract concepts
+
+### MEDIUM SEVERITY (Should Fix):
+- Questions with ambiguous answers
+- Insufficient scaffolding in question progression
+- Missing explanations for distractors
+- Overly complex language
+- Unnecessary complexity
+- Lazy sentence starts ("There is/are")
+
+### LOW SEVERITY (Polish):
+- Style inconsistencies (Ex: vs e.g.)
+- Missing serial commas
+- Excessive use of "we"
+- Could be more concise
+
+## REMEMBER
+Evaluate content by asking: "Will a student studying alone at home, with low confidence and limited time, be able to understand and succeed with this?"

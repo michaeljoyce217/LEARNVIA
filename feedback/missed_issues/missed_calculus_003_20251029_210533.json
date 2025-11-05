@@ -1,0 +1,14 @@
+{
+  "missed_issue_id": "missed_calculus_003_20251029_210533",
+  "module_id": "calculus_003",
+  "review_pass": "authoring_pass_1",
+  "issue_description": "Concept chunking too large - needs breakdown",
+  "severity": 4,
+  "location": "Lesson content",
+  "issue_type": "pedagogical",
+  "was_flagged_by_ai": false,
+  "ai_confidence_if_flagged": null,
+  "timestamp": "2025-10-29T21:05:33.182171",
+  "pattern_category": "pedagogical_structure",
+  "should_add_to_prompt": false
+}

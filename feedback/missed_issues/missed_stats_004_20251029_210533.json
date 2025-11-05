@@ -1,0 +1,14 @@
+{
+  "missed_issue_id": "missed_stats_004_20251029_210533",
+  "module_id": "stats_004",
+  "review_pass": "authoring_pass_1",
+  "issue_description": "Missing scaffolding between mean and standard deviation",
+  "severity": 4,
+  "location": "Section 3",
+  "issue_type": "pedagogical",
+  "was_flagged_by_ai": false,
+  "ai_confidence_if_flagged": null,
+  "timestamp": "2025-10-29T21:05:33.182728",
+  "pattern_category": "pedagogical_structure",
+  "should_add_to_prompt": false
+}

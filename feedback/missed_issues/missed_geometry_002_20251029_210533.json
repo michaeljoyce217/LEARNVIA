@@ -1,0 +1,14 @@
+{
+  "missed_issue_id": "missed_geometry_002_20251029_210533",
+  "module_id": "geometry_002",
+  "review_pass": "authoring_pass_1",
+  "issue_description": "Missing student-relevant example",
+  "severity": 3,
+  "location": "Applications",
+  "issue_type": "examples",
+  "was_flagged_by_ai": false,
+  "ai_confidence_if_flagged": null,
+  "timestamp": "2025-10-29T21:05:33.184788",
+  "pattern_category": "missing_examples",
+  "should_add_to_prompt": false
+}

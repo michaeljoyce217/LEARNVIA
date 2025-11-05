@@ -1,0 +1,14 @@
+{
+  "missed_issue_id": "missed_trig_005_20251029_210533",
+  "module_id": "trig_005",
+  "review_pass": "authoring_pass_1",
+  "issue_description": "Chunking issue - jumps from angles to unit circle",
+  "severity": 4,
+  "location": "Lesson",
+  "issue_type": "pedagogical",
+  "was_flagged_by_ai": false,
+  "ai_confidence_if_flagged": null,
+  "timestamp": "2025-10-29T21:05:33.183342",
+  "pattern_category": "pedagogical_structure",
+  "should_add_to_prompt": false
+}
