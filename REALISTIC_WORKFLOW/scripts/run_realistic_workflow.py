@@ -337,6 +337,15 @@ class RealisticWorkflowOrchestrator:
         logger.info("\n" + "=" * 70)
         logger.info("WORKFLOW COMPLETE")
         logger.info("=" * 70)
+
+        # Generate visual report
+        logger.info("\nGenerating comprehensive visual report...")
+        try:
+            from generate_visual_report import main as generate_report
+            report_path = generate_report()
+            logger.info(f"Visual report generated: {report_path}")
+        except Exception as e:
+            logger.error(f"Could not generate visual report: {e}")
         logger.info(f"Total improvement: {summary['results']['total_improvement']:.1f}%")
         logger.info(f"Final issues remaining: {summary['results']['pass4_issues']}")
         logger.info(f"Summary saved to: workflow_summary.json")

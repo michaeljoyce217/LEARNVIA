@@ -1,14 +1,14 @@
 {
   "module_id": "data_structures_intro",
   "review_pass": "content_pass_2",
-  "timestamp": "2025-11-06T07:32:08.172144",
+  "timestamp": "2025-11-06T07:51:28.908427",
   "consensus_results": [
     {
       "issue": "Missing clear learning objectives at module start",
       "severity": 5,
-      "confidence": 0.6956521739130435,
+      "confidence": 0.5652173913043478,
       "confidence_level": "moderate",
-      "agreeing_reviewers": 16,
+      "agreeing_reviewers": 13,
       "total_reviewers": 23,
       "location": "Module introduction",
       "suggestions": [
@@ -18,11 +18,23 @@
       "should_provide_solution": false
     },
     {
+      "issue": "Technical term 'heap property' used without definition",
+      "severity": 3,
+      "confidence": 0.6956521739130435,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 16,
+      "total_reviewers": 23,
+      "location": "Search for 'various'",
+      "suggestions": [],
+      "issue_type": "clarity",
+      "should_provide_solution": false
+    },
+    {
       "issue": "Practice problem references concept (LRU) not covered in content",
       "severity": 4,
-      "confidence": 0.5652173913043478,
+      "confidence": 0.43478260869565216,
       "confidence_level": "moderate",
-      "agreeing_reviewers": 13,
+      "agreeing_reviewers": 10,
       "total_reviewers": 23,
       "location": "Practice Problems",
       "suggestions": [],
@@ -30,23 +42,11 @@
       "should_provide_solution": false
     },
     {
-      "issue": "Technical term 'heap property' used without definition",
-      "severity": 3,
-      "confidence": 0.6956521739130435,
-      "confidence_level": "moderate",
-      "agreeing_reviewers": 16,
-      "total_reviewers": 23,
-      "location": "Near 'heap property'",
-      "suggestions": [],
-      "issue_type": "clarity",
-      "should_provide_solution": false
-    },
-    {
       "issue": "Vague language: 'various' - be more specific",
-      "severity": 2,
-      "confidence": 0.5652173913043478,
-      "confidence_level": "moderate",
-      "agreeing_reviewers": 13,
+      "severity": 1,
+      "confidence": 0.08695652173913043,
+      "confidence_level": "very_low",
+      "agreeing_reviewers": 2,
       "total_reviewers": 23,
       "location": "Search for 'various'",
       "suggestions": [],
@@ -58,16 +58,16 @@
     "Content builds complexity gradually",
     "Examples effectively illustrate concepts"
   ],
-  "estimated_revision_time": 32,
+  "estimated_revision_time": 8,
   "priority_matrix": {
     "immediate": [],
     "important": [
       {
         "issue": "Missing clear learning objectives at module start",
         "severity": 5,
-        "confidence": 0.6956521739130435,
+        "confidence": 0.5652173913043478,
         "confidence_level": "moderate",
-        "agreeing_reviewers": 16,
+        "agreeing_reviewers": 13,
         "total_reviewers": 23,
         "location": "Module introduction",
         "suggestions": [
@@ -79,9 +79,9 @@
       {
         "issue": "Practice problem references concept (LRU) not covered in content",
         "severity": 4,
-        "confidence": 0.5652173913043478,
+        "confidence": 0.43478260869565216,
         "confidence_level": "moderate",
-        "agreeing_reviewers": 13,
+        "agreeing_reviewers": 10,
         "total_reviewers": 23,
         "location": "Practice Problems",
         "suggestions": [],
@@ -97,24 +97,25 @@
         "confidence_level": "moderate",
         "agreeing_reviewers": 16,
         "total_reviewers": 23,
-        "location": "Near 'heap property'",
-        "suggestions": [],
-        "issue_type": "clarity",
-        "should_provide_solution": false
-      },
-      {
-        "issue": "Vague language: 'various' - be more specific",
-        "severity": 2,
-        "confidence": 0.5652173913043478,
-        "confidence_level": "moderate",
-        "agreeing_reviewers": 13,
-        "total_reviewers": 23,
         "location": "Search for 'various'",
         "suggestions": [],
         "issue_type": "clarity",
         "should_provide_solution": false
       }
     ],
-    "optional": []
+    "optional": [
+      {
+        "issue": "Vague language: 'various' - be more specific",
+        "severity": 1,
+        "confidence": 0.08695652173913043,
+        "confidence_level": "very_low",
+        "agreeing_reviewers": 2,
+        "total_reviewers": 23,
+        "location": "Search for 'various'",
+        "suggestions": [],
+        "issue_type": "clarity",
+        "should_provide_solution": false
+      }
+    ]
   }
 }
