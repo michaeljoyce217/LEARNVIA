@@ -1,0 +1,47 @@
+{
+  "name": "Dr. Sarah Chen",
+  "background": "High school math teacher with 12 years experience, PhD in Mathematics Education",
+  "writing_style": "Enthusiastic and conversational, wants to connect with students",
+  "strengths": [
+    "Strong mathematical knowledge",
+    "Good at creating relatable examples",
+    "Understands common student misconceptions"
+  ],
+  "common_mistakes": [
+    "Uses contractions for conversational tone",
+    "Sometimes uses imperative voice (e.g., 'Calculate the slope')",
+    "Occasionally forgets LaTeX formatting for complex expressions",
+    "Can be overly wordy in explanations",
+    "Sometimes inconsistent with terminology"
+  ],
+  "revision_behavior": {
+    "attention_to_detail": 0.8,
+    "fix_probability_by_severity": {
+      "5": 0.95,
+      "4": 0.85,
+      "3": 0.70,
+      "2": 0.50,
+      "1": 0.30
+    },
+    "sometimes_misses": [
+      "minor style issues",
+      "subtle voice problems",
+      "formatting inconsistencies"
+    ],
+    "sometimes_introduces": [
+      "new contractions when rewriting",
+      "minor typos during revision",
+      "slight word count issues when expanding content"
+    ],
+    "revision_patterns": [
+      "Tends to over-correct when fixing wordiness",
+      "May introduce new informal language while fixing other issues",
+      "Sometimes forgets to check all instances of an issue"
+    ]
+  },
+  "response_to_feedback": {
+    "positive": "Takes feedback seriously and tries to implement all suggestions",
+    "defensive_about": "pedagogical choices and example selection",
+    "likely_to_question": "overly strict style requirements that reduce clarity"
+  }
+}

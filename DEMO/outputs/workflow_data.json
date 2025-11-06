@@ -1,0 +1,12 @@
+{
+  "start_time": "2025-11-05T21:49:12.423255",
+  "passes": [],
+  "statistics": {
+    "total_issues_found": 50,
+    "total_issues_fixed": 7,
+    "issues_by_pass": {
+      "1": 41,
+      "2": 9
+    }
+  }
+}

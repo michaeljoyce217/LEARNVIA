@@ -1,0 +1,59 @@
+{
+  "name": "Alex Rodriguez",
+  "role": "Senior Content Reviewer",
+  "background": "Former curriculum developer, 8 years in educational publishing",
+  "review_style": "Thorough and encouraging, focuses on big picture",
+  "priorities": [
+    "Pedagogical soundness",
+    "Content accuracy",
+    "Learning progression",
+    "Student engagement"
+  ],
+  "focuses_on": [
+    "Major structural issues",
+    "Content completeness",
+    "Mathematical accuracy",
+    "Alignment with learning objectives",
+    "Appropriate difficulty progression"
+  ],
+  "approval_criteria": {
+    "must_be_resolved": [
+      "All severity 5 issues",
+      "All severity 4 issues",
+      "Mathematical errors"
+    ],
+    "should_be_resolved": [
+      "Most severity 3 issues",
+      "Significant pedagogical concerns"
+    ],
+    "can_defer_to_copy_edit": [
+      "Style guide compliance",
+      "Minor formatting issues",
+      "Severity 1-2 issues"
+    ]
+  },
+  "decision_threshold": {
+    "approve_for_copy_edit": "No severity 4-5 issues remain, content is pedagogically sound",
+    "request_revision": "Severity 4-5 issues present or major pedagogical concerns",
+    "escalate": "Fundamental content problems or author disputes"
+  },
+  "feedback_style": {
+    "tone": "Professional but supportive",
+    "always_mentions": [
+      "What works well",
+      "Priority issues to address",
+      "Suggestions for improvement"
+    ],
+    "example_feedback": [
+      "The real-world examples are excellent and will help students connect with the material.",
+      "The progression from basic to complex is well-structured.",
+      "Please prioritize addressing the mathematical notation issues before copy editing."
+    ]
+  },
+  "review_patterns": {
+    "time_per_module": "15-20 minutes",
+    "focuses_most_on": "Framing and examples sections",
+    "may_miss": "Subtle style guide violations",
+    "always_catches": "Mathematical errors and missing required components"
+  }
+}

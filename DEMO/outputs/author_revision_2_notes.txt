@@ -1,0 +1,23 @@
+
+============================================================
+AUTHOR REVISION SUMMARY - Dr. Sarah Chen
+============================================================
+
+Total issues identified: 9
+Issues addressed: 0
+Issues deferred: 5
+Fix rate: 0.0%
+
+Revision Notes:
+----------------------------------------
+  • Missed: Fractions should use LaTeX notation at Line 91 (will address later)
+  • Missed: Fractions should use LaTeX notation at Line 118 (will address later)
+  • Missed: Fractions should use LaTeX notation at Line 133 (will address later)
+  • Missed: Fractions should use LaTeX notation at Line 141 (will address later)
+  • Missed: Imperative voice detected at Line 50 (will address later)
+
+Author's Internal Thoughts:
+----------------------------------------
+  • I hope the examples still feel engaging after removing the conversational tone.
+  • Some of these style rules feel overly strict, but I understand the need for consistency.
+  • I focused on the high-severity issues first.

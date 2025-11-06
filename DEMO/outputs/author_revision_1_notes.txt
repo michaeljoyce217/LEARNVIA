@@ -1,0 +1,33 @@
+
+============================================================
+AUTHOR REVISION SUMMARY - Dr. Sarah Chen
+============================================================
+
+Total issues identified: 41
+Issues addressed: 7
+Issues deferred: 7
+Fix rate: 17.1%
+
+Revision Notes:
+----------------------------------------
+  • Missed: Mathematical variables should use LaTeX at Line 15 (will address later)
+  • Missed: Mathematical variables should use LaTeX at Line 30 (will address later)
+  • Missed: Fractions should use LaTeX notation at Line 92 (will address later)
+  • Missed: Fractions should use LaTeX notation at Line 117 (will address later)
+  • Missed: Contraction 'don't' found at Line 5 (will address later)
+  • Fixed: Contraction 'let's' found at Line 5
+  • Missed: Contraction 'you're' found at Line 21 (will address later)
+  • Fixed: Imperative voice detected at Line 51
+  • Fixed: Imperative voice detected at Line 57
+  • Fixed: Imperative voice detected at Line 57
+  • Fixed: Imperative voice detected at Line 61
+  • Fixed: Imperative voice detected at Line 73
+  • Fixed: Imperative voice detected at Line 81
+  • Missed: Imperative voice detected at Line 112 (will address later)
+  • Adjusted framing word count from 97 to ~125 words
+
+Author's Internal Thoughts:
+----------------------------------------
+  • The mathematical notation in LaTeX should be clearer now.
+  • Some of these style rules feel overly strict, but I understand the need for consistency.
+  • I tried to maintain clarity while fixing the style issues.

@@ -1,0 +1,310 @@
+
+============================================================
+PASS 1 FEEDBACK REPORT
+============================================================
+
+
+MEDIUM SEVERITY (3) - 40 issues
+----------------------------------------
+
+[authoring_agent_03] (rubric_authoring)
+Competency: framing
+Location: Framing section
+Issue: Framing word count is 92, should be 100-150 words
+Suggestion: Adjust framing text to meet word count requirements
+Caught by rubric: Yes
+
+[authoring_agent_09] (rubric_authoring)
+Competency: formatting
+Location: Line 13
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_13] (rubric_authoring)
+Competency: formatting
+Location: Line 15
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_10] (rubric_authoring)
+Competency: formatting
+Location: Line 29
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_04] (rubric_authoring)
+Competency: formatting
+Location: Line 30
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_13] (rubric_authoring)
+Competency: formatting
+Location: Line 33
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_03] (rubric_authoring)
+Competency: formatting
+Location: Line 33
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_15] (rubric_authoring)
+Competency: formatting
+Location: Line 63
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_03] (rubric_authoring)
+Competency: formatting
+Location: Line 64
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_13] (rubric_authoring)
+Competency: formatting
+Location: Line 65
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_02] (rubric_authoring)
+Competency: formatting
+Location: Line 75
+Issue: Mathematical variables should use LaTeX
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_07] (rubric_authoring)
+Competency: formatting
+Location: Line 92
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_05] (rubric_authoring)
+Competency: formatting
+Location: Line 98
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_05] (rubric_authoring)
+Competency: formatting
+Location: Line 117
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_04] (rubric_authoring)
+Competency: formatting
+Location: Line 119
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_06] (rubric_authoring)
+Competency: formatting
+Location: Line 120
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_03] (rubric_authoring)
+Competency: formatting
+Location: Line 134
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[authoring_agent_01] (rubric_authoring)
+Competency: formatting
+Location: Line 142
+Issue: Fractions should use LaTeX notation
+Suggestion: Use proper LaTeX notation for mathematical expressions
+Caught by rubric: Yes
+
+[style_agent_04] (rubric_style)
+Competency: style
+Location: Line 5
+Issue: Contraction 'don't' found
+Suggestion: Replace with 'do not'
+Caught by rubric: Yes
+
+[style_agent_10] (rubric_style)
+Competency: style
+Location: Line 5
+Issue: Contraction 'let's' found
+Suggestion: Replace with 'let us'
+Caught by rubric: Yes
+
+[style_agent_04] (rubric_style)
+Competency: style
+Location: Line 5
+Issue: Contraction 'it's' found
+Suggestion: Replace with 'it is'
+Caught by rubric: Yes
+
+[style_agent_11] (rubric_style)
+Competency: style
+Location: Line 5
+Issue: Contraction 'we'll' found
+Suggestion: Replace with 'we will'
+Caught by rubric: Yes
+
+[style_agent_02] (rubric_style)
+Competency: style
+Location: Line 5
+Issue: Contraction 'you'll' found
+Suggestion: Replace with 'you will'
+Caught by rubric: Yes
+
+[style_agent_12] (rubric_style)
+Competency: style
+Location: Line 20
+Issue: Contraction 'it's' found
+Suggestion: Replace with 'it is'
+Caught by rubric: Yes
+
+[style_agent_11] (rubric_style)
+Competency: style
+Location: Line 21
+Issue: Contraction 'you're' found
+Suggestion: Replace with 'you are'
+Caught by rubric: Yes
+
+[style_agent_12] (rubric_style)
+Competency: style
+Location: Line 26
+Issue: Contraction 'let's' found
+Suggestion: Replace with 'let us'
+Caught by rubric: Yes
+
+[style_agent_10] (rubric_style)
+Competency: style
+Location: Line 39
+Issue: Contraction 'it's' found
+Suggestion: Replace with 'it is'
+Caught by rubric: Yes
+
+[style_agent_14] (rubric_style)
+Competency: style
+Location: Line 39
+Issue: Contraction 'isn't' found
+Suggestion: Replace with 'is not'
+Caught by rubric: Yes
+
+[style_agent_01] (rubric_style)
+Competency: style
+Location: Line 52
+Issue: Contraction 'let's' found
+Suggestion: Replace with 'let us'
+Caught by rubric: Yes
+
+[style_agent_13] (rubric_style)
+Competency: style
+Location: Line 85
+Issue: Contraction 'you're' found
+Suggestion: Replace with 'you are'
+Caught by rubric: Yes
+
+[style_agent_09] (rubric_style)
+Competency: style
+Location: Line 105
+Issue: Contraction 'it's' found
+Suggestion: Replace with 'it is'
+Caught by rubric: Yes
+
+[style_agent_01] (rubric_style)
+Competency: style
+Location: Line 106
+Issue: Contraction 'it's' found
+Suggestion: Replace with 'it is'
+Caught by rubric: Yes
+
+[style_agent_07] (rubric_style)
+Competency: voice
+Location: Line 51
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[style_agent_01] (rubric_style)
+Competency: voice
+Location: Line 57
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[style_agent_10] (rubric_style)
+Competency: voice
+Location: Line 57
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[style_agent_04] (rubric_style)
+Competency: voice
+Location: Line 61
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[style_agent_01] (rubric_style)
+Competency: voice
+Location: Line 73
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[style_agent_10] (rubric_style)
+Competency: voice
+Location: Line 81
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[style_agent_10] (rubric_style)
+Competency: voice
+Location: Line 112
+Issue: Imperative voice detected
+Suggestion: Rephrase to avoid direct commands
+Caught by rubric: Yes
+
+[generalist_agent_02] (generalist)
+Competency: general
+Location: Real-World Applications section
+Issue: Real-world applications section could benefit from more scaffolding
+Suggestion: Consider adding intermediate steps showing how to convert real-world scenarios to slope calculations
+Caught by rubric: No (generalist insight)
+
+LOW SEVERITY (2) - 1 issues
+----------------------------------------
+
+[authoring_agent_07] (rubric_authoring)
+Competency: scaffolding
+Location: Calculating Slope section
+Issue: Good step-by-step breakdown present
+Suggestion: Consider adding a Step 3 for checking the answer
+Caught by rubric: Yes
+
+============================================================
+SUMMARY STATISTICS
+============================================================
+Total issues found: 41
+Issues by rubric-focused agents: 40
+Issues by generalist agents: 1
+
+By agent type:
+  - rubric_authoring: 19
+  - rubric_style: 21
+  - generalist: 1
