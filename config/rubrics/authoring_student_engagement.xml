@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Student Engagement</name>
+    <category>authoring</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates how well content maintains student interest, motivation, and active
+    participation throughout the learning experience.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Content actively discourages or demotivates learners</criterion>
+        <criterion>No consideration of student perspective or needs</criterion>
+        <criterion>Completely passive learning with no interaction</criterion>
+        <criterion>Intimidating or exclusionary language</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Starting with "This is extremely difficult"</example>
+        <example type="violation">No opportunities for student input or practice</example>
+        <example type="violation">Using language that implies inadequacy</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Minimal engagement strategies present</criterion>
+        <criterion>No relevance to student interests or goals</criterion>
+        <criterion>Monotonous presentation style throughout</criterion>
+        <criterion>Missing interactive elements where needed</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Pure lecture format with no variety</example>
+        <example type="violation">No real-world connections or applications</example>
+        <example type="violation">Single mode of presentation for all content</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Inconsistent engagement strategies</criterion>
+        <criterion>Limited variety in activities</criterion>
+        <criterion>Some passive sections that could be activated</criterion>
+        <criterion>Moderate relevance issues</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Long stretches without interaction</example>
+        <example type="violation">Limited connection to student experiences</example>
+        <example type="violation">Repetitive activity types</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small improvements in engagement variety</criterion>
+        <criterion>Minor pacing enhancements possible</criterion>
+        <criterion>Slight improvements in relevance</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add more varied examples</example>
+        <example type="violation">Minor breaks in engagement flow</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor engagement enhancements</criterion>
+        <criterion>Optional motivational additions</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add optional fun facts</example>
+        <example type="violation">Minor variety improvements</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Does the content connect to student interests and goals?</question>
+    <question>Are there regular opportunities for active participation?</question>
+    <question>Is the tone encouraging and supportive?</question>
+    <question>Does the content vary in presentation and activity types?</question>
+    <question>Are students given choices and agency in their learning?</question>
+    <question>Is achievement and progress celebrated?</question>
+    <question>Are challenging concepts presented as achievable?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Start with why - clear relevance and motivation</practice>
+      <practice>Regular interactive elements and self-checks</practice>
+      <practice>Varied presentation modes (text, visual, interactive)</practice>
+      <practice>Encouraging language that builds confidence</practice>
+      <practice>Real-world applications and connections</practice>
+      <practice>Celebration of progress and achievement</practice>
+      <practice>Choice and customization opportunities</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Wall of text with no visual breaks</failure>
+      <failure>Assuming inherent student interest</failure>
+      <failure>No variety in presentation or activities</failure>
+      <failure>Discouraging or intimidating language</failure>
+      <failure>Pure abstraction without concrete relevance</failure>
+      <failure>No acknowledgment of student progress</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Pedagogical Flow">
+      Engagement strategies must align with pedagogical goals
+    </interaction>
+    <interaction competency="Accessibility">
+      Engagement must be inclusive for all learners
+    </interaction>
+    <interaction competency="Assessment Quality">
+      Engaging assessments improve performance
+    </interaction>
+    <interaction competency="Conceptual Clarity">
+      Clear concepts maintain engagement; confusion kills it
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

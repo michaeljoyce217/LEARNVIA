@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Accessibility</name>
+    <category>style</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates content accessibility for diverse learners including those with
+    disabilities, different learning styles, and varying technical capabilities.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Content completely inaccessible to screen readers</criterion>
+        <criterion>Critical information only in images without alt text</criterion>
+        <criterion>Color as only means of conveying information</criterion>
+        <criterion>Content that excludes major learner populations</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Math only as images with no LaTeX/text</example>
+        <example type="violation">Instructions relying solely on color coding</example>
+        <example type="violation">Video content with no captions or transcripts</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Poor screen reader compatibility</criterion>
+        <criterion>Missing alt text for complex diagrams</criterion>
+        <criterion>Insufficient contrast in visual elements</criterion>
+        <criterion>No alternatives for multimedia content</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Complex tables without headers</example>
+        <example type="violation">Diagrams without descriptive text</example>
+        <example type="violation">Low contrast text on backgrounds</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Some accessibility barriers present</criterion>
+        <criterion>Limited accommodation for different learning styles</criterion>
+        <criterion>Moderate readability issues</criterion>
+        <criterion>Some missing alternative formats</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Very long paragraphs without breaks</example>
+        <example type="violation">Limited visual alternatives for text</example>
+        <example type="violation">Some undefined abbreviations</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small accessibility improvements possible</criterion>
+        <criterion>Minor readability enhancements</criterion>
+        <criterion>Slight structure improvements for navigation</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add more descriptive headings</example>
+        <example type="violation">Minor improvements to alt text</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor accessibility enhancements</criterion>
+        <criterion>Optional improvements for edge cases</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add skip navigation links</example>
+        <example type="violation">Optional enhancement descriptions</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Can content be accessed via screen reader?</question>
+    <question>Are visual elements described in text?</question>
+    <question>Is color used appropriately (not as sole indicator)?</question>
+    <question>Is text readable (font size, contrast, spacing)?</question>
+    <question>Are multiple learning modalities supported?</question>
+    <question>Is navigation clear and consistent?</question>
+    <question>Are technical requirements reasonable?</question>
+    <question>Is language clear for non-native speakers?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Alt text for all images and diagrams</practice>
+      <practice>Proper heading hierarchy for navigation</practice>
+      <practice>High contrast text and backgrounds</practice>
+      <practice>Multiple representations of key information</practice>
+      <practice>Clear, simple language where appropriate</practice>
+      <practice>Logical reading order and structure</practice>
+      <practice>Descriptive link text</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Images of text instead of actual text</failure>
+      <failure>Color-only information coding</failure>
+      <failure>Missing structure for screen readers</failure>
+      <failure>Unexplained jargon or abbreviations</failure>
+      <failure>Dense walls of text without breaks</failure>
+      <failure>Inaccessible interactive elements</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Mathematical Formatting">
+      Math must be accessible via proper LaTeX markup
+    </interaction>
+    <interaction competency="Student Engagement">
+      Accessible content engages all learners
+    </interaction>
+    <interaction competency="Conceptual Clarity">
+      Clear explanations improve accessibility
+    </interaction>
+    <interaction competency="Consistency">
+      Consistent structure aids navigation
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

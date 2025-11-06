@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Conceptual Clarity</name>
+    <category>authoring</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates the precision, accuracy, and clarity of concept explanations, ensuring
+    ideas are communicated without ambiguity and with appropriate depth.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Factually incorrect explanations</criterion>
+        <criterion>Fundamentally misleading conceptual models</criterion>
+        <criterion>Contradictory definitions within content</criterion>
+        <criterion>Critical ambiguities in core concepts</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Stating that division by zero equals infinity</example>
+        <example type="violation">Conflicting definitions of the same term</example>
+        <example type="violation">Wrong formulas or mathematical relationships</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Significant conceptual imprecision</criterion>
+        <criterion>Unclear or incomplete definitions</criterion>
+        <criterion>Missing critical distinctions</criterion>
+        <criterion>Oversimplification that obscures understanding</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Not distinguishing between speed and velocity</example>
+        <example type="violation">Vague explanation of key terminology</example>
+        <example type="violation">Mixing correlation with causation</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Moderately unclear explanations</criterion>
+        <criterion>Some imprecise language use</criterion>
+        <criterion>Minor conceptual gaps</criterion>
+        <criterion>Inconsistent terminology usage</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Using technical terms before defining them</example>
+        <example type="violation">Switching between formal and informal definitions</example>
+        <example type="violation">Minor gaps in logical explanation</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small clarifications needed</criterion>
+        <criterion>Minor precision improvements</criterion>
+        <criterion>Slight ambiguities in edge cases</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could be more precise about boundary conditions</example>
+        <example type="violation">Minor terminology consistency issues</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor clarity enhancements</criterion>
+        <criterion>Optional precision improvements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add clarifying parenthetical</example>
+        <example type="violation">Optional additional context</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Are all key terms clearly and accurately defined?</question>
+    <question>Can concepts be misunderstood or misinterpreted?</question>
+    <question>Are explanations factually and conceptually correct?</question>
+    <question>Is the level of detail appropriate for the target audience?</question>
+    <question>Are abstract concepts properly grounded with concrete examples?</question>
+    <question>Are limitations and edge cases appropriately addressed?</question>
+    <question>Is technical language used consistently and correctly?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Define before use for all technical terms</practice>
+      <practice>Multiple representations (verbal, visual, symbolic)</practice>
+      <practice>Clear distinction between similar concepts</practice>
+      <practice>Precise use of mathematical and technical language</practice>
+      <practice>Appropriate use of analogies with stated limitations</practice>
+      <practice>Explicit statement of assumptions and constraints</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Circular definitions</failure>
+      <failure>Overloading students with jargon</failure>
+      <failure>Ambiguous pronoun references</failure>
+      <failure>Mixing colloquial and technical meanings</failure>
+      <failure>Incomplete or hand-wavy explanations</failure>
+      <failure>False analogies or misleading simplifications</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Mathematical Formatting">
+      Clear concepts require proper mathematical notation
+    </interaction>
+    <interaction competency="Pedagogical Flow">
+      Conceptual clarity enables effective learning progression
+    </interaction>
+    <interaction competency="Assessment Quality">
+      Clear concepts enable fair and accurate assessment
+    </interaction>
+    <interaction competency="Accessibility">
+      Clear explanations reduce cognitive load for all learners
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

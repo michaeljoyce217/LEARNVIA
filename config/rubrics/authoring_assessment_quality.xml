@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Assessment Quality</name>
+    <category>authoring</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates the effectiveness, fairness, and alignment of assessments including practice
+    problems, quizzes, and exercises in measuring student understanding.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Incorrect solutions or answer keys</criterion>
+        <criterion>Questions testing content not taught</criterion>
+        <criterion>Ambiguous questions with multiple valid answers</criterion>
+        <criterion>Assessment completely misaligned with learning objectives</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Math problem with wrong solution in answer key</example>
+        <example type="violation">Testing calculus concepts in algebra module</example>
+        <example type="violation">Question phrasing allows multiple interpretations</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Poor alignment with instructional content</criterion>
+        <criterion>Inappropriate difficulty progression</criterion>
+        <criterion>Missing essential assessment components</criterion>
+        <criterion>Unclear grading criteria or rubrics</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Practice problems much harder than examples</example>
+        <example type="violation">No problems testing key concepts</example>
+        <example type="violation">Vague instructions for open-ended questions</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Uneven coverage of learning objectives</criterion>
+        <criterion>Some misalignment in difficulty</criterion>
+        <criterion>Insufficient variety in question types</criterion>
+        <criterion>Moderate clarity issues in instructions</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">80% of questions test only 20% of content</example>
+        <example type="violation">Only multiple choice when skills need demonstration</example>
+        <example type="violation">Slightly confusing wording in some problems</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small improvements in question variety</criterion>
+        <criterion>Minor difficulty balancing</criterion>
+        <criterion>Slight instruction clarifications needed</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add more application problems</example>
+        <example type="violation">Minor wording improvements possible</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor assessment enhancements</criterion>
+        <criterion>Optional variety additions</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add bonus challenge questions</example>
+        <example type="violation">Minor formatting preferences</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Do assessments accurately measure the stated learning objectives?</question>
+    <question>Are questions clear and unambiguous?</question>
+    <question>Is the difficulty progression appropriate?</question>
+    <question>Are answer keys and solutions correct and complete?</question>
+    <question>Do students have adequate practice before assessment?</question>
+    <question>Is there variety in assessment types and cognitive levels?</question>
+    <question>Are grading criteria explicit and fair?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Clear alignment between objectives, instruction, and assessment</practice>
+      <practice>Gradual difficulty progression in practice sets</practice>
+      <practice>Mix of question types (conceptual, computational, application)</practice>
+      <practice>Detailed solutions showing all steps</practice>
+      <practice>Explicit rubrics for open-ended questions</practice>
+      <practice>Regular formative assessment opportunities</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Testing memorization instead of understanding</failure>
+      <failure>Trick questions or gotcha problems</failure>
+      <failure>All-or-nothing scoring without partial credit</failure>
+      <failure>Missing worked solutions for practice</failure>
+      <failure>Difficulty spike from examples to exercises</failure>
+      <failure>Ambiguous or incomplete problem statements</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Pedagogical Flow">
+      Assessment should follow pedagogical progression
+    </interaction>
+    <interaction competency="Conceptual Clarity">
+      Clear concepts enable fair assessment
+    </interaction>
+    <interaction competency="Accessibility">
+      Assessments must be accessible to all learners
+    </interaction>
+    <interaction competency="Student Engagement">
+      Fair assessment maintains student motivation
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

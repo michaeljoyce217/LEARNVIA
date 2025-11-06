@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Structural Integrity</name>
+    <category>authoring</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates the logical organization and coherence of educational content, ensuring proper
+    hierarchy, clear transitions, and appropriate scope for each learning segment.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Missing or incorrect prerequisite dependencies</criterion>
+        <criterion>Circular dependencies in concept progression</criterion>
+        <criterion>Fundamental structural flaws that prevent learning</criterion>
+        <criterion>Complete absence of logical organization</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Teaching derivatives before introducing functions</example>
+        <example type="violation">Module requires concepts taught later in the course</example>
+        <example type="violation">No clear beginning, middle, or end to the lesson</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Significant gaps in logical progression</criterion>
+        <criterion>Poor transitions between major sections</criterion>
+        <criterion>Inconsistent depth across related topics</criterion>
+        <criterion>Missing essential supporting sections</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Jumping from basic addition directly to complex word problems</example>
+        <example type="violation">No summary or conclusion for major topics</example>
+        <example type="violation">Uneven coverage of equally important concepts</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Weak transitions between subsections</criterion>
+        <criterion>Minor organizational inconsistencies</criterion>
+        <criterion>Slightly unbalanced content distribution</criterion>
+        <criterion>Some redundancy in structure</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Abrupt topic shifts within a section</example>
+        <example type="violation">Repeated explanations in different sections</example>
+        <example type="violation">Minor concepts given disproportionate space</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small improvements possible in flow</criterion>
+        <criterion>Minor transition weaknesses</criterion>
+        <criterion>Slight organizational preferences</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could benefit from clearer section headers</example>
+        <example type="violation">Transition sentences could be smoother</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor structural preferences</criterion>
+        <criterion>Cosmetic organizational improvements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could add optional cross-references</example>
+        <example type="violation">Minor reordering might slightly improve flow</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Can a student follow the content linearly without confusion?</question>
+    <question>Are all prerequisites introduced before they're needed?</question>
+    <question>Is there a clear learning path from start to finish?</question>
+    <question>Does each section build logically on previous sections?</question>
+    <question>Are transitions between topics smooth and purposeful?</question>
+    <question>Is the scope of each section appropriate and consistent?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Clear hierarchical organization with numbered sections</practice>
+      <practice>Explicit transitions that connect concepts</practice>
+      <practice>Consistent depth and detail across parallel topics</practice>
+      <practice>Prerequisites clearly stated and properly sequenced</practice>
+      <practice>Logical progression from simple to complex</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Assuming knowledge not yet introduced</failure>
+      <failure>Jumping between difficulty levels erratically</failure>
+      <failure>Missing connections between related concepts</failure>
+      <failure>Overloading early sections with too much detail</failure>
+      <failure>Circular or recursive explanations</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Pedagogical Flow">
+      Strong structural integrity enables smooth pedagogical progression
+    </interaction>
+    <interaction competency="Conceptual Clarity">
+      Clear structure supports conceptual understanding
+    </interaction>
+    <interaction competency="Student Engagement">
+      Logical organization maintains student motivation and reduces cognitive load
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

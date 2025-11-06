@@ -1,16 +1,20 @@
 """
 AI Reviewer implementation for Learnvia content revision system.
 Handles individual reviewers and their interaction with the OpenAI API.
+Supports both XML-based configuration and legacy text-based prompts.
 """
 
 import asyncio
 import json
 import re
-from typing import List, Dict, Any, Optional
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import time
 import os
 from dataclasses import dataclass
+from enum import Enum
 
 # Try to import openai, fall back to mock if not available
 try:
@@ -22,6 +26,215 @@ from .models import (
     ReviewerConfig, ReviewerRole, ReviewPass,
     ReviewFeedback, ModuleContent, SeverityLevel
 )
+
+
+class ConfigMode(Enum):
+    """Configuration mode for the reviewer system."""
+    XML = "xml"  # Use XML-based configuration
+    TEXT = "text"  # Use legacy text-based configuration
+    AUTO = "auto"  # Automatically detect based on available files
+
+
+@dataclass
+class AgentType:
+    """Configuration for agent type (rubric-focused or generalist)."""
+    type: str  # "rubric_focused" or "generalist"
+    competency: Optional[str] = None  # For rubric-focused agents
+    focus_weight: float = 0.8  # Attention weight for rubric
+
+
+class XMLConfigLoader:
+    """Loads and parses XML configuration files for reviewers."""
+
+    def __init__(self, config_dir: str = "/Users/michaeljoyce/Desktop/LEARNVIA/config"):
+        """Initialize the XML configuration loader.
+
+        Args:
+            config_dir: Path to the configuration directory
+        """
+        self.config_dir = Path(config_dir)
+        self.rubrics_dir = self.config_dir / "rubrics"
+        self.templates_dir = self.config_dir / "templates"
+        self._cache = {}
+
+        # Map competency names to rubric files
+        self.competency_to_file = {
+            "Structural Integrity": "authoring_structural_integrity.xml",
+            "Pedagogical Flow": "authoring_pedagogical_flow.xml",
+            "Conceptual Clarity": "authoring_conceptual_clarity.xml",
+            "Assessment Quality": "authoring_assessment_quality.xml",
+            "Student Engagement": "authoring_student_engagement.xml",
+            "Mechanical Compliance": "style_mechanical_compliance.xml",
+            "Mathematical Formatting": "style_mathematical_formatting.xml",
+            "Punctuation & Grammar": "style_punctuation_grammar.xml",
+            "Accessibility": "style_accessibility.xml",
+            "Consistency": "style_consistency.xml"
+        }
+
+    def load_rubric(self, competency_name: str) -> ET.Element:
+        """Load a specific rubric XML file.
+
+        Args:
+            competency_name: Name of the competency to load
+
+        Returns:
+            Parsed XML element for the rubric
+
+        Raises:
+            FileNotFoundError: If the rubric file doesn't exist
+            ET.ParseError: If the XML is malformed
+        """
+        cache_key = f"rubric_{competency_name}"
+
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        if competency_name not in self.competency_to_file:
+            raise ValueError(f"Unknown competency: {competency_name}")
+
+        file_name = self.competency_to_file[competency_name]
+        file_path = self.rubrics_dir / file_name
+
+        if not file_path.exists():
+            raise FileNotFoundError(f"Rubric file not found: {file_path}")
+
+        try:
+            tree = ET.parse(file_path)
+            root = tree.getroot()
+            self._cache[cache_key] = root
+            return root
+        except ET.ParseError as e:
+            raise ET.ParseError(f"Error parsing XML file {file_path}: {e}")
+
+    def load_template(self, template_name: str) -> str:
+        """Load a prompt template XML file.
+
+        Args:
+            template_name: Name of the template file (without .xml)
+
+        Returns:
+            Template content as string
+
+        Raises:
+            FileNotFoundError: If the template file doesn't exist
+        """
+        cache_key = f"template_{template_name}"
+
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        file_path = self.templates_dir / f"{template_name}.xml"
+
+        if not file_path.exists():
+            raise FileNotFoundError(f"Template file not found: {file_path}")
+
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                self._cache[cache_key] = content
+                return content
+        except Exception as e:
+            raise IOError(f"Error reading template file {file_path}: {e}")
+
+    def load_agent_configuration(self) -> ET.Element:
+        """Load the main agent configuration XML.
+
+        Returns:
+            Parsed XML element for agent configuration
+        """
+        cache_key = "agent_config"
+
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        file_path = self.config_dir / "agent_configuration.xml"
+
+        if not file_path.exists():
+            raise FileNotFoundError(f"Agent configuration not found: {file_path}")
+
+        try:
+            tree = ET.parse(file_path)
+            root = tree.getroot()
+            self._cache[cache_key] = root
+            return root
+        except ET.ParseError as e:
+            raise ET.ParseError(f"Error parsing agent configuration: {e}")
+
+    def substitute_variables(self, template: str, variables: Dict[str, str]) -> str:
+        """Replace {{VARIABLES}} in template with actual values.
+
+        Args:
+            template: Template string with {{PLACEHOLDERS}}
+            variables: Dictionary of variable names to values
+
+        Returns:
+            Template with variables substituted
+        """
+        result = template
+
+        for var_name, var_value in variables.items():
+            placeholder = f"{{{{{var_name}}}}}"
+            result = result.replace(placeholder, var_value)
+
+        return result
+
+    def extract_rubric_content(self, rubric_element: ET.Element) -> str:
+        """Extract rubric content as formatted text from XML element.
+
+        Args:
+            rubric_element: Parsed rubric XML element
+
+        Returns:
+            Formatted rubric content as string
+        """
+        content_parts = []
+
+        # Extract metadata
+        metadata = rubric_element.find('metadata')
+        if metadata is not None:
+            name = metadata.findtext('name', 'Unknown')
+            category = metadata.findtext('category', 'Unknown')
+            focus_weight = metadata.findtext('focus_weight', '0.8')
+            content_parts.append(f"RUBRIC: {name} ({category})")
+            content_parts.append(f"Focus Weight: {focus_weight}")
+
+        # Extract purpose
+        purpose = rubric_element.findtext('purpose', '')
+        if purpose:
+            content_parts.append(f"\nPurpose: {purpose.strip()}")
+
+        # Extract evaluation criteria
+        content_parts.append("\n\nEVALUATION CRITERIA:")
+
+        criteria_section = rubric_element.find('evaluation_criteria')
+        if criteria_section is not None:
+            for severity in criteria_section.findall('severity'):
+                level = severity.get('level', '')
+                label = severity.get('label', '')
+                content_parts.append(f"\n[Severity {level} - {label}]")
+
+                criteria = severity.find('criteria')
+                if criteria is not None:
+                    for criterion in criteria.findall('criterion'):
+                        if criterion.text:
+                            content_parts.append(f"  - {criterion.text.strip()}")
+
+                examples = severity.find('examples')
+                if examples is not None:
+                    for example in examples.findall('example'):
+                        if example.text:
+                            ex_type = example.get('type', 'example')
+                            content_parts.append(f"    Example ({ex_type}): {example.text.strip()}")
+
+        # Extract special focus areas if present
+        focus_areas = rubric_element.find('focus_areas')
+        if focus_areas is not None:
+            content_parts.append("\n\nSPECIAL FOCUS AREAS:")
+            for area in focus_areas.findall('area'):
+                if area.text:
+                    content_parts.append(f"  - {area.text.strip()}")
+
+        return "\n".join(content_parts)
 
 
 class APIClient:
@@ -105,13 +318,134 @@ class APIClient:
 class BaseReviewer:
     """Base class for all AI reviewers."""
 
-    def __init__(self, config: ReviewerConfig, api_client: Optional[APIClient] = None):
-        """Initialize reviewer with configuration."""
+    def __init__(self, config: ReviewerConfig, api_client: Optional[APIClient] = None,
+                 agent_type: Optional[AgentType] = None,
+                 xml_loader: Optional[XMLConfigLoader] = None,
+                 config_mode: ConfigMode = ConfigMode.AUTO):
+        """Initialize reviewer with configuration.
+
+        Args:
+            config: Reviewer configuration
+            api_client: API client for OpenAI calls
+            agent_type: Agent type configuration (rubric-focused or generalist)
+            xml_loader: XML configuration loader
+            config_mode: Configuration mode (XML, TEXT, or AUTO)
+        """
         self.config = config
         self.api_client = api_client or APIClient()
+        self.agent_type = agent_type
+        self.xml_loader = xml_loader
+        self.config_mode = config_mode
+
+        # Determine actual config mode if AUTO
+        if self.config_mode == ConfigMode.AUTO:
+            self.config_mode = self._detect_config_mode()
+
+    def _detect_config_mode(self) -> ConfigMode:
+        """Detect whether to use XML or text configuration.
+
+        Returns:
+            ConfigMode.XML if XML files exist, ConfigMode.TEXT otherwise
+        """
+        config_dir = Path("/Users/michaeljoyce/Desktop/LEARNVIA/config")
+
+        # Check if XML configuration exists
+        xml_exists = (
+            (config_dir / "agent_configuration.xml").exists() and
+            (config_dir / "rubrics").exists() and
+            (config_dir / "templates").exists()
+        )
+
+        return ConfigMode.XML if xml_exists else ConfigMode.TEXT
 
     def generate_system_prompt(self) -> str:
-        """Generate the system prompt for this reviewer."""
+        """Generate the system prompt for this reviewer.
+
+        Returns:
+            System prompt string, either from XML or text files
+        """
+        if self.config_mode == ConfigMode.XML and self.xml_loader and self.agent_type:
+            return self._generate_xml_system_prompt()
+        else:
+            return self._generate_text_system_prompt()
+
+    def _generate_xml_system_prompt(self) -> str:
+        """Generate system prompt from XML configuration.
+
+        Returns:
+            System prompt generated from XML templates
+        """
+        try:
+            # Determine template based on agent type
+            if self.agent_type.type == "rubric_focused":
+                template = self.xml_loader.load_template("rubric_focused_agent_template")
+
+                # Load the specific rubric
+                rubric_element = self.xml_loader.load_rubric(self.agent_type.competency)
+                rubric_content = self.xml_loader.extract_rubric_content(rubric_element)
+
+                # Load guidelines
+                authoring_guidelines = self._load_guidelines_file("authoring_prompt_rules.txt")
+                style_guidelines = self._load_guidelines_file("style_prompt_rules.txt")
+
+                # Substitute variables
+                variables = {
+                    "COMPETENCY_NAME": self.agent_type.competency,
+                    "RUBRIC_XML_CONTENT": rubric_content,
+                    "FULL_AUTHORING_GUIDE": authoring_guidelines,
+                    "FULL_STYLE_GUIDE": style_guidelines
+                }
+
+                return self.xml_loader.substitute_variables(template, variables)
+
+            else:  # generalist
+                template = self.xml_loader.load_template("generalist_agent_template")
+
+                # Load guidelines
+                authoring_guidelines = self._load_guidelines_file("authoring_prompt_rules.txt")
+                style_guidelines = self._load_guidelines_file("style_prompt_rules.txt")
+
+                # Substitute variables
+                variables = {
+                    "FULL_AUTHORING_GUIDE": authoring_guidelines,
+                    "FULL_STYLE_GUIDE": style_guidelines
+                }
+
+                return self.xml_loader.substitute_variables(template, variables)
+
+        except Exception as e:
+            print(f"Warning: Error generating XML system prompt: {e}")
+            print("Falling back to text-based prompt")
+            return self._generate_text_system_prompt()
+
+    def _load_guidelines_file(self, filename: str) -> str:
+        """Load guidelines file content.
+
+        Args:
+            filename: Name of the guidelines file
+
+        Returns:
+            File content as string
+        """
+        file_path = Path("/Users/michaeljoyce/Desktop/LEARNVIA/config") / filename
+
+        # Try config directory first
+        if not file_path.exists():
+            # Try root directory as fallback
+            file_path = Path("/Users/michaeljoyce/Desktop/LEARNVIA") / filename
+
+        if file_path.exists():
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return f.read()
+
+        return f"Guidelines file {filename} not found"
+
+    def _generate_text_system_prompt(self) -> str:
+        """Generate system prompt from text files (legacy mode).
+
+        Returns:
+            System prompt generated from text files
+        """
         # Load the appropriate guidelines
         if self.config.role == ReviewerRole.AUTHORING:
             guidelines_path = "/Users/michaeljoyce/Desktop/LEARNVIA/authoring_prompt_rules.txt"
@@ -132,11 +466,44 @@ class BaseReviewer:
         return self.config.get_system_prompt(product_vision, guidelines)
 
     def generate_prompt(self, module: ModuleContent) -> str:
-        """Generate the review prompt for a module."""
+        """Generate the review prompt for a module.
+
+        Args:
+            module: Module content to review
+
+        Returns:
+            Review prompt string
+        """
+        # Add agent type specific instructions if using XML mode
+        agent_type_info = ""
+        if self.config_mode == ConfigMode.XML and self.agent_type:
+            if self.agent_type.type == "rubric_focused":
+                agent_type_info = f"""
+AGENT TYPE: Rubric-Focused Specialist
+COMPETENCY: {self.agent_type.competency}
+FOCUS WEIGHT: {self.agent_type.focus_weight}
+
+You should dedicate {int(self.agent_type.focus_weight * 100)}% of your attention to evaluating against your specialized rubric.
+The remaining {int((1 - self.agent_type.focus_weight) * 100)}% should consider general quality issues.
+"""
+            else:
+                agent_type_info = """
+AGENT TYPE: Generalist Reviewer
+
+You should evaluate holistically across all competencies, identifying cross-cutting issues
+and ensuring overall content quality and cohesion. Pay special attention to:
+- Issues that span multiple competencies
+- Overall flow and coherence
+- Cumulative effect of multiple small issues
+- Balance between different quality aspects
+"""
+
         prompt = f"""Review the following educational module content:
 
 MODULE CONTENT:
 {module.content}
+
+{agent_type_info}
 
 FOCUS AREA: {self.config.focus_area}
 
@@ -206,6 +573,83 @@ Remember to evaluate from the perspective of a student studying home alone with 
             feedback_list.append(feedback)
 
         return feedback_list
+
+
+class RubricFocusedReviewer(BaseReviewer):
+    """Reviewer specialized in evaluating against a specific rubric."""
+
+    def __init__(self, config: ReviewerConfig, competency: str,
+                 api_client: Optional[APIClient] = None,
+                 xml_loader: Optional[XMLConfigLoader] = None):
+        """Initialize rubric-focused reviewer.
+
+        Args:
+            config: Reviewer configuration
+            competency: Specific competency to focus on
+            api_client: API client for OpenAI calls
+            xml_loader: XML configuration loader
+        """
+        agent_type = AgentType(
+            type="rubric_focused",
+            competency=competency,
+            focus_weight=0.8
+        )
+        super().__init__(config, api_client, agent_type, xml_loader, ConfigMode.XML)
+
+    def generate_prompt(self, module: ModuleContent) -> str:
+        """Generate rubric-focused review prompt."""
+        base_prompt = super().generate_prompt(module)
+
+        # Add rubric-specific emphasis
+        rubric_emphasis = f"""
+
+IMPORTANT: As a rubric-focused specialist in {self.agent_type.competency}:
+- Dedicate 80% of your evaluation to your specialized rubric criteria
+- Be especially thorough in identifying issues within your competency area
+- Provide detailed, actionable feedback for issues in your specialty
+- Still note general issues you observe, but prioritize your specialty
+"""
+
+        return base_prompt + rubric_emphasis
+
+
+class GeneralistReviewer(BaseReviewer):
+    """Reviewer providing holistic evaluation across all competencies."""
+
+    def __init__(self, config: ReviewerConfig,
+                 api_client: Optional[APIClient] = None,
+                 xml_loader: Optional[XMLConfigLoader] = None):
+        """Initialize generalist reviewer.
+
+        Args:
+            config: Reviewer configuration
+            api_client: API client for OpenAI calls
+            xml_loader: XML configuration loader
+        """
+        agent_type = AgentType(
+            type="generalist",
+            competency=None,
+            focus_weight=1.0  # Full attention across all areas
+        )
+        super().__init__(config, api_client, agent_type, xml_loader, ConfigMode.XML)
+
+    def generate_prompt(self, module: ModuleContent) -> str:
+        """Generate generalist review prompt."""
+        base_prompt = super().generate_prompt(module)
+
+        # Add generalist emphasis
+        generalist_emphasis = """
+
+IMPORTANT: As a generalist reviewer:
+- Evaluate the content holistically across ALL competencies
+- Identify issues that cross multiple domains
+- Consider the cumulative impact of multiple small issues
+- Assess overall coherence and flow
+- Look for gaps that specialists might miss due to their focus
+- Ensure balance between different quality aspects
+"""
+
+        return base_prompt + generalist_emphasis
 
 
 class AuthoringReviewer(BaseReviewer):
@@ -343,20 +787,188 @@ class ReviewerPool:
     """Manages a pool of reviewers for a specific review pass."""
 
     def __init__(self, review_pass: ReviewPass, num_reviewers: int,
-                 api_client: Optional[APIClient] = None):
-        """Initialize a pool of reviewers."""
+                 api_client: Optional[APIClient] = None,
+                 config_mode: ConfigMode = ConfigMode.AUTO):
+        """Initialize a pool of reviewers.
+
+        Args:
+            review_pass: The review pass type
+            num_reviewers: Number of reviewers (ignored when using XML config)
+            api_client: API client for OpenAI calls
+            config_mode: Configuration mode (XML, TEXT, or AUTO)
+        """
         self.review_pass = review_pass
         self.num_reviewers = num_reviewers
         self.api_client = api_client or APIClient()
+        self.config_mode = config_mode
+
+        # Initialize XML loader if using XML mode
+        self.xml_loader = None
+        if self.config_mode == ConfigMode.AUTO:
+            # Check if XML configuration exists
+            config_dir = Path("/Users/michaeljoyce/Desktop/LEARNVIA/config")
+            if (config_dir / "agent_configuration.xml").exists():
+                self.config_mode = ConfigMode.XML
+
+        if self.config_mode == ConfigMode.XML:
+            try:
+                self.xml_loader = XMLConfigLoader()
+            except Exception as e:
+                print(f"Warning: Could not initialize XML loader: {e}")
+                print("Falling back to text-based configuration")
+                self.config_mode = ConfigMode.TEXT
+                self.xml_loader = None
+
         self.reviewers = self._create_reviewers()
 
-    def _create_reviewers(self) -> List[BaseReviewer]:
-        """Create the configured set of reviewers for 4-pass system.
+    def _create_reviewers_xml(self) -> List[BaseReviewer]:
+        """Create reviewers based on XML configuration.
 
-        PASS 1 & 2: 20 agents each - Mixed content + style review
-        PASS 3 & 4: 10 agents each - Pure copy edit (style only)
+        Returns:
+            List of configured reviewers
+        """
+        reviewers = []
 
-        Each pass uses DIFFERENT reviewers (no information transfer).
+        try:
+            # Load agent configuration
+            config_root = self.xml_loader.load_agent_configuration()
+
+            # Determine pass number
+            pass_num = None
+            if self.review_pass == ReviewPass.CONTENT_PASS_1:
+                pass_num = "1"
+            elif self.review_pass == ReviewPass.CONTENT_PASS_2:
+                pass_num = "2"
+            elif self.review_pass == ReviewPass.COPY_PASS_1:
+                pass_num = "3"
+            elif self.review_pass == ReviewPass.COPY_PASS_2:
+                pass_num = "4"
+
+            # Find the configuration for this pass
+            pass_config = None
+            for pass_elem in config_root.findall('.//pass'):
+                if pass_elem.get('number') == pass_num:
+                    pass_config = pass_elem
+                    break
+
+            if not pass_config:
+                print(f"Warning: No XML configuration found for pass {pass_num}")
+                return self._create_reviewers_text()
+
+            # Determine reviewer ID prefix
+            pass_prefix = f"pass{pass_num}"
+
+            # Create authoring agents
+            authoring_section = pass_config.find('authoring_agents')
+            if authoring_section is not None:
+                # Create rubric-focused authoring agents
+                rubric_focused = authoring_section.find('rubric_focused')
+                if rubric_focused is not None:
+                    for assignment in rubric_focused.findall('assignment'):
+                        competency = assignment.get('competency')
+                        agent_count = int(assignment.get('agents', '1'))
+
+                        for i in range(agent_count):
+                            config = ReviewerConfig(
+                                reviewer_id=f"{pass_prefix}_auth_rubric_{competency.replace(' ', '_')}_{i:02d}",
+                                role=ReviewerRole.AUTHORING,
+                                review_pass=self.review_pass,
+                                focus_area=competency,
+                                prompt_variation=f"Rubric-focused specialist for {competency}",
+                                temperature=0.6 + (i % 3) * 0.1,
+                                max_tokens=2000
+                            )
+                            reviewer = RubricFocusedReviewer(
+                                config=config,
+                                competency=competency,
+                                api_client=self.api_client,
+                                xml_loader=self.xml_loader
+                            )
+                            reviewers.append(reviewer)
+
+                # Create generalist authoring agents
+                generalist_elem = authoring_section.find('generalist')
+                if generalist_elem is not None:
+                    generalist_count = int(generalist_elem.get('count', '0'))
+                    for i in range(generalist_count):
+                        config = ReviewerConfig(
+                            reviewer_id=f"{pass_prefix}_auth_generalist_{i:02d}",
+                            role=ReviewerRole.AUTHORING,
+                            review_pass=self.review_pass,
+                            focus_area="holistic_authoring",
+                            prompt_variation="Generalist reviewer for overall authoring quality",
+                            temperature=0.6 + (i % 3) * 0.1,
+                            max_tokens=2000
+                        )
+                        reviewer = GeneralistReviewer(
+                            config=config,
+                            api_client=self.api_client,
+                            xml_loader=self.xml_loader
+                        )
+                        reviewers.append(reviewer)
+
+            # Create style agents
+            style_section = pass_config.find('style_agents')
+            if style_section is not None:
+                # Create rubric-focused style agents
+                rubric_focused = style_section.find('rubric_focused')
+                if rubric_focused is not None:
+                    for assignment in rubric_focused.findall('assignment'):
+                        competency = assignment.get('competency')
+                        agent_count = int(assignment.get('agents', '1'))
+
+                        for i in range(agent_count):
+                            config = ReviewerConfig(
+                                reviewer_id=f"{pass_prefix}_style_rubric_{competency.replace(' ', '_').replace('&', 'and')}_{i:02d}",
+                                role=ReviewerRole.STYLE,
+                                review_pass=self.review_pass,
+                                focus_area=competency,
+                                prompt_variation=f"Rubric-focused specialist for {competency}",
+                                temperature=0.6 + (i % 3) * 0.1,
+                                max_tokens=2000
+                            )
+                            reviewer = RubricFocusedReviewer(
+                                config=config,
+                                competency=competency,
+                                api_client=self.api_client,
+                                xml_loader=self.xml_loader
+                            )
+                            reviewers.append(reviewer)
+
+                # Create generalist style agents
+                generalist_elem = style_section.find('generalist')
+                if generalist_elem is not None:
+                    generalist_count = int(generalist_elem.get('count', '0'))
+                    for i in range(generalist_count):
+                        config = ReviewerConfig(
+                            reviewer_id=f"{pass_prefix}_style_generalist_{i:02d}",
+                            role=ReviewerRole.STYLE,
+                            review_pass=self.review_pass,
+                            focus_area="holistic_style",
+                            prompt_variation="Generalist reviewer for overall style quality",
+                            temperature=0.6 + (i % 3) * 0.1,
+                            max_tokens=2000
+                        )
+                        reviewer = GeneralistReviewer(
+                            config=config,
+                            api_client=self.api_client,
+                            xml_loader=self.xml_loader
+                        )
+                        reviewers.append(reviewer)
+
+            print(f"Created {len(reviewers)} reviewers from XML configuration for {self.review_pass.name}")
+            return reviewers
+
+        except Exception as e:
+            print(f"Error creating reviewers from XML: {e}")
+            print("Falling back to text-based configuration")
+            return self._create_reviewers_text()
+
+    def _create_reviewers_text(self) -> List[BaseReviewer]:
+        """Create reviewers using legacy text-based configuration.
+
+        Returns:
+            List of configured reviewers
         """
         reviewers = []
 
@@ -443,6 +1055,19 @@ class ReviewerPool:
                 reviewers.append(StyleReviewer(config, self.api_client))
 
         return reviewers
+
+    def _create_reviewers(self) -> List[BaseReviewer]:
+        """Create the configured set of reviewers.
+
+        Supports both XML-based and text-based configuration.
+
+        Returns:
+            List of configured reviewers
+        """
+        if self.config_mode == ConfigMode.XML and self.xml_loader:
+            return self._create_reviewers_xml()
+        else:
+            return self._create_reviewers_text()
 
     async def review_parallel(self, module: ModuleContent) -> List[ReviewFeedback]:
         """Execute all reviewers in parallel and collect feedback."""
