@@ -1,0 +1,159 @@
+{
+  "module_id": "data_structures_intro",
+  "review_pass": "content_pass_1",
+  "timestamp": "2025-11-06T07:32:08.024501",
+  "consensus_results": [
+    {
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "confidence": 0.6153846153846154,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 16,
+      "total_reviewers": 26,
+      "location": "Module introduction",
+      "suggestions": [
+        "Add explicit learning objectives section stating what students will know and be able to do after completing this module"
+      ],
+      "issue_type": "missing_objectives",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Practice problem references concept (LRU) not covered in content",
+      "severity": 5,
+      "confidence": 0.5,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 13,
+      "total_reviewers": 26,
+      "location": "Practice Problems",
+      "suggestions": [],
+      "issue_type": "assessment",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Technical term 'heap property' used without definition",
+      "severity": 3,
+      "confidence": 0.6153846153846154,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 16,
+      "total_reviewers": 26,
+      "location": "Near 'heap property'",
+      "suggestions": [],
+      "issue_type": "clarity",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Vague language: 'various' - be more specific",
+      "severity": 2,
+      "confidence": 0.5384615384615384,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 14,
+      "total_reviewers": 26,
+      "location": "Search for 'various'",
+      "suggestions": [],
+      "issue_type": "clarity",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Contraction 'they're' violates style guide",
+      "severity": 2,
+      "confidence": 0.11538461538461539,
+      "confidence_level": "very_low",
+      "agreeing_reviewers": 3,
+      "total_reviewers": 26,
+      "location": "Search for 'they're'",
+      "suggestions": [
+        "Replace 'we'll' with full form",
+        "Replace 'don't' with full form",
+        "Replace 'we've' with full form",
+        "Replace 'you'll' with full form",
+        "Replace 'it's' with full form",
+        "Replace 'they're' with full form"
+      ],
+      "issue_type": "style_contraction",
+      "should_provide_solution": false
+    }
+  ],
+  "strengths": [
+    "Content builds complexity gradually",
+    "Examples effectively illustrate concepts"
+  ],
+  "estimated_revision_time": 19,
+  "priority_matrix": {
+    "immediate": [],
+    "important": [
+      {
+        "issue": "Missing clear learning objectives at module start",
+        "severity": 5,
+        "confidence": 0.6153846153846154,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 16,
+        "total_reviewers": 26,
+        "location": "Module introduction",
+        "suggestions": [
+          "Add explicit learning objectives section stating what students will know and be able to do after completing this module"
+        ],
+        "issue_type": "missing_objectives",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Practice problem references concept (LRU) not covered in content",
+        "severity": 5,
+        "confidence": 0.5,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 13,
+        "total_reviewers": 26,
+        "location": "Practice Problems",
+        "suggestions": [],
+        "issue_type": "assessment",
+        "should_provide_solution": false
+      }
+    ],
+    "consider": [
+      {
+        "issue": "Technical term 'heap property' used without definition",
+        "severity": 3,
+        "confidence": 0.6153846153846154,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 16,
+        "total_reviewers": 26,
+        "location": "Near 'heap property'",
+        "suggestions": [],
+        "issue_type": "clarity",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Vague language: 'various' - be more specific",
+        "severity": 2,
+        "confidence": 0.5384615384615384,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 14,
+        "total_reviewers": 26,
+        "location": "Search for 'various'",
+        "suggestions": [],
+        "issue_type": "clarity",
+        "should_provide_solution": false
+      }
+    ],
+    "optional": [
+      {
+        "issue": "Contraction 'they're' violates style guide",
+        "severity": 2,
+        "confidence": 0.11538461538461539,
+        "confidence_level": "very_low",
+        "agreeing_reviewers": 3,
+        "total_reviewers": 26,
+        "location": "Search for 'they're'",
+        "suggestions": [
+          "Replace 'we'll' with full form",
+          "Replace 'don't' with full form",
+          "Replace 'we've' with full form",
+          "Replace 'you'll' with full form",
+          "Replace 'it's' with full form",
+          "Replace 'they're' with full form"
+        ],
+        "issue_type": "style_contraction",
+        "should_provide_solution": false
+      }
+    ]
+  }
+}

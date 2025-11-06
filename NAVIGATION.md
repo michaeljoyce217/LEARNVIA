@@ -2,7 +2,7 @@
 
 **START HERE** - This is your map to understanding and working with the Learnvia content review system.
 
-Last Updated: 2025-11-05
+Last Updated: 2025-11-06
 
 ---
 
@@ -10,10 +10,10 @@ Last Updated: 2025-11-05
 
 **New to Learnvia?** Read in this order:
 1. This file (you're here!)
-2. `README.md` (project overview)
-3. `FOUNDATION/README.md` (understand the core principles)
-4. `DOCUMENTATION/architecture.md` (see how the system works)
-5. `DEMO/README.md` (run the demo to see it in action)
+2. `PROJECT_SUMMARY.md` (concise technical overview)
+3. `TECHNICAL_IMPLEMENTATION_REPORT.md` (detailed implementation)
+4. `DESIGN_DOCUMENT.md` (architectural decisions and rationale)
+5. `REALISTIC_WORKFLOW/README.md` (see the real system in action)
 
 **Looking for something specific?** Use the directory guide below.
 
@@ -101,8 +101,27 @@ The actual implementation of the review system.
 
 ---
 
-### `DEMO/` ← **Trial & Demonstration**
-A complete, self-contained demo showing the entire review workflow with synthetic actors and content.
+### `REALISTIC_WORKFLOW/` ← **Production-Ready Demonstration**
+A realistic 9-step workflow using REAL system components with mock API responses.
+
+**What's in it:**
+- `input/` - Sample educational modules with real issues
+- `scripts/` - Orchestration using actual CODE components
+- `outputs/` - Production-format reports and revisions
+- `logs/` - Detailed execution traces
+
+**When to use it:**
+- Demonstrating to technical stakeholders
+- Validating system capabilities
+- Testing consensus aggregation
+- Showing real improvement metrics
+
+**Run with:** `cd REALISTIC_WORKFLOW && python scripts/run_realistic_workflow.py`
+
+---
+
+### `DEMO/` ← **Synthetic Demonstration**
+A simplified demo showing the review concept with synthetic actors.
 
 **What's in it:**
 - `sample_content/` - Educational module drafts (Power Rule example)
@@ -139,6 +158,7 @@ Old plans, session notes, and deprecated files. Rarely accessed.
 **What's in it:**
 - `session_notes/` - Old session wrapups and notes
 - `old_plans/` - Completed plans, setup guides
+- `EXECUTIVE_BRIEF.md` - Original executive-level summary (replaced by technical docs)
 
 **When to use it:**
 - Historical reference

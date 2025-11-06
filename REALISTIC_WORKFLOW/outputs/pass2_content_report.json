@@ -1,0 +1,120 @@
+{
+  "module_id": "data_structures_intro",
+  "review_pass": "content_pass_2",
+  "timestamp": "2025-11-06T07:32:08.172144",
+  "consensus_results": [
+    {
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "confidence": 0.6956521739130435,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 16,
+      "total_reviewers": 23,
+      "location": "Module introduction",
+      "suggestions": [
+        "Add explicit learning objectives section stating what students will know and be able to do after completing this module"
+      ],
+      "issue_type": "missing_objectives",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Practice problem references concept (LRU) not covered in content",
+      "severity": 4,
+      "confidence": 0.5652173913043478,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 13,
+      "total_reviewers": 23,
+      "location": "Practice Problems",
+      "suggestions": [],
+      "issue_type": "assessment",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Technical term 'heap property' used without definition",
+      "severity": 3,
+      "confidence": 0.6956521739130435,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 16,
+      "total_reviewers": 23,
+      "location": "Near 'heap property'",
+      "suggestions": [],
+      "issue_type": "clarity",
+      "should_provide_solution": false
+    },
+    {
+      "issue": "Vague language: 'various' - be more specific",
+      "severity": 2,
+      "confidence": 0.5652173913043478,
+      "confidence_level": "moderate",
+      "agreeing_reviewers": 13,
+      "total_reviewers": 23,
+      "location": "Search for 'various'",
+      "suggestions": [],
+      "issue_type": "clarity",
+      "should_provide_solution": false
+    }
+  ],
+  "strengths": [
+    "Content builds complexity gradually",
+    "Examples effectively illustrate concepts"
+  ],
+  "estimated_revision_time": 32,
+  "priority_matrix": {
+    "immediate": [],
+    "important": [
+      {
+        "issue": "Missing clear learning objectives at module start",
+        "severity": 5,
+        "confidence": 0.6956521739130435,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 16,
+        "total_reviewers": 23,
+        "location": "Module introduction",
+        "suggestions": [
+          "Add explicit learning objectives section stating what students will know and be able to do after completing this module"
+        ],
+        "issue_type": "missing_objectives",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Practice problem references concept (LRU) not covered in content",
+        "severity": 4,
+        "confidence": 0.5652173913043478,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 13,
+        "total_reviewers": 23,
+        "location": "Practice Problems",
+        "suggestions": [],
+        "issue_type": "assessment",
+        "should_provide_solution": false
+      }
+    ],
+    "consider": [
+      {
+        "issue": "Technical term 'heap property' used without definition",
+        "severity": 3,
+        "confidence": 0.6956521739130435,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 16,
+        "total_reviewers": 23,
+        "location": "Near 'heap property'",
+        "suggestions": [],
+        "issue_type": "clarity",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Vague language: 'various' - be more specific",
+        "severity": 2,
+        "confidence": 0.5652173913043478,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 13,
+        "total_reviewers": 23,
+        "location": "Search for 'various'",
+        "suggestions": [],
+        "issue_type": "clarity",
+        "should_provide_solution": false
+      }
+    ],
+    "optional": []
+  }
+}
