@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Punctuation &amp; Grammar</name>
+    <category>style</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates proper use of punctuation, grammar, and language mechanics to ensure
+    clear, professional, and error-free educational content.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Grammar errors that change meaning</criterion>
+        <criterion>Punctuation causing dangerous ambiguity</criterion>
+        <criterion>Sentence fragments preventing comprehension</criterion>
+        <criterion>Critical errors in mathematical statements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">"Don't use water" vs "Don't, use water"</example>
+        <example type="violation">Missing punctuation creating run-on confusion</example>
+        <example type="violation">Incorrect punctuation in mathematical logic</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Frequent grammatical errors disrupting flow</criterion>
+        <criterion>Systematic punctuation problems</criterion>
+        <criterion>Subject-verb disagreement throughout</criterion>
+        <criterion>Tense inconsistencies causing confusion</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Repeated comma splices</example>
+        <example type="violation">Switching between past and present tense</example>
+        <example type="violation">Consistent subject-verb disagreement</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Moderate grammar issues affecting clarity</criterion>
+        <criterion>Some punctuation inconsistencies</criterion>
+        <criterion>Occasional tense shifts</criterion>
+        <criterion>Minor sentence structure problems</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Inconsistent Oxford comma usage</example>
+        <example type="violation">Some dangling modifiers</example>
+        <example type="violation">Occasional fragment sentences</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small grammatical improvements needed</criterion>
+        <criterion>Minor punctuation preferences</criterion>
+        <criterion>Slight style inconsistencies</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could improve sentence variety</example>
+        <example type="violation">Minor comma placement issues</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor style preferences</criterion>
+        <criterion>Optional grammatical enhancements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Style guide preferences</example>
+        <example type="violation">Optional rephrasing for flow</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Are sentences grammatically correct and complete?</question>
+    <question>Is punctuation used correctly and consistently?</question>
+    <question>Are verb tenses consistent within sections?</question>
+    <question>Do subjects and verbs agree in number?</question>
+    <question>Are pronouns clear in their references?</question>
+    <question>Is parallel structure maintained in lists and comparisons?</question>
+    <question>Are mathematical statements punctuated correctly?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Consistent tense within sections</practice>
+      <practice>Clear pronoun references</practice>
+      <practice>Proper punctuation of mathematical statements</practice>
+      <practice>Complete sentences with proper structure</practice>
+      <practice>Parallel structure in lists and comparisons</practice>
+      <practice>Appropriate use of technical voice</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Run-on sentences lacking punctuation</failure>
+      <failure>Comma splices joining independent clauses</failure>
+      <failure>Inconsistent tense shifting</failure>
+      <failure>Ambiguous pronoun references</failure>
+      <failure>Missing punctuation in equations</failure>
+      <failure>Fragments masquerading as sentences</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Conceptual Clarity">
+      Good grammar enhances conceptual communication
+    </interaction>
+    <interaction competency="Accessibility">
+      Proper grammar aids comprehension for all learners
+    </interaction>
+    <interaction competency="Consistency">
+      Grammar rules must be applied consistently
+    </interaction>
+    <interaction competency="Student Engagement">
+      Professional writing maintains credibility
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

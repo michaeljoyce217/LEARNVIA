@@ -1,0 +1,796 @@
+Module: Basic Rules of Finding Derivatives
+Lesson 3.4.1: The Constant Rule and Derivative Notation 
+Framing text (just a few sentences. Should not exceed this box (min 14 pt font). 
+<p>Calculating derivatives directly from the limit definition, <m>f'(x) = \lim_{h \to 0} \frac{f(x+h) – f(x)}{h}</m>, can be slow and complex for even simple functions. To make finding derivatives easier, mathematicians have developed rules that allow us to work more efficiently. In this lesson, we’ll focus on the constant rule and learn about the different notations used for derivatives.</p> 
+
+<p>There are several ways to write the derivative of a function, and it’s important to recognize and use them. If <m>y = f(x)</m>, the derivative can be written as <m>f'(x)</m>, <m>y'</m>, <m>\frac{dy}{dx}</m>, or <m>\frac{d}{dx} f(x)</m>. Each notation is useful in different contexts, such as when working with implicit differentiation which we will learn about in a future module or when emphasizing the variable with respect to which you are differentiating.</p>
+
+<b>Constant Rule</b>
+<p>The constant rule states that the derivative of any constant function is zero. In other words, if <m>f(x) = c</m> where <m>c</m> is a constant, then <m>f'(x) = 0</m>. This can also be written as <m>\frac{d}{dx} c = 0</m>. This rule reflects the fact that constant functions have no rate of change—their graphs are perfectly flat.</p>
+
+Animated figure spec
+1: (A) Let’s begin with the constant rule. The derivative of a function is the slope, or the instantaneous rate of change, at any point on the graph. For constant functions, this slope is always the same. 
+B) Consider the function f of x equals 2. This graph is a horizontal line at y equals 2.
+C) No matter which point is chosen on the graph, the slope of the tangent is always 0 - the function never changes - the output is always 2.
+D) This means, the derivative of f is 0 everywhere.
+
+1A) Have the box for the constant rule show up (don’t show the rule yet) and draw in the graph of f(x) = 2 (don’t label it yet). 
+B) Label the graph of f(x) = 2 https://docs.google.com/document/d/1Iv91vf-iHPok5IRVowclkWEA1u2p0_e3NBcfrZ-au-k/edit?usp=sharingas such. 
+C) Have the wording “slope = 0” come up with the f(x)=2 line.
+D) Have the f’(x)=0 show up on the left under the slope = 0.
+
+2A) Now look at the constant function g of x equals 3. This is also a horizontal line, but at y = 3. 
+B) Again, the slope at every point is zero.
+C) The function does not rise or fall, so the rate of change, in other words the derivative, is 0 everywhere.
+
+2A) Draw the graph of y = 3 - label it g(x)=3. 
+B) Show the “slope = 0”
+C) Show g’(x)=0.
+
+3A) Last, let’s look at h(x) = 1. The graph of h is a horizontal line at y = 1.
+
+3A) Graph h(x) = 1.
+
+Q: What is the derivative of <m>h(x)=1</m>?
+H: The graph of <m>h(x)=1</m> is a horizontal line. Horizontal lines have slopes of 0. 
+H: The derivative of a function gives the slope, or the instantaneous rate of change, at any point on its graph. 
+E: 0. The derivative of a function gives the slope, or the instantaneous rate of change, at any point on its graph. Because <m>h(x)</m> is a horizontal line, the slope is always 0 because the function never changes. 
+
+
+
+Animated figure spec
+4: (A) We can generalize our findings to say the derivative of any constant is always 0. 
+B) This leads to the constant rule: the derivative of any constant function is always zero. In mathematical terms, the derivative with respect to x of c equals 0.
+
+4A) Display slope - 0 and h’(x) = 0 and highlight the f’(x)=0, h’(x)=0 and g’(x)=0.
+B) Display the constant rule. 
+
+5A) The constant rule shows that the derivative of a constant function is always zero, and this result can be expressed using several different notations. B) Prime notation, like f prime of x emphasizes the function’s name and the variable.
+C) The shorthand, y prime, is often used when the function is written as y equal f of x.
+D) For example, if f of x equals 2, we could write its derivative in prime notation as f prime of x equals 0.
+PAUSE (NEW SCENE)
+E) Leibniz notation, written as d-y over d-x, makes it clear which variable is dependent and which is independent. We say this as the derivative of y with respect to x.
+F) Leibniz notation can also be written as d over d-x of f of x. This way highlights differentiation as an operation applied to a function f of x.
+G) For example, for f(x)=2, the derivative in leibniz notation can be written as d over d-x of 2 equals 0. We would say this as the derivative with respect to x of 2 is 0.
+
+
+5A) Show the derivative notation box and the first table - however only display the left column values and display them as the narrator states them.
+B) Show the first bullet point in the prime box
+C) Show the second bullet in the prime box.
+D) Show the f(x)=2 and the first row of the second table.
+E) display the first bullet for Leibniz
+F) Display the second bullet for leibniz
+G) Show the second row for the f(x) = 2.
+
+
+
+
+End of Lesson Summary
+If <m>c</m> is any constant, then <m>\frac{d}{dx} c = 0</m>.
+ 
+
+
+
+Module: Basic Rules of Finding Derivatives
+Lesson 3.4.2: The Power Rule
+Framing text (just a few sentences. Should not exceed this box (min 14 pt font). 
+<p>Another useful rule in calculus is the power rule, which streamlines the process of finding derivatives for functions involving powers of <m>x</m>. Instead of repeatedly applying the limit definition, the power rule offers a direct and efficient method for differentiation for power functions.</p>
+
+<b>Power Rule</b>
+
+<p>The power rule states that if <m>f(x) = x^n</m>, where <m>n</m> is any positive integer, then the derivative is <m>f'(x) = nx^{n-1}</m>. Another way to write this with Leibniz notation is <m>\frac{d}{dx} x^n = nx^{n-1}</m>. 
+
+Animated figure spec (cont)
+2: (E) Now l Previously, we’ve found (F) the derivative of x is 1. (G)The derivative of x squared is 2x. (H) and the derivative of x cubed is 3 x squared. (I) And the derivative with respect to x of x to the fourth is 4 x cubed. 
+
+(E) Have the box for the power rule show up. .  
+(F) Have the example show up <m> \frac{d}{dx} x = 1x^0 = 1 – if you’re able to animate it in some way that would be awesome. 
+(G) Have the example show up  <m> \frac{d}{dx} x^2 = 2x^1 = 2x </m> – if you’re able to animate it in some way that would be awesome. 
+(H) Have the example show up <m> \frac{d}{dx} x^3=3x^2 </m> – if you’re able to animate it in some way that would be awesome. Have the box for x^4 show up when the embedded question pops up but don’t show the f’(x) of it (the 4x^3) until after the embedded question.
+(I) Have the example show up <m> \frac{d}{dx} x^4 = 4x^3 </m>  – if you’re able to animate it in some way that would be awesome. 
+
+
+Q: Given the pattern in the table, what is </m> \frac{d}{dx} x^4 </m>?
+* <m> \frac{d}{dx} x^4 =4x^3</m> E*: The exponent, 4, becomes the coefficient, and the new exponent is one less than the original exponent 
+* <m> \frac{d}{dx} x^4 = x^3</m>. E: Look at the pattern. For example, for the derivative of <m>x^2</m>, the exponent became the coefficient, and the power decreased by one.
+* <m> \frac{d}{dx} x^4 =4x^4</m> E: The derivative does not keep the same power; the power decreases by one. Look back at the patterns from the previous derivatives. 
+* <m> \frac{d}{dx} x^4 =4x^5</m> E: The derivative exponent decreases by one. Observe how the pattern worked for <m>x^2</m> and <m>x^3</m>. 
+
+
+Animated figure spec (cont)
+3: (J) Notice the exponent in the original function becomes the coefficient in the derivative and the exponent in the derivative is one less than in the original function. (K) This pattern leads us to the power rule: If n is a positive integer, then the derivative of x to the n is n times x to the n-1 power. 
+
+
+(J) Animate the coefficients and powers as the narrator states the pattern and display the derivative of x^4.. 
+(K) Have the power rule fade in:  If <m>n</m> is a positive integer, then <m> \dfrac{x}{dx} x^n = n /cdot x ^{n-1}</m>. 
+
+
+Follow-up questions (typically 3-7)
+Q1: If <m>f(x)= –3</m>, what is <m>f’(x)</m>?
+* f’(x) = 0 E*: The derivative of a constant function is zero because its slope is zero everywhere.  The slope of a constant function never changes.
+* <m>f’(x) = –3</m> E: -3 is the value of the function, not its slope.  The graph of <m> f(x) = -3 </m> is a horizontal line.  What is the slope of a horizontal line?  Think about how the slope of a horizontal line behaves. Does it change as the value of <m>x</m> changes? 
+* <m>f’(x) = –3x</m>  E: This is a function that has <m> -3 </m> as its slope.  Instead, find the slope of the graph of <m>f(x) = -3</m>, which is a horizontal line.
+Q2: What is the power rule formula for finding the derivative of a function in the form <m> f(x)=x^n</m>, where <m>n</m> is a positive integer? 
+
+* <m> f’(x)=n \cdot x^{n-1} </m> E*: To apply the power rule, multiply <m>x</m> by the original exponent and then reduce the power by 1. 
+* <m> f(x)=n \cdot x^n </m> E: Look at the power of <m>x</m>. Does the power of <m>x</m> remain the same after differentiation?
+* <m> f’(x)=n \cdot x^{n+1} </m> E: When finding the derivative, think about whether the power of <m>x</m> increases or decreases. 
+
+Q3: Find <m> \frac{d}{dx} x^10</m>. 
+
+Hint 1: Note the power rule: the derivative of <m> x^n </m> involves multiplying by the exponent and then reducing the power by 1.
+
+Hint 2: When differentiating <m>x^10</m>, consider how the exponent 10 affects both the coefficient and the new power of <m>x</m>. 
+
+Answer: <m> \frac{d}{dx} x^{10} =10x^9</m>
+Explanation: The power rule states if <m>n</m> is any positive integer and <m>f(x)=x^n</m>, then <m>f'(x)=nx^{n-1}</m>.  Applying the rule,  <m> \dfrac{d}{dx} x^{10} = 10x^{10-1} = 10x^9 </m>.
+
+Q4: Which of the following is true about the slope of any tangent line on the graph of <m>f(x) = x^7 </m>?
+
+Choice*: The slope of a tangent line to <m>f(x)=x^7<m> line will never be negative.
+Explanation: By the power rule, <m>\dfrac{d}{dx} x^7 = 7x^6 </m>.  Because <m>6 </m> is even, <m>x^6 \geq 0 </m>. Thus, <m>f’(x) = 7x^6 \geq 0 <m>.  So, the slope of the tangent line will be either <m>0 </m> or positive, and therefore never negative.
+
+Choice: The slope of every tangent line of <m>f(x) = x^7 </m> will be positive.
+Explanation: By the power rule, <m>f’(x) = 7x^6</m>.  At <m>x=0 </m>, <m>f’(0) = 7 \cdot 0^6 = 0,</m> which is not a positive number.
+
+Choice: The slope of a tangent line will be negative at a negative <m>x-<m>value and will be positive at a positive <m>x-<m>value.
+Explanation: While the values of <m>f(x) <m> are negative at negative <m>x-</m>values and positive at positive <m>x-</m>values, this is not true of the derivative <m>f’(x) = 7x^6</m>.
+
+Choice: The slope of a tangent line will be positive at a negative <m>x-<m>value and will be negative at a positive <m>x-<m>value.
+Explanation: By the power rule, the derivative is <m>f’(x) = 7x^6 </m>, which gives the slope of the tangent line at any <m>x</m>.
+Q5: This is the graph of the derivative <m>f’(x)<m>.
+
+
+
+
+
+
+
+
+Image description: Graph of f(x) = 6x^5; do not include any numbers on the axes. Only the basic shape should be given.
+
+Which of the following might be <m>f(x)</m>?
+
+Choice*: <m>f(x)=x^6 <m>
+Explanation: The derivative <m>f’(x) </m> is an odd-degree power function.  So, the function <m>f(x)<m> must be a power function with an even degree.  The only other even-power option for this question is <m>f(x) = x^2 <m>, whose <m>f’(x) = 2x </m> is a line.
+
+Choice: <m>f(x) = x^7</m>
+Explanation: The derivative of <m>f(x) = x^7</m> is <m>f’(x) = 7x^6 </m>, which has an even-degree.  The graph displayed is an odd-degree power function.
+
+Choice: <m>f(x)=x^2</m>
+Explanation: The derivative of <m>f(x) = x^2 </m> is <m>f’(x) = 2x </m>, whose graph is a line.
+
+Choice: <m>f(x)=x^5 </m>
+Explanation: The derivative of <m>f(x) = x^5 </m> is <m>f’(x) = 5x^4 </m>, which has an even-degree. The graph displayed is an odd-degree power function.  
+
+
+
+Follow-up questions (typically 3-7)
+Q6: Which of the following represents the limit definition of the derivative for the constant function <m>f(x) = c</m>?
+
+Choice*: <m>f’(x) = \lim_{h \to} \dfrac{c – c}{h} </m>
+Explanation: Because <m>f(x) = c </m> is a constant function, <m>f(x+h) = c </m>. The limit definition of the derivative is therefore <m>f’(x) = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \dfrac{c – c}{h}</m>
+
+Choice: <m>f’(x) = \lim_{h \to 0} \dfrac{(c+h) – c}{h} </m>
+Explanation: Because <m>f(x) = c </m> is a constant function, <m>f(x+h) = c </m>.
+
+Choice: <m>f’(x) = \lim_{h \to 0} \dfrac{(c(x+h) – c}{h} </m>
+Explanation: The constant function <m> f(x) = c </m> will always output <m> c </m>, regardless of the input.  So, <m> f(x+h) = c</m>.
+
+Choice: <m> f’(x) = \lim_{h \to 0} \dfrac{c}{h}</m>
+Explanation: The numerator in the limit definition of the derivative is <m>f(x+h) – f(x) </m>. Because <m>f(x) = c </m> is a constant function, <m>f(x+h) = c </m>.
+
+
+
+
+End of Lesson Summary
+
+If <m>n</m> is any positive integer, then <m>\frac{d}{dx} x^n = nx^{n-1}</m>.
+
+
+Module: Basic Rules of Finding Derivatives
+Lesson 3.4.3: Sum, Difference, and Constant Multiple Rules
+Framing text (just a few sentences. Should not exceed this box (min 14 pt font). 
+<Text>
+<p>This lesson will explore three important derivative rules which allow us to break down complex functions into simpler components and find derivatives more efficiently.</p> 
+ 
+<b>Constant Multiple Rule</b> 
+<p>If <m>c</m> is a constant and <m>f(x)</m> is a differentiable function, then  
+<m> \frac{d}{dx} (c \cdot f(x))=c \cdot \frac{d}{dx} f(x)</m>. </p>
+ 
+<p>If <m>f(x)</m> and <m>g(x)</m> are both differentiable functions, then
+  <b>Sum Rule</b> 
+<m> \frac{d}{dx} (f(x)+g(x))= \frac{d}{dx} f(x)+ \frac{d}{dx} g(x) </m> and  
+<b>Difference Rule</b>
+<m> \frac{d}{dx} (f(x)-g(x))= \frac{d}{dx} f(x)- \frac{d}{dx} g(x) </m>.</p>
+</Text>
+
+Animated figure spec
+1: (A) The constant rule states that if c is a constant and f is a differentiable function, then the derivative with respect to x is c times the derivative of f of x. (B) Let’s look at why this rule works. The graph shows the function f of x.  (C) Compare that to the graph of  2 times f. (D) Multiplying f by 2 stretches the graph vertically by a factor of 2. (E) Now let’s focus on the derivatives of both functions at x = 2 by drawing their respective tangent lines. (F) For f at x equals 2, the slope of the tangent line has a rise of 1 and a run of 1 giving a slope of 1. (G) So, the derivative of f at 2 is 1.
+
+
+(A) Show the definition of the constant multiple rule:  If <m>c</m> is constant and <m>f</m> is a differentiable function, then <m> \frac{d}{dx} (c \cdot f(x))=c \cdot \frac{d}{dx} f(x)</m>
+(B) Animate drawing the Graph f(x)=(1/2x)^2 
+(C) Animate drawing the Graph <m>2f(x)</m>
+(D) Show how 2f(x) is the graph of f(x) stretched by 2. 
+(E) Show the tangent line being drawn from left to right for each function. 
+(F) Draw the slope triangle of a rise of 1/1 on the graph 
+(G)  Show that at x = 2, <m>\dfrac{d}{dx}f(x)=1</m>. 
+
+
+Q: Find the slope of the tangent line at <m>x = 2</m> for <m>2f(x)</m>, given that the points <m>(2,2)</m> and <m>(3,4)</m> are on the tangent line.
+Hint #1: The slope formula is <m>m = \frac{y_2 –  y_1}{x_2 – x_1}</m>.
+Hint #2: Substitute the given points <m>(2,2)</m> and <m>(3,4)</m> into the slope formula. 
+ 
+Correct Answer/Explanation: The slope of the tangent line is 2. <m>m = \frac{y_2 – y_1}{x_2 – x_1} = \frac{4 – 2}{3 – 2} = 2</m>. 
+
+
+Animated figure spec (cont)
+2: (H) For 2 times f at x equals 2, the slope of the tangent line has a rise of 2 and a run of 1. (I) So, the derivative of 2 times f equals 2. (J) Comparing these slopes, the derivative of 2 times f is twice the derivative of f at the same point. (K) This example illustrates the constant multiple rule – the derivative of 2 times f is 2 times the derivative of f.
+
+(H) Draw the slope triangle of a rise of 2/1 on the graph of the tangent line for 2f(x) 
+(I) <m> \frac{d}{dx} (2f(x))=2</m> at <m>x = 2</m>
+(J) Animate the 1 and the 2 for the derivative equations and next to the d/dx 2f(x) = 2 put = 2(1) to illustrate it’s twice the value of f(x) at x = 2. <m>\dfrac{d}{dx} 2 \cdot f(x) = 2 = 2 /cdot 1</m>
+(K) Fade in or animate: <m>\dfrac{d}{dx} 2 \cdot f(x) = 2 \dfrac{d}{dx} f(x) </m>.
+
+Q: Assume <m>g(x)</m> is a differentiable function and <m>\frac{d}{dx} g(x) = – 3x </m>. Find <m> \frac{d}{dx} (2 \cdot g(x))</m>.  
+Hint #1: We are looking to find the derivative of the function <m> g(x) </m> multiplied by a constant. Recall the Constant Multiple Rule for Derivatives. 
+Hint #2: The Constant Multiple Rule states that for a constant <m>c</m> and a differentiable function <m>f(x)</m>, <m>\frac{d}{dx}(c \cdot f(x)) = c \cdot \frac{d}{dx}f(x)</m>. 
+ 
+Correct Answer/Explanation: <m>\frac{d}{dx} (2 \cdot g(x)) = -6x</m>.  
+\begin{align} \frac{d}{dx}[2 \cdot g(x)] &= 2 \cdot \frac{d}{dx}g(x) && \text{Apply the Constant Multiple Rule.} \\ &= 2 \cdot (–3x) && \text{Substitute the given derivative of } g(x). \\ &= –6x && \text{Simplify}\\ \end{align} 
+
+
+Animated figure spec (cont)
+3: (L) Now let’s explore two additional rules for calculating derivatives: the Sum and Difference Rules (M) If f and g are both differentiable, then the derivative of f plus g is equal to the derivative of f plus the derivative of g (N) And, the derivative of f minus g is equal to the derivative of f minus the derivative of g (O) Let’s apply these rules to find the derivative of x squared plus 5x minus 3 (P) First, apply the sum and difference rule to separate the terms. (Q) Now differentiate each term. The derivative of x^2 is 2x, the derivative of 5x is 5 and the derivative of 3 is 0. (R) Therefore, the derivative is 2x plus 5. 
+
+
+(L) Have the sum and difference rule box show up on the screen. 
+(M) Fade in the sum rule: If <m>f</m> and <m>g</m> are both differentiable, then <m> \frac{d}{dx} (f(x)+g(x))= \frac{d}{dx} f(x)+ \frac{d}{dx} g(x) </m>
+(N) Fade in the difference rule: <m> \frac{d}{dx} (f(x) – g(x))= \frac{d}{dx} f(x)- \frac{d}{dx} g(x) </m> 
+(O) Have the example problem display: <m>\dfrac{d}{dx} (x^2+2x – 3)</m>
+(P) Animate the separation of each term. <m> \frac{d}{dx} x^2 + frac{d}{dx} 5x – frac{d}{dx} 3
+(Q) Animate the following or just have fade all at the same time <m> 2x +5 \dfrac{d}{dx} - 0 </m>; <m> 2x +5(1) </m>  
+(R) Have the last line show. <m>2x+5</m>
+
+
+
+Animated figure spec (cont)
+3: (cont)
+
+
+(O)
+(P)
+(R)
+(Q)
+
+Follow-up questions (typically 3-7)
+Q1: Find <m> \dfrac{d}{dx} 7x^3</m>. 
+
+* <m> \dfrac{d}{dx} 7x^3 = 21x^2 </m> E*: <me> 
+\begin{align*} 
+\frac{d}{dx}(7x^3) &= 7 \cdot (3x^2) && \text{Apply the constant multiple and power rules} \\ 
+&= 21x^2 && \text{Multiply to simplify} 
+\end{align*} 
+</me>
+
+* <m> \dfrac{d}{dx} 7x^3 = 7x^2 </m> E: Recall the power rule states that if <m>n</m> is any positive integer, then <m>\frac{d}{dx} x^n = nx^{n – 1}</m>.
+
+* <m> \dfrac{d}{dx} 7x^3 = 14x^3 </m> E: When differentiating <m>7x^3</m>, multiply 7 by 3 to get the coefficient of the derivative. 
+
+* <m> \dfrac{d}{dx} 7x^3 = 3x^2 </m>. E: Remember to multiply the derivative by the constant factor from the original function.
+
+Q2: If <m>f(x)</m> and <m>g(x)</m> are differentiable functions, what is the correct expression for <m> \frac{d}{dx} [3f(x) – 2g(x)] </m>?
+
+* <m> 3 \cdot \frac{d}{dx} f(x) – 2 \cdot \frac{d}{dx} g(x)] </m> 
+E*: Combining the constant multiple rule and the difference rule yields <m> 3 \cdot \frac{d}{dx} f(x) – 2 \cdot \frac{d}{dx} g(x)</m>.
+
+* <m> 3 \cdot f(x) – 2 \cdot g(x)] </m> 
+E: When using with the difference rule, the derivative <m>\dfrac{d}{dx}</m> will be applied to both <m> 3 \cdot f(x) </m> and <m> 2 \cdot g(x) </m>.
+
+*<m> \frac{d}{dx} f(x) – \frac{d}{dx} g(x) </m>
+E: When applying the constant multiple rule, the constants are pulled out of the derivative.  They do not go away.
+
+*<m> 3 \cdot \frac{d}{dx} f(x) + 2 \cdot \frac{d}{dx} g(x)] </m> 
+E: The derivative of a difference is the difference (not the sum) of the derivatives.  
+Q3: Find <m>f’(x) <m> when <m> f(x) = 6x^3 - 2x^2 + 5x - 1 <m>.
+
+Hint 1: The sum and difference rules make it possible to focus on each term of the polynomial individually.
+
+Hint 2: To compute the derivative of a term like <m> \dfrac{d}{dx} (6x^3) </m>, use the constant multiple rule and power rule: <m> \dfrac{d}{dx} (6x^3) = 6 \dfrac{d}{dx}(x^3) = 6 \cdot(3x^2) </m>.
+
+Explanation: <m>f’(x) = 18x^2 – 4x + 5 </m>.  Using the sum and difference rules, we can break up the derivative polynomial by its individual terms and then apply the constant multiple and power rules:
+
+<me>
+\begin{align*}
+f’(x) &= \dfrac{d}{dx} \left(6x^3 - 2x^2 + 5x - 1 \right) \\
+&= \dfrac{d}{dx} (6x^3) – \dfrac{d}{dx}(2x^2) + \dfrac{d}{dx}(5x)  – \dfrac{d}{dx}(1) && \text{Sum and difference rules} \\
+&= 6 \dfrac{d}{dx}(x^3)  – 2\dfrac{d}{dx}(x^2) + 5 \dfrac{d}{dx}(x) - \dfrac{d}{dx}(1) && \text{Constant multiple rule}\\
+&= 6 \cdot (3x^2) - 2 \cdot (2x) + 5 \cdot (1) - 0 && \text{Power rule and constant rule} \\
+&= 18x^2 - 4x + 5 && \text{Simplify} \\
+\end{align*}
+</me>
+Q4: This is the graph of <m> f(x) = x^3-3x^2-x+5 </m> and the tangent line at <m> x = 1 </m>. 
+
+
+
+
+
+
+
+
+
+
+
+Image description: graph of f(x) = x^3-3x^2-x+5 in black with x-axis from –2.5 to 4 and y-axis from –2 to 6, and dashed tangent line with equation y=-4(x-1)+2.
+
+Using the graph, what must be true about the sign of <m>f’(1)</m>?
+
+Choice*: <m>f’(1)</m> is negative.
+Explanation: The tangent line of <m>f</m> at <m> x = 1</m> has a negative slope since it is decreasing.
+Choice: <m>f’(1)</m> is positive.
+Explanation: <m>f’(1)</m> would only be positive if the slope of the tangent line at <m> x = 1</m> was positive.
+Choice: <m>f’(1)</m> is zero.
+Explanation: <m>f’(1)</m> would only be zero if the tangent line at <m> x = 1</m> was horizontal and had a slope of zero.
+Q5: Find the derivative of <m> f(x) = x^3-3x^2-x+5 </m>.
+
+Hint 1: The sum and difference rules allow us to focus on each term of the polynomial individually.
+
+Hint 2: To compute the derivative of <m> 3x^2 <m>, for example, use the power and constant multiple rules: <m>\dfrac{d}{dx} (3x^2) = 3 \dfrac{d}{dx}(x^2) = 3 \cdot 2x</m>.
+
+Explanation: <m> f’(x) = 3x^2 – 6x – 1</m>. Using the sum, difference, and constant multiple rules, the derivative can be computed as follows:
+
+<me>
+\begin{align*}
+f'(x) &= \dfrac{d}{dx}\left( x^3 – 3x^2 – x+5 \right)\\
+&= \dfrac{d}{dx}(x^3) – \dfrac{d}{dx}(3x^2) – \dfrac{d}{dx} (x) + \dfrac{d}{dx} (5) && \text{Use the sum and difference rules\\
+&= \dfrac{d}{dx}(x^3) – 3\dfrac{d}{dx}(x^2) – \dfrac{d}{dx} (x) + \dfrac{d}{dx} (5) && \text{Use the constant multiple rule} \\
+&= 3x^2 – 3(2x) – 1 + 0 && \text{Use the power rule.} \\
+&= 3x^2 – 6x – 1 && \text{Simplify}
+\end{align*}
+</me>
+
+Follow-up questions (typically 3-7)
+Q6: Previously, the derivative of <m> f(x) = x^3-3x^2-x+5 </m> was computed.  Use that computation to find <m> f’(1) </m>.  Ensure that your answer matches your prediction from the graph about whether the slope of the tangent line of <m> f </m> at <m> x= 1</m> is negative or positive.
+
+
+
+
+
+
+
+
+
+Image description: graph of f(x) = x^3-3x^2-x+5 in black with x-axis from –2.5 to 4 and y-axis from –2 to 6, and dashed tangent line with equation y=-4(x-1)+2.
+
+  
+Hint 1: <m>f’(1)</m> can be computed by substituting <m> x = 1</m> into <m>f’(x) = 3x^2 – 6x – 1 </m>.
+Hint 2: Substituting <m> x= 1 </m> into <m>f’(x) </m> yields <m> f’(1) = 3(1)^2 – 6(1) – 1 </m>.
+Explanation: <m>f’(1) = -4</m>. Because <m> f’(x) = 3x^2 – 6x - 1</m>, then <m> f’(1) = 3(1)^2 – 6(1) - 1 = 3 – 6 – 1 = –4</m>.  In Part A, the negative slope of the tangent line of <m> f </m> at <m> x = 1 </m> indicated that <m> f’(1) </m> would be negative, which is indeed true.
+
+
+ 
+Q7: Which of the following functions has the same derivative as <m> f(x) = 3x^2 + 5x + 2 </m>? 
+Choice*: <m> g(x) = 3x^2 + 5x – 9 </m>
+Explanation: Both functions have the same derivative: <m>6x + 5</m>.  The constant term (2 or –9) makes no difference to the derivative because the derivative of all constant terms is zero.
+Choice: <m> g(x) = –3x^2 + 5x + 2 </m>
+Explanation: For this option, <m>g’(x) = –6x + 5</m>, which is different from <m>f’(x) = 6x + 5</m>. Think about which term in the quadratic will become zero when taking a derivative.
+Choice: <m> g(x) = 3x^2 – 5x + 2 </m>.
+Explanation: For this option, <m>g’(x) = 6x – 5</m>, which is different from <m>f’(x) = 6x + 5</m>. Think about which term in the quadratic will become zero when taking a derivative.
+Choice: <m> g(x) = –3x^2 – 5x – 5 </m>
+Explanation: For this option, <m>g’(x) = –6x – 5</m>, which is different from <m>f’(x) = 6x + 5</m>.   Remember, the derivative of all constants is zero.
+
+
+
+End of Lesson Summary
+Constant Multiple Rule: If <m>c</m> is constant and <m>f</m> is a differentiable function, then <m> \frac{d}{dx} (c \cdot f(x))=c \cdot \frac{d}{dx} f(x)</m>. 
+Sum and Difference Rules: If <m>f</m> and <m>g</m> are both differentiable, then  
+<m> \frac{d}{dx} (f(x)+g(x))= \frac{d}{dx} f(x)+ \frac{d}{dx} g(x) </m> and  
+<m> \frac{d}{dx} (f(x)-g(x))= \frac{d}{dx} f(x)- \frac{d}{dx} g(x) </m>.
+
+
+Module: Basic Rules of Finding Derivatives
+Lesson 3.4.4: The Equation of a Tangent Line to a Point
+Framing text (just a few sentences. Should not exceed this box (min 14 pt font). 
+<Text>
+<p> For a smooth function <m>f(x)</m>, the tangent line at a point <m>(a,f(a))</m> on the graph of <m>f(x)</m> is the straight line containing the point with the same slope as the graph at that point. The slope of the tangent line is the derivative of the function at the point <m>(a,f(a))</m>, which measures the instantaneous rate of change of <m>f(x)</m> with respect to <m>x</m>.
+
+</p> 
+ 
+<p>The equation of a tangent line to a graph at a point <m>(a,f(a))</m> is given by: <m>y=f′(a)(x – a)+f(a)</m>.</p>
+</Text>
+
+Animated figure spec
+1: (A) The equation of the tangent line may look familiar, it is a modified version of the point-slope formula. B) Here, the slope is the derivative of f at a. (C) Let’s use this formula to find the equation of the tangent line to the graph of f of x equals 3x squared at x = 1. (D) First, we need to find f of 1.
+
+(A) Have the equation of a tangent line formula show up:. The equation of a tangent line to a graph at a point <m>(a,f(a))</m> is given by: <m>y=f′(a)(x – a)+f(a)</m>. 
+(B) Highlight f^′ (a)</m> and f(a).
+(C) Display equation. And the example:  <m>f(x)=3x^2</m> at <m>x=1</m>.
+(D) Animate the substitution of x = 1 into the function. 
+ 
+
+Q: Calculate <m>f(1)</m> for the function <m>f(x)=3x^2</m>. 
+Hint #1: Substitute <m>x=1</m> into the function <m>f(x)=3x^2</m>. 
+ 
+Hint #2: Square the value of <m>x</m> before multiplying by 3. 
+ 
+Correct Answer/Explanation: <m>f(1)=3</m>.  
+<me> 
+\begin{align*} 
+f(x) &= 3x^2 && \\ 
+ &= 3(1)^2 && \text{Substitute } x = 1 \text{ into the function.} \\ 
+ &= 3 && \text{Simplify} \\ 
+\end{align*} 
+</me>  
+ 
+
+
+Animated figure spec (cont)
+2: (E) Now that we have a point, find the derivative of f at 1. (F) f prime of x equals 6x.  (G) So, f prime of 1 is 6.. (H) We now have all components for the tangent line equation. (I) Substituting into the tangent line equation yields y equals 6 times x minus 1 plus 3 (J) Simplified: y equals 6 x minus 3.
+
+(E) Show the point <m>(a,f(a))=(1,3)</m> when the narrator states (F) Animate the derivative is 6x. <m>f’(x)=6x</m>.
+(G) Animate the steps for f’(1)=6 by replacing the x with 1 and simplifying. <m>f’(1)=6</m>.
+(H) Animate the pieces- (1,3), f’(1) = 6. 
+(I) Animate the equation of the tangent line. <m>y=6(x – 1)+3</m>.
+(J) Animate the simplification. <m>y=6x – 3</m>.
+
+
+
+Follow-up questions (typically 3-7)
+Q1: Which of the following statements best explains why the derivative of a function at a given point is necessary to find the equation of the tangent line at that point?  
+
+* The derivative represents the function's rate of change and is equal to the slope of the tangent line. 
+E*: The equation of the tangent line is <m> y = f’(a) (x-a) + f(a) </m>.  The value <m>f’(a)</m> is the derivative of <m> f </m> at <m> a </m> and gives the slope of the tangent line. 
+
+* The derivative gives the function's maximum value, which is essential for determining the tangent line’s equation. 
+E: The derivative shows a function’s rate of change at a point. 
+
+* The derivative provides the function's minimum value, which is needed to identify the tangency point. 
+E: The derivative reveals how a function changes, not just where its extrema occur.
+
+* The derivative determines the function's intercepts which help to plot the tangent line. 
+E: While intercepts are important for graphing, the derivative indicates how a function behaves at each point. 
+Q2: In the tangent line equation <m>y=f’(a)(x – a)+f(a)</m>, what does <m>f’(a)</m> represent?
+
+* <m>f’(a)</m> represents the slope of the tangent line. E*: <m>f’(a)</m> is the derivative evaluated at <m>x=a</m>, which gives the tangent line's slope by definition.
+* <m>f’(a)</m> represents the <m>y</m>-intercept of the tangent line E: Consider what the derivative represents in the context of tangent lines. 
+* <m>f’(a)</m> represents the <m>x</m>-intercept of the tangent line. E: How does the derivative at a point relate to the tangent line? 
+* <m>f’(a)</m> represents the <m>y</m>-coordinate of the point of tangency. E: Consider how the derivative at this point determines a key characteristic of the tangent line. 
+Q3: Which of the following statements about the tangent line to a function <m> f </m> at <m> x = 3 </m> is true?
+
+Choice*: The slope of the tangent line is <m> f’(3) </m>.
+Explanation: The slope of the tangent line is exactly the instantaneous rate of change of <m>f</m>, which is the derivative of <m> f </m> evaluated at <m> x = 3 </m>.
+
+Choice: The slope of the tangent line is <m> f(3) </m>.
+Explanation: The slope of the tangent line is directly related to the derivative of the function, not the function itself.
+
+Choice: The tangent line will go through the point <m>(3,f’(3))</m>.
+Explanation: The tangent line goes through <m> (3,f(3)) </m>, which is different than <m> (3,f’(3)) </m>.
+
+Choice: The equation of the tangent line at <m> x = 3 </m> is given by <m> y = f(3)(x –3) + f’(3) </m>.
+Explanation: This answer choice has the role of <m> f(3) </m> and <m> f’(3) </m> swapped.
+Q4: Given the function <m>f(x)=x^3 –5x+10</m>, what is the tangent line’s equation at the point <m>(1,6)</m>?
+
+Hint 1: The equation of a tangent line to a curve <m>y=f(x)</m> at a point <m>(a,f(a))</m> is given by: <m>y=f’(a)(x – a)+f(a)</m>. 
+
+Hint 2: Calculate <m>f’(1)</m> to determine the tangent line’s slope at <m>x=1</m>. 
+
+Answer: <m>y = -2x + 8</m> 
+Explanation: The slope of the tangent line, <m> f’(1) </m> can be computed as follows:
+
+<me> 
+\begin{align*} 
+f(x) &= x^3 - 5x + 10  &&\\ 
+f'(x) &= 3x^2 - 5 && \text{Differentiate} \\ 
+f'(1) &= 3(1)^2 - 5 && \text{Substitute <m> x = 1 </m>} \\ 
+&= -2 && \text{Simplify} \\ 
+\end{align*} 
+</me> 
+
+Since <m>f(1) = 6</m>, the equation of the tangent line is given by <m> y = f’(1)(x-1) + f(1) = -2(x-1) + 6 = -2x + 8</m>.
+
+Q5: Given the function <m>f(x) = 2x^3 - x^2 + 6x - 1</m>, find the equation of the tangent line at <m> x = -1 </m>.
+
+Hint 1: Calculate <m>f’(-1)</m> to determine the tangent line’s slope at <m>x=-1</m>.
+
+Hint 2: The function value <m> f(-1) </m> will also be needed in the computation.  Find this by substituting <m> x = -1 </m> into <m>f(x) = 2x^3 - x^2 + 6x - 1</m>.
+
+Explanation: <m> y = 14(x+1) - 10</m>
+
+The slope of the tangent line, <m> f’(1) </m> can be computed as follows:
+
+<me> 
+\begin{align*} 
+f(x) &= 2x^3 - x^2 + 6x - 1  &&\\ 
+f'(x) &= 6x^2 - 2x + 6 && \text{Differentiate} \\ 
+f'(1) &= 6(-1)^2 - 2(-1) + 6 && \text{Substitute <m> x = -1 </m>} \\ 
+&= 14 && \text{Simplify} \\ 
+\end{align*} 
+</me> 
+
+Next, we compute the function value <m>f(-1) = 2(-1)^3 - (-1)^2 + 6(-1) - 1 = -10 </m>.  Thus, the equation of the tangent line is <m> y = f’(-1)(x - (-1)) + f(-1) = 14(x+1) - 10 = 14x + 4 </m>
+
+
+Follow-up questions (typically 3-7)
+Q6: Find the equation of the line that goes through the point <m> (2,1) </m> and is parallel to the tangent line of <m> f(x) = 2x^2 + 3x – 4 </m> at <m> x = –\frac{3}{2} </m>.
+Hint 1: Parallel lines have the same slope.
+Hint 2: The slope of the desired line and the tangent line are the same.  So, the slope of both lines will be <m> f’\left(–\frac{3}{2}\right) </m>.
+Explanation: The equation of the line is <m> y = –3(x – 2) + 1 </m>. Computing the derivative of <m> f </m> yields <m> f’(x) = 4x + 3 </m>.  So, <m> f’\left(–\frac{3}{2}\right) = 4 \left(–\frac{3}{2}\right) + 3 = –6 + 3 = –3.<m>. Thus, the slope of the tangent line is <m> –3 </m>.  The desired line is parallel to the tangent line and therefore has the same slope.  Since the desired line goes through <m>(2,1)</m>, its equation is given by <m> y = –3(x-2) + 1 </m>.
+
+Q7: What is the <m>y</m>-intercept of the tangent line of <m> f(x) = 3x^2 – 3x+1 </m> at <m> x = 2 </m>? Write the answer as a coordinate point.
+
+Hint 1: First, find the equation of the tangent line.  The <m>y</m>-coordinate can be found by substituting <m>x = 0 </m> into the equation of the tangent line.
+
+Hint 2: The derivative of <m> f </m> is <m> f’(x) = 6x – 3 </m>.  The equation of the tangent line is <m> y = f’(2)(x – 2)+f(2) </m>.  After this is computed, substituting in <m> x = 0 </m> will yield the <m> y</m>-coordinate of the <m>y</m>-intercept.
+
+Explanation: The <m>y</m>-intercept is <m>(0, –9)</m>. The equation of the tangent line can be found as follows:
+<me>
+\begin{align*}
+f(x) &= 3x^2 – 3x + 1 \\
+f(2) &= 3(2)^2 – 3(2) + 1 && \text{Substitute <m> x = 2 </m>}\\
+&= 7 && \text{Simplify} \\
+f'(x) &= 6x – 3 && \text{Compute derivative} \\
+f'(2) &= 6(2) – 3 && \text{Substitute <m> x = 2 </m>} \\
+&= 9 && \text{Simplify}\\
+y &= f’(2)(x – 2) + f(2) && \text{Equation of tangent line at m> x = 2 </m>} \\
+&= 9(x – 2) + 7 && \text{Substitute <m> f’(2) </m> and <m>f(2) </m>} \\
+&= 9x – 9 && \text{Simplify}\\
+\end{align*}
+</me>
+
+As the tangent line <m> y = 9x – 9 </m> is written in slope-intercept form, the <m>y</m>-intercept occurs at <m> (0, –9) </m>.
+
+
+
+End of Lesson Summary
+The equation of a tangent line to a graph at a point <m>(a,f(a))</m> is given by: <m>y=f′(a)(x – a)+f(a)</m>.
+
+Module: Basic Rules of Finding Derivatives
+Lesson 3.4.5: Higher Order Derivatives
+
+Framing text (just a few sentences. Should not exceed this box (min 14 pt font). 
+<Text>
+<p>Higher-order derivatives come from taking successive derivatives. The second derivative<m>f′′(x)</m> or, in Leibniz notation <m>\frac{d^2y}{dx^2}</m>, is the derivative of <m>f’(x)</m>. The third derivative <m>f′′′(x)</m> or <m>\frac{d^3y}{dx^3}</m>, is the derivative of <m>f’’(x)</m>. This continues to the <m>n</m>-th derivative, written as <m>f^{(n)}(x)</m> or <m>\frac{d^ny}{dx^n}</m>.</p>  
+ 
+<p>The real power of higher-order derivatives manifests in physics, particularly in motion analysis. Consider an object's movement:</p>
+<ul>  
+<li>The position function is given as <m>s(t)</m>. 
+<li>The first derivative, <m>v(t)=s′(t)</m>, is the velocity function. 
+<li>The second derivative, <m>a(t)=s′′(t)</m>, is the acceleration function <m>a(t)=s′′(t)</m>. 
+</ul> 
+<p>Higher derivatives help us predict and understand motion.</p>
+</Text>
+
+Animated figure spec
+1: (A) The derivative function, f prime of x, or in Leibniz notation d-y over d-x., represents the rate of change of the function of x. (B) The second derivative represents the derivative of the first derivative function. (C) The third derivative is the derivative of the second derivative. (D) This pattern continues for higher-order derivatives. Each new derivative is found by differentiating the previous one. (E) Let‘s find the second derivative of f if f of x equals 2 x cubed minus 2 x squared plus 1. (F) First find the first derivative. (G) Now, differentiate a second time: The second derivative of f is 12x minus 4.
+
+(A) Show the first derivative line animating each piece as its stated. <m>f’(x)</m>, \dfrac{dy}{dx}</m>
+(B) Show the second derivative line animating each piece as its stated. <m>f’’(x)</m> or <m> \frac{d^2y}{dx^2}</m>
+(C) Show the third derivative line animating each piece as its stated. <m>f’’’(x)</m> or <m> \frac{d^3y}{dx^3}</m>
+(D) Show the nth derivative line animating each piece as its stated. <m>f^{(n)}(x)</m> or <m>\frac{d^ny}{dx^n}</m>.
+
+(E) Have the example show up. <m>f’’(x)</m> if <m>f(x)=2x^3-2x^2+1</m>. 
+(F) Animate finding <m>f’(x)=6x^2-4x</m>
+(G) Animate finding f’’(x). <m>f’’(x)=12x-4</m>
+
+Q: Find <m>f’’(x)</m> of <m>f(x)=x^2+ax</m>.
+Hint #1: Start by finding the first derivative. 
+Hint #2: Find the derivative of the first derivative to get the second derivative. 
+Correct Answer/Explanation: <m>f’’(x) = 2</m> 
+<me> 
+\begin{align*} 
+f'(x) & = 2x+a &&\text{Find the first derivative.} \\ 
+f'’(x) &=2 &&\{Find the second derivative.}  
+\end{align*} 
+</me> 
+
+Animated figure spec (cont)
+2: (H) Now let’s look at a real-world scenario that involves derivatives. A ball is thrown from the ground. The height, h, of the ball in feet at time t seconds can be modeled by the equation h of t equals negative 16 t squared plus 64 t. Find its velocity and acceleration functions. (I) The velocity function is the derivative of the height function. So, v of t equals negative 32 t plus 64. (J) The acceleration function measures how quickly the velocity is changing and is the derivative of the velocity function, or the second derivative of the height function. (K) So, the acceleration is negative 32 feet per second squared. (L) The acceleration of a ball dropping under the force of gravity is constant, which is an important Physics fact.
+
+(H) Have the example problem come up on the screen. A ball is thrown from the ground. The height, <m>h</m>, of the ball in feet at time t seconds can be modeled by the equation <m>h(t)= –16t^2+64t</m>. Find its velocity and acceleration functions. 
+(I) Animate the equation <m>v(t)=h’(t)=-32t+64</m>
+(J) Animate the equation <m>a(t)=v’(t)=h”(t)</m>
+(K) Animate the equation <m>= - 32 </m>
+(L) Animate the arrow going down and the earth’s gravitational pull showing up (if you want to be fancy you can add a spinning earth if it isn’t too crowded) 
+
+
+Follow-up questions (typically 3-7)
+Q1: What does <m> f^{(5)}(x) </m> represent?
+
+* The rate of change of the fourth derivative.
+E*: Each derivative gives the rate of change of the previous derivative.
+
+* The function <m> f </m> raised to the fifth power.
+E: <m> f^{(5)}(x)</m> means taking the derivative five times. 
+
+* The rate of change of the fifth derivative.
+E: The rate of change of the fifth derivative would be the sixth derivative since it would be the derivative of the fifth derivative.
+
+* Composing the function <m> f </m> with itself five times.
+E: <m>f^{(5)}(x)</m> represents the 5th derivative of <m>f</m>, not composition of functions. 
+
+
+Q2: Compute <m> \dfrac{d^3y}{dx^3} </m> for <m> y = -2x^6 + x^5 - 2x^3 + 2x - 7 </m>
+
+Hint 1: <m> \dfrac{d^3y}{dx^3} </m> is the third derivative of <m> y = -2x^6 + x^5 - 2x^3 + 2x - 7 </m>.
+
+Hint 2: The first derivative is <m> \dfrac{dy}{dx} = -12x^5 + 5x^4 - 6x^2 + 2 </m>.  Take two more derivatives to find <m> \dfrac{d^3y}{dx^3} </m>.
+
+Explanation: <m>\dfrac{d^3y}{dx^3} &= -240x^3 + 120x^2 - 12x </m>. The third derivative <m>\dfrac{d^3y}{dx^3} </m> can be computed by taking three consecutive derivatives.
+
+<me>
+\begin{align*}
+y &= -2x^6 + 2x^5 - x^3 + 2x - 7 \\
+\dfrac{dy}{dx} &= -12x^5 + 10x^4 - 3x^2 + 2 && \text{First derivative} \\
+\dfrac{d^2y}{dx^2} &= -60x^4 + 40x^3 - 6x^2 && \text{Second derivative} \\
+\dfrac{d^3y}{dx^3} &= -240x^3 + 120x^2 - 12x && \text{Third derivative} \\
+\end{align*}
+</me>
+Q3: If <m> f(x) </m> is a 10-th degree polynomial, what would be the degree of <m> f^{(4)}(x)</m>?
+
+Choice*: <m> f^{(4)}(x)</m> would be a sixth-degree polynomial.
+Explanation: Because <m> \dfrac{d}{dx} x^n = nx^{n-1} </m>, every derivative will decrease the exponent by <m> 1 </m>.  So, applying the derivative four times to a tenth-degree polynomial will decrease the degree by <m>4</m> to <m>6</m>.
+
+Choice: <m> f^{(4)}(x)</m> would be a fifth-degree polynomial.
+Explanation: Each time a derivative of a polynomial is taken, the degree goes down by <m> 1 </m>.  What happens to a degree <m> 10 </m> polynomial if <m> 4 </m> derivatives are taken?
+
+Choice: <m> f^{(4)}(x)</m> would be a fourth-degree polynomial.
+Explanation: The degree of the polynomial is not the number of times the derivative is taken.  Rather, each time a derivative is taken, the degree will decrease by <m> 1 </m>.
+
+Choice: <m> f^{(4)}(x)</m> would be a seventh-degree polynomial.
+Explanation: Let <m> f(x) = x^{10} </m> and take <m> 4 </m> derivatives. What is the degree of the fourth-derivative of <m> f </m>?
+Q4: The first derivative of <m> f </m> is <m> f’(x) = x^3 – 3x^2 + 2x – 1 </m>. What is <m> f’’’(x) </m>?
+
+Hint 1: Because <m> f’(x) = x^3 – 3x^2 + 2x – 1 </m> is the first derivative, only two more derivatives are needed to find the third derivative <m> f’’’(x) </m>.
+
+Hint 2: Because the first derivative is <m> f’(x) = x^3 – 3x^2 + 2x – 1 </m>, the second derivative is <m> f’’(x) = 3x^2 – 6x + 2 </m>. What is the third derivative? 
+
+Explanation: <m> f'’’(x) = 6x – 6 </m>. Because the first derivative is <m> f’(x) = x^3 – 3x^2 + 2x – 1 </m>, two more derivatives are needed to find <m> f’’’(x) </m>.
+<me>
+\begin{align*}
+f’(x) &= x^3 – 3x^2 + 2x – 1 && \text{Given first derivative} \\
+f'’(x) &= 3x^2 – 6x + 2 && \text{Second derivative} \\
+f'’’(x) &= 6x – 6 && \text{Third derivative}\\
+\end{align*}
+</me>
+Q5: Let <m> s(t) </m> represent the position of a car, in miles, along a road as a function of time, in hours.  The car is said to have constant acceleration if the second derivative <m> s’’(t) </m> of the position function is a constant function.  Which of the following position functions has constant acceleration?
+
+Choice*: <m> s(t) = 30t – t^2 </m>
+Explanation: Taking derivatives yields the following
+
+<me>
+\begin{align*}
+s’(t) &= 20 – 2t && \text{Velocity, first derivative}\\
+s’’(t) &= – 2 && \text{Acceleration, second derivative}]]
+\end{align*}
+<\me>
+Note that <m> s’’(t) </m> is a constant function.   
+
+Choice: <m> s(t) = 30t^2 – t^3 </m>
+Explanation: Taking derivatives yields the following
+<me>
+\begin{align*}
+s’(t) &= 60t – 3t^2 && \text{Velocity, first derivative}\\
+s’’(t) &= 60t – 3t^2– 2 && \text{Acceleration, second derivative}]]
+\end{align*}
+<\me>
+Note that <m> s’’(t) </m> is not a constant function.
+
+Choice: <m> s(t) = 30 – t^3 </m>
+Explanation: 
+Taking derivatives yields the following
+<me>
+\begin{align*}
+s’(t) &= – 3t^2 && \text{Velocity, first derivative}\\
+s’’(t) &= – 6t  && \text{Acceleration, second derivative}]]
+\end{align*}
+<\me>
+Note that <m> s’’(t) </m> is not a constant function.
+
+Choice: <m> s(t) = 30t^3 – t^2 </m>
+Explanation: 
+Taking derivatives yields the following
+<me>
+\begin{align*}
+s’(t) &= 90t^2  – 2t && \text{Velocity, first derivative}\\
+s’’(t) &= 180t - 2 && \text{Acceleration, second derivative}]]
+\end{align*}
+<\me>
+Note that <m> s’’(t) </m> is not a constant function.
+
+Follow-up questions (typically 3-7)`
+Q6: If a polynomial function <m> f(x) </m> has as its third derivative <m>f’’’(x) = 0 </m> for all <m>x</m>, what must be true about <m>f(x)</m>?
+
+Choice*: <m> f </m> is a polynomial function of degree 2 or less.
+Explanation: Taking three derivatives of any polynomial of the form <m> f(x) = ax^2 + bx + c </m> yields the following:
+<me>
+\begin{align*}
+f'(x) &= 2ax + b \\
+f'’(x) &= 2a \\
+f'’’(x) &= 0 \\
+\end{align*}
+</me>
+So any polynomial of degree 2 or less will have <m>f’’’(x) = 0</m>.
+
+Choice: <m> f </m> is a polynomial function of degree 3 or less.
+Explanation: The degree 3 polynomial <m> f(x) = x^3 </m> has the following derivatives:
+<me>
+\begin{align*}
+f'(x) &= 3x^2 \\
+f'’(x) &= 6x \\
+f'’’(x) &= 6 \\
+\end{align*}
+</me>
+Since <m> f’’’(x) </m> is not a zero function, then it is not true that all polynomial functions of degree 3 or less have <m> f’’’(x) = 0 </m>.
+
+
+Choice: <m> f </m> is a linear function.
+Explanation: While all linear functions have third derivatives equal to zero (in fact, second derivatives equal to <m> 0 </m> as well), so do quadratic functions.  For example, if <m> f(x) = x^2 </m>, then
+<me>
+\begin{align*}
+f'(x) &= 2x \\
+f'’(x) &= 2 \\
+f'’’(x) &= 0 \\
+\end{align*}
+</me>.
+So, it is not necessarily true that <m> f </m> must be a linear function.
+
+Choice: <m> f </m> is a constant function.
+Explanation: While all constant functions have third derivatives equal to zero (in fact, first and second derivatives equal to <m> 0 </m>), so do quadratic functions.  For example, if <m> f(x) = x^2 </m>, then
+<me>
+\begin{align*}
+f'(x) &= 2x \\
+f'’(x) &= 2 \\
+f'’’(x) &= 0 \\
+\end{align*}
+</me>.
+So, it is not necessarily true that <m> f </m> must be a constant function.
+Q7: Which of the following functions has <m> f’’(x) = 12x</m> as its second derivative?
+
+Choice*: <m> f(x) = 2x^3 + 5x – 1 </m>
+Explanation: Taking two derivatives yields 
+<me>
+\begin{align*}
+f'(x) &= 6x^2 + 5 \\
+f'’(x) &= 12x \\
+\end{align*}
+</me>
+
+Choice: <m> f(x) = 2x^3 + 5x^2 – 1 </m>
+Explanation: Taking two derivatives yields
+<me>
+\begin{align*}
+f'(x) &= 6x^2 + 10x \\
+f'’(x) &= 12 x + 10\\
+\end{align*}
+</me>
+This does not produce the desired second derivative of <m> f’’(x) = 12x</m>.
+
+Choice: <m> f(x) = 6x^2 + 5x – 1 </m>
+Explanation: Taking two derivatives yields
+<me>
+\begin{align*}
+f'(x) &= 12x + 5 \\
+f'’(x) &= 12\\
+\end{align*}
+</me>
+This does not produce the desired second derivative of <m> f’’(x) = 12x</m>.
+
+
+Choice: <m> f(x) = 6x^2 + 5 </m>
+Explanation: Taking two derivatives yields
+<me>
+\begin{align*}
+f'(x) &= 12x \\
+f'’(x) &= 12\\
+\end{align*}
+</me>
+This does not produce the desired second derivative of <m> f’’(x) = 12x</m>.
+
+End of Lesson Summary
+Higher-order derivatives involve repeated differentiation, with each derivative building upon the previous one (2nd derivative is the derivative of the 1st, 3rd derivative is the derivative of the 2nd, etc.) 
+Two notation systems exist for higher derivatives: 
+Standard notation: <m>f''(x)</m>, <m>f'''(x)</m>, <m>f^{(n)}(x)</m> 
+Leibniz notation: <m>\frac{d^2y}{dx^2}</m>, <m>\frac{d^3y}{dx^3}</m>, <m>\frac{d^ny}{dx^n}</m> 
+In physics, higher derivatives of position describe motion: 
+Position <m>s(t)</m> → Velocity <m>s'(t)</m> → Acceleration <m>s''(t)</m>.

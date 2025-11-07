@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<learnvia_configuration>
+  <architecture>
+    <name>Hybrid Rubric-Generalist System</name>
+    <version>2.0</version>
+    <description>
+      Multi-agent review system combining specialized rubric-focused agents with
+      generalist agents for comprehensive content quality assurance
+    </description>
+  </architecture>
+
+  <agent_pools>
+    <!-- Pass 1: Initial content review with full agent ensemble -->
+    <pass number="1" type="content_review">
+      <purpose>
+        Comprehensive initial review focusing on both authoring quality and style compliance.
+        Maximum agent diversity for broad issue identification.
+      </purpose>
+
+      <authoring_agents total="15">
+        <rubric_focused count="9">
+          <assignment competency="Structural Integrity" agents="2">
+            <rationale>Critical for learning success; needs redundancy</rationale>
+          </assignment>
+          <assignment competency="Pedagogical Flow" agents="2">
+            <rationale>Essential for self-study students; high priority</rationale>
+          </assignment>
+          <assignment competency="Conceptual Clarity" agents="2">
+            <rationale>Mathematical accuracy is non-negotiable</rationale>
+          </assignment>
+          <assignment competency="Assessment Quality" agents="2">
+            <rationale>Practice problems crucial for learning validation</rationale>
+          </assignment>
+          <assignment competency="Student Engagement" agents="1">
+            <rationale>Important but more subjective; single specialist sufficient</rationale>
+          </assignment>
+        </rubric_focused>
+        <generalist count="6">
+          <rationale>
+            40% generalists ensure holistic perspective and catch cross-competency
+            issues that specialists might miss due to focused attention
+          </rationale>
+        </generalist>
+      </authoring_agents>
+
+      <style_agents total="15">
+        <rubric_focused count="9">
+          <assignment competency="Mechanical Compliance" agents="2">
+            <rationale>LaTeX/platform errors block content delivery</rationale>
+          </assignment>
+          <assignment competency="Mathematical Formatting" agents="2">
+            <rationale>Critical for mathematical content clarity</rationale>
+          </assignment>
+          <assignment competency="Punctuation &amp; Grammar" agents="2">
+            <rationale>Professional quality essential for credibility</rationale>
+          </assignment>
+          <assignment competency="Accessibility" agents="2">
+            <rationale>Inclusive design is mandatory</rationale>
+          </assignment>
+          <assignment competency="Consistency" agents="1">
+            <rationale>Important but often caught by generalists too</rationale>
+          </assignment>
+        </rubric_focused>
+        <generalist count="6">
+          <rationale>
+            Ensure style choices don't compromise content quality;
+            identify cumulative effects of style issues
+          </rationale>
+        </generalist>
+      </style_agents>
+    </pass>
+
+    <!-- Pass 2: Verification and missed issue detection -->
+    <pass number="2" type="content_review">
+      <purpose>
+        Secondary review with fresh agents to catch issues missed in Pass 1
+        and verify proposed fixes don't create new problems
+      </purpose>
+
+      <authoring_agents total="15">
+        <rubric_focused count="9">
+          <assignment competency="Structural Integrity" agents="2"/>
+          <assignment competency="Pedagogical Flow" agents="2"/>
+          <assignment competency="Conceptual Clarity" agents="2"/>
+          <assignment competency="Assessment Quality" agents="2"/>
+          <assignment competency="Student Engagement" agents="1"/>
+        </rubric_focused>
+        <generalist count="6"/>
+      </authoring_agents>
+
+      <style_agents total="15">
+        <rubric_focused count="9">
+          <assignment competency="Mechanical Compliance" agents="2"/>
+          <assignment competency="Mathematical Formatting" agents="2"/>
+          <assignment competency="Punctuation &amp; Grammar" agents="2"/>
+          <assignment competency="Accessibility" agents="2"/>
+          <assignment competency="Consistency" agents="1"/>
+        </rubric_focused>
+        <generalist count="6"/>
+      </style_agents>
+    </pass>
+
+    <!-- Pass 3: First copy-editing pass -->
+    <pass number="3" type="copy_editing">
+      <purpose>
+        Pure copy-editing focus after content issues resolved.
+        Generalists only to maintain holistic view while polishing.
+      </purpose>
+
+      <style_agents total="8">
+        <generalist count="8">
+          <focus_areas>
+            <area>Final grammar and punctuation polish</area>
+            <area>Consistency verification</area>
+            <area>Formatting standardization</area>
+            <area>Mathematical notation cleanup</area>
+          </focus_areas>
+        </generalist>
+      </style_agents>
+    </pass>
+
+    <!-- Pass 4: Final copy-editing pass -->
+    <pass number="4" type="copy_editing">
+      <purpose>
+        Final quality assurance pass ensuring publication readiness.
+        Fresh generalist eyes for ultimate polish.
+      </purpose>
+
+      <style_agents total="8">
+        <generalist count="8">
+          <focus_areas>
+            <area>Final proofread for any remaining issues</area>
+            <area>Verify all previous fixes properly implemented</area>
+            <area>Ensure consistent professional presentation</area>
+            <area>Final accessibility check</area>
+          </focus_areas>
+        </generalist>
+      </style_agents>
+    </pass>
+  </agent_pools>
+
+  <consensus_rules>
+    <confidence_calculation>
+      <formula>base_confidence = agreeing_agents / total_agents_who_evaluated</formula>
+      <note>
+        Agents who don't identify an issue are not counted as disagreeing;
+        only explicit disagreement about identified issues affects confidence
+      </note>
+    </confidence_calculation>
+
+    <cross_validation_bonus>
+      <condition>
+        If both rubric_focused AND generalist agents independently identify
+        the same issue
+      </condition>
+      <action>confidence *= 1.2 (capped at 1.0)</action>
+      <rationale>
+        Independent identification by different agent types strongly validates
+        the issue's existence and importance
+      </rationale>
+    </cross_validation_bonus>
+
+    <severity_escalation>
+      <condition>
+        If multiple agents identify related issues in the same area with
+        varying severities
+      </condition>
+      <action>Consider escalating to highest severity proposed</action>
+      <rationale>
+        Multiple agents noticing problems in the same area suggests a more
+        serious underlying issue
+      </rationale>
+    </severity_escalation>
+
+    <solution_threshold>
+      <automatic_fix>severity >= 4 AND confidence >= 0.7</automatic_fix>
+      <human_review>severity >= 3 OR confidence &lt; 0.7</human_review>
+      <ignore>severity &lt;= 2 AND confidence &lt; 0.5</ignore>
+    </solution_threshold>
+
+    <conflict_resolution>
+      <scenario type="competency_conflict">
+        When fixes for different competencies conflict, prioritize:
+        1. Mathematical correctness (non-negotiable)
+        2. Accessibility (legal/ethical requirement)
+        3. Pedagogical effectiveness (core mission)
+        4. Style and formatting (important but flexible)
+      </scenario>
+      <scenario type="agent_disagreement">
+        When agents disagree on severity or solution:
+        1. Escalate to human review if confidence &lt; 0.6
+        2. Use highest severity if multiple agents flag same issue
+        3. Prefer specialist judgment for competency-specific issues
+        4. Prefer generalist judgment for cross-competency issues
+      </scenario>
+    </conflict_resolution>
+  </consensus_rules>
+
+  <implementation_metadata>
+    <total_agents>76</total_agents>
+    <passes>4</passes>
+    <estimated_review_time>
+      Parallel execution allows all agents in a pass to work simultaneously.
+      Estimated 2-3 minutes per pass for typical module.
+    </estimated_review_time>
+    <quality_metrics>
+      <metric name="issue_detection_rate">
+        Expected 95%+ detection of severity 4-5 issues
+      </metric>
+      <metric name="false_positive_rate">
+        Target &lt;10% false positives through consensus mechanism
+      </metric>
+      <metric name="cross_competency_coverage">
+        40% generalist agents ensure holistic quality
+      </metric>
+    </quality_metrics>
+  </implementation_metadata>
+</learnvia_configuration>

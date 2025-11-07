@@ -1,0 +1,3876 @@
+<Module uuid="c3ec2a75-639e-4537-92fe-e9eabc796914">
+  <title>Integration by substitution</title>
+  <description>Integration by substitution</description>
+  <LearningOutcomes ids="5.8.1" />
+  <Activities>
+    <Activity type="lesson" when="pre" uuid="4e0d532b-3a2a-4264-83f6-f5664a3fa71c">
+      <title><m>U</m>-substitution with indefinite integrals</title>
+      <LearningOutcomes ids="Todo" />
+      <Resources>
+        <TextResource duration="1" uuid="cf2a3ff8-3c71-4206-b0d4-423cfb5f6de5">
+          <KSAs primary="" secondary="Todo" uuid="bcebfa07-a2bc-43f6-b81e-fdfaa5e9d8ee" />
+          <Text uuid="b8228e2c-2845-43b0-bcf3-f207d577ac82">
+            <p>Some integrals can be solved efficiently using a method called <m>u</m>-substitution. <m>
+              U</m>-substitution works by changing a part of the integral into a new variable,
+              called <m>u</m>, to transform the problem into a more familiar form. This process
+              reverses the chain rule from derivatives.</p>
+
+            <p>The main goal is to identify a function inside another function and that the inner
+              function as <m>u</m>. The steps for <m>u</m>-substitution are: <list type="bullet">
+                <item>Identify the substitution <m>u = g(x)</m></item>
+                <item>Compute <m>du = g'(x) dx</m>
+                </item>
+                <item> Rewrite the integral in terms of <m>u</m></item>
+                <item> Evaluate the simplified integral </item>
+                <item> Substitute back to the original variable.</item>
+              </list>
+            </p>
+
+
+          </Text>
+        </TextResource>
+        <TheoremResource duration="1" uuid="5674b6ad-04e0-45f4-b18b-23be00347642">
+          <title />
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>
+            <p>Let <m>u=g(x)</m> where <m>g'(x)</m> is continuous. Let <m>f</m> be continuous on the
+              range of <m>g</m> and let <m>F</m> be an antiderivative of <m>f</m>. Then,</p>
+            <me> \int f[g(x)]g'(x)\,dx=\int f(u) \,du = F(u)+C=F(g(x))+C.</me>
+          </Text>
+          <Proof />
+        </TheoremResource>
+        <TextResource duration="1" uuid="fe9dc2ed-b707-4ccf-95ab-b230b3b6354d">
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>
+            <p>In this lesson, we will use u-substitution to evaluate <m>\displaystyle \int
+              2x(x^2+1)^3\,dx</m>.</p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="1" uuid="1c4a130e-4e76-45fb-a953-3ce62fde865e">
+          <title uuid="f78701a0-817d-48d8-9dcc-d4eba885ee2e">Todo</title>
+          <KSAs primary="" secondary="Todo" uuid="175b58b0-6ef9-4d8e-a0c9-acde3af64773" />
+          <Track kind="narration" src="tracks/1c4a130e-4e76-45fb-a953-3ce62fde865e_narration.vtt"
+            uuid="2d4b17ee-9d3c-4795-827e-bb0875caea03" />
+          <Track kind="description"
+            src="tracks/1c4a130e-4e76-45fb-a953-3ce62fde865e_description.vtt"
+            uuid="1718c38a-ef30-42a6-a13e-53489ba80bd9" />
+          <Code uuid="e6962ecc-db44-4e47-a492-80728875b303">
+            Q2FudmFzKHdpbmRvd3M6IDEpClNjZW5lKCkgewogICAgSW5pdCgKICAgICAgICB0aXRsZTogVGV4dCgiVS1TdWJzdGl0dXRpb24gLSBJbmRlZmluaXRlIEludGVncmFsIiwgcG9zaXRpb246IFZlYzIoMC4yNCwgMCkpCiAgICAgICAgcHJvYmxlbTogVGV4dCgiRXZhbHVhdGUgJFxpbnQgMngoeF4yICsgMSleM2R4JC4iLCBwb3NpdGlvbjogVmVjMigwLjAsIDAuMSkpCiAgICAgICAgCiAgICAgICAgc3RlcFN0YXJ0WTogMC4yCiAgICAgICAgc3BhY2luZyA9IDAuMDUKICAgICAgICBzdGVwMTogVGV4dCgiU3RlcCAxOiBJZGVudGlmeSB0aGUgc3Vic3RpdHV0aW9uLiIsIHBvc2l0aW9uOiBWZWMyKDAsIHN0ZXBTdGFydFkpKQoKICAgICAgICBlbXBoSW5zaWRlRnVuYzogVGV4dCgiJHheMiArIDEkIiwKICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4yLCAwLjEwNzUpCiAgICAgICAgICAgICAgICAgICAgICAgIG91dGxpbmU6IE91dGxpbmUoY29sb3I6IENvbG9yLmJsdWUsIHN0cm9rZTogNCkpCgogICAgICAgIHN0ZXAxV29yazogVGV4dCgiJHUgPSB4XjIgKyAxJCIsIG91dGxpbmU6IE91dGxpbmUoY29sb3I6IENvbG9yLmJsdWUsIHN0cm9rZTogNCksIHBvc2l0aW9uOiBWZWMyKDAuMSwgc3RlcFN0YXJ0WSArIHNwYWNpbmcpKQoKICAgICAgICBzdGVwMjogVGV4dCgiU3RlcCAyOiBGaW5kICRkdSQ6IiwgcG9zaXRpb246IFZlYzIoMCwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAyKSkKICAgICAgICBzdGVwMlNldHVwOiBUZXh0KCIkZHUgPSBmJyh4KWR4IiwgcG9zaXRpb246IFZlYzIoMC4yMiwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAyKSkKICAgICAgICBzdGVwMldvcmsxOiBUZXh0KCIkZicoeCkgPSAyeCQiLCBwb3NpdGlvbjogVmVjMigwLjEsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogMykpCiAgICAgICAgc3RlcDJXb3JrMjogVGV4dCgiJGR1ID0gMnhkeCQiLCBwb3NpdGlvbjogVmVjMigwLjMsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogMyksIG91dGxpbmU6IE91dGxpbmUoY29sb3I6IENvbG9yLnJlZCwgc3Ryb2tlOiA0KSkKCiAgICAgICAgc3RlcDM6IFRleHQoIlN0ZXAgMzogUmV3cml0ZSB0aGUgaW50ZWdyYWwgaW4gdGVybXMgb2YgJHUkLiIsIHBvc2l0aW9uOiBWZWMyKDAsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogNCkpCiAgICAgICAgc3RlcDNXb3JrMTogVGV4dCgiJFxpbnQgMngoeF4yICsgMSleM2R4JCIsIHBvc2l0aW9uOiBWZWMyKDAuMSwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiA1KSkKICAgICAgICBzdGVwM1dvcmsyOiBUZXh0KCI9JFxpbnQkIiwgcG9zaXRpb246IFZlYzIoMC4zMjUsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogNSkpCiAgICAgICAgc3RlcDNXb3JrMzogVGV4dCgiPSRcaW50JCIsIHBvc2l0aW9uOiBWZWMyKDAuNTY1LCBzdGVwU3RhcnRZICsgc3BhY2luZyAqIDUpKQoKICAgICAgICBpbml0aWFsWTogMC40NTgKICAgICAgICAvL2N1cnZlTW92ZTogc3FydCgoKHgueDEgLSB4LngyKS8yKV4yIC0gKHgueDAgLSAoeC54MSArIHgueDIpIC8gMileMikgKyBpbml0aWFsWQogICAgICAgIGZ1bmMxWDogMC4xMzM1CiAgICAgICAgczogMC4xMzM1CiAgICAgICAgZW5kOiAwLjQ5CiAgICAgICAgY3VydmVNb3ZlOiBzcXJ0KCgoZW5kIC0gcykvMileMiAtICh4IC0gKHMrIGVuZCkgLyAyKV4yKSArIGluaXRpYWxZCiAgICAgICAgc3RlcDNGdW5jMTogVGV4dCgiJDJ4JCIsIHBvc2l0aW9uOiBWZWMyKGBmdW5jMVhgLCBgY3VydmVNb3ZlKGZ1bmMxWClgKSkKCiAgICAgICAgZnVuYzJYOiAwLjE2NDUKICAgICAgICBpbml0aWFsWTI6IDAuNDU5CiAgICAgICAgczI6IDAuMTY0NQogICAgICAgIGVuZDI6IDAuMzcKICAgICAgICBjdXJ2ZU1vdmUyOiBzcXJ0KCgoZW5kMiAtIHMyKS8yKV4yIC0gKHggLSAoczIrIGVuZDIpIC8gMileMikgKyBpbml0aWFsWTIKICAgICAgICBzdGVwM0Z1bmMyOiBUZXh0KCIkKHheMisxKV4zJCIsIHBvc2l0aW9uOiBWZWMyKGBmdW5jMlhgLCBgY3VydmVNb3ZlMihmdW5jMlgpYCkpCgogICAgICAgIGZ1bmMzWDogMC4yNzUyCiAgICAgICAgaW5pdGlhbFkzOiAwLjQ1OAogICAgICAgIHMzOiAwLjI3NTIKICAgICAgICBlbmQzOiAwLjUyCiAgICAgICAgY3VydmVNb3ZlMzogc3FydCgoKGVuZDMgLSBzMykvMileMiAtICh4IC0gKHMzKyBlbmQzKSAvIDIpXjIpICsgaW5pdGlhbFkzCiAgICAgICAgc3RlcDNGdW5jMzogVGV4dCgiJGR4JCIsIHBvc2l0aW9uOiBWZWMyKGBmdW5jM1hgLCBgY3VydmVNb3ZlMyhmdW5jM1gpYCkpCgogICAgICAgIHVUZXh0OiBUZXh0KCIkdV4zJCIsIHBvc2l0aW9uOiBWZWMyKDAuNjEsIGluaXRpYWxZKSkKICAgICAgICBkdVRleHQ6IFRleHQoIiRkdSQiLCBwb3NpdGlvbjogVmVjMigwLjY0LCBpbml0aWFsWSkpCgogICAgICAgIHN0ZXA0OiBUZXh0KCJTdGVwIDQ6IEV2YWx1YXRlIHRoZSBzaW1wbGlmaWVkIGludGVncmFsLiIsIHBvc2l0aW9uOiBWZWMyKDAsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogNykpCiAgICAgICAgc3RlcDRXb3JrOiBUZXh0KCIkXGludCB1XjNkdSA9IFxkZnJhY3t1XjR9ezR9ICsgQyQiLCBwb3NpdGlvbjogVmVjMigwLjEsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogOCkpCiAgICAgICAgCiAgICAgICAgc3RlcDU6IFRleHQoIlN0ZXAgNTogU3Vic3RpdHV0ZSBiYWNrLiIsIHBvc2l0aW9uOiBWZWMyKDAsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogMTApKQogICAgICAgIHN0ZXA1V29yazogVGV4dCgiJFxpbnQgMngoeF4yICsgMSleM2R4ID0gXGRmcmFjeyh4XjIrMSleNH17NH0gKyBDJCIsIHBvc2l0aW9uOiBWZWMyKDAuMSwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAxMSkpCgogICAgICAgIGVtcGhVOiBUZXh0KCIkeF4yICsgMSQiLCBwb3NpdGlvbjogVmVjMihlbmQyICsgMC4wMSwgaW5pdGlhbFkyKSwgb3V0bGluZTogT3V0bGluZShjb2xvcjogQ29sb3IuYmx1ZSwgc3Ryb2tlOiA0KSkKICAgICAgICBlbXBoRFU6IFRleHQoIiQyeGR4JCIsIHBvc2l0aW9uOiBWZWMyKGVuZCwgaW5pdGlhbFkpLCBvdXRsaW5lOiBPdXRsaW5lKGNvbG9yOiBDb2xvci5yZWQsIHN0cm9rZTogNCkpCgogICAgKSB7CiAgICAgICAgdGl0bGUuaGlkZSgpCiAgICAgICAgcHJvYmxlbS5oaWRlKCkKICAgICAgICBlbXBoRFUuaGlkZSgpCiAgICAgICAgZW1waFUuaGlkZSgpCiAgICAgICAgZW1waEluc2lkZUZ1bmMuaGlkZSgpCiAgICAgICAgdVRleHQuaGlkZSgpCiAgICAgICAgZHVUZXh0LmhpZGUoKQogICAgICAgIHN0ZXAxLmhpZGUoKQogICAgICAgIHN0ZXAxV29yay5oaWRlKCkKICAgICAgICBzdGVwMi5oaWRlKCkKICAgICAgICBzdGVwMldvcmsxLmhpZGUoKQogICAgICAgIHN0ZXAyV29yazIuaGlkZSgpCiAgICAgICAgc3RlcDJTZXR1cC5oaWRlKCkKICAgICAgICBzdGVwMy5oaWRlKCkKICAgICAgICBzdGVwM1dvcmsxLmhpZGUoKQogICAgICAgIHN0ZXAzV29yazIuaGlkZSgpCiAgICAgICAgc3RlcDNXb3JrMy5oaWRlKCkKICAgICAgICBzdGVwM0Z1bmMxLmhpZGUoKQogICAgICAgIHN0ZXAzRnVuYzIuaGlkZSgpCiAgICAgICAgc3RlcDNGdW5jMy5oaWRlKCkKICAgICAgICBzdGVwNC5oaWRlKCkKICAgICAgICBzdGVwNFdvcmsuaGlkZSgpCiAgICAgICAgc3RlcDUuaGlkZSgpCiAgICAgICAgc3RlcDVXb3JrLmhpZGUoKQoKICAgICAgICAKICAgIAogICAgCiAgICAKICAgIH0KICAgIEFuaW1hdGUoKSB7CgogICAgICAgIC8vMUEKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1hX3Utc3Vic3RpdHV0aW9uX3dpdGhfaW5kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICB0aXRsZS5zaG93KCkKICAgICAgICBwcm9ibGVtLnNob3coKQogICAgICAgIHdhaXQoMzUwMCkKCiAgICAgICAgLy8xQgogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWJfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXAxLnNob3coKQogICAgICAgIHdhaXQoMjUwMCkKICAgICAgICBlbXBoSW5zaWRlRnVuYy5kcmF3T3V0bGluZSgpCiAgICAgICAgd2FpdCg1MDApCgogICAgICAgIC8vMUMKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1jX3Utc3Vic3RpdHV0aW9uX3dpdGhfaW5kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICBzdGVwMVdvcmsuc2hvdygpCiAgICAgICAgc3RlcDFXb3JrLmRyYXdPdXRsaW5lKCkKICAgICAgICBlbXBoSW5zaWRlRnVuYy5vdXRsaW5lLmhpZGUoKQogICAgICAgIHdhaXQoMTUwMCkKCiAgICAgICAKICAgIH0KfQoKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIAogICAgKSB7fQogICAgQW5pbWF0ZSgpIHsKICAgICAgICAvLzJBCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV91LXN1YnN0aXR1dGlvbl93aXRoX2luZGVmaW5pdGVfaW50ZWdyYWxzLm1wMyIpCiAgICAgICAgc3RlcDIuc2hvdygpCiAgICAgICAgd2FpdCgxNTAwKQogICAgICAgIHN0ZXAyU2V0dXAuc2hvdygpCiAgICAgICAgd2FpdCg1MDApCiAgICAgICAgLy8yQgogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWJfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXAyV29yazEuc2hvdygpCiAgICAgICAgd2FpdCg1MDApCiAgICAgICAgLy8yQwogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWNfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXAyV29yazIuc2hvdygpCiAgICAgICAgc3RlcDJXb3JrMi5kcmF3T3V0bGluZSgpCiAgICB9Cn0KClNjZW5lKCkgewogICAgSW5pdCgKICAgICAgICAKICAgICkge30KICAgIEFuaW1hdGUoKSB7CiAgICAgICAgLy8zQQogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWFfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXAzLnNob3coKQogICAgICAgIHdhaXQoMTUwMCkKCiAgICAgICAgLy8zQgogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWJfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXAzV29yazEuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICAgICAgc3RlcDNXb3JrMi5zaG93KGR1cmF0aW9uOiA1MDApCgogICAgICAgIC8vTW92ZSBwaWVjZXMgb25lIGJ5IG9uZQogICAgICAgIHN0ZXAzRnVuYzIuc2hvdyhkdXJhdGlvbjogMSwgYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGZ1bmMyWC5pbnRlcnBvbGF0ZShlbmQyIC0gMC4wMDAwMSwgZHVyYXRpb246IDUwMCkKICAgICAgICAvL3N0ZXAzRnVuYzIucG9zaXRpb24ueSA9IGluaXRpYWxZMgoKICAgICAgICBzdGVwM0Z1bmMxLnNob3coZHVyYXRpb246IDEsIGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBmdW5jMVguaW50ZXJwb2xhdGUoZW5kIC0gMC4wMDAwMSwgZHVyYXRpb246IDUwMCkKICAgICAgICAvL3N0ZXAzRnVuYzEucG9zaXRpb24ueSA9IGluaXRpYWxZCgogICAgICAgIHN0ZXAzRnVuYzMuc2hvdyhkdXJhdGlvbjogMSwgYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGZ1bmMzWC5pbnRlcnBvbGF0ZShlbmQzIC0gMC4wMDAwMSwgZHVyYXRpb246IDUwMCkKICAgICAgICAvL3N0ZXAzRnVuYzMucG9zaXRpb24ueSA9IGluaXRpYWxZMwoKICAgICAgICAvL2VtcGhhc2l6ZSB1CiAgICAgICAgLy9zdGVwM0Z1bmMyLmRyYXdPdXRsaW5lKCkKICAgICAgICBzdGVwM1dvcmszLnNob3coZHVyYXRpb246IDUwMCkKICAgICAgICBlbXBoVS5kcmF3T3V0bGluZSgpCiAgICAgICAgdVRleHQuc2hvdygpCiAgICAgICAgZW1waFUub3V0bGluZS5oaWRlKGR1cmF0aW9uOiA1MDApCiAgICAgICAgLy9lbXBoYXNpemUgZHUKICAgICAgICBlbXBoRFUuZHJhd091dGxpbmUoKQogICAgICAgIGR1VGV4dC5zaG93KCkKCiAgICAgICAgLy8zQwogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWNfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIGVtcGhEVS5vdXRsaW5lLmhpZGUoZHVyYXRpb246IDUwMCkKICAgICAgICBzdGVwNC5zaG93KCkKICAgICAgICAKICAgICAgICAKCiAgICB9Cn0KU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIAogICAgKSB7fQogICAgQW5pbWF0ZSgpIHsKICAgICAgICAvLzRBCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzQtYV91LXN1YnN0aXR1dGlvbl93aXRoX2luZGVmaW5pdGVfaW50ZWdyYWxzLm1wMyIpCiAgICAgICAgc3RlcDRXb3JrLnNob3coKQogICAgICAgIHdhaXQoMzUwMCkKICAgIAogICAgICAgIC8vNEIKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvNC1iX3Utc3Vic3RpdHV0aW9uX3dpdGhfaW5kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICBzdGVwNS5zaG93KCkKICAgICAgICB3YWl0KDUwMCkKCiAgICAgICAgLy80QwogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC80LWNfdS1zdWJzdGl0dXRpb25fd2l0aF9pbmRlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXA1V29yay5zaG93KCkKICAgICAgICB3YWl0KDY1MDApCiAgICAKICAgIAogICAgCiAgICB9Cn0K</Code>
+        </ArcResource>
+
+        <TextResource duration="1" uuid="a7324b59-5fce-466c-a11d-0b82e9b5ac31">
+          <Text uuid="57fe091d-929b-4dd3-812a-c3c5f02027d1">
+            <p> For the integral <m>\displaystyle \int 2x\sin(x^2 + 1)\,dx</m>, we will use the
+              substitution <m>u = x^2 + 1</m> to evaluate the integral. </p>
+          </Text>
+          <Questions uuid="2a34da39-1351-43d1-8600-810d2aafff61" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="546d48cf-8cc3-487c-8141-74c86bf059b9">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> For <m>u = x^2 + 1</m>, we find <m>du = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint><m>du = g'(x) \, dx</m>.</hint>
+                <hint>
+                  <p><m>u = g(x) = x^2 + 1</m>​​​​​​​​​. So, <m>g'(x) = 2x</m>. Substitute <m>g'(x)</m>
+                    into <m>du = g'(x)\,dx</m>.</p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>We write <m>u = g(x) = x^2+1</m>. Then, <me>
+                  \begin{align*}
+                  g(x) &amp;= x^2 + 1 \\
+                  g'(x) &amp;= 2x &amp;&amp; \text{Differentiate } \\
+                  du &amp;= \overbrace{2x}^{g'(x)} \, dx &amp;&amp; \text{Substitute}\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="2x \, dx" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-2</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>10</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>24</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>8</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="bc30be17-b9f0-4fab-a5a7-0ce53251a0af">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> We know: <list type="bullet">
+                    <item>
+                      <m>u = x^2 + 1</m>
+                    </item>
+                    <item>
+                      <m>du = 2x\,dx</m>
+                    </item>
+                  </list>
+                  Substituting these into the integral gives: <m>\displaystyle \int 2x\sin(x^2 +
+                  1)\,dx = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \int \sin(u) \, du</m>
+                  </label>
+                  <explanation>
+                    <me>
+                      \begin{align*}
+                      \int 2x\sin(x^2 + 1)\,dx &amp;= \int \sin(\underbrace{x^2 + 1}_{u}) \cdot
+                      \underbrace{2x \, dx}_{du} &amp;&amp; \text{Rearrange.}\\
+                      &amp;= \int \sin(u) \, du &amp;&amp; \text{Substitute } u \text{ and } du.\\
+                      \end{align*}
+                    </me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int u^2\sin(u^2 + 1) \, du</m>
+                  </label>
+                  <explanation>
+                    <p> This integral is only a substitution with <m>u = x</m>. Instead, we must
+                      substitute <m>u = x^2 + 1</m> and <m>du = 2x \, dx</m> to create a simpler
+                      integral. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int 2x \sin(u) \, dx</m>
+                  </label>
+                  <explanation>
+                    <p> This integral does not include the substitution <m>du = 2x \, dx</m>. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int \sin(x^2 + 1) \, du</m>
+                  </label>
+                  <explanation>
+                    <p> This integral does not include the substitution <m>u = x^2 + 1</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="79a9173e-90a4-4ff8-a977-21bee2778907">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> Now evaluate the integral and write the answer in terms of <m>x</m>: </p>
+                <p>
+                  <me>\displaystyle \int 2x\sin(x^2 + 1)\,dx = \int \sin(u) \, du =
+                    \underline{\phantom{XXXXXX}}</me>
+                </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\sin(x^2 + 1) + C</m>
+                  </label>
+                  <explanation>
+                    <p> This option fails to integrate <m>\sin(u)</m>. Instead, use <m>\displaystyle
+                      \int \sin(u) \, du = -\cos(u) + C</m>. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>-\cos(x^2 + 1) + C</m>
+                  </label>
+                  <explanation>
+                    <me>
+                      \begin{align*}
+                      \int 2x\sin(x^2 + 1)\,dx &amp;= \int \sin(\underbrace{x^2 + 1}_{u}) \cdot
+                      \underbrace{2x \, dx}_{du} &amp;&amp; \text{Rearrange}\\
+                      &amp;= \int \sin(u) \, du &amp;&amp; \text{Substitute } u \text{ and } du\\
+                      \\ \hline \\
+                      &amp;= -\cos(u) + C &amp;&amp; \text{Integrate}\\
+                      &amp;= -\cos(\overbrace{x^2 + 1}^u) + C &amp;&amp; \text{Substitute back } x^2
+                      + 1\\
+                      \end{align*}
+                    </me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>-\cos(2x) + C</m>
+                  </label>
+                  <explanation>
+                    <p> This option substitutes <m>u = 2x</m> instead of <m>u = x^2 + 1</m>. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\cos(x^2 + 1) + C</m>
+                  </label>
+                  <explanation>
+                    <p> This option is missing a <m>-</m>. Instead, use <m>\displaystyle \int
+                      \sin(u) \, du = -\cos(u) + C</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="e80e8c69-4030-4034-a7b1-0b297ce1698c">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question><p>Using <m>u</m>-substitution, we have found that <me>\displaystyle \int 2x
+                \sin(x^2 + 1) \, dx = -\cos(x^2 + 1) + C.</me></p> If we wanted to verify that our
+                antiderivative is correct, we could <m>\underline{\phantom{XXXXXX}}</m>. </question>
+              <Choices>
+                <choice correct="true">
+                  <label>use the chain rule to differentiate <m>-\cos(x^2+1) + C</m></label>
+                  <explanation>
+                    <p>To verify that <m>-\cos(x^2+1)+C</m> is indeed the antiderivative of <m>
+                      2x\sin(x^2+1)</m>, we need to check that <me>\dfrac{d}{dx}
+                      \left(-\cos(x^2+1)+C \right) = 2x \sin(x^2+1).</me> To do this, we use the
+                      chain rule with outside function <m>f(x) = -\cos(x) + C</m> and inside
+                      function <m>x^2+1</m>: <me>
+                        \begin{align*}
+                        f(x) &amp;= -\cos(x) + C\\
+                        f'(x) &amp;= \sin(x) &amp;&amp; \text{Sum \&amp; constant rule}\\
+                        g(x) &amp;= x^2+1 \\
+                        g'(x) &amp;= 2x \\
+                        \dfrac{d}{dx}\left(-\cos(x^2+1) + C\right) &amp;=
+                      f'(\underbrace{x^2+1}_{g(x)}) \cdot g'(x) &amp;&amp; \text{Chain rule}\\
+                        &amp;= \underbrace{\sin(x^2+1)}_{f'(g(x)}\cdot g'(x) \\
+                        &amp;= \sin(x^2+1) \cdot \underbrace{2x}_{g'(x)} \\
+                        &amp;= 2x \sin(x^2 + 1) &amp;&amp; \text{Rewrite}
+                        \end{align*}
+                      </me>
+
+                    </p>
+                  </explanation>
+                </choice>
+                <choice correct="false">
+                  <label>use the product rule to differentiate <m>-\cos(x^2+1) + C</m></label>
+                  <explanation>Differentiaing <m>-\cos(x^2+1) + C</m> is helpful in verifying that
+                    our antiderivative is correct. However, the product rule is not the most
+                    appropriate differentiation technique.</explanation>
+                </choice>
+                <choice correct="false">
+                  <label>use the chain rule to differentiate <m>2x\sin(x^2+1)</m></label>
+                  <explanation>Differentiating <m>2x \sin(x^2+1)</m> is not helpful. Instead, we
+                    need to check that <m>\dfrac{d}{dx} \left(-\cos(x^2+1) + C\right) = 2x
+                    \sin(x^2+1)</m>. </explanation>
+                </choice>
+                <choice correct="false">
+                  <label>use the product rule to differentiate <m>2x \sin(x^2+1)</m></label>
+                  <explanation>While the product rule would be helpful in differentating <m>2x
+                    \sin(x^2+1)</m>, we must instead check that <m>\dfrac{d}{dx} \left(-\cos(x^2+1)
+                    + C\right) = 2x \sin(x^2+1)</m>. </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="c18873f9-8ebd-4aac-af60-f81d1762a87b">
+          <Text uuid="1c4dd0ce-7cc4-41a7-b81d-138bca14275e">
+            <p> We will use a <m>u</m>-substitution to compute <m>\displaystyle \int (3x^2 - 4)(x^3
+              - 4x + 5)^3 \, dx</m>. </p>
+          </Text>
+          <Questions uuid="27986553-6464-46e8-8c04-1207c36859b8" locked-steps="true">
+            <MultipleChoice difficulty="easy" uuid="9c7167a7-a673-4bcc-9364-c31288c8335b">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> First, we identify the substitution: <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>(x^3 - 4x + 5)^3</m>
+                  </label>
+                  <explanation>
+                    <p>
+                      The entire composite function is not the best choice for the substitution.
+                      Instead, we should choose the simpler inner function.
+                    </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>3x^2 - 4</m>
+                  </label>
+                  <explanation>
+                    <p> This expression appears in the integrand but is not the function inside a
+                      composite function. Choosing <m>3x^2 - 4</m> will not simplify the composite
+                      expression <m>(x^3 - 4x + 5)^3</m>. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>x^3</m>
+                  </label>
+                  <explanation>
+                    <p> The expression does not match the complete inner function. We need <m>x^3 -
+                      4x + 5</m>, not just <m>x^3</m>. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>x^3 - 4x + 5</m>
+                  </label>
+                  <explanation>
+                    <p> The inner function in a composite expression is usually a good choice for <m>
+                      u</m>. From the composite <m>(x^3 - 4x + 5)^3</m>, we choose <m>u = x^3 - 4x +
+                      5</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="1dd3fe51-677c-470b-988b-c3135d40f8ac">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> After choosing <m>u = x^3 - 4x + 5</m>, what is the next step is to <m>
+                  \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label> rewrite the integral using <m>u = x^3 - 4x + 5</m>. </label>
+                  <explanation>
+                    <p> We need <m>du</m> before rewriting the integral so we can integrate with
+                      respect to <m>u</m>. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label> find <m>du = g'(x)\,dx</m> by differentiating <m>u</m>. </label>
+                  <explanation>
+                    <p> Knowing both <m>u</m> and <m>du</m> are needed to later rewrite the integral
+                      completely in terms of <m>u.</m>
+                    </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label> integrate <m>u</m> with respect to <m>x</m>. </label>
+                  <explanation>
+                    <p> The expression must first be rewritten using <m>du = g'(x)\,dx</m>.
+                      Integration then occurs with respect to <m>u</m>, not <m>x</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="3230257a-2b7b-4ff2-9b79-48d71e2ddc89">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> We know <m>u = g(x) = x^3 - 4x + 5</m>. So, we find <m>du =
+                  \underline{\phantom{XXXXXX}}.</m>. </p>
+              </question>
+              <Hints>
+                <hint>Let <m>u = g(x) = x^3 - 4x + 5</m>, so <m>g'(x) = 3x^2 - 4</m>.</hint>
+                <hint><m>du = g'(x) \, dx</m>. Because <m>g'(x)</m> has multiple terms, remember to
+                  use parentheses around the entire derivative.</hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Let <m>u = g(x) = x^3 - 4x + 5</m>, then find <m>du = g'(x) \, dx</m>
+                </p>
+                <me>
+                  \begin{align*}
+                  g(x) &amp;= x^3 - 4x + 5 \\
+                  g'(x) &amp;= 3x^2 - 4 &amp;&amp; \text{Differentiate} \\
+                  du &amp;= \overbrace{(3x^2 - 4)}^{g'(x)} \, dx &amp;&amp; \text{Substitute}\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="(3x^2-4) \, dx" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-5</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>8</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="3539cc3c-f29f-43fe-9fbd-24996c8195d3">
+              <Prefix>
+                <m>\int</m>
+              </Prefix>
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> We know: <list type="bullet">
+                    <item>
+                      <m>u = x^3 - 4x + 5</m>
+                    </item>
+                    <item>
+                      <m>du = (3x^2 - 4)\,dx</m>
+                    </item>
+                  </list>
+                  Using these, we can rewrite the integral in terms of <m>u</m> and <m>du</m>: <me>\displaystyle
+                  \int (3x^2 - 4)(x^3 - 4x + 5)^3\,dx = \int \underline{\phantom{XXXXXX}}</me>
+
+                </p>
+              </question>
+              <Hints>
+                <hint>Rearrange the integral so that <me>\displaystyle \int (3x^2 - 4)(x^3 - 4x +
+                  5)^3\,dx = \int (x^3 - 4x + 5)^3 \cdot (3x^2 - 4)\,dx.</me></hint>
+                <hint> Replace <m>(x^3 - 4x + 5)^3</m> with <m>u^3</m> and <m>(3x^2 - 4)\,dx</m>
+                  with <m>du</m>. </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Because <m>u = x^3 - 4x + 5</m> and <m>du = (3x^2 - 4)\,dx</m>, we can
+                  substitute to get: </p>
+                <me>
+                  \begin{align*}
+                  \int (3x^2 - 4)(x^3 - 4x + 5)^3\,dx &amp;= \int (\underbrace{x^3 - 4x +
+                  5}_{u})^3\cdot \underbrace{(3x^2 - 4)\,dx}_{du}\\
+                  &amp;=\int u^3\,du\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="u^3 \, du" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-2</Equals>
+                        <Name>u</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-3</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>u</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>23</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>u</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="f751cfbe-884e-49d7-8e99-aa09a6bf77bd">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> Now we will compute the simplified integral: <m>\displaystyle \int u^3\,du =
+                  \underline{\phantom{XXXXXX}} + C</m>. Write your answer in terms of <m>u</m>. </p>
+              </question>
+              <Hints>
+                <hint> Use the power rule: <m>\displaystyle \int u^n\,du = \dfrac{u^{n+1}}{n+1} + C</m>
+                  .
+        </hint>
+                <hint> For <m>u^3</m>, we have <m>n = 3</m>. </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  Integrate using the power rule.
+                </p>
+                <me>
+                  \begin{align*}
+                  \int u^3\,du &amp;= \dfrac{u^4}{4} + C &amp;&amp; \text{Power rule.}\\
+                  &amp;= \dfrac{1}{4}u^4 + C &amp;&amp; \text{Rewrite.}\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\dfrac{1}{4}u^4" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>u</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>u</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>u</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="48f8f167-fd0a-43b1-b0d4-54fb0eb827a4">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> Using <m>\dfrac{1}{4}u^4 + C</m> we previously found, we will replace <m>u</m>
+                  with <m>x^3 - 4x + 5</m> for the final answer: <m>\displaystyle \int (3x^2 -
+                  4)(x^3 - 4x + 5)^3\,dx = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint> Substitute <m>u = x^3 - 4x + 5</m> back into <m>\dfrac{1}{4}u^4 + C</m>. </hint>
+                <hint> Do not forget to include the <m>+ C</m> in the answer because this is an
+                  indefinite integral. </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> When substituting back for <m>u</m>, be sure to place <m>x^3 - 4x + 5</m> in
+                  parentheses before applying the exponent. </p>
+                <me>
+                  \begin{align*}
+                  \int (3x^2 - 4)(x^3 - 4x + 5)^3\,dx &amp;= \int u^3\,du &amp;&amp;
+                  \text{Substitute.} \\
+                  &amp;= \dfrac{1}{4}u^4 + C &amp;&amp; \text{Integrate.} \\
+                  \\ \hline \\
+                  &amp;= \dfrac{1}{4}(x^3 - 4x + 5)^4 + C &amp;&amp; \text{Substitute back } x^3 -
+                  4x + 5. \\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected=" \dfrac{1}{4}(x^3 - 4x + 5)^4 + C" tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="3f58715d-bd66-4db4-b79a-1dbbefb3ab1b">
+          <Text uuid="6ff0873f-356c-46a5-ab29-01b47217af5c">
+            <p> We will use a <m>u</m>-substitution to compute <m>\displaystyle \int
+              \dfrac{\cos(x)}{1 + \sin(x)}\,dx.</m>
+            </p>
+          </Text>
+          <Questions uuid="d72e0316-6b81-4fa5-87ac-f55f57d2d6a7" locked-steps="true">
+            <MultipleChoice difficulty="easy" uuid="1ca13f64-0c70-4c1c-b0c9-50f8d9b8668f">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> For <m>\displaystyle \int \dfrac{\cos(x)}{1 + \sin(x)}\,dx</m>, a good choice
+                  for <m>u</m> is <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\cos(x)</m>
+                  </label>
+                  <explanation>
+                    <p> Choosing <m>u=\cos(x)</m> would give <m>du = -\sin(x) \, dx</m>. However, <m>-\sin(x)
+                      \, dx</m> is not present elsewhere in the integral. This would make
+                      substituting in <m>du</m> difficult. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>1+\sin(x)</m>
+                  </label>
+                  <explanation>
+                    <p> Choosing <m>u</m> to be the denominator <m>1 + \sin(x)</m> is a good choice
+                      because its derivative <m>\cos(x)</m> appears in the numerator. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\dfrac{\cos(x)}{1+\sin(x)}</m>
+                  </label>
+                  <explanation>
+                    <p> Choosing entire integrand as <m>u</m> is not a good substitution becuase <m>
+                      du</m> would not be present elsewhere in the integral. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\sin(x)</m>
+                  </label>
+                  <explanation>
+                    <p> Choosing <m>u=\sin(x)</m> would transform the integral to have <m>1+u</m> in
+                      the denominator. However, a different substitution could tranform the
+                      denominator to be the simpler <m>u</m> instead. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="9d77ebe5-57e6-40ab-8a51-0ff884bfb4ad">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> We have <m>u = 1 + \sin(x)</m>. So, <m>du = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>For <m>u = g(x) = 1 + \sin(x)</m>, use <m>du = g'(x) \, dx</m>.</hint>
+                <hint>For <m>g(x) = 1 + \sin(x)</m>, we have <m>g'(x) = \cos(x)</m>.</hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using <m>u = g(x) = 1 + \sin(x)</m>, we compute <m>du</m>: </p>
+                <me>
+                  \begin{align*}
+                  g(x) &amp;= 1 + \sin(x) \\
+                  g'(x) &amp;= \cos(x)\\
+                  du &amp;= \overbrace{\cos(x)}^{g'(x)} \, dx \\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\cos(x) \, dx" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-7</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>23</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="d5aaee23-4f72-47a1-a0f5-81013c452fd9">
+              <Prefix>
+                <m>\displaystyle \int</m>
+              </Prefix>
+              <KSAs primary="5.8.1" />
+              <question>
+                <p>
+                  We found:
+                </p>
+
+                <list type="bullet">
+                  <item>
+                    <m>u = 1 + \sin(x)</m>
+                  </item>
+                  <item>
+                    <m>du = \cos(x)\,dx</m>
+                  </item>
+                </list>
+                <p> Now rewrite the integral in terms of <m>u</m> and <m>du</m>: <me>\displaystyle
+                  \int \dfrac{\cos(x)}{1 + \sin(x)}\,dx = \displaystyle \int
+                  \underline{\phantom{XXXXXX}}.</me>
+                </p>
+              </question>
+              <Hints>
+                <hint>Rearrange the integrand to isolate the factor <m>\cos(x)\,dx</m>: <m>\displaystyle
+                  \int \dfrac{1}{1 + \sin(x)} \cdot \cos(x)\,dx</m></hint>
+                <hint>Use the substitution <m>u = 1 + \sin(x)</m> and <m>du = \cos(x)\,dx</m> to
+                  rewrite the integral in terms of only <m>u</m> and <m>du</m>.</hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using the substitutions <m>u = 1+\sin(x)</m> and <m>du = \cos(x) \, dx</m>, we
+                  get: </p>
+
+                <me>
+                  \begin{align*}
+                  \int \dfrac{\cos(x)}{1 + \sin(x)}\,dx &amp;= \int \dfrac{1}{\underbrace{1 +
+                  \sin(x)}_u} \cdot \underbrace{\cos(x)\,dx}_{du} &amp;&amp; \text{Rearrange}\\
+                  &amp;= \int \dfrac{1}{u}\,du &amp;&amp; \text{Substitute.}\\
+
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\frac{1}{u} du" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-4</Equals>
+                        <Name>u</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-9</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>u</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>u</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>17</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="d08c0ec2-f8ee-443a-9ea4-e388b2b61fd2">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> Using <m>u=1+\sin(x)</m>, we rewrote: <me>\displaystyle \int
+                  \dfrac{\cos(x)}{1+\sin(x)}\,dx = \int \dfrac{1}{u} \, du.</me> Integrating and
+                  rewriting in terms of <m>x</m> gives a final answer of <m>\displaystyle \int
+                  \dfrac{\cos^x}{1 + \sin(x)}\,dx = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>Use the antiderivative <m>\displaystyle \int \dfrac{1}{u} \, du = \ln|u|+C.</m></hint>
+                <hint>After integrating, replace <m>u</m> with <m>1 + \sin(x)</m>. </hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>
+                  \begin{align*}
+                  \int \dfrac{\cos(x)}{1 + \sin(x)}\,dx &amp;= \int \dfrac{1}{1+\sin(x)}\cdot
+                  \cos(x)\,dx &amp;&amp; \text{Rearrange}\\
+                  &amp;= \int \dfrac{1}{u}\,du &amp;&amp; \text{Substitute}\\
+                  \\ \hline \\
+                  &amp;= \ln|u| + C &amp;&amp; \text{Integrate}\\
+                  &amp;= \ln|1+\sin(x)| + C &amp;&amp; \text{Substitute back } 1+\sin(x)\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\ln|1+\sin(x)|+C" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-5</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+
+
+        <TextResource duration="1" uuid="f2c26cd8-50a2-44af-8bfb-d9ffeb22727b">
+          <KSAs primary="" secondary="Todo" uuid="8fa70fb9-85d9-44fa-a2b0-7443c8675160" />
+          <Text uuid="c2c275bc-0a75-402d-a594-2b51cb0e2500">
+            <p>Lesson Summary</p>
+
+
+            <list type="bullet">
+              <item><m>U</m>-substitution is an integration technique that simplifies complicated
+                integrals by replacing part of the integrand with a new variable <m>u</m>. </item>
+
+              <item>The steps for u-substitution are: pick <m>u = g(x) </m>, find <m>du = g'(x) dx</m>,
+                rewrite the integral in terms of <m>u</m>, integrate the simplified integral, and
+                then substitute back to the original variable.</item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="lesson" when="pre" uuid="d022256c-3383-4a49-a919-f86e3e702234">
+      <title>Selecting <m>u</m> in a <m>u</m>-substitution</title>
+      <LearningOutcomes ids="Todo" />
+      <Resources>
+        <TextResource duration="1" uuid="c5b7478e-0c63-4d79-99e0-539c29d56a33">
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>
+            <p> Understanding that <m>u</m>-substitution reverses the chain rule is helpful.
+              However, this is not always enough to determine the right choice of <m>u</m> when
+              setting up a substitution. </p>
+
+            <p> In this lesson, we will develop a strategy for selecting <m>u</m>. A good choice of <m>
+              u</m> will allow us to use <m>du</m> to identify and replace parts of the integrand in
+              a way that simplifies the overall expression and makes the integral easier to compute. </p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="2" uuid="7f532afe-d941-4b7e-9043-6b186405e77c">
+          <title>Todo</title>
+          <KSAs primary="Todo" secondary="Todo" />
+          <Track kind="narration" src="tracks/7f532afe-d941-4b7e-9043-6b186405e77c_narration.vtt" />
+          <Track kind="description"
+            src="tracks/7f532afe-d941-4b7e-9043-6b186405e77c_description.vtt" />
+          <Code />
+        </ArcResource>
+        <TextResource duration="3" uuid="23a8711f-10c3-4dba-baf6-552d3ec82c1e">
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>We will compute <m>\displaystyle \int x^2 e^{x^3} \, dx</m> using <m>u</m>
+            -substitution.</Text>
+          <Questions locked-steps="true">
+            <MultipleChoice difficulty="easy" uuid="1640e1f2-faae-406a-940b-495c5775cf5a">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>Using a <m>u</m>-substitution on the integral <m>\displaystyle \int x^2
+                e^{x^3} \, dx</m> with substitutions <list type="bullet">
+                  <item>
+                    <m>u=x^3</m>
+                  </item>
+                  <item>
+                    <m>du = 3x^2 \, dx</m>
+                  </item>
+                </list> is a good
+                strategy because <m>\underline{\phantom{XXXXXX}}</m>
+
+              </question>
+              <Choices>
+                <choice correct="false">
+                  <label><m>3x^2 \, dx</m> appears in the integral.</label>
+                  <explanation><m>3x^2 \,dx</m> does not appear in the integral. Instead, only <m>x^2
+                    \, dx</m> appears in the integral. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>we can solve <m>du = 3x^2 \, dx</m> for <m>x^2 \, dx</m></label>
+                  <explanation><m>x^2 \, dx</m> appears elsewhere in the integral. So, solving for <m>x^2
+                    \, dx</m> will help to substitute out all <m>x</m> in the integral. </explanation>
+                </choice>
+                <choice correct="false">
+                  <label><m>x^3 \, dx</m> appears in the integral</label>
+                  <explanation>The product <m>x^3 \, dx</m> does not appear in the integral. Rather,
+                    the <m>x^3</m> is in the exponent of <m>e^{x^3}</m>. So, <m>x^3</m> is not
+                    multiplying <m>dx</m>.</explanation>
+                </choice>
+
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="2916283c-d135-40c6-bae9-e0032049de57">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>To compute <m>\displaystyle \int x^2 e^{x^3} \, dx</m>, we will use: <list
+                  type="bullet">
+                  <item>
+                    <m>u = x^3 </m>
+                  </item>
+                  <item>
+                    <m>du = 3x^2 \, dx</m>
+                  </item>
+                </list>
+
+<p>We will
+                substitute <m>e^{x^3} = e^u</m>.</p> Remaining in the integral is <m>x^2 \, dx</m>.
+                Using <m>du = 3x^2 \, dx</m> to solve for <m>x^2 \, dx</m> gives <m> x^2 \, dx =
+                \underline{\phantom{XXXXXX}}</m>. Write your answer in terms of <m>du</m>.</question>
+              <CorrectExplanation>Solving for <m>x^2 \, dx</m> gives: <me>
+                  \begin{align*}
+                  du &amp;= 3x^2 \,dx \\
+                  \frac{1}{3} \, du &amp; = x^2 \, dx &amp;&amp; \text{Divide by }3\\
+                  \end{align*}
+</me></CorrectExplanation>
+              <Hints>
+                <hint>Use <m>du = 3x^2 \, dx</m> and isolate <m>x^2 \, dx</m>.</hint>
+                <hint>Divide both sides of the equation <m>du = 3x^2 \, dx</m> to solve for <m>x^2\,
+                  dx.</m></hint>
+              </Hints>
+              <Prefix>
+                <m>x^2 \, dx = </m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="\frac{1}{3}du" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>2</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>-5</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="74ec042d-b6f3-4e65-92f1-2d0baea5ebe4">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>Using <m>u = x^3</m> and <m>\dfrac{1}{3} du = x^2 \, dx</m> allows us to
+                rewrite our integral in terms of <m>u</m> as: <me>\displaystyle \int x^2 e^{x^3} \,
+                dx = \underline{\phantom{XXXXXX}}.</me></question>
+              <Choices>
+                <choice correct="false">
+                  <label>
+                    <m>\displaystyle \int e^u \, du</m>
+                  </label>
+                  <explanation>
+                    <m>x^2 \, dx</m> is not substituted with <m>du</m>. Instead, <m>x^2 \, dx =
+                    \dfrac{1}{3} du</m>.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\dfrac{1}{3}\displaystyle \int e^u \, du</m>
+                  </label>
+                  <explanation>
+                    <me>
+                      \begin{align*}
+                      \int x^2 e^{x^3} \, dx &amp;= \int \overbrace{e^{x^3}}^{e^u} \cdot
+                      \overbrace{x^2 \, dx}^{\frac{1}{3} du} \\
+                      &amp;= \int e^u \cdot \dfrac{1}{3}\, du &amp;&amp; \text{Substitute}\\
+                      &amp;= \dfrac{1}{3} \int e^u \, du &amp;&amp; \text{Constant multiple rule}\\
+                      \end{align*}
+
+                    </me>
+                  </explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>3\displaystyle \int e^u \, du </m>
+                  </label>
+                  <explanation>Substituting <m>x^2 \, dx = \dfrac{1}{3} \, du</m> does not result in
+                    a <m>3</m> outside the integral.</explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\displaystyle \int x^2 e^u \, dx</m>
+                  </label>
+                  <explanation>This integral is not completely rewritten in terms of the variable <m>
+                    u</m>. Continue by substituting <m>x^2 \, dx = \dfrac{1}{3} \, du.</m></explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="3b219578-9368-4047-8b7f-f352549a8de5">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>Using <m>u</m>-substitution, we have rewritten <m> \displaystyle \int x^2
+                e^{x^3}\, dx = \dfrac{1}{3} \int e^u \, du</m>. Integrating and substitung back <m>u
+                = x^3</m> gives us our final answer: <me>\dfrac{1}{3} \int e^u \, du =
+                \underline{\phantom{XXXXXX}}.</me>
+
+              </question>
+              <CorrectExplanation>We use the follwoign substitutions: <me>
+                  \begin{align*}
+                  \int x^2 e^{x^3} \, dx &amp;= \int \overbrace{e^{x^3}}^{e^u} \cdot \overbrace{x^2
+                \, dx}^{\frac{1}{3} du} \\
+                  &amp;= \int e^u \cdot \dfrac{1}{3}\, du &amp;&amp; \text{Substitute}\\
+                  &amp;= \dfrac{1}{3} \int e^u \, du &amp;&amp; \text{Constant multiple rule}\\
+                  \\ \hline \\
+                  &amp;= \dfrac{1}{3} e^u + C &amp;&amp; \text{Integrate}\\
+                  &amp;= \dfrac{1}{3} e^{x^3} + C &amp;&amp; \text{Substitute back}
+                  \end{align*}
+</me></CorrectExplanation>
+              <Hints>
+                <hint>
+                  <m>\displaystyle \int e^u \, du = e^u + C</m>
+                </hint>
+                <hint>After integrating, substite back <m>u = x^3</m>. The final answer should be
+                  written in terms of the variable <m>x</m> and should include <m>+C</m>.</hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="\frac{1}{3}e^{x^3} + C" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>17</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="757307b5-8481-4706-861a-4232c2f936c1">
+          <Text uuid="3d2bb7fa-065c-42e2-a54b-78054ea34a5b">
+            <p> We will compute <m>\displaystyle \int x^2\sqrt{x^3 + 1}\,dx</m> . </p>
+          </Text>
+          <Questions uuid="408e99b8-3a4c-4611-857e-f6199e6aed80" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="242e4c7d-3b54-468a-abec-4eacd9b6156d">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> For <m>\displaystyle \int x^2\sqrt{x^3 + 1}\,dx</m>, we identify the
+                  substitution: <m>u = \underline{\phantom{XXXXXX}}</m> . </p>
+              </question>
+              <Hints>
+                <hint>The inner function in a composition is often a good choice for <m>u</m>. </hint>
+                <hint>Use the inner function of the composite function <m>\sqrt{x^3 + 1}</m>.</hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> We can choose the inside function in the composite function <m>\sqrt{x^3 + 1}</m>.
+                  Doing so gives us <m>u = x^3 + 1</m>. </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="x^3+1" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>20</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="1a9f6577-650a-452c-9467-066f80f32139">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p>Using the substitution <m>u = x^3 + 1</m>, we find <m>du = 3x^2 \, dx</m>. </p>
+
+                <p> To substitute <m>du = 3x^2 \, dx</m> into <m>\displaystyle \int x^2 \sqrt{x^3+1}
+                  \, dx</m>, it is helpful to rewrite <m>du = 3x^2 \, dx</m> as <m>
+                  \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice correct="true">
+                  <label>
+                    <m>\dfrac{1}{3}\, du = x^2 \, dx</m>
+                  </label>
+                  <explanation>The integral contains <m>x^2 \, dx</m>. So, we solve for this
+                    expression: <me>
+                      \begin{align*}
+                      du &amp;= 3x^2 \, dx \\
+                      \dfrac{1}{3} \, du &amp;= x^2 \, dx &amp;&amp; \text{Divide by }3 \\
+                    \end{align*}
+                    </me></explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>3 \, du = x^2 \, dx</m>
+                  </label>
+                  <explanation>This equation is not equivalent to <m>du = 3x^2 \, dx</m>. Instead,
+                    divide both sides by <m>3</m>.</explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>dx = 3u^2 \, du</m>
+                  </label>
+                  <explanation>We cannot simply swap the role of <m>x</m> and <m>u</m> in the
+                    equation <m>du = 3x^2 \, dx</m>. Instead, becuase <m>x^2 \, dx</m> appears in
+                    the integral, we should solve <m>du = 3x^2 \, dx</m> for <m>x^2 \, dx</m>.</explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>du = \dfrac{1}{3}x^2 \, dx</m>
+                  </label>
+                  <explanation>This is not equivalent to the equation <m>du = 3x^2 \,dx</m>.
+                    Instead, dividing by <m>3</m> on both sides will leave a <m>\dfrac{1}{3}</m>
+                    multiplying the <m>du</m>.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="23009834-4d1f-491e-a01a-a2b1224d02d5">
+              <KSAs primary="5.8.1" />
+              <question> The most helping equations to help in subsituting into <m>\displaystyle
+                \int x^2\sqrt{x^3 + 1}\,dx</m> are: <list type="bullet">
+                  <item>
+                    <m>u = x^3 + 1</m>
+                  </item>
+                  <item>
+                    <m>\dfrac{1}{3}\, du = x^2 \, dx</m>
+                  </item>
+                </list>
+                Using these subsitutions, we can write out integral in terms of <m>u</m> as <me>\displaystyle
+                \int x^2\sqrt{x^3 + 1}\,dx = \underline{\phantom{XXXXXX}}.</me>
+
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int u^2 \cdot u^{1/2} \, du</m>
+                  </label>
+                  <explanation>While this option does correctly substitute <m>\sqrt{x^3+1}</m> as <m>
+                    u^{1/2}</m>, the <m>u^2</m> is incorrect. Instead, use the substitutin <m>x^2 \,
+                    dx= \dfrac{1}{3} \, du</m>.</explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int u^{1/2} \, du</m>
+                  </label>
+                  <explanation>While this option does correctly substitution <m>\sqrt{x^3 + 1}</m>
+                    as <m>u^{1/2}</m>, the remaining <m>x^2 \, dx</m> is not simply replaced by <m>
+                    du</m>. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \dfrac{1}{3}\int u^{1/2} \, du</m>
+                  </label>
+                  <explanation>
+
+                    <me>\begin{align*}
+                      \int x^2\sqrt{x^3 + 1}\,dx &amp;= \int x^2 (x^3 + 1)^{1/2} \, dx &amp;&amp;
+                      \text{Rewrite}\\
+                      &amp;= \int (\overbrace{x^3 + 1}^{u})^{1/2} \cdot
+                      \overbrace{x^2\,dx}^{\frac{1}{3}du} &amp;&amp; \text{Rearrange}\\
+                      &amp;= \int u^{1/2} \cdot \dfrac{1}{3}du &amp;&amp; \text{Substitute}\\
+                      &amp;= \dfrac{1}{3}\int u^{1/2} \, du &amp;&amp; \text{Constant multiple
+                      rule}\\
+                      \end{align*}</me>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="e395d135-93e3-4ff9-b336-32fcded9cf2a">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question><p>After substituting, our integral is <m>\displaystyle \dfrac{1}{3} \int
+                u^{1/2}\,du</m>.</p> Integrating, the antiderivative written in terms of the
+                variable <m>u</m> is <m>\displaystyle \dfrac{1}{3} \int u^{1/2}\,du =
+                \underline{\phantom{XXXXXX}}.</m></question>
+              <Choices>
+                <choice correct="false">
+                  <label>
+                    <m>\dfrac{1}{3}u^{3/2} + C</m>
+                  </label>
+                  <explanation>An antiderivative of <m>u^{1/2}</m> is <m>\dfrac{2}{3}u^{3/2}</m>.
+                    While this option does include the <m>\dfrac{1}{3}</m> from the integral, the
+                    option does not include the <m>\dfrac{2}{3}</m>. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\dfrac{2}{9}u^{3/2} + C</m>
+                  </label>
+                  <explanation>Integrating, we get: <me>
+                      \begin{align*}
+                      \dfrac{1}{3}\int u^{1/2} \, du &amp;= \dfrac{1}{3} \cdot \dfrac{1}{3/2}
+                    u^{3/2} + C &amp;&amp; \text{Power rule for antiderivatives}\\
+                      &amp;= \dfrac{1}{3}\cdot \dfrac{2}{3} u^{3/2}+C &amp;&amp; \text{Rewrite
+                    fraction}\\
+                      &amp;= \dfrac{2}{9}u^{3/2} + C&amp;&amp; \text{Simplify}\\
+                      \end{align*}
+</me></explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\dfrac{2}{3}u^{3/2} + C</m>
+                  </label>
+                  <explanation>This option does not include the constant multiple <m>\dfrac{1}{3}</m>
+                    from the integral <m>\dfrac{1}{3} \displaystyle \int u^{1/2} \, du.</m></explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\frac{1}{2}u^{-1/2} + C</m>
+                  </label>
+                  <explanation><m>\dfrac{1}{2}u^{-1/2}</m> is the derivative of <m>u^{1/2}</m>, not
+                    an antiderivative.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="0277621f-503e-453c-a8a2-0374ae12d2d9">
+              <KSAs primary="5.8.1" />
+              <question>Using the <m>u</m>-substitution <m>u = x^3 + 1</m>, we have the following: <me>
+                \begin{align*}
+                  \int x^2 \sqrt{x^3 + 1} \, dx &amp;= \int\underbrace{\sqrt{x^3+1}}_{u^{1/2}} \cdot
+                \underbrace{x^2 \, dx}_{\frac{1}{3}du}\\
+                  &amp;= \int u^{1/2} \cdot \dfrac{1}{3} du\\
+                  &amp;= \dfrac{1}{3}\int u^{1/2} \, du \\
+                  &amp;= \dfrac{1}{3} \cdot \dfrac{1}{3/2} u^{3/2} + C\\
+                  &amp;= \dfrac{1}{3}\cdot \dfrac{2}{3} u^{3/2}+C \\
+                  &amp;= \dfrac{2}{9}u^{3/2} + C\\
+                  \end{align*}
+</me>
+                Rewriting this integral in terms of the variable <m>x</m> gives our final answer <me>\displaystyle
+                \int x^2\sqrt{x^3 + 1}\,dx = \underline{\phantom{XXXXXX}}.</me>
+              </question>
+              <Hints>
+                <hint>The final step is to substitute back the original <m>u</m>-substitution to get
+                  a final answer written in terms of <m>u</m>. </hint>
+                <hint>Replace the <m>u</m> in <m>\dfrac{2}{9}u^{3/2} + C</m> with <m>x^3 + 1</m>. </hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>
+                  \begin{align*}
+                  \int x^2 \sqrt{x^3 + 1} \, dx &amp;= \int\underbrace{\sqrt{x^3+1}}_{u^{1/2}} \cdot
+                  \underbrace{x^2 \, dx}_{\frac{1}{3}du}\\
+                  &amp;= \int u^{1/2} \cdot \dfrac{1}{3} du\\
+                  &amp;= \dfrac{1}{3}\int u^{1/2} \, du \\
+                  &amp;= \dfrac{1}{3} \cdot \dfrac{1}{3/2} u^{3/2} + C\\
+                  &amp;= \dfrac{1}{3}\cdot \dfrac{2}{3} u^{3/2}+C \\
+                  &amp;= \dfrac{2}{9}u^{3/2} + C\\
+                  \\ \hline \\
+                  &amp;= \dfrac{2}{9}(x^3+1)^{3/2} + C \\
+                  \end{align*}
+</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\frac{2}{9} (x^3 + 1)^{3/2} + C" tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>9</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="7425b63d-b25b-4998-bd5a-5e444206521d">
+          <Text uuid="e3cd3ddd-e5e2-4b25-a740-ec05c555897d">
+            <p> We will compute <m>\displaystyle \int 3x(5x^2 + 2)^4\,dx</m>. </p>
+
+          </Text>
+          <Questions uuid="d5dfd546-6dc2-4d08-945d-07b7e5249dfd" locked-steps="true">
+            <MultipleChoice difficulty="easy" uuid="b14ac414-395f-43d7-9b2c-2d8db81776dc">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> For <m>\displaystyle \int 3x(5x^2 + 2)^4\,dx</m>, a good choice for substitution
+                  is <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>(5x^2 + 2)^4</m>
+                  </label>
+                  <explanation>
+                    <p>Often, the inner function of a composition is a good choice for u. So, the
+                      inside function of <m>(5x^2 + 2)^4</m>, instead of the whole composite
+                      function, is a good chioce for <m>u</m>. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>3x</m>
+                  </label>
+                  <explanation>
+                    <p>This choice does not help simplify the composite function <m>(5x^2 + 2)^4</m>
+                      . </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>5x^2 + 2</m>
+                  </label>
+                  <explanation>
+                    <p> A good choice for <m>u</m> is the inner function in the composition <m>(5x^2
+                      + 2)^4.</m> So, we choose <m>u = 5x^2 + 2</m> . </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>x^2 + 2</m>
+                  </label>
+                  <explanation>
+                    <p> The expression doesn't match the complete inner function of the composition <m>
+                      (5x^2+2)^4</m>. Instead, we should also include the coefficient <m>5</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="ae0f6fe6-0420-4bc3-a290-85f8b9670126">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p>Using <m>u = 5x^2+2</m>, we find <m>du = 10x\, dx</m>. </p>
+                <p> However, the integral includes <m>3x \, dx</m>. To simplify our integral, we
+                  factor out the constant multiple <m>3</m>: <me>\int 3x(5x^2 + 2)^4 \, dx = 3 \int
+                  x(5x^2 +2)^4 \, dx.</me> This leaves us with <m>x \, dx</m> in the integral. </p>
+                <p> Using the equation <m>du = 10x \, dx</m>, we now solve for <m>x \, dx =
+                  \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>Multiply <m>du = 10x \, dx</m> by a particular constant to get <m>x \, dx</m>
+                  on the right side.</hint>
+                <hint>Multiply <m>du = 10x \, dx</m> by <m>\frac{1}{10}</m> to solve for <m>x \, dx</m>
+                  .</hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>
+                  \begin{align*}
+                  u &amp;= 5x^2 + 1 \\
+                  du &amp;= 10x \, dx \\
+                  \dfrac{1}{10} du &amp;= x \, dx &amp;&amp; \text{Multiply by }\dfrac{1}{10}\\
+                  \end{align*}
+</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\frac{1}{10} \, du" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>du</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="927fc338-a664-40b8-8a69-9016f653f5ed">
+              <KSAs primary="5.8.1" />
+              <question><p>We have rewritten our integral: <m>\displaystyle \int 3x(5x^2+2)^4 \, dx
+                = 3 \int x(5x^2 + 2)^4 \, dx.</m>
+
+                </p> We also have the following
+                helpful substitutions: <p>
+                  <list type="bullet">
+                    <item>
+                      <m>u = 5x^2 + 2 </m>
+                    </item>
+                    <item>
+                      <m>\dfrac{1}{10} du = x \, dx</m>
+                    </item>
+                  </list>
+                </p>
+                Using these subsitutions, we can rewrite our intgral in terms of the variable <m>u</m>
+                : <me>3 \int x(5x^2 + 2)^4 \, dx = \underline{\phantom{XXXXXX}}.</me>
+
+
+
+<p>
+</p><p /></question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\displaystyle 3\int u^4\,du</m>
+                  </label>
+                  <explanation>
+                    <p>This option is missing a factor of <m>\dfrac{1}{10}.</m> Use the substitution <m>
+                      \dfrac{1}{10}du = x \, dx </m>. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int u^4\,du</m>
+                  </label>
+                  <explanation>The coefficients are missing from this integral. The integral has a
+                    constant multiple of <m>3</m>. Furthermore, using the substitution <m>\dfrac{1}{10}
+                    du = x \, dx</m> will introduce a factor of <m>\dfrac{1}{10}</m>.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \dfrac{3}{10}\int u^4\,du</m>
+                  </label>
+                  <explanation>
+                    <me>\begin{align*}
+                      \int 3x(5x^2 + 2)^4\,dx &amp;= 3\int (\overbrace{5x^2 + 2}^{u})^4 \cdot
+                      \overbrace{x\,dx}^{\frac{1}{10}du} &amp;&amp; \text{Rearrange}\\
+                      &amp;= 3\int u^4 \cdot \dfrac{1}{10} du\\
+                      &amp;= \dfrac{3}{10}\int u^4\,du &amp;&amp; \text{Constant multiple rule}\\
+                      \end{align*}</me>
+                  </explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\dfrac{1}{10}\displaystyle \int u^4 \, du</m>
+                  </label>
+                  <explanation>The contsant multiple <m>3</m> that is missing from this integral. </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="4182e3a0-3418-481d-b8cb-187249ef8acd">
+              <KSAs primary="5.8.1" />
+              <question><p>Using the subsitution <m>u = 5x^2 + 2</m>, we have rewritten <m>\displaystyle
+                \int 3x(5^2 + 2)^4 \, dx = \dfrac{3}{10} \int u^4 \, du.</m></p> Integrating and
+                rewriting the antiderivative in terms of <m>x</m> gives a final answer of <me>
+                \dfrac{3}{10} \int u^4 \, du = \underline{\phantom{XXXXXX}}.</me>
+              </question>
+              <Hints>
+                <hint>Using the power rule: <m>\dfrac{3}{10}\displaystyle \int u^4\,du =
+                  \dfrac{3}{10}\cdot \dfrac{1}{5}u^{5} + C</m> .</hint>
+                <hint> After integrating, substitute <m>5x^2 + 2</m> for <m>u</m> . </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Integrating our simplified integral and substituting back <m>5x^2 + 2</m> for <m>
+                  u</m> gives: </p>
+
+                <me>\begin{align*}
+                  \int 3x(5x^2 + 2)^4\,dx &amp;= 3\int (5x^2 + 2)^4 \cdot x\,dx \\
+                  &amp;= 3\int u^4 \cdot \dfrac{1}{10} du \\
+                  &amp;= \dfrac{3}{10}\int u^4\,du\\
+                  \\ \hline \\
+                  &amp;= \dfrac{3}{10} \cdot \dfrac{1}{5}\, u^5 + C &amp;&amp; \text{Power rule for
+                  antiderivatives}\\
+                  &amp;= \dfrac{3}{50} u^5 + C &amp;&amp; \text{Simplify.}\\
+                  &amp;= \dfrac{3}{50} (5x^2 + 2)^5 + C &amp;&amp; \text{Substitute back }5x^2 + 2
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\dfrac{3}{50} (5x^2 + 2)^5 + C " tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-3</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>10</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="0006a8df-2bc9-454a-a43f-d0396a118d03">
+          <Text uuid="d204b9a2-a49e-483a-b575-4e20f766e6c3">
+            <p> We will compute <m>\displaystyle \int \tan(x)\,dx</m> by rewriting <m>\tan(x)</m> in
+              terms of <m>\sin(x)</m> and <m>\cos(x)</m> and using a <m>u</m>-substitution. </p>
+          </Text>
+          <Questions uuid="c40375e4-d71b-44e9-822b-19e6fd047ed4" locked-steps="true">
+            <MultipleChoice difficulty="easy" uuid="54bcdcc1-fe73-411c-bd0c-e4997ce8a12d">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> Rewriting <m>\tan(x)</m> in terms of <m>\sin(x)</m> and <m>\cos(x)</m> , we get <m>\displaystyle
+                  \int \tan(x)\,dx = \underline{\phantom{XXXXXX}}</m> . </p>
+              </question>
+              <Choices>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \int \dfrac{\sin(x)}{\cos(x)}\,dx</m>
+                  </label>
+                  <explanation>
+                    <p>
+                      <m>\tan(x) = \dfrac{\sin(x)}{\cos(x)}</m> . Substituting this into the
+                      integral gives <m>\displaystyle \int \tan(x) \, dx = \int
+                      \dfrac{\sin(x)}{\cos(x)}\,dx</m> . </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int \dfrac{\cos(x)}{\sin(x)}\,dx</m>
+                  </label>
+                  <explanation>
+                    <p>
+                      The numerator and denominator in the integrand are swapped.
+                    </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int \sin(x) \cos(x)\,dx</m>
+                  </label>
+                  <explanation><m>\tan(x)</m> is a quotient of <m>\sin(x)</m> and <m>\cos(x)</m>,
+                    not a product.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="2d871c86-f74c-4e8b-832b-00911ef77114">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question><p>We will use a <m>u</m>-substitution to find <m>\displaystyle \int \tan(x)
+                \, dx = \int \dfrac{\sin(x)}{\cos(x)} \, dx</m>.</p> Using <m>u = \sin(x)</m> is <i>
+                not</i> a good choice because <m>\underline{\phantom{XXXXXX}}</m>.</question>
+              <Choices>
+                <choice correct="true">
+                  <label><m>du = \cos(x) \, dx</m> does not appear in the integral.</label>
+                  <explanation>While <m>\dfrac{1}{\cos(x)} \, dx</m> appears in the integral, <m>\cos(x)
+                    \, dx</m> does not. </explanation>
+                </choice>
+                <choice correct="false">
+                  <label><m>du = -\cos(x) \, dx</m> does not appear in the integral.</label>
+                  <explanation>the derivative of <m>\sin(x)</m> is <m>\cos(x)</m>, not <m>-\cos(x)</m>
+                    .</explanation>
+                </choice>
+                <choice correct="false">
+                  <label>a trigonometric function cannot be a choice for <m>u</m>.</label>
+                  <explanation>A trigonometric function can be a good choice for <m>u</m> if its
+                    derivative occurs elsewhere in the integral.</explanation>
+                </choice>
+
+              </Choices>
+            </MultipleChoice>
+
+            <MultipleChoice difficulty="easy" uuid="4b162e3b-498f-4e9a-94ab-74679c0b5053">
+              <KSAs primary="5.8.1" />
+              <question><p>For <m>\displaystyle \int \tan(x) \, dx = \int \dfrac{\sin(x)}{\cos(x)}
+                \, dx</m>, a good choice of <m>u</m> and <m>du</m> are: <list type="bullet">
+                    <item>
+                      <m>u = \cos(x)</m>
+                    </item>
+                    <item>
+                      <m>du = -\sin(x) \, dx</m>
+                    </item>
+                  </list></p>
+                Using these, we can rewrite our integral as: <me>\int \dfrac{\sin(x)}{\cos(x)} \, dx
+                = \underline{\phantom{XXXXXX}}.</me>
+
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int \dfrac{1}{u} du</m>
+                  </label>
+                  <explanation>
+                    <p> This option is missing a <m>-</m> . Instead, we can rewrite <m>du = -\sin(x)
+                      \, dx</m> as <m>-1 \cdot du = \sin(x) \, dx</m> to help with the substitution. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle -\int \dfrac{1}{u} du</m>
+                  </label>
+                  <explanation>
+                    <p>
+                      <m>du = -\sin(x) \, dx</m> can be rewritten as <m>-1 \cdot du = \sin(x) \, dx</m>
+                      . So, </p>
+
+                    <me>\begin{align*}
+                      \int \tan(x) \, dx &amp;= \int \dfrac{\sin(x)}{\cos(x)}\, dx \\
+                      &amp;= \int \dfrac{1}{\underbrace{\cos(x)}_{u}} \cdot \overbrace{\sin(x) \,
+                      dx}^{-1 \, du} \\
+                      &amp;= \int \dfrac{1}{u} \cdot (-1) \, du \\
+                      &amp;= - \int \dfrac{1}{u} \, du &amp;&amp; \text{Constant multiple rule}\\
+                      \end{align*}</me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>-\displaystyle \int u \, du</m>
+                  </label>
+                  <explanation>
+                    <p>
+                      <m>u = \cos(x)</m> is in the denominator, not the numerator. So, the
+                      simplified integrand will include <m>\dfrac{1}{u}</m> , not <m>u</m> . </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="11158751-851f-4f7d-87d2-0ff8bc3707c8">
+              <KSAs primary="5.8.1" />
+              <question>With the substitution <m>u = \cos(x) \, dx</m>, we have written our integral
+                as <me>
+                  \begin{align*}
+                  \int \tan(x) \, dx &amp;= \int \dfrac{\sin(x)}{\cos(x)} \, dx\\
+                  &amp;= -\int \dfrac{1}{u} \, du\\
+                  \end{align*}
+</me>
+                Integrating and rewriting in terms of <m>x</m> gives our final answer <me>\displaystyle
+                \int \tan(x) \, dx = \underline{\phantom{XXXXXX}}.</me></question>
+              <Hints>
+                <hint> Use the formula <m>\displaystyle \int \dfrac{1}{u}\,du = \ln|u| + C</m> . </hint>
+                <hint> After integrating, replace <m>u</m> with <m>\cos(x)</m> . </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Integrating and substituting back <m>u = \cos(x)</m> gives: </p>
+
+                <me>\begin{align*}
+                  \int \tan(x) \, dx &amp;= \int \dfrac{\sin(x)}{\cos(x)}\, dx\\
+                  &amp;= \int \dfrac{1}{\underbrace{\cos(x)}_{u}} \cdot \overbrace{\sin(x) \,
+                  dx}^{-1 \, du} \\
+                  &amp;= \int \dfrac{1}{u} \cdot (-1) \, du\\
+                  &amp;= - \int \dfrac{1}{u} \, du\\
+                  \\ \hline \\
+                  &amp;= -\ln|u| + C &amp;&amp; \text{Integrate}\\
+                  &amp;= -\ln|\cos(x)| + C &amp;&amp; \text{Substitute}\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="-\ln|\cos(x)| + C" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>9</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="b5efc01e-ca59-4ee6-a4c6-0fa6491d24be">
+              <KSAs primary="5.8.1" />
+              <question>
+                <p> Using <m>u</m> -substitution, we found <m>\displaystyle \int \tan(x) \, dx =
+                  -\ln|\cos(x)| + C</m> . </p>
+                <p>Using properties of logarithms and a trigonometric identity, we can rewrite this
+                  answer as <m>-\ln|\cos(x)| + C = \underline{\phantom{XXXXXX}} + C</m> . </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\ln|\cos(x)|</m>
+                  </label>
+                  <explanation>
+                    <p> The <m>-</m> sign does not cancel out. Instead, use the power property of
+                      logarithms to write <m>-\ln|\cos(x)| = \ln|(\cos(x))^{-1}|</m> . </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\ln|\sec(x)|</m>
+                  </label>
+                  <explanation>
+                    <p>Using properties of logarithms:</p>
+                    <me>\begin{align*}
+                      -\ln|\cos(x)| &amp;= -1 \cdot \ln|\cos(x)| \\
+                      &amp;= \ln|(\cos(x))^{-1}| &amp;&amp; \text{Power property of logarithms}\\
+                      &amp;= \ln\left|\dfrac{1}{\cos(x)} \right| &amp;&amp; \text{Rewrite}\\
+                      &amp;= \ln|\sec(x)| &amp;&amp; \text{Trigonometric identity}\\
+                      \end{align*}</me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\ln|\csc(x)|</m>
+                  </label>
+                  <explanation>
+                    <p>
+                      <m>\csc(x) = \dfrac{1}{\sin(x)}</m>, not <m>\dfrac{1}{\cos(x)}.</m>
+
+                    </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Questions>
+        </TextResource>
+        <TextResource duration="3" uuid="033f8c6c-73ec-423c-93de-3e03ea296fb5">
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>We will compute <m>\displaystyle \int \sin(x) \cos^2(x) \, dx</m>.</Text>
+          <Questions locked-steps="true">
+            <MultipleChoice difficulty="easy" uuid="8dcff099-7802-4604-837c-551f8448e9be">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>For <m>\displaystyle \int \sin(x) \cos^2(x) \, dx</m>, a good choice for
+                substituion is <m>u = \underline{\phantom{XXXXXX}}.</m></question>
+              <Choices>
+                <choice correct="false">
+                  <label>
+                    <m>\sin(x)</m>
+                  </label>
+                  <explanation>Choosing <m>u = \sin(x)</m> would make <m>du = -cos(x)\,</m>.
+                    However, these two equations cannot be used to remove all instances of <m>x</m>
+                    and <m>dx</m> from the integral. </explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\cos^2(x)</m>
+                  </label>
+                  <explanation>Often, only the inside function of a composition like <m>\cos^2(x)</m>
+                    is a good choice for <m>u</m>. Choosing all of <m>u = \cos^2(x)</m> is not
+                    appropriate becuase the derivative <m>-2\cos(x)\sin(x)</m> does not appear
+                    elsewhere in the integral. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\cos(x)</m>
+                  </label>
+                  <explanation><m>u = \cos(x)</m> is a good choice for substitution because <m>
+                    \cos(x)</m> is the inside function in the composition <m>\cos^2(x) =
+                    \left(\cos(x)\right)^2</m>. Also, the derivative of <m>\cos(x)</m>​​​​​​​​​​ is <m>
+                    -\sin(x)</m>, which appears in the integral (without the <m>-</m> sign). </explanation>
+                </choice>
+
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="c41147ba-dc9b-4860-ba75-3f84d9206015">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>Choose <m>u = \cos(x)</m> would give <m>du = -\sin(x)\, dx</m>. Using these
+                two equations, we can rewrite the integral completely in terms of <m>u</m> as: <me>\displaystyle
+                \int \sin(x) \cos^2(x) \, dx = \underline{\phantom{XXXXXX}}.</me></question>
+              <Choices>
+                <choice correct="false">
+                  <label>
+                    <m>\displaystyle \int u \, du</m>
+                  </label>
+                  <explanation>Using the substitution <m>u = \cos(x)</m> will result in a <m>u^2</m>
+                    term in the integral. Also, using the substitution <m>du = -\sin(x) \, dx</m>
+                    will introduce a <m>-1</m> constant multiple. </explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>-\displaystyle \int u \, du</m>
+                  </label>
+                  <explanation />
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\displaystyle \int u^2 \, du</m>
+                  </label>
+                  <explanation>While this integral does result from an appropriate substitution with <m>u
+                    = \cos(x)</m>, the substitution <m>du = -\sin(x) \, dx</m>. Instead, rewrite
+                    this equation as <m>-1 \, du = \sin(x) \, dx</m>. Substituting in will result in
+                    a <m>-1</m> constant multiple.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>-\displaystyle \int u^2 \, du</m>
+                  </label>
+                  <explanation>Because <m>du = - \sin(x) \, dx</m> and we have <m>\sin(x)\,dx</m>
+                    present in the integral, we write: <me>
+                      \begin{align*}
+                      u &amp;= \cos(x) \\
+                      du &amp;= -\sin(x) \, dx\\
+                      -1 \, du &amp;= -\sin(x) \, dx &amp;&amp; \text{Multiply by }-1\\
+                      \end{align*}
+</me>
+                    Rewriting <m>\cos^2(x) = \left(\cos(x)\right)^2</m> and substituting, we get: <me>
+                    \begin{align*}
+                      \int \sin(x) \cos^2(x) \, dx &amp;= \int
+                    \underbrace{\left(\cos(x)\right)^2}_{u^2}\cdot \underbrace{\sin(x) \, dx}_{-1 \,
+                    du} &amp;&amp; \text{Rewrite} \\
+                      &amp;= \int u^2 \cdot (-1) \, du \\
+                      &amp;= -\int u^2 \, du &amp;&amp; \text{Constant multiple rule}\\
+                      \end{align*}
+</me></explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="cd4a4783-4401-4028-bac4-e76eb437fe66">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>We have used the following substitutions: <list type="bullet">
+                  <item>
+                    <m>u = \cos(x) </m>
+                  </item>
+                  <item>
+                    <m>-1 \, du = \sin(x) \, dx</m>
+                  </item>
+                </list>
+                Using these substitutions, we have written our integral in terms of <m>u</m>: <m>\displaystyle
+                \int \sin(x) \cos^2(x) \, dx = - \int u^2 \, du.</m> Integrating and using <m>u =
+                \cos(x) </m> to rewrite the function in terms of <m>x</m> gives us our final answer: <me>-\int
+                u^2 \, du = \underline{\phantom{XXXXXX}}.</me></question>
+              <CorrectExplanation>
+                <me>
+                  \begin{align*}
+                  \int \sin(x) \cos^2(x) \, dx &amp;= \int
+                  \underbrace{\left(\cos(x)\right)^2}_{u^2}\cdot \underbrace{\sin(x) \, dx}_{-1 \,
+                  du} \\
+                  &amp;= \int u^2 \cdot (-1) \, du \\
+                  &amp;= -\int u^2 \, du \\
+
+                  \\ \hline \\
+                  &amp;= -\dfrac{1}{3}u^3 + C &amp;&amp; \text{Integrate}\\
+                  &amp;= -\dfrac{1}{3}\left(\sin(x)\right)^3 \, dx &amp;&amp; \text{Substitute }\\
+                  &amp;= -\dfrac{1}{3}\sin^3(x) \, dx &amp;&amp; \text{Rewrite }\\
+                  \end{align*}
+</me>
+              </CorrectExplanation>
+              <Hints>
+                <hint>Using the power rule for antiderivatives, <m>\displaystyle -\int u^2 \, du =
+                  -\dfrac{1}{3}u^3 + C</m></hint>
+                <hint>After integrating, substitution <m>\sin(x)</m> for <m>u</m>.</hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="-\dfrac{1}{3}\sin^3(x)" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="54dd46c1-e8ac-40d1-b2bb-0dfbe4426093">
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>
+            <p>Lesson Summary</p>
+            <list type="bullet">
+              <item> Choose <m>u</m> to be the inner function in a composition. Be sure to consider
+                expressions like <m>e^{g(x)}</m> or <m>\sqrt[n]{g(x)}</m>, where <m>g(x)</m> is
+                nested inside another function.</item>
+              <item> Choose <m>u</m> so that a constant multiple of <m>du</m> appears somewhere in
+                the integrand. </item>
+              <item> Use <m>du</m> to solve for and replace parts of the integrand, completing the <m>
+                u</m>-substitution.</item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="lesson" when="pre" uuid="bc0338f5-13e1-4879-8409-1202e1c8e4d7">
+      <title><m>U</m>-substitution with definite integrals</title>
+      <LearningOutcomes ids="Todo" />
+      <Resources>
+        <TextResource duration="1" uuid="c5c3e275-26cc-41e8-84d1-2af27873512f">
+          <KSAs primary="" secondary="Todo" uuid="82d2e038-7d22-427e-8ee5-f75b5278e8b5" />
+          <Text uuid="0e25a05a-92e4-41f2-bc75-988312e16648">
+            <p>U-substitution can be used for both indefinite and definite integrals. For definite
+              integrals, the limits of integration must correspond to the variable of integration. </p>
+            <p> When using <m>u</m>-substitution, we use <m>u</m> to adjust the limits to match the
+              new variable or revert to the original variable before evaluating the integral. Both
+              methods give the same result. </p>
+
+
+          </Text>
+        </TextResource>
+        <TheoremResource duration="1" uuid="4a2329e0-e978-4046-8332-1248978585e5">
+          <title />
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>
+            <p>Formally, let <m>u = g(x)</m>, where <m>g'</m> is continuous on <m>[a, b]</m>, and <m>
+              f</m> is continuous on the range of <m>u = g(x)</m>. Then,</p>
+
+            <me> \displaystyle \int_a^b f(g(x))g'(x)\,dx = \displaystyle \int_{g(a)}^{g(b)}
+              f(u)\,du.</me>
+          </Text>
+          <Proof />
+        </TheoremResource>
+        <TextResource duration="1" uuid="4483afa4-f557-43ad-966c-075963b1688c">
+          <KSAs primary="Todo" secondary="Todo" />
+          <Text>
+            <p>In this lesson, we’ll evaluate <m>\displaystyle \int_0^2 x(x^2+1)\,dx</m> using <m>u</m>-substitution
+              with adjusted limits.</p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="1" uuid="cf64d20e-3d00-4ac0-a527-b627c342ea43">
+          <title uuid="97aab060-0252-4bd2-a5e6-a5f00257d947">Todo</title>
+          <KSAs primary="" secondary="Todo" uuid="7d49a5bd-68b5-4e18-af2f-e9b2cd626347" />
+          <Track kind="narration" src="tracks/cf64d20e-3d00-4ac0-a527-b627c342ea43_narration.vtt"
+            uuid="04bb8178-9e76-4c21-b682-7f8254aec440" />
+          <Track kind="description"
+            src="tracks/cf64d20e-3d00-4ac0-a527-b627c342ea43_description.vtt"
+            uuid="fb68531f-aac8-4041-972a-a0dd48cfc57f" />
+          <Code uuid="8e7d6497-9bd3-490f-acb7-760b6f5ceae6">
+            Q2FudmFzKHdpbmRvd3M6IDEpClNjZW5lKCkgewogICAgSW5pdCgKICAgICAgICB0aXRsZTogVGV4dCgiVS1TdXNic3RpdHV0aW9uIC0gZGVmaW5pdGUgSW50ZWdyYWwiLCBwb3NpdGlvbjogVmVjMigwLjI0LCAwKSkKICAgICAgICBwcm9ibGVtOiBUZXh0KCJFdmFsdWF0ZSAkXGludF8wXjIgeCh4XjIgKyAxKWR4JC4iLCBwb3NpdGlvbjogVmVjMigwLjAsIDAuMSkpCiAgICAgICAgCiAgICAgICAgc3RlcFN0YXJ0WTogMC4xNzUKICAgICAgICBzcGFjaW5nID0gMC4wNQogICAgICAgIHN0ZXAxOiBUZXh0KCJTdGVwIDE6IElkZW50aWZ5IHRoZSBzdWJzdGl0dXRpb24uIiwgcG9zaXRpb246IFZlYzIoMCwgc3RlcFN0YXJ0WSkpCgogICAgICAgIGVtcGhJbnNpZGVGdW5jOiBUZXh0KCIkeF4yICsgMSQiLAogICAgICAgICAgICAgICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjIsIDAuMTA3NSkKICAgICAgICAgICAgICAgICAgICAgICAgb3V0bGluZTogT3V0bGluZShjb2xvcjogQ29sb3IuYmx1ZSwgc3Ryb2tlOiA0KSkKCiAgICAgICAgc3RlcDFXb3JrOiBUZXh0KCIkdSA9IHheMiArIDEkIiwgb3V0bGluZTogT3V0bGluZShjb2xvcjogQ29sb3IuYmx1ZSwgc3Ryb2tlOiA0KSwgcG9zaXRpb246IFZlYzIoMC4xLCBzdGVwU3RhcnRZICsgc3BhY2luZykpCgogICAgICAgIHN0ZXAyOiBUZXh0KCJTdGVwIDI6IEZpbmQgJGR1JC4iLCBwb3NpdGlvbjogVmVjMigwLCBzdGVwU3RhcnRZICsgc3BhY2luZyAqIDIpKQogICAgICAgIHN0ZXAyU2V0dXA6IFRleHQoIiRcZGZyYWN7ZHV9e2R4fSA9IDJ4JCIsIHBvc2l0aW9uOiBWZWMyKDAuMSwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAzKSkKICAgICAgICBzdGVwMldvcmsxOiBUZXh0KCIkZHUgPSAyeGR4JCIsIHBvc2l0aW9uOiBWZWMyKDAuMywgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAzICsgMC4wMDUpKQogICAgICAgIHN0ZXAyV29yazI6IFRleHQoIiRcZGZyYWN7ZHV9ezJ9ID0geGR4JCIsIHBvc2l0aW9uOiBWZWMyKDAuNSwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAzKSwgb3V0bGluZTogT3V0bGluZShjb2xvcjogQ29sb3IucmVkLCBzdHJva2U6IDQpKQoKICAgICAgICBzdGVwMzogVGV4dCgiU3RlcCAzOiBDb252ZXJ0IHRoZSBsaW1pdHMgb2YgaW50ZWdyYXRpb24uIiwgcG9zaXRpb246IFZlYzIoMCwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiA0LjI1KSkKICAgICAgICBzdGVwM1dvcmsxOiBUZXh0KCJXaGVuICR4ID0gMCQ6ICR1ID0gKDApXjIgKyAxID0gMSQiLCBwb3NpdGlvbjogVmVjMigwLjEsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogNS4yNSkpCiAgICAgICAgc3RlcDNXb3JrMjogVGV4dCgiV2hlbiAkeCA9IDIkOiAkdSA9ICgyKV4yICsgMSA9IDUkIiwgcG9zaXRpb246IFZlYzIoMC4xLCBzdGVwU3RhcnRZICsgc3BhY2luZyAqIDYuMjUpKQoKICAgICAgICBpbml0aWFsWTogMC40NTgKCiAgICAgICAgc3RlcDQ6IFRleHQoIlN0ZXAgNDogUmV3cml0ZSB0aGUgaW50ZWdyYWwgYW5kIGV2YWx1YXRlIiwgcG9zaXRpb246IFZlYzIoMCwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiA3LjI1KSkKICAgICAgICBzdGVwNFdvcmsxOiBUZXh0KCIkXGludF8wXjIgeCh4XjIrMSlkeCA9IFxpbnRfMV41dVxjZG90IFxkZnJhY3tkdX17Mn0kIiwgcG9zaXRpb246IFZlYzIoMC4xLCBzdGVwU3RhcnRZICsgc3BhY2luZyAqIDguMjUpKQogICAgICAgIGVxWDogMC4zCiAgICAgICAgc3RlcDRXb3JrMjogVGV4dCgiJD1cZGZyYWN7MX17Mn1caW50XzFeNSB1XGNkb3QgZHUkIgogICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKGVxWCwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiA5Ljc1KQogICAgICAgICkKICAgICAgICBzdGVwNFdvcmszOiBUZXh0KCIkPVxsZWZ0W1xkZnJhY3sxfXs0fXVeMlxyaWdodF1fMV41JCIKICAgICAgICAgICAgICAgICAgICBwb3NpdGlvbjogVmVjMihlcVgsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogMTEuMjUpCiAgICAgICAgKQogICAgICAgIHN0ZXA0V29yazQ6IFRleHQoIiQ9XGRmcmFjezF9ezR9Wyg1KV4yIC0gKDEpXjJdIgogICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKGVxWCwgc3RlcFN0YXJ0WSArIHNwYWNpbmcgKiAxMi42MjUpCiAgICAgICAgKQogICAgICAgIHN0ZXA0V29yazU6IFRleHQoIiQ9IFxkZnJhY3sxfXs0fVsyNF0iCiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoZXFYLCBzdGVwU3RhcnRZICsgc3BhY2luZyAqIDE0KQogICAgICAgICkKICAgICAgICBzdGVwNFdvcms2OiBUZXh0KCIkPSA2JCIKICAgICAgICAgICAgICAgICAgICBwb3NpdGlvbjogVmVjMihlcVgsIHN0ZXBTdGFydFkgKyBzcGFjaW5nICogMTUuMjUpCiAgICAgICAgKQoKCgogICAgICAgIAogICAgICAgIC8vZW1waFU6IFRleHQoIiR4XjIgKyAxJCIsIHBvc2l0aW9uOiBWZWMyKGVuZDIgKyAwLjAxLCBpbml0aWFsWTIpLCBvdXRsaW5lOiBPdXRsaW5lKGNvbG9yOiBDb2xvci5ibHVlLCBzdHJva2U6IDQpKQogICAgICAgIC8vZW1waERVOiBUZXh0KCIkMnhkeCQiLCBwb3NpdGlvbjogVmVjMihlbmQsIGluaXRpYWxZKSwgb3V0bGluZTogT3V0bGluZShjb2xvcjogQ29sb3IucmVkLCBzdHJva2U6IDQpKQoKICAgICkgewogICAgICAgIHRpdGxlLmhpZGUoKQogICAgICAgIHByb2JsZW0uaGlkZSgpCiAgICAgICAgLy9lbXBoRFUuaGlkZSgpCiAgICAgICAgLy9lbXBoVS5oaWRlKCkKICAgICAgICBlbXBoSW5zaWRlRnVuYy5oaWRlKCkKICAgICAgICAvL3VUZXh0LmhpZGUoKQogICAgICAgIC8vZHVUZXh0LmhpZGUoKQogICAgICAgIHN0ZXAxLmhpZGUoKQogICAgICAgIHN0ZXAxV29yay5oaWRlKCkKICAgICAgICBzdGVwMi5oaWRlKCkKICAgICAgICBzdGVwMldvcmsxLmhpZGUoKQogICAgICAgIHN0ZXAyV29yazIuaGlkZSgpCiAgICAgICAgc3RlcDJTZXR1cC5oaWRlKCkKICAgICAgICBzdGVwMy5oaWRlKCkKICAgICAgICBzdGVwM1dvcmsxLmhpZGUoKQogICAgICAgIHN0ZXAzV29yazIuaGlkZSgpCiAgICAgICAgLy9zdGVwM1dvcmszLmhpZGUoKQogICAgICAgIC8vLy8vc3RlcDNmdW5jMS5oaWRlKCkKICAgICAgICAvLy8vL3N0ZXAzZnVuYzIuaGlkZSgpCiAgICAgICAgLy8vLy9zdGVwM2Z1bmMzLmhpZGUoKQogICAgICAgIHN0ZXA0LmhpZGUoKQogICAgICAgIHN0ZXA0V29yazEuaGlkZSgpCiAgICAgICAgc3RlcDRXb3JrMi5oaWRlKCkKICAgICAgICBzdGVwNFdvcmszLmhpZGUoKQogICAgICAgIHN0ZXA0V29yazQuaGlkZSgpCiAgICAgICAgc3RlcDRXb3JrNS5oaWRlKCkKICAgICAgICBzdGVwNFdvcms2LmhpZGUoKQogICAgfQogICAgQW5pbWF0ZSgpIHsKCiAgICAgICAgLy8xQQogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfdS1zdWJzdGl0dXRpb25fd2l0aF9kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICB0aXRsZS5zaG93KCkKICAgICAgICBwcm9ibGVtLnNob3coKQogICAgICAgIHdhaXQoNDUwMCkKCiAgICAgICAgLy8xQgogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWJfdS1zdWJzdGl0dXRpb25fd2l0aF9kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICBzdGVwMS5zaG93KCkKICAgICAgICBlbXBoSW5zaWRlRnVuYy5kcmF3T3V0bGluZSgpCgogICAgICAgIC8vMUMKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1jX3Utc3Vic3RpdHV0aW9uX3dpdGhfZGVmaW5pdGVfaW50ZWdyYWxzLm1wMyIpCiAgICAgICAgc3RlcDFXb3JrLnNob3coKQogICAgICAgIHN0ZXAxV29yay5kcmF3T3V0bGluZSgpCiAgICAgICAgZW1waEluc2lkZUZ1bmMub3V0bGluZS5oaWRlKCkKCiAgICAgICAgLy8xRAogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWRfdS1zdWJzdGl0dXRpb25fd2l0aF9kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICBzdGVwMi5zaG93KGJsb2NraW5nOiBmYWxzZSwgZHVyYXRpb246IDc1MCkKICAgICAgICBzdGVwMlNldHVwLnNob3coZHVyYXRpb246IDc1MCkKICAgICAgICAvLzFFCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZV91LXN1YnN0aXR1dGlvbl93aXRoX2RlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIAogICAgICAgIHdhaXQoMTUwMCkKICAgICAgICBzdGVwMldvcmsxLnNob3coKQogICAgICAgIHdhaXQoMTAwMCkKICAgICAgICAKICAgIH0KfQoKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIAogICAgKSB7fQogICAgQW5pbWF0ZSgpIHsKICAgICAgICAvLzJBCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV91LXN1YnN0aXR1dGlvbl93aXRoX2RlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIC8vZW1waGFzaXplIHggYW5kIGR4IGluIG9yaWdpbmFsIHByb2JsZW0KICAgICAgICB3YWl0KDExNTAwKQogICAgICAgIC8vMkIKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1iX3Utc3Vic3RpdHV0aW9uX3dpdGhfZGVmaW5pdGVfaW50ZWdyYWxzLm1wMyIpCiAgICAgICAgc3RlcDJXb3JrMi5zaG93KCkKICAgICAgICBzdGVwMldvcmsyLmRyYXdPdXRsaW5lKCkKICAgICAgICB3YWl0KDQ1MDApCgogICAgICAgIC8vMkMKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1jX3Utc3Vic3RpdHV0aW9uX3dpdGhfZGVmaW5pdGVfaW50ZWdyYWxzLm1wMyIpCiAgICAgICAgc3RlcDMuc2hvdygpCiAgICAgICAgd2FpdCgxNTAwKQogICAgICAgIAogICAgICAgIC8vMkQKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1kX3Utc3Vic3RpdHV0aW9uX3dpdGhfZGVmaW5pdGVfaW50ZWdyYWxzLm1wMyIpCiAgICAgICAgc3RlcDNXb3JrMS5zaG93KCkKICAgIH0KfQoKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIAogICAgKSB7fQogICAgQW5pbWF0ZSgpIHsKICAgICAgICAvLzNBCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtYV91LXN1YnN0aXR1dGlvbl93aXRoX2RlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXAzV29yazIuc2hvdygpCiAgICAgICAgd2FpdCg0NTAwKQogICAgICAgIHN0ZXA0LnNob3coKQogICAgICAgIAoKICAgICAgICAvLzNCCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtYl91LXN1YnN0aXR1dGlvbl93aXRoX2RlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXA0V29yazEuc2hvdygpCiAgICAgICAgd2FpdCgzNTAwKQoKICAgICAgICAvLzNDCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtY191LXN1YnN0aXR1dGlvbl93aXRoX2RlZmluaXRlX2ludGVncmFscy5tcDMiKQogICAgICAgIHN0ZXA0V29yazIuc2hvdygpCiAgICAgICAgc3RlcDRXb3JrMy5zaG93KCkKICAgICAgICB3YWl0KDUwMCkKCiAgICAgICAgLy8zRAogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWRfdS1zdWJzdGl0dXRpb25fd2l0aF9kZWZpbml0ZV9pbnRlZ3JhbHMubXAzIikKICAgICAgICBzdGVwNFdvcms0LnNob3coKQogICAgICAgIHN0ZXA0V29yazUuc2hvdygpCiAgICAgICAgc3RlcDRXb3JrNi5zaG93KCkKCiAgICB9Cn0K</Code>
+        </ArcResource>
+
+
+        <TextResource duration="1" uuid="c8fac14a-b185-4a4f-a975-795909c53776">
+          <Text uuid="50bae1b9-7a18-4090-9f71-88c429366cd3">
+            <p> We will evaluate the definite integral <m>\displaystyle \int_0^1 3(3x + 1)^2\,dx</m>
+              using a <m>u</m>-substitution. </p>
+          </Text>
+          <Questions uuid="0a49b16d-4b27-4f0d-a975-1b21e0af43ba" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="832c77d5-ce17-4c0f-93b7-e8a71601d802">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> First, we identify the substitution <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> The inner expression in a composite function is often a good candidate for <m>
+                    u</m>. </p>
+                </hint>
+                <hint>
+                  <p> The inner function in the composite function <m>(3x+1)^2</m> is a good choice
+                    for <m>u</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> The inner function <m>3x + 1</m> appears inside the composite function <m>
+                  (3x+1)^2</m>. So, <m>u=3x+1</m> is the best choice for substitution. </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="3x + 1" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="d81ff0d6-6e03-42cc-b113-e95ee39c5257">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> For <m>u = 3x + 1</m>, we find <m>du = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Use <m>du = g'(x) \, dx</m>. </p>
+                </hint>
+                <hint>
+                  <p> Differentiate <m>u = g(x) = 3x + 1</m> to get <m>g'(x) = 3</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using <m>u = g(x) = 3x+1</m>, we get" </p>
+
+                <me>
+                  \begin{align*}
+                  g(x) &amp;= 3x + 1 \\
+                  g'(x) &amp;= 3 &amp;&amp; \text{Differentiate} \\
+                  du &amp;= \overbrace{3}^{f'(x)}\,dx \\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="3 \, dx" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="c784d002-59ca-452b-a1cd-72a1bf723fec">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> After computing <m>du</m>, the next step when converting the integral entirely
+                  in terms of <m>u</m> is to <m>\underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <p>substitute the integrand in terms of <m>u</m> and <m>du</m>. </p>
+                  </label>
+                  <explanation>
+                    <p>
+                      Substituting into the integral should come after converting the limits to
+                      ensure the bounds align with the new variable of integration.
+                    </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <p>convert the limits of integration.
+                    </p>
+                  </label>
+                  <explanation>
+                    <p>In this method, the entire integral is rewritten in terms of <m>u</m>,
+                      including the bounds. Converting the limits to match the new variable is
+                      necessary before substitution. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <p>integrate using the power rule.
+                    </p>
+                  </label>
+                  <explanation>
+                    <p>Integration occurs after the integral has been fully rewritten in terms of <m>
+                      u</m>.</p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="7ca68874-f8f8-4908-9145-ee4e5465895d">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Next, we convert the limits of integration from <m>x</m>-values to <m>u</m>-values
+                  using <m>u = 3x+1</m>. </p>
+                <p> When <m>x = 0</m>, <m>u = \underline{\phantom{XXXXXX}}.</m></p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Substitute <m>x = 0</m> into <m>u = 3x + 1</m>. </p>
+                </hint>
+                <hint>When <m>x=0</m>, we have <m>u = 3(0)+1</m>.</hint>
+
+              </Hints>
+              <CorrectExplanation>
+                <p> Substituting <m>x=0</m> into <m>u=3x+1</m> gives <m>u = 3(0) + 1 = 1.</m>
+                </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="1" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="78f1e6f6-5f1d-4fb5-976b-837fc9a5bbb5">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Using <m>u=3x+1</m>, we change the limits of integration: </p>
+                <p> When <m>x = 0</m> , <m>u = 1</m>
+                </p>
+                <p> When <m>x = 1</m> , <m>u = \underline{\phantom{XXXXXX}}</m>
+                </p>
+              </question>
+              <Hints>
+
+                <hint>
+                  <p> Substitute <m>x = 1</m> into <m>u = 3x + 1</m> . </p>
+                </hint>
+                <hint>When <m>x=1</m>, we have <m>u = 3(1)+1</m>.</hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Substituting <m>x=1</m> into <m>u=3x+1</m> gives <m>u = 3(1) + 1 = 4.</m>
+                </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="4" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="de440f57-92c3-4f57-9c1d-6d63391a4ffa">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p>
+                  We know:
+                </p>
+                <p>
+                  <list type="bullet">
+                    <item>
+                      <m>u = 3x + 1</m>
+                    </item>
+                    <item>
+                      <m>du = 3\,dx</m>
+                    </item>
+                  </list>and that
+                  the new limits of integration are <m>1</m> and <m>4</m>. Rewrirting our definite
+                  integral interms of <m>u</m> and <m>du</m> gives: </p>
+                <me>\displaystyle \int_0^1 3(3x + 1)^2\,dx = \underline{\phantom{XXXXXX}}.</me>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\displaystyle 3\int_1^4 u^2\,du</m>
+                  </label>
+                  <explanation>
+                    <p> The factor of 3 from the original integrand is already accounted for when
+                      substituting <m>du = 3\,dx</m>. No extra 3 remains. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int_0^1 u^2\,du</m>
+                  </label>
+                  <explanation>
+                    <p> The limits <m>0</m> and <m>1</m> are for the variable <m>x</m>, not <m>u</m>.
+                      After substitution, the limits must be converted to <m>1</m> and <m>4</m>. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \int_1^4 u^2\,du</m>
+                  </label>
+                  <explanation>
+                    <me>
+                      \begin{align*}
+                      \int_0^1 3(3x + 1)^2\,dx &amp;= \int_0^1 ({\underbrace{3x + 1}_{u}})^2 \cdot
+                      \underbrace{3\,dx}_{du} \\
+                      &amp;= \int_1^4 u^2\,du &amp;&amp; \text{Substitute, change limits of
+                      integration}\\
+                      \end{align*}
+                    </me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \dfrac{1}{3}\int_1^4 u^2\,du</m>
+                  </label>
+                  <explanation>
+                    <p> No fraction appears. The 3 from the original integrand matches exactly with
+                      the 3 needed for <m>du = 3\,dx</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="fe6b171b-6f57-4123-99dd-689923099f65">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Using <m>u</m>-substitution, we have rewritten <me> \int_0^1 3(3x+1)^2\,dx =
+                  \int_1^4 u^2 \, du.</me> The final answer comes from computing this integral: <m>\displaystyle
+                  \int_1^4 u^2\,du = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> To find the antiderivative, use <m>\displaystyle \int u^n\,du =
+                    \dfrac{1}{n+1}u^{n+1}+C</m>. </p>
+                </hint>
+                <hint>
+                  <p>
+                    <m>\displaystyle \int_1^4 u^2\,du = \dfrac{1}{3}u^3 \Big|_1^4</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  Integrate and evaluate.
+                </p>
+                <me>
+                  \begin{align*}
+                  \int_0^1 3(3x + 1)^2\,dx &amp;= \int_0^1 \overbrace{(3x + 1)^2}^{u^2} \cdot
+                  \overbrace{3\,dx}^{du} \\
+                  &amp;= \int_1^4 u^2\,du \\
+                  \\ \hline \\
+                  &amp;= \dfrac{1}{3}u^3 \Big|_1^4 &amp;&amp; \text{Integrate} \\
+                  &amp;= \dfrac{4^3}{3} - \dfrac{1^3}{3} &amp;&amp; \text{Substitute }4 \text{ and }
+                  1 \\
+                  &amp;= \dfrac{64}{3} - \dfrac{1}{3} &amp;&amp; \text{Simplify.} \\
+                  &amp;= \dfrac{63}{3} \\
+                  &amp;= 21\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="21" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="43df4a60-c3b5-4da3-8fff-6238963a7642">
+          <Text uuid="b7c399b5-0a12-407d-8588-e23142351b42">
+            <p> We will evaluate <m>\displaystyle \int_0^1 (2x + 1)e^{x^2 + x}\,dx</m>. </p>
+          </Text>
+          <Questions uuid="de3ac6b6-eac6-403d-92cf-77041b93c2b4" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="7629a3b3-3c34-453f-a978-fd2523c9126d">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> For <m>\displaystyle \int_0^1 (2x + 1)e^{x^2 + x}\,dx</m>, we identify the
+                  substitution: <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p><m>e^{x^2 + x}</m> is a composite function. </p>
+                </hint>
+                <hint>
+                  <p> The expression in the exponent of <m>e^{x^2 + x}</m> is likely a good choice
+                    for <m>u</m>, as that expression is the inside function of the composite
+                    funtion. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  <m>e^{x^2 + x}</m> is a composite function. The inside function of this composite
+                  is a good choice for <m>u</m>. So, we choose <m>u = x^2 + x</m>. </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="x^2 + x" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>10</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="59cb0657-7964-4a04-a037-029934f51b78">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Given <m>u = x^2 + x</m>, we find <m>du = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Let <m>u = g(x) = x^2 + x</m>, so <m>g'(x) = 2x + 1</m>. </p>
+                </hint>
+                <hint>
+                  <p>
+                    <m>du = g'(x) \, dx</m>. Because <m>g'(x)</m> has multiple terms, remember to
+                    use parentheses around the entire derivative. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using <m>u = g(x) = x^2 + x</m>, we find <m>du</m>: </p>
+
+                <me>
+                  \begin{align*}
+                  g(x) &amp;= x^2 + x \\
+                  g'(x) &amp;= 2x + 1 \\
+                  du &amp;= \overbrace{(2x + 1)}^{g'(x)} \, dx &amp;&amp; \\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="(2x + 1) \, dx" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>-9</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>13</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="049fe863-f78d-4e89-8f67-ae1a5f85c237">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Next, we use <m>u = x^2 + x</m> to convert the limits of integration from <m>x</m>-values
+                  to <m>u</m>-values. </p>
+                <p> When <m>x = 0</m>, <m>u = \underline{\phantom{XXXXXX}}</m>.</p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Substitute <m>x = 0</m> into <m>u = x^2 + x</m>. </p>
+                </hint>
+                <hint>When <m>x=0</m>, we have <m>u = 0^2+0</m>.</hint>
+
+              </Hints>
+              <CorrectExplanation>
+                <p> Subtituting <m>x=0</m> into <m>u = x^2 + x</m> gives <m>u = 0^2+0 = 0</m>.</p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="a88561bb-193e-4a0a-83ab-b05c60438da2">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Next, we convert the limits of integration from <m>x</m> -values to <m>u</m>
+                  -values. </p>
+                <p> When <m>x = 0</m> , <m>u = 0</m> . </p>
+                <p> When <m>x = 1</m> , <m>u = \underline{\phantom{XXXXXX}}</m> . </p>
+              </question>
+              <Hints>
+
+                <hint>
+                  <p> Substitute <m>x = 1</m> into <m>u = x^2 + x</m> . </p>
+                </hint>
+                <hint>When <m>x=1</m>, we have <m>u = 1^2+1</m>.</hint>
+              </Hints>
+              <CorrectExplanation>
+
+                <p> Substituting <m>x=0</m> into <m>u = x^2 + x</m> gives <m>u = 1^2+1 = 2</m>.</p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="2" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="c207c735-5273-490e-8a0f-efb99e74c2ff">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> We know: <list type="bullet">
+                    <item>
+                      <m>u = x^2 + x</m>
+                    </item>
+                    <item>
+                      <m>du = (2x + 1)\,dx</m>
+                    </item>
+                  </list>
+                  The new limits are <m>0</m> and <m>2</m>. Rewriting the definite integral in terms
+                  of <m>u</m> gives: </p>
+                <me>\displaystyle \int_0^1 (2x + 1)e^{x^2 + x}\,dx = \underline{\phantom{XXXXXX}}</me>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int_0^2 (2x + 1)e^u\,du</m>
+                  </label>
+                  <explanation>
+                    <p> After substitution, all <m>x</m> terms should be converted to <m>u</m>
+                      terms. The factor <m>(2x + 1)</m> becomes part of <m>du</m>. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int_0^1 e^u\,du</m>
+                  </label>
+                  <explanation>
+                    <p> The bounds in this option are incorect. The limits of integration must be
+                      converted from <m>x</m> to <m>u</m>. Use the new limits of integration found
+                      that work with the variable <m>u</m>. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \int_0^2 e^u\,du</m>
+                  </label>
+                  <explanation>
+                    <p> Substituting <m>u = x^2 + x</m>, <m>du = (2x + 1)\,dx</m>, and updating the
+                      limits of integration gives: </p>
+                    <me>
+                      \begin{align*}
+                      \int_0^1 (2x+1) e^{x^2+x} \, dx &amp;= \int_0^1 \underbrace{e^{x^2 + x}}_{e^u}
+                      \cdot \underbrace{(2x + 1)\,dx}_{du}\\
+                      &amp;= \int_0^2 e^u\,du \\
+                      \end{align*}
+                    </me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int_0^2 (2x + 1)e^u\,dx</m>
+                  </label>
+                  <explanation>
+                    <p>The substitution <m>du = (2x+1) \, dx</m> must also be used to rewrite the
+                      integral completely in terms of <m>u</m>. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="f08cf662-8091-4d88-8edd-a6d05647ffa7">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> Using a <m>u</m>-substitution, we found that <m>\displaystyle \int_0^1 (2x+1)
+                  e^{x^2+x} \, dx = \displaystyle \int_0^2 e^u \, du</m>. So, our final answer is <me>\displaystyle
+                  \int_0^2 e^u\,du = \underline{\phantom{XXXXXX}}.</me>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Use the antiderivative of <m>e^u</m>. </p>
+                </hint>
+                <hint>
+                  <p>
+                    <m>\displaystyle \int_0^2 e^u\,du = \left[e^u\right]_0^2</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  Integrate and evaluate:
+                </p>
+                <me>
+                  \begin{align*}
+                  \int_0^1 (2x+1) e^{x^2+x} \, dx &amp;= \int_0^1 \underbrace{e^{x^2 + x}}_{e^u}
+                  \cdot \underbrace{(2x + 1)\,dx}_{du}\\
+                  &amp;= \int_0^2 e^u\,du \\
+                  \\ \hline \\
+                  &amp;= e^u\Big|_0^2 &amp;&amp; \text{Integrate} \\
+                  &amp;= e^2 - e^0 &amp;&amp; \text{Substitute }2 \text{ and } 0 \\
+
+                  &amp;= e^2 - 1 &amp;&amp; \text{Simplify}
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="e^2 - 1" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="950670a5-d566-465a-a547-cb8c1cff187d">
+          <Text uuid="875cf9dd-2f7f-43a9-9253-0ce5b992693c">
+            <p> We will evaluate <m>\displaystyle \int_0^{\frac{\pi}{6}} \cos(3x)\,dx</m>. </p>
+          </Text>
+          <Questions uuid="6595b66d-237f-42c1-a9f8-da41f0a12077" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="f88841de-db66-41f9-a902-11a418e5fddd">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> For <m>\displaystyle \int_0^{\frac{\pi}{6}} \cos(3x)\,dx</m>, we choose the
+                  substitution: <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> The inside function in a composite function is often a good choice for <m>u</m>
+                    .
+          </p>
+                </hint>
+                <hint>
+                  <p> The inside function in <m>\cos(3x)</m> is a good choice for <m>u</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> The inside function in the composite function <m>\cos(3x)</m> is a good choice
+                  for <m>u</m>. So, we choose <m>u = 3x</m>. </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="3x" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="1b4cafc9-2202-44d4-a988-d209a320c091">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> For <m>u = 3x</m>, we find <m>du = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Use <m>du = g'(x) dx</m>. </p>
+                </hint>
+                <hint>
+                  <p>For <m>u = g(x) = 3x</m>, <m>g'(x) = 3</m>.</p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using <m>u = g(x) = 3x</m>, we find <m>du</m>: </p>
+                <me>
+                  \begin{align*}
+                  g(x) &amp;= 3x \\
+                  g'(x) &amp;= 3 \\
+                  du &amp;= \overbrace{3}^{g'(x)} \, dx \\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="3 \, dx" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>100</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>dx</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+
+            <MultipleChoice difficulty="easy" uuid="79e7dc78-479b-4bf6-bd1a-0d093e9df231">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> We know that: <list type="bullet">
+                    <item>
+                      <m>u=3x</m>
+                    </item>
+                    <item>
+                      <m>du = 3 \, dx</m>
+                    </item>
+                  </list>
+                </p>
+                <p> Using these substitutions and finding new limits of integration, we can rewrite
+                  the definite integral to be completely in terms of <m>u</m>: </p>
+                <me>\displaystyle \int_0^{\frac{\pi}{6}} \cos(3x)\,dx = \underline{\phantom{XXXXXX}}</me>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\displaystyle \int_0^{\frac{\pi}{2}} \cos(u)\,dx</m>
+                  </label>
+                  <explanation>
+                    <p> We must also change the <m>dx</m> to be <m>du</m>. To do this, use the
+                      equation <m>du = 3 \, dx</m>. </p>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\displaystyle \dfrac{1}{3} \int_0^{\frac{\pi}{2}} \cos(u)\,du</m>
+                  </label>
+                  <explanation>
+                    <p> The substitution <m>u = 3x</m> gives <m>du = 3\,dx</m>. We can rewrite this
+                      as <m>\frac{1}{3}\,du = dx</m>. </p>
+                    <p> Next, we find the new limits of integration using <m>u=3x</m>: <list
+                        type="bullet">
+
+                        <item>When <m>x=0</m>, we have <m>u = 3(0) = 0</m>
+                        </item>
+                        <item>When <m>x=\frac{\pi}{6}</m>, we have <m>u = 3 \cdot \frac{\pi}{6} =
+                      \frac{\pi}{2}</m>. </item>
+                      </list> Subsituting and
+                      updating the limits of integration gives: </p>
+                    <me>
+                      \begin{align*}
+                      \int_0^{\frac{\pi}{6}}
+                      \cos(\overbrace{3x}^{u})\,\overbrace{dx}^{\frac{1}{3}du}
+                      &amp;= \int_0^{\frac{\pi}{2}} \cos(u)\,\dfrac{1}{3}du \\
+                      &amp;= \dfrac{1}{3} \int_0^{\frac{\pi}{2}} \cos(u)\,du \\
+                      \end{align*}
+                    </me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>\dfrac{1}{3}\displaystyle \int_0^{\frac{\pi}{6}} \cos(u)\,du</m>
+                  </label>
+                  <explanation>
+                    <p>This integral using limits of integration written for the variable <m>x</m>.
+                      For this integral written with the variable <m>u</m>, the limits of
+                      integration must be converted. </p>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>3\displaystyle \int_0^{\frac{\pi}{2}} \cos(u) \,du</m>
+                  </label>
+                  <explanation>
+                    <p>The substitution <m>du = 3\, dx</m> must be rewritten as <m>\frac{1}{3} \,du
+                      = dx</m>. So, the <m>3</m> in this option is incorrect. </p>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="b26483b5-a08e-4b4f-8187-55f823bf3c1b">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p>Using the substitution <m>u=3x</m>, we have rewritten: <m>\displaystyle
+                  \int_0^{\frac{\pi}{6}}\cos(3x) \, dx = \displaystyle \dfrac{1}{3}
+                  \int_0^{\frac{\pi}{2}} \cos(u)\,du</m>. So, our final answer is <me>\displaystyle
+                  \dfrac{1}{3} \int_0^{\frac{\pi}{2}} \cos(u)\,du = \underline{\phantom{XXXXXX}}.</me>
+                </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> The antiderivative of <m>\cos(u)</m>​​​​ is <m>\sin(u)</m>​. </p>
+                </hint>
+                <hint>
+                  <p> Using the Fundamental Theorem of Calculus, <m>\displaystyle \dfrac{1}{3}
+                    \int_0^{\frac{\pi}{2}} \cos(u)\,du = \dfrac{1}{3} \sin(u)\Big|_0^{\frac{\pi}{2}}</m>
+                    .
+          </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  Using the Fundamental Theorem of Calculus, we get:
+                </p>
+                <me>
+                  \begin{align*}
+                  \int_0^{\frac{\pi}{6}} \cos(3x)\,dx
+                  &amp;= \dfrac{1}{3} \int_0^{\frac{\pi}{2}} \cos(u)\,du \\
+                  \\ \hline \\
+                  &amp;= \dfrac{1}{3} \sin(u)\Big|_0^{\frac{\pi}{2}} &amp;&amp; \text{Integrate.} \\
+                  &amp;= \dfrac{1}{3} \left(\sin\left(\dfrac{\pi}{2}\right) - \sin(0)\right)
+                  &amp;&amp; \text{Substitute } \frac{\pi}{2} \text{ and } 0 \\
+
+                  &amp;= \dfrac{1}{3} (1 - 0) &amp;&amp; \text{Simplify}\\
+                  &amp;= \dfrac{1}{3}
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\dfrac{1}{3}" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="f5d8493d-ff10-4423-abe9-b4e981464205">
+          <Text uuid="f13eb152-7ced-4f29-b1cb-719383cff702">
+            <p> We will evaluate <m>\displaystyle \int_1^2 \dfrac{x^2}{2x^3 + 1}\,dx</m>. </p>
+          </Text>
+          <Questions uuid="84f7f17e-a028-4799-bf38-bb9a0c23c20e" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="cd4ade88-bbf3-4a0e-b287-b6eeede2ba43">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p> For <m>\displaystyle \int_1^2 \dfrac{x^2}{2x^3 + 1}\,dx</m>, a good choice of
+                  substitution is <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p>In expressions involving fractions, the denominator is often a good candidate
+                    for a choice of <m>u</m>.</p>
+                </hint>
+                <hint>
+                  <p> Choose <m>u</m> to be the denominator of <m>\dfrac{x^2}{2x^3 + 1}</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> The denominator <m>2x^3 + 1</m> is a natural choice since the derivative <m>6x^2</m>
+                  appears in the numerator. </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="2x^3 + 1" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+
+
+            <MultipleChoice difficulty="easy" uuid="2e1c665e-aa7c-4161-aadb-6b719f54e413">
+              <KSAs primary="Todo" secondary="Todo" />
+              <question>Using <m>u = 2x^3 + 1</m>, our next steps are to: <list type="bullet">
+                  <item> Find <m>du.</m></item>
+                  <item> Use <m>u = 2x^3+1</m> to update the limits of integration <m>1</m> and <m>2</m>
+                .</item>
+                  <item> Rewrite the definite integral in terms of <m>u</m> by substitution and
+                replacing the limits of integration.</item>
+                </list> Doing these
+                steps, the definite integral can be written in terms of <m>u</m> as: <me>\displaystyle
+                \int_1^2 \dfrac{x^2}{2x^3 + 1}\,dx = \underline{\phantom{XXXXXX}} </me>
+
+              </question>
+              <Choices>
+                <choice correct="false">
+                  <label>
+                    <m>\displaystyle \int_3^{17} \dfrac{1}{u} \, du</m>
+                  </label>
+                  <explanation>Using <m>u=2x^3 + 1</m>, we get <m>du = 6x^2\, dx</m>. However, in
+                    this option, only the <m>x^2 \, dx</m> is subsituted out. So, this option is
+                    missing a constant. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>\dfrac{1}{6}\displaystyle \int_3^{17} \dfrac{1}{u} \, du</m>
+                  </label>
+                  <explanation>First, we compute <m>du</m> ​​and use this to solve for <m>x^2 \, dx</m>
+                    :
+
+<me>
+                      \begin{align*}
+                      u &amp;= 3x^2 + 1 \\
+                      du &amp;= 6x^2 ,\ dx \\
+                      \dfrac{1}{6} &amp;= x^2 \, dx &amp;&amp; \text{Solve for } x^2 \, dx \\
+                    \end{align*}
+</me>
+                    We then find our limits of integration using <m>u = 2x^3 + 1</m>: <list
+                      type="bullet">
+                      <item> When <m>x=1</m>, we have <m>u = 2(1)^3 + 1 = 3</m></item>
+                      <item> When <m>x=2</m>, we have <m>u = 2(2)^3 + 1 = 17</m></item>
+                    </list>
+                    Using this, we can substitute to find our definite integral written in terms of <m>
+                    u</m>: <me>
+                      \begin{align*}
+                      \int_1^2 \dfrac{x^2}{2x^3+1} \, dx &amp;= \int_1^2
+                    \dfrac{1}{\underbrace{2x^3+1}_{u}} \cdot \underbrace{x^2\, dx}_{\frac{1}{6}du}\\
+                    &amp;= \int_3^{17} \frac{1}{u} \cdot \dfrac{1}{6}\, du\\
+                      &amp;= \frac{1}{6} \int_3^{17} \frac{1}{u} \, du\\
+                      \end{align*}
+                    </me></explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>\dfrac{1}{6} \displaystyle \int_1^2 \dfrac{1}{u} \, du</m>
+                  </label>
+                  <explanation>The limits of integration must be changed. Use the formula <m>
+                    u=2x^3+1</m> to change the limits of integration to be written for the variable <m>
+                    u</m>.</explanation>
+                </choice>
+                <choice correct="false">
+                  <label>
+                    <m>6\displaystyle \int_3^{17} \dfrac{1}{u} \, du</m>
+                  </label>
+                  <explanation>For <m>u = 2x^3 + 1</m>, <m>du = 6x^2 \, dx</m>. As <m>x^2 \, dx</m>
+                    is in the integrals, solving for <m>x^2 \, dx</m> gives <m>\dfrac{1}{6} \, du =
+                    x^2 \, dx</m>. Using this substitution does not give a <m>6</m> in front of the
+                    integral.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="ffd3e517-5ae5-4987-ab60-d0338dc435d1">
+              <KSAs primary="5.8.2" />
+              <question>
+                <p>Using the substitution <m>u = 2x^3+1</m>, we have written our definite intgral
+                  as: <m>\displaystyle \int_1^2 \dfrac{x^2}{2x^3 + 1} \, dx = \displaystyle
+                  \dfrac{1}{6} \int_3^{17} \dfrac{1}{u}\,du </m>.</p>
+
+                <p> So, we compute our final answer by evaluating: <me>\displaystyle \dfrac{1}{6}
+                  \int_3^{17} \dfrac{1}{u}\,du = \underline{\phantom{XXXXXX}}.</me>
+                </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p>
+                    <m>\dfrac{1}{6}\displaystyle \int \dfrac{1}{u}\,du = \dfrac{1}{6}\ln|u| + C.</m>
+                    Then, substitute the limits of integration <m>17</m> and <m>3</m>. </p>
+                </hint>
+                <hint>
+                  <p> After substituting limits of integration, simplify by using quotient rule for
+                    logarithms: <m>\ln a - \ln b = \ln\left(\dfrac{a}{b}\right)</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  Integrate and evaluate:
+                </p>
+
+                <me>
+                  \begin{align*}
+                  \int_1^2 \dfrac{x^2}{2x^3+1} \, dx &amp;= \int_1^2
+                  \dfrac{1}{\underbrace{2x^3+1}_{u}} \cdot \underbrace{x^2\, dx}_{\frac{1}{6}du}\\
+                  &amp;= \int_3^{17} \frac{1}{u} \cdot \dfrac{1}{6}\, du\\
+                  &amp;= \frac{1}{6} \int_3^{17} \frac{1}{u} \, du\\
+                  \\ \hline \\
+
+                  &amp;= \dfrac{1}{6} \ln|u| \Big|_3^{17} &amp;&amp; \text{Integrate} \\
+                  &amp;= \dfrac{1}{6} \left( \ln 17 - \ln 3 \right) &amp;&amp; \text{Substitute }17
+                  \text{ and } 3 \\
+
+                  &amp;= \dfrac{1}{6} \ln\left( \dfrac{17}{3} \right) &amp;&amp; \text{Quotient rule
+                  for logarithims}
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\frac{1}{6} \ln\left( \frac{17}{3} \right) " tolerance="0"
+                  toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="cf782743-f86b-424d-92b4-082f5908abb4">
+          <KSAs primary="" secondary="Todo" uuid="1cf31695-eda8-43f9-a817-40331a02b2f7" />
+          <Text uuid="68aea41c-a5e3-4bfc-8502-9658329ee9e3">
+            <p>Lesson Summary</p>
+            <list type="bullet">
+              <item>To evaluate a definite integral using <m>u</m>-substitution, the steps are:
+                identify <m>u</m>, compute <m>du</m>, convert the limits of integration, rewrite the
+                integral, and evaluate.</item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="homework" when="post" uuid="cdf4fbff-1d5d-41bf-ac5c-deb5006b7a81">
+      <title>Integration by substitution</title>
+      <LearningOutcomes ids="Todo" />
+      <Resources>
+        <TextResource duration="1" uuid="4b894e92-6276-4541-a360-6520318f9be6">
+          <Questions uuid="909003eb-c99e-4082-8b3f-4eea3aae25de">
+            <RandomizedShortAnswer difficulty="easy" uuid="978c189b-1cf4-4ca8-aad3-46290d5df8c5">
+              <KSAs primary="" />
+              <question>
+                <p> We will evaluate the integral using u-substitution: <m>\displaystyle \int
+                  x(#a#x^2 + #b#)^{#n#} \, dx = \underline{\phantom{XXXXXX}}</m>
+                </p>
+                <p> Express the answer as a function of <m>x</m> . </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> We can let <m>u = #a#x^2 + #b#</m> . After substitution, the integral becomes <m>\displaystyle
+                    \int u^{#n#} \, du</m> . </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> We'll use the substitution <m>u = #a#x^2 + #b#</m> . </p>
+                <p> First, we find <m>du</m> : <m>du = #2a#x \, dx</m> , which means <m>x \, dx =
+                  \dfrac{1}{#2a#} du</m>
+                </p>
+                <p>Now substitute into the integral:</p>
+                <me>\begin{align*}
+                  \int x(#a#x^2 + #b#)^{#n#} \, dx &amp;= \int \overbrace{(#a#x^2 +
+                  #b#)^{#n#}}^{u^{#n#}} \cdot \overbrace{x \, dx}^{\frac{1}{#2a#} \, du} &amp;&amp;
+                  \text{Identify } u \text{ and } du.\\
+                  &amp;= \int u^{#n#} \cdot \dfrac{1}{#2a#} \, du &amp;&amp; \text{Substitute.} \\
+                  &amp;= \dfrac{1}{#2a#} \int u^{#n#} \, du &amp;&amp; \text{Factor out constant.}\\
+                  &amp;= \dfrac{1}{#2a#} \cdot \dfrac{u^{#nplus1#}}{#nplus1#} + C &amp;&amp;
+                  \text{Apply power rule.}\\
+                  &amp;= \dfrac{u^{#nplus1#}}{#denom#} + C &amp;&amp; \text{Apply power rule.}\\
+                  &amp;= \dfrac{1}{#denom#}(#a#x^2 + #b#)^{#nplus1#} + C &amp;&amp; \text{Substitute
+                  back } u = #a#x^2 + #b#.
+                  \end{align*}</me>
+                <p />
+                <p />
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\dfrac{1}{#denom#}(#a#x^2 + #b#)^{#nplus1#} + C" tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+              <Randomization>
+                <Meaningful>
+                  <NumericVariables>
+                    <Originals>
+                      <Original name="a" type="Integer" start="2" stop="9" step="1" />
+                      <Original name="b" type="Integer" start="2" stop="9" step="1" />
+                      <Original name="n" type="Integer" start="2" stop="9" step="1" />
+                    </Originals>
+                    <Deriveds>
+                      <Derived name="2a" type="Integer" equals="2 * a" />
+                      <Derived name="nplus1" type="Integer" equals="n + 1" />
+                      <Derived name="denom" type="Integer" equals="2 * a * (n + 1)" />
+                    </Deriveds>
+                    <Constraints>
+                      <Constraint>b!= a</Constraint>
+                      <Constraint>n not in (a, b)</Constraint>
+                    </Constraints>
+                  </NumericVariables>
+                  <Scenarios />
+                </Meaningful>
+                <Distractor>
+                  <NumericVariables>
+                    <Originals />
+                    <Deriveds />
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Distractor>
+              </Randomization>
+            </RandomizedShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="442afca9-f03b-444e-97b9-1be887c835a6">
+          <Text uuid="98d45853-d16a-4601-887a-24c0317c59d3">
+            <p> We will evaluate <m>\displaystyle \int \dfrac{3x^2 + 2x}{2x^3 + 2x^2 - 1} \, dx</m>. </p>
+
+          </Text>
+          <Questions uuid="a2e6e98f-b760-427e-b114-2f672d0dcddb" locked-steps="true">
+            <ShortAnswer difficulty="easy" uuid="7079d029-bb56-446f-90e9-e477f47fdcb5">
+              <KSAs primary="" />
+              <question>
+                <p> First, we identify the substitution: <m>u = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Consider the denominator <m>2x^3 + 2x^2 - 1</m> and its derivative to see if
+                    it relates to the numerator. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>Choosing <m>u = 3x^2 + 2x^2 + 1</m> would mean du = ​<m>(6x^2 +
+                4x) \, dx</m>. The expression (6x^2 + 4x) \, dx does not appear in the integral.
+                However, we can modify it so that the expression will match the numerator. </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="2x^3 + 2x^2 - 1" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>10</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>1</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="e984671c-820f-4a4c-8d85-f07dcacb0e36">
+              <KSAs primary="" />
+              <question>
+                <p> Using a <m>u</m>-substitution with <m>u = 2x^3 + 2x^2 - 1</m>​, we can evaluate
+                  the integral <m>\displaystyle \int \dfrac{3x^2 + 2x}{2x^3 + 2x^2 - 1} \, dx =
+                  \underline{\phantom{XXXXXX}}.</m> The inputted answer should be written in the
+                  variable <m>x</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p>The substituion <m>u = 2x^3 + 2x^2 - 1</m> gives <m>du = (6x^2 + 4x)\, dx</m>.
+                    Modify the equation <m>du = (6x^2 + 4x)\, dx</m> to match the expression in the
+                    integral.</p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using <m>u = 2x^3 + 2x^2 - 1</m> gives <m>du = (6x^2 + 4x) \, dx</m>. Because
+                the expression <m>3x^2 + 2x</m> appears in the integral, we modify our substition
+                equation: <me>
+                    \begin{align*}
+                    du &amp;= (6x^2 + 4x) \, dx\\
+                    \dfrac{1}{2}du &amp;= (3x^2+2x) \, dx &amp;&amp; \text{Multiply by }
+                \frac{1}{2}\\
+                    \end{align*}
+                  </me>
+                </p>
+                Using these substitutions gives: <me>
+                  \begin{align*}
+                  \int \dfrac{3x^2 + 2x}{2x^3 + 2x^2 - 1} \, dx &amp;= \int
+                \dfrac{1}{\underbrace{2x^3 + 2x^2 - 1}_{u}} \overbrace{(3x^2 +
+                2x)dx}^{\frac{1}{2}du} \\
+                  &amp;= \int \dfrac{1}{u} \cdot \frac{1}{2} \, du \\
+                  &amp;= \frac{1}{2} \int \dfrac{1}{u} \, du &amp;&amp; \text{Constant multiple
+                rule}\\
+                  &amp;= \frac{1}{2}\ln|u| + C &amp;&amp; \text{Integrate}\\
+                  &amp;= \frac{1}{2}\ln|2x^3 + 2x^2 - 1| + C &amp;&amp; \text{Substitute back} \\
+                \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\frac{1}{2}\ln|2x^3 + 2x^2 - 1| + C" tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>-2</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>9</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>71</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="cf308d66-f482-4205-9430-a8df0b177bb7">
+          <Questions uuid="47f8ee48-f69d-4049-8242-b7b6412ea421">
+            <RandomizedShortAnswer difficulty="easy" uuid="168f4978-4739-4e58-8b73-7d4767963523">
+              <KSAs primary="" />
+              <question>
+                <p> We will evaluate the integral using u-substitution: <m>\displaystyle \int
+                  #2an#xe^{#a#x^2 - #b#} \, dx = \underline{\phantom{XXXXXX}}</m>
+                </p>
+                <p> Express the answer as a function of <m>x</m> . </p>
+              </question>
+              <CorrectExplanation>
+                <p> Using <m>u = #a#x^2 - #b#</m> gives <m>du = #2a#x \, dx</m> . So, <m>\dfrac{1}{#2a#}
+                  du = x \, dx</m> . Using these substitutions, we get: </p>
+                <me>\begin{align*}
+                  \int #2an#xe^{#a#x^2 - #b#} \, dx &amp;= #2an# \int xe^{#a#x^2 - #b#} \, dx
+                  &amp;&amp; \text{Factor out constant.}\\
+                  &amp;= #2an# \int \overbrace{e^{#a#x^2 - #b#}}^{e^u} \cdot \overbrace{x \,
+                  dx}^{\frac{1}{#2a#} \, du} &amp;&amp; \text{Identify } u \text{ and } du.\\
+                  &amp;= #2an# \int e^u \cdot \dfrac{1}{#2a#} du &amp;&amp; \text{Substitute.}\\
+                  &amp;= \dfrac{#2an#}{#2a#} \int e^u du &amp;&amp; \text{Factor out constant.}\\
+                  &amp;= #n# \int e^u du &amp;&amp; \text{Simplify.}\\
+                  &amp;= #n# e^u + C &amp;&amp; \text{Integrate.}\\
+                  &amp;= #n#e^{#a#x^2 - #b#} + C &amp;&amp; \text{Substitute back } u = #a#x^2 -
+                  #b#.
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Hints>
+                <hint>
+                  <p> We can use the substitution <m>u = #a#x^2 - #b#</m> . Note that <m>du = #2a#x
+                    \, dx</m> , so we'll need to manipulate this to match the <m>x \, dx</m> term in
+                    the integrand. </p>
+                </hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="#n#e^{#a#x^2 - #b#} + C" tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+              <Randomization>
+                <Meaningful>
+                  <NumericVariables>
+                    <Originals>
+                      <Original name="a" type="Integer" start="2" stop="5" step="1" />
+                      <Original name="b" type="Integer" start="2" stop="9" step="1" />
+                      <Original name="n" type="Integer" start="2" stop="5" step="1" />
+                    </Originals>
+                    <Deriveds>
+                      <Derived name="2a" type="Integer" equals="2*a" />
+                      <Derived name="2an" type="Integer" equals="2*a*n" />
+                    </Deriveds>
+                    <Constraints>
+                      <Constraint>b != a</Constraint>
+                      <Constraint>n not in (a,b)</Constraint>
+                    </Constraints>
+                  </NumericVariables>
+                  <Scenarios />
+                </Meaningful>
+                <Distractor>
+                  <NumericVariables>
+                    <Originals />
+                    <Deriveds />
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Distractor>
+              </Randomization>
+            </RandomizedShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="1c696a7b-f8a8-4799-b2ea-6bd5fb9a574a">
+          <Questions uuid="d65de255-c5dc-413a-a25d-f0e546a4434f">
+            <RandomizedShortAnswer difficulty="easy" uuid="0e1beb59-9d01-4c34-946e-f5785e0a3b59">
+              <KSAs primary="" />
+              <question>
+                <p> We will evaluate the integral using u-substitution: <m>\displaystyle \int
+                  x^{#nmin1#}\sqrt{x^{#n#} + #a#} \, dx = \underline{\phantom{XXXXXX}}</m> . </p>
+                <p> Express the answer as a function of <m>x</m> . </p>
+              </question>
+              <CorrectExplanation>
+                <p> Using <m>u = x^{#n#} + #a#</m> gives <m>du = #n#x^{#nmin1#} \, dx</m> . So, <m>\dfrac{1}{#n#}du
+                  = x^{#nmin1#} \, dx</m> . Using these substitutions, we get: </p>
+                <me>\begin{align*}
+                  \int x^{#nmin1#}\sqrt{x^{#n#} + #a#} \, dx &amp;= \int x^{#nmin1#}(x^{#n#} +
+                  #a#)^{1/2} \, dx &amp;&amp; \text{Rewrite radical.}\\
+                  &amp;= \int \overbrace{(x^{#n#} + #a#)^{1/2}}^{u^{1/2}} \cdot
+                  \overbrace{x^{#nmin1#} \, dx}^{\frac{1}{#n#}du} &amp;&amp; \text{Identify } u
+                  \text{ and } du.\\
+                  &amp;= \int u^{1/2} \cdot \dfrac{1}{#n#} du &amp;&amp; \text{Substitute.}\\
+                  &amp;= \dfrac{1}{#n#} \int u^{1/2} \, du &amp;&amp; \text{Factor out constant.}\\
+                  &amp;= \dfrac{1}{#n#} \cdot \dfrac{u^{3/2}}{3/2} + C &amp;&amp; \text{Apply power
+                  rule.}\\
+                  &amp;= \dfrac{1}{#n#} \cdot \dfrac{2}{3} u^{3/2} + C &amp;&amp; \text{Simplify
+                  exponent.}\\
+                  &amp;= \dfrac{1}{#denom#} u^{3/2} + C &amp;&amp; \text{Multiply fractions.}\\
+                  &amp;= \dfrac{1}{#denom#}(x^{#n#} + #a#)^{3/2} + C &amp;&amp; \text{Substitute
+                  back } u = x^{#n#} + #a#.
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Hints>
+                <hint>
+                  <p> We can use the substitution <m>u = x^{#n#} + #a#</m> . Note that <m>du =
+                    #n#x^{#nmin1#} \, dx</m> , so we'll need to manipulate this to match the <m>x^{#nmin1#}
+                    \, dx</m> term in the integrand. </p>
+                </hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="\dfrac{1}{#denom#}(x^{#n#} + #a#)^{3/2} + C" tolerance="0"
+                  toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                      <Variable>
+                        <Name>C</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+              <Randomization>
+                <Meaningful>
+                  <NumericVariables>
+                    <Originals>
+                      <Original name="a" type="Integer" start="2" stop="9" step="1" />
+                      <Original name="n_half" type="Integer" start="2" stop="4" step="1" />
+                    </Originals>
+                    <Deriveds>
+                      <Derived name="n" type="Integer" equals="2*n_half" />
+                      <Derived name="nmin1" type="Integer" equals="n - 1" />
+                      <Derived name="denom" type="Integer" equals="3 * n_half" />
+                    </Deriveds>
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Meaningful>
+                <Distractor>
+                  <NumericVariables>
+                    <Originals />
+                    <Deriveds />
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Distractor>
+              </Randomization>
+            </RandomizedShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="ab4ca0b1-2401-4f34-881a-d8cfc9b2f1fb">
+          <Text />
+          <Questions uuid="e3f0815c-b523-4f0e-ad1c-fe25d74c5194">
+            <ShortAnswer difficulty="easy" uuid="6902b4fc-37a0-4239-b125-ef0369111ca9">
+              <KSAs primary="" />
+              <question><p>Use a <m>u</m>-substitution to compute <m>\displaystyle \int
+                \frac{1}{x\ln(x)} \, dx = \underline{\phantom{XXXXXX}}</m>. </p> The final answer
+                should be written in terms of the variable <m>x</m>.</question>
+              <CorrectExplanation>Using <m>u = \ln(x)</m> gives <m>du = \dfrac{1}{x} \, dx</m>.
+                Using these substitutions, we get: <me>
+                  \begin{align*}
+                  \int \dfrac{1}{x\ln(x)} \, dx &amp;= \int
+                \underbrace{\dfrac{1}{\ln(x)}}_{\frac{1}{u}} \cdot \underbrace{\dfrac{1}{x} \,
+                dx}_{du} &amp;&amp; \text{Rewrite}\\
+                  &amp;= \int \frac{1}{u} \, du \\
+                  &amp;= \ln|u|+ C &amp;&amp; \text{Integrate}\\
+                  &amp;= \ln|\ln(x)| + C &amp;&amp; \text{Substitute}\\
+                  \end{align*}
+</me></CorrectExplanation>
+              <Hints>
+                <hint>
+                  <p> We can let <m>u = \sec x</m> so <m>du = \sec x \tan x \, dx</m> . </p>
+                </hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="\ln|\ln(x)| + C" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Equals>3</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>8</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>11</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>5</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Equals>17</Equals>
+                        <Name>x</Name>
+                      </Variable>
+                      <Variable>
+                        <Equals>7</Equals>
+                        <Name>C</Name>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <Suffix />
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="e78928f4-fa1e-4355-9881-0bf9ea8c1760">
+          <Text uuid="c96e3d8b-eefc-4eb2-9b5a-dd0b4af83d62">
+            <p> We will evaluate the definite integral <m>\displaystyle \int_0^1 2x(x^2 + 3)^2 \, dx</m>
+            .
+    </p> MAKE THE COEFFICIENT NOT 2; REMOVE THE PARTS</Text>
+          <Questions uuid="ac468c84-5261-4056-a812-727460c3f618">
+            <ShortAnswer difficulty="easy" uuid="210cdf73-9ee5-4ced-9683-213535ee32fd">
+              <KSAs primary="" />
+              <question>
+                <p> What substitution should we use? <m>u = \underline{\phantom{XXXXXX}}</m>
+                </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Consider the inner function in the composite expression <m>(x^2 + 3)^2</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> The inner function of the composite expression <m>(x^2 + 3)^2</m> is <m>x^2 + 3</m>
+                  .
+        </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="x^2 + 3" tolerance="0" toleranceType="absolute">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="5b12abfd-b31a-4ebf-8306-934f01d865e6">
+              <KSAs primary="" />
+              <question>
+                <p> We need to convert the limits of integration. When <m>x = 0</m>, <m>u =
+                  \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> We can substitute the x-values into <m>u = x^2 + 3</m> to find the new limits. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>
+                  We convert the limits as follows:
+                </p>
+
+                <me>
+                  \begin{align*}
+                  \text{When } x = 0: \quad u &amp;= (0)^2 + 3 = 3\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="3" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="d9e0560d-7f49-4569-9ed8-4c40fd287a9b">
+              <KSAs primary="" />
+              <question>
+                <p> We need to convert the limits of integration. When <m>x = 0</m> , <m>u = 3</m> .
+                  When <m>x = 1</m> , <m>u = \underline{\phantom{XXXXXX}}</m> . </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> We can substitute the x-values into <m>u = x^2 + 3</m> to find the new limits. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>We convert the limits as follows:</p>
+
+                <me>\begin{align*}
+                  \text{When } x = 1: \quad u &amp;= (1)^2 + 3 = 4 \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="4" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="231f34e8-792e-4a11-aef0-d1fff1997205">
+              <KSAs primary="" />
+              <question>
+                <p> Using a <m>u</m>-substitution, evaluate the definite integral: <m>\displaystyle
+                  \int_0^1 2x(x^2 + 3)^2 \, dx = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> After substitution, the integral becomes <m>\displaystyle \int_3^4 u^2 \, du</m>
+                    because <m>du = 2x \, dx</m>. </p>
+                </hint>
+              </Hints>
+              <CorrectExplanation><p>Using <m>u = x^2 + 3</m> gives <m>du = 2x\,dx</m>. Solving for <m>x
+                \, dx</m> gives <m>\dfrac{1}{2} du = x \, dx</m>. </p> We also use <m>u = x^2+3</m>
+                to find the new limits of integration: <list type="bullet">
+                  <item> When <m>x = 0</m>, we have <m>u = 0^2 + 3 = 3</m></item>
+                  <item> When <m>x = 1</m>, we have <m>u = 1^2 + 3 = 4</m></item>
+                </list>
+                Using these substitution gives: <p>
+
+                </p>
+        <me>
+                  \begin{align*}
+                  \int_0^1 6x(x^2 + 3)^2 \, dx &amp;= 6\int_0^1 x(x^2 + 3)^2 \, dx &amp;&amp;
+                \text{Constant multiple rule}\\
+                  &amp;= 6\int_0^1 \overbrace{(x^2 + 3)^2}^{u^2} \cdot \overbrace{x \,
+                dx}^{\frac{1}{2}du} &amp;&amp; \text{Rewrite}\\
+                  &amp;= 6 \cdot \frac{1}{2}\int_3^4 u^2 \, du &amp;&amp; \text{Substitute with new
+                limits.}\\
+                  &amp;= 3\dfrac{u^3}{3}\Big|_3^4 &amp;&amp; \text{Integrate}\\
+                  &amp;= u^3 \Big|_3^4 &amp;&amp; \text{Simplify}\\
+                  &amp;= 4^3 - 3^3 &amp;&amp; \text{Substitute }4 \text{ and } 3\\
+                  &amp;= 64 - 27&amp;&amp; \text{Simplify}\\
+                  &amp;= 37
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="37" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="40cd5d46-40e2-46b1-bcdc-b0103e5885c1">
+          <Text uuid="d0c7767d-161c-4266-b9f9-30abfeeaf4d9">
+            <p> Evaluate <m>\displaystyle \int_1^2 \dfrac{3x^2}{x^3 + 1} \, dx</m>. </p>
+          </Text>
+          <Questions uuid="4f5d64ab-f259-4ce8-bfa3-c7ba59beb707">
+
+
+            <ShortAnswer difficulty="easy" uuid="f0942ec7-afe8-4da9-82a2-c5d916cebd6f">
+              <KSAs primary="" />
+              <question>
+                <p> Use a <m>u</m>-substitution to compute the definite integral: <m>\displaystyle
+                  \int_1^2 \dfrac{3x^2}{x^3 + 1} \, dx = \underline{\phantom{XXXXXX}}</m>. </p>
+              </question>
+              <Hints>
+                <hint>
+                  <p> Use the substitution <m>u = x^3 + 1</m>.</p>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p> Using the denominator <m>u = x^3 + 1</m> gives <m> du = 3x^2 \, dx</m>. </p>
+
+                <p>Also, we use <m>u = x^3 + 1</m> to find the new limits of integration: <list
+                    type="bullet">
+                    <item> When <m>x=1</m>, we get <m> u = 1^3 +1 = 2</m></item>
+                    <item> When <m>x=2</m>, we get <m> u = 2^3 +1 = 9</m></item>
+                  </list>
+                </p>
+
+                <p>Substituting gives: </p>
+                <me>
+                  \begin{align*}
+                  \int_1^2 \dfrac{3x^2}{x^3 + 1} \, dx &amp;= \int_1^2 \underbrace{\dfrac{1}{x^3 +
+                  1}}_{\frac{1}{u}} \cdot \underbrace{3x^2\, dx}_{du} \\
+                  &amp;= \int_2^9 \dfrac{1}{u} \, du &amp;&amp; \text{Substitute with new limits }
+                  \\
+                  &amp;= \ln|u|\Big|_2^9 &amp;&amp; \text{Integrate}\\
+                  &amp;= \ln|9| - \ln|2| &amp;&amp; \text{Substitute }9 \text{ and } 2\\
+                  &amp;= \ln(9) - \ln(2) &amp;&amp; \text{Simplify.}\\
+                  &amp;= \ln\left(\dfrac{9}{2}\right) &amp;&amp; \text{Quotient rule for
+                  logarithms}\\
+                  \end{align*}
+                </me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="\ln\left(\frac{9}{2}\right)" tolerance="0"
+                  toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="a8f8f7b9-18b8-46f9-931d-cfd1d5923b3a">
+          <Questions uuid="e3c37b86-0dd7-47d8-9262-095c15d53763">
+            <RandomizedShortAnswer difficulty="easy" uuid="e5d2b1a5-91d0-4894-affc-cc1ad15dcd18">
+              <KSAs primary="" />
+              <question>
+                <p> We will evaluate the definite integral using u-substitution: <m>\displaystyle
+                  \int_0^{\pi/4} \sin(x)\cos^{#nmin1#}(x) \, dx = \underline{\phantom{XXXXXX}}</m>
+                </p>
+              </question>
+              <CorrectExplanation>
+                <p> We use the substitution <m>u = \cos(x)</m> , so <m>du = -\sin(x) \, dx</m> . </p>
+                <p>First, we convert the limits:</p>
+                <list type="bullet">
+                  <item> When <m>x = 0</m> : <m>u = \cos(0) = 1</m>
+                  </item>
+                  <item> When <m>x = \pi/4</m> : <m>u = \cos(\pi/4) = \dfrac{\sqrt{2}}{2}</m>
+                  </item>
+                </list>
+                <p>Now we complete the substitution and evaluation:</p>
+                <me>\begin{align*}
+                  \int_0^{\pi/4} \sin(x)\cos^{#nmin1#}(x) \, dx &amp;= \int_0^{\pi/4}
+                  \overbrace{\cos^{#nmin1#}(x)}^{u^{#nmin1#}} \cdot \overbrace{\sin(x) \, dx}^{-du}
+                  &amp;&amp; \text{Identify } u \text{ and } du.\\
+                  &amp;= -\int_1^{\sqrt{2}/2} u^{#nmin1#} \, du &amp;&amp; \text{Substitute with new
+                  limits.}\\
+                  &amp;= -\left[\dfrac{u^{#n#}}{#n#}\right]_1^{\sqrt{2}/2} &amp;&amp;
+                  \text{Integrate.}\\
+                  &amp;= -\dfrac{1}{#n#}\left[\left(\dfrac{\sqrt{2}}{2}\right)^{#n#} - 1\right]
+                  &amp;&amp; \text{Evaluate limits.}\\
+                  &amp;= -\dfrac{1}{#n#}\left[\dfrac{1}{#denom#} - 1\right] &amp;&amp;
+                  \text{Simplify } \left(\dfrac{\sqrt{2}}{2}\right)^{#n#} = \dfrac{1}{#denom#}.\\
+                  &amp;= \dfrac{#a#}{#b#} &amp;&amp; \text{Final answer.}
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Hints>
+                <hint>
+                  <p> We can see <m>\cos(x)</m> is raised to a power and <m>\sin(x)</m> is related
+                    to the derivative of <m>\cos(x)</m> . We can use the substitution <m>u = \cos(x)</m>
+                    and convert the limits accordingly. </p>
+                </hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="\dfrac{#a#}{#b#}" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+              <Suffix />
+              <Randomization>
+                <Meaningful>
+                  <NumericVariables>
+                    <Originals>
+                      <Original name="n_half" type="Integer" start="2" stop="5" step="1" />
+                    </Originals>
+                    <Deriveds>
+                      <Derived name="n" type="Integer" equals="2 * n_half" />
+                      <Derived name="nmin1" type="Integer" equals="n - 1" />
+                      <Derived name="denom" type="Integer" equals="2 ^ n_half" />
+                      <Derived name="a" type="Integer" equals="denom-1" />
+                      <Derived name="b" type="Integer" equals="n * denom" />
+                    </Deriveds>
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Meaningful>
+                <Distractor>
+                  <NumericVariables>
+                    <Originals />
+                    <Deriveds />
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Distractor>
+              </Randomization>
+            </RandomizedShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="453bf9ed-632e-499c-bbce-6074fc8e3bf2">
+          <Questions uuid="e9c77cbd-a1b4-4419-8774-dc284255aba7">
+            <RandomizedShortAnswer difficulty="easy" uuid="761ca8c9-edd2-4ea5-b0f7-63870f043e6d">
+              <KSAs primary="" />
+              <question>
+                <p> We will evaluate the definite integral using u-substitution: <m>\displaystyle
+                  \int_0^{#b#} x\sqrt{x^2 + 1} \, dx = \underline{\phantom{XXXXXX}}</m> . </p>
+              </question>
+              <CorrectExplanation>
+                <p> We use the substitution <m>u = x^2 + 1</m> , so <m>du = 2x \, dx</m> , which
+                  means <m>x \, dx = \dfrac{1}{2} du</m> . </p>
+                <p>First, we convert the limits:</p>
+                <list type="bullet">
+                  <item> When <m>x = 0</m> : <m>u = 0^2 + 1 = 1</m>
+                  </item>
+                  <item> When <m>x = #b#</m> : <m>u = #b#^2 + 1 = #u_upper#</m>
+                  </item>
+                </list>
+                <p>Now we complete the substitution and evaluation:</p>
+                <me>\begin{align*}
+                  \int_0^{#b#} x\sqrt{x^2 + 1} \, dx &amp;= \int_0^{#b#} \overbrace{\sqrt{x^2 +
+                  1}}^{u^{1/2}} \cdot \overbrace{x \, dx}^{\frac{1}{2}du} &amp;&amp; \text{Identify
+                  } u \text{ and } du.\\
+                  &amp;= \int_1^{#u_upper#} u^{1/2} \cdot \dfrac{1}{2} \, du &amp;&amp;
+                  \text{Substitute with new limits.}\\
+                  &amp;= \dfrac{1}{2} \int_1^{#u_upper#} u^{1/2} \, du &amp;&amp; \text{Factor out
+                  constant.}\\
+                  &amp;= \dfrac{1}{2}\left[\dfrac{u^{3/2}}{3/2}\right]_1^{#u_upper#} &amp;&amp;
+                  \text{Integrate.}\\
+                  &amp;= \dfrac{1}{2} \cdot \dfrac{2}{3}\left[u^{3/2}\right]_1^{#u_upper#}
+                  &amp;&amp; \text{Simplify fraction.}\\
+                  &amp;= \dfrac{1}{3}\left[#u_upper#^{3/2} - 1^{3/2}\right] &amp;&amp;
+                  \text{Evaluate limits.}\\
+                  &amp;= \dfrac{1}{3}\left[#u_upper#\sqrt{#u_upper#} - 1\right] &amp;&amp;
+                  \text{Simplify } #u_upper#^{3/2} = #u_upper#\sqrt{#u_upper#}.\\
+                  &amp;= \dfrac{#u_upper#\sqrt{#u_upper#} - 1}{3} &amp;&amp; \text{Final answer.}
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Hints>
+                <hint>
+                  <p> We can see <m>x^2 + 1</m> appears under a radical and <m>x</m> is related to
+                    the derivative of <m>x^2 + 1</m> . We can use the substitution <m>u = x^2 + 1</m>
+                    and convert the limits accordingly. </p>
+                </hint>
+              </Hints>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="\dfrac{#u_upper#\sqrt{#u_upper#} - 1}{3}" tolerance="0"
+                  toleranceType="absolute" />
+              </Evaluation>
+              <Suffix />
+              <Randomization>
+                <Meaningful>
+                  <NumericVariables>
+                    <Originals>
+                      <Original name="b" type="Integer" start="1" stop="4" step="1" />
+                    </Originals>
+                    <Deriveds>
+                      <Derived name="u_upper" type="Integer" equals="b ** 2 + 1" />
+                    </Deriveds>
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Meaningful>
+                <Distractor>
+                  <NumericVariables>
+                    <Originals />
+                    <Deriveds />
+                    <Constraints />
+                  </NumericVariables>
+                  <Scenarios />
+                </Distractor>
+              </Randomization>
+            </RandomizedShortAnswer>
+          </Questions>
+        </TextResource>
+      </Resources>
+    </Activity>
+  </Activities>
+</Module>

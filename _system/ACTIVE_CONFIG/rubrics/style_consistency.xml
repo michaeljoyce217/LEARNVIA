@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Consistency</name>
+    <category>style</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates uniformity in terminology, formatting, style, and conventions throughout
+    the educational content to reduce cognitive load and improve learning.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Contradictory terminology for same concept</criterion>
+        <criterion>Conflicting instructions or procedures</criterion>
+        <criterion>Major structural inconsistencies confusing navigation</criterion>
+        <criterion>Critical notation changes mid-content</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Calling same concept by different names</example>
+        <example type="violation">Different solution methods without explanation</example>
+        <example type="violation">Notation switching (e.g., f(x) to y) without notice</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Significant terminology variations</criterion>
+        <criterion>Major formatting inconsistencies</criterion>
+        <criterion>Inconsistent mathematical conventions</criterion>
+        <criterion>Variable style changes disrupting flow</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Switching between "function" and "mapping"</example>
+        <example type="violation">Different heading styles in same document</example>
+        <example type="violation">Inconsistent decimal vs fraction usage</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Moderate style variations</criterion>
+        <criterion>Some terminology inconsistencies</criterion>
+        <criterion>Inconsistent formatting choices</criterion>
+        <criterion>Variable presentation patterns</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Mixed bullet point styles</example>
+        <example type="violation">Inconsistent capitalization patterns</example>
+        <example type="violation">Variable example formatting</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small consistency improvements possible</criterion>
+        <criterion>Minor style variations</criterion>
+        <criterion>Slight formatting differences</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Minor spacing inconsistencies</example>
+        <example type="violation">Small variations in similar elements</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor consistency preferences</criterion>
+        <criterion>Optional uniformity improvements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Extremely minor style variations</example>
+        <example type="violation">Optional standardization opportunities</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Is terminology used consistently throughout?</question>
+    <question>Are formatting conventions uniform?</question>
+    <question>Is mathematical notation consistent?</question>
+    <question>Are similar elements presented similarly?</question>
+    <question>Is the voice and tone consistent?</question>
+    <question>Are examples formatted uniformly?</question>
+    <question>Are references and citations consistent?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Define terminology once and use consistently</practice>
+      <practice>Maintain uniform formatting throughout</practice>
+      <practice>Consistent mathematical notation conventions</practice>
+      <practice>Standardized example and exercise formats</practice>
+      <practice>Uniform heading and section structures</practice>
+      <practice>Consistent voice and tone</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Multiple terms for the same concept</failure>
+      <failure>Changing notation without explanation</failure>
+      <failure>Mixed formatting styles</failure>
+      <failure>Inconsistent capitalization</failure>
+      <failure>Variable presentation of similar content</failure>
+      <failure>Switching between formal and informal voice</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Mathematical Formatting">
+      Consistent math notation is essential
+    </interaction>
+    <interaction competency="Mechanical Compliance">
+      Consistent application of technical standards
+    </interaction>
+    <interaction competency="Conceptual Clarity">
+      Consistent terminology prevents confusion
+    </interaction>
+    <interaction competency="Structural Integrity">
+      Consistent structure aids navigation
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

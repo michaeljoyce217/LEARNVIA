@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Mechanical Compliance</name>
+    <category>style</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates adherence to LaTeX formatting requirements, markdown syntax, and
+    Learnvia platform conventions for mathematical and technical content.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>LaTeX that breaks compilation or rendering</criterion>
+        <criterion>Invalid markdown syntax causing display errors</criterion>
+        <criterion>Missing required document structure elements</criterion>
+        <criterion>Code that produces runtime errors</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Unmatched \begin{} and \end{} environments</example>
+        <example type="violation">Unclosed math delimiters breaking page</example>
+        <example type="violation">Malformed table syntax causing render failure</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Significant LaTeX convention violations</criterion>
+        <criterion>Inconsistent math environment usage</criterion>
+        <criterion>Major markdown formatting errors</criterion>
+        <criterion>Missing essential formatting for equations</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Using $$ for inline math instead of display</example>
+        <example type="violation">Mixing LaTeX and unicode math symbols</example>
+        <example type="violation">Improper nesting of environments</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Moderate LaTeX style inconsistencies</criterion>
+        <criterion>Some markdown convention violations</criterion>
+        <criterion>Inconsistent code formatting</criterion>
+        <criterion>Minor environment misuse</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Inconsistent use of \text{} vs \mathrm{}</example>
+        <example type="violation">Mixed heading styles in markdown</example>
+        <example type="violation">Inconsistent spacing in equations</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small LaTeX style preferences</criterion>
+        <criterion>Minor markdown improvements possible</criterion>
+        <criterion>Slight formatting inconsistencies</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could use more semantic commands</example>
+        <example type="violation">Minor spacing adjustments in math</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor style preferences</criterion>
+        <criterion>Optional formatting enhancements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Personal LaTeX style preferences</example>
+        <example type="violation">Optional spacing tweaks</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Does all LaTeX compile without errors?</question>
+    <question>Is markdown syntax valid and properly formatted?</question>
+    <question>Are math environments used appropriately?</question>
+    <question>Is code properly formatted and functional?</question>
+    <question>Are Learnvia platform conventions followed?</question>
+    <question>Is formatting consistent throughout the document?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Consistent use of math environments for their purpose</practice>
+      <practice>Proper LaTeX command syntax and spacing</practice>
+      <practice>Valid markdown with proper nesting</practice>
+      <practice>Semantic LaTeX commands when available</practice>
+      <practice>Consistent formatting choices throughout</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Mixing text and math modes incorrectly</failure>
+      <failure>Forgetting to escape special characters</failure>
+      <failure>Using display math for inline equations</failure>
+      <failure>Improper delimiter matching</failure>
+      <failure>Invalid markdown link or image syntax</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Mathematical Formatting">
+      Mechanical compliance enables proper math display
+    </interaction>
+    <interaction competency="Consistency">
+      Mechanical standards support overall consistency
+    </interaction>
+    <interaction competency="Accessibility">
+      Proper markup enables screen reader compatibility
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

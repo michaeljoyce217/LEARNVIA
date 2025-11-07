@@ -1,0 +1,1690 @@
+Product and quotient rules
+Product and quotient rules
+The product rule
+Some functions are written as a product of two functions, such as
+h(x) =
+              (x^2+1)(5x-3)
+. Multiplying the derivatives of each factor does not give the
+              correct derivative. The product rule gives a direct way to find the derivative without
+              first expanding the expression.
+In this lesson, we will practice using the product rule with polynomial functions,
+              but this technique also works for other types of functions. This rule will allow us to
+              find derivatives more efficiently and will prepare us for more complex problems later.
+Product rule
+If
+f
+and
+g
+are differentiable functions, then the derivative of the
+              product is
+\dfrac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+Note that
+f'(x) \cdot g(x) \ + \
+              f(x) \cdot g'(x)
+can be written as
+f'g + fg'
+.
+In this lesson, we will use the product rule to compute derivatives
+            of products
+              of two functions.
+The product rule
+CgovLyBDVEQ6IExpemJldGgKLy8gTFU6IEFyY2hpZSAxMC8xNS8yMDI1IChkaWFyeSByZXZpZXcgZWRpdHMpCkNhbnZhcyh3aW5kb3dzOiAyKQpTY2VuZSgpIHsKIEluaXQoCiAgICAgICAvL2NvbG9yczoKICAgICAgIGZDb2xvcjogQ29sb3IoMCwgNzgsIDIwNCkgLy9kYXJrIGJsdWUgQ29sb3IoMCwgNzgsIDIwNCkKICAgICAgIGZQcmltZUNvbG9yOiBDb2xvci5ibHVlCiAgICAgICBnQ29sb3I6IENvbG9yKDE0OCwgNTQsIDApIC8vZGFyayBvcmFuZ2UgQ29sb3IoMTQ4LCA1NCwgMCkKICAgICAgIGdQcmltZUNvbG9yOiBDb2xvci5vcmFuZ2UKCgogICAgICAgdzBUaXRsZTogVGV4dCgiVGhlIHByb2R1Y3QgcnVsZSIsIHBvc2l0aW9uOiBWZWMyKDAuMywgMCkpCiAgICAgICByaWdodERpdmlkZXI6IFJ1bGUoVmVjMigxLCAwKSwgVmVjMigxLCAxKSkKICAgICAgIGJvdHRvbURpdmlkZXI6IFJ1bGUoVmVjMigwLCAxKSwgVmVjMigxLCAxKSkKICAgICAgCiAgICAgICBzdGFydFg6IDAKICAgICAgIHN0YXJ0WTogMC4wNgogICAgICAgc3BhY2luZzogMC4xCiAgICAgICBwcm9kUnVsZUZvcm11bGE6IFRleHQoY29udGVudDogW1RleHQoIiRcZGZyYWN7ZH17ZHh9JCIpLCBUZXh0KCIkXExhcmdlIFskIiksIFRleHQoIiRcLGYoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnkpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkXCxnKHgpJCIsIGNvbG9yOiBDb2xvci5wcmltYXJ5KSwgVGV4dCgiJFwsIFxMYXJnZSBdJCIpLCBUZXh0KCIkXDs9XDskIiksICBUZXh0KCIkZicoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnkpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkZyh4KSQiLCBjb2xvcjogQ29sb3IucHJpbWFyeSksIFRleHQoIiRcLCtcLCQiKSwgVGV4dCgiJGYoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnkpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkZycoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnkpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4xMjUsIHN0YXJ0WSkpCiAgICAgICBkaXZpZGVyMTogUnVsZShWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiAwLjk1KSwgVmVjMigxLHN0YXJ0WSArIHNwYWNpbmcgKiAwLjk1KSkKCgogICAgICAgaW5zdHJ1Y3Rpb25zOiBUZXh0KCJGaW5kICRcZGZyYWN7ZH17ZHh9IFt4IFxjZG90IHheMl0kLiIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZykpCiAgICAgICBkaXZpZGVyMjogUnVsZShWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjk1KSwgVmVjMigxLHN0YXJ0WSArIHNwYWNpbmcgKiAxLjk1KSkKICAgICAgCiAgICAgICBzaW1wbGlmeTogVGV4dCgiU2ltcGxpZnkgZmlyc3Q6IiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogMikpCiAgICAgICBzaW1wbGlmeVN0ZXAxOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkXGRmcmFje2R9e2R4fSAoeCBcY2RvdCB4XjIpID1cOyQiKSwgVGV4dCgiJFxkZnJhY3tkfXtkeH0oXCwkIiksIFRleHQoIiR4JCIpLCBUZXh0KCIkXnsxICsgMn0kIiksIFRleHQoIiRcLCkkIildLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjc1KSkKICAgICAgIHNpbXBsaWZ5U3RlcDJGbHk6IFRleHQoIiR4XjMkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4yODI1LCBzdGFydFkgKyBzcGFjaW5nICogMi44MjUpKQogICAgICAgc2ltcGxpZnlTdGVwMjogVGV4dChjb250ZW50OiBbVGV4dCgiJFxwaGFudG9te1xkZnJhY3tkfXtkeH0gKHggXGNkb3QgeF4yKX1cOz1cOyQiKSwgVGV4dCgiJCQiKSwgVGV4dCgiJHgkIiksIFRleHQoIiReezN9JCIpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogMy43NSkpCiAgICAgICBzaW1wbGlmeVN0ZXAyRmx5MzogVGV4dCgiJDMkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4yNDc1LCBzdGFydFkgKyBzcGFjaW5nICogMy44MjQ1KSwgZm9udFNpemU6IDEzKQogICAgICAgbWlkRGl2aWRlcjogUnVsZShWZWMyKDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDEuOTUpLCBWZWMyKDAuNSxzdGFydFkgKyBzcGFjaW5nICogNS41KSkKCgogICAgICAgZGlzdDogVGV4dCgiRGlzdHJpYnV0aXZlIGFwcHJvYWNoOiIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDIpKQogICAgICAgZGlzdFN0ZXAxOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkXGRmcmFje2R9e2R4fVwsJCIpLCBUZXh0KCIkKCQiKSwgVGV4dCgiJHggJCIpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkIHheMiQiKSwgVGV4dCgiJClcc3RhY2tyZWx7P317PX1cOyQiKSwgVGV4dCgiJFxkZnJhY3tkfXtkeH1cLCQiKSwgVGV4dCgiJHgkIiksIFRleHQoIiRcLFwsXCxcLFwsXGNkb3RcOiQiKSwgVGV4dCgiJFxkZnJhY3tkfXtkeH1cLCQiKSwgVGV4dCgiJHheMiQiKV0sIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDIuNzUpKQogICAgICAgZGlzdFN0ZXAxRmx5ZHgxOiBkaXN0U3RlcDEuY29udGVudFswXS5jb3B5KHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDIuNzUpKQogICAgICAgZGlzdFN0ZXAxRmx5ZHgyOiBkaXN0U3RlcDEuY29udGVudFswXS5jb3B5KHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDIuNzUpKQogICAgICAgZGlzdFN0ZXAxRmx5eDogVGV4dCgiJCh4KSQiLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjU3MjUsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjgyNSkpCiAgICAgICBkaXN0U3RlcDFGbHl4U3F1YXJlZDogVGV4dCgiJCh4XjIpJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNjIyNSwgc3RhcnRZICsgc3BhY2luZyAqIDIuODI1KSkKICAgICAgIGRpc3RTdGVwMjogVGV4dChjb250ZW50OiBbVGV4dCgiJFxwaGFudG9te1xkZnJhY3tkfXtkeH0gKHggXGNkb3QgeF4yICl9JCIpLCBUZXh0KCIkXDtcc3RhY2tyZWx7P317PX1cOyQiKSwgVGV4dCgiJFxkZnJhY3tkfXtkeH0oeCkkIiksIFRleHQoIiRcOlxjZG90XDokIiksIFRleHQoIiRcZGZyYWN7ZH17ZHh9KHheMikkIildLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiAzLjc1KSkKICAgICAgIGRpc3RTdGVwMzogVGV4dCgiJFxwaGFudG9te1xkZnJhY3tkfXtkeH0gKHggXGNkb3QgeF4yIClcO30gXHN0YWNrcmVsez99ez19IDJ4JCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDMuNzUpKQogICAgICAgZGlzdFN0ZXAzOiBUZXh0KCIkXHBoYW50b217XGRmcmFje2R9e2R4fSAoeCBcY2RvdCB4XjIgKVw7fSBcc3RhY2tyZWx7P317PX0gMngkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC41LCBzdGFydFkgKyBzcGFjaW5nICogNC43NSkpCiAgICAgICBjcm9zc0xlZnQ6IFJ1bGUoVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiAyKSwgY29sb3I6IENvbG9yLnJlZCkKICAgICAgIGNyb3NzUmlnaHQ6IFJ1bGUoVmVjMihzdGFydFggKyAxLCBzdGFydFkgKyBzcGFjaW5nICogMiksIGNvbG9yOiBDb2xvci5yZWQpCiAgICAgICBkaXZpZGVyMzogUnVsZShWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpLCBWZWMyKDEsc3RhcnRZICsgc3BhY2luZyAqIDUuNSkpCgoKICAgICAgIHByb2RSdWxlOiBUZXh0KCJQcm9kdWN0IHJ1bGUgYXBwcm9hY2g6IiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNS41KSkKICAgICAgIHByb2RSdWxlU3RlcDE6IFRleHQoY29udGVudDogW1RleHQoIiRcZGZyYWN7ZH17ZHh9IFxMYXJnZVskIiksIFRleHQoIiR4JCIsIGNvbG9yOiBmQ29sb3IpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkIHheMiQiLCBjb2xvcjogZ0NvbG9yKSwgVGV4dCgiJCBcTGFyZ2UgXSA9XDskIiksIFRleHQoIiQgXGxlZnQgKCBcZGZyYWN7ZH17ZHh9ICh4KSBccmlnaHQgKSQiLCBjb2xvcjogZlByaW1lQ29sb3IpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkeF4yICQiLCBjb2xvcjogZ0NvbG9yKSwgVGV4dCgiJFw6K1w6JCIpLCBUZXh0KCIkeCAkIiwgY29sb3I6IGZDb2xvciksIFRleHQoIiRcOlxjZG90XDokIiksIFRleHQoIiQgXGxlZnQgKCBcZGZyYWN7ZH17ZHh9ICh4XjIpIFxyaWdodCApJCIsIGNvbG9yOiBnUHJpbWVDb2xvcildLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiA2LjI1KSkKICAgICAgIHByb2RSdWxlU3RlcDI6IFRleHQoY29udGVudDogW1RleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9IFxsZWZ0IFsgeCBcY2RvdCB4XjIgXHJpZ2h0IF19XDs9IFw7JCIpLCBUZXh0KCIkMSQiLCBjb2xvcjogZlByaW1lQ29sb3IpLCBUZXh0KCIkXDpcY2RvdFw6JCIpLCBUZXh0KCIkeF4yJCIsIGNvbG9yOiBnQ29sb3IpLCBUZXh0KCIkXDogKyBcOiQiKSwgVGV4dCgiJHgkIiwgY29sb3I6IGZDb2xvciksIFRleHQoIiRcOlxjZG90XDokIiksIFRleHQoIiQyeCQiLCBjb2xvcjogZ1ByaW1lQ29sb3IpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNy4xNSkpCiAgICAgICBwcm9kUnVsZVN0ZXAzOiBUZXh0KCIkXHBoYW50b217XGRmcmFje2R9e2R4fSBcbGVmdCBbIHggXGNkb3QgeF4yIFxyaWdodCBdfVw7PSB4XjIgKyAyeF4yJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDcuOSkpCiAgICAgICBwcm9kUnVsZVN0ZXA0OiBUZXh0KCIkXHBoYW50b217XGRmcmFje2R9e2R4fSBcbGVmdCBbIHggXGNkb3QgeF4yIFxyaWdodCBdfVw7PSAzeF4yJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDguNjUpKQogICAgICAgY2hlY2ttYXJrOiBJbWFnZShzb3VyY2U6ICJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvY2hlY2ttYXJrLnBuZyIsIHNjYWxlOiAwLjI1LCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjMxNSwgc3RhcnRZICsgc3BhY2luZyAqIDguNzUpKQoKCiAgICAgICB3MVRpdGxlOiBUZXh0KCJFeGFtcGxlIiwgcG9zaXRpb246IFZlYzIoMC40LCAwKSwgd2luZG93OiAxKQoKCiAgICAgICBleEluc3RydWN0aW9uczogVGV4dChjb250ZW50OiBbVGV4dCgiRmluZCIpLCBUZXh0KCIkXDtcZGZyYWN7ZH17ZHh9XExhcmdlWyQiKSwgVGV4dCgiJCh4XjIgKyAxKSQiLCBjb2xvcjogQ29sb3IucHJpbWFyeSksIFRleHQoIiQoNXggLSAzKSQiLCBjb2xvcjogQ29sb3IucHJpbWFyeSksIFRleHQoIiRcTGFyZ2UgXSQiKSwgVGV4dCgiLiIpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkpLCB3aW5kb3c6IDEpCiAgICAgIAogICAgICAgZXhTdGVwMTogVGV4dChjb250ZW50OiBbVGV4dCgiJFw7XGRmcmFje2R9e2R4fVxMYXJnZVskIiksIFRleHQoIiRccGhhbnRvbXsoeF4yICsgMSl9JCIpLCBUZXh0KCIkXDtccGhhbnRvbXsoNXggLSAzKX0kIiksIFRleHQoIiRcTGFyZ2UgXSQiKV0sIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDFmOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkXHBoYW50b217XCxcZGZyYWN7ZH17ZHh9XExhcmdlW30kIiksIFRleHQoIiRcdW5kZXJicmFjZXsoeF4yICsgMSl9X3tmKHgpfSQiLCBjb2xvcjogZkNvbG9yKSwgVGV4dCgiJFxwaGFudG9te1x1bmRlcmJyYWNleyg1eCAtIDMpfV97Zyh4KX19JCIsIGNvbG9yOiBnQ29sb3IpLCBUZXh0KCIkXHBoYW50b217XExhcmdlIF19JCIpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogMS4xKSwgd2luZG93OiAxKSAvL2Nhbid0IGJlIHBhcnQgb2YgYXJyYXkgYmMgb2YgY2VudGVyIGFsaWduCiAgICAgICBleFN0ZXAxZzogVGV4dChjb250ZW50OiBbVGV4dCgiJFxwaGFudG9te1wsXGRmcmFje2R9e2R4fVxMYXJnZVt9JCIpLCBUZXh0KCIkXHBoYW50b217XHVuZGVyYnJhY2V7KHheMiArIDEpfV97Zih4KX19JCIsIGNvbG9yOiBmQ29sb3IpLCBUZXh0KCIkXHVuZGVyYnJhY2V7KDV4IC0gMyl9X3tnKHgpfSQiLCBjb2xvcjogZ0NvbG9yKSwgVGV4dCgiJFxwaGFudG9te1xMYXJnZSBdfSQiKV0sIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDEuMSksIHdpbmRvdzogMSkgLy9jYW4ndCBiZSBwYXJ0IG9mIGFycmF5IGJjIG9mIGNlbnRlciBhbGlnbgogICAgICAKICAgICAgIGV4U3RlcDI6IFRleHQoIiRccGhhbnRvbXsgXGRmcmFje2R9e2R4fSBcbGVmdFsgKHheMiArIDEpXDsoNXggLSAzKSBccmlnaHRdfSBcOyA9IiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nKSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMmZQcmltZTogVGV4dCgiJFxwaGFudG9teyBcZGZyYWN7ZH17ZHh9IFxsZWZ0WyAoeF4yICsgMSlcOyg1eCAtIDMpIFxyaWdodF0gPVw7fSBcdW5kZXJicmFjZXsoXHBoYW50b217Mnh9KX1fe2YnKHgpfSQiLCBjb2xvcjogZlByaW1lQ29sb3IsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDJnOiBUZXh0KCIkXHBoYW50b217IFxkZnJhY3tkfXtkeH0gXGxlZnRbICh4XjIgKyAxKVw7KDV4IC0gMykgXHJpZ2h0XSA9IFx1bmRlcmJyYWNleygyeCl9X3tmJyh4KX19IFx1bmRlcmJyYWNleyhccGhhbnRvbXs1eCAtIDN9KX1fe2coeCl9JCIsIGNvbG9yOiBnQ29sb3IsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcFBsdXM6IFRleHQoIiRccGhhbnRvbXsgXGRmcmFje2R9e2R4fSBcbGVmdFsgKHheMiArIDEpXDsoNXggLSAzKSBccmlnaHRdID0gXHVuZGVyYnJhY2V7KDJ4KX1fe2YnKHgpfSBcdW5kZXJicmFjZXsoNXggLSAzKX1fe2coeCl9XDp9ICskIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nKSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMmY6IFRleHQoIiRccGhhbnRvbXsgXGRmcmFje2R9e2R4fSBcbGVmdFsgKHheMiArIDEpXDsoNXggLSAzKSBccmlnaHRdID0gXHVuZGVyYnJhY2V7KDJ4KX1fe2YnKHgpfSBcdW5kZXJicmFjZXsoNXggLSAzKX1fe2coeCl9ICtcOn0gXHVuZGVyYnJhY2V7KFxwaGFudG9te3heMiArIDF9KX1fe2YoeCl9JCIsIGNvbG9yOiBmQ29sb3IsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDJnUHJpbWU6IFRleHQoIiRccGhhbnRvbXsgXGRmcmFje2R9e2R4fSBcbGVmdFsgKHheMiArIDEpXDsoNXggLSAzKSBccmlnaHRdID0gXHVuZGVyYnJhY2V7KDJ4KX1fe2YnKHgpfSBcdW5kZXJicmFjZXsoNXggLSAzKX1fe2coeCl9ICsgXHVuZGVyYnJhY2V7KHheMiArIDEpfV97Zih4KX19IFx1bmRlcmJyYWNleyhccGhhbnRvbSA1KX1fe2cnKHgpfSQiLCBjb2xvcjogZ1ByaW1lQ29sb3IsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyksIHdpbmRvdzogMSkKCgogICAgICAgZXhTdGVwMzogVGV4dCgiJFxwaGFudG9teyBcZGZyYWN7ZH17ZHh9IFxsZWZ0WyAoeF4yICsgMSlcOyg1eCAtIDMpIFxyaWdodF1cO30gPSAxMHheMiAtIDZ4KyA1eF4yICsgNSQiLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjUpLCB3aW5kb3c6IDEpCgoKICAgICAgIGV4U3RlcDQ6IFRleHQoIiRccGhhbnRvbXsgXGRmcmFje2R9e2R4fSBcbGVmdFsgKHheMiArIDEpXDsoNXggLSAzKSBccmlnaHRdXDt9ID0gMTV4XjIgLSA2eCArIDUkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogMy41KSwgd2luZG93OiAxKQogICAgICAgZXhEaXZpZGVyOiBSdWxlKFZlYzIoMCwgc3RhcnRZICsgc3BhY2luZyAqIDUuNSksIFZlYzIoMSxzdGFydFkgKyBzcGFjaW5nICogNS41KSwgd2luZG93OiAxKQoKCiAgICAgICBmOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkZih4KSA9XDskIiwgY29sb3I6IGZDb2xvciksIFRleHQoIiR4XjIgKyAxJCIsIGNvbG9yOiBmQ29sb3IpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4wMDUsIHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMkZseWY6IGYuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuMTMsIHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgd2luZG93OiAxKQogICAgICAgZlByaW1lOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkZicoeCkgPVw7JCIsIGNvbG9yOiBmUHJpbWVDb2xvciksIFRleHQoIiQyeCQiLCBjb2xvcjogZlByaW1lQ29sb3IpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNyksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDJGbHlmUHJpbWU6IGZQcmltZS5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4xMzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA3KSwgd2luZG93OiAxKQogICAgICAgZzogVGV4dChjb250ZW50OiBbVGV4dCgiJGcoeCkgPVw7JCIsIGNvbG9yOiBnQ29sb3IpLCBUZXh0KCIkNXggLSAzJCIsIGNvbG9yOiBnQ29sb3IpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC41MDUsIHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMkZseWc6IGcuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNjMsIHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgd2luZG93OiAxKQogICAgICAgZ1ByaW1lOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkZycoeCkgPVw7JCIsIGNvbG9yOiBnUHJpbWVDb2xvciksIFRleHQoIiQ1JCIsIGNvbG9yOiBnUHJpbWVDb2xvcildLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiA3KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMkZseWdQcmltZTogZ1ByaW1lLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjYzNSwgc3RhcnRZICsgc3BhY2luZyAqIDcpLCB3aW5kb3c6IDEpCiApIHsKICAgICAgIHByb2RSdWxlRm9ybXVsYS5oaWRlKCkKICAgICAgIGRpdmlkZXIxLmhpZGUoKQogICAgICAgaW5zdHJ1Y3Rpb25zLmhpZGUoKQogICAgICAgZGl2aWRlcjIuaGlkZSgpCiAgICAgICBzaW1wbGlmeS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFswXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFsxXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFsyXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFszXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFs0XS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFswXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFsxXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFsyXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFszXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDJGbHkuaGlkZSgpCiAgICAgICBzaW1wbGlmeVN0ZXAyRmx5My5oaWRlKCkKICAgICAgIG1pZERpdmlkZXIuaGlkZSgpCiAgICAgICBkaXN0LmhpZGUoKQogICAgICAgZGlzdFN0ZXAxLmNvbnRlbnRbMF0uaGlkZSgpCiAgICAgICBkaXN0U3RlcDEuY29udGVudFsxXS5oaWRlKCkKICAgICAgIGRpc3RTdGVwMS5jb250ZW50WzJdLmhpZGUoKQogICAgICAgZGlzdFN0ZXAxLmNvbnRlbnRbM10uaGlkZSgpCiAgICAgICBkaXN0U3RlcDEuY29udGVudFs0XS5oaWRlKCkKICAgICAgIGRpc3RTdGVwMS5jb250ZW50WzVdLmhpZGUoKQogICAgICAgZGlzdFN0ZXAxLmNvbnRlbnRbNl0uaGlkZSgpCiAgICAgICBkaXN0U3RlcDEuY29udGVudFs3XS5oaWRlKCkKICAgICAgIGRpc3RTdGVwMS5jb250ZW50WzhdLmhpZGUoKQogICAgICAgZGlzdFN0ZXAxLmNvbnRlbnRbOV0uaGlkZSgpCiAgICAgICBkaXN0U3RlcDEuY29udGVudFsxMF0uaGlkZSgpCiAgICAgICBkaXN0U3RlcDIuaGlkZSgpCiAgICAgICBkaXN0U3RlcDFGbHlkeDEuaGlkZSgpCiAgICAgICBkaXN0U3RlcDFGbHlkeDIuaGlkZSgpCiAgICAgICBkaXN0U3RlcDFGbHl4LmhpZGUoKQogICAgICAgZGlzdFN0ZXAxRmx5eFNxdWFyZWQuaGlkZSgpCiAgICAgICBkaXN0U3RlcDMuaGlkZSgpCiAgICAgICBkaXZpZGVyMy5oaWRlKCkKICAgICAgIHByb2RSdWxlLmhpZGUoKQogICAgICAgcHJvZFJ1bGVTdGVwMS5oaWRlKCkKICAgICAgIHByb2RSdWxlU3RlcDIuaGlkZSgpCiAgICAgICBwcm9kUnVsZVN0ZXAzLmhpZGUoKQogICAgICAgcHJvZFJ1bGVTdGVwNC5oaWRlKCkKICAgICAgIGNoZWNrbWFyay5oaWRlKCkKICAgICAgIGV4SW5zdHJ1Y3Rpb25zLmhpZGUoKQogICAgICAgZXhTdGVwMS5oaWRlKCkKICAgICAgIGV4U3RlcDFmLmhpZGUoKQogICAgICAgZXhTdGVwMWcuaGlkZSgpCiAgICAgICBleFN0ZXAyLmhpZGUoKQogICAgICAgZXhTdGVwMmZQcmltZS5oaWRlKCkKICAgICAgIGV4U3RlcDJnLmhpZGUoKQogICAgICAgZXhTdGVwUGx1cy5oaWRlKCkKICAgICAgIGV4U3RlcDJmLmhpZGUoKQogICAgICAgZXhTdGVwMmdQcmltZS5oaWRlKCkKICAgICAgIGV4U3RlcDMuaGlkZSgpCiAgICAgICBleFN0ZXAyRmx5Zi5oaWRlKCkKICAgICAgIGV4U3RlcDJGbHlmUHJpbWUuaGlkZSgpCiAgICAgICBleFN0ZXAyRmx5Zy5oaWRlKCkKICAgICAgIGV4U3RlcDJGbHlnUHJpbWUuaGlkZSgpCiAgICAgICBleFN0ZXA0LmhpZGUoKQogICAgICAgZXhEaXZpZGVyLmhpZGUoKQogICAgICAgZi5oaWRlKCkKICAgICAgIGZQcmltZS5oaWRlKCkKICAgICAgIGcuaGlkZSgpCiAgICAgICBnUHJpbWUuaGlkZSgpCiAgfQoKCiBBbmltYXRlKCkgewogICAvLyAxLWEKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYV90aGVfcHJvZHVjdF9ydWxlLm1wMyIpCiAgIHdhaXQoMjAwMCkKICAgaW5zdHJ1Y3Rpb25zLnNob3coKQogICB3YWl0KDUwMDApCiAgCiAgIC8vIDEtYgogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1iX3RoZV9wcm9kdWN0X3J1bGUubXAzIikKICAgZGl2aWRlcjIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHNpbXBsaWZ5LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBzaW1wbGlmeVN0ZXAxLmNvbnRlbnRbMF0uc2hvdygpCiAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFsxXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzJdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBzaW1wbGlmeVN0ZXAxLmNvbnRlbnRbM10uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFs0XS5zaG93KCkKICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzNdLmhpZGUoZHVyYXRpb246IDUwMCkKICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzNdID0gVGV4dCgiJF4zJCIpCiAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFszXS5zaG93KCkKICAgd2FpdCgxMDAwKQogIAogICAvLyAxLWMKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtY190aGVfcHJvZHVjdF9ydWxlLm1wMyIpCiAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFswXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgc2ltcGxpZnlTdGVwMkZseS5vcGFjaXR5ID0gMQogICBzaW1wbGlmeVN0ZXAyRmx5LnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjIyNSwgc3RhcnRZICsgc3BhY2luZyAqIDMuODI1KSkKICAgc2ltcGxpZnlTdGVwMi5jb250ZW50WzJdLm9wYWNpdHkgPSAxCiAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFszXS5vcGFjaXR5ID0gMQogICBzaW1wbGlmeVN0ZXAyRmx5Lm9wYWNpdHkgPSAwCiAgIC8vZmx5IDMgZnJvbSBleHBvbmVudAogICBzaW1wbGlmeVN0ZXAyRmx5My5vcGFjaXR5ID0gMQogICBzaW1wbGlmeVN0ZXAyRmx5My5mb250U2l6ZS5pbnRlcnBvbGF0ZSgyMCwgYmxvY2tpbmc6IGZhbHNlKQogICBzaW1wbGlmeVN0ZXAyRmx5My5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC4yMjI1LCBzdGFydFkgKyBzcGFjaW5nICogMy44MjQ1KSwgYmxvY2tpbmc6IGZhbHNlKQogICBzaW1wbGlmeVN0ZXAyLmNvbnRlbnRbMV0gPSBUZXh0KCIkXHBoYW50b217M30kIikKICAgc2ltcGxpZnlTdGVwMi5jb250ZW50WzNdLmhpZGUoZHVyYXRpb246IDUwMCkKICAgc2ltcGxpZnlTdGVwMi5jb250ZW50WzNdID0gVGV4dCgiJF4yJCIpCiAgIHdhaXQoMzAwMCkKICAKICAgLy8gMS1lCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWVfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICBtaWREaXZpZGVyLnNob3coKQogICBkaXN0LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBkaXN0U3RlcDEuY29udGVudFswXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgZGlzdFN0ZXAxLmNvbnRlbnRbMV0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIGRpc3RTdGVwMS5jb250ZW50WzJdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBkaXN0U3RlcDEuY29udGVudFszXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgZGlzdFN0ZXAxLmNvbnRlbnRbNF0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIGRpc3RTdGVwMS5jb250ZW50WzVdLnNob3coKQogICB3YWl0KDIwMDApCiAgIGRpc3RTdGVwMUZseXgub3BhY2l0eSA9IDEKICAgZGlzdFN0ZXAxRmx5eC5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC43Nywgc3RhcnRZICsgc3BhY2luZyAqIDIuODEpLCBibG9ja2luZzogZmFsc2UpCiAgIGRpc3RTdGVwMS5jb250ZW50WzhdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBkaXN0U3RlcDFGbHl4U3F1YXJlZC5vcGFjaXR5ID0gMQogICBkaXN0U3RlcDFGbHl4U3F1YXJlZC5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC44OTc1LCBzdGFydFkgKyBzcGFjaW5nICogMi44MSkpCiAgIGRpc3RTdGVwMUZseWR4MS5vcGFjaXR5ID0gMQogICBkaXN0U3RlcDFGbHlkeDEucG9zaXRpb24ubW92ZShWZWMyKHN0YXJ0WCArIDAuNzIsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjc1KSwgYmxvY2tpbmc6IGZhbHNlKQogICBkaXN0U3RlcDFGbHlkeDIub3BhY2l0eSA9IDEKICAgZGlzdFN0ZXAxRmx5ZHgyLnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjg1LCBzdGFydFkgKyBzcGFjaW5nICogMi43NSkpCiB9CgoKIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHt9Cn0KCgpTY2VuZSgpIHsKIEluaXQoCiApIHsKIH0KCgogQW5pbWF0ZSgpIHsKICAgLy8gMi1hCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWFfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICBkaXN0U3RlcDIuc2hvdyhkdXJhdGlvbjogNTAwKQogICBkaXN0U3RlcDIuY29udGVudFsyXS5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgZGlzdFN0ZXAyLmNvbnRlbnRbNF0uaGlkZShkdXJhdGlvbjogNTAwKQogICBkaXN0U3RlcDIuY29udGVudFsyXSA9IFRleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9fTEkIiwgb3BhY2l0eTogMCkKICAgZGlzdFN0ZXAyLmNvbnRlbnRbNF0gPSBUZXh0KCIkXHBoYW50b217XGRmcmFje2R9e2R4fX0yeCQiLCBvcGFjaXR5OiAwKQogICBkaXN0U3RlcDIuY29udGVudFsyXS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgZGlzdFN0ZXAyLmNvbnRlbnRbNF0uc2hvdyhkdXJhdGlvbjogNTAwKQogICBkaXN0U3RlcDMuc2hvdygpCiAgIHdhaXQoMjAwMCkKICAKICAgLy8gMi1iCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWJfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICBjcm9zc0xlZnQucDIubW92ZShWZWMyKHN0YXJ0WCArIDEsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpKQogICBjcm9zc1JpZ2h0LnAyLm1vdmUoVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpKQogICB3YWl0KDUwMCkKICAKICAgLy8gMi1jCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWNfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICBkaXZpZGVyMy5zaG93KCkKICAgd2FpdCg0MDAwKQogICBwcm9kUnVsZUZvcm11bGEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIGRpdmlkZXIxLnNob3coKQogICB3YWl0KDEwMDApCiAgCiB9Cn0KCgpTY2VuZSgpIHsKIEluaXQoCiApIHsKIH0KCgogQW5pbWF0ZSgpIHsKICAgLy8gMy1hCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWFfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICB3YWl0KDU1MDApCiAgIHByb2RSdWxlRm9ybXVsYS5jb250ZW50WzJdLmNvbG9yLmJsZW5kKGZDb2xvciwgZHVyYXRpb246IDUwMCkKICAgcHJvZFJ1bGVGb3JtdWxhLmNvbnRlbnRbNF0uY29sb3IuYmxlbmQoZ0NvbG9yLCBkdXJhdGlvbjogNTAwKQogICB3YWl0KDUwMCkKICAgcHJvZFJ1bGVGb3JtdWxhLmNvbnRlbnRbN10uY29sb3IuYmxlbmQoZlByaW1lQ29sb3IsIGR1cmF0aW9uOiA1MDApCiAgIHByb2RSdWxlRm9ybXVsYS5jb250ZW50WzldLmNvbG9yLmJsZW5kKGdDb2xvciwgZHVyYXRpb246IDUwMCkKICAgd2FpdCg1MDApCiAgIHByb2RSdWxlRm9ybXVsYS5jb250ZW50WzExXS5jb2xvci5ibGVuZChmQ29sb3IsIGR1cmF0aW9uOiA1MDApCiAgIHByb2RSdWxlRm9ybXVsYS5jb250ZW50WzEzXS5jb2xvci5ibGVuZChnUHJpbWVDb2xvciwgZHVyYXRpb246IDUwMCkKICAgd2FpdCg1MDApCiAgCiB9Cn0KCgpTY2VuZSgpIHsKIEluaXQoCiApIHsKIH0KCgogQW5pbWF0ZSgpIHsKICAgLy8gNC1hCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC80LWFfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICBwcm9kUnVsZS5zaG93KCkKICAgcHJvZFJ1bGVTdGVwMS5zaG93KCkKICAgd2FpdCg1NTAwKQogICBwcm9kUnVsZVN0ZXAyLnNob3coZHVyYXRpb246IDUwMCkKICAgcHJvZFJ1bGVTdGVwMy5zaG93KGR1cmF0aW9uOiA1MDApCiAgIHByb2RSdWxlU3RlcDQuc2hvdyhkdXJhdGlvbjogNTAwKQogICB3YWl0KDEwMDApCiAgIGNoZWNrbWFyay5zaG93KCkKICAKIH0KfQoKClNjZW5lKCkgewogSW5pdCgKICkgewogfQoKCiBBbmltYXRlKCkgewogICAvLyA1LWEKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzUtYV90aGVfcHJvZHVjdF9ydWxlLm1wMyIpCiAgIGV4SW5zdHJ1Y3Rpb25zLnNob3coKQogICB3YWl0KDYwMDApCiAgCiAgIC8vIDUtYgogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvNS1iX3RoZV9wcm9kdWN0X3J1bGUubXAzIikKICAgZXhTdGVwMS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgd2FpdCg5MDApCiAgIGV4RGl2aWRlci5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgZXhTdGVwMWYuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgIGYuc2hvdyhkdXJhdGlvbjogNTAwKQogICBleFN0ZXAxZy5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgZy5zaG93KGR1cmF0aW9uOiA1MDApCiAgIHdhaXQoMTAwKQogIAogICAvLyA1LWMKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzUtY190aGVfcHJvZHVjdF9ydWxlLm1wMyIpCiAgIHdhaXQoMTAwMCkKICAgZlByaW1lLnNob3coKQogICBnUHJpbWUuc2hvdygpCiAgCiAgIC8vIDUtZAogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvNS1kX3RoZV9wcm9kdWN0X3J1bGUubXAzIikKICAgZXhTdGVwMi5zaG93KCkKICAgLy9mJwogICBleFN0ZXAyZlByaW1lLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAvL2ZseSB2YWx1ZXMgZnJvbSBiZWxvdwogICBleFN0ZXAyRmx5ZlByaW1lLm9wYWNpdHkgPSAxCiAgIGV4U3RlcDJGbHlmUHJpbWUucG9zaXRpb24ubW92ZShWZWMyKHN0YXJ0WCArIDAuNDQsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjA1KSkKICAgLy9nCiAgIGV4U3RlcDJnLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAvL2ZseSB2YWx1ZXMgZnJvbSBiZWxvdwogICBleFN0ZXAyRmx5Zy5vcGFjaXR5ID0gMQogICBleFN0ZXAyRmx5Zy5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC41Miwgc3RhcnRZICsgc3BhY2luZyAqIDEuMDUpKQogICBleFN0ZXBQbHVzLnNob3coZHVyYXRpb246IDUwMCkKICAgLy9mCiAgIGV4U3RlcDJmLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAvL2ZseSB2YWx1ZXMgZnJvbSBiZWxvdwogICBleFN0ZXAyRmx5Zi5vcGFjaXR5ID0gMQogICBleFN0ZXAyRmx5Zi5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC43MSwgc3RhcnRZICsgc3BhY2luZyAqIDEuMDUpKQogICAvL2cnCiAgIGV4U3RlcDJnUHJpbWUuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIC8vZmx5IHZhbHVlcyBmcm9tIGJlbG93CiAgIGV4U3RlcDJGbHlnUHJpbWUub3BhY2l0eSA9IDEKICAgZXhTdGVwMkZseWdQcmltZS5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC44NTUsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjA1KSkKICAKICAgLy8gNS1lCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC81LWVfdGhlX3Byb2R1Y3RfcnVsZS5tcDMiKQogICB3YWl0KDEwMDApCiAgIGV4U3RlcDMuc2hvdygpCiAgIGV4U3RlcDQuc2hvdygpCiAgIHdhaXQoMzAwMCkKICAKIH0KfQ==
+Find
+\dfrac{d}{dx} (x) \cdot \dfrac{d}{dx} (x^2).
+Compute each derivative separately:
+\dfrac{d}{dx} (x) = ?
+and
+\dfrac{d}{dx}
+                  (x^2) = ?
+After finding the derivatives, simplify the given expression by multiplying
+                  the results:
+1 \cdot 2x = ?
+\begin{align*}
+                    \dfrac{d}{dx}(x) &= 1 && \text{First derivative, using the power
+                    rule: } n=1\text{} \\
+                    \dfrac{d}{dx}(x^2) &= 2x && \text{Second derivative, using the power
+                    rule: } n=2\text{} \\
+                    \dfrac{d}{dx}(x) \cdot \dfrac{d}{dx}(x^2) &= 1 \cdot 2x &&
+                    \text{Multiply the two derivatives} \\
+                    &= 2x && \text{Simplify}
+                    \end{align*}
+x
+100
+x
+1
+x
+-1
+We will explore the product rule to
+            rewrite the derivative of a product of two functions.
+The product rule states that the derivative of
+h(x) = f(x)\cdot g(x)
+is
+\underline{\phantom{XXXXXX}}
+.
+f'(x)\cdot g'(x)
+The derivative of a product is not the product of the derivatives.
+                    Rather,
+f(x)
+and
+g(x)
+, along with the derivatives of each, appear
+                    in the product rule.
+f'(x)\cdot g(x) + f(x)\cdot g'(x)
+The product rule ensures the derivative of
+h(x)
+captures how
+                    both
+f(x)
+and
+g(x)
+are changing.
+f'(x)\cdot g'(x) + f(x)\cdot g(x)
+The derivatives of
+f
+and
+g
+should not be multiplied
+                    together.
+The product rule states that
+\dfrac{d}{dx} [f(x) \cdot g(x)] = f'(x) \cdot
+                    g(x) + f(x) \cdot g'(x)
+.
+Using this rule, we can write
+\dfrac{d}{dx} [x^2(x+1)] =
+                  \underline{\phantom{XXXXX}}
+.
+\dfrac{d}{dx}[x^2] \cdot \dfrac{d}{dx}[x+1]
+The derivative of a product is not just the product of the two
+                    derivatives. Instead, the product rule should be used with
+f(x) = x^2
+and
+g(x)
+                    = x+1
+.
+\dfrac{d}{dx}[x^2] \cdot (x+1) - (x^2) \cdot \dfrac{d}{dx}[x+1]
+The product rule involves addition of terms, not subtraction.
+\dfrac{d}{dx}[x^2] \cdot (x+1) + (x^2) \cdot \dfrac{d}{dx}[x+1]
+Using
+f(x) = x^2
+and
+g(x) = x+1
+, the product rule
+                    states:
+\dfrac{d}{dx}[x^2(x+1)] = \underbrace{\dfrac{d}{dx}[x^2]}_{f'(x)}
+                    \cdot \underbrace{(x+1)}_{g(x)} + \underbrace{(x^2)}_{f(x)} \cdot
+                    \underbrace{\dfrac{d}{dx}[x+1]}_{g'(x)}
+We will find
+\dfrac{d}{dx} [(x^2 + 7x)(5x - 3)]
+.
+​Because
+(x^2 + 7x)(5x - 3)
+is a product, we can use the product rule:
+\dfrac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+with
+f(x) = x^2 + 7x
+g(x) = 5x - 3
+The product rule requires finding
+f'(x)
+.
+For
+f(x) = x^2 +
+                  7x
+,
+f'(x) = \underline{\phantom{XXXXX}}
+.
+\dfrac{d}{dx}(x^2 + 7x) = \dfrac{d}{dx}(x^2) + \dfrac{d}{dx}(7x)
+f'(x) =
+Using the power, sum, and constant multiple rules:
+\begin{align*}
+                  f'(x) &= \dfrac{d}{dx} (x^2 + 7x) \\
+                  &= \dfrac{d}{dx}(x^2) + \dfrac{d}{dx}(7x) && \text{Sum rule}\\ &=
+                  2x + 7 && \text{Differentiate}\\
+                  \end{align*}
+-1
+x
+100
+x
+1
+x
+Similarly, for
+g(x) = 5x-3
+​,
+\underline{\phantom{XXXXX}}
+.
+The derivative of a linear function is the function’s slope.
+\dfrac{d}{dx} (5x-3) = \dfrac{d}{dx}(5x) - \dfrac{d}{dx}(3)
+g'(x) =
+Via the power, difference, and constant multiple rules:
+\begin{align*}
+                  g'(x) &= \dfrac{d}{dx}(5x-3) \\
+                  &= \dfrac{d}{dx}(5x) - \dfrac{d}{dx}(3) && \text{Difference rule} \\
+                  &= 5 - 0 && \text{Differentiate}\\
+                  &= 5 && \text{Simplify}
+                  \end{align*}
+What is
+\dfrac{d}{dx} [(x^2 + 7x)(5x - 3)]
+?
+(2x+7)(5x - 3) + (x^2 + 7x)(5)
+Using the product rule:
+\dfrac{d}{dx} [\overbrace{(x^2 + 7x)}^{f(x)}\overbrace{(5x - 3)}^{g(x)}] =
+                      \overbrace{(2x+7)}^{f^\prime(x)} \cdot \overbrace{(5x-3)}^{g(x)} +
+                      \overbrace{(x^2 + 7x)}^{f(x)}\cdot \overbrace{(5)}^{g^\prime (x)}
+2x+7(5x - 3) - (x^2 + 7x)(5)
+When substituting
+f'(x)
+, use parentheses to ensure that all of
+f'(x)
+                    = (2x+7)
+multiplies by
+g(x)
+.
+(2x+7)(5) + (x^2+7x)(5x-3)
+This option incorrectly multiplies both
+f'(x)
+with
+g'(x)
+and
+f(x)
+with
+g(x)
+. According to the product rule,
+\dfrac{d}{dx}[f(x)
+                    \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+.
+(2x+7)(5)
+The product rule includes both the original functions and the
+                    derivatives, rather than just the product of the two derivatives. According to
+                    the product rule, the derivative of the product of
+f(x)
+and
+g(x)
+is
+\dfrac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x).
+We will investigate when the product rule is the most efficient strategy, then find a
+              derivative using the product rule.
+The product rule is the most efficient strategy for finding which
+                derivative?
+\dfrac{d}{dx}[3x^2(5x^3 +2x^2 - 1)]
+Distributing the
+3x^2
+before computing the derivative is more
+                    efficient than using the product rule. Distributing yields
+\dfrac{d}{dx}[3x^2(5x^3
+                    +2x^2 - 1)] = \dfrac{d}{dx}(15x^5 +6x^4 - 3x^2),
+which requires only the
+                    sum/difference, constant, and power rules.
+\dfrac{d}{dx}[3(5x^3 +2x^2 - 1)]
+The constant multiple rule is more efficient:
+\dfrac{d}{dx}[3(5x^3
+                    +2x^2 - 1)] = 3\dfrac{d}{dx}(5x^3 +2x^2 - 1)
+.
+\dfrac{d}{dx}[(3x^2 - 7x + 5)(5x^3 +2x^2 - 1)]
+This derivative can be computed using the product rule with
+f(x)
+                      = 3x^2 - 7x + 5
+and
+g(x) = 5x^3 +2x^2 - 1
+.
+Without the product
+                    rule, we would need to distribute before computing the derivative. The result
+                    would be a long expression:
+( 3x^2 - 7x + 5)(5x^3 +2x^2 - 1)
+= 15x^5 + 6x^4 -3x^2 - 35x^4-14x^3 + 7x + 25x^3 + 10x^2 - 5
+The product rule is an efficient strategy for finding
+\dfrac{d}{dx}[(3x^2
+                - 7x + 5)(5x^3 +2x^2 - 1)]
+.
+This function is a product with:
+f(x) = 3x^2 - 7x + 5
+g(x) = 5x^3 +2x^2 - 1
+To
+                use the product rule, we first find
+f'(x) = \underline{\phantom{XXXXX}}.
+\dfrac{d}{dx} (3x^2 - 7x + 5) = \dfrac{d}{dx}(3x^2) - \dfrac{d}{dx}(7x) +
+                    \dfrac{d}{dx}(5)
+\begin{align*}
+                  f'(x) &= \dfrac{d}{dx} (3x^2 - 7x + 5) \\
+                  &= \dfrac{d}{dx}(3x^2) - \dfrac{d}{dx}(7x) + \dfrac{d}{dx}(5) &&
+                  \text{Sum and difference rules}\\
+                  &= 6x - 7 + 0 && \text{Differentiate} \\
+                  &= 6x-7 \\
+                  \end{align*}
+f'(x) =
+100
+x
+1
+x
+-1
+x
+​Next, for
+g(x) = 5x^3 +2x^2 - 1
+​​​​​​, we find
+g'(x)=
+                \underline{\phantom{XXXXX}}.
+\dfrac{d}{dx} (5x^3 +2x^2 - 1) = \dfrac{d}{dx}(5x^3) + \dfrac{d}{dx}(2x^2) -
+                    \dfrac{d}{dx}(1)
+\begin{align*}
+                  g'(x) &= \dfrac{d}{dx} (5x^3 +2x^2 - 1) \\
+                  &= \dfrac{d}{dx}(5x^3) + \dfrac{d}{dx}(2x^2) - \dfrac{d}{dx}(1) &&
+                  \text{Sum and difference rules}\\
+                  &= 15x^2 + 4x - 0 && \text{Differentiate} \\
+                  &= 15x^2 + 4x \\
+                  \end{align*}
+g'(x) =
+100
+x
+1
+x
+-1
+x
+We found:
+f(x) = 3x^2 - 7x + 5
+f'(x) = 6x-7
+g(x) = 5x^3+2x^2 -1
+g'(x) = 15x^2 + 4x
+Using the product rule,
+\dfrac{d}{dx}[(3x^2 - 7x + 5)(5x^3 +2x^2 - 1)] =
+                  \underline{\phantom{XXXXX}} .
+​​
+(6x-7)(15x^2 + 4x)
+The derivative of a product is not merely the product of the
+                    derivatives. Instead, the product rule states that
+\dfrac{d}{dx}[f(x) \cdot
+                    g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+.
+(6x-7)(5x^3 +2x^2 - 1) + (3x^2 - 7x + 5)(15x^2 + 4x)
+The product rule states
+\dfrac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x)
+                        + f(x) \cdot g'(x)
+. So
+\dfrac{d}{dx} [(3x^2 - 7x + 5)(5x^3 +2x^2 -
+                        1)]
+                        = \underbrace{(6x-7)}_{f'(x)} \cdot \underbrace{(5x^3 +2x^2 - 1)}_{g(x)} +
+                      \underbrace{(3x^2 - 7x + 5)}_{f(x)} \cdot \underbrace{(15x^2 + 4x)}_{g'(x)}
+(6x-7)(15x^2 + 4x) + (3x^2 - 7x + 5)(5x^3 +2x^2 - 1)
+The product rule states that
+\dfrac{d}{dx}[f(x) \cdot g(x)] =
+                      f'(x) \cdot g(x) + f(x) \cdot g'(x)
+. In this option,
+g'(x)
+and
+g(x)
+are not in the correct places.
+(6x-7)(3x^2 - 7x + 5) + (5x^3 +2x^2 - 1)(15x^2 + 4x)
+The product rule states that
+\dfrac{d}{dx}[f(x) \cdot g(x)] =
+                      f'(x) \cdot g(x) + f(x) \cdot g'(x)
+. In this option,
+f(x)
+and
+g(x)
+are not in the correct places.
+We will find
+\dfrac{d}{dx}[(2x^3 - 9x)(4x^3 +x^2)].
+​Because
+\dfrac{d}{dx}[(2x^3 - 9x)(4x^3 +x^2 )]
+​​ ​is a product, we can use
+              the product rule with:
+f(x) =2x^3 - 9x
+​g(x) = 4x^3 +x^2
+The product rule requires finding
+f'(x)
+.
+For
+f(x) = 2x^3 - 9x
+,
+\,f'(x) = \underline{\phantom{XXXXX}}
+.
+\dfrac{d}{dx} (2x^3-9x) = \dfrac{d}{dx}(2x^3)-\dfrac{d}{dx}(9x)
+\begin{align*}
+                  \dfrac{d}{dx} (2x^3-9x) &= \dfrac{d}{dx}(2x^3) - \dfrac{d}{dx}(9x)
+                  &&\text{Difference rule}\\
+                  &= 6x^2-9 && \text{Differentiate}\\
+                  \end{align*}
+f'(x) =
+100
+x
+1
+x
+-1
+x
+Similarly, for
+g(x) = 4x^3+x^2
+,
+g'(x) = \underline{\phantom{XXXXX}}
+.
+\dfrac{d}{dx}(4x^3+x^2) = \dfrac{d}{dx}(4x^3) + \dfrac{d}{dx}(x^2)
+Via the sum rule:
+\begin{align*}
+                  \dfrac{d}{dx}(4x^3+x^2)
+                  &= \dfrac{d}{dx}(4x^3) + \dfrac{d}{dx}(x^2) && \text{Sum rule} \\
+                  &= 12x^2 + 2x && \text{Differentiate} \\
+                  \end{align*}
+g'(x) =
+100
+x
+1
+x
+-1
+x
+We found:
+f(x) = 2x^3-9x
+f'(x) = 6x^2-9
+g(x) = 4x^3+x^2
+g'(x) = 12x^2 + 2x
+Using the product rule,
+\dfrac{d}{dx}
+                [(2x^3-9x)(4x^3+x^2)] =
+                    \underline{\phantom{XXXXX}}
+.
+The product rule says the derivative is
+f'(x) \cdot g(x) + f(x) \cdot g'(x)
+.
+                  Substitute those four functions to find the derivative.
+The product rule states that
+\dfrac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x)
+                  + f(x) \cdot g'(x).
+​​​​​​​​​​​​​​ So
+\dfrac{d}{dx} [(2x^3-9x)(4x^3+x^2)] = \underbrace{(6x^2-9)}_{f'(x)}\cdot
+                  \underbrace{(4x^3+x^2)}_{g(x)} + \underbrace{(2x^3-9x)}_{f(x)} \cdot
+                  \underbrace{(12x^2 + 2x)}_{g'(x)}
+100
+x
+1
+x
+-1
+x
+Lesson Summary
+The product rule is used to compute the derivative of the product of two
+                differentiable functions.
+If
+f(x)
+and
+g(x)
+are differentiable functions, the derivative is
+                given by
+\dfrac{d}{dx} [f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x).
+​
+The product rule is often the most efficient strategy to take the derivative of
+                a product that involves long polynomials or non-polynomial functions.
+The quotient rule
+Some functions are formed by dividing one function by another, such as
+q(x) =
+              \frac{x^2 }{2x+1}
+. The quotient rule is used to find the derivative of these
+              functions. This lesson will focus on applying the quotient rule to polynomial
+              functions, preparing us for handling more complex problems later.
+Quotient rule
+If
+f(x)
+and
+g(x)
+are
+            differentiable functions and
+g(x) \neq 0
+, then
+\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right)
+            = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+Note that
+\dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+can be written as
+\dfrac{f'g-fg'}{g^2}
+.
+While the numerator of the quotient rule looks similar to the product rule, the
+              quotient rule has a
+-
+between the two terms in the numerator, not a
++.
+The quotient rule
+Ly8gQ1REOiBMaXpiZXRoCi8vIExVOiBBcmNoaWUgMTAvMTUvMjAyNSAoZGlhcnkgcmV2aWV3IGVkaXRzKQoKCkNhbnZhcyh3aW5kb3dzOiAyKQpTY2VuZSgpIHsKIEluaXQoCiAgICAgICAvL2NvbG9yczoKICAgICAgIGZDb2xvcjogQ29sb3IoMCwgNzgsIDIwNCkgLy9kYXJrIGJsdWUgQ29sb3IoMCwgNzgsIDIwNCkKICAgICAgIGZQcmltZUNvbG9yOiBDb2xvci5ibHVlCiAgICAgICBnQ29sb3I6IENvbG9yKDE0OCwgNTQsIDApIC8vZGFyayBvcmFuZ2UgQ29sb3IoMTQ4LCA1NCwgMCkKICAgICAgIGdQcmltZUNvbG9yOiBDb2xvci5vcmFuZ2UKCgogICAgICAgdzBUaXRsZTogVGV4dCgiVGhlIHF1b3RpZW50IHJ1bGUiLCBwb3NpdGlvbjogVmVjMigwLjMsIDApKQogICAgICAgcmlnaHREaXZpZGVyOiBSdWxlKFZlYzIoMSwgMCksIFZlYzIoMSwgMSkpCiAgICAgICBib3R0b21EaXZpZGVyOiBSdWxlKFZlYzIoMCwgMSksIFZlYzIoMSwgMSkpCiAgICAgIAogICAgICAgc3RhcnRYOiAwCiAgICAgICBzdGFydFk6IDAuMDY1CiAgICAgICBzcGFjaW5nOiAwLjExCiAgICAgICAvLyBcZGZyYWN7ZH17ZHh9IFxsZWZ0W1xkZnJhY3tmKHgpfXtnKHgpfVxyaWdodF0gPSQiLCByIiAkXGRmcmFje2YnKHgpZyh4KSAtIGYoeClnJyh4KX17W2coeCldXjJ9JAogICAgICAgcXJGb3JtdWxhOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkXGRmcmFje2R9e2R4fSQiKSwgVGV4dCgiJFxsZWZ0W1xkZnJhY3tccGhhbnRvbXtmKHgpfX17XHBoYW50b217Zyh4KX19XHJpZ2h0XSA9JCIpLCAgVGV4dCgiJFxkZnJhY3tccGhhbnRvbXtmJyh4KWcoeCl9IFw6LVw6IFxwaGFudG9te2YoeClnJyh4KX19e1tccGhhbnRvbXtnKHgpfV1eMn0kIiwgY29sb3I6IENvbG9yLnByaW1hcnkpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4xMjUsIHN0YXJ0WSkpCiAgICAgICBxck51bTogVGV4dCgiJGYoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnksIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuMiwgc3RhcnRZICogMC44NSkpCiAgICAgICBxckRlbm9tOiBUZXh0KCIkZyh4KSQiLCBjb2xvcjogQ29sb3IucHJpbWFyeSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4yMDE1LCBzdGFydFkgKiAxLjU5KSkKICAgICAgIHFyZjogVGV4dCgiJGYoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnksIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNTQ1LCBzdGFydFkgKiAwLjgxNSkpCiAgICAgICBxcmc6IFRleHQoIiRnKHgpJCIsIGNvbG9yOiBDb2xvci5wcmltYXJ5LCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjQyNywgc3RhcnRZICogMC44MTUpKQogICAgICAgcXJmUHJpbWU6IFRleHQoIiRmJyh4KSQiLCBjb2xvcjogQ29sb3IucHJpbWFyeSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4zNDUsIHN0YXJ0WSAqIDAuODE1KSkKICAgICAgIHFyZ1ByaW1lOiBUZXh0KCIkZycoeCkkIiwgY29sb3I6IENvbG9yLnByaW1hcnksIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNjIxLCBzdGFydFkgKiAwLjgxNSkpCiAgICAgICBxcmdTcXVhcmVkOiBUZXh0KCIkZyh4KSQiLCBjb2xvcjogQ29sb3IucHJpbWFyeSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC40OCwgc3RhcnRZICogMS41OSkpCiAgICAgICBkaXZpZGVyMTogUnVsZShWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjA1KSwgVmVjMigxLHN0YXJ0WSArIHNwYWNpbmcgKiAxLjA1KSkKCgogICAgICAgaW5zdHJ1Y3Rpb25zOiBUZXh0KCJGaW5kICRcZGZyYWN7ZH17ZHh9IFxsZWZ0IFsgXGRmcmFje3heM317eH1ccmlnaHQgXSQuIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogMS4xKSkKICAgICAgIGRpdmlkZXIyOiBSdWxlKFZlYzIoMCwgc3RhcnRZICsgc3BhY2luZyAqIDIpLCBWZWMyKDEsc3RhcnRZICsgc3BhY2luZyAqIDIpKQogICAgICAKICAgICAgIHNpbXBsaWZ5OiBUZXh0KCJTaW1wbGlmeSBmaXJzdDoiLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAyKSkKICAgICAgIHNpbXBsaWZ5U3RlcDE6IFRleHQoY29udGVudDogW1RleHQoIiRcZGZyYWN7ZH17ZHh9IFxsZWZ0ICggXGRmcmFje3heM317eH0gXHJpZ2h0ICkgPVw7JCIpLCBUZXh0KCIkXGRmcmFje2R9e2R4fVxsZWZ0KCQiKSwgVGV4dCgiJHgkIiksIFRleHQoIiReezMgLSAxfSQiKSwgVGV4dCgiJCkkIildLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjUpKQogICAgICAgc2ltcGxpZnlTdGVwMkZseTogVGV4dCgiJHheMiQiLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjI2NzUsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjYzKSkKICAgICAgIHNpbXBsaWZ5U3RlcDI6IFRleHQoY29udGVudDogW1RleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9IFxsZWZ0ICggXGRmcmFje3heM317eH0gXHJpZ2h0ICl9XDs9XDskIiksIFRleHQoIiQkIiksIFRleHQoIiR4JCIpLCBUZXh0KCIkXnsyfSQiKV0sIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDMuNSkpCiAgICAgICBzaW1wbGlmeVN0ZXAyRmx5MjogVGV4dCgiJDIkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4yMzI1LCBzdGFydFkgKyBzcGFjaW5nICogMy42MzUpLCBmb250U2l6ZTogMTMpCiAgICAgICBtaWREaXZpZGVyOiBSdWxlKFZlYzIoMC41LCBzdGFydFkgKyBzcGFjaW5nICogMiksIFZlYzIoMC41LHN0YXJ0WSArIHNwYWNpbmcgKiA2KSkKCgogICAgICAgZGlzdDogVGV4dCgiRGlzdHJpYnV0aXZlIGFwcHJvYWNoOiIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDIpKQogICAgICAgZGlzdFN0ZXAxOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkXGRmcmFje2R9e2R4fVwsJCIpLCBUZXh0KCIkXGxlZnQgKCBcZGZyYWN7eF4zfXt4fSBccmlnaHQgKSQiKSwgVGV4dCgiJFw7XHN0YWNrcmVsez99ez19XDskIiksIFRleHQoIiRcZGZyYWN7XHBoYW50b217XGRmcmFje2R9e2R4fXheM319e1xwaGFudG9te1xkZnJhY3tkfXtkeH14fX0kIildLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjUpKQogICAgICAgZGlzdFN0ZXAxRmx5ZHgxOiBUZXh0KCIkXGRmcmFje2R9e2R4fSQiLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjgyNSkpCiAgICAgICBkaXN0U3RlcDFGbHlkeDI6IFRleHQoIiRcZGZyYWN7ZH17ZHh9JCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDIuODI1KSkKICAgICAgIGRpc3RTdGVwMUZseXhDdWJlZDogVGV4dCgiJCh4XjMpJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNTksIHN0YXJ0WSArIHNwYWNpbmcgKiAyLjcxKSkKICAgICAgIGRpc3RTdGVwMUZseXg6IFRleHQoIiQoeCkkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC41OTc1LCBzdGFydFkgKyBzcGFjaW5nICogMy4wNzUpKQogICAgICAgZGlzdFN0ZXAyOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkXHBoYW50b217XGRmcmFje2R9e2R4fSAoeCBcY2RvdCB4XjIgKX0kIiksIFRleHQoIiRcO1xzdGFja3JlbHs/fXs9fVw7JCIpLCBUZXh0KCIkXGRmcmFjezN4XjJ9ezF9JCIpXSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC41LCBzdGFydFkgKyBzcGFjaW5nICogNCkpCiAgICAgICBkaXN0U3RlcDM6IFRleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9ICh4IFxjZG90IHheMiApXDt9IFxzdGFja3JlbHs/fXs9fSAzeF4yJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDUpKQogICAgICAgY3Jvc3NMZWZ0OiBSdWxlKFZlYzIoc3RhcnRYICsgMC41LCBzdGFydFkgKyBzcGFjaW5nICogMiksIGNvbG9yOiBDb2xvci5yZWQpCiAgICAgICBjcm9zc1JpZ2h0OiBSdWxlKFZlYzIoc3RhcnRYICsgMSwgc3RhcnRZICsgc3BhY2luZyAqIDIpLCBjb2xvcjogQ29sb3IucmVkKQogICAgICAgZGl2aWRlcjM6IFJ1bGUoVmVjMigwLCBzdGFydFkgKyBzcGFjaW5nICogNiksIFZlYzIoMSxzdGFydFkgKyBzcGFjaW5nICogNikpCgoKICAgICAgIHFyOiBUZXh0KCJRdW90aWVudCBydWxlIGFwcHJvYWNoOiIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDYpKQogICAgICAgcXJTdGVwMTogVGV4dCgiJFxkZnJhY3tkfXtkeH0gXGxlZnQgKCBcZGZyYWN7XHBoYW50b217eF4zfX17XHBoYW50b20geH0gXHJpZ2h0ICkgPSBcZGZyYWN7IFxwaGFudG9te1xsZWZ0ICggXGRmcmFje2R9e2R4fSh4XjMpIFxyaWdodCApfSBcOlxjZG90XDogXHBoYW50b20gIHggLSBccGhhbnRvbXt4XjN9IFw6XGNkb3RcOiBccGhhbnRvbXtcbGVmdCAoIFxkZnJhY3tkfXtkeH0oeCkgXHJpZ2h0ICl9fXtccGhhbnRvbSB4XjJ9JCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDYuNSkpCiAgICAgICBxclN0ZXAxTnVtOiBUZXh0KCIkeF4zJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuMDksIHN0YXJ0WSArIHNwYWNpbmcgKiA2LjcyKSwgY29sb3I6IGZDb2xvcikKICAgICAgIHFyU3RlcDFEZW5vbTogVGV4dCgiJHgkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4wOTc1LCBzdGFydFkgKyBzcGFjaW5nICogNy4xNSksIGNvbG9yOiBnQ29sb3IpCiAgICAgICBxclN0ZXAxZjogVGV4dCgiJHheMyQiLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjQ4LCBzdGFydFkgKyBzcGFjaW5nICogNi41MzUpLCBjb2xvcjogZkNvbG9yKQogICAgICAgcXJTdGVwMWc6IFRleHQoIiR4JCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNDE1LCBzdGFydFkgKyBzcGFjaW5nICogNi41MzUpLCBjb2xvcjogZ0NvbG9yKQogICAgICAgcXJTdGVwMWZQcmltZTogVGV4dCgiJFxsZWZ0ICggXGRmcmFje2R9e2R4fSh4XjMpIFxyaWdodCApJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuMjE1LCBzdGFydFkgKyBzcGFjaW5nICogNi41KSwgY29sb3I6IGZQcmltZUNvbG9yKQogICAgICAgcXJTdGVwMWdQcmltZTogVGV4dCgiJFxsZWZ0KFxkZnJhY3tkfXtkeH0oeCkgXHJpZ2h0ICkkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC41NSwgc3RhcnRZICsgc3BhY2luZyAqIDYuNSksIGNvbG9yOiBnUHJpbWVDb2xvcikKICAgICAgIHFyU3RlcDFnU3F1YXJlZDogVGV4dCgiJHgkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC40NCwgc3RhcnRZICsgc3BhY2luZyAqIDcuMTUpLCBjb2xvcjogZ0NvbG9yKQogICAgICAgcXJTdGVwMjogVGV4dCgiJFxwaGFudG9te1xkZnJhY3tkfXtkeH0gXGxlZnQgKCBcZGZyYWN7eF4zfXt4fSBccmlnaHQgKX1cOz0gIFxkZnJhY3tccGhhbnRvbXszeF4yfSBcOlxjZG90XDogXHBoYW50b20geCAtIFxwaGFudG9te3heM30gXDpcY2RvdFw6IFxwaGFudG9tIDF9e1xwaGFudG9tIHheMn0kIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNy41KSkKICAgICAgIHFyU3RlcDJmOiBUZXh0KCIkeF4zJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuMzY1OCwgc3RhcnRZICsgc3BhY2luZyAqIDcuNDY1KSwgY29sb3I6IGZDb2xvcikKICAgICAgIHFyU3RlcDJnOiBUZXh0KCIkeCQiLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjMsIHN0YXJ0WSArIHNwYWNpbmcgKiA3LjQ2NSksIGNvbG9yOiBnQ29sb3IpCiAgICAgICBxclN0ZXAyZlByaW1lOiBUZXh0KCIkM3heMiQiLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjIxNSwgc3RhcnRZICsgc3BhY2luZyAqIDcuNDY1KSwgY29sb3I6IGZQcmltZUNvbG9yKQogICAgICAgcXJTdGVwMmdQcmltZTogVGV4dCgiJDEkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC40MzI1LCBzdGFydFkgKyBzcGFjaW5nICogNy40NjUpLCBjb2xvcjogZ1ByaW1lQ29sb3IpCiAgICAgICBxclN0ZXAyZ1NxdWFyZWQ6IFRleHQoIiR4JCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuMzE1LCBzdGFydFkgKyBzcGFjaW5nICogNy44MTUpLCBjb2xvcjogZ0NvbG9yKQogICAgICAgcXJTdGVwMzogVGV4dCgiJFxwaGFudG9te1xkZnJhY3tkfXtkeH0gXGxlZnQgKCBcZGZyYWN7eF4zfXt4fSBccmlnaHQgKSA9ICBcZGZyYWN7M3heMiBcY2RvdCB4IC0geF4zIFxjZG90IDF9e3heMn1cO30gPSAgXGRmcmFjezJ4XjN9e3heMn0kIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNy41KSkKICAgICAgIHFyU3RlcDQ6IFRleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9IFxsZWZ0ICggXGRmcmFje3heM317eH0gXHJpZ2h0ICkgPSAgXGRmcmFjezN4XjIgXGNkb3QgeCAtIHheMyBcY2RvdCAxfXt4XjJ9ID0gIFxkZnJhY3syeF4zfXt4XjJ9XDt9ID0gMngkIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNy41KSkKICAgICAgIGNoZWNrbWFyazogSW1hZ2Uoc291cmNlOiAiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0L2NoZWNrbWFyay5wbmciLCBzY2FsZTogMC4yNSwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC43LCBzdGFydFkgKyBzcGFjaW5nICogNy42KSkKCgogICAgICAgdzFUaXRsZTogVGV4dCgiRXhhbXBsZSIsIHBvc2l0aW9uOiBWZWMyKDAuNCwgMCksIHdpbmRvdzogMSkKCgogICAgICAgZXhJbnN0cnVjdGlvbnM6IFRleHQoY29udGVudDogW1RleHQoIkZpbmQiKSwgVGV4dCgiJFw7XGRmcmFje2R9e2R4fVxsZWZ0WyBcZGZyYWN7eF4yfXsyeCArIDF9XHJpZ2h0XSQuIildLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSksIHdpbmRvdzogMSkKICAgICAgCiAgICAgICBleFN0ZXAxOiBUZXh0KCIkXGRmcmFje2R9e2R4fVxsZWZ0WyBcZGZyYWN7XHBoYW50b217eF4yfX17XHBoYW50b217MnggKyAxfX1ccmlnaHRdJCIsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDEuNSksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDFmOiBUZXh0KCIkXG92ZXJicmFjZXt4XjJ9XntmKHgpfSQiLCBjb2xvcjogZkNvbG9yLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjEwNSwgc3RhcnRZICsgc3BhY2luZyAqIDEuMDI3KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMWc6IFRleHQoIiRcdW5kZXJicmFjZXsyeCArIDF9X3tmKHgpfX0kIiwgY29sb3I6IGdDb2xvciwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4wNzY1LCBzdGFydFkgKyBzcGFjaW5nICogMS44MjUpLCB3aW5kb3c6IDEpCiAgICAgIAogICAgICAgZXhTdGVwMjogVGV4dCgiJFxwaGFudG9te1xkZnJhY3tkfXtkeH1cbGVmdFsgXGRmcmFje3heMn17MnggKyAxfVxyaWdodF19IFw7ID0gXGRmcmFje1xwaGFudG9te1xvdmVyYnJhY2V7Mnh9fShccGhhbnRvbXtcb3ZlcmJyYWNlezJ4ICsgMX19KSAtIChccGhhbnRvbXtcb3ZlcmJyYWNle3heMn19KShccGhhbnRvbXtcb3ZlcmJyYWNlezJ9fSl9eyhccGhhbnRvbXtcdW5kZXJicmFjZXsyeCArIDF9X3tnKHgpfX0pXjJ9IiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogMS4yNSksIHdpbmRvdzogMSkKICAgICAgIC8vIGV4U3RlcDI6IFRleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9XGxlZnRbIFxkZnJhY3t4XjJ9ezJ4ICsgMX1ccmlnaHRdfSBcOyA9IFxkZnJhY3tcb3ZlcmJyYWNlezJ4fVxvdmVyYnJhY2V7KDJ4ICsgMSl9IC0gXG92ZXJicmFjZXsoeF4yKX1cb3ZlcmJyYWNleygyKX19eyhcdW5kZXJicmFjZXsyeCArIDF9X3tnKHgpfSleMn0iLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjI1KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMmZQcmltZTogVGV4dCgiJFxvdmVyYnJhY2V7XHBoYW50b217Mnh9fV57ZicoeCl9XHBoYW50b217KDJ4ICsgMikgLSAoeF4yKSgyKX0kIiwgY29sb3I6IGZQcmltZUNvbG9yLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjI3LCBzdGFydFkgKyBzcGFjaW5nICogMS4wMSksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDJnOiBUZXh0KCIkXHBoYW50b217XG92ZXJicmFjZXsyeH1ee2YnKHgpfX1cO1w6XCxcb3ZlcmJyYWNle1xwaGFudG9tezJ4ICsgMX19XntnKHgpfSBccGhhbnRvbXstICh4XjIpKDIpfSQiLCBjb2xvcjogZ0NvbG9yLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjI1OTUsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjAwNSksIHdpbmRvdzogMSkKICAgICAgIGV4U3RlcDJmOiBUZXh0KCIkXHBoYW50b217XG92ZXJicmFjZXsyeH1ee2YnKHgpfVw7XDpcLFxvdmVyYnJhY2V7MnggKyAxfV57Zyh4KX0gLSBcOn1cOlwsXHBoYW50b20gKFxvdmVyYnJhY2V7XHBoYW50b217eF4yfX1ee2YoeCl9XHBoYW50b20gKVxwaGFudG9teygyKX0kIiwgY29sb3I6IGZDb2xvciwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4yNTk1LCBzdGFydFkgKyBzcGFjaW5nICogMC45NzUpLCB3aW5kb3c6IDEpCiAgICAgICBleFN0ZXAyZ1ByaW1lOiBUZXh0KCIkXHBoYW50b217XG92ZXJicmFjZXsyeH1ee2YnKHgpfVw7XDpcLFxvdmVyYnJhY2V7MnggKyAxfV57Zyh4KX0gLSBcOlwsKFxvdmVyYnJhY2V7eF4yfV57Zih4KX0pfVxwaGFudG9tIChcb3ZlcmJyYWNle1xwaGFudG9tIDJ9XntnJyh4KX1ccGhhbnRvbSApJCIsIGNvbG9yOiBnUHJpbWVDb2xvciwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4yNTk1LCBzdGFydFkgKyBzcGFjaW5nICogMC45NzUpLCB3aW5kb3c6IDEpCiAgICAgICBleFN0ZXAyZ1NxdWFyZWQ6IFRleHQoIiRcdW5kZXJicmFjZXtccGhhbnRvbXsyeCArIDF9fV97Zyh4KX0kIiwgY29sb3I6IGdDb2xvciwgcG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC40Miwgc3RhcnRZICsgc3BhY2luZyAqIDEuODUpLCB3aW5kb3c6IDEpCgoKICAgICAgIGV4U3RlcDM6IFRleHQoIiRccGhhbnRvbXtcZGZyYWN7ZH17ZHh9XGxlZnRbIFxkZnJhY3t4XjJ9ezJ4ICsgMX1ccmlnaHRdfSBcOyA9IFxkZnJhY3s0eF4yICsgMnggLSAyeF4yfXsoMnggKyAxKV4yfSQiLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAzKSwgd2luZG93OiAxKQoKCiAgICAgICBleFN0ZXA0OiBUZXh0KCIkXHBoYW50b217XGRmcmFje2R9e2R4fVxsZWZ0WyBcZGZyYWN7eF4yfXsyeCArIDF9XHJpZ2h0XX0gXDt9ID0gXGRmcmFjezJ4XjIgKyAyeH17KDJ4ICsgMSleMn0kIiwgcG9zaXRpb246IFZlYzIoc3RhcnRYLCBzdGFydFkgKyBzcGFjaW5nICogNC4yNSksIHdpbmRvdzogMSkKICAgICAgIGV4RGl2aWRlcjogUnVsZShWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgVmVjMigxLHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgd2luZG93OiAxKQoKCiAgICAgICBmOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkZih4KSA9XDskIiwgY29sb3I6IGZDb2xvciksIFRleHQoIiR4XjIkIiwgY29sb3I6IGZDb2xvcildLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjAwNSwgc3RhcnRZICsgc3BhY2luZyAqIDYpLCB3aW5kb3c6IDEpCiAgICAgICBleFN0ZXAyRmx5ZjogZi5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC4xMywgc3RhcnRZICsgc3BhY2luZyAqIDYpLCB3aW5kb3c6IDEpCiAgICAgICBmUHJpbWU6IFRleHQoY29udGVudDogW1RleHQoIiRmJyh4KSA9XDskIiwgY29sb3I6IGZQcmltZUNvbG9yKSwgVGV4dCgiJDJ4JCIsIGNvbG9yOiBmUHJpbWVDb2xvcildLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiA3KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMkZseWZQcmltZTogZlByaW1lLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjEzNSwgc3RhcnRZICsgc3BhY2luZyAqIDcpLCB3aW5kb3c6IDEpCiAgICAgICBnOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkZyh4KSA9XDskIiwgY29sb3I6IGdDb2xvciksIFRleHQoIiQyeCArIDEkIiwgY29sb3I6IGdDb2xvcildLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjUwNSwgc3RhcnRZICsgc3BhY2luZyAqIDYpLCB3aW5kb3c6IDEpCiAgICAgICBleFN0ZXAyRmx5ZzogZy5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoc3RhcnRYICsgMC42Mywgc3RhcnRZICsgc3BhY2luZyAqIDYpLCB3aW5kb3c6IDEpCiAgICAgICBleFN0ZXAyRmx5Z1NxdWFyZWQ6IGcuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIDAuNjMsIHN0YXJ0WSArIHNwYWNpbmcgKiA2KSwgd2luZG93OiAxKQogICAgICAgZ1ByaW1lOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkZycoeCkgPVw7JCIsIGNvbG9yOiBnUHJpbWVDb2xvciksIFRleHQoIiQyJCIsIGNvbG9yOiBnUHJpbWVDb2xvcildLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjUsIHN0YXJ0WSArIHNwYWNpbmcgKiA3KSwgd2luZG93OiAxKQogICAgICAgZXhTdGVwMkZseWdQcmltZTogZ1ByaW1lLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMihzdGFydFggKyAwLjYzNSwgc3RhcnRZICsgc3BhY2luZyAqIDcpLCB3aW5kb3c6IDEpCiApIHsKICAgICAgIHFyRm9ybXVsYS5oaWRlKCkKICAgICAgIHFyTnVtLmhpZGUoKQogICAgICAgcXJEZW5vbS5oaWRlKCkKICAgICAgIHFyZi5oaWRlKCkKICAgICAgIHFyZy5oaWRlKCkKICAgICAgIHFyZlByaW1lLmhpZGUoKQogICAgICAgcXJnUHJpbWUuaGlkZSgpCiAgICAgICBxcmdTcXVhcmVkLmhpZGUoKQogICAgICAgZGl2aWRlcjEuaGlkZSgpCiAgICAgICBpbnN0cnVjdGlvbnMuaGlkZSgpCiAgICAgICBkaXZpZGVyMi5oaWRlKCkKICAgICAgIHNpbXBsaWZ5LmhpZGUoKQogICAgICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzBdLmhpZGUoKQogICAgICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzFdLmhpZGUoKQogICAgICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzJdLmhpZGUoKQogICAgICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzNdLmhpZGUoKQogICAgICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzRdLmhpZGUoKQogICAgICAgc2ltcGxpZnlTdGVwMkZseS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFswXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFsxXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFsyXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFszXS5oaWRlKCkKICAgICAgIHNpbXBsaWZ5U3RlcDJGbHkyLmhpZGUoKQogICAgICAgbWlkRGl2aWRlci5oaWRlKCkKICAgICAgIGRpc3QuaGlkZSgpCiAgICAgICBkaXN0U3RlcDEuY29udGVudFswXS5oaWRlKCkKICAgICAgIGRpc3RTdGVwMS5jb250ZW50WzFdLmhpZGUoKQogICAgICAgZGlzdFN0ZXAxLmNvbnRlbnRbMl0uaGlkZSgpCiAgICAgICBkaXN0U3RlcDEuY29udGVudFszXS5oaWRlKCkKICAgICAgIGRpc3RTdGVwMUZseWR4MS5oaWRlKCkKICAgICAgIGRpc3RTdGVwMUZseWR4Mi5oaWRlKCkKICAgICAgIGRpc3RTdGVwMUZseXhDdWJlZC5oaWRlKCkKICAgICAgIGRpc3RTdGVwMUZseXguaGlkZSgpCiAgICAgICAvLyBkaXN0U3RlcDIuY29udGVudFswXS5oaWRlKCkKICAgICAgIC8vIGRpc3RTdGVwMi5jb250ZW50WzFdLmhpZGUoKQogICAgICAgLy8gZGlzdFN0ZXAyLmNvbnRlbnRbMl0uaGlkZSgpCiAgICAgICBkaXN0U3RlcDIuaGlkZSgpCiAgICAgICBkaXN0U3RlcDMuaGlkZSgpCiAgICAgICBkaXZpZGVyMy5oaWRlKCkKICAgICAgIHFyLmhpZGUoKQogICAgICAgcXJTdGVwMS5oaWRlKCkKICAgICAgIHFyU3RlcDFOdW0uaGlkZSgpCiAgICAgICBxclN0ZXAxRGVub20uaGlkZSgpCiAgICAgICBxclN0ZXAxZi5oaWRlKCkKICAgICAgIHFyU3RlcDFnLmhpZGUoKQogICAgICAgcXJTdGVwMWZQcmltZS5oaWRlKCkKICAgICAgIHFyU3RlcDFnUHJpbWUuaGlkZSgpCiAgICAgICBxclN0ZXAxZ1NxdWFyZWQuaGlkZSgpCiAgICAgICBxclN0ZXAyLmhpZGUoKQogICAgICAgcXJTdGVwMmYuaGlkZSgpCiAgICAgICBxclN0ZXAyZy5oaWRlKCkKICAgICAgIHFyU3RlcDJmUHJpbWUuaGlkZSgpCiAgICAgICBxclN0ZXAyZ1ByaW1lLmhpZGUoKQogICAgICAgcXJTdGVwMmdTcXVhcmVkLmhpZGUoKQogICAgICAgcXJTdGVwMy5oaWRlKCkKICAgICAgIHFyU3RlcDQuaGlkZSgpCiAgICAgICBjaGVja21hcmsuaGlkZSgpCiAgICAgICBleEluc3RydWN0aW9ucy5oaWRlKCkKICAgICAgIGV4U3RlcDEuaGlkZSgpCiAgICAgICBleFN0ZXAxZi5oaWRlKCkKICAgICAgIGV4U3RlcDFnLmhpZGUoKQogICAgICAgZXhTdGVwMi5oaWRlKCkKICAgICAgIGV4U3RlcDJmUHJpbWUuaGlkZSgpCiAgICAgICBleFN0ZXAyZy5oaWRlKCkKICAgICAgIGV4U3RlcDJmLmhpZGUoKQogICAgICAgZXhTdGVwMmdQcmltZS5oaWRlKCkKICAgICAgIGV4U3RlcDJnU3F1YXJlZC5oaWRlKCkKICAgICAgIGV4U3RlcDMuaGlkZSgpCiAgICAgICBleFN0ZXA0LmhpZGUoKQogICAgICAgZXhEaXZpZGVyLmhpZGUoKQogICAgICAgZi5oaWRlKCkKICAgICAgIGV4U3RlcDJGbHlmLmhpZGUoKQogICAgICAgZlByaW1lLmhpZGUoKQogICAgICAgZXhTdGVwMkZseWZQcmltZS5oaWRlKCkKICAgICAgIGcuaGlkZSgpCiAgICAgICBleFN0ZXAyRmx5Zy5oaWRlKCkKICAgICAgIGV4U3RlcDJGbHlnU3F1YXJlZC5oaWRlKCkKICAgICAgIGdQcmltZS5oaWRlKCkKICAgICAgIGV4U3RlcDJGbHlnUHJpbWUuaGlkZSgpCiAgfQoKCiBBbmltYXRlKCkgewogICAvLyAxLWEKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYV90aGVfcXVvdGllbnRfcnVsZS5tcDMiKQogICB3YWl0KDQwMDApCiAgCiAgIC8vIDEtYgogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1iX3RoZV9xdW90aWVudF9ydWxlLm1wMyIpCiAgIGluc3RydWN0aW9ucy5zaG93KCkKICAgd2FpdCg0MDAwKQogIAogICAvLyAxLWMKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtY190aGVfcXVvdGllbnRfcnVsZS5tcDMiKQogICBkaXZpZGVyMi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgc2ltcGxpZnkuc2hvdygpCiAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFswXS5zaG93KCkKICAgd2FpdCgyMDAwKQogIAogICAvLyAxLWQKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZF90aGVfcXVvdGllbnRfcnVsZS5tcDMiKQogICBzaW1wbGlmeVN0ZXAxLmNvbnRlbnRbMV0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHNpbXBsaWZ5U3RlcDEuY29udGVudFsyXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzNdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBzaW1wbGlmeVN0ZXAxLmNvbnRlbnRbNF0uc2hvdygpCiAgIHdhaXQoNTAwKQogICBzaW1wbGlmeVN0ZXAxLmNvbnRlbnRbM10uaGlkZShkdXJhdGlvbjogNTAwKQogICBzaW1wbGlmeVN0ZXAxLmNvbnRlbnRbM10gPSBUZXh0KCIkXjIkIikKICAgc2ltcGxpZnlTdGVwMS5jb250ZW50WzNdLnNob3coKQogICB3YWl0KDEwMDApCiAgCiAgIC8vIC8vIDEtZQogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1lX3RoZV9xdW90aWVudF9ydWxlLm1wMyIpCiAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFswXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgc2ltcGxpZnlTdGVwMkZseS5vcGFjaXR5ID0gMQogICBzaW1wbGlmeVN0ZXAyRmx5LnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjIzLCBzdGFydFkgKyBzcGFjaW5nICogMy42MykpCiAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFsyXS5vcGFjaXR5ID0gMQogICBzaW1wbGlmeVN0ZXAyLmNvbnRlbnRbM10ub3BhY2l0eSA9IDEKICAgc2ltcGxpZnlTdGVwMkZseS5vcGFjaXR5ID0gMAogICAvLyBmbHkgMyBmcm9tIGV4cG9uZW50CiAgIHNpbXBsaWZ5U3RlcDJGbHkyLm9wYWNpdHkgPSAxCiAgIHNpbXBsaWZ5U3RlcDJGbHkyLmZvbnRTaXplLmludGVycG9sYXRlKDIwLCBibG9ja2luZzogZmFsc2UpCiAgIHNpbXBsaWZ5U3RlcDJGbHkyLnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjIxLCBzdGFydFkgKyBzcGFjaW5nICogMy42NSksIGJsb2NraW5nOiBmYWxzZSkKICAgc2ltcGxpZnlTdGVwMi5jb250ZW50WzFdID0gVGV4dCgiJFxwaGFudG9tezJ9JCIpCiAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFszXS5oaWRlKGR1cmF0aW9uOiA1MDApCiAgIHNpbXBsaWZ5U3RlcDIuY29udGVudFszXSA9IFRleHQoIiIpCiAgIHdhaXQoMTAwMCkKICAKICAgLy8gMS1mCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWZfdGhlX3F1b3RpZW50X3J1bGUubXAzIikKICAgbWlkRGl2aWRlci5zaG93KCkKICAgZGlzdC5zaG93KCkKICAgd2FpdCgxMDAwKQogIAogICAvLyAxLWcKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZ190aGVfcXVvdGllbnRfcnVsZS5tcDMiKQogICBkaXN0U3RlcDEuY29udGVudFswXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgZGlzdFN0ZXAxLmNvbnRlbnRbMV0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIGRpc3RTdGVwMS5jb250ZW50WzJdLnNob3coKQogICB3YWl0KDEwMDApCiAgIGRpc3RTdGVwMS5jb250ZW50WzNdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBkaXN0U3RlcDFGbHl4Q3ViZWQub3BhY2l0eSA9IDEKICAgZGlzdFN0ZXAxRmx5eEN1YmVkLnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjc3MSwgc3RhcnRZICsgc3BhY2luZyAqIDIuNTQpLCBibG9ja2luZzogZmFsc2UpCiAgIGRpc3RTdGVwMUZseXgub3BhY2l0eSA9IDEKICAgZGlzdFN0ZXAxRmx5eC5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC43OCwgc3RhcnRZICsgc3BhY2luZyAqIDMuMikpCiAgIGRpc3RTdGVwMUZseWR4MS5vcGFjaXR5ID0gMQogICBkaXN0U3RlcDFGbHlkeDEucG9zaXRpb24ubW92ZShWZWMyKHN0YXJ0WCArIDAuNzE1LCBzdGFydFkgKyBzcGFjaW5nICogMi41KSwgYmxvY2tpbmc6IGZhbHNlKQogICBkaXN0U3RlcDFGbHlkeDIub3BhY2l0eSA9IDEKICAgZGlzdFN0ZXAxRmx5ZHgyLnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjcyNCwgc3RhcnRZICsgc3BhY2luZyAqIDMuMTYpKSAgCiB9CgoKIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHt9Cn0KCgpTY2VuZSgpIHsKIEluaXQoCiApIHsKIH0KCgogQW5pbWF0ZSgpIHsKICAgLy8gMi1hCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWFfdGhlX3F1b3RpZW50X3J1bGUubXAzIikKICAgZGlzdFN0ZXAyLnNob3coKQogICBkaXN0U3RlcDMuc2hvdygpCiAgIHdhaXQoMTcwMCkKICAKICAgLy8gMi1iCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWJfdGhlX3F1b3RpZW50X3J1bGUubXAzIikKICAgY3Jvc3NMZWZ0LnAyLm1vdmUoVmVjMihzdGFydFggKyAxLCBzdGFydFkgKyBzcGFjaW5nICogNikpCiAgIGNyb3NzUmlnaHQucDIubW92ZShWZWMyKHN0YXJ0WCArIDAuNSwgc3RhcnRZICsgc3BhY2luZyAqIDYpKQogICB3YWl0KDEwMDApCiAgCiAgIC8vIDItYwogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1jX3RoZV9xdW90aWVudF9ydWxlLm1wMyIpCiAgIGRpdmlkZXIzLnNob3coKQogICB3YWl0KDUwMDApCiAgIHFyRm9ybXVsYS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgcXJOdW0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHFyRGVub20uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHFyZi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgcXJnLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBxcmZQcmltZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgcXJnUHJpbWUuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHFyZ1NxdWFyZWQuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIGRpdmlkZXIxLnNob3coKQogICB3YWl0KDIwMDApCiAgCiB9Cn0KCgpTY2VuZSgpIHsKIEluaXQoCiApIHsKIH0KCgogQW5pbWF0ZSgpIHsKICAgLy8gMy1hCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWFfdGhlX3F1b3RpZW50X3J1bGUubXAzIikKICAgd2FpdCg3MDAwKQogICBxck51bS5jb2xvci5ibGVuZChmQ29sb3IsIGR1cmF0aW9uOiA1MDApCiAgIHFyRGVub20uY29sb3IuYmxlbmQoZ0NvbG9yLCBkdXJhdGlvbjogNTAwKQogICB3YWl0KDEwMCkKICAgcXJmUHJpbWUuY29sb3IuYmxlbmQoZlByaW1lQ29sb3IsIGR1cmF0aW9uOiA1MDApCiAgIHFyZy5jb2xvci5ibGVuZChnQ29sb3IsIGR1cmF0aW9uOiA1MDApCiAgIHdhaXQoNTAwKQogICBxcmYuY29sb3IuYmxlbmQoZkNvbG9yLCBkdXJhdGlvbjogNTAwKQogICBxcmdQcmltZS5jb2xvci5ibGVuZChnUHJpbWVDb2xvciwgZHVyYXRpb246IDUwMCkKICAgd2FpdCg3MDApCiAgIHFyZ1NxdWFyZWQuY29sb3IuYmxlbmQoZ0NvbG9yLCBkdXJhdGlvbjogNTAwKQogICB3YWl0KDEwMDApCiAgCiAgIC8vIDMtYgogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1iX3RoZV9xdW90aWVudF9ydWxlLm1wMyIpCiAgIHFyLnNob3coKQogICBxclN0ZXAxLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBxclN0ZXAxTnVtLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBxclN0ZXAxRGVub20uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgIHFyU3RlcDFmLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICBxclN0ZXAxZy5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgcXJTdGVwMWZQcmltZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgcXJTdGVwMWdQcmltZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgcXJTdGVwMWdTcXVhcmVkLnNob3coKQogICB3YWl0KDcwMDApCiAgCiAgIC8vIDMtYwogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1jX3RoZV9xdW90aWVudF9ydWxlLm1wMyIpCiAgIHFyU3RlcDIuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgIHFyU3RlcDJmUHJpbWUuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgIHFyU3RlcDJnLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICBxclN0ZXAyZi5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgcXJTdGVwMmdQcmltZS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgcXJTdGVwMmdTcXVhcmVkLnNob3coZHVyYXRpb246IDUwMCkKICAgcXJTdGVwMy5zaG93KGR1cmF0aW9uOiA1MDApCiAgIHFyU3RlcDQuc2hvdyhkdXJhdGlvbjogNTAwKQogICBjaGVja21hcmsuc2hvdyhkdXJhdGlvbjogNTAwKQogIAogfQp9CgoKU2NlbmUoKSB7CiBJbml0KAogKSB7CiB9CgoKIEFuaW1hdGUoKSB7CiAgIC8vIDQtYQogICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvNC1hX3RoZV9xdW90aWVudF9ydWxlLm1wMyIpCiAgIHdhaXQoMTAwMCkKICAgZXhJbnN0cnVjdGlvbnMuc2hvdygpCiAgIHdhaXQoNTAwMCkKICAKICAgLy8gNC1iCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC80LWJfdGhlX3F1b3RpZW50X3J1bGUubXAzIikKICAgZXhTdGVwMS5zaG93KCkKICAgZXhEaXZpZGVyLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICBleFN0ZXAxZi5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgZi5zaG93KGR1cmF0aW9uOiA1MDApCiAgIGV4U3RlcDFnLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICBnLnNob3coZHVyYXRpb246IDUwMCkKICAgd2FpdCgxMDAwKQogIAogICAvLyA0LWMKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzQtY190aGVfcXVvdGllbnRfcnVsZS5tcDMiKQogICB3YWl0KDEwMDApCiAgIGZQcmltZS5zaG93KCkKICAgZ1ByaW1lLnNob3coKQogIAogICAvLyA0LWQKICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzQtZF92Ml90aGVfcXVvdGllbnRfcnVsZS5tcDMiKQogICBleFN0ZXAyLnNob3coKQogICB3YWl0KDEwMDApCiAgIC8vZicKICAgZXhTdGVwMmZQcmltZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgLy9mbHkgdmFsdWVzIGZyb20gYmVsb3cKICAgZXhTdGVwMkZseWZQcmltZS5vcGFjaXR5ID0gMQogICBleFN0ZXAyRmx5ZlByaW1lLnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjI3ODUsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjM5KSkKICAgLy9nCiAgIGV4U3RlcDJnLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAvL2ZseSB2YWx1ZXMgZnJvbSBiZWxvdwogICBleFN0ZXAyRmx5Zy5vcGFjaXR5ID0gMQogICBleFN0ZXAyRmx5Zy5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC4zNSwgc3RhcnRZICsgc3BhY2luZyAqIDEuMzkpKQogICAvL2YKICAgZXhTdGVwMmYuc2hvdyhkdXJhdGlvbjogNzAwLCBibG9ja2luZzogZmFsc2UpCiAgIC8vZmx5IHZhbHVlcyBmcm9tIGJlbG93CiAgIGV4U3RlcDJGbHlmLm9wYWNpdHkgPSAxCiAgIGV4U3RlcDJGbHlmLnBvc2l0aW9uLm1vdmUoVmVjMihzdGFydFggKyAwLjU1LCBzdGFydFkgKyBzcGFjaW5nICogMS40MDUpLCBkdXJhdGlvbjogNTAwKQogICAvL2cnCiAgIGV4U3RlcDJnUHJpbWUuc2hvdyhkdXJhdGlvbjogNzAwLCBibG9ja2luZzogZmFsc2UpCiAgIC8vZmx5IHZhbHVlcyBmcm9tIGJlbG93CiAgIGV4U3RlcDJGbHlnUHJpbWUub3BhY2l0eSA9IDEKICAgZXhTdGVwMkZseWdQcmltZS5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC42NSwgc3RhcnRZICsgc3BhY2luZyAqIDEuNDA1KSwgZHVyYXRpb246IDUwMCkKICAgd2FpdCg3MDApCiAgIC8vZ14yCiAgIGV4U3RlcDJnU3F1YXJlZC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgLy9mbHkgdmFsdWVzIGZyb20gYmVsb3cKICAgZXhTdGVwMkZseWdTcXVhcmVkLm9wYWNpdHkgPSAxCiAgIGV4U3RlcDJGbHlnU3F1YXJlZC5wb3NpdGlvbi5tb3ZlKFZlYzIoc3RhcnRYICsgMC40MjUsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjg0NSkpCiAgIC8vIHdhaXQoNjAwMCkKICAKICAgLy8gNC1lCiAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC80LWVfdGhlX3F1b3RpZW50X3J1bGUubXAzIikKICAgd2FpdCgxMDAwKQogICBleFN0ZXAzLnNob3coKQogICBleFN0ZXA0LnNob3coKQogICB3YWl0KDQwMDApCiAgCiB9Cn0=
+Find
+\dfrac{\dfrac{d}{dx}(x^3)}{\dfrac{d}{dx}(x)}
+.
+Compute each derivative separately using the power rule.
+After finding the derivatives, simplify the expression by dividing the
+                  results.
+\begin{align*}
+                    \frac{\dfrac{d}{dx}(x^3)}{\dfrac{d}{dx}(x)}
+                    &= \dfrac{3x^2}{1}
+                    \quad && \text{Differentiate: } \dfrac{d}{dx}(x^3) = 3x^2 \text{, }
+                    \dfrac{d}{dx}(x) = 1\\
+                    &= 3x^2
+                    \quad && \text{Simplify the fraction}
+                    \end{align*}
+x
+100
+x
+1
+x
+-1
+We will explore the quotient rule to
+            rewrite the derivative of a quotient of two functions.
+The quotient rule states that the derivative of
+h(x) = \dfrac{f(x)}{g(x)}
+​​​
+                  is
+\underline{\phantom{XXXXXX}}
+.
+\dfrac{f'(x)}{g'(x)}
+The derivative of a quotient is not the quotient of the derivatives.
+                    Instead, use the quotient rule.
+\dfrac{f'(x) \cdot g(x) + f(x) \cdot g'(x)}{[g(x)]^2}
+The numerator in the quotient rule includes a
+-
+sign instead
+                    of a
++
+sign.
+\dfrac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}
+The quotient rule states that
+\dfrac{d}{dx}
+                    \left(\dfrac{f(x)}{g(x)}\right) = \dfrac{f'(x) \cdot g(x) - f(x) \cdot
+                    g'(x)}{[g(x)]^2}
+.
+\dfrac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g(x)}
+The quotient rule includes
+[g(x)]^2
+in the denominator.
+The quotient rule states that
+\dfrac{d}{dx} \left(\dfrac{f(x)}{g(x)}\right) =
+                  \dfrac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}
+.
+Using this rule, we can write
+\dfrac{d}{dx} \left(\dfrac{x^2+1}{x-5}\right)=
+                  \underline{\phantom{XXXXX}}
+.
+\dfrac{\dfrac{d}{dx}(x^2+1) }{\dfrac{d}{dx}(x-5)}
+The derivative of a quotient is not merely the quotient of two
+                    derivatives. Instead, use the quotient rule.
+\dfrac{\left(\dfrac{d}{dx}(x^2+1)\right) \cdot (x-5) - (x^2+1) \cdot
+                      \left(\dfrac{d}{dx}(x-5)\right) }{(x-5)^2}
+Using
+f(x) = x^2+1
+and
+g(x) = x-5
+, the quotient rule
+                    gives:
+\dfrac{d}{dx} \left(\dfrac{x^2+1}{x-5}\right) =
+                    \dfrac{\overbrace{\left(\dfrac{d}{dx}(x^2+1)\right)}^{f
+                      '(x)} \cdot \overbrace{(x-5)}^{g(x)} - \overbrace{(x^2+1)}^{f(x)} \cdot
+                    \overbrace{\left(\dfrac{d}{dx}(x-5)\right)}^{g'(x)}}{\underbrace{(x-5)^2}_{[g(x)]^2}}
+\dfrac{\left(\dfrac{d}{dx}(x^2+1)\right) \cdot (x-5) + (x^2+1) \cdot
+                      \left(\dfrac{d}{dx}(x-5)\right) }{(x-5)^2}
+The quotient rule includes a
+-
+sign between the terms in the
+                    numerator, not a
++
+sign.
+\dfrac{\left(\dfrac{d}{dx}(x^2+1)\right) \cdot (x^2+1) - (x-5)\cdot
+                      \left(\dfrac{d}{dx}(x-5)\right) }{(x-5)^2}
+This option swaps
+f(x)
+and
+g(x)
+in the numerator.
+We will find a function for which the
+            quotient rule is the most appropriate differentiation technique. Then we will find the
+            derivative of that function.
+The quotient rule is the most efficient strategy for differentiating the
+                function
+\underline{\phantom{XXXXXX}}
+.
+h(x) = \dfrac{x^3-1}{3}
+While the quotient rule would apply here, that rule is not the most
+                    efficient strategy. Rather, rewriting this function as
+h(x) =
+                      \dfrac{x^3-1}{3} = \dfrac{1}{3}x^3 - \dfrac{1}{3}
+is helpful. This
+                    rewriting shows that the derivative can be found using the power rule:
+h'(x)
+                      = x^2
+.
+h(x) = \dfrac{x^3 - 4x}{x}
+While the quotient rule would apply here, that rule is not the most
+                    efficient strategy. Rather, rewriting this function as
+h(x) =
+                    \dfrac{x^3-4x}{x} = x^2 - 4
+is helpful. This rewriting shows that the
+                    derivative can be found using the power rule:
+h^\prime(x) = 2x
+.
+h(x) = \dfrac{x^3-4x}{x^2 + 5}
+This function cannot be rewritten to avoid
+x
+in the
+                    denominator. So the quotient rule is the most efficient strategy. We can use the
+                    quotient rule to differentiate
+h(x)
+with numerator
+f(x) = x^3-4x
+and denominator
+g(x) = x^2 + 5
+.
+The function
+h(x) = \dfrac{x^3-4x}{x^2 + 5}
+is a quotient with:
+numerator
+f(x) = x^3-4x
+denominator
+g(x) = x^2+5
+To use the quotient rule, we first must find
+f^\prime(x) =
+                \underline{\phantom{XXXXX}}
+.
+\begin{align*}
+                  f^\prime(x) &= \dfrac{d}{dx} \left(x^3 - 4x \right) \\
+                  &= \dfrac{d}{dx}(x^3) - \dfrac{d}{dx}(4x) && \text{Difference rule} \\
+                  &= 3x^2 - 4 && \text{Power and constant multiple rules}
+                  \end{align*}
+\dfrac{d}{dx} \left(x^3 - 4x \right) = \dfrac{d}{dx}(x^3) - \dfrac{d}{dx}(4x)
+f^\prime(x) =
+x
+100
+x
+1
+x
+-1
+Next, for the denominator
+g(x) = x^2+5
+, we find
+g'(x) =
+                \underline{\phantom{XXXXX}}
+.
+\begin{align*}
+                  g'(x) &= \dfrac{d}{dx}(x^2+5) \\
+                  &= \dfrac{d}{dx}(x^2) + \dfrac{d}{dx}(5) &&\text{Sum rule} \\
+                  &= 2x &&\text{Power and constant rule}
+                  \end{align*}
+\dfrac{d}{dx}(x^2+5) = \dfrac{d}{dx}(x^2) + \dfrac{d}{dx}(5)
+Apply the power rule and the constant rule to find
+\dfrac{d}{dx}(x^2) +
+                  \dfrac{d}{dx}(5)
+.
+g'(x) =
+x
+100
+x
+1
+x
+-1
+The denominator of the quotient rule is
+[g(x)]^2
+. For
+g(x) = x^2+5
+,
+[g(x)]^2 = \underline{\phantom{XXXXX}}
+.
+(x^2+5)^2
+[g(x)]^2
+means to place the entire expression for
+g(x)
+in parentheses and square that expression. So
+[g(x)]^2 = (x^2+5)^2.
+x^4 + 25
+Squaring
+x^2+5
+is not equivalent to squaring both
+x^2
+and
+5
+.
+x^2 + 25
+Squaring
+x^2 + 5
+requires more than simply squaring the
+5
+.
+To use the quotient rule to differentiate
+h(x) = \dfrac{x^3-4x}{x^2 + 5}
+,
+                we found:
+f(x) = x^3 - 4x
+f'(x) = 3x^2 - 4
+g(x) = x^2 +5
+g'(x) =2x
+[g(x)]^2 = (x^2+5)^2
+Using the quotient rule
+\dfrac{d}{dx} \left( \dfrac{f(x)}{g(x)}\right) =
+                \dfrac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}
+.
+So
+h'(x) =
+                \underline{\phantom{XXXXX}}
+.
+\dfrac{(3x^2-4)(x^2+5) + (x^3-4x)(2x)}{(x^2+5)^2}
+The sign between the terms in the numerator is a
+-
+, not a
++
+.
+\dfrac{3x^2-4(x^2+5) - (x^3-4x)2x}{(x^2+5)^2}
+Parentheses are needed around
+3x^2-4
+in the numerator because
+                    this entire expression represents
+f’(x)
+. Without the parentheses, only
+                    the
+-4
+is multiplying by
+x^2 + 5
+.
+\dfrac{(3x^2-4)(x^2+5) - (x^3-4x)(2x)}{x^2+5}
+The denominator of the derivative should be
+[g(x)]^2
+, not
+g(x)
+.
+\dfrac{(3x^2-4)(x^2+5) - (x^3-4x)(2x)}{(x^2+5)^2}
+Substituting the functions using the quotient rule gives us
+h'(x)
+:
+\dfrac{d}{dx} \left( \dfrac{x^3-4x}{x^2+5}\right) =
+                    \dfrac{\overbrace{(3x^2-4)}^{f’(x)} \cdot \overbrace{(x^2+5)}^{g(x)} -
+                    \overbrace{(x^3-4x)}^{f(x)} \cdot
+                    \overbrace{(2x)}^{g’(x)}}{\underbrace{(x^2+5)^2}_{[g(x)]^2}}
+Let
+h(x) = \dfrac{3x + 5}{x^3 + 4}
+. We will find
+h'(x)
+.
+To use the quotient rule, we first need to write
+h(x) =
+                  \dfrac{f(x)}{g(x)}
+. Appropriate choices for
+f(x)
+and
+g(x)
+are
+\underline{\phantom{XXXXXX}}
+.
+f(x) =x^3 + 4
+and
+g(x) =3x+5
+f(x)
+should represent the numerator, and
+g(x)
+should
+                    represent the denominator. This option places the two choices in the opposite
+                    order.
+f(x) = 3x+5
+and
+g(x) =x^3 + 4
+3x+5
+is the numerator, and so a good choice for
+f(x)
+.
+                    Similarly,
+x^3 + 4
+is the denominator, and so a good choice for
+g(x)
+.
+f(x) =3x+5
+and
+g(x) = \dfrac{1}{x^3 + 4}
+g(x)
+should not be written as a fraction. Instead,
+g(x)
+is simply the expression in the denominator.
+An appropriate choice for
+f
+is
+f(x) = 3x+5
+. So
+f'(x) =
+                \underline{\phantom{XXXXX}}
+.
+The derivative of a linear function like
+f(x) = 3x+5
+is the slope.
+The derivative of a linear function is the slope:
+\dfrac{d}{dx}(3x+5)
+                = 3
+.
+f'(x) =
+A good choice for
+g
+is
+g(x) = x^3 + 4
+. So
+g'(x) =
+                \underline{\phantom{XXXXX}}
+.
+\dfrac{d}{dx} (x^3 + 4) = \dfrac{d}{dx}(x^3) + \dfrac{d}{dx}(4)
+Using the power rule and constant rule:
+\begin{align*}g'(x) & = \dfrac{d}{dx}(x^3 + 4) \\ &= \dfrac{d}{dx}(x^3) +
+                \dfrac{d}{dx}(4) && \text{Sum rule}\\ &= 3x^2 + 0 && \text{Power
+                and constant rules} \\ &= 3x^2 && \text{Simplify}
+                  \end{align*}
+g'(x) =
+2
+x
+4
+x
+100
+x
+Given
+g(x) = x^3+4
+,
+[g(x)]^2 = \underline{\phantom{XXXXX}}
+.
+To compute
+[g(x)]^2
+, write
+g(x)
+with parentheses and squared.
+Placing parentheses around
+g(x) = x^3 + 4
+and squaring both
+                sides gives
+[g(x)]^2 = (x^3+4)^2
+.
+[g(x)]^2 =
+-1
+x
+100
+x
+1
+x
+h'(x) =
+We know that:
+f(x) = 3x+5
+f'(x) = 3
+g(x)= x^3 + 4
+g'(x) = 3x^2
+[g(x)]^2 = (x^3+4)^2
+Using the quotient rule, we find
+h'(x) = \dfrac{f'(x)\cdot g(x) - f(x) \cdot
+                  g'(x)}{[g(x)]^2} = \underline{\phantom{XXXXX}}
+.
+Substitute the previously computed values into the quotient rule
+h'(x) =
+                  \dfrac{f'(x)\cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}.
+When substituting values into the quotient rule, remember to include
+                  parentheses where necessary.
+Substituting the functions into the quotient rule gives:
+h'(x)
+                  = \dfrac{\overbrace{3}^{f'(x)}\cdot \overbrace{(x^3+4)}^{g(x)} -
+                \overbrace{(3x+5)}^{f(x)}\cdot
+                \overbrace{3x^2}^{g'(x)}}{\underbrace{(x^3+4)^2}_{[g(x)]^2}}
+-1
+x
+100
+x
+1
+x
+Lesson Summary
+The quotient rule is used to compute the derivative of the quotient of two
+                differentiable functions.
+If
+f(x)
+and
+g(x)
+are differentiable functions with
+g(x) \neq 0
+,
+                the derivative is given by
+\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right) =
+                \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+.
+Applying the product and quotient rules with tables
+When two functions are multiplied or divided, the derivative is not simply the
+              product or quotient of the individual derivatives. Instead, the product and quotient
+              rules must be used. In earlier lessons, these rules were applied to functions written
+              algebraically.
+In this lesson, the focus will be on applying the rules when the functions are
+              presented in tabular or numeric form. A table provides the values of each function and
+              the corresponding derivatives at specific points, which can be used directly without
+              first working through the formulas.
+Ex: For the product rule, if
+h(x) = f(x) \cdot g(x)
+, then
+h'(a) =
+                f'(a)g(a) + f(a)g'(a)
+when
+x=a
+.
+The process involves identifying the needed values from the table or the problem
+              statement and substituting those values into the correct formula.
+Evaluating the product and quotient
+            rules numerically
+Ly9MaXpiZXRoCi8vKExVIDcvMTQgYnkgQXJjaGllKQovL0xpemJldGgsIDgvMjEvMjAyNSBhZGQgY29sb3IgdG8gbWF0Y2ggcHJvZHVjdCBydWxlIGluIG90aGVyIEFGcy0tIHNob3VsZCBsYXRlciBiZSBjaGFuZ2VkIHRvIGdyZWVuIGFuZCBwdXJwbGUgdG8gbWF0Y2ggQUYgaW4gY2hhaW4gcnVsZSBsZXNzb24gMwpDYW52YXMod2luZG93czogMSkKU2NlbmUoKSB7CiBJbml0ICgKICAgICAgIGZDb2xvcjogQ29sb3IuYmx1ZQogICAgICAgZlByaW1lQ29sb3I6IENvbG9yLmJsdWUKICAgICAgIGdDb2xvcjogQ29sb3Iub3JhbmdlCiAgICAgICBnUHJpbWVDb2xvcjogQ29sb3Iub3JhbmdlCgogICAgICAgd2luZG93MF90aXRsZTogVGV4dCgKICAgICAgICAgICBjb250ZW50OiAiQXBwbHlpbmcgdGhlIHByb2R1Y3QgcnVsZSB3aXRoIHRhYmxlcyIsCiAgICAgICAgICAgZm9udFNpemU6IDIwLAogICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMjI1LCAwLjAyNSkKICAgICAgICkKICAgICAgIGluc3RydWN0aW9uczogVGV4dCgiVmFsdWVzIG9mICRmJCBhbmQgJGckIGFuZCB0aGVpciBkZXJpdmF0aXZlcyBhcmUgZ2l2ZW4gaW4gdGhlIHRhYmxlLiBMZXQgXG4kaCh4KSA9IFxwaGFudG9te2YoeCl9XDogXGNkb3QgXDpccGhhbnRvbXtnKHgpfSQuIEZpbmQgJGgnKDIpJC4iLCBwb3NpdGlvbjogVmVjMigwLCAwLjEpKQogICAgICAgaW5zdHJ1Y3Rpb25zRW1waDE6IFRleHQoIiRccGhhbnRvbXtcdGV4dHtWYWx1ZXMgb2YgfWZcdGV4dHsgYW5kIH1nXHRleHR7IGFuZCB0aGVpciBkZXJpdmF0aXZlcyBhcmUgZ2l2ZW4gaW4gdGhlIHRhYmxlLiBMZXR9JFxuJCBccGhhbnRvbXtoKHgpID0gXDt9Zih4KSBccGhhbnRvbXtcY2RvdCBnKHgpLiBGaW5kIGgnKDIpLn0iLCBwb3NpdGlvbjogVmVjMigwLCAwLjEpLCBjb2xvcjogZkNvbG9yKQogICAgICAgaW5zdHJ1Y3Rpb25zRW1waDI6IFRleHQoIiRccGhhbnRvbXtcdGV4dHtWYWx1ZXMgb2YgfWZcdGV4dHsgYW5kIH1nXHRleHR7IGFuZCB0aGVpciBkZXJpdmF0aXZlcyBhcmUgZ2l2ZW4gaW4gdGhlIHRhYmxlLiBMZXR9JFxuJCBccGhhbnRvbXtoKHgpID0gZih4KSBcY2RvdCBcOn1nKHgpXHBoYW50b217LiBGaW5kIGgnKDIpLn0iLCBwb3NpdGlvbjogVmVjMigwLCAwLjEpLCBjb2xvcjogZ0NvbG9yKQoKICAgCiAgICAgICB0YWJsZTogVGFibGUoCiAgICAgICAgICAgW1JvdyhbVGV4dCgiJHgkIiksIFRleHQoIiRmKHgpJCIsIGNvbG9yOiBmQ29sb3IpLCBUZXh0KCIkZicoeCkkIiwgY29sb3I6IGZQcmltZUNvbG9yKSwgVGV4dCgiJGcoeCkkIiwgY29sb3I6IGdDb2xvciksIFRleHQoIiRnJyh4KSQiLCBjb2xvcjogZ1ByaW1lQ29sb3IpXSksCiAgICAgICAgICAgUm93KFtUZXh0KCIkMiQiKSwgVGV4dCgiJDQkIiksIFRleHQoIiQtMSQiKSwgVGV4dCgiJDEkIiksIFRleHQoIiQzJCIpXSldLAogICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMTQsIDAuMjUpLAogICAgICAgICAgIGNlbGxXaWR0aDogMTAwLCBjZWxsSGVpZ2h0OiA0MAogICAgICAgKQogICAgICAgcHJvZHVjdF9ydWxlX2VxdWFsczogVGV4dCgiJGgnKHgpID0gJCIsIHBvc2l0aW9uOiBWZWMyKDAuMjc5LCAwLjQpKQogICAgICAgcHJvZHVjdF9ydWxlX3RleHQ6IFRleHQoIiRoJyh4KSA9IFxwaGFudG9te2YnKHgpXDp9IFxjZG90IFxwaGFudG9te1w6Zyh4KX0gKyBccGhhbnRvbXtmKHgpXDp9IFxjZG90IFxwaGFudG9te1w6ZycoeCl9JCIsIHBvc2l0aW9uOiBWZWMyKDAuMjc5LCAwLjQpKQogICAgICAgcHJvZHVjdF9ydWxlX3RleHRfZlByaW1lOiBUZXh0KCIkXHBoYW50b217aCcoeCkgPSBcO31mJyh4KSBccGhhbnRvbXtcY2RvdCBnKHgpICsgZih4KSBcY2RvdCBnJyh4KX0kIiwgcG9zaXRpb246IFZlYzIoMC4yNzksIDAuNCksIGNvbG9yOiBmUHJpbWVDb2xvcikKICAgICAgIHByb2R1Y3RfcnVsZV90ZXh0X2c6IFRleHQoIiRccGhhbnRvbXtoJyh4KSA9IGYnKHgpIFxjZG90IH1cOiBnKHgpIFxwaGFudG9teysgZih4KSBcY2RvdCBnJyh4KX0kIiwgcG9zaXRpb246IFZlYzIoMC4yNzksIDAuNCksIGNvbG9yOiBnQ29sb3IpCiAgICAgICBwcm9kdWN0X3J1bGVfdGV4dF9mOiBUZXh0KCIkXHBoYW50b217aCcoeCkgPSBmJyh4KSBcY2RvdCBnKHgpICtcOn0gZih4KSBccGhhbnRvbXtcY2RvdCBnJyh4KX0kIiwgcG9zaXRpb246IFZlYzIoMC4yNzksIDAuNCksIGNvbG9yOiBmQ29sb3IpCiAgICAgICBwcm9kdWN0X3J1bGVfdGV4dF9nUHJpbWU6IFRleHQoIiRccGhhbnRvbXtoJyh4KSA9IGYnKHgpIFxjZG90IGcoeCkgKyBmKHgpIFxjZG90IFw6fWcnKHgpJCIsIHBvc2l0aW9uOiBWZWMyKDAuMjc5LCAwLjQpLCBjb2xvcjogZ1ByaW1lQ29sb3IpCgoKCgogICAgICAgZXhhbXBsZV9zdGVwMTogVGV4dCgiJGgnKFxwaGFudG9tezJ9KT1ccGhhbnRvbXtmJyhccGhhbnRvbXsyfSl9IFw6XGNkb3QgXDpccGhhbnRvbXtnKFxwaGFudG9tezJ9KX0gKyBccGhhbnRvbXtmKFxwaGFudG9tezJ9KX1cOiBcY2RvdCBcOiBccGhhbnRvbXtnJyhccGhhbnRvbXsyfSl9JCIsIHBvc2l0aW9uOiBWZWMyKDAuMjc5LCAwLjUpKQogICAgICAgZXhhbXBsZV9zdGVwMV9mUHJpbWU6IFRleHQoIiRccGhhbnRvbXtoJyhccGhhbnRvbXsyfSk9XDt9ZicoXHBoYW50b217Mn0pXHBoYW50b217IFxjZG90IGcoXHBoYW50b217Mn0pICsgZihccGhhbnRvbXsyfSkgXGNkb3QgZycoXHBoYW50b217Mn0pfSQiLCBwb3NpdGlvbjogVmVjMigwLjI3OSwgMC41KSwgY29sb3I6IGZQcmltZUNvbG9yKQogICAgICAgZXhhbXBsZV9zdGVwMV9nOiBUZXh0KCIkXHBoYW50b217aCcoXHBoYW50b217Mn0pPWYnKFxwaGFudG9tezJ9KSBcY2RvdCBcOn1nKFxwaGFudG9tezJ9KSBccGhhbnRvbXsrIGYoXHBoYW50b217Mn0pIFxjZG90IGcnKFxwaGFudG9tezJ9KX0kIiwgcG9zaXRpb246IFZlYzIoMC4yNzksIDAuNSksIGNvbG9yOiBnQ29sb3IpCiAgICAgICBleGFtcGxlX3N0ZXAxX2Y6IFRleHQoIiRccGhhbnRvbXtoJyhccGhhbnRvbXsyfSk9ZicoXHBoYW50b217Mn0pIFxjZG90IGcoXHBoYW50b217Mn0pICsgXDp9ZihccGhhbnRvbXsyfSkgXHBoYW50b217XGNkb3QgZycoXHBoYW50b217Mn0pfSQiLCBwb3NpdGlvbjogVmVjMigwLjI3OSwgMC41KSwgY29sb3I6IGZQcmltZUNvbG9yKQogICAgICAgZXhhbXBsZV9zdGVwMV9nUHJpbWU6IFRleHQoIiRccGhhbnRvbXtoJyhccGhhbnRvbXsyfSk9ZicoXHBoYW50b217Mn0pIFxjZG90IGcoXHBoYW50b217Mn0pICsgZihccGhhbnRvbXsyfSkgXGNkb3QgXDp9ZycoXHBoYW50b217Mn0pJCIsIHBvc2l0aW9uOiBWZWMyKDAuMjc5LCAwLjUpLCBjb2xvcjogZ1ByaW1lQ29sb3IpCiAgICAgICBleGFtcGxlX3N0ZXAxX3ZhcjI6IHRhYmxlWzFdWzBdLmNvcHkocG9zaXRpb246IFZlYzIoMC4xOTE1LCAwLjMxMykpCiAgICAgICBleGFtcGxlX3N0ZXAxX2ZfMjogVGV4dCgiJDIkIiwgVmVjMigwLjMxNTI1LCAwLjUwMTUpKQogICAgICAgZXhhbXBsZV9zdGVwMV9mX3ByaW1lXzI6IFRleHQoIiQyJCIsIFZlYzIoMC4zMTUyNSwgMC41MDE1KSkKICAgICAgIGV4YW1wbGVfc3RlcDFfZ19wcmltZV8yOiBUZXh0KCIkMiQiLCBWZWMyKDAuMzE1MjUsIDAuNTAxNSkpCiAgICAgICBleGFtcGxlX3N0ZXAxX2dfMjogVGV4dCgiJDIkIiwgVmVjMigwLjMxNTI1LCAwLjUwMTUpKQoKCgoKICAgICAgIGV4YW1wbGVfc3RlcDJfZXF1YWxzOiBUZXh0KCIkPSQiLCBwb3NpdGlvbjogVmVjMigwLjM1LCAwLjYpKQogICAgICAgZXhhbXBsZV9zdGVwMl9mX3ByaW1lOiBUZXh0KCIkZicoMikkIiwgcG9zaXRpb246IFZlYzIoMC4zODEsIDAuNSkpCiAgICAgICBleGFtcGxlX3N0ZXAyX2c6IFRleHQoIiRnKDIpJCIsIHBvc2l0aW9uOiBWZWMyKDAuNDcsIDAuNSkpCiAgICAgICBleGFtcGxlX3N0ZXAyX2Y6IFRleHQoIiRmKDIpJCIsIHBvc2l0aW9uOiBWZWMyKDAuNTYsIDAuNSkpCiAgICAgICBleGFtcGxlX3N0ZXAyX2dfcHJpbWU6IFRleHQoIiRnJygyKSQiLCBwb3NpdGlvbjogVmVjMigwLjY0LCAwLjUpKQogICAgICAgZXhhbXBsZV9zdGVwMl9kb3Q6IFRleHQoIiRcY2RvdCQiLCBwb3NpdGlvbjogVmVjMigwLjQ1MzEsIDAuNSkpCiAgICAgICBleGFtcGxlX3N0ZXAyX2RvdF9jb3B5OiBleGFtcGxlX3N0ZXAyX2RvdC5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNjI1LCAwLjUpKQogICAgICAgZXhhbXBsZV9zdGVwMl9wbHVzOiBUZXh0KCIkKyQiLCBwb3NpdGlvbjogVmVjMigwLjUzLCAwLjUpKQogICAgICAgZXhhbXBsZV9zdGVwMl9uZWcxOiB0YWJsZVsxXVsyXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNDY1NSwgMC4zMTI4KSwgY29sb3I6IGZDb2xvcikKICAgICAgIGV4YW1wbGVfc3RlcDJfMTogdGFibGVbMV1bM10uY29weShwb3NpdGlvbjogVmVjMigwLjYyMDUsIDAuMzE0KSwgY29sb3I6IGZQcmltZUNvbG9yKQogICAgICAgZXhhbXBsZV9zdGVwMl80OiB0YWJsZVsxXVsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuMzM1LCAwLjMxMzgpLCBjb2xvcjogZ0NvbG9yKQogICAgICAgZXhhbXBsZV9zdGVwMl8zOiB0YWJsZVsxXVs0XS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNzYzLCAwLjMxMzgpLCBjb2xvcjogZ1ByaW1lQ29sb3IpCgoKCgogICAgICAgZXhhbXBsZV9zdGVwXzQ6IFRleHQoIiQ9IC0xICsgMTIkIiwgcG9zaXRpb246IFZlYzIoMC4zNSwgMC43KSkKCgoKCiAgICAgICBleGFtcGxlX3N0ZXBfNTogVGV4dCgiJD0gMTEkIiwgcG9zaXRpb246IFZlYzIoMC4zNSwgMC44KSkKICAgKXsKICAgICAgIGluc3RydWN0aW9ucy5oaWRlKCkKICAgICAgIGluc3RydWN0aW9uc0VtcGgxLmhpZGUoKQogICAgICAgaW5zdHJ1Y3Rpb25zRW1waDIuaGlkZSgpCiAgICAgICB0YWJsZS5oaWRlKCkKICAgICAgIHByb2R1Y3RfcnVsZV90ZXh0LmhpZGUoKQogICAgICAgcHJvZHVjdF9ydWxlX3RleHRfZlByaW1lLmhpZGUoKQogICAgICAgcHJvZHVjdF9ydWxlX3RleHRfZy5oaWRlKCkKICAgICAgIHByb2R1Y3RfcnVsZV90ZXh0X2YuaGlkZSgpCiAgICAgICBwcm9kdWN0X3J1bGVfdGV4dF9nUHJpbWUuaGlkZSgpCiAgICAgICBwcm9kdWN0X3J1bGVfZXF1YWxzLmhpZGUoKQoKCgoKCiAgICAgICBleGFtcGxlX3N0ZXAxLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMV9mUHJpbWUuaGlkZSgpCiAgICAgICBleGFtcGxlX3N0ZXAxX2cuaGlkZSgpCiAgICAgICBleGFtcGxlX3N0ZXAxX2YuaGlkZSgpCiAgICAgICBleGFtcGxlX3N0ZXAxX2dQcmltZS5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDFfZl8yLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMV9mX3ByaW1lXzIuaGlkZSgpCiAgICAgICBleGFtcGxlX3N0ZXAxX2dfMi5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDFfZ19wcmltZV8yLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMV92YXIyLmhpZGUoKQoKCgoKICAgICAgIGV4YW1wbGVfc3RlcDJfMS5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfMy5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfNC5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfbmVnMS5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfZG90LmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9kb3RfY29weS5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfZXF1YWxzLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9mX3ByaW1lLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9mLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9nLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9nX3ByaW1lLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9wbHVzLmhpZGUoKQoKCgoKICAgICAgIGV4YW1wbGVfc3RlcF80LmhpZGUoKQoKCgoKICAgICAgIGV4YW1wbGVfc3RlcF81LmhpZGUoKQoKCgoKICAgfQoKCgoKICAgQW5pbWF0ZSAoKXsKICAgICAgIC8vU2NlbmUgMUEKICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfdjJfZXZhbHVhdGluZ190aGVfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXNfbnVtZXJpY2FsbHkubXAzIikKICAgICAgIGluc3RydWN0aW9ucy5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgIGluc3RydWN0aW9uc0VtcGgxLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgaW5zdHJ1Y3Rpb25zRW1waDIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICB0YWJsZS5zaG93CiAgICAgICB3YWl0KDgwMDApCgoKCgogICAgICAgLy9TY2VuZSAxQgogICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYl9ldmFsdWF0aW5nX3RoZV9wcm9kdWN0X2FuZF9xdW90aWVudF9ydWxlc19udW1lcmljYWxseS5tcDMiKQogICAgICAgd2FpdCgxMjAwKQogICAgICAgdGFibGVbMV1bMF0uaGlkZShkdXJhdGlvbj01MDApCiAgICAgICB0YWJsZVsxXVswXS5zaG93KGR1cmF0aW9uPTUwMCkKICAgICAgIHdhaXQoNTAwKQogICAgICAgdGFibGVbMV1bMV0uaGlkZShkdXJhdGlvbj01MDApCiAgICAgICB0YWJsZVsxXVsxXS5jb2xvciA9IGZDb2xvcgogICAgICAgdGFibGVbMV1bMV0uc2hvdyhkdXJhdGlvbj01MDApCiAgICAgICB3YWl0KDEwMDApCiAgICAgICB0YWJsZVsxXVsyXS5oaWRlKGR1cmF0aW9uPTUwMCkKICAgICAgIHRhYmxlWzFdWzJdLmNvbG9yID0gZlByaW1lQ29sb3IKICAgICAgIHRhYmxlWzFdWzJdLnNob3coZHVyYXRpb249NTAwKQogICAgICAgd2FpdCgxNTAwKQogICAgICAgdGFibGVbMV1bM10uaGlkZShkdXJhdGlvbj01MDApCiAgICAgICB0YWJsZVsxXVszXS5jb2xvciA9IGdDb2xvcgogICAgICAgdGFibGVbMV1bM10uc2hvdyhkdXJhdGlvbj01MDApCiAgICAgICB3YWl0KDEwMDApCiAgICAgICB0YWJsZVsxXVs0XS5oaWRlKGR1cmF0aW9uPTUwMCkKICAgICAgIHRhYmxlWzFdWzRdLmNvbG9yID0gZ1ByaW1lQ29sb3IKICAgICAgIHRhYmxlWzFdWzRdLnNob3coZHVyYXRpb249NTAwKQogICAgICAgd2FpdCgxMDAwKQoKCgoKICAgICAgIC8vU2NlbmUgMUMKICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWNfZXZhbHVhdGluZ190aGVfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXNfbnVtZXJpY2FsbHkubXAzIikKICAgICAgIHdhaXQoMzAwMCkKICAgICAgIHByb2R1Y3RfcnVsZV9lcXVhbHMuc2hvdygpCiAgICAgICB3YWl0KDEwMDApCiAgIH0KICAgUXVlc3Rpb24oaWQ6ICIgIiwgdHlwZTogIm11bHRpcGxlQ2hvaWNlIikge30KfQoKCgoKU2NlbmUoKSB7CiAgIEluaXQoKXt9CgoKCgogICBBbmltYXRlICgpewogICAgICAgLy9TY2VuZSAyQQogICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV9ldmFsdWF0aW5nX3RoZV9wcm9kdWN0X2FuZF9xdW90aWVudF9ydWxlc19udW1lcmljYWxseS5tcDMiKQogICAgICAgcHJvZHVjdF9ydWxlX2VxdWFscy5oaWRlKGJsb2NraW5nOiBmYWxzZSkKICAgICAgIHByb2R1Y3RfcnVsZV90ZXh0LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgcHJvZHVjdF9ydWxlX3RleHRfZlByaW1lLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgcHJvZHVjdF9ydWxlX3RleHRfZy5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgIHByb2R1Y3RfcnVsZV90ZXh0X2Yuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICBwcm9kdWN0X3J1bGVfdGV4dF9nUHJpbWUuc2hvdygpCiAgICAgICB3YWl0KDUwMCkKICAgICAgIGV4YW1wbGVfc3RlcDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICBleGFtcGxlX3N0ZXAxX2ZQcmltZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDFfZy5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDFfZi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDFfZ1ByaW1lLnNob3coKQogICAgICAgZXhhbXBsZV9zdGVwMV92YXIyLm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAxX3ZhcjIucG9zaXRpb24ubW92ZSggVmVjMigwLjMxMzUsIDAuNTAxNSkpCiAgICAgICB3YWl0KDEwMDApCiAgICAgICBleGFtcGxlX3N0ZXAxX2ZfMi5vcGFjaXR5ID0gMQogICAgICAgZXhhbXBsZV9zdGVwMV9mX3ByaW1lXzIub3BhY2l0eSA9IDEKICAgICAgIGV4YW1wbGVfc3RlcDFfZ18yLm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAxX2dfcHJpbWVfMi5vcGFjaXR5ID0gMQogICAgICAgZXhhbXBsZV9zdGVwMV9mXzIucG9zaXRpb24ubW92ZShWZWMyKDAuNDE5IC0gMC4wMDcyNSwgMC41MDE1KSwgYmxvY2tpbmc9ZmFsc2UpCiAgICAgICBleGFtcGxlX3N0ZXAxX2ZfcHJpbWVfMi5wb3NpdGlvbi5tb3ZlKFZlYzIoMC40OTctIDAuMDEyLCAwLjUwMTUpLCBibG9ja2luZz1mYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDFfZ18yLnBvc2l0aW9uLm1vdmUoVmVjMigwLjU5IC0gMC4wMTcyLCAwLjUwMTUpLCBibG9ja2luZz1mYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDFfZ19wcmltZV8yLnBvc2l0aW9uLm1vdmUoVmVjMigwLjY3NCAtIDAuMDIyLCAwLjUwMTUpKQogICAgICAgd2FpdCgxMDAwKQoKCgoKICAgICAgIC8vU2NlbmUgMkIKICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWJfZXZhbHVhdGluZ190aGVfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXNfbnVtZXJpY2FsbHkubXAzIikKICAgICAgIGV4YW1wbGVfc3RlcDJfZXF1YWxzLnNob3coYmxvY2tpbmc9ZmFsc2UpCiAgICAgICBleGFtcGxlX3N0ZXAyX2ZfcHJpbWUub3BhY2l0eSA9IDEKICAgICAgIGV4YW1wbGVfc3RlcDJfZy5vcGFjaXR5ID0gMQogICAgICAgZXhhbXBsZV9zdGVwMl9mLm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAyX2dfcHJpbWUub3BhY2l0eSA9IDEKICAgICAgIGV4YW1wbGVfc3RlcDJfZG90Lm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAyX2RvdF9jb3B5Lm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAyX3BsdXMub3BhY2l0eSA9IDEKCgoKCiAgICAgICBleGFtcGxlX3N0ZXAyX2ZfcHJpbWUucG9zaXRpb24ubW92ZShWZWMyKDAuMzgxLCAwLjYpLCBibG9ja2luZz1mYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDJfZy5wb3NpdGlvbi5tb3ZlKFZlYzIoMC40NywgMC42KSwgYmxvY2tpbmc9ZmFsc2UpCiAgICAgICBleGFtcGxlX3N0ZXAyX2YucG9zaXRpb24ubW92ZShWZWMyKDAuNTYsIDAuNiksIGJsb2NraW5nPWZhbHNlKQogICAgICAgZXhhbXBsZV9zdGVwMl9nX3ByaW1lLnBvc2l0aW9uLm1vdmUoVmVjMigwLjY0LCAwLjYpLCBibG9ja2luZz1mYWxzZSkKICAgICAgIGV4YW1wbGVfc3RlcDJfZG90LnBvc2l0aW9uLm1vdmUoVmVjMigwLjQ1MzEsIDAuNiksIGJsb2NraW5nPWZhbHNlKQogICAgICAgZXhhbXBsZV9zdGVwMl9kb3RfY29weS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC42MjUsIDAuNiksIGJsb2NraW5nPWZhbHNlKQogICAgICAgZXhhbXBsZV9zdGVwMl9wbHVzLnBvc2l0aW9uLm1vdmUoVmVjMigwLjUzLCAwLjYpKQoKCgoKICAgICAgIHdhaXQoODAwKQogICAgICAgZXhhbXBsZV9zdGVwMl9mX3ByaW1lLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl9uZWcxLm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAyX25lZzEucG9zaXRpb24ubW92ZShWZWMyKDAuMzksIDAuNiksIGJsb2NraW5nPWZhbHNlKQoKCgoKICAgICAgIGV4YW1wbGVfc3RlcDJfZy5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfMS5vcGFjaXR5ID0gMQogICAgICAgZXhhbXBsZV9zdGVwMl8xLnBvc2l0aW9uLm1vdmUoVmVjMigwLjQ4NSwgMC42KSwgYmxvY2tpbmc9ZmFsc2UpCgoKCgogICAgICAgZXhhbXBsZV9zdGVwMl9mLmhpZGUoKQogICAgICAgZXhhbXBsZV9zdGVwMl80Lm9wYWNpdHkgPSAxCiAgICAgICBleGFtcGxlX3N0ZXAyXzQucG9zaXRpb24ubW92ZShWZWMyKDAuNTgsIDAuNiksIGJsb2NraW5nPWZhbHNlKQoKCgoKICAgICAgIGV4YW1wbGVfc3RlcDJfZ19wcmltZS5oaWRlKCkKICAgICAgIGV4YW1wbGVfc3RlcDJfMy5vcGFjaXR5ID0gMQogICAgICAgZXhhbXBsZV9zdGVwMl8zLnBvc2l0aW9uLm1vdmUoVmVjMigwLjY2NSwgMC42KSkKICAgICAgIHdhaXQoMTAwMCkKCgoKCiAgICAgICAvL1NjZW5lIDJDCiAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1jX2V2YWx1YXRpbmdfdGhlX3Byb2R1Y3RfYW5kX3F1b3RpZW50X3J1bGVzX251bWVyaWNhbGx5Lm1wMyIpCiAgICAgICB3YWl0KDEwMDApCiAgICAgICBleGFtcGxlX3N0ZXBfNC5zaG93KCkKICAgICAgIHdhaXQoNTAwKQogICAgICAgZXhhbXBsZV9zdGVwXzUuc2hvdygpCiAgIH0KfQo=
+For
+h(x)=f(x) \cdot g(x)
+, the product rule says that
+h^\prime(x)
+                  = \underline{\phantom{XXXXXX}}​​​
+​.
+f^\prime(x)\cdot g^\prime(x) + f(x)\cdot g(x)
+This option includes the correct terms. However, the terms are not in
+                    the right places.
+f^\prime(x) \cdot g(x) + f(x) \cdot g^\prime(x)
+The product rule ensures the derivative captures how both
+f(x)
+and
+g(x)
+are changing.
+f^\prime(x) \cdot f(x) + g(x)\cdot g^\prime(x)
+The product rule includes a similar structure. However, the terms in
+                    this option need to be reordered.
+Values of
+f, g,
+and the
+            derivatives are given in the table. Let
+h(x) = f(x)\cdot g(x)
+. We will compute
+h'(-2)
+.
+x
+f(x)
+f'(x)
+g(x)
+g'(x)
+-2
+-3
+2
+5
+7
+Which of the following correctly expresses
+h'(-2)
+in terms of
+f,g
+,
+                  and the derivatives?
+h'(-2) = f'(-2)\cdot g'(-2)
+The derivative of a product is not merely the product of the
+                    derivatives. Instead, use the product rule and substitute
+x=-2
+.
+h'(-2) = f'(-2)\cdot g(-2) + f(-2) \cdot g'(-2)
+The product rule states that
+h'(x) = f'(x)\cdot g(x) + f(x) \cdot
+                    g'(x)
+. Substituting
+x = -2
+yields
+h'(-2) = f'(-2)\cdot g(-2) +
+                    f(-2) \cdot g'(-2)
+.
+h'(-2) = f'(-2)\cdot f(-2) + g(-2) \cdot g'(-2)
+The product rule states that
+h'(x) =f'(x)\cdot g(x) + f(x) \cdot
+                    g'(x)
+. Substitute
+x = -2
+to get the correct equation.
+Use the values from the table to compute
+h'(-2)
+.
+h'(-2) = f'(-2)\cdot g(-2) + f(-2) \cdot g'(-2)
+. Substitute values from
+                  the table to compute
+h'(-2)
+.
+Using the values from the table:
+\begin{align*}
+                  h'(-2) &= f'(-2)\cdot g(-2) + f(-2) \cdot g'(-2) \\
+                  &= 2\cdot 5 + -3 \cdot 7 && \text{Substitute values from table}\\
+                &= -11 && \text{Simplify} \\
+                  \end{align*}
+h'(-2) =
+Let
+h(x) = \dfrac{f(x)}{g(x)}
+.
+Values of
+f, g,
+and the derivatives
+            are given in the table.
+x
+f(x)
+g(x)
+f'(x)
+g'(x)
+2
+5
+4
+1
+4
+We will find
+h'(2)
+.
+By the quotient rule,
+h'(x) =
+            \dfrac{f'(x)\cdot g(x) - f(x)\cdot g'(x)}{[g(x)]^2}
+. Substituting
+x = 2
+gives
+h'(2)
+            = \dfrac{f'(2)\cdot g(2) - f(2)\cdot g'(2)}{[g(2)]^2}
+​.
+First, find the numerator of the derivative:
+f'(2)\cdot g(2) - f(2)\cdot g'(2)
+                  = \underline{\phantom{XXXXXX}}
+.
+Find the values of
+f'(2), g(2), f(2),
+and
+g'(2)
+from the table.
+The table shows the following values when
+x = 2:
+f^\prime(2)
+                = 1, g(2) = 4, f(2) = 5
+, and
+g^\prime(2) = 4.
+Using these values from the
+                table, the numerator of
+h^\prime(2)
+is:
+\begin{align*}f'(2)\cdot g(2) - f(2)\cdot g'(2) &= 1 \cdot 4 - 5 \cdot 4
+                && \text{Substitute values from table}\\&= 4 - 20 &&
+                \text{Simplify}\\&= -16 \end{align*}
+Find the denominator of the derivative:
+[g(2)]^2 =
+                    \underline{\phantom{XXXXXX}}
+.
+Find the value of
+g(2)
+from the table and square the value.
+The denominator of the derivative is
+[g(2)]^2 = 4^2 = 16
+We found:
+the numerator of
+h'(2)
+:
+f'(2)\cdot g(2) - f(2)\cdot g'(2)=-16
+the denominator of
+h'(2)
+​:
+[g(2)]^2 = 16
+Using
+                the numerator and the denominator,
+h'(2)= \underline{\phantom{XXXXXX}}
+.
+Because
+h'(2) = \dfrac{f'(2)\cdot g(2) - f(2)\cdot g'(2)}{[g(2)]^2}
+,
+                  divide the previous two answers.
+\begin{align*}
+                  h'(2) &= \dfrac{f'(2)\cdot g(2) - f(2)\cdot g'(2)}{[g(2)]^2} \\
+                  &= \dfrac{-16}{16} && \text{Substitute numerator and denominator} \\
+                  &= - 1 && \text{Simplify}
+                  \end{align*}
+h'(2) =
+Lesson Summary
+Decide whether the function is a product
+f(x)g(x)
+or a quotient
+\frac{f(x)}{g(x)}
+and choose the correct rule.
+Use the table or problem statement to find the values of
+f(x)
+,
+g(x)
+,
+f'(x)
+, and
+g'(x)
+at the given
+x
+-value.
+Substitute the values into the product rule or quotient rule formula, then
+                simplify to find the derivative at that point.
+Applying the product and quotient rules in context
+In real life, information about how things change is often given as numbers at
+              certain times, not as full equations. If two changing quantities are multiplied or
+              divided to make a new quantity, we need the product rule or quotient rule to find how
+              fast that new quantity is changing.
+Ex: The total yearly income of all citizens in a fictional town called Middletown
+              depends on the population and the average income per person. Let
+t
+be the
+              number of years after
+2000.
+If
+P(t)
+is the population and
+I(t)
+is
+              the average income per person, then the total income is
+T(t) = P(t) \cdot I(t)
+.
+In this lesson, we will use the values of
+P(t)
+,
+I(t)
+, and the rates of
+              change to determine how quickly the total income
+T(t)
+is changing.
+Applications of the product and
+            quotient rules
+Ly8gTFU6IEFyY2hpZSAxMC8xNS8yMDI1IChkaWFyeSByZXZpZXcgZWRpdHMpCkNhbnZhcyh3aW5kb3dzOiAyKQoKU2NlbmUoKSB7CiAgSW5pdCgKCiAgICAvL2NvbG9ycwogICAgcENvbG9yOiBDb2xvci5ibHVlCiAgICBwUHJpbWVDb2xvcjogQ29sb3IuYmx1ZQogICAgaUNvbG9yOiBDb2xvci5vcmFuZ2UKICAgIGlQcmltZUNvbG9yOiBDb2xvci5vcmFuZ2UKCiAgICB3MFRpdGxlOiBUZXh0KCJBcHBsaWNhdGlvbnMgb2YgcHJvZHVjdCBhbmQgcXVvdGllbnQgcnVsZXMiLCBwb3NpdGlvbjogVmVjMigwLjA5LCAwKSkKICAgIAogICAgc3RhcnRYOiAwCiAgICBzdGFydFk6IDAuMDc1CiAgICBzcGFjaW5nOiAwLjEKICAgIGludHJvMTogVGV4dCgiSW4gdGhlIHllYXIgMjAwMiBNaWRkbGV0b3duJ3M6IiwgcG9zaXRpb246IFZlYzIoMCwgc3RhcnRZKSkKICAgIGludHJvMjogVGV4dCgiUG9wdWxhdGlvbiB3YXMgNTAwMCBhbmQgZGVjcmVhc2luZyBhdCBhIHJhdGVcbm9mIDIzIHBlb3BsZSBwZXIgeWVhci4iLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyBzcGFjaW5nICogMC41LCBzdGFydFkgKyBzcGFjaW5nICogMC43NSkpCiAgICBpbnRybzJCdWxsZXQ6IFRleHQoIiRcY2RvdCQiLCBmb250U2l6ZTogMzAsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIHNwYWNpbmcgKiAwLjI1LCBzdGFydFkgKyBzcGFjaW5nICogMC42KSkKICAgIGludHJvMzogVGV4dCgiQXZlcmFnZSBpbmNvbWUgcGVyIHBlcnNvbiB3YXMgXCQzMCwwMDAgYW5kIGluY3JlYXNpbmcgYXQgYSByYXRlIG9mIFwkMTAwMCBwZXIgeWVhci4iLCBwb3NpdGlvbjogVmVjMihzdGFydFggKyBzcGFjaW5nICogMC41LCBzdGFydFkgKyBzcGFjaW5nICogMi4yNSkpCiAgICBpbnRybzNCdWxsZXQ6IFRleHQoIiRcY2RvdCQiLCBmb250U2l6ZTogMzAsIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCArIHNwYWNpbmcgKiAwLjI1LCBzdGFydFkgKyBzcGFjaW5nICogMi4xKSkKICAgIGludHJvNDogVGV4dCgiRmluZCB0aGUgcmF0ZSBvZiBjaGFuZ2Ugb2YgdGhlIHRvdGFsIGluY29tZSBvZiBNaWRkbGV0b3duIGluIHRoZSB5ZWFyICQyMDAyJC4iLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSArIHNwYWNpbmcgKiAzLjc1KSkKCiAgICBkaXZpZGVyMTogUnVsZShWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpLCBWZWMyKDEsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpKQoKICAgIHRvdGFsSW5jb21lOiBUZXh0KCJUb3RhbCBpbmNvbWU6IiwgVmVjMigwLCBzdGFydFkgKyBzcGFjaW5nICogNS41KSkKICAgIHRvdGFsSW5jb21lRXE6IFRleHQoIiRUKHQpID0gXHBoYW50b217UCh0KVw6fSBcY2RvdCBccGhhbnRvbXtJKHQpfSQiLCBWZWMyKDAuMjc1LCBzdGFydFkgKyBzcGFjaW5nICogNS41KSkKICAgIHRvdGFsSW5jb21lRXFFbXBoMTogVGV4dCgiJFxwaGFudG9te1QodCkgPVw7fSBQKHQpIFxwaGFudG9te1xjZG90IEkodCl9JCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpLCBjb2xvcjogcENvbG9yKQogICAgdG90YWxJbmNvbWVFcUVtcGgyOiBUZXh0KCIkXHBoYW50b217VCh0KSA9IFAodClcY2RvdFw6fSBJKHQpJCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA1LjUpLCBjb2xvcjogaUNvbG9yKQoKICAgIHJvYzogVGV4dCgiUmF0ZSBvZiBjaGFuZ2Ugb2YgdG90YWwgaW5jb21lOiIsIFZlYzIoMCwgc3RhcnRZICsgc3BhY2luZyAqIDYuNSkpCiAgICByb2NTdGVwMTogVGV4dCgiJFQnKHQpID0gXGRmcmFje2R9e2R0fVtccGhhbnRvbXtQKHQpXDp9IFxjZG90IFxwaGFudG9te0kodClcOn1dJCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA3LjUpKQogICAgcm9jU3RlcDFFbXBoMTogVGV4dCgiJFxwaGFudG9te1QnKHQpID0gXGRmcmFje2R9e2R0fVt9IFAodCkgXHBoYW50b217XGNkb3QgSSh0KV19JCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA3LjUpLCBjb2xvcjogcENvbG9yKQogICAgcm9jU3RlcDFFbXBoMjogVGV4dCgiJFxwaGFudG9te1QnKHQpID0gXGRmcmFje2R9e2R0fVtQKHQpIFxjZG90IFw6fUkodClccGhhbnRvbXtdfSQiLCBWZWMyKDAuMjc1LCBzdGFydFkgKyBzcGFjaW5nICogNy41KSwgY29sb3I6IGlDb2xvcikKICAgIHJvY1N0ZXAyRXF1YWxzOiBUZXh0KCIkXHBoYW50b217VCcodClcO30gPSBccGhhbnRvbXtQJyh0KSBcY2RvdCBJKHQpICsgUCh0KSBcY2RvdCBJJyh0KX0kIiwgVmVjMigwLjI3NSwgc3RhcnRZICsgc3BhY2luZyAqIDguNSkpCiAgICByb2NTdGVwMjogVGV4dCgiJFxwaGFudG9te1QnKHQpXDt9ID0gXHBoYW50b217UCcodClcOn0gXGNkb3QgXHBoYW50b217SSh0KVw6fSArIFxwaGFudG9te1AodClcOn0gXGNkb3QgXHBoYW50b217SScodCl9JCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA4LjUpKQogICAgcm9jU3RlcDJFbXBoMTogVGV4dCgiJFxwaGFudG9te1QnKHQpID0gXDt9UCcodCkgXHBoYW50b217XGNkb3QgSSh0KSArIFAodCkgXGNkb3QgSScodCl9JCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA4LjUpLCBjb2xvcjogcFByaW1lQ29sb3IpCiAgICByb2NTdGVwMkVtcGgyOiBUZXh0KCIkXHBoYW50b217VCcodCkgPSBQJyh0KSBcY2RvdFw6fSBJKHQpIFxwaGFudG9teysgUCh0KSBcY2RvdCBJJyh0KX0kIiwgVmVjMigwLjI3NSwgc3RhcnRZICsgc3BhY2luZyAqIDguNSksIGNvbG9yOiBpQ29sb3IpCiAgICByb2NTdGVwMkVtcGgzOiBUZXh0KCIkXHBoYW50b217VCcodCkgPSBQJyh0KSBcY2RvdCBJKHQpICsgXDp9UCh0KSBccGhhbnRvbXtcY2RvdCBJJyh0KX0kIiwgVmVjMigwLjI3NSwgc3RhcnRZICsgc3BhY2luZyAqIDguNSksIGNvbG9yOiBwQ29sb3IpCiAgICByb2NTdGVwMkVtcGg0OiBUZXh0KCIkXHBoYW50b217VCcodCkgPSBQJyh0KSBcY2RvdCBJKHQpICsgUCh0KVxjZG90IFw6fUknKHQpJCIsIFZlYzIoMC4yNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiA4LjUpLCBjb2xvcjogaVByaW1lQ29sb3IpCgogICAgdGFibGVJbnRybzogVGV4dCgiSW4gdGhlIHllYXIgMjAwMiwgJHQgPSAyJC4iLCBwb3NpdGlvbjogVmVjMigwLCBzdGFydFkpLCB3aW5kb3c6IDEpCgogICAgaGVhZGVyczogUm93KGNlbGxzOiBbVGV4dCgiJFAoMikkIiwgY29sb3I6IHBDb2xvciksIFRleHQoIiRJKDIpJCIsIGNvbG9yOiBpQ29sb3IpLCBUZXh0KCIkUCcoMikkIiwgY29sb3I6IHBQcmltZUNvbG9yKSwgVGV4dCgiJEknKDIpJCIsIGNvbG9yOiBpUHJpbWVDb2xvcildKQogICAgcm93MTogUm93KGNlbGxzOiBbVGV4dCgiJDUwMDAkIiksIFRleHQoIiQzMCwwMDAkIiksVGV4dCgiJC0yMyQiKSxUZXh0KCIkMTAwMCQiKV0pCiAgCiAgICB0YWJsZTogVGFibGUocm93czogW2hlYWRlcnMsIHJvdzFdCiAgICAgICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjExNSwgc3RhcnRZICsgc3BhY2luZykKICAgICAgICAgICAgICAgIHdpbmRvdzogMQogICAgKQoKICAgIHN0ZXBzSW50cm86IFRleHQoIlRoZSByYXRlIG9mIGNoYW5nZSBvZiB0aGUgTWlkZGxldG93bidzIHRvdGFsIGluY29tZSBpbiAkMjAwMiQgaXMgZ2l2ZW4gYnkiLCBwb3NpdGlvbjogVmVjMigwLCBzdGFydFkgKyBzcGFjaW5nICogMyksIHdpbmRvdzogMSkKCiAgICBzdGVwMTogVGV4dCgiJFQnKDIpID0gUCcoMikgXGNkb3QgSSgyKSArIFAoMikgXGNkb3QgSScoMikkIiwgcG9zaXRpb246IFZlYzIoMC4yLCBzdGFydFkgKyBzcGFjaW5nICogNC4yNSksIHdpbmRvdzogMSkKICAgIHN0ZXAyOiBUZXh0KCIkXHBoYW50b217VCcoMilcO30gPSAoXHBoYW50b217LTIzfSkoXHBoYW50b217MzAsMDAwfSkgKyAoXHBoYW50b217NTAwMH0pKFxwaGFudG9tezEwMDB9KSQiLCBwb3NpdGlvbjogVmVjMigwLjIsIHN0YXJ0WSArIHNwYWNpbmcgKiA1KSwgd2luZG93OiAxKQogICAgUDJWYWw6IHRhYmxlWzFdWzBdLmNvcHkocG9zaXRpb246IFZlYzIoMC4xNTUsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjgpLCB3aW5kb3c6IDEpCiAgICBJMlZhbDogdGFibGVbMV1bMV0uY29weShwb3NpdGlvbjogVmVjMigwLjMyNzUsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjgpLCB3aW5kb3c6IDEpCiAgICBQUHJpbWUyVmFsOiB0YWJsZVsxXVsyXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNTQsIHN0YXJ0WSArIHNwYWNpbmcgKiAxLjgpLCB3aW5kb3c6IDEpCiAgICBJUHJpbWUyVmFsOiB0YWJsZVsxXVszXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNzI3NSwgc3RhcnRZICsgc3BhY2luZyAqIDEuOCksIHdpbmRvdzogMSkKICAgIHN0ZXAzOiBUZXh0KCIkXHBoYW50b217VCcoMilcO30gPSA0LDMxMCwwMDAkIiwgcG9zaXRpb246IFZlYzIoMC4yLCBzdGFydFkgKyBzcGFjaW5nICogNS43NSksIHdpbmRvdzogMSkKCiAgICBzdGVwc0NvbmM6IFRleHQoIlNvLCBNaWRkbGV0b3duJ3MgdG90YWwgaW5jb21lIGlzIGluY3JlYXNpbmcgYXQgYSByYXRlIG9mIFwkNCwzMTAsMDAwIHBlciB5ZWFyLiIsIHBvc2l0aW9uOiBWZWMyKDAsIHN0YXJ0WSArIHNwYWNpbmcgKiA2LjUpLCB3aW5kb3c6IDEpCiAgKSB7CgogICAgaW50cm8xLmhpZGUoKQogICAgaW50cm8yQnVsbGV0LmhpZGUoKQogICAgaW50cm8yLmhpZGUoKQogICAgaW50cm8zQnVsbGV0LmhpZGUoKQogICAgaW50cm8zLmhpZGUoKQogICAgaW50cm80LmhpZGUoKQoKICAgIGRpdmlkZXIxLmhpZGUoKQoKICAgIHRvdGFsSW5jb21lLmhpZGUoKQogICAgdG90YWxJbmNvbWVFcS5oaWRlKCkKICAgIHRvdGFsSW5jb21lRXFFbXBoMS5oaWRlKCkKICAgIHRvdGFsSW5jb21lRXFFbXBoMi5oaWRlKCkKICAgIHJvYy5oaWRlKCkKICAgIHJvY1N0ZXAxLmhpZGUoKQogICAgcm9jU3RlcDFFbXBoMS5oaWRlKCkKICAgIHJvY1N0ZXAxRW1waDIuaGlkZSgpCiAgICByb2NTdGVwMi5oaWRlKCkKICAgIHJvY1N0ZXAyRXF1YWxzLmhpZGUoKQogICAgcm9jU3RlcDJFbXBoMS5oaWRlKCkKICAgIHJvY1N0ZXAyRW1waDIuaGlkZSgpCiAgICByb2NTdGVwMkVtcGgzLmhpZGUoKQogICAgcm9jU3RlcDJFbXBoNC5oaWRlKCkKCiAgICB0YWJsZUludHJvLmhpZGUoKQogICAgdGFibGUuaGlkZSgpCiAgICB0YWJsZVswXVswXS5oaWRlKCkKICAgIHRhYmxlWzBdWzFdLmhpZGUoKQogICAgdGFibGVbMF1bMl0uaGlkZSgpCiAgICB0YWJsZVswXVszXS5oaWRlKCkKICAgIHRhYmxlWzFdWzBdLmhpZGUoKQogICAgdGFibGVbMV1bMV0uaGlkZSgpCiAgICB0YWJsZVsxXVsyXS5oaWRlKCkKICAgIHRhYmxlWzFdWzNdLmhpZGUoKQoKICAgIFAyVmFsLmhpZGUoKQogICAgSTJWYWwuaGlkZSgpCiAgICBQUHJpbWUyVmFsLmhpZGUoKQogICAgSVByaW1lMlZhbC5oaWRlKCkKICAgIAogICAgc3RlcHNJbnRyby5oaWRlKCkKICAgIHN0ZXAxLmhpZGUoKQogICAgc3RlcDIuaGlkZSgpCiAgICBzdGVwMy5oaWRlKCkKICAgIHN0ZXBzQ29uYy5oaWRlKCkKICB9CgogIEFuaW1hdGUoKSB7CiAgICAvLyAxLWEKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfYXBwbGljYXRpb25zX29mX3Byb2R1Y3RfYW5kX3F1b3RpZW50X3J1bGVzLm1wMyIpCiAgICB3YWl0KDUwMCkKICAgIGludHJvMS5zaG93KCkKICAgIHdhaXQoNTAwKQogICAgaW50cm8yQnVsbGV0LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgaW50cm8yLnNob3coKQogICAgd2FpdCg2MDAwKQogICAgaW50cm8zQnVsbGV0LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgaW50cm8zLnNob3coKQogICAgd2FpdCg2MDAwKQogICAgaW50cm80LnNob3coKQogICAgCiAgICAvLyAxLWIKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWJfYXBwbGljYXRpb25zX29mX3Byb2R1Y3RfYW5kX3F1b3RpZW50X3J1bGVzLm1wMyIpCiAgICB0b3RhbEluY29tZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHRvdGFsSW5jb21lRXEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB0b3RhbEluY29tZUVxRW1waDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB0b3RhbEluY29tZUVxRW1waDIuc2hvdygpCiAgICB3YWl0KDcwMDApCiAgICAKICAgIC8vIDEtYwogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtY19hcHBsaWNhdGlvbnNfb2ZfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXMubXAzIikKICAgIHdhaXQoNTAwKQogICAgcm9jLnNob3coKQogICAgd2FpdCgxNTAwKQogICAgcm9jU3RlcDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICByb2NTdGVwMUVtcGgxLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgcm9jU3RlcDFFbXBoMi5zaG93KCkKICAgIHdhaXQoMTUwMCkKICAgIHJvY1N0ZXAyRXF1YWxzLnNob3coKQogIH0KCiAgUXVlc3Rpb24oaWQ6ICIgIiwgdHlwZTogIm11bHRpcGxlQ2hvaWNlIikge30KfQoKU2NlbmUoKSB7CiAgSW5pdCAoKSB7fQoKICBBbmltYXRlICgpIHsKICAgIC8vIDEtZAogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZF9hcHBsaWNhdGlvbnNfb2ZfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXMubXAzIikKICAgIHdhaXQoMzAwMCkKICAgIHJvY1N0ZXAyLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgcm9jU3RlcDJFbXBoMS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHJvY1N0ZXAyRW1waDIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICByb2NTdGVwMkVtcGgzLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgcm9jU3RlcDJFbXBoNC5zaG93KCkKICAgIHJvY1N0ZXAyRXF1YWxzLm9wYWNpdHkgPSAwCiAgICB3YWl0KDUwMDApCiAgfQp9CgpTY2VuZSgpIHsKICBJbml0KAogICkgewogIH0KCiAgQW5pbWF0ZSgpIHsKICAgIC8vIDItYQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV9hcHBsaWNhdGlvbnNfb2ZfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXMubXAzIikKICAgIHRhYmxlSW50cm8uc2hvdygpCiAgICB3YWl0KDIwMDApCiAgICAKICAgIC8vIDItYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYl9hcHBsaWNhdGlvbnNfb2ZfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXMubXAzIikKICAgIHRhYmxlLnNob3coKQogICAgd2FpdCgzODAwKQogICAgdGFibGVbMF1bMF0uc2hvdygpCiAgICB0YWJsZVswXVsxXS5zaG93KCkKICAgIHRhYmxlWzBdWzJdLnNob3coKQogICAgd2FpdCgzMDApCiAgICB0YWJsZVswXVszXS5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIAogICAgLy8gMi1jCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1jX2FwcGxpY2F0aW9uc19vZl9wcm9kdWN0X2FuZF9xdW90aWVudF9ydWxlcy5tcDMiKQogICAgd2FpdCgyMDAwKQogICAgdGFibGVbMV1bMF0uc2hvdygpCiAgICB3YWl0KDUwMCkKICAgIHRhYmxlWzFdWzFdLnNob3coKQogICAgd2FpdCg1MDApCiAgICB0YWJsZVsxXVsyXS5zaG93KCkKICAgIHdhaXQoNTAwMCkKICAgIC8vd2FpdCgxMDAwMCkKICAgIH0KCiAgICBRdWVzdGlvbihpZDogIiAiLCB0eXBlOiAic2hvcnRBbnN3ZXIiKSB7fQp9CgpTY2VuZSgpIHsKICBJbml0ICgpIHt9CgogIEFuaW1hdGUgKCkgewogICAgLy8gMi1kCiAgICB0YWJsZVsxXVszXS5zaG93KCkKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWRfYXBwbGljYXRpb25zX29mX3Byb2R1Y3RfYW5kX3F1b3RpZW50X3J1bGVzLm1wMyIpCiAgICBzdGVwc0ludHJvLnNob3coKQogICAgd2FpdCgyMDAwKQogICAgc3RlcDEuc2hvdygpCiAgICB3YWl0KDMwMDApCiAgICAKICAgIC8vIDItZQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItZV9hcHBsaWNhdGlvbnNfb2ZfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXMubXAzIikKICAgIHN0ZXAyLnNob3coKQogICAgUFByaW1lMlZhbC5vcGFjaXR5ID0gMQogICAgUFByaW1lMlZhbC5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4zNSwgc3RhcnRZICsgc3BhY2luZyAqIDUpKQogICAgSTJWYWwub3BhY2l0eSA9IDEKICAgIEkyVmFsLnBvc2l0aW9uLm1vdmUoVmVjMigwLjQ1LCBzdGFydFkgKyBzcGFjaW5nICogNSkpCiAgICBQMlZhbC5vcGFjaXR5ID0gMQogICAgUDJWYWwucG9zaXRpb24ubW92ZShWZWMyKDAuNjM3NSwgc3RhcnRZICsgc3BhY2luZyAqIDUpKQogICAgSVByaW1lMlZhbC5vcGFjaXR5ID0gMQogICAgSVByaW1lMlZhbC5wb3NpdGlvbi5tb3ZlKFZlYzIoMC43NDI1LCBzdGFydFkgKyBzcGFjaW5nICogNSkpCiAgICB3YWl0KDEwMDApCiAgICAKICAgIC8vIDItZgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItZl9hcHBsaWNhdGlvbnNfb2ZfcHJvZHVjdF9hbmRfcXVvdGllbnRfcnVsZXMubXAzIikKICAgIHdhaXQoMzAwMCkKICAgIHN0ZXAzLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgc3RlcHNDb25jLnNob3coKQogICAgd2FpdCgzMDAwKQogIH0KfQo=
+T^\prime(t) = \dfrac{d}{dt} [P(t) \cdot I(t)] = \underline{\phantom{XXXXXX}}.
+P^\prime(t) \cdot I(t) - P(t) \cdot I^\prime(t)
+The product rule uses the sum of
+P^\prime(t) \cdot I(t)
+and
+P(t) \cdot I^\prime(t)
+, not the difference.
+\dfrac{P^\prime(t) \cdot I(t) - P(t) \cdot I^\prime(t)}{[I(t)]^2}
+This option is the quotient rule for the derivative of the function
+\dfrac{P(t)}{I(t)}
+. Apply the product rule instead.
+P^\prime(t) \cdot I(t) + P(t) \cdot I^\prime(t)
+Applying the product rule to
+P(t) \cdot I(t)
+results in
+\dfrac{d}{dt} [P(t)] \cdot I(t) + P(t) \cdot \dfrac{d}{dt} [I(t)] = P^\prime(t)
+                    \cdot I(t) + P(t) \cdot I^\prime(t)
+P^\prime(t) \cdot I^\prime(t)
+The derivative of a product is not the product of the derivatives.
+                    Instead, we use the product rule to find
+\dfrac{d}{dt} [P(t) \cdot I(t)].
+I'(2) = \underline{\phantom{XXXXXX}}.
+The constant change in the average income per person in
+2002
+was
+1000
+dollars per year, so
+I'(2) = 1000
+.
+I'(2)
+represents the rate of change of the average income per person
+                  in
+2002
+.
+The constant change in the average income per person in
+2002
+was
+1000
+dollars per year.
+Biologists often measure the biomass or total mass of bacteria, which depends on
+              population size and average mass per bacterium.
+On day
+10
+of an experiment:
+Population:
+50
+thousand increasing by
+5
+thousand per day
+Biomass:
+0.5
+micrograms (
+\mu \text{g}
+), increasing by
+0.02
+\mu
+                \text{g}
+per day
+Let:
+t
+: Days since starting the experiment
+B(t)
+: Biomass (
+\mu \text{g}
+)
+P(t)
+: Population (thousands)
+M(t)
+: Average mass (
+\mu \text{g}
+per thousand)
+B(t) = P(t) \cdot M(t)
+We will find
+M^\prime(10)
+using the given rates and the product rule.
+The derivative
+B^\prime(10) = \underline{\phantom{XXXXXX}}
+correctly
+                  relates the rates of change of the biomass, the population, and the average mass
+                  at day
+10
+.
+B'(10) = P'(10) \cdot M'(10)
+The product rule should be applied instead of multiplying the rates
+                    of change of
+P(t)
+and
+M(t)
+at time
+t = 10
+.
+B'(10) = P'(10) \cdot M(10) + P(10) \cdot M'(10)
+Applying the product rule to
+B(t) = P(t) \cdot M(t)
+and
+                    substituting
+t = 10
+gives:
+\begin{align*}
+
+                      B'(t) &= P'(t) \cdot M(t) + P(t) \cdot M'(t) \\
+                      B'(10) &= P'(10) \cdot M(10) + P(10) \cdot M'(10)
+                      \end{align*}
+B'(10) = P(10) \cdot M(10)
+The expression
+P(10) \cdot M(10)
+is the biomass, not the rate
+                    of change of
+B(t)
+, at
+t = 10
+.
+The goal is to find
+M^\prime(10)
+. From
+B^\prime(10) = P^\prime(10)
+                    \cdot M(10) + P(10) \cdot M^\prime(10)
+, the known values must be organized
+                  first.
+Which table best organizes the information about population, biomass, and the
+                  rates of change for each at
+t = 10
+?
+P(10)
+P'(10)
+B(10)
+B'(10)
+50
+5
+0.5
+0.02
+P(10) = 50
+: Population of bacteria is
+50
+thousand and
+                        units of
+P
+are thousands of bacteria
+P^\prime(10) = 5
+bacteria/day: Population increases by
+5
+thousand bacteria per day
+B(10) = 0.5
+\mu \text{g}
+: Biomass of the bacteria
+B^\prime(10) = 0.02
+\mu \text{g}
+/day: Biomass increases at
+                        0.02
+\mu \text{g}
+per day
+P(10)
+P'(10)
+B(10)
+B'(10)
+5
+50
+0.02
+0.5
+The value
+P(10)
+represents the population of bacteria,
+                    measured in thousands, rather than the rate of change of the population.
+                    Likewise,
+B(10)
+represents the biomass of the bacteria, not the rate at
+                    which the biomass changes.
+P(10)
+P'(10)
+B(10)
+B'(10)
+50
+5
+0.5
+-0.02
+The value
+B^\prime(10)
+represents the rate of change of the
+                    biomass. Because the biomass is increasing,
+B^\prime(10)
+has a positive
+                    value.
+Since the biomass depends on population size and average mass per bacterium, we
+                  also need to find
+M(10)
+, the average mass at
+t = 10
+.
+Because
+B(t) = P(t) \cdot M(t)
+, we can find the average mass by
+M(t) =
+                  \dfrac{B(t)}{P(t)}
+. What is the average mass
+10
+days after the
+                  experiment started?
+M(10) = \dfrac{B(10)}{P(10)}
+\begin{align*}
+                  M(t) &= \dfrac{B(t)}{P(t)} \\
+                  M(10) &= \dfrac{B(10)}{P(10)} && \text{Substitute } t = 10\\
+                  &= \dfrac{0.5}{50} && \text{Use values from table}\\
+                  &= 0.01 && \text{Simplify}\\
+                  \end{align*}
+M(10) =
+\mu \text{g}
+per bacteria
+Find
+M^\prime(10)
+, the rate of change of the average mass at
+t=10
+,
+                  using the formula
+B'(10) = P'(10) \cdot M(10) + P(10) \cdot M'(10)
+.
+Use
+B'(10) = P'(10) \cdot M(10) + P(10) \cdot M'(10)
+to solve for
+M'(10)
+.
+Substituting values gives
+0.02 = 5 \cdot 0.01 + 50 \cdot M'(10)
+. Solve
+                  for
+M'(10).
+\begin{align*}
+                  B'(10) &= P'(10) \cdot M(10) + P(10) \cdot M'(10)\\
+                  0.02 &= 5 \cdot 0.01 + 50 \cdot M'(10) && \text{Substitute values}\\
+                  0.02 &= 0.05 + 50 \cdot M'(10) && \text{Simplify}\\
+                  M'(10) &= \dfrac{0.02 - 0.05}{50} && \text{Solve for }M'(10) \\
+                  &= -0.0006 && \text{Simplify}\\
+                  \end{align*}
+M'(10) =
+\mu \text{g}
+per thousand bacteria per day
+We found that
+M'(10) = -0.0006
+. How should we interpret this finding in
+                  the context of the research project?
+The average mass of a bacterium is decreasing at a rate of
+0.0006
+\mu
+                    \text{g}
+per thousand bacteria per day at
+t = 10
+.
+M'(10)
+is the rate of change of the average mass. A negative
+                    value shows that the average mass is decreasing, so the average bacterium will
+                    have less mass than before.
+The average mass of a bacterium is increasing at a rate of
+0.0006
+\mu
+                    \text{g}
+per thousand bacteria per day at
+t = 10
+.
+Although
+M'(10)
+represents the rate of change of the average
+                    mass, a negative value indicates that the average mass is decreasing rather than
+                    increasing.
+The mass of every bacteria has increased by
+0.0006
+\mu \text{g}.
+The value
+M'(10)
+represents the rate of change of the average
+                    mass at
+t = 10
+. A negative value indicates that the average mass
+                    decreases over time. This decrease reflects an overall average and does not
+                    occur uniformly for every bacterium.
+Pools use chlorine to keep the water clean. The chlorine concentration depends on the
+              amount of chlorine in the pool and the amount of water the pool holds.
+Three days after the pool was installed:
+The pool contains 500 grams of chlorine, and this amount is increasing by 25
+                grams per day.
+The pool holds 10,000 liters of water, and this volume is increasing by 50
+                liters per day.
+Let:
+t
+: Days since the pool was installed
+C(t)
+: Amount of chlorine (grams)
+W(t)
+: Amount of water (liters)
+The concentration
+K(t)
+equals
+\dfrac{C(t)}{W(t)}
+, measured in grams per
+              liter.
+The goal is to find how fast the concentration changes when
+t = 3
+.
+K^\prime (t) = \underline{\phantom{XXXXXX}}
+.
+K'(3) = \dfrac{C'(3)}{W'(3)}
+The derivative of a quotient is not equal to the quotient of the
+                    derivatives. The quotient rule gives
+K'(t) = \dfrac{C'(t)\cdot W(t) -
+                    C(t)\cdot W'(t)}{[W(t)]^2}.
+Substituting
+t = 3
+provides the needed
+                    rate of change.
+K'(3) = \dfrac{C'(3)\cdot W(t) - C(3) \cdot W'(t)}{[W(t)]^2}
+The chain rule is applied correctly. However, when
+t = 3
+is
+                    substituted, every instance of
+t
+must be replaced with
+3
+, not only
+                    those in
+C
+and
+C'
+.
+K'(3) = \dfrac{C'(3)\cdot W(3) - C(3) \cdot W'(3)}{[W(3)]^2}
+The quotient rule gives
+K'(t) = \dfrac{C'(t)\cdot W(t) -
+                      C(t)\cdot W'(t)}{[W(t)]^2}.
+Substituting
+t = 3
+provides the needed
+                    rate of change.
+\begin{align*}
+
+                      K'(3) &= \dfrac{C'(3)\cdot W(3) - C(3)\cdot W'(3)}{[W(3)]^2}
+                      \end{align*}
+Previously, we found that
+K'(3) = \dfrac{C'(3)\cdot W(3) - C(3) \cdot
+                  W'(3)}{[W(3)]^2}
+To find
+K'(3)
+, we need to know all the terms on the right side.
+C(3) =
+                  \underline{\phantom{XXXXXX}}
+.
+C(3)
+is the amount of chlorine in the pool
+3
+days after the
+                  installation.
+C(3) = 500
+grams is the amount of chlorine in the pool
+3
+days after the installation.
+C(3) =
+grams
+Similarly, find
+C'(3)
+.
+C'(3)
+is the rate of change of the amount of chlorine in the pool.
+C'(3) = 25
+grams per day is the rate of change of the
+                amount of chlorine in the pool.
+C'(3) =
+grams per day
+We can organize the numbers in a table for ease of reference when finding
+K'(3)
+. Which table best organizes the numbers?
+C(3)
+C'(3)
+W(3)
+W'(3)
+500
+25
+50
+10,000
+W(3)
+is the amount of water while
+W'(3)
+is the rate of
+                    change of that water. This table swaps those two values.
+C(3)
+C'(3)
+W(3)
+W'(3)
+500
+25
+10,000
+-50
+W'(3)
+is the rate of change of the water in the pool. If
+W'(3)
+were negative, then the amount of water would be decreasing. However,
+                    the amount of water is increasing.
+C(3)
+C'(3)
+W(3)
+W'(3)
+500
+25
+10,000
+50
+We previously found that
+C(3) = 500
+and that
+C'(3) = 25
+.
+W(3)
+is the amount of water in the pool
+3
+days after the pool is
+                    installed. So
+W(3) = 10,000
+liters.
+W'(3)
+is the rate of change of
+                    the amount of water in the pool
+3
+days after the pool is installed. So
+W'(3)
+                    = 50
+liters per day.
+To find
+K'(3)
+, we need the following values.
+C(3)
+C'(3)
+W(3)
+W'(3)
+500
+25
+10,000
+50
+Find
+K'(3)
+.
+Via the quotient rule,
+K'(3) = \dfrac{C'(3)\cdot W(3) - C(3) \cdot
+                  W'(3)}{[W(3)]^2}
+.
+Substitute the values from the table into the quotient rule formula.
+\begin{align*}
+                  K(t) &= \dfrac{C(t)}{W(t)}\\
+                  K'(t) &= \dfrac{C'(t)\cdot W(t) - C(t)\cdot W'(t)}{[W(t)]^2} &&
+                  \text{Quotient rule}\\
+                  K'(3) &= \dfrac{C'(3)\cdot W(3) - C(3)\cdot W'(3)}{[W(3)]^2} &&
+                  \text{Substitute } t = 3\\
+                  &= \dfrac{25 \cdot 10,000 - 500 \cdot 50}{10,000^2} &&
+                  \text{Substitute values}\\
+                  &= \dfrac{225,000}{100,000,000} && \text{Simplify}\\
+                  &= 0.00225 \\
+                  \end{align*}
+K'(3) =
+grams per liter per day
+Lesson Summary
+Use the product rule or quotient rule to determine the derivative of a function
+                at a specific time
+t
+.
+Identify and extract all required data, including the function values at time
+t
+and the derivative values provided as rates of change in the given context.
+Substitute the known function values and derivative values into the appropriate
+                product rule or quotient rule formula.
+Carry out the calculation to obtain the rate of change specified in the problem.
+Product and quotient rules
+Find
+\dfrac{d}{dx} [(x^#exponent1# + #constant1#)(x^2 - #constant2#)]
+.
+The product rule applies,
+\frac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) +
+                  f(x) \cdot g'(x)
+, with
+f(x) = x^#exponent1# + #constant1#
+and
+g(x) =
+                  x^2 - #constant2#
+.
+Also,
+f'(x) = #exponent1# x^#derived_exponent1#
+and
+g'(x) = 2x
+.
+Substituting, we obtain:
+\begin{align*}
+                  \dfrac{d}{dx} [(x^#exponent1# + #constant1#)(x^2 - #constant2#)] &= f'(x)
+                  \cdot g(x) + f(x) \cdot g'(x) && \text{Product rule} \\
+                  &= #exponent1# x^#derived_exponent1#(x^2 - #constant2#) + (x^#exponent1# +
+                  #constant1#)(2x) && \text{Substitution}
+                  \end{align*}
+-1
+x
+100
+x
+1
+x
+constant1 != constant2
+exponent1 not in (constant1, constant2)
+Find
+\dfrac{d}{dx} \left[\dfrac{x^2+#constant1#}{#coefficient#
+                x-#constant2#}\right]
+.​​
+Using the quotient rule:
+\begin{align*}
+                  \dfrac{d}{dx}\Bigl[\tfrac{x^2 + #constant1#}{#coefficient# x - #constant2#}\Bigr]
+                  &= \dfrac{\dfrac{d}{dx}[x^2 + #constant1#]\bigl(#coefficient# x -
+                  #constant2#\bigr) - \bigl(x^2 + #constant1#\bigr)\,\dfrac{d}{dx}[#coefficient# x -
+                  #constant2#]}{\bigl(#coefficient# x - #constant2#\bigr)^2}
+                  \quad & \\
+                  &= \dfrac{2x(#coefficient# x - #constant2#) - (x^2 +
+                  #constant1#)(#coefficient#)}{(#coefficient# x - #constant2#)^2}
+                  \end{align*}
+-1
+x
+100
+x
+1
+x
+coefficient != constant1
+constant2 not in (coefficient, constant1)
+The quotient rule applies:
+\frac{d}{dx} \left(\frac{f(x)}{g(x)}\right) =
+                  \frac{g(x) f^\prime (x) - f(x) g^\prime(x)}{(g(x))^2}
+A rectangle’s length
+\ell (t)
+and width
+w(t)
+change as a
+                function of time. At
+t=#t#
+hours:
+the length is
+\ell(#t#) = #length#
+meters and is increasing at a rate
+                of
+#length_rate#
+meters per hour.
+the width is
+w(#t#) = #width#
+meters and is decreasing at a rate of
+#width_rate#
+meters per hour.
+The area of the
+                rectangle is the product:
+A(t) = \ell(t) \cdot w(t)
+.
+Find
+A'(#t#)
+,
+                the rate of change of the area at
+t = #t#
+hours.
+We know that:
+\ell (#t#) = #length#
+\ell' (#t#) = #length_rate#
+w (#t#) = #width#
+w' (#t#) = -#width_rate#
+Using these values with the product rule gives:
+\begin{align*}
+                  A(t) &= \ell (t) \cdot w(t)\\
+                  A'(t) &= \ell '(t) \cdot w(t) + \ell (t)\cdot w'(t) && \text{Product
+                rule} \\
+                  A'(#t#) &= \ell '(#t#) \cdot w(#t#) + \ell(#t#)\cdot w'(#t#) &&
+                \text{Substitute } t = #t# \\
+                  &= #length_rate# \cdot #width# + #length# \cdot (-#width_rate#) &&
+                \text{Substitute}\\
+                  &= #answer# && \text{Simplify}\\
+                  \end{align*}
+Apply the product rule to
+A(t) = \ell(t) \cdot w(t),
+and substitute the
+                  appropriate values to evaluate
+A'
+at
+t = #t#
+.
+A'(#t#) =
+\text{m}^2/\text{h}
+length_rate != length
+width not in (length, length_rate)
+width_rate not in (length, length_rate, width)
+t not in (length, length_rate, width, width_rate)
+Values of functions
+q
+,
+r
+, and the derivatives:
+x
+q(x)
+q'(x)
+r(x)
+r'(x)
+#x#
+#qx#
+#qpx#
+#rx#
+#rpx#
+Let
+k(x) = \dfrac{q(x)}{r(x)}.
+​​​ Find
+k'(#x#)
+.
+Find
+k'(x)
+using the quotient rule, then substitute
+x = #x#
+:
+\begin{align*}
+                  k'(x) &= \dfrac{q'(x)r(x) - q(x)r'(x)}{[r(x)]^2} && \text{Quotient
+                  rule} \\
+                  k'(#x#) &= \dfrac{q'(#x#)r(#x#) - q(#x#)r'(#x#) }{[r(#x#)]^2} &&
+                  \text{Substitute } x = #x# \\
+                  &= \dfrac{#qpx# \cdot #rx# - #qx# \cdot #rpx#}{#rx#^2} &&
+                  \text{Substitute values from the table} \\
+                  &= \dfrac{#numerator#}{#denominator#} \\
+                  &= #answer#
+                  \end{align*}
+k'(#x#) =
+qx != x
+qpx not in (x, qx)
+rx not in (x, qx, qpx)
+rpx not in (x, qx, qpx, rx)
+numerator < 30
+numerator != 0
+Apply the quotient rule to
+k(x) = \dfrac{q(x)}{r(x)},
+and substitute
+                  the appropriate values to evaluate
+k'(#x#).

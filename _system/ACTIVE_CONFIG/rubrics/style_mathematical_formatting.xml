@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubric>
+  <metadata>
+    <name>Mathematical Formatting</name>
+    <category>style</category>
+    <version>1.0</version>
+    <focus_weight>0.8</focus_weight>
+  </metadata>
+
+  <purpose>
+    Evaluates the correct formatting, notation, and presentation of mathematical
+    content including equations, symbols, units, and mathematical typography.
+  </purpose>
+
+  <evaluation_criteria>
+    <severity level="5" label="Critical">
+      <criteria>
+        <criterion>Mathematical notation that changes meaning</criterion>
+        <criterion>Wrong or missing units causing errors</criterion>
+        <criterion>Ambiguous notation leading to misinterpretation</criterion>
+        <criterion>Incorrect operator precedence display</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Using = where ≈ is required</example>
+        <example type="violation">Missing parentheses changing order of operations</example>
+        <example type="violation">Wrong units (m vs m²) in formulas</example>
+      </examples>
+    </severity>
+
+    <severity level="4" label="Major">
+      <criteria>
+        <criterion>Significant notation standard violations</criterion>
+        <criterion>Inconsistent mathematical typography</criterion>
+        <criterion>Poor equation layout affecting readability</criterion>
+        <criterion>Missing or incorrect equation numbering</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Using x for multiplication instead of \times or \cdot</example>
+        <example type="violation">Inconsistent vector notation throughout</example>
+        <example type="violation">Equations breaking across lines improperly</example>
+      </examples>
+    </severity>
+
+    <severity level="3" label="Moderate">
+      <criteria>
+        <criterion>Moderate notation inconsistencies</criterion>
+        <criterion>Some typography issues in math</criterion>
+        <criterion>Inconsistent use of display vs inline math</criterion>
+        <criterion>Minor alignment problems in equations</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Mixing italic and roman for same variable</example>
+        <example type="violation">Inconsistent spacing around operators</example>
+        <example type="violation">Some equations unnecessarily inline</example>
+      </examples>
+    </severity>
+
+    <severity level="2" label="Minor">
+      <criteria>
+        <criterion>Small notation improvements possible</criterion>
+        <criterion>Minor typography preferences</criterion>
+        <criterion>Slight spacing adjustments needed</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Could improve equation alignment</example>
+        <example type="violation">Minor spacing around fractions</example>
+      </examples>
+    </severity>
+
+    <severity level="1" label="Trivial">
+      <criteria>
+        <criterion>Very minor formatting preferences</criterion>
+        <criterion>Optional typography enhancements</criterion>
+      </criteria>
+      <examples>
+        <example type="violation">Personal notation preferences</example>
+        <example type="violation">Optional spacing refinements</example>
+      </examples>
+    </severity>
+  </evaluation_criteria>
+
+  <diagnostic_questions>
+    <question>Is mathematical notation standard and unambiguous?</question>
+    <question>Are units clearly specified and consistent?</question>
+    <question>Is equation layout clear and readable?</question>
+    <question>Are mathematical symbols properly formatted?</question>
+    <question>Is notation consistent throughout the content?</question>
+    <question>Are display equations used appropriately?</question>
+    <question>Are multi-line equations properly aligned?</question>
+  </diagnostic_questions>
+
+  <common_patterns>
+    <good_practices>
+      <practice>Consistent notation conventions throughout</practice>
+      <practice>Proper use of display math for important equations</practice>
+      <practice>Clear alignment in multi-line derivations</practice>
+      <practice>Standard mathematical typography (operators, functions)</practice>
+      <practice>Units clearly specified with proper formatting</practice>
+      <practice>Equation numbers for referenced equations</practice>
+    </good_practices>
+    <failure_modes>
+      <failure>Using programming syntax in mathematical display</failure>
+      <failure>Inconsistent notation for same concept</failure>
+      <failure>Poor fraction and superscript readability</failure>
+      <failure>Missing units in calculations</failure>
+      <failure>Ambiguous variable subscripts</failure>
+      <failure>Text in math mode without \text{}</failure>
+    </failure_modes>
+  </common_patterns>
+
+  <cross_competency_interactions>
+    <interaction competency="Mechanical Compliance">
+      Proper LaTeX usage enables correct math formatting
+    </interaction>
+    <interaction competency="Conceptual Clarity">
+      Clear mathematical notation supports understanding
+    </interaction>
+    <interaction competency="Consistency">
+      Mathematical notation must be consistent throughout
+    </interaction>
+    <interaction competency="Accessibility">
+      Proper math markup enables assistive technology
+    </interaction>
+  </cross_competency_interactions>
+</rubric>

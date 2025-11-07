@@ -1,0 +1,410 @@
+# Learnvia Style Guide - AI Reviewer Prompt
+
+## CRITICAL MECHANICAL RULES (HIGH SEVERITY)
+
+### Contractions - NEVER ALLOWED
+**Rule**: Do not use contractions in instructional text. Spell out full expression.
+- BAD: "What's the best way..." / "Let's examine..."
+- GOOD: "What is the best way..." / "The next example..."
+- **EXCEPTION**: Possessives ARE necessary and preferred
+  - GOOD: "the square's area"
+  - BAD: "the area of the square"
+
+### Imperative Voice - RESTRICTED USE
+**FORBIDDEN** in general instruction:
+- BAD: "Find the equation. State the equation in slope-intercept form"
+- GOOD: "The equation of the graph in slope-intercept form is _____"
+
+**ALLOWED ONLY** in:
+- Teaching techniques/procedures
+- Embedded questions
+- Follow-up questions
+- Homework questions
+
+### Pronouns - RESTRICTED
+- **Do NOT use**: you, she, he, they, or it
+- **Minimal use**: "we" (only when truly referring to ourselves as people)
+- **Example**: "We read f' aloud as f prime" (acceptable)
+- **Avoid**: "We define slope as..." (use "Slope is defined as...")
+
+## WRITING MECHANICS
+
+### Contractions vs Possessives
+- NO contractions: don't → do not, what's → what is
+- YES possessives: function's derivative, square's area
+
+### Vague References
+**Do NOT use "it" or "they"**:
+- BAD: "The expression has one term. It uses two variables" (it could refer to expression or term)
+- GOOD: "The term uses two variables"
+- **Exceptions**: Sometimes yields simplicity without ambiguity
+  - "A function and its inverse..." (obviously refers to function)
+  - "Gastroenteritis is common. Its symptoms include..." (not vague, not plural)
+
+**Avoid "This is..." / "This means..." / "This" as subject**:
+- BAD: "This qualifies as a simple expression"
+- GOOD: "An expression with one term qualifies as a simple expression"
+
+### Sentence Structure
+- **Subject-verb-object** construction preferred
+- **Avoid introductory clauses**:
+  - BAD: "While we can approximate the area using rectangles, the difference..."
+  - GOOD: "We can approximate the area using rectangles. However, the difference..."
+- **No lazy starts** ("There is/are"):
+  - BAD: "There is a horizontal asymptote"
+  - GOOD: "The graph of f has a horizontal asymptote at y = 0"
+- **8th grade reading level** target
+
+### Word Choice
+- Use "so" instead of thus/hence/therefore
+- Use "Ex:" instead of e.g.
+- Use "specifically" or "that is" instead of i.e.
+- Use "substitute" instead of "plug in" or "replace"
+
+### Punctuation
+- **Commas/periods OUTSIDE quotation marks** (unless comma in quotation)
+  - Write "the limit does not exist".
+- **Serial (Oxford) comma ALWAYS**:
+  - "...cereal, pancakes, and bread with cheese"
+- **Single space between sentences**
+- **No semicolons**
+
+### Singular Form
+- Write in singular whenever possible
+- BAD: "All quadratic equations have solutions..."
+- GOOD: "Every quadratic equation has a solution..."
+
+### Synonyms and Homonyms
+- One term per concept, use exclusively
+- Ensure terminology consistent throughout
+- BAD: Alternating "average" and "mean"
+- BAD: Same word for two concepts
+
+## DEFINITIONS
+
+**Format**: `<definition><b>[Term]</b> is [definition].</definition>`
+
+**Rules**:
+- Key terms appear in framing text between definition tags
+- Standalone statement when first used
+- Begin with key term and verb "is"
+- Article (a, an, the) may appear before term
+- Define in singular form
+- Explain what something IS, not what it DOES
+- Only one term per definition
+
+**Example**: "A function is a rule that assigns exactly one output for every input."
+
+## EXAMPLES
+
+- Use "Ex:" to introduce examples
+- Use simplest example when introducing concepts
+  - Start with x², move to 3x² + 2x + 1 later
+- Avoid complex/abstract examples early
+
+## MATHEMATICAL STYLE RULES
+
+### Functions and Equations
+- **Equation**: Mathematical statement (y = 2x + 3 is an equation, NOT a function)
+- **Function**: Operation with input/output (f(x) = 2x + 3 is a function)
+
+### Absolute Value Wording
+- "_____ has an absolute maximum (or minimum) of _____ at _____"
+- Example: "The function has an absolute maximum of 5 at x = 3"
+- NOT: "The graph has an absolute maximum" (use "The function represented by the graph...")
+- For specific quantities: "The area is maximum at..., and the maximum area is..."
+
+### Annotations
+- **Do NOT annotate lines of calculations** (runs off screen on mobile)
+- Include opening phrase/sentence before calculations if needed
+- Example: "Using the product rule, we obtain…"
+
+### Blank Spaces in Questions
+- Template/storyboard: five underscores (_____)
+- Question stems/hints: `\underline{\phantom{XXXXXX}}`
+- In fractions: `\boxed{\phantom{XXXXXX}}`
+- Six Xs yield width of about 5 underscores
+
+### Coordinate Plane/Grid
+- Label positive x- and y-axes on ALL graphs
+- Specific quadrants: capitalize and use Roman numerals (Quadrant I, II, III, IV)
+
+### Coordinates
+- **Include space after comma**: (14, 20)
+- **4-digit numbers**: NO comma within numbers, just space after comma: (4000, 2570)
+- **Avoid 4+ digit numbers when possible**
+- **5+ digits**: Use commas in numbers: (22,305; 14,672)
+
+### Dataset
+- One word (not data set)
+
+### Decimals
+- **Leading zero for decimals < 1**: 0.333
+
+### Definite Articles
+- Remove unnecessary "the" before variables
+- Avoid: "solve for the x"
+
+### Fractions
+- **No mixed numbers**
+- **Align vertically** using `\frac` or `\dfrac`
+- **Exception**: In subscripts/superscripts, align horizontally
+- **Do NOT use \dfrac in short-answer correct answers** (platform limitation)
+
+### Hyphenation REQUIRED for:
+- point-slope formula
+- S-shaped, U-shaped, V-shaped
+- x-axis, y-axis
+- x-coordinate, y-coordinate
+- x-intercept, y-intercept
+- x-value, y-value
+- x-variable, y-variable
+
+### LaTeX Coding
+**ALL numerals and mathematics MUST be coded in LaTeX**
+
+**Units**:
+- Code using `\text{__}`
+- Space needed before unit: `<m>5\text{ cm}</m>`
+- Unit abbreviations: NO period unless ending sentence
+- Abbreviations identical for singular/plural (no 's')
+
+**Punctuation**:
+- ALL punctuation following LaTeX MUST be WITHIN the LaTeX
+- `<m>y=2x+1\text{,}</m>` represents the tangent line
+- `<m>f(x)=x^2-3\text{.}</m>`
+
+**Other**:
+- Use display style for offset equations, sigma, integrals, limits
+- Use align environment for system of equations
+- Refer to online editor: https://latexeditor.lagrida.com/
+
+### Mathematical Labels
+- **Uppercase and italics** for line and point labels: line AB, point C
+- **Uppercase** for angle labels: angle ABC
+- **Lowercase** for sides of geometric figures: side a
+
+### Mathematical Symbols Placement
+- **Never begin sentence with symbol**
+- BAD: "f(x) = 2x + 3 is a line..."
+- GOOD: "The function f(x) = 2x + 3 is a line..."
+
+### Measurements
+- Include units when appropriate
+- Spell out unit not preceded by number: "several feet"
+- Abbreviations: no period (12 sec, not 12 sec.)
+- Don't include units in calculations until final answer
+- **Ratios with units**: use slash (cm³/sec)
+- **Use U.S. customary units** vs imperial as much as possible
+
+**Common Abbreviations**:
+- Length: mm, cm, m, km, in (or ″), ft (or '), yd, mi
+- Area: mm², cm², m², km², in², ft², yd², mi²
+- Volume: mm³, cm³, m³, in³, ft³, yd³
+- Weight: mg, g, kg, oz, lb, tn
+- Liquid: mL (capital L), L, tbsp, tsp, c, fl oz, pt, qt, gal
+- Time: ms, s, sec, min, hr, d/day, wk, mo, yr
+- Temperature: °C, °F, K (no degree symbol)
+
+### Multiplication Symbols
+- Use `\cdot` for multiplication, scientific notation, dimensions
+- **Do NOT include \cdot in formulas**
+- **Do NOT use \cdot when evaluating expressions**
+
+### Names of Theorems/Properties/Rules
+- **Theorems, properties, postulates**: Capitalize all key words
+  - "Use the Mean Value Theorem"
+- **Rules, formulas, scientific laws**: Lowercase
+  - "Use the rate of change formula"
+  - "Use the chain rule"
+- **In titles/labels**: Capitalize only first word (except proper names/theorems)
+  - "Chain rule"
+  - "Pythagorean Theorem"
+
+### Numbers
+- **Mathematical contexts**: Use numerals for single-digit (1, 2, 3...)
+  - "A person has 1 truck and 12 bicycles"
+- **Non-mathematical contexts**: Spell out single-digit, numerals for 10+
+  - "One helpful strategy is..."
+- **Exceptions**:
+  - Large numbers: $1 million/billion/trillion
+  - Always numerals for negative: –30°F
+  - Numerals and en dashes for ranges: 3–8
+  - Word problems: numerals for ALL numbers
+  - Eliminate comma in 4-digit numbers: 4389
+  - Use commas in 5+ digits: 22,305
+
+### Ordinal Numbers
+- **No superscript**: 12th (not 12ᵗʰ)
+- **Spell out in non-mathematical contexts**: "fourteenth hole"
+
+### Parentheses
+- **Include in these expressions**: f(x), g'(x)
+- **Use outer parentheses for operators like ln**, not for integrals:
+  - ln(x² + 1) not ln x² + 1
+  - ∫x² dx not ∫(x²) dx
+  - d/dx(sin x) not d/dx sin x
+
+### Greek Symbols
+- Use mathematical symbol (except when introducing, so student knows pronunciation)
+- Do NOT use word "pi"
+
+### Point-Slope Formula
+- Use y - y₁ = m(x - x₁)
+
+### Prime Symbol
+- Use apostrophe: f'(x) or f''(x)
+- Alternatively use `\prime`: f\prime(x)
+
+### Punctuation in Mathematical Writing
+- **Equations/inequalities are complete sentences**: punctuate as such
+  - "For any real number x, the function f is defined by f(x) = x² + 1."
+- **Expressions are NOT complete sentences**: no end punctuation unless integrated
+  - "What is the derivative expression?" → 2x + 1
+  - "In this case, the derivative expression is 2x + 1."
+- **Do NOT punctuate offset equations with period**
+
+### Ratios
+- No space before/after colon: 1:2 (not 1 : 2)
+
+### Since/Because with "If..., then..."
+- Use "because" (not "since") for causal relationships
+- **Do NOT mix causal + conditional**:
+  - BAD: "Since P, then Q" or "Because P, then Q"
+  - GOOD: "Because P, Q" or "Since P, Q"
+
+### Tables
+- **Bold and sentence case** for titles and headings
+- Consistent format for all headings
+- **Include units in headings**, not with each entry
+
+### Trigonometric and Logarithmic Operations
+- **Always use parentheses**:
+  - cos(30°), sin(x), sin(x²), ln(x + 1), log(x)
+
+### "When Solving"
+- Acceptable: "When solving for the maximum area..."
+- Better: Specify action: "When differentiating f(x), we apply the chain rule..."
+
+### Zero/Zeros
+- **Within narrative**: Use word "zero" (not numeral)
+  - "The derivative is zero" (not "is 0")
+- **Plural**: zeros
+
+## GENERAL WRITING STYLE
+
+### Abbreviations/Acronyms
+- Write out full term on first introduction in each module
+- Afterward, acronym can be used alone in module and homework
+- Example: "Intermediate Value Theorem (IVT)... Using the IVT..."
+
+### General References
+- **Avoid pop culture, regional, colloquial, idiomatic expressions**
+- BAD: "Nike manufactures..." / "buzz wears off" / "pick up steam"
+- GOOD: "A company manufactures..." / "excitement fades" / "begin to increase"
+
+### Hyphens and Dashes
+- **Hyphen (-)**: Connect compound words (first-order equation, three-dimensional)
+- **En dash (–)**: Number ranges (1990–2000, Monday–Friday, 1–10)
+- **No em-dashes**
+
+### Inclusive Language
+- **Avoid references to**: gender, sexual orientation, age, race, ethnicity, disability, socioeconomic status
+- **Avoid cultural/gender stereotypes**
+- **Use roles, not names/pronouns**: the student, an engineer, the biologist
+- **Repeat noun to avoid pronouns**:
+  - BAD: "A chemist... She records..."
+  - GOOD: "A chemist... The chemist records..."
+- **Reference**: The Diversity Style Guide (www.diversitystyleguide.com)
+
+### Lists (Bulleted and Numbered)
+- **Parallel structure**: Same grammatical form for all items
+- **Punctuation**:
+  - Complete sentences: use periods
+  - Fragments: omit periods
+- **Capitalize** first word of each item
+- **Use bullets** for unordered items
+- **Use numbers** for sequential steps or ranking
+- Keep concise, avoid mixing long/short
+
+### Parallelism
+- Similar ideas follow same grammatical pattern
+- BAD: "identifying, then simplify, and solving"
+- GOOD: "identifying, simplifying, and solving"
+
+### Sentence Case in Labels/Titles
+- Initial capitalize ONLY first word (except proper nouns)
+- "Figure 1.1. A function approaching a limit" (not "A Function Approaching a Limit")
+
+### That vs. Which
+- **That**: Essential clause, NO comma before
+  - "The limit of a function f(x) is a value that f(x) approaches..."
+- **Which**: Non-essential clause, comma before
+  - "...approaches π, which means lim..."
+
+### Tone
+- **Conversational and friendly**, not elevated and formal
+- Dialogue with students, not textbook
+- Remember: diverse population from underserved communities
+
+### Voice
+- **Generally active** for clarity
+- **Passive acceptable** when not specifying actor
+  - "Multiplication is applied first in an expression..."
+
+## ACCESSIBLE STYLE RULES
+
+### Ableist Language
+- Do NOT use ableist language
+- Avoid idioms assuming particular abilities:
+  - Avoid: "walk down the street", "we see here", "as you may have heard"
+
+### Color
+- **Do NOT reference items by color alone**
+- Refrain from using color in descriptions unless relevant/key
+- BAD: "The officer wore a blue uniform"
+- GOOD: "The officer wore a police uniform"
+- **When identifying visual element, use labeled names**: f(x) and g(x) (not "the red and blue functions")
+
+### Directional Language
+- **Do NOT use language referencing visual location**:
+  - BAD: "In the graph below...", "The equation above...", "The function on the left..."
+  - GOOD: "In the following graph...", "The given equation...", "The function f(x)..."
+- Consider accessibility for screenreader users
+- **EXCEPTION**: Mathematical directional language IS allowed:
+  - "The left-hand / right-hand limit"
+  - "As x approaches 2 from the left..."
+  - "Divide the right-hand side of the equation by 3..."
+
+## SEVERITY INDICATORS
+
+### HIGH SEVERITY (Must Fix):
+- Contractions in instructional text
+- Imperative voice in general instruction (not in techniques/questions)
+- Personal pronouns (you, it, they in vague references)
+- Missing LaTeX for numerals/math
+- Incorrect LaTeX punctuation (outside instead of inside)
+- Missing space in coordinates
+- Mixed numbers instead of improper fractions
+- Beginning sentences with mathematical symbols
+- Directional language (below/above/left/right)
+
+### MEDIUM SEVERITY (Should Fix):
+- Missing serial comma
+- Using e.g./i.e. instead of Ex:/specifically
+- "There is/are" lazy starts
+- Pop culture/colloquial references
+- Non-parallel structure
+- Missing units in tables/headings
+- Inconsistent terminology (synonyms)
+
+### LOW SEVERITY (Polish):
+- Excessive use of "we"
+- Could use more concise phrasing
+- Could improve sentence structure (introductory clauses)
+- Style inconsistencies
+
+## REFERENCES
+- Spelling/hyphenation: Merriam-Webster Dictionary (www.merriam-webster.com)
+- Style/usage/grammar: The Chicago Manual of Style, 18e (www.chicagomanualofstyle.org)
+- Inclusive terminology: The Diversity Style Guide (www.diversitystyleguide.com)

@@ -1,0 +1,1964 @@
+<Module uuid="1428e133-dc98-496e-851b-7319e9f2a9df">
+  <title>Average and instantaneous velocity</title>
+  <description>Average and instantaneous velocity</description>
+  <LearningOutcomes ids="2.3.1,2.3.2" />
+  <Activities>
+    <Activity type="lesson" when="pre" uuid="c51d1365-671c-4b2a-9d56-fe56ac63b337">
+      <title>Modeling an object’s position</title>
+      <LearningOutcomes ids="2.3.1" />
+      <Resources>
+        <TextResource duration="1" uuid="43f2c28e-23be-49ff-99a8-6eb2c21004cf">
+          <KSAs primary="KSA2.3.1" secondary="Todo" uuid="e7501ca9-5ab2-4f63-a3de-ce9c6f2d34fd" />
+          <Text uuid="963ed0b7-447a-4e53-b965-066304b17570">
+            <p>Understanding position functions allows us to model real-world motion. By
+              representing position as a function of time, mathematics provides a way to predict and
+              analyze movement. Tables, graphs, and formulas work together to tell the complete
+              story of an object’s motion over time.</p>
+            <p>In this lesson, the height of a ball thrown straight upward is described by the
+              function <m>s(t)=-16t^2+v_0t+h_0</m>, where time <m>t</m>, initial velocity <m>v_0</m>,
+              and starting height <m>h_0</m> determine the ball’s position at any given moment. This
+              approach forms the foundation for countless applications in science, engineering, and
+              technology.</p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="2" uuid="795bda12-c2e7-41cd-84a6-e4f0d14dedb8">
+          <title>Modeling an object’s position</title>
+          <KSAs primary="Todo" secondary="Todo" />
+          <Track kind="narration" src="tracks/795bda12-c2e7-41cd-84a6-e4f0d14dedb8_narration.vtt" />
+          <Track kind="description"
+            src="tracks/795bda12-c2e7-41cd-84a6-e4f0d14dedb8_description.vtt" />
+          <Code>
+            Ly9DVEQ6IExpemJldGgKLy9Db252ZXJ0ZWQgdG8gQXJjIDEwLzEzLzIwMjUKQ2FudmFzKHdpbmRvd3M6IDApClNjZW5lKCkgewogIEluaXQoCiAgICAvL2NvbG9ycwogICAgdENvbG9yOiBDb2xvci5wdXJwbGUKICAgIHNDb2xvcjogQ29sb3IuZ3JlZW4KICAgIGJhbGxDb2xvcjogQ29sb3IucmVkCiAgICBzZWNhbnRDb2xvcjogQ29sb3IuYmx1ZQogICAgdGFuZ2VudENvbG9yOiBDb2xvci5vcmFuZ2UKCiAgICBkaXYxOiBSdWxlKFZlYzIoMCwgMC42KSwgVmVjMigxLCAwLjYpKQogICAgZGl2MjogUnVsZShWZWMyKDAuNSwgMCksIFZlYzIoMC41LCAxKSkKCiAgICAvL3RvIHVzZSB0aHJvdWdob3V0CiAgICBwMV94OiAwCiAgICBwMl94OiAxCiAgICBwM194OiA0CiAgICBwNF94OiA1CiAgICBwNV94OiA4CiAgICBzOiAoLTE2ICogKHgpXjIpICsgKDEyOCAqIHgpCiAgICBiYWxsX3g6IDAKCiAgICAvL3F1YWRyYW50IDEKICAgIHRpdGxlMTogVGV4dCgiTW90aW9uIG9mIGEgYmFsbCIsIHBvc2l0aW9uOiBWZWMyKDAuMTg1LCAwKSkKCiAgICBiYWxsOiBQb2ludChWZWMyKC0xLCBgcyhiYWxsX3gpYCksIGNvbG9yOiBiYWxsQ29sb3IpCiAgICBiYWxsTGluZTogVkxpbmUoeDogYmFsbC5jb29yZGluYXRlcy54LCByYW5nZTogSW50ZXJ2YWwoMCwgYGJhbGwuY29vcmRpbmF0ZXMueWApLCBjb2xvcjogc0NvbG9yKQogICAgdXB3YXJkUG9pbnQ6IFBvaW50KFZlYzIoMS4yNSwgYHMoYmFsbF94KWApLCBjb2xvcjogYmFsbENvbG9yKQogICAgdXB3YXJkTGluZTogVkxpbmUoeDogdXB3YXJkUG9pbnQuY29vcmRpbmF0ZXMueCwgcmFuZ2U6IEludGVydmFsKDAsIGBiYWxsLmNvb3JkaW5hdGVzLnlgKSkKICAgIGRvd253YXJkUG9pbnQ6IFBvaW50KFZlYzIoMi4yNSwgYHMoYmFsbF94KWApLCBjb2xvcjogYmFsbENvbG9yKQogICAgZG93bndhcmRMaW5lOiBWTGluZSh4OmRvd253YXJkUG9pbnQuY29vcmRpbmF0ZXMueCwgcmFuZ2U6IEludGVydmFsKGBiYWxsLmNvb3JkaW5hdGVzLnlgLCBzKHAzX3gpKSkKICAgIG51bUxpbmU6IEdyYXBoKAogICAgICBpbmRlbnQ6IGZhbHNlCiAgICAgIHNpemU6IFZlYzIoMC40LCAwLjQpCiAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMDUsIDAuMSkKICAgICAgY2hpbGRyZW46IFsKICAgICAgICAvLyBQb2ludChWZWMyKDIsIDIpKQogICAgICAgIGJhbGxMaW5lCiAgICAgICAgdXB3YXJkTGluZQogICAgICAgIGRvd253YXJkTGluZQogICAgICAgIGJhbGwKICAgICAgICB1cHdhcmRQb2ludAogICAgICAgIGRvd253YXJkUG9pbnQKICAgICAgCiAgICAgIF0KICAgICAgZG9tYWluOiBJbnRlcnZhbCgtMS4xLCAzKQogICAgICByYW5nZTogSW50ZXJ2YWwoMCwgMzAwLCA2MCkKICAgICAgeUF4aXM6IFRleHQoIiRzJCIsIGNvbG9yOiBzQ29sb3IpCiAgICAgIHNob3dZQXhpczogZmFsc2UKICAgICAgc2hvd1hBeGlzOiBmYWxzZQogICAgKQogICAgYmFsbExhYmVsWDogMC4wNjQKICAgIGJhbGxMYWJlbDogVGV4dCgiJCNyb3VuZChgYmFsbC5jb29yZGluYXRlcy55YCwgMCkjJCBmdCIsIHBvc2l0aW9uOiBWZWMyKGJhbGxMYWJlbFgsIDAuNDcpLCBjb2xvcjogc0NvbG9yKQogICAgdXB3YXJkTGFiZWw6IFRleHQoIlVwd2FyZCIsIHBvc2l0aW9uOiBWZWMyKDAuMjQsIDAuNSkpCiAgICBkb3dud2FyZExhYmVsOiBUZXh0KCJEb3dud2FyZCIsIHBvc2l0aW9uOiBWZWMyKDAuMzQsIDAuNSkpCgogICAgLy9sYWJlbHMgdG8gZmx5IGRvd24gdG8gdGFibGUKICAgIHAxc0xhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkcyA9IFw7JCIpLCBUZXh0KCIkI3MocDFfeCkjJCIpLCBUZXh0KCIkXDskcyIpXSwgcG9zaXRpb246IFZlYzIoMC4xNzUsIDAuNSksIGNvbG9yOiBzQ29sb3IpCiAgICBwMXRMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHQgPSBcOyQiKSwgVGV4dCgiJCNwMV94IyQiKSwgVGV4dCgiJFw7JGZ0IildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC40NSksIGNvbG9yOiB0Q29sb3IpCiAgICBwMXNGbHk6IHAxc0xhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjIwNCwgMC41KSwgY29sb3I6IHNDb2xvciwgekluZGV4OiAyKQogICAgcDF0Rmx5OiBwMXRMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC4yMDIyNSwgMC40NSksIGNvbG9yOiB0Q29sb3IsIHpJbmRleDogMikKICAgIAogICAgcDJzTGFiZWw6IFRleHQoY29udGVudDogW1RleHQoIiRzID0gXDskIiksIFRleHQoIiQjcyhwMl94KSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC4zNSksIGNvbG9yOiBzQ29sb3IpCiAgICBwMnRMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHQgPSBcOyQiKSwgVGV4dCgiJCNwMl94IyQiKSwgVGV4dCgiJFw7JGZ0IildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC4zKSwgY29sb3I6IHRDb2xvcikKICAgIHAyc0ZseTogcDJzTGFiZWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuMjA0LCAwLjM1KSwgY29sb3I6IHNDb2xvciwgekluZGV4OiAyKQogICAgcDJ0Rmx5OiBwMnRMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC4yMDIyNSwgMC4zKSwgY29sb3I6IHRDb2xvciwgekluZGV4OiAyKQogICAgCiAgICBwM3NMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHMgPSBcOyQiKSwgVGV4dCgiJCNzKHAzX3gpIyQiKSwgVGV4dCgiJFw7JHMiKV0sIHBvc2l0aW9uOiBWZWMyKDAuMTc1LCAwLjE1KSwgY29sb3I6IHNDb2xvcikKICAgIHAzdExhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkdCA9IFw7JCIpLCBUZXh0KCIkI3AzX3gjJCIpLCBUZXh0KCIkXDskZnQiKV0sIHBvc2l0aW9uOiBWZWMyKDAuMTc1LCAwLjEpLCBjb2xvcjogdENvbG9yKQogICAgcDNzRmx5OiBwM3NMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC4yMDQsIDAuMTUpLCBjb2xvcjogc0NvbG9yLCB6SW5kZXg6IDIpCiAgICBwM3RGbHk6IHAzdExhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjIwMjI1LCAwLjEpLCBjb2xvcjogdENvbG9yLCB6SW5kZXg6IDIpCgogICAgcDRzTGFiZWw6IFRleHQoY29udGVudDogW1RleHQoIiRzID0gXDskIiksIFRleHQoIiQjcyhwNF94KSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjQsIDAuMTc1KSwgY29sb3I6IHNDb2xvcikKICAgIHA0dExhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkdCA9IFw7JCIpLCBUZXh0KCIkI3A0X3gjJCIpLCBUZXh0KCIkXDskZnQiKV0sIHBvc2l0aW9uOiBWZWMyKDAuNCwgMC4xMjUpLCBjb2xvcjogdENvbG9yKQogICAgcDRzRmx5OiBwNHNMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC40ICsgMC4wMjksIDAuMTc1KSwgY29sb3I6IHNDb2xvciwgekluZGV4OiAyKQogICAgcDR0Rmx5OiBwNHRMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC40ICsgMC4wMjcyNSwgMC4xMjUpLCBjb2xvcjogdENvbG9yLCB6SW5kZXg6IDIpCgogICAgcDVzTGFiZWw6IFRleHQoY29udGVudDogW1RleHQoIiRzID0gXDskIiksIFRleHQoIiQjcyhwNV94KSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjQsIDAuNDc1KSwgY29sb3I6IHNDb2xvcikKICAgIHA1dExhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkdCA9IFw7JCIpLCBUZXh0KCIkI3A1X3gjJCIpLCBUZXh0KCIkXDskZnQiKV0sIHBvc2l0aW9uOiBWZWMyKDAuNCwgMC40MjUpLCBjb2xvcjogdENvbG9yKQogICAgcDVzRmx5OiBwNXNMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC40ICsgMC4wMjksIDAuNDc1KSwgY29sb3I6IHNDb2xvciwgekluZGV4OiAyKQogICAgcDV0Rmx5OiBwNXRMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC40ICsgMC4wMjcyNSwgMC40MjUpLCBjb2xvcjogdENvbG9yLCB6SW5kZXg6IDIpCgogICAgc0VxOiBUZXh0KCIkcyh0KSA9IC0xNnReMiArIDEyOHQkIiwgcG9zaXRpb246IFZlYzIoMC4xNywgMC4yNSkpCiAgICBzVGV4dDogVGV4dCgiJFxidWxsZXQgXDtzJDogYmFsbCdzIHBvc2l0aW9uIChmZWV0KSIsIHBvc2l0aW9uOiBWZWMyKDAuMTcsIDAuMyksIGNvbG9yOiBzQ29sb3IpCiAgICB0VGV4dDogVGV4dCgiJFxidWxsZXQgXDt0JDogdGltZSAoc2Vjb25kcykiLCBwb3NpdGlvbjogVmVjMigwLjE3LCAwLjM1KSwgY29sb3I6IHRDb2xvcikKCiAgICB0aXRsZTI6IFRleHQoIlRhYnVsYXIgcmVwcmVzZW50YXRpb24iLCBwb3NpdGlvbjogVmVjMigwLjE1NSwgMC42NSkpCgogICAgdGFibGUxOiBUYWJsZSgKICAgICAgW1JvdyhbVGV4dCgiJHQkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQjcDFfeCMkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQjcDJfeCMkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQjcDNfeCMkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQjcDRfeCMkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQjcDVfeCMkIiwgY29sb3I6IHRDb2xvcildKSwKICAgICAgUm93KFtUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkcygkIiwgY29sb3I6IHNDb2xvciksIFRleHQoIiR0JCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkKSQiLCBjb2xvcjogc0NvbG9yKV0pLCBUZXh0KCIkI3MocDFfeCkjJCIsIGNvbG9yOiBzQ29sb3IpLCBUZXh0KCIkI3MocDJfeCkjJCIsIGNvbG9yOiBzQ29sb3IpLCBUZXh0KCIkI3MocDNfeCkjJCIsIGNvbG9yOiBzQ29sb3IpLCBUZXh0KCIkI3MocDRfeCkjJCIsIGNvbG9yOiBzQ29sb3IpLCBUZXh0KCIkI3MocDVfeCkjJCIsIGNvbG9yOiBzQ29sb3IpXSldLAogICAgICBwb3NpdGlvbjogVmVjMigwLjA1LCAwLjc1KSwKICAgICAgY2VsbFdpZHRoOiA4MCwgY2VsbEhlaWdodDogMTAKICAgICkKICAgIHJvdzFBcnJ3OiBSdWxlKFZlYzIoMC4wMjUsIDAuNzgpLCBWZWMyKDAuMDc1LCAwLjc4KSwgc3Ryb2tlOiAzLCByaWdodEVuZDogImFycm93IikKICAgIHJvdzJBcnJ3OiBSdWxlKFZlYzIoMC4wMjUsIDAuODQ1KSwgVmVjMigwLjA2NywgMC44NDUpLCBzdHJva2U6IDMsIHJpZ2h0RW5kOiAiYXJyb3ciKQogICAgdGl0bGUzOiBUZXh0KCJHcmFwaGljYWwgcmVwcmVzZW50YXRpb24iLCBwb3NpdGlvbjogVmVjMigwLjYzNSwgMCkpCiAgICAKICAgIAogICAgcDE6IFBvaW50KFZlYzIocDFfeCwgcyhwMV94KSksIGxhYmVsOiAiJCgjcDFfeCMsICNzKHAxX3gpIykkIiwgY29sb3I6IGJhbGxDb2xvciwgbGFiZWxBbmNob3I6ICJ0b3AtbGVmdCIpCiAgICBwMjogUG9pbnQoVmVjMihwMl94LCBzKHAyX3gpKSwgbGFiZWw6ICIkKCNwMl94IywgI3MocDJfeCkjKSQiLCBjb2xvcjogYmFsbENvbG9yKQogICAgdGljazJ4OiBWTGluZSh4OiBwMl94LCByYW5nZTogSW50ZXJ2YWwoMCwgNy41KSkKICAgIHRpY2syeTogSExpbmUoeTogcyhwMl94KSwgZG9tYWluOiBJbnRlcnZhbCgwLCAwLjE1KSkKICAgIHAzOiBQb2ludChWZWMyKHAzX3gsIHMocDNfeCkpLCBsYWJlbDogIiQoI3AzX3gjLCAjcyhwM194KSMpJCIsIGxhYmVsQW5jaG9yOiAidG9wIiwgY29sb3I6IGJhbGxDb2xvcikKICAgIHRpY2szeDogVkxpbmUoeDogcDNfeCwgcmFuZ2U6IEludGVydmFsKDAsIDcuNSkpCiAgICB0aWNrM3k6IEhMaW5lKHk6IHMocDNfeCksIGRvbWFpbjogSW50ZXJ2YWwoMCwgMC4xNSkpCiAgICBwNDogUG9pbnQoVmVjMihwNF94LCBzKHA0X3gpKSwgbGFiZWw6ICIkKCNwNF94IywgI3MocDRfeCkjKSQiLCBjb2xvcjogYmFsbENvbG9yKQogICAgdGljazR4OiBWTGluZSh4OiBwNF94LCByYW5nZTogSW50ZXJ2YWwoMCwgNy41KSkKICAgIHRpY2s0eTogSExpbmUoeTogcyhwNF94KSwgZG9tYWluOiBJbnRlcnZhbCgwLCAwLjE1KSkKICAgIHA1OiBQb2ludChWZWMyKHA1X3gsIHMocDVfeCkpLCBsYWJlbDogIiQoI3A1X3gjLCAjcyhwNV94KSMpJCIsIGNvbG9yOiBiYWxsQ29sb3IpCiAgICB0aWNrNXg6IFZMaW5lKHg6IHA1X3gsIHJhbmdlOiBJbnRlcnZhbCgwLCA3LjUpKQogICAgdGljazV5OiBITGluZSh5OiBzKHA1X3gpLCBkb21haW46IEludGVydmFsKDAsIDAuMTUpKQogICAgcEF0eDI6IFBvaW50KFZlYzIoMiwgcygyKSksIGxhYmVsOiAiJCgyLCAjcygyKSMpJCIsIGNvbG9yOiBiYWxsQ29sb3IpCiAgICB0aWNrQXR4Mng6IFZMaW5lKHg6IDIsIHJhbmdlOiBJbnRlcnZhbCgwLCA3LjUpKQogICAgdGlja0F0eDJ5OiBITGluZSh5OiBzKDIpLCBkb21haW46IEludGVydmFsKDAsIDAuMTUpKQogICAgcmlzZUxpbmUxOiBWTGluZSh4OiBwMl94LCByYW5nZTogSW50ZXJ2YWwoMCwgMCksIGNvbG9yOiBDb2xvci5ncmF5LCBkYXNoZWQ6IHRydWUpCiAgICBydW5MaW5lMTogSExpbmUoeTogcyhwMl94KSwgZG9tYWluOiBJbnRlcnZhbChwMl94LCBwMl94KSwgY29sb3I6IENvbG9yLmdyYXksIGRhc2hlZDogdHJ1ZSkKICAgIHJpc2VMaW5lMjogVkxpbmUoeDogMiwgcmFuZ2U6IEludGVydmFsKDAsIDApLCBjb2xvcjogQ29sb3IuZ3JheSwgZGFzaGVkOiB0cnVlKQogICAgcnVuTGluZTI6IEhMaW5lKHk6IDE5MiwgZG9tYWluOiBJbnRlcnZhbCgyLCAyKSwgY29sb3I6IENvbG9yLmdyYXksIGRhc2hlZDogdHJ1ZSkKICAgIGdyYXBoOiBHcmFwaCgKICAgICAgaW5kZW50OiBmYWxzZQogICAgICBzaXplOiBWZWMyKDAuMywgMC40KQogICAgICBwb3NpdGlvbjogVmVjMigwLjYsIDAuMSkKICAgICAgY2hpbGRyZW46IFsKICAgICAgICBGdW5jKHMpCiAgICAgICAgcmlzZUxpbmUxCiAgICAgICAgcnVuTGluZTEKICAgICAgICByaXNlTGluZTIKICAgICAgICBydW5MaW5lMgogICAgICAgIHRpY2syeAogICAgICAgIHRpY2syeQogICAgICAgIHRpY2szeAogICAgICAgIHRpY2szeQogICAgICAgIHRpY2s0eAogICAgICAgIHRpY2s0eQogICAgICAgIHRpY2s1eAogICAgICAgIHRpY2s1eQogICAgICAgIHRpY2tBdHgyeAogICAgICAgIHRpY2tBdHgyeQogICAgICAgIHAxCiAgICAgICAgcDIKICAgICAgICBwMwogICAgICAgIHA0CiAgICAgICAgcDUKICAgICAgICBwQXR4MgogICAgICAKICAgICAgXQogICAgICBkb21haW46IEludGVydmFsKDAsIDgpCiAgICAgIHJhbmdlOiBJbnRlcnZhbCgwLCAzMDAsIDYwKQogICAgICB4QXhpczogVGV4dCgiJHRcdGV4dHsgKHNlYyl9JCIsIGNvbG9yOiB0Q29sb3IpCiAgICAgIHlBeGlzOiBUZXh0KCIkc1x0ZXh0eyAoZnQpfSQiLCBjb2xvcjogc0NvbG9yKQogICAgICBzaG93WEF4aXNOdW1iZXJzOiBmYWxzZQogICAgICBzaG93WUF4aXNOdW1iZXJzOiBmYWxzZQogICAgKQogICAgcmlzZUxhYmVsMTogVGV4dCgiUG9zaXRpb24gYXRcbiR0ID0gI3AyX3gjJCBzIiwgcG9zaXRpb246IFZlYzIoMC42NCwgMC4zOTYpLCBjb2xvcjogc0NvbG9yKQogICAgcmlzZUxhYmVsMjogVGV4dCgiUG9zaXRpb24gYXRcbiR0ID0gMiQgcyIsIHBvc2l0aW9uOiBWZWMyKDAuNjc1LCAwLjM1KSwgY29sb3I6IHNDb2xvcikKCiAgICB4MkxhYmVsOiBUZXh0KCIkMiQiLCBwb3NpdGlvbjogVmVjMigwLjY2MzUsIDAuNDk0KSwgY29sb3I6IHRDb2xvcikKCiAgICBwMUZseTogRG90KHBvc2l0aW9uOiBWZWMyKDAuMjc5MSwgMC40OTcpLCBjb2xvcjogYmFsbENvbG9yKQogICAgcDJGbHk6IERvdChwb3NpdGlvbjogVmVjMigwLjI3OTEsIDAuMzQ0NSksIGNvbG9yOiBiYWxsQ29sb3IpCiAgICBwM0ZseTogRG90KHBvc2l0aW9uOiBWZWMyKDAuMjc5MSwgMC4xNTg3NSksIGNvbG9yOiBiYWxsQ29sb3IpCiAgICBwNEZseTogRG90KHBvc2l0aW9uOiBWZWMyKDAuMzc2NSwgMC4xODI0NSksIGNvbG9yOiBiYWxsQ29sb3IpCiAgICBwNUZseTogRG90KHBvc2l0aW9uOiBWZWMyKDAuMzc2NSwgMC41KSwgY29sb3I6IGJhbGxDb2xvcikKCiAgICB0aXRsZTQ6IFRleHQoIkFsZ2VicmFpYyByZXByZXNlbnRhdGlvbiIsIHBvc2l0aW9uOiBWZWMyKDAuNjQsIDAuNjUpKQoKICAgIHN0YXJ0WDogMC42NwogICAgc3RhcnRZOiAwLjcyNQogICAgc3BhY2luZzogMC4wNQogICAgZXE6IFRleHQoIiRzKHQpID0gLTE2dF4yICsgMTI4dCQiLCBwb3NpdGlvbjogVmVjMihzdGFydFgsIHN0YXJ0WSkpCiAgICBzdGVwMTogVGV4dChjb250ZW50OiBbVGV4dCgiJHMoJCIpLCBUZXh0KCIkMiQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJCkgPSAtMTYoJCIpLCBUZXh0KCIkMiQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJCleMiArIDEyOCgkIiksIFRleHQoIiQyJCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkKSQiKV0sIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZykpCiAgICBzdGVwMjogVGV4dChjb250ZW50OiBbVGV4dCgiJFxwaGFudG9te3MoMil9JCIpLCBUZXh0KCIkXDsgPSBcOyQiKSwgVGV4dCgiJDE5MiQiLCBjb2xvcjogc0NvbG9yKV0sIHBvc2l0aW9uOiBWZWMyKHN0YXJ0WCwgc3RhcnRZICsgc3BhY2luZyAqIDIpKQogICAgczE5MkZseTogc3RlcDIuY29udGVudFsyXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNzIsIDAuODI1KSkKICApIHsKCQl1cHdhcmRQb2ludC5oaWRlKCkKCQl1cHdhcmRMaW5lLmhpZGUoKQoJCWRvd253YXJkUG9pbnQuaGlkZSgpCgkJZG93bndhcmRMaW5lLmhpZGUoKQoJCXVwd2FyZExhYmVsLmhpZGUoKQoJCWRvd253YXJkTGFiZWwuaGlkZSgpCgogICAgcDFzTGFiZWwuaGlkZSgpCiAgICBwMXRMYWJlbC5oaWRlKCkKICAgIHAxc0ZseS5oaWRlKCkKICAgIHAxdEZseS5oaWRlKCkKICAgIHAyc0xhYmVsLmhpZGUoKQogICAgcDJ0TGFiZWwuaGlkZSgpCiAgICBwMnNGbHkuaGlkZSgpCiAgICBwMnRGbHkuaGlkZSgpCiAgICBwM3NMYWJlbC5oaWRlKCkKICAgIHAzdExhYmVsLmhpZGUoKQogICAgcDNzRmx5LmhpZGUoKQogICAgcDN0Rmx5LmhpZGUoKQogICAgcDRzTGFiZWwuaGlkZSgpCiAgICBwNHRMYWJlbC5oaWRlKCkKICAgIHA0c0ZseS5oaWRlKCkKICAgIHA0dEZseS5oaWRlKCkKICAgIHA1c0xhYmVsLmhpZGUoKQogICAgcDV0TGFiZWwuaGlkZSgpCiAgICBwNXNGbHkuaGlkZSgpCiAgICBwNXRGbHkuaGlkZSgpCgogICAgc0VxLmhpZGUoKQogICAgc1RleHQuaGlkZSgpCiAgICB0VGV4dC5oaWRlKCkKCQl0aXRsZTIuaGlkZSgpCgkJdGFibGUxLmhpZGUoKQogICAgcm93MUFycncuaGlkZSgpCiAgICByb3cyQXJydy5oaWRlKCkKCiAgICB0YWJsZTFbMF1bMF0uaGlkZSgpCiAgICB0YWJsZTFbMF1bMV0uaGlkZSgpCiAgICB0YWJsZTFbMF1bMl0uaGlkZSgpCiAgICB0YWJsZTFbMF1bM10uaGlkZSgpCiAgICB0YWJsZTFbMF1bNF0uaGlkZSgpCiAgICB0YWJsZTFbMF1bNV0uaGlkZSgpCgogICAgdGFibGUxWzFdWzBdLmhpZGUoKQogICAgdGFibGUxWzFdWzFdLmhpZGUoKQogICAgdGFibGUxWzFdWzJdLmhpZGUoKQogICAgdGFibGUxWzFdWzNdLmhpZGUoKQogICAgdGFibGUxWzFdWzRdLmhpZGUoKQogICAgdGFibGUxWzFdWzVdLmhpZGUoKQoKCQl0aXRsZTMuaGlkZSgpCgkJcDEuaGlkZSgpCgkJcDIuaGlkZSgpCgkJcDMuaGlkZSgpCgkJcDQuaGlkZSgpCgkJcDUuaGlkZSgpCiAgICBwQXR4Mi5oaWRlKCkKCQlyaXNlTGluZTEuaGlkZSgpCgkJcnVuTGluZTEuaGlkZSgpCgkJcmlzZUxpbmUyLmhpZGUoKQoJCXJ1bkxpbmUyLmhpZGUoKQogICAgdGljazJ4LmhpZGUoKQogICAgdGljazJ5LmhpZGUoKQogICAgdGljazN4LmhpZGUoKQogICAgdGljazN5LmhpZGUoKQogICAgdGljazR4LmhpZGUoKQogICAgdGljazR5LmhpZGUoKQogICAgdGljazV4LmhpZGUoKQogICAgdGljazV5LmhpZGUoKQogICAgdGlja0F0eDJ4LmhpZGUoKQogICAgdGlja0F0eDJ5LmhpZGUoKQoJCWdyYXBoLmhpZGUoKQoJCXJpc2VMYWJlbDEuaGlkZSgpCgkJcmlzZUxhYmVsMi5oaWRlKCkKICAgIHgyTGFiZWwuaGlkZSgpCiAgICBwMUZseS5oaWRlKCkKICAgIHAyRmx5LmhpZGUoKQogICAgcDNGbHkuaGlkZSgpCiAgICBwNEZseS5oaWRlKCkKICAgIHA1Rmx5LmhpZGUoKQoJCXRpdGxlNC5oaWRlKCkKCQllcS5oaWRlKCkKCQlzdGVwMS5oaWRlKCkKCQlzdGVwMi5oaWRlKCkKICAgIHMxOTJGbHkuaGlkZSgpCgkgfQoKICBBbmltYXRlKCkgewogICAgLy8gMS1hCiAgICB3YWl0KDUwMCkgLy9hZGRlZCBidWZmZXIgYmMgdGhlIGJlZ2lubmluZyBpcyBhIGJpdCBmYXN0CiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1hX21vZGVsaW5nX2FuX29iamVjdHNfcG9zaXRpb24ubXAzIikKICAgIGJhbGxfeC5pbnRlcnBvbGF0ZSg4LCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiA1MDAwLCBibG9ja2luZzogZmFsc2UpCiAgICBiYWxsTGFiZWwucG9zaXRpb24ubW92ZShWZWMyKGJhbGxMYWJlbFgsIDAuMyksIGN1cnZlOiAibGluZWFyIiwgZHVyYXRpb246IDI0MDApCiAgICB3YWl0KDMwMCkKICAgIGJhbGxMYWJlbC5wb3NpdGlvbi5tb3ZlKFZlYzIoYmFsbExhYmVsWCwgMC40NyksIGN1cnZlOiAibGluZWFyIiwgZHVyYXRpb246IDI0MDApCiAgICAKICAgIC8vIDEtYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYl9tb2RlbGluZ19hbl9vYmplY3RzX3Bvc2l0aW9uLm1wMyIpCiAgICB3YWl0KDE1MDApCiAgICBzRXEuc2hvdygpCiAgICB3YWl0KDUwMCkKICAgIHNUZXh0LnNob3coKQogICAgd2FpdCgxNTAwKQogICAgdFRleHQuc2hvdygpCiAgICB3YWl0KDE1MDApCiAgICBzRXEuaGlkZShkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBzVGV4dC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRUZXh0LmhpZGUoZHVyYXRpb246IDUwMCkKICAgIAogICAgLy8gMS1jCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1jX21vZGVsaW5nX2FuX29iamVjdHNfcG9zaXRpb24ubXAzIikKICAgIHRpdGxlMi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVswXVswXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVsxXVswXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIG51bUxpbmUuc2hvd1lBeGlzOiB0cnVlCiAgICB1cHdhcmRQb2ludC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHVwd2FyZExpbmUuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB1cHdhcmRMYWJlbC5zaG93KCkKICAgIC8vdCA9IDAKICAgIHAxc0xhYmVsLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDF0TGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgcDF0Rmx5Lm9wYWNpdHkgPSAxCiAgICBwMXRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMTM1MjUsIDAuNzU0NSksIGR1cmF0aW9uOiA1MDApCiAgICBwMXNGbHkub3BhY2l0eSA9IDEKICAgIHAxc0ZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4xMzUyNSwgMC44MTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHRhYmxlMVswXVsxXS5vcGFjaXR5ID0gMQogICAgdGFibGUxWzFdWzFdLm9wYWNpdHkgPSAxCiAgICBwMXNMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHAxdExhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDFzRmx5Lm9wYWNpdHkgPSAwCiAgICBwMXRGbHkub3BhY2l0eSA9IDAKICAgIG51bUxpbmUuY2hpbGRyZW4ucHVzaChQb2ludChWZWMyKDEuMjUsIHMoYmFsbF94KSksIGNvbG9yOiBiYWxsQ29sb3IpKQogICAgYmFsbF94ID0gMAogICAgLy90ID0gMQogICAgYmFsbF94LmludGVycG9sYXRlKHAyX3gsIGN1cnZlOiAibGluZWFyIiwgYmxvY2tpbmc6IGZhbHNlKQogICAgYmFsbExhYmVsLnBvc2l0aW9uLm1vdmUoVmVjMihiYWxsTGFiZWxYLCAwLjQxNSksIGN1cnZlOiAibGluZWFyIikKICAgIHAyc0xhYmVsLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDJ0TGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgcDJ0Rmx5Lm9wYWNpdHkgPSAxCiAgICBwMnRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMTk5NSwgMC43NTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHAyc0ZseS5vcGFjaXR5ID0gMQogICAgcDJzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjE5MTUsIDAuODE0NSksIGR1cmF0aW9uOiA1MDApCiAgICAKICAgIC8vIDEtZAogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZF9tb2RlbGluZ19hbl9vYmplY3RzX3Bvc2l0aW9uLm1wMyIpCiAgICByb3cxQXJydy5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVswXVsyXS5vcGFjaXR5ID0gMQogICAgdGFibGUxWzFdWzJdLm9wYWNpdHkgPSAxCiAgICBwMnNMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHAydExhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDJzRmx5Lm9wYWNpdHkgPSAwCiAgICBwMnRGbHkub3BhY2l0eSA9IDAKICAgIG51bUxpbmUuY2hpbGRyZW4ucHVzaChQb2ludChWZWMyKDEuMjUsIHMoYmFsbF94KSksIGNvbG9yOiBiYWxsQ29sb3IpKQogICAgLy90ID0gNAogICAgYmFsbF94LmludGVycG9sYXRlKHAzX3gsIGN1cnZlOiAibGluZWFyIiwgYmxvY2tpbmc6IGZhbHNlKQogICAgYmFsbExhYmVsLnBvc2l0aW9uLm1vdmUoVmVjMihiYWxsTGFiZWxYLCAwLjMpLCBjdXJ2ZTogImxpbmVhciIpCiAgICBwM3NMYWJlbC5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHAzdExhYmVsLnNob3coZHVyYXRpb246IDUwMCkKICAgIHAzdEZseS5vcGFjaXR5ID0gMQogICAgcDN0Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjI2NCwgMC43NTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHAzc0ZseS5vcGFjaXR5ID0gMQogICAgcDNzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjI1NiwgMC44MTQ1KSwgZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcm93MUFycncuaGlkZShkdXJhdGlvbjogNTAwKQoKICAgIC8vIHdhaXQoMzAwMCkKICAgIAogICAgLy8gMS1lCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1lX21vZGVsaW5nX2FuX29iamVjdHNfcG9zaXRpb24ubXAzIikKICAgIHJvdzJBcnJ3LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgdGFibGUxWzBdWzNdLm9wYWNpdHkgPSAxCiAgICB0YWJsZTFbMV1bM10ub3BhY2l0eSA9IDEKICAgIHAzc0xhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDN0TGFiZWwuaGlkZShkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBwM3NGbHkub3BhY2l0eSA9IDAKICAgIHAzdEZseS5vcGFjaXR5ID0gMAogICAgbnVtTGluZS5jaGlsZHJlbi5wdXNoKFBvaW50KFZlYzIoMS4yNSwgcyhiYWxsX3gpKSwgY29sb3I6IGJhbGxDb2xvcikpCiAgICB1cHdhcmRQb2ludC5vcGFjaXR5ID0gMAogICAgdXB3YXJkTGluZS5yYW5nZSA9IEludGVydmFsKDAsIHMocDNfeCkpLy9tYWtlIHVwd2FyZExpbmUgbm9uIHJlYWN0aXZlIG5vdwogICAgLy90ID0gNQogICAgZG93bndhcmRQb2ludC5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIGRvd253YXJkTGluZS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIGRvd253YXJkTGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgYmFsbF94LmludGVycG9sYXRlKHA0X3gsIGN1cnZlOiAibGluZWFyIiwgZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgYmFsbExhYmVsLnBvc2l0aW9uLm1vdmUoVmVjMihiYWxsTGFiZWxYLCAwLjMyNSksIGN1cnZlOiAibGluZWFyIiwgZHVyYXRpb246IDUwMCkKICAgIHA0c0xhYmVsLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDR0TGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgcDR0Rmx5Lm9wYWNpdHkgPSAxCiAgICBwNHRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMzI4LCAwLjc1NDUpLCBkdXJhdGlvbjogNTAwKQogICAgcDRzRmx5Lm9wYWNpdHkgPSAxCiAgICBwNHNGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMzIsIDAuODE0NSksIGR1cmF0aW9uOiA1MDApCiAgICB0YWJsZTFbMF1bNF0ub3BhY2l0eSA9IDEKICAgIHRhYmxlMVsxXVs0XS5vcGFjaXR5ID0gMQogICAgcDRzTGFiZWwuaGlkZShkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBwNHRMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHA0c0ZseS5vcGFjaXR5ID0gMAogICAgcDR0Rmx5Lm9wYWNpdHkgPSAwCiAgICBudW1MaW5lLmNoaWxkcmVuLnB1c2goUG9pbnQoVmVjMigyLjI1LCBzKGJhbGxfeCkpLCBjb2xvcjogYmFsbENvbG9yKSkKICAgIC8vdCA9IDgKICAgIGJhbGxfeC5pbnRlcnBvbGF0ZShwNV94LCBjdXJ2ZTogImxpbmVhciIsIGJsb2NraW5nOiBmYWxzZSkKICAgIGJhbGxMYWJlbC5wb3NpdGlvbi5tb3ZlKFZlYzIoYmFsbExhYmVsWCwgMC40NyksIGN1cnZlOiAibGluZWFyIikKICAgIHJvdzJBcnJ3LmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDVzTGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBwNXRMYWJlbC5zaG93KGR1cmF0aW9uOiA1MDApCiAgICBwNXRGbHkub3BhY2l0eSA9IDEKICAgIHA1dEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4zOTI1LCAwLjc1NDUpLCBkdXJhdGlvbjogNTAwKQogICAgcDVzRmx5Lm9wYWNpdHkgPSAxCiAgICBwNXNGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMzkyNSwgMC44MTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHRhYmxlMVswXVs1XS5vcGFjaXR5ID0gMQogICAgdGFibGUxWzFdWzVdLm9wYWNpdHkgPSAxCiAgICBwNXNMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHA1dExhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcDVzRmx5Lm9wYWNpdHkgPSAwCiAgICBwNXRGbHkub3BhY2l0eSA9IDAKICAgIG51bUxpbmUuY2hpbGRyZW4ucHVzaChQb2ludChWZWMyKDIuMjUsIHMoYmFsbF94KSksIGNvbG9yOiBiYWxsQ29sb3IpKQogICAgCiAgfQoKICBRdWVzdGlvbihpZDogIiAiLCB0eXBlOiAibXVsdGlwbGVDaG9pY2UiKSB7fQp9CgpTY2VuZSgpIHsKICBJbml0KAogICkgewogIH0KCiAgQW5pbWF0ZSgpIHsKICAgIC8vIDItYQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV9tb2RlbGluZ19hbl9vYmplY3RzX3Bvc2l0aW9uLm1wMyIpCiAgICB0aXRsZTMuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBncmFwaC5zaG93KGR1cmF0aW9uOiA1MDApCiAgICAvL3AxCiAgICBwMXNGbHkub3BhY2l0eSA9IDEKICAgIHAxc0ZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC41NzUsIDAuNDcpLCBibG9ja2luZzogZmFsc2UpIC8vZmx5IHggYW5kIHkgbGFiZWxzIHRvIGF4ZXMKICAgIHAxdEZseS5vcGFjaXR5ID0gMQogICAgcDF0Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjU4NzgsIDAuNDk0KSkKICAgIHAxRmx5Lm9wYWNpdHkgPSAxCiAgICBwMUZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC42LCAwLjUpLCBkdXJhdGlvbjogNTAwLCBjdXJ2ZTogImxpbmVhciIpIC8vZmx5IGRvdAogICAgcDEuc2hvdyhkdXJhdGlvbjogNTAwKS8vYWRkIHBvaW50IGxhYmVsCiAgICBwMUZseS5vcGFjaXR5ID0gMAogICAgLy9wMgogICAgcDJzRmx5Lm9wYWNpdHkgPSAxCiAgICBwMnNGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNTYyLCAwLjMyNSksIGJsb2NraW5nOiBmYWxzZSkgLy9mbHkgeCBhbmQgeSBsYWJlbHMgdG8gYXhlcwogICAgdGljazJ4LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgcDJ0Rmx5Lm9wYWNpdHkgPSAxCiAgICBwMnRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNjI1NSwgMC40OTQpLCBibG9ja2luZzogZmFsc2UpCiAgICB0aWNrMnkuc2hvdygpCiAgICBwMkZseS5vcGFjaXR5ID0gMQogICAgcDJGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNjM3NSwgMC4zNSksIGR1cmF0aW9uOiA1MDAsIGN1cnZlOiAibGluZWFyIikgLy9mbHkgZG90CiAgICBwMi5zaG93KGR1cmF0aW9uOiA1MDApLy9hZGQgcG9pbnQgbGFiZWwKICAgIHAyRmx5Lm9wYWNpdHkgPSAwCiAgICAKICAgIC8vIDItYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYl9tb2RlbGluZ19hbl9vYmplY3RzX3Bvc2l0aW9uLm1wMyIpCiAgICAvL3AzCiAgICBwM3NGbHkub3BhY2l0eSA9IDEKICAgIHAzc0ZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC41NjIsIDAuMTI1KSwgYmxvY2tpbmc6IGZhbHNlKSAvL2ZseSB4IGFuZCB5IGxhYmVscyB0byBheGVzCiAgICB0aWNrM3guc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBwM3RGbHkub3BhY2l0eSA9IDEKICAgIHAzdEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC43MzgsIDAuNDk0KSwgYmxvY2tpbmc6IGZhbHNlKQogICAgdGljazN5LnNob3coKQogICAgcDNGbHkub3BhY2l0eSA9IDEKICAgIHAzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjc1LCAwLjE1ODc1KSwgZHVyYXRpb246IDUwMCwgY3VydmU6ICJsaW5lYXIiKSAvL2ZseSBkb3QKICAgIHAzLnNob3coZHVyYXRpb246IDUwMCkvL2FkZCBwb2ludCBsYWJlbAogICAgcDNGbHkub3BhY2l0eSA9IDAKICAgIC8vcDQKICAgIHA0c0ZseS5vcGFjaXR5ID0gMQogICAgcDRzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjU2MiwgMC4xNSksIGJsb2NraW5nOiBmYWxzZSkgLy9mbHkgeCBhbmQgeSBsYWJlbHMgdG8gYXhlcwogICAgdGljazR4LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgcDR0Rmx5Lm9wYWNpdHkgPSAxCiAgICBwNHRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNzc2LCAwLjQ5NCksIGJsb2NraW5nOiBmYWxzZSkKICAgIHRpY2s0eS5zaG93KCkKICAgIHA0Rmx5Lm9wYWNpdHkgPSAxCiAgICBwNEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC43ODgsIDAuMTc5NSksIGR1cmF0aW9uOiA1MDAsIGN1cnZlOiAibGluZWFyIikgLy9mbHkgZG90CiAgICBwNC5zaG93KGR1cmF0aW9uOiA1MDApLy9hZGQgcG9pbnQgbGFiZWwKICAgIHA0Rmx5Lm9wYWNpdHkgPSAwCiAgICAvL3A1CiAgICBwNXNGbHkub3BhY2l0eSA9IDEKICAgIHA1c0ZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC41NzUsIDAuNDcpLCBibG9ja2luZzogZmFsc2UpIC8vZmx5IHggYW5kIHkgbGFiZWxzIHRvIGF4ZXMKICAgIHRpY2s1eC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHA1dEZseS5vcGFjaXR5ID0gMQogICAgcDV0Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjg4OCwgMC40OTQpLCBibG9ja2luZzogZmFsc2UpCiAgICB0aWNrNXkuc2hvdygpCiAgICBwNUZseS5vcGFjaXR5ID0gMQogICAgcDVGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuOSwgMC41KSwgZHVyYXRpb246IDUwMCwgY3VydmU6ICJsaW5lYXIiKSAvL2ZseSBkb3QKICAgIHA1LnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKS8vYWRkIHBvaW50IGxhYmVsCiAgICBwNUZseS5vcGFjaXR5ID0gMAogICAgcmlzZUxpbmUxLm9wYWNpdHkgPSAxCiAgICByaXNlTGluZTEucmFuZ2UucmVzaXplKEludGVydmFsKDAsIHMocDJfeCkpLCBkdXJhdGlvbjogNTAwKQogICAgcnVuTGluZTEub3BhY2l0eSA9IDEKICAgIHJ1bkxpbmUxLmRvbWFpbi5yZXNpemUoSW50ZXJ2YWwoMCwgcDJfeCksIGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHJpc2VMYWJlbDEuc2hvdygpCiAgICAKICB9CgogIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJtdWx0aXBsZUNob2ljZSIpIHt9Cn0KClNjZW5lKCkgewogIEluaXQoCiAgKSB7CiAgfQoKICBBbmltYXRlKCkgewogICAgLy8gMy1hCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1hX21vZGVsaW5nX2FuX29iamVjdHNfcG9zaXRpb24ubXAzIikKICAgIHdhaXQoMjAwMCkKICAgIHJ1bkxpbmUxLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcmlzZUxpbmUxLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcmlzZUxhYmVsMS5oaWRlKGR1cmF0aW9uOiA1MDApCiAgICB0aXRsZTQuc2hvdygpCiAgICBlcS5zaG93KCkKICAgIHdhaXQoODUwMCkKICAgIAogICAgLy8gMy1iCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1iX21vZGVsaW5nX2FuX29iamVjdHNfcG9zaXRpb24ubXAzIikKICAgIHdhaXQoMTAwMCkKICAgIHgyTGFiZWwuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB0aWNrQXR4Mnguc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICByaXNlTGluZTIub3BhY2l0eSA9IDEKICAgIHJpc2VMaW5lMi5yYW5nZS5yZXNpemUoSW50ZXJ2YWwoMCwgMTkyKSkKICAgIHJ1bkxpbmUyLm9wYWNpdHkgPSAxCiAgICBydW5MaW5lMi5kb21haW4ucmVzaXplKEludGVydmFsKDAsIDIpLCBibG9ja2luZzogZmFsc2UpCiAgICByaXNlTGFiZWwyLnNob3coKQogICAgc3RlcDEuc2hvdygpCiAgICB3YWl0KDM1MDApCiAgICAKICAgIC8vIDMtYwogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtY19tb2RlbGluZ19hbl9vYmplY3RzX3Bvc2l0aW9uLm1wMyIpCiAgICB3YWl0KDIwMDApCiAgICBzdGVwMi5zaG93KCkKICAgIHMxOTJGbHkub3BhY2l0eSA9IDEKICAgIHMxOTJGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNTYyLCAwLjIxNSksIGJsb2NraW5nOiBmYWxzZSkKICAgIHRpY2tBdHgyeS5zaG93KCkKICAgIAogICAgLy8gMy1kCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1kX21vZGVsaW5nX2FuX29iamVjdHNfcG9zaXRpb24ubXAzIikKICAgIHdhaXQoMTAwMCkKICAgIHBBdHgyLnNob3coKQogICAgd2FpdCgzMDAwKQogICAgCiAgfQoKICBRdWVzdGlvbihpZDogIiAiLCB0eXBlOiAic2hvcnRBbnN3ZXIiKSB7fQp9Cg==</Code>
+          <Question uuid="fedfe070-d34e-4cb7-9dfd-be08cacf7e37">
+            <MultipleChoice difficulty="easy" uuid="58a6e44c-aff8-43f0-bf5a-e60695bd1cad">
+              <KSAs primary="KSA2.3.1" secondary="KSA1.2.1" />
+              <question>
+                <m>s(1) =\underline{\phantom{XXXXXX}}</m>
+              </question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>0</m>
+                  </label>
+                  <explanation>The table shows that the ball’s height <m>s(t)</m> equals <m>0</m> at <m>t
+                    = 0</m> and at <m>t = 8 \text{,}</m> but not at <m>t = 1 \text{.}</m></explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>112</m>
+                  </label>
+                  <explanation>The table shows that at <m>t = 1 \text{,}</m> the ball’s height <m>
+                    s(t)</m> is <m>112 \text{ ft} \text{.}</m></explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>256</m>
+                  </label>
+                  <explanation>The table shows that <m>s(t) = 256</m> is the height of the ball at <m>t
+                    = 4 \text{,}</m> not at <m>t = 1 \text{.}</m></explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Question>
+          <Question uuid="e179870d-7e9b-453a-afb5-3d601f9227f3">
+            <MultipleChoice difficulty="easy" uuid="334fb3ff-dcba-43f5-98d8-b2c3aa05b3a8">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The horizontal axis represents <m>\underline{\phantom{XXXXXX}} \text{.} </m></question>
+              <Choices>
+                <choice>
+                  <label>the ball’s horizontal motion</label>
+                  <explanation>A common misconception is that the graph shows the ball moving
+                    horizontally. However, the ball has no horizontal motion. The ball only goes up
+                    and down. </explanation>
+                </choice>
+                <choice>
+                  <label>the ball’s height</label>
+                  <explanation>The vertical axis, not the horizontal axis, represents the ball’s
+                    height. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>time</label>
+                  <explanation> The horizontal axis represents time, while the vertical axis
+                    represents the ball’s height. The function <m>s(t)</m> relates time <m>t</m>
+                    (input) and the ball’s height <m>s</m> (output). </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Question>
+          <Question uuid="0488898d-daad-4fe8-9099-289e8388a339">
+            <ShortAnswer difficulty="easy" uuid="0e49f699-7646-4bce-9c19-df59678d4cd0">
+              <KSAs primary="KSA2.3.1" secondary="KSA1.2.1" />
+              <question>The ball’s height at <m>t = 6</m> seconds is <m>
+                  \underline{\phantom{XXXXXX}} </m> feet.</question>
+              <Suffix>feet</Suffix>
+              <Hints>
+                <hint>Substitute <m>t = 6</m> into <m>s(t) = -16t^2 + 128t\text{.}</m></hint>
+                <hint>
+                  <m>s(6) = -16(6)^2 + 128(6)</m>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>The ball’s height is calculated by substituting <m>6</m> for <m>t</m> into the
+                  function <m>s(t) \text{.}</m></p>
+                <p>
+                  <me>\begin{align*}
+                    s(6) &amp; = -16(6)^2 + 128(6) \\
+                    &amp; = -16(36) + 128(6) \\
+                    &amp; = -576 + 768 \\
+                    &amp; = 192 \\
+                    \end{align*}</me>
+                </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="192" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Question>
+        </ArcResource>
+        <TextResource duration="3" uuid="7e954edd-c44d-4181-9a45-fc4c5b4268ef">
+          <Text uuid="93fb8334-7750-43cc-812b-1f3af362e238"> The height of a ball thrown into the
+            air is modeled by <m>s(t) = -16t^2 + 48t \text{,}</m> where <m>s</m> is given in feet
+            and <m>t</m> is given in seconds. <image
+              source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.2_FU_P1_Intro.png">
+              <description>Downward-opening parabola &lt;m&gt;y = f(x)&lt;/m&gt; on labeled
+            &lt;m&gt;x&lt;/m&gt;-&lt;m&gt;y&lt;/m&gt; axes, maximum at &lt;m&gt;(1.</description>
+            </image>
+          </Text>
+          <Questions locked-steps="true" uuid="8bf0a3a5-c61c-41d4-8f24-7122638472d9">
+            <MultipleChoice difficulty="easy" uuid="14620d0c-b47e-4fb5-a2ee-a0bfee8b3389">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The ball is going up until <m>t= \underline{\phantom{XXXXXX}}</m> seconds,
+                after which the ball goes down.</question>
+              <Choices>
+                <choice correct="true">
+                  <label>
+                    <m>1.5</m>
+                  </label>
+                  <explanation>The graph is increasing on the interval <m>[0,1.5] \text{,}</m> so
+                    the ball is going up during this time. The graph is decreasing on the interval <m>[1.5,3]
+                    \text{,}</m> so the ball is going down during this time.</explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>36</m>
+                  </label>
+                  <explanation>
+                    <m>36</m> is a height, not a time. Instead, consider the <m>t\text{-coordinate.}</m>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>3</m>
+                  </label>
+                  <explanation>The ball is not going up during the entire time from <m>t = 0</m> to <m>t
+                    = 3</m> seconds. Instead, find when the graph changes from increasing to
+                    decreasing.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="08d6aebf-1c54-48b7-ae96-b2275535ea5c">
+              <KSAs primary="KSA2.3.1" secondary="KSA1.2.1" />
+              <question> What is true about the height of the ball at <m>t=1</m> and <m>t = 2</m>
+                seconds? The ball is <m>\underline{\phantom{XXXXXX}} \text{.}</m>
+
+              </question>
+              <Choices>
+                <choice correct="true">
+                  <label>at the same height at <m>t=1</m> and <m>t = 2</m> seconds</label>
+                  <explanation> The heights of the graph at <m>t=1</m> and <m>t=2</m> are identical.
+                    The algebraic representation also shows that the heights are identical: <me>\begin{align*}
+                    h(t) &amp;= -16t^2 + 48t \\
+                      h(1) &amp;= -16(1)^2 + 48(1)\\
+                      &amp;= -16 + 48 \\
+                      &amp;= 32 \text{ feet}\\
+                      h(2) &amp;= -16(2)^2 + 48(2) \\
+                      &amp;= -64 + 96\\
+                      &amp;= 32 \text{ feet}\\
+                      \end{align*}</me>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>higher at <m>t = 1</m> second than at <m>t = 2</m> seconds</label>
+                  <explanation>The graph is not higher at <m>t=1</m> second compared to <m>t=2</m>
+                    seconds. We can also compare algebraically by computing <m>h(1)</m> and <m>h(2)
+                    \text{.}</m></explanation>
+                </choice>
+                <choice>
+                  <label>higher at <m>t = 2</m> seconds than at <m>t = 1</m> second</label>
+                  <explanation>The graph is not higher at <m>t=2</m> seconds compared to <m>t=1</m>
+                    second. We can also compare algebraically by computing <m>h(2)</m> and <m>h(1)
+                    \text{.}</m></explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="easy" uuid="765775f7-452b-4f9e-80dc-b479dc9bc9e4">
+              <KSAs primary="KSA2.3.1" secondary="KSA1.2.1" />
+              <question>The height of the ball at <m>t = 0.5</m> seconds is <m>
+                \underline{\phantom{XXXXXX}} \text{.}</m></question>
+              <Hints>
+                <hint>The height of the ball at <m>t = 0.5</m> seconds is <m>h(0.5) \text{.}</m></hint>
+                <hint>
+                  <m>h(0.5) = -16(0.5)^2 + 48(0.5)</m>
+                </hint>
+              </Hints>
+              <CorrectExplanation> The height of the ball at <m>t = 0.5</m> seconds is <m>h(0.5)</m>
+                : <me>\begin{align*}
+                  h(t) &amp;= -16t^2 + 48t \\
+                  h(0.5) &amp;= -16(0.5)^2 + 48(0.5)\\
+                  &amp;= 20 \text{ feet}\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="20" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="f88db9b4-a200-4d23-98a9-ec95e74d94fd">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The height of the ball will be the same at <m>t=0.5</m> and <m>t =
+                \underline{\phantom{XXXXXX}} \text{.}</m></question>
+              <Hints>
+                <hint>The ball reaches a height of <m>20 \text{ feet}</m> at <m>t = 0.5</m> and at
+                  one other time.</hint>
+              </Hints>
+              <CorrectExplanation>The graph of <m>h</m> has a height of <m>20</m> at <m> t = 0.5</m>
+                and also at <m>t = 2.5</m> seconds.</CorrectExplanation>
+              <Evaluation>
+                <Expression expected="2.5" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="b7e5ee26-18fe-4816-a3e9-1935de7fd960">
+          <KSAs primary="KSA2.3.1" secondary="Todo" uuid="134c651b-d921-444a-a8d9-51ba092a7ea7" />
+          <Text uuid="f1b9a9cd-599d-4a9f-b1eb-4283e9a344f2">
+            <p>Lesson summary</p>
+
+            <list type="bullet">
+              <item>The height of a ball tossed straight upward from the ground can be modeled using
+                a position function.</item>
+              <item>A position function can be visualized using a table, a graph, or algebraically
+                with a formula.</item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="lesson" when="pre" uuid="6f6c7e9c-1743-440c-91a8-cd1a697abe10">
+      <title>Introduction to average velocity</title>
+      <LearningOutcomes ids="2.3.1" />
+      <Resources>
+        <TextResource duration="1" uuid="81f4687d-2009-481a-bd3f-725d1a0ff389">
+          <KSAs primary="KSA2.3.1" secondary="Todo" uuid="1eeef60e-bd50-4e9e-809f-79d1f24295e5" />
+          <Text uuid="cd96aa36-3b54-4b66-92a8-3b4cb62d845c">
+            <p>
+              <definition>
+                <b>Velocity</b> is a measure of how fast an object is moving and in which direction.</definition>
+              Velocity can vary over time. Ex: The velocity of a tossed ball varies over the time
+              between the initial toss of the ball and the ball coming to rest. Velocity can be
+              positive, negative, or zero. The velocity of a thrown ball is positive on the way up,
+              zero at the ball’s peak, and negative on the way down.</p>
+            <p>
+              <definition><b>Average velocity</b> is the change in an object’s position divided by
+              the length of the time interval.</definition> In this lesson, we will calculate and
+              interpret a tossed ball’s average velocity over different time intervals. </p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="2" uuid="f4ea048b-1196-4877-a7b2-383fcdcf0c2e">
+          <title>Introduction to average velocity</title>
+          <KSAs primary="Todo" secondary="Todo" />
+          <Track kind="narration" src="tracks/f4ea048b-1196-4877-a7b2-383fcdcf0c2e_narration.vtt" />
+          <Track kind="description"
+            src="tracks/f4ea048b-1196-4877-a7b2-383fcdcf0c2e_description.vtt" />
+          <Code>
+            Ly9DVEQ6IExpemJldGgKLy9Db252ZXJ0ZWQgdG8gQXJjIDEwLzIxLzIwMjUKQ2FudmFzKHdpbmRvd3M6IDApClNjZW5lKCkgewogIEluaXQoCiAgICAvL2NvbG9ycwogICAgdENvbG9yOiBDb2xvci5wdXJwbGUKICAgIHNDb2xvcjogQ29sb3IuZ3JlZW4KICAgIGJhbGxDb2xvcjogQ29sb3IucmVkCiAgICBzZWNhbnRDb2xvcjogQ29sb3IuYmx1ZQogICAgdGFuZ2VudENvbG9yOiBDb2xvci5vcmFuZ2UKCiAgICBkaXYxOiBSdWxlKFZlYzIoMCwgMC42KSwgVmVjMigxLCAwLjYpKQogICAgZGl2MjogUnVsZShWZWMyKDAuNSwgMCksIFZlYzIoMC41LCAxKSkKCiAgICAvL3RvIHVzZSB0aHJvdWdob3V0CiAgICB0MDogMAogICAgdDE6IDEKICAgIHQyOiAyCiAgICB0MzogMwogICAgdDQ6IDQKICAgIHQ1OiA1CiAgICB0ODogOAogICAgczogKC0xNiAqICh4KV4yKSArICgxMjggKiB4KQogICAgYmFsbF94OiAwCgogICAgLy9xdWFkcmFudCAxCiAgICB0aXRsZTE6IFRleHQoIk1vdGlvbiBvZiBhIGJhbGwiLCBwb3NpdGlvbjogVmVjMigwLjE4NSwgMCkpCgogICAgYmFsbDogUG9pbnQoVmVjMigtMSwgYHMoYmFsbF94KWApLCBjb2xvcjogYmFsbENvbG9yKQogICAgYmFsbExpbmU6IFZMaW5lKHg6IGJhbGwuY29vcmRpbmF0ZXMueCwgcmFuZ2U6IEludGVydmFsKDAsIGBiYWxsLmNvb3JkaW5hdGVzLnlgKSwgY29sb3I6IHNDb2xvcikKICAgIHVwd2FyZFBvaW50OiBQb2ludChWZWMyKDEuMjUsIGBzKGJhbGxfeClgKSwgY29sb3I6IGJhbGxDb2xvcikKICAgIHVwd2FyZExpbmU6IFZMaW5lKHg6IHVwd2FyZFBvaW50LmNvb3JkaW5hdGVzLngsIHJhbmdlOiBJbnRlcnZhbCgwLCBgYmFsbC5jb29yZGluYXRlcy55YCkpCiAgICBkb3dud2FyZFBvaW50OiBQb2ludChWZWMyKDIuMjUsIGBzKGJhbGxfeClgKSwgY29sb3I6IGJhbGxDb2xvcikKICAgIGRvd253YXJkTGluZTogVkxpbmUoeDpkb3dud2FyZFBvaW50LmNvb3JkaW5hdGVzLngsIHJhbmdlOiBJbnRlcnZhbChgYmFsbC5jb29yZGluYXRlcy55YCwgcyh0NCkpKQogICAgbnVtTGluZTogR3JhcGgoCiAgICAgIGluZGVudDogZmFsc2UKICAgICAgc2l6ZTogVmVjMigwLjQsIDAuNCkKICAgICAgcG9zaXRpb246IFZlYzIoMC4wNSwgMC4xKQogICAgICBjaGlsZHJlbjogWwogICAgICAgIC8vIFBvaW50KFZlYzIoMiwgMikpCiAgICAgICAgYmFsbExpbmUKICAgICAgICB1cHdhcmRMaW5lCiAgICAgICAgZG93bndhcmRMaW5lCiAgICAgICAgYmFsbAogICAgICAgIHVwd2FyZFBvaW50CiAgICAgICAgZG93bndhcmRQb2ludAogICAgICAKICAgICAgXQogICAgICBkb21haW46IEludGVydmFsKC0xLjEsIDMpCiAgICAgIHJhbmdlOiBJbnRlcnZhbCgtMSwgMzAwLCA2MCkKICAgICAgeUF4aXM6IFRleHQoIiRzJCIsIGNvbG9yOiBzQ29sb3IpCiAgICAgIHNob3dZQXhpczogZmFsc2UKICAgICAgc2hvd1hBeGlzOiBmYWxzZQogICAgKQogICAgYmFsbExhYmVsWDogMC4wNjQKICAgIGJhbGxMYWJlbDogVGV4dCgiJCNyb3VuZChgYmFsbC5jb29yZGluYXRlcy55YCwgMCkjJCBmdCIsIHBvc2l0aW9uOiBWZWMyKGJhbGxMYWJlbFgsIDAuNDcpLCBjb2xvcjogc0NvbG9yKQogICAgdXB3YXJkTGFiZWw6IFRleHQoIlVwd2FyZCIsIHBvc2l0aW9uOiBWZWMyKDAuMjQsIDAuNSkpCiAgICBkb3dud2FyZExhYmVsOiBUZXh0KCJEb3dud2FyZCIsIHBvc2l0aW9uOiBWZWMyKDAuMzQsIDAuNSkpCgogICAgLy9sYWJlbHMgdG8gZmx5IGRvd24gdG8gdGFibGUKICAgIHQwc0xhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkcyA9IFw7JCIpLCBUZXh0KCIkI3ModDApIyQiKSwgVGV4dCgiJFw7JHMiKV0sIHBvc2l0aW9uOiBWZWMyKDAuMTc1LCAwLjUpLCBjb2xvcjogc0NvbG9yKQogICAgdDB0TGFiZWw6IFRleHQoY29udGVudDogW1RleHQoIiR0ID0gXDskIiksIFRleHQoIiQjdDAjJCIpLCBUZXh0KCIkXDskZnQiKV0sIHBvc2l0aW9uOiBWZWMyKDAuMTc1LCAwLjQ1KSwgY29sb3I6IHRDb2xvcikKICAgIHQwc0ZseTogdDBzTGFiZWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuMjA0LCAwLjUpLCBjb2xvcjogc0NvbG9yLCB6SW5kZXg6IDIpCiAgICB0MHRGbHk6IHQwdExhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjIwMjI1LCAwLjQ1KSwgY29sb3I6IHRDb2xvciwgekluZGV4OiAyKQogICAgCiAgICB0MXNMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHMgPSBcOyQiKSwgVGV4dCgiJCNzKHQxKSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC4zNSksIGNvbG9yOiBzQ29sb3IpCiAgICB0MXRMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHQgPSBcOyQiKSwgVGV4dCgiJCN0MSMkIiksIFRleHQoIiRcOyRmdCIpXSwgcG9zaXRpb246IFZlYzIoMC4xNzUsIDAuMyksIGNvbG9yOiB0Q29sb3IpCiAgICB0MXNGbHk6IHQxc0xhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjIwNCwgMC4zNSksIGNvbG9yOiBzQ29sb3IsIHpJbmRleDogMikKICAgIHQxdEZseTogdDF0TGFiZWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuMjAyMjUsIDAuMyksIGNvbG9yOiB0Q29sb3IsIHpJbmRleDogMikKCiAgICB0MnNMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHMgPSBcOyQiKSwgVGV4dCgiJCNzKHQyKSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC4yNSksIGNvbG9yOiBzQ29sb3IpCiAgICB0MnRMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHQgPSBcOyQiKSwgVGV4dCgiJCN0MiMkIiksIFRleHQoIiRcOyRmdCIpXSwgcG9zaXRpb246IFZlYzIoMC4xNzUsIDAuMiksIGNvbG9yOiB0Q29sb3IpCiAgICB0MnNGbHk6IHQyc0xhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjE3NSArIDAuMDI5LCAwLjI1KSwgY29sb3I6IHNDb2xvciwgekluZGV4OiAyKQogICAgdDJ0Rmx5OiB0MnRMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC4xNzUgKyAwLjAyNzI1LCAwLjIpLCBjb2xvcjogdENvbG9yLCB6SW5kZXg6IDIpCgogICAgdDNzTGFiZWw6IFRleHQoY29udGVudDogW1RleHQoIiRzID0gXDskIiksIFRleHQoIiQjcyh0MykjJCIpLCBUZXh0KCIkXDskcyIpXSwgcG9zaXRpb246IFZlYzIoMC4xNzUsIDAuMTc1KSwgY29sb3I6IHNDb2xvcikKICAgIHQzdExhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkdCA9IFw7JCIpLCBUZXh0KCIkI3QzIyQiKSwgVGV4dCgiJFw7JGZ0IildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC4xMjUpLCBjb2xvcjogdENvbG9yKQogICAgdDNzRmx5OiB0M3NMYWJlbC5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC4xNzUgKyAwLjAyOSwgMC4xNzUpLCBjb2xvcjogc0NvbG9yLCB6SW5kZXg6IDIpCiAgICB0M3RGbHk6IHQzdExhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjE3NSArIDAuMDI3MjUsIDAuMTI1KSwgY29sb3I6IHRDb2xvciwgekluZGV4OiAyKQogICAgCiAgICB0NHNMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHMgPSBcOyQiKSwgVGV4dCgiJCNzKHQ0KSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC4xNSksIGNvbG9yOiBzQ29sb3IpCiAgICB0NHRMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHQgPSBcOyQiKSwgVGV4dCgiJCN0NCMkIiksIFRleHQoIiRcOyRmdCIpXSwgcG9zaXRpb246IFZlYzIoMC4xNzUsIDAuMSksIGNvbG9yOiB0Q29sb3IpCiAgICB0NHNGbHk6IHQ0c0xhYmVsLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjIwNCwgMC4xNSksIGNvbG9yOiBzQ29sb3IsIHpJbmRleDogMikKICAgIHQ0dEZseTogdDR0TGFiZWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuMjAyMjUsIDAuMSksIGNvbG9yOiB0Q29sb3IsIHpJbmRleDogMikKCiAgICBwNXNMYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHMgPSBcOyQiKSwgVGV4dCgiJCNzKHQ4KSMkIiksIFRleHQoIiRcOyRzIildLCBwb3NpdGlvbjogVmVjMigwLjQsIDAuNDc1KSwgY29sb3I6IHNDb2xvcikKICAgIHA1dExhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkdCA9IFw7JCIpLCBUZXh0KCIkI3Q4IyQiKSwgVGV4dCgiJFw7JGZ0IildLCBwb3NpdGlvbjogVmVjMigwLjQsIDAuNDI1KSwgY29sb3I6IHRDb2xvcikKICAgIHA1c0ZseTogcDVzTGFiZWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNCArIDAuMDI5LCAwLjQ3NSksIGNvbG9yOiBzQ29sb3IsIHpJbmRleDogMikKICAgIHA1dEZseTogcDV0TGFiZWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNCArIDAuMDI3MjUsIDAuNDI1KSwgY29sb3I6IHRDb2xvciwgekluZGV4OiAyKQoKICAgIHF1ZXN0aW9uOiBUZXh0KCJIb3cgZmFzdCBpcyB0aGUgYmFsbCdzIHBvc2l0aW9uIGNoYW5naW5nPyIsIHBvc2l0aW9uOiBWZWMyKDAuMTcsIDAuMjUpKQoKICAgIHRpdGxlMjogVGV4dCgiVmFsdWVzIG9mICRzKHQpJCBhdCAkdCA9IDAsIDEsIFxsZG90cywgOCAkIiwgcG9zaXRpb246IFZlYzIoMC4xMzUsIDAuNjUpKQoKICAgIHRhYmxlMTogVGFibGUoCiAgICAgIFtSb3coW1RleHQoIiR0JCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkMCQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJDEkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQyJCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkMyQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJDQkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQ1JCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkNiQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJDckIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiQ4JCIsIGNvbG9yOiB0Q29sb3IpXSksCiAgICAgIFJvdyhbVGV4dChjb250ZW50OiBbVGV4dCgiJHMoJCIsIGNvbG9yOiBzQ29sb3IpLCBUZXh0KCIkdCQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJCkkIiwgY29sb3I6IHNDb2xvcildKSwgVGV4dCgiJCNzKDApIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDEpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDIpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDMpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDQpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDUpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDYpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDcpIyQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJCNzKDgpIyQiLCBjb2xvcjogc0NvbG9yKV0pXSwKICAgICAgcG9zaXRpb246IFZlYzIoMC4wMjUsIDAuNzUpLAogICAgICBjZWxsV2lkdGg6IDUwLCBjZWxsSGVpZ2h0OiAxMAogICAgKQogICAgdGl0bGUzOiBUZXh0KCJBdmVyYWdlIHZlbG9jaXR5IG9uIHRoZSBpbnRlcnZhbCAkWzAsIDJdJCIsIHBvc2l0aW9uOiBWZWMyKDAuNjA1LCAwKSkKICAgIHQyTGluZTogSExpbmUoeTogcygyKSwgZG9tYWluOiBJbnRlcnZhbCgwLCAwLjUpKQogICAgdDBMaW5lOiBITGluZSh5OiBzKDApLCBkb21haW46IEludGVydmFsKDAsIDAuNSkpCiAgICBjaGFuZ2VBcnJ3OiBWTGluZSh4OiAwLjI1LCByYW5nZTogSW50ZXJ2YWwocygwKSwgcygwKSksIGNvbG9yOiBzQ29sb3IsIHJpZ2h0RW5kOiAiYXJyb3ciKQogICAgdDBQb2ludDogUG9pbnQoVmVjMigwLCBzKDApKSwgY29sb3I6IGJhbGxDb2xvcikKICAgIHQyUG9pbnQ6IFBvaW50KFZlYzIoMCwgcygyKSksIGNvbG9yOiBiYWxsQ29sb3IpCiAgICBudW1MaW5lMjogR3JhcGgoCiAgICAgIGluZGVudDogZmFsc2UKICAgICAgc2l6ZTogVmVjMigwLjQsIDAuNCkKICAgICAgcG9zaXRpb246IFZlYzIoMC41NSwgMC4xKQogICAgICBjaGlsZHJlbjogWwogICAgICAgIGNoYW5nZUFycncKICAgICAgICB0MExpbmUKICAgICAgICB0MkxpbmUKICAgICAgICB0MFBvaW50CiAgICAgICAgdDJQb2ludAogICAgICBdCiAgICAgIGRvbWFpbjogSW50ZXJ2YWwoLTEuMSwgMykKICAgICAgcmFuZ2U6IEludGVydmFsKC0xLCAzMDAsIDYwKQogICAgICB5QXhpczogVGV4dCgiJHMkIiwgY29sb3I6IHNDb2xvcikKICAgICAgc2hvd1hBeGlzOiBmYWxzZQogICAgKQogICAgY2hhbmdlTGFiZWw6IFRleHQoIkNoYW5nZSBpblxucG9zaXRpb25cbiQgPSAjcygyKSMkIHMiLCBwb3NpdGlvbjogVmVjMigwLjcsIDAuMyksIGNvbG9yOiBzQ29sb3IpCgogICAgbGVmdFN0YXJ0WDogMC43NzUKICAgIGxlZnRTdGFydFk6IDAuMQogICAgbGVmdFNwYWNpbmc6IDAuMQogICAgc3RlcDE6IFRleHQoIiR2X3tcdGV4dHthdmV9fSA9IFxkZnJhY3tcdGV4dHtDaGFuZ2UgaW4gcG9zaXRpb259fXtcdGV4dHtDaGFuZ2UgaW4gdGltZX19JCIsIHBvc2l0aW9uOiBWZWMyKGxlZnRTdGFydFgsIGxlZnRTdGFydFkpKQogICAgc3RlcDI6IFRleHQoIiRccGhhbnRvbXt2X3tcdGV4dHthdmV9fX1cOyA9IFxkZnJhY3tccGhhbnRvbXsxOTIgXHRleHR7IGZ0fX0gXDotIFxwaGFudG9tezAgXHRleHR7IGZ0fX19e1xwaGFudG9tezIgXHRleHR7IHN9fSBcOi0gXHBoYW50b217MCBcdGV4dHsgc319fSQiLCBwb3NpdGlvbjogVmVjMihsZWZ0U3RhcnRYLCBsZWZ0U3RhcnRZICsgbGVmdFNwYWNpbmcpKQogICAgc3RlcDM6IFRleHQoIiRccGhhbnRvbXt2X3tcdGV4dHthdmV9fX1cOyA9IFxkZnJhY3sxOTIgXHRleHR7IGZ0fSB9ezIgXHRleHR7IHN9fSQiLCBwb3NpdGlvbjogVmVjMihsZWZ0U3RhcnRYLCBsZWZ0U3RhcnRZICsgbGVmdFNwYWNpbmcgKiAyKSkKICAgIHN0ZXA0OiBUZXh0KCIkXHBoYW50b217dl97XHRleHR7YXZlfX19XDsgPSA5NiBcZGZyYWN7XHRleHR7ZnR9IH17XHRleHR7c319JCIsIHBvc2l0aW9uOiBWZWMyKGxlZnRTdGFydFgsIGxlZnRTdGFydFkgKyBsZWZ0U3BhY2luZyAqIDMpKQoKCiAgICB0MERvdEZseTogRG90KHBvc2l0aW9uOiBWZWMyKDAuMjc5MSwgMC40OTcpLCBjb2xvcjogYmFsbENvbG9yKQogICAgdDJEb3RGbHk6IERvdChwb3NpdGlvbjogVmVjMigwLjI3OTEsIDAuMjQyNSksIGNvbG9yOiBiYWxsQ29sb3IpCiAgKSB7CgkJdXB3YXJkUG9pbnQuaGlkZSgpCgkJdXB3YXJkTGluZS5oaWRlKCkKCQlkb3dud2FyZFBvaW50LmhpZGUoKQoJCWRvd253YXJkTGluZS5oaWRlKCkKCQl1cHdhcmRMYWJlbC5oaWRlKCkKCQlkb3dud2FyZExhYmVsLmhpZGUoKQoJCXQwc0xhYmVsLmhpZGUoKQoJCXQwdExhYmVsLmhpZGUoKQoJCXQwc0ZseS5oaWRlKCkKCQl0MHRGbHkuaGlkZSgpCgkJdDFzTGFiZWwuaGlkZSgpCgkJdDF0TGFiZWwuaGlkZSgpCgkJdDFzRmx5LmhpZGUoKQoJCXQxdEZseS5oaWRlKCkKICAgIHQyc0xhYmVsLmhpZGUoKQoJCXQydExhYmVsLmhpZGUoKQoJCXQyc0ZseS5oaWRlKCkKCQl0MnRGbHkuaGlkZSgpCgkJdDNzTGFiZWwuaGlkZSgpCgkJdDN0TGFiZWwuaGlkZSgpCgkJdDNzRmx5LmhpZGUoKQoJCXQzdEZseS5oaWRlKCkKCQl0NHNMYWJlbC5oaWRlKCkKCQl0NHRMYWJlbC5oaWRlKCkKCQl0NHNGbHkuaGlkZSgpCgkJdDR0Rmx5LmhpZGUoKQoJCXA1c0xhYmVsLmhpZGUoKQoJCXA1dExhYmVsLmhpZGUoKQoJCXA1c0ZseS5oaWRlKCkKCQlwNXRGbHkuaGlkZSgpCgkJcXVlc3Rpb24uaGlkZSgpCgkJdGl0bGUyLmhpZGUoKQoJCXRhYmxlMS5oaWRlKCkKCiAgICAvLyBSb3cgMQogICAgdGFibGUxWzBdWzBdLmhpZGUoKQogICAgdGFibGUxWzBdWzFdLmhpZGUoKQogICAgdGFibGUxWzBdWzJdLmhpZGUoKQogICAgdGFibGUxWzBdWzNdLmhpZGUoKQogICAgdGFibGUxWzBdWzRdLmhpZGUoKQogICAgdGFibGUxWzBdWzVdLmhpZGUoKQogICAgdGFibGUxWzBdWzZdLmhpZGUoKQogICAgdGFibGUxWzBdWzddLmhpZGUoKQogICAgdGFibGUxWzBdWzhdLmhpZGUoKQogICAgdGFibGUxWzBdWzldLmhpZGUoKQoKICAgIC8vIFJvdyAyCiAgICB0YWJsZTFbMV1bMF0uaGlkZSgpCiAgICB0YWJsZTFbMV1bMV0uaGlkZSgpCiAgICB0YWJsZTFbMV1bMl0uaGlkZSgpCiAgICB0YWJsZTFbMV1bM10uaGlkZSgpCiAgICB0YWJsZTFbMV1bNF0uaGlkZSgpCiAgICB0YWJsZTFbMV1bNV0uaGlkZSgpCiAgICB0YWJsZTFbMV1bNl0uaGlkZSgpCiAgICB0YWJsZTFbMV1bN10uaGlkZSgpCiAgICB0YWJsZTFbMV1bOF0uaGlkZSgpCiAgICB0YWJsZTFbMV1bOV0uaGlkZSgpCgoJCXRpdGxlMy5oaWRlKCkKCQl0MkxpbmUuaGlkZSgpCgkJdDBMaW5lLmhpZGUoKQoJCWNoYW5nZUFycncuaGlkZSgpCiAgICB0MFBvaW50LmhpZGUoKQogICAgdDJQb2ludC5oaWRlKCkKCQludW1MaW5lMi5oaWRlKCkKCQljaGFuZ2VMYWJlbC5oaWRlKCkKICAgIHQwRG90Rmx5LmhpZGUoKQogICAgdDJEb3RGbHkuaGlkZSgpCgkJc3RlcDEuaGlkZSgpCgkJc3RlcDIuaGlkZSgpCgkJc3RlcDMuaGlkZSgpCgkJc3RlcDQuaGlkZSgpCgkgfQoKICBBbmltYXRlKCkgewogICAgLy8gMS1hCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1hX2ludHJvZHVjdGlvbl90b19hdmVyYWdlX3ZlbG9jaXR5Lm1wMyIpCiAgICBiYWxsX3guaW50ZXJwb2xhdGUoOCwgY3VydmU6ICJsaW5lYXIiLCBkdXJhdGlvbjogODAwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgYmFsbExhYmVsLnBvc2l0aW9uLm1vdmUoVmVjMihiYWxsTGFiZWxYLCAwLjMpLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAzOTAwKQogICAgd2FpdCgzMDApCiAgICBiYWxsTGFiZWwucG9zaXRpb24ubW92ZShWZWMyKGJhbGxMYWJlbFgsIDAuNDcpLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAzOTAwLCBibG9ja2luZzogZmFsc2UpCiAgICB3YWl0KDUwMCkKICAgIAogICAgLy8gMS1iCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1iX2ludHJvZHVjdGlvbl90b19hdmVyYWdlX3ZlbG9jaXR5Lm1wMyIpCiAgICB3YWl0KDUwMDApCiAgICAKICAgIC8vIDEtYwogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtY19pbnRyb2R1Y3Rpb25fdG9fYXZlcmFnZV92ZWxvY2l0eS5tcDMiKQogICAgd2FpdCgxNTAwKQogICAgcXVlc3Rpb24uc2hvdygpCiAgICB3YWl0KDIwMDApCiAgICAKICAgIC8vIDEtZAogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZF9pbnRyb2R1Y3Rpb25fdG9fYXZlcmFnZV92ZWxvY2l0eS5tcDMiKQogICAgcXVlc3Rpb24uaGlkZShkdXJhdGlvbjogNTAwKQogICAgbnVtTGluZS5zaG93WUF4aXMgPSB0cnVlCiAgICB0aXRsZTIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB0YWJsZTEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB0YWJsZTFbMF1bMF0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB0YWJsZTFbMV1bMF0uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBudW1MaW5lLnNob3dZQXhpczogdHJ1ZQogICAgdXB3YXJkUG9pbnQuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB1cHdhcmRMaW5lLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgdXB3YXJkTGFiZWwuc2hvdygpCiAgICAvL3QgPSAwCiAgICB0MHNMYWJlbC5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHQwdExhYmVsLnNob3coZHVyYXRpb246IDUwMCkKICAgIHQwdEZseS5vcGFjaXR5ID0gMQogICAgdDB0Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjA3OSwgMC43NTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHQwc0ZseS5vcGFjaXR5ID0gMQogICAgdDBzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjA3OSwgMC44MTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHRhYmxlMVswXVsxXS5vcGFjaXR5ID0gMQogICAgdGFibGUxWzFdWzFdLm9wYWNpdHkgPSAxCiAgICB0MHNMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHQwdExhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDBzRmx5Lm9wYWNpdHkgPSAwCiAgICB0MHRGbHkub3BhY2l0eSA9IDAKICAgIG51bUxpbmUuY2hpbGRyZW4ucHVzaChQb2ludChWZWMyKDEuMjUsIHMoYmFsbF94KSksIGNvbG9yOiBiYWxsQ29sb3IpKQogICAgYmFsbF94ID0gMAogICAgLy90ID0gMQogICAgYmFsbF94LmludGVycG9sYXRlKHQxLCBjdXJ2ZTogImxpbmVhciIsIGJsb2NraW5nOiBmYWxzZSkKICAgIGJhbGxMYWJlbC5wb3NpdGlvbi5tb3ZlKFZlYzIoYmFsbExhYmVsWCwgMC40MTUpLCBjdXJ2ZTogImxpbmVhciIpCiAgICB0MXNMYWJlbC5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHQxdExhYmVsLnNob3coZHVyYXRpb246IDUwMCkKICAgIHdhaXQoMTAwMCkKICAgIC8vIHdhaXQoMjAwMCkKICAgIAogICAgLy8gMS1lCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1lX2ludHJvZHVjdGlvbl90b19hdmVyYWdlX3ZlbG9jaXR5Lm1wMyIpCiAgICB0MXRGbHkub3BhY2l0eSA9IDEKICAgIHQxdEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4xMjEsIDAuNzU0NSksIGR1cmF0aW9uOiA1MDApCiAgICB0MXNGbHkub3BhY2l0eSA9IDEKICAgIHQxc0ZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4xMTI1LCAwLjgxNDUpLCBkdXJhdGlvbjogNTAwKQogICAgdGFibGUxWzBdWzJdLm9wYWNpdHkgPSAxCiAgICB0YWJsZTFbMV1bMl0ub3BhY2l0eSA9IDEKICAgIHQxc0xhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDF0TGFiZWwuaGlkZShkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICB0MXNGbHkub3BhY2l0eSA9IDAKICAgIHQxdEZseS5vcGFjaXR5ID0gMAogICAgbnVtTGluZS5jaGlsZHJlbi5wdXNoKFBvaW50KFZlYzIoMS4yNSwgcyhiYWxsX3gpKSwgY29sb3I6IGJhbGxDb2xvcikpCiAgICAvL3QgPSAyCiAgICBiYWxsX3guaW50ZXJwb2xhdGUodDIsIGN1cnZlOiAibGluZWFyIiwgYmxvY2tpbmc6IGZhbHNlKQogICAgYmFsbExhYmVsLnBvc2l0aW9uLm1vdmUoVmVjMihiYWxsTGFiZWxYLCAwLjQxNSksIGN1cnZlOiAibGluZWFyIikKICAgIHQyc0xhYmVsLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDJ0TGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgdDJ0Rmx5Lm9wYWNpdHkgPSAxCiAgICB0MnRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMTU2ICsgMC4wMDg1LCAwLjc1NDUpLCBkdXJhdGlvbjogNTAwKQogICAgdDJzRmx5Lm9wYWNpdHkgPSAxCiAgICB0MnNGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMTU2LCAwLjgxNDUpLCBkdXJhdGlvbjogNTAwKQogICAgdGFibGUxWzBdWzNdLm9wYWNpdHkgPSAxCiAgICB0YWJsZTFbMV1bM10ub3BhY2l0eSA9IDEKICAgIHQyc0xhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDJ0TGFiZWwuaGlkZShkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICB0MnNGbHkub3BhY2l0eSA9IDAKICAgIHQydEZseS5vcGFjaXR5ID0gMAogICAgbnVtTGluZS5jaGlsZHJlbi5wdXNoKFBvaW50KFZlYzIoMS4yNSwgcyhiYWxsX3gpKSwgY29sb3I6IGJhbGxDb2xvcikpCiAgICAvL3QgPSAzCiAgICBiYWxsX3guaW50ZXJwb2xhdGUodDMsIGN1cnZlOiAibGluZWFyIiwgYmxvY2tpbmc6IGZhbHNlKQogICAgYmFsbExhYmVsLnBvc2l0aW9uLm1vdmUoVmVjMihiYWxsTGFiZWxYLCAwLjQxNSksIGN1cnZlOiAibGluZWFyIikKICAgIHQzc0xhYmVsLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDN0TGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgdDN0Rmx5Lm9wYWNpdHkgPSAxCiAgICB0M3RGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMTk5NSArIDAuMDA4LCAwLjc1NDUpLCBkdXJhdGlvbjogNTAwKQogICAgdDNzRmx5Lm9wYWNpdHkgPSAxCiAgICB0M3NGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuMTk5NSwgMC44MTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHRhYmxlMVswXVs0XS5vcGFjaXR5ID0gMQogICAgdGFibGUxWzFdWzRdLm9wYWNpdHkgPSAxCiAgICB0M3NMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHQzdExhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDNzRmx5Lm9wYWNpdHkgPSAwCiAgICB0M3RGbHkub3BhY2l0eSA9IDAKICAgIG51bUxpbmUuY2hpbGRyZW4ucHVzaChQb2ludChWZWMyKDEuMjUsIHMoYmFsbF94KSksIGNvbG9yOiBiYWxsQ29sb3IpKQogICAgLy90ID0gNAogICAgYmFsbF94LmludGVycG9sYXRlKHQ0LCBjdXJ2ZTogImxpbmVhciIsIGJsb2NraW5nOiBmYWxzZSkKICAgIGJhbGxMYWJlbC5wb3NpdGlvbi5tb3ZlKFZlYzIoYmFsbExhYmVsWCwgMC4zKSwgY3VydmU6ICJsaW5lYXIiKQogICAgdDRzTGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICB0NHRMYWJlbC5zaG93KGR1cmF0aW9uOiA1MDApCiAgICB0NHRGbHkub3BhY2l0eSA9IDEKICAgIHQ0dEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4yNDMgKyAwLjAwOCwgMC43NTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHQ0c0ZseS5vcGFjaXR5ID0gMQogICAgdDRzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjI0MywgMC44MTQ1KSwgZHVyYXRpb246IDUwMCkKICAgIHRhYmxlMVswXVs1XS5vcGFjaXR5ID0gMQogICAgdGFibGUxWzFdWzVdLm9wYWNpdHkgPSAxCiAgICB0NHNMYWJlbC5oaWRlKGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHQ0dExhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDRzRmx5Lm9wYWNpdHkgPSAwCiAgICB0NHRGbHkub3BhY2l0eSA9IDAKICAgIG51bUxpbmUuY2hpbGRyZW4ucHVzaChQb2ludChWZWMyKDEuMjUsIHMoYmFsbF94KSksIGNvbG9yOiBiYWxsQ29sb3IpKQogIH0KCiAgUXVlc3Rpb24oaWQ6ICIgIiwgdHlwZTogIm11bHRpcGxlQ2hvaWNlIikge30KfQoKU2NlbmUoKSB7CiAgSW5pdCgKICApIHsKICB9CgogIEFuaW1hdGUoKSB7CiAgICAvLyAyLWEKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWFfaW50cm9kdWN0aW9uX3RvX2F2ZXJhZ2VfdmVsb2NpdHkubXAzIikKICAgIHRhYmxlMVswXVs2XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVswXVs3XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVswXVs4XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVswXVs5XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVsxXVs2XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVsxXVs3XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVsxXVs4XS5zaG93KGR1cmF0aW9uOiA1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIHRhYmxlMVsxXVs5XS5zaG93KGR1cmF0aW9uOiA1MDApCiAgICBzdGVwMS5zaG93KCkKICAgIHdhaXQoNjUwMCkKICAgIAogICAgLy8gMi1iCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1iX2ludHJvZHVjdGlvbl90b19hdmVyYWdlX3ZlbG9jaXR5Lm1wMyIpCiAgICB0aXRsZTMuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBudW1MaW5lMi5zaG93KGR1cmF0aW9uOiA1MDApCiAgICBiYWxsX3ggPSAwCiAgICBiYWxsTGFiZWwucG9zaXRpb24gPSBWZWMyKGJhbGxMYWJlbFgsIDAuNDcpCiAgICB1cHdhcmRMaW5lLnJhbmdlID0gSW50ZXJ2YWwoMCwgcyh0NCkpLy9tYWtlIHVwd2FyZExpbmUgbm9uIHJlYWN0aXZlIG5vdwogICAgLy90MCBwb2ludAogICAgdDBzRmx5Lm9wYWNpdHkgPSAxCiAgICB0MHNGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNTcsIDAuNDcpLCBibG9ja2luZzogZmFsc2UpIC8vZmx5IHggYW5kIHkgbGFiZWxzIHRvIGF4ZXMKICAgIHQwdEZseS5vcGFjaXR5ID0gMQogICAgdDB0Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjUzLCAwLjQ3KSwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDBEb3RGbHkub3BhY2l0eSA9IDEKICAgIHQwRG90Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjY1NywgMC41KSwgZHVyYXRpb246IDUwMCwgY3VydmU6ICJsaW5lYXIiKSAvL2ZseSBkb3QKICAgIHQwUG9pbnQuc2hvdyhkdXJhdGlvbjogNTAwKS8vYWRkIHBvaW50IGxhYmVsCiAgICB0MHNGbHkuY29udGVudCA9ICIkI3ModDApIyQgZnQiCiAgICB0MHRGbHkuY29udGVudCA9ICIkI3QwIyQgcyIKICAgIHQwRG90Rmx5Lm9wYWNpdHkgPSAwCiAgICAvL3QyIHBvaW50CiAgICBiYWxsX3guaW50ZXJwb2xhdGUoMiwgZHVyYXRpb246IDUwMCwgY3VydmU6ICJsaW5lYXIiKQogICAgdDJzRmx5Lm9wYWNpdHkgPSAxCiAgICB0MnNGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNTcsIDAuMjE1KSwgYmxvY2tpbmc6IGZhbHNlKSAvL2ZseSB4IGFuZCB5IGxhYmVscyB0byBheGVzCiAgICB0MnRGbHkub3BhY2l0eSA9IDEKICAgIHQydEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC41MywgMC4yMTUpLCBibG9ja2luZzogZmFsc2UpCiAgICB0MkRvdEZseS5vcGFjaXR5ID0gMQogICAgdDJEb3RGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNjU3LCAwLjI0MjUpLCBkdXJhdGlvbjogNTAwLCBjdXJ2ZTogImxpbmVhciIpIC8vZmx5IGRvdAogICAgdDJQb2ludC5zaG93KGR1cmF0aW9uOiA1MDApLy9hZGQgcG9pbnQgbGFiZWwKICAgIHQyc0ZseS5jb250ZW50ID0gIiQjcyh0MikjJCBmdCIKICAgIHQydEZseS5jb250ZW50ID0gIiQjdDIjJCBzIgogICAgdDJEb3RGbHkub3BhY2l0eSA9IDAKICAgIHdhaXQoNTAwKQogICAgdDJMaW5lLnNob3coZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdDBMaW5lLnNob3coZHVyYXRpb246IDUwMCkKICAgIGNoYW5nZUFycncub3BhY2l0eSA9IDEKICAgIGNoYW5nZUFycncucmFuZ2UucmVzaXplKEludGVydmFsKHMoMCksIHMoMikpKQogICAgY2hhbmdlTGFiZWwuc2hvdygpCiAgICAKICAgIC8vIDItYwogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItY19pbnRyb2R1Y3Rpb25fdG9fYXZlcmFnZV92ZWxvY2l0eS5tcDMiKQogICAgc3RlcDIuc2hvdyhkdXJhdGlvbjogNTAwKQogICAgdDJzTnVtTGluZTI6IHQyc0ZseS5jb3B5KCkKICAgIHQyc0ZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC44MjYsIDAuMTg5NSkpCiAgICB0MHNOdW1MaW5lMjogdDBzRmx5LmNvcHkoKQogICAgdDBzRmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjg4NDUsIDAuMTg5NSkpCiAgICB0Mk51bUxpbmUyOiB0MnRGbHkuY29weSgpCiAgICB0MnRGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuODM3NSwgMC4yMjI1KSkKICAgIHQwTnVtTGluZTI6IHQwdEZseS5jb3B5KCkKICAgIHQwdEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC44NzcsIDAuMjIyNSkpCiAgICB3YWl0KDUwMCkKICAgIAogICAgLy8gMi1kCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1kX2ludHJvZHVjdGlvbl90b19hdmVyYWdlX3ZlbG9jaXR5Lm1wMyIpCiAgICB3YWl0KDEwMDApCiAgICBzdGVwMy5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIHN0ZXA0LnNob3coKQogICAgd2FpdCgxMDAwKQogICAgCiAgfQoKICBRdWVzdGlvbihpZDogIiAiLCB0eXBlOiAic2hvcnRBbnN3ZXIiKSB7fQp9</Code>
+          <Question uuid="d7723ed3-1b41-4a12-84d9-1e19e399407e">
+            <MultipleChoice difficulty="medium" uuid="2343ef7b-4642-4e1f-b5c9-7e4e7e3ec39d">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>On which time interval did the ball’s height change by the greatest amount?</question>
+              <Choices>
+                <choice>
+                  <label> Between <m>t = 3</m> and <m>t = 4</m>
+                  </label>
+                  <explanation>The length of the time interval between <m>t = 3</m> and <m>t = 4</m>
+                    is <m>1</m> second. The position changed from <m>240 \text{ ft}</m> to <m>256
+                    \text{ ft}</m>. So the position changed by <m>256 \text{ ft} - 240 \text{ ft} =
+                    16 \text{ ft}</m> in <m>1</m> second. This change in position is the least among
+                    the time intervals.</explanation>
+                </choice>
+                <choice>
+                  <label> Between <m>t = 2</m> and <m>t = 3</m>
+                  </label>
+                  <explanation>The length of the time interval between <m>t = 2</m> and <m>t = 3</m>
+                    is <m>1</m> second. The position changed from <m>192 \text{ ft}</m> to <m>240
+                    \text{ ft}</m>. So the position changed by <m>240 \text{ ft} - 192 \text{ ft} =
+                    48 \text{ ft}</m> in <m>1</m> second. This change in position is not the
+                    greatest among the time intervals.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label> Between <m>t = 1</m> and <m>t = 2</m>
+                  </label>
+                  <explanation>The length of the time interval between <m>t = 1</m> and <m>t = 2</m>
+                    is <m>1</m> second. The position changed from <m>112 \text{ ft}</m> to <m>192
+                    \text{ ft}</m>. So the position changed by <m>192 \text{ ft} - 112 \text{ ft} =
+                    80 \text{ ft}</m> in <m>1</m> second. This change in position is the greatest
+                    among the time intervals.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Question>
+          <Question uuid="0f8ca441-3a9c-45ec-b11e-72c31c87b819">
+            <ShortAnswer difficulty="easy" uuid="3c7d641c-25ea-42a1-b7c6-3041ee97917c">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>What is the average velocity on the interval <m>[1,4] \text{?}</m></question>
+              <Suffix>
+                <m>\dfrac{\text{ft}}{\text{s}}</m>
+              </Suffix>
+              <Hints>
+                <hint>
+                  <m>v_{ave} = \dfrac{\text{Change in position}}{\text{Length of time interval}}</m>
+                </hint>
+                <hint>The change in position is the difference in heights between <m>t = 1</m> and <m>t
+                  = 4 \text{.}</m></hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>The average velocity is given by <m>v_{ave} = \dfrac{\text{Change in
+                  position}}{\text{Length of time interval}} \text{.}</m></p>
+                <p>
+                  <me>\begin{align*}
+                    v_{ave} &amp; = \dfrac{\text{Change in position}}{\text{Length of time
+                    interval}} \\
+                    &amp; = \dfrac{s(4)-s(1)}{4-1} &amp;&amp; \text{Substitute } t = 1 \text{ and }
+                    t = 4 \\
+                    &amp; = \dfrac{256 - 112}{3} &amp;&amp; \text{Substitute values for } s(4) \text
+                    { and } s(1) \\
+                    &amp; = 48 \text{ } \dfrac{\text{ft}}{\text{s}} &amp;&amp; \text{Simplify} \\
+                    \end{align*}</me>
+                </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="48" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Question>
+        </ArcResource>
+        <TextResource duration="6" uuid="cbf4e2f6-74a8-464b-bd52-fe54c2c20933">
+          <Text uuid="b6954f6c-d784-4531-9215-d93513f5d506">
+            <m>s(t)</m> represents the height of a ball in the air in feet <m>t</m> seconds after
+            the ball is thrown. </Text>
+          <Questions locked-steps="true" uuid="c0f88e31-1a8f-40a1-80f3-60d1e4d6158a">
+            <ShortAnswer difficulty="easy" uuid="1016e344-4362-4388-b8df-8d3806a40e7f">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>If <m>s(2) = 106</m> feet and <m>s(5) = 10 </m> feet, the change in position
+                is <m>\underline{\phantom{XXXXXX}}</m> feet.</question>
+              <Hints>
+                <hint>The change in position is <m>s(5) - s(2) \text{.}</m></hint>
+              </Hints>
+              <CorrectExplanation>The change in position is <m>s(5) - s(2) = 10-106 = -96</m> feet.</CorrectExplanation>
+              <Evaluation>
+                <Expression expected="-96" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="a49a9872-f18a-44ed-a67b-b37521c547e8">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>If <m>s(2) = 106</m> feet and <m>s(5) = 10</m>​​​​ feet, the length of the
+                time interval is <m>\underline{\phantom{XXXXXX}}</m> seconds.</question>
+              <Hints>
+                <hint>The length of the time interval is the difference between the two inputs.</hint>
+              </Hints>
+              <CorrectExplanation>The length of the time interval is the difference between the two
+                inputs: <m>5 - 2 = 3</m> seconds.</CorrectExplanation>
+              <Evaluation>
+                <Expression expected="3" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="aa24538e-caf2-44d3-9cfc-ff8b65cb4ffa">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question> If <m>s(2) = 106</m> feet and <m>s(5) = 10 </m> feet, the average velocity
+                during that time interval is <m> \underline{\phantom{XXXXXX}}</m>
+                    <m>
+                \dfrac{\text{feet}}{\text{second}}.</m>
+              </question>
+              <Hints>
+                <hint>
+                  <m>\text{Average velocity} = \dfrac{\text{Change in position}}{\text{Length of
+                    time interval}}</m>
+                </hint>
+                <hint>Substitute <m>-96</m> for the change in position and <m>3</m> for the length
+                  of time interval in the formula for average velocity.</hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  \text{Average velocity} &amp;= \dfrac{\text{Change in position}}{\text{Length of
+                  time interval}} \\
+                  &amp;= \dfrac{-96}{3} \\
+                  &amp;= -32 \, \dfrac{\text{feet}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="-32" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <MultipleChoice difficulty="easy" uuid="f23bdd7c-faa8-40b5-a679-00f5eb474810">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The average velocity from <m>t=2</m> to <m>t = 5</m> seconds is negative
+                because <m>\underline{\phantom{XXXXXX}} \text{.}</m>
+              </question>
+              <Choices>
+                <choice>
+                  <label>the ball’s height is decreasing from <m>t=2</m> to <m>t = 5</m> seconds</label>
+                  <explanation>The average velocity does not incorporate what happens between <m>t=2</m>
+                    and <m>t=5</m> seconds. Rather, the average velocity only uses information about
+                    the ball at <m>t=2</m> and <m>t = 5 \text{.}</m> In between those times the ball
+                    could be going up and then down.</explanation>
+                </choice>
+                <choice>
+                  <label>the ball is higher at <m>t=5</m> seconds than at <m>t = 2</m> seconds</label>
+                  <explanation>If the ball were higher at <m>t=5</m> seconds than at <m>t =2</m>
+                    seconds, then <m>s(5)-s(2)</m> would be positive. Since the length of the time
+                    interval is positive, the average velocity would also be positive.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label>the ball is lower at <m>t=5</m> seconds than at <m>t = 2</m> seconds</label>
+                  <explanation>The change in position is negative, which can only happen when <m>
+                    s(5)</m> is smaller than <m>s(2) \text{.}</m> If the change in position is
+                    negative, the average velocity will also be negative.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="medium" uuid="20eaeb27-99aa-4bca-a6e2-7f5ff6047930">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The change in position of the ball over the time interval <m>[1,3]</m> is <m>32
+                \text{ ft.}</m> So the ball’s average velocity over that interval is <m>\underline{\phantom{XXXXXX}}
+                \dfrac{\text{feet}}{\text{second}}</m>.</question>
+              <Hints>
+                <hint>
+                  <m>\text{Average velocity} = \dfrac{\text{Change in position}}{\text{Length of
+                    time interval}}</m>
+                </hint>
+                <hint>We know the change in position. Determine the length of the time interval.</hint>
+              </Hints>
+              <CorrectExplanation> Because the length of the time interval <m>[1,3]</m> is <m>2</m>
+                , we can find the average velocity. <me>\begin{align*}
+                  \text{Average velocity} &amp;= \dfrac{\text{Change in position}}{\text{Length of
+                time interval}} \\
+                  &amp;= \dfrac{32}{2} &amp;&amp; \text{Substitute} \\
+                  &amp;= 16 \, \dfrac{\text{feet}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="16" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="2fd68d17-045a-4f3d-a0d7-932edddb93b7">
+          <KSAs primary="KSA2.3.1" secondary="Todo" uuid="9675e1ae-0519-43af-9fa1-bcd1a3302cc0" />
+          <Text uuid="feb39892-8327-434a-b97b-b0714f878256">
+            <p>Lesson summary</p>
+
+
+            <list type="bullet">
+              <item>Velocity measures how fast an object is moving and in which direction.</item>
+              <item>The average velocity measures the change in the object’s position divided by the
+                length of the time interval: <m>v_{ave} = \dfrac{\text{ Change in position }}{\text{
+                Length of time interval }}\text{.}</m></item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="lesson" when="pre" uuid="eac62def-d312-49e8-a40d-96131673ebdc">
+      <title>Average velocity and the secant line</title>
+      <LearningOutcomes ids="2.3.1" />
+      <Resources>
+        <TextResource duration="1" uuid="58477485-36e9-4667-bc21-76c5f265d710">
+          <KSAs primary="KSA2.3.1" secondary="Todo" uuid="856b4977-e218-42a9-887b-2fa219ac78eb" />
+          <Text uuid="efd417f7-392d-41c6-9baa-dde0f3c1bcec">
+            <p> This lesson introduces a way to visualize the ball’s average velocity using a line
+              passing through two points on the graph of <m>s(t)</m> called a secant line. <definition>
+              A <b>secant line</b> is a line that passes through any two points of a function.</definition>
+              The slope of a secant line <m>m_{sec}</m> passing through a position function <m>s(t)</m>
+              can be interpreted as the average velocity. Consequently, over a time interval <m>
+              [a,b]\text{:}</m>
+                  <me>v_{ave} = \dfrac{s(b) - s(a)}{b - a}</me>
+            </p>
+            <p>In the context of the ball’s motion, the steeper the secant line’s slope, the faster
+              the ball is moving. A secant line that is increasing corresponds to a positive average
+              velocity on that interval. A secant line that is decreasing corresponds to a negative
+              average velocity on that interval.</p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="2" uuid="9995b7f9-60c7-47e1-bd69-92eb3a5c36e0">
+          <title>Average velocity and the secant line</title>
+          <KSAs primary="Todo" secondary="Todo" />
+          <Track kind="narration" src="tracks/f4ea048b-1196-4877-a7b2-383fcdcf0c2e_narration.vtt" />
+          <Track kind="description"
+            src="tracks/f4ea048b-1196-4877-a7b2-383fcdcf0c2e_description.vtt" />
+          <Code>
+            Ly9XZXN0aW4gMTAvMTYsIGNvbnZlcnRlZCBmcm9tIG1hbmltIHRvIGFyYwovL0xpemJldGggMTAvMzEsIHVwZGF0ZSB0byByZW1vdmUgbmVnYXRpdmUgYW5kIHplcm8gc2xvcGVzIHNjZW5lcwpDYW52YXMod2luZG93czogMikKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIC8vY29sb3JzCiAgICAgICAgdENvbG9yOiBDb2xvci5wdXJwbGUKICAgICAgICBzQ29sb3I6IENvbG9yLmdyZWVuCiAgICAgICAgYmFsbENvbG9yOiBDb2xvci5yZWQKICAgICAgICBzZWNhbnRDb2xvcjogQ29sb3IuYmx1ZQogICAgICAgIHRhbmdlbnRDb2xvcjogQ29sb3Iub3JhbmdlCiAgICAgICAgCiAgICAgICAgdGl0bGU6IFRleHQoIkZpbmRpbmcgYXZlcmFnZSB2ZWxvY2l0eSIsIHBvc2l0aW9uOiBWZWMyKDAuMjYsIDApKQogICAgICAgIGZxdWFkOiAtMTYqeF4yICsgMTI4KngKICAgICAgICBsZWZ0UG9pbnQxeDogMQogICAgICAgIGxlZnRQb2ludDJ4OiA0CgogICAgICAgIHJpc2VMZWZ0OiBWTGluZSh4OiBgbGVmdFBvaW50MnhgLCByYW5nZTogSW50ZXJ2YWwoYGZxdWFkKGxlZnRQb2ludDJ4KWAsIGBmcXVhZChsZWZ0UG9pbnQyeClgKSwgY29sb3I6IENvbG9yLmdyZWVuLCBkYXNoZWQ6IHRydWUpCiAgICAgICAgcnVuTGVmdDogSExpbmUoeTogYGZxdWFkKGxlZnRQb2ludDF4KWAsIGRvbWFpbjogSW50ZXJ2YWwoYGxlZnRQb2ludDJ4YCxgbGVmdFBvaW50MnhgKSwgc3Ryb2tlOiAyLCBjb2xvcjogQ29sb3IucHVycGxlLCBkYXNoZWQ6IHRydWUpCiAgICAgICAgZG9tYWluMUxpbmU6VkxpbmUoeDogYGxlZnRQb2ludDF4YCwgcmFuZ2U6IEludGVydmFsKDAsIDI1NiksIGNvbG9yOiBDb2xvci5ncmF5KQogICAgICAgIGRvbWFpbjJMaW5lOlZMaW5lKHg6IGBsZWZ0UG9pbnQyeGAsIHJhbmdlOiBJbnRlcnZhbCgwLCAyNTYpLCBjb2xvcjogQ29sb3IuZ3JheSkKICAgICAgICBwb2ludDE6IFBvaW50KGNvb3JkaW5hdGVzOiBWZWMyKGBsZWZ0UG9pbnQxeGAsIGZxdWFkKGBsZWZ0UG9pbnQxeGApKSwgbGFiZWxBbmNob3I6ICJ0b3AtbGVmdCIpCiAgICAgICAgcG9pbnQyOiBQb2ludChjb29yZGluYXRlczogVmVjMihgbGVmdFBvaW50MnhgLCBmcXVhZChgbGVmdFBvaW50MnhgKSksIGxhYmVsQW5jaG9yOiAidG9wLWxlZnQiKQogICAgICAgIHNlY2FudExpbmU6IExpbmUocDE6IFZlYzIoYGxlZnRQb2ludDF4YCwgZnF1YWQoYGxlZnRQb2ludDF4YCkpLHAyOiBWZWMyKGBsZWZ0UG9pbnQyeGAsIGZxdWFkKGBsZWZ0UG9pbnQyeGApKSwgY29sb3I6IENvbG9yLmJsdWUsIGRhc2hlZDogdHJ1ZSkKICAgICAgICBsZWZ0R3JhcGg6IEdyYXBoKAogICAgICAgICAgICBpbmRlbnQ6IGZhbHNlCiAgICAgICAgICAgIHNpemU6IFZlYzIoMC43LCAwLjUpCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMiwgMC4xKQogICAgICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgICAgICAgRnVuYyhmcXVhZCwgY29sb3I6IENvbG9yLnByaW1hcnksIHN0cm9rZTogMikKICAgICAgICAgICAgICAgIGRvbWFpbjFMaW5lCiAgICAgICAgICAgICAgICBkb21haW4yTGluZQogICAgICAgICAgICAgICAgcnVuTGVmdAogICAgICAgICAgICAgICAgcmlzZUxlZnQKICAgICAgICAgICAgICAgIHNlY2FudExpbmUgICAgICAgICAgCiAgICAgICAgICAgICAgICBwb2ludDEKICAgICAgICAgICAgICAgIHBvaW50MgogICAgICAgICAgIAogICAgICAgICAgICBdCiAgICAgICAgICAgIGRvbWFpbjogSW50ZXJ2YWwoMCwgOCkKICAgICAgICAgICAgcmFuZ2U6IEludGVydmFsKC01LCAzMDAsIDYwKQogICAgICAgICAgICB4QXhpczogVGV4dCgiJHQkIiwgY29sb3I6IHRDb2xvcikKICAgICAgICAgICAgeUF4aXM6IFRleHQoIiRzJCIsIGNvbG9yOiBzQ29sb3IpCiAgICAgICAgICAgIHNob3dYQXhpc051bWJlcnM6IGZhbHNlCiAgICAgICAgICAgIHNob3dZQXhpc051bWJlcnM6IGZhbHNlCiAgICAgICAgKQoKICAgICAgICBhbm5vdGF0ZVJ1bjogVGV4dChjb250ZW50OlsgVGV4dCgiQ2hhbmdlIGluIHRpbWUgJD1cOyQiKSwgVGV4dCgiJDQgLSAwJCIsIGNvbG9yOiB0Q29sb3IpXSwgcG9zaXRpb246IFZlYzIoMC4xNSwgMC42MjUpLCBjb2xvcjogQ29sb3IucHVycGxlKQogICAgICAgIGFubm90YXRlUmlzZTogVGV4dCgiQ2hhbmdlIGluXG5wb3NpdGlvbiAkPSRcbiRzKDQpLXMoMCkkIiwgcG9zaXRpb246IFZlYzIoMC41NSwgMC4zNSksIGNvbG9yOiBzQ29sb3IpCiAgICAgICAgCiAgICAgICAgc2VjYW50TGluZUxhYmVsOiBUZXh0KCJTZWNhbnQgbGluZSIsIGNvbG9yOiBzZWNhbnRDb2xvciwgcG9zaXRpb246IFZlYzIoMC42MTUsIDAuMDc1KSkKCiAgICAgICAgcnVuTGFiZWw6IFRleHQoIiRiIC0gYSQiLCBwb3NpdGlvbjogVmVjMigwLjM2LCAwLjQpLCBjb2xvcjogdENvbG9yKQogICAgICAgIHJ1bkxhYmVsRmx5OiBydW5MYWJlbC5jb3B5KCkKICAgICAgICByaXNlTGFiZWw6IFRleHQoIiRzKGIpLXMoYSkkIiwgcG9zaXRpb246IFZlYzIoMC41NCwgMC4yNzUpLCBjb2xvcjogc0NvbG9yKQogICAgICAgIHJpc2VMYWJlbEZseTogcmlzZUxhYmVsLmNvcHkoKQoKICAgICAgICBzbG9wZTogVGV4dChjb250ZW50OiBbVGV4dCgiU2xvcGUgb2YgYSBzZWNhbnQgbGluZSAkPVw7JCIpLCBUZXh0KCIkXGRmcmFje1xwaGFudG9te1x0ZXh0e1Jpc2V9fX17XHBoYW50b217XHRleHR7UnVufX19XDskIiksIFRleHQoIiQ9XDskIiksIFRleHQoIiRcZGZyYWN7XHBoYW50b217cyhiKSAtIHMoYSl9fXtccGhhbnRvbXtiLWF9fSQiKV0sIHBvc2l0aW9uOiBWZWMyKDAuMDUsIDAuNzI1KSkKICAgICAgICBzbG9wZUVtcGgxOiBUZXh0KCIkXHRleHR7UmlzZX0kIiwgcG9zaXRpb246IFZlYzIoMC40ODIsIDAuNzE1KSwgY29sb3I6IHNDb2xvcikKICAgICAgICBzbG9wZUVtcGgyOiBUZXh0KCIkXHRleHR7UnVufSQiLCBwb3NpdGlvbjogVmVjMigwLjQ4MiwgMC43NiksIGNvbG9yOiB0Q29sb3IpCgogICAgICAgIHNvbHZlOiBUZXh0KFtUZXh0KCIkdl9cdGV4dHthdmV9ID0kIiksIFRleHQoIiRcOlxkZnJhY3tccGhhbnRvbXtzKDQpLXMoMCl9fXtccGhhbnRvbXs0LTB9fT0kIiksIFRleHQoIiRcZGZyYWN7MjU2XHRleHR7IGZ0fX17NFx0ZXh0eyBzfX09JCIsIG9wYWNpdHk6IDApLCBUZXh0KCIkXDo2NFxkZnJhY3tcdGV4dHtmdH19e1x0ZXh0e3N9fSQiLCBvcGFjaXR5OiAwKV0KICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMTUsMC44NSkKICAgICAgICApCiAgICAgICAgc29sdmVFbXBoMTogVGV4dCgiJHMoNCktcygwKSQiLCBwb3NpdGlvbjogVmVjMigwLjI2OCwgMC44Mzc1KSwgY29sb3I6IHNDb2xvcikKICAgICAgICBzb2x2ZUVtcGgyOiBhbm5vdGF0ZVJ1bi5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC4zMTU1LCAwLjg4NzUpKQogICAgICAgCiAgICApIHsKICAgICAgICByaXNlTGVmdC5oaWRlKCkKICAgICAgICBydW5MZWZ0LmhpZGUoKQogICAgICAgIGRvbWFpbjFMaW5lLmhpZGUoKQogICAgICAgIGRvbWFpbjJMaW5lLmhpZGUoKQogICAgICAgIHBvaW50MS5oaWRlKCkKICAgICAgICBwb2ludDIuaGlkZSgpCiAgICAgICAgc2VjYW50TGluZS5oaWRlKCkKICAgICAgICBsZWZ0R3JhcGguaGlkZSgpCiAgICAgICAgYW5ub3RhdGVSdW4uaGlkZSgpCiAgICAgICAgYW5ub3RhdGVSaXNlLmhpZGUoKQogICAgICAgIHNlY2FudExpbmVMYWJlbC5oaWRlKCkKICAgICAgICBydW5MYWJlbC5oaWRlKCkKICAgICAgICByaXNlTGFiZWxGbHkuaGlkZSgpCiAgICAgICAgcnVuTGFiZWxGbHkuaGlkZSgpCiAgICAgICAgcmlzZUxhYmVsLmhpZGUoKQogICAgICAgIHNsb3BlLmNvbnRlbnRbMF0uaGlkZSgpCiAgICAgICAgc2xvcGUuY29udGVudFsxXS5oaWRlKCkKICAgICAgICBzbG9wZS5jb250ZW50WzJdLmhpZGUoKQogICAgICAgIHNsb3BlLmNvbnRlbnRbM10uaGlkZSgpCiAgICAgICAgc2xvcGVFbXBoMS5oaWRlKCkKICAgICAgICBzbG9wZUVtcGgyLmhpZGUoKQogICAgICAgIHNvbHZlLmhpZGUoKQogICAgICAgIHNvbHZlRW1waDEuaGlkZSgpCiAgICAgICAgc29sdmVFbXBoMi5oaWRlKCkKICAgIH0KICAgIEFuaW1hdGUoKXsKICAgICAgICAvLzEtYQogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfYXZlcmFnZV92ZWxvY2l0eV9hbmRfdGhlX3NlY2FudF9saW5lLm1wMyIpCiAgICAgICAgbGVmdEdyYXBoLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHBvaW50MS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBwb2ludDIuc2hvdygpCiAgICAgICAgd2FpdCgxMDAwKQogICAgICAgIHJpc2VMZWZ0Lm9wYWNpdHkgPSAxCiAgICAgICAgcmlzZUxlZnQucmFuZ2UucmVzaXplKEludGVydmFsKGBmcXVhZChsZWZ0UG9pbnQxeClgLCBgZnF1YWQobGVmdFBvaW50MngpYCkpCiAgICAgICAgcmlzZUxlZnQucmFuZ2UgPSBJbnRlcnZhbChgZnF1YWQobGVmdFBvaW50MXgpYCwgYGZxdWFkKGxlZnRQb2ludDJ4KWApCiAgICAgICAgd2FpdCg1MDApCiAgICAgICAgcnVuTGVmdC5vcGFjaXR5ID0gMQogICAgICAgIHJ1bkxlZnQuZG9tYWluLnJlc2l6ZShJbnRlcnZhbChgbGVmdFBvaW50MXhgLGBsZWZ0UG9pbnQyeGApKQogICAgICAgIHJ1bkxlZnQuZG9tYWluID0gSW50ZXJ2YWwoYGxlZnRQb2ludDF4YCxgbGVmdFBvaW50MnhgKQogICAgICAgIHdhaXQoMzAwMCkKICAgICAgICBzZWNhbnRMaW5lLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHNlY2FudExpbmVMYWJlbC5zaG93KCkKICAgICAgICB3YWl0KDEwMDApCiAgICAgICAgcG9pbnQxLnJhZGl1cy5pbnRlcnBvbGF0ZSgxMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHBvaW50Mi5yYWRpdXMuaW50ZXJwb2xhdGUoMTApCiAgICAgICAgcG9pbnQxLnJhZGl1cy5pbnRlcnBvbGF0ZSg1LCBibG9ja2luZzogZmFsc2UpCiAgICAgICAgcG9pbnQyLnJhZGl1cy5pbnRlcnBvbGF0ZSg1KQogICAgICAgIHdhaXQoMTAwMCkKICAgICAgIAogICAgICAgIC8vMS1iCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYl9hdmVyYWdlX3ZlbG9jaXR5X2FuZF90aGVfc2VjYW50X2xpbmUubXAzIikKICAgICAgICAvL2xhYmVsIHBvaW50cz8KICAgICAgICB3YWl0KDMwMDApCiAgICAgICAgcG9pbnQxLmxhYmVsID0gIiQoYSwgcyhhKSkkIgogICAgICAgIHdhaXQoMTAwMCkKICAgICAgICBwb2ludDIubGFiZWwgPSAiJChiLCBzKGIpKSQiCiAgICAgICAgd2FpdCgyNTAwKQoKICAgICAgICAvLzEtYwogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWNfdjJfYXZlcmFnZV92ZWxvY2l0eV9hbmRfdGhlX3NlY2FudF9saW5lLm1wMyIpCiAgICAgICAgc2xvcGUuY29udGVudFswXS5zaG93KCkKICAgICAgICB3YWl0KDUwMCkKICAgICAgICBzbG9wZS5jb250ZW50WzFdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHNsb3BlRW1waDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgc2xvcGVFbXBoMi5zaG93KCkKICAgICAgICB3YWl0KDUwMDApCiAgICAgICAgcmlzZUxhYmVsLnNob3coKQogICAgICAgIHdhaXQoMjAwMCkKICAgICAgICBydW5MYWJlbC5zaG93KCkKICAgICAgICB3YWl0KDEwMDApCgogICAgICAgIC8vMS1kCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZF92Ml9hdmVyYWdlX3ZlbG9jaXR5X2FuZF90aGVfc2VjYW50X2xpbmUubXAzIikKICAgICAgICB3YWl0KDIwMDApCiAgICAgICAgc2xvcGUuY29udGVudFsyXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBzbG9wZS5jb250ZW50WzNdLnNob3coKQogICAgICAgIHJpc2VMYWJlbEZseS5vcGFjaXR5ID0gMQogICAgICAgIHJpc2VMYWJlbEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC42MTg1LCAwLjcxMjUpKQogICAgICAgIHdhaXQoNTAwKQogICAgICAgIHJ1bkxhYmVsRmx5Lm9wYWNpdHkgPSAxCiAgICAgICAgcnVuTGFiZWxGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNjY1LCAwLjc2MjUpKQogICAgICAgIHdhaXQoMTAwMCkKICAgIH0KICAgIFF1ZXN0aW9uKGlkID0gIiAiLCB0eXBlOiAibXVsdGlwbGVDaG9pY2UiKSB7CiAgICAgICAKICAgIH0KfQoKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgCiAgICApIHt9CiAgICBBbmltYXRlKCkgewogICAgICAgIC8vMi1hCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV9hdmVyYWdlX3ZlbG9jaXR5X2FuZF90aGVfc2VjYW50X2xpbmUubXAzIikKICAgICAgICBwb2ludDEubGFiZWwgPSAiIgogICAgICAgIHBvaW50Mi5sYWJlbCA9ICIiCiAgICAgICAgcnVuTGFiZWwuaGlkZShibG9ja2luZzogZmFsc2UpCiAgICAgICAgcmlzZUxhYmVsLmhpZGUoKQogICAgICAgIGxlZnRQb2ludDF4LmludGVycG9sYXRlKDAsIGN1cnZlOiAibGluZWFyIikKICAgICAgICBsZWZ0R3JhcGguc2hvd1hBeGlzTnVtYmVyczogdHJ1ZQogICAgICAgIGxlZnRHcmFwaC5zaG93WUF4aXNOdW1iZXJzOiB0cnVlCiAgICAgICAgd2FpdCgyMDAwKQogICAgICAgIHBvaW50MS5sYWJlbCA9ICIkKDAsIHMoMCkpJCIKICAgICAgICB3YWl0KDE1MDApCiAgICAgICAgcG9pbnQyLmxhYmVsID0gIiQoNCwgcyg0KSkkIgogICAgICAgIHdhaXQoMjUwMCkKCiAgICAgICAgLy8yLWIKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1iX2F2ZXJhZ2VfdmVsb2NpdHlfYW5kX3RoZV9zZWNhbnRfbGluZS5tcDMiKQogICAgICAgIGFubm90YXRlUmlzZS5zaG93KCkKICAgICAgICB3YWl0KDQ1MDApCgogICAgICAgIC8vMi1jCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItY19hdmVyYWdlX3ZlbG9jaXR5X2FuZF90aGVfc2VjYW50X2xpbmUubXAzIikKICAgICAgICBhbm5vdGF0ZVJ1bi5zaG93KCkKICAgICAgICB3YWl0KDQ1MDApCgogICAgICAgIC8vMi1kCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItZF9hdmVyYWdlX3ZlbG9jaXR5X2FuZF90aGVfc2VjYW50X2xpbmUubXAzIikKICAgICAgICBzb2x2ZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBzb2x2ZUVtcGgxLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHNvbHZlRW1waDIuc2hvdygpCiAgICAgICAgc29sdmUuY29udGVudFsyXS5zaG93KCkKICAgICAgICB3YWl0KDEwMDApCiAgICAgICAgc29sdmUuY29udGVudFszXS5zaG93KCkKICAgICAgICB3YWl0KDE1MDApCiAgICB9CiAgICBRdWVzdGlvbihpZD0iICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHsKICAgICAgIAogICAgfQp9ClNjZW5lKCkgewogICAgSW5pdCgKICAgICAgICB0aXRsZTI6IFRleHQoIkNvbXBhcmluZyBhdmVyYWdlIHZlbG9jaXRpZXMiLCB3aW5kb3c6IDEsIHBvc2l0aW9uOiBWZWMyKDAuMjEsIDApKQogICAgICAgCiAgICAgICAgZ3JhcGgxUG9pbnQxeDogMAogICAgICAgIGdyYXBoMVBvaW50Mng6IDQKICAgICAgICBncmFwaDFQb2ludDN4OiAyCiAgICAgICAgcmlnaHRQMTogUG9pbnQoY29vcmRpbmF0ZXM6IFZlYzIoMCwgZnF1YWQoMCkpKQogICAgICAgIHJpZ2h0UDI6IFBvaW50KGNvb3JkaW5hdGVzOiBWZWMyKDQsIGZxdWFkKDQpKSkKICAgICAgICByaWdodFAzOiBQb2ludChjb29yZGluYXRlczogVmVjMigyLCBmcXVhZCgyKSkpCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMTogTGluZShwMTogVmVjMihgZ3JhcGgxUG9pbnQxeGAsIGBmcXVhZChncmFwaDFQb2ludDF4KWApLHAyOiBWZWMyKGBncmFwaDFQb2ludDJ4YCwgYGZxdWFkKGdyYXBoMVBvaW50MngpYCksIGNvbG9yOiBzZWNhbnRDb2xvciwgZGFzaGVkOiB0cnVlKQogICAgICAgIHJpZ2h0U2VjYW50TGluZTI6IExpbmUocDE6IFZlYzIoYGdyYXBoMVBvaW50MXhgLCBgZnF1YWQoZ3JhcGgxUG9pbnQxeClgKSxwMjogVmVjMihgZ3JhcGgxUG9pbnQzeGAsIGBmcXVhZChncmFwaDFQb2ludDN4KWApLCBjb2xvcjogQ29sb3IucmVkLCBkYXNoZWQ6IHRydWUpCiAgICAgICAgZ3JhcGgxOiBHcmFwaCgKICAgICAgICAgICAgaW5kZW50OiBmYWxzZQogICAgICAgICAgICBzaXplOiBWZWMyKDAuNywgMC41KQogICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjEsIDAuMSkKICAgICAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgICAgICAgIEZ1bmMoZnF1YWQsIGNvbG9yOiBDb2xvci5wcmltYXJ5LCBzdHJva2U6IDIpCiAgICAgICAgICAgICAgICByaWdodFNlY2FudExpbmUxCiAgICAgICAgICAgICAgICByaWdodFNlY2FudExpbmUyCiAgICAgICAgICAgICAgICByaWdodFAxCiAgICAgICAgICAgICAgICByaWdodFAyCiAgICAgICAgICAgICAgICByaWdodFAzCiAgICAgICAgICAgIF0KICAgICAgICAgICAgZG9tYWluOiBJbnRlcnZhbCgwLCA4LCAxKQogICAgICAgICAgICByYW5nZTogSW50ZXJ2YWwoMCwgMzAwLCA2MCkKICAgICAgICAgICAgeEF4aXM6IFRleHQoIiR0JCIsIGNvbG9yOiB0Q29sb3IpCiAgICAgICAgICAgIHlBeGlzOiBUZXh0KCIkcyQiLCBjb2xvcjogc0NvbG9yKQogICAgICAgICAgICB3aW5kb3c6IDEKICAgICAgICApCgogICAgICAgIGdyYXBoMUxhYmVsOiBUZXh0KCJUaGUgYXZlcmFnZSB2ZWxvY2l0eSBvbiAkXHBoYW50b217WzAsMl19JCBpcyBncmVhdGVyIHRoYW4gdGhlIGF2ZXJhZ2UgdmVsb2NpdHkgb24gJFxwaGFudG9te1swLDRdfSQuIiwgd2luZG93OiAxLCBwb3NpdGlvbjogVmVjMigwLCAwLjcpKQogICAgICAgIGdyYXBoMUxhYmVsRW1waDE6IFRleHQoIiRbMCwyXSQiLCBjb2xvcjogQ29sb3IucmVkLCBwb3NpdGlvbjogVmVjMigwLjQzNTUsIDAuNyksIHdpbmRvdzogMSkKICAgICAgICBncmFwaDFMYWJlbEVtcGgyOiBUZXh0KCIkWzAsNF0kIiwgY29sb3I6IHNlY2FudENvbG9yLCBwb3NpdGlvbjogVmVjMigwLjM1NzUsIDAuNzU3NSksIHdpbmRvdzogMSkKICAgICkgewogICAgICAgIHRpdGxlMi5oaWRlKCkKICAgICAgICBncmFwaDEuaGlkZSgpCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMS5oaWRlKCkKICAgICAgICByaWdodFNlY2FudExpbmUyLmhpZGUoKQogICAgICAgIHJpZ2h0UDEuaGlkZSgpCiAgICAgICAgcmlnaHRQMi5oaWRlKCkKICAgICAgICByaWdodFAzLmhpZGUoKQogICAgICAgIAogICAgICAgIGdyYXBoMUxhYmVsLmhpZGUoKQogICAgICAgIGdyYXBoMUxhYmVsRW1waDEuaGlkZSgpCiAgICAgICAgZ3JhcGgxTGFiZWxFbXBoMi5oaWRlKCkKICAgIH0KICAgIEFuaW1hdGUoKSB7CiAgICAgICAgLy8zLWEKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1hX2F2ZXJhZ2VfdmVsb2NpdHlfYW5kX3RoZV9zZWNhbnRfbGluZS5tcDMiKQogICAgICAgIHRpdGxlMi5zaG93KCkKICAgICAgICBncmFwaDEuc2hvdygpCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICByaWdodFAxLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHJpZ2h0UDIuc2hvdygpCiAgICAgICAgd2FpdCgxMDAwKQogICAgICAgIHJpZ2h0U2VjYW50TGluZTIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgcmlnaHRQMy5zaG93KCkKICAgICAgICB3YWl0KDQ1MDApCgogICAgICAgIC8vMy1iCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtYl9hdmVyYWdlX3ZlbG9jaXR5X2FuZF90aGVfc2VjYW50X2xpbmUubXAzIikKICAgICAgICB3YWl0KDEwMDApCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMi5zdHJva2UuaW50ZXJwb2xhdGUoOCkKICAgICAgICB3YWl0KDUwMCkKICAgICAgICByaWdodFNlY2FudExpbmUyLnN0cm9rZS5pbnRlcnBvbGF0ZSgyKQogICAgICAgIHdhaXQoMjAwMCkKCiAgICAgICAgLy8zLWMKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1jX2F2ZXJhZ2VfdmVsb2NpdHlfYW5kX3RoZV9zZWNhbnRfbGluZS5tcDMiKQogICAgICAgIGdyYXBoMUxhYmVsLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGdyYXBoMUxhYmVsRW1waDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgZ3JhcGgxTGFiZWxFbXBoMi5zaG93KCkKICAgICAgICB3YWl0KDIwMDApCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMi5vcGFjaXR5ID0gMAogICAgICAgIHdhaXQoMjAwKQogICAgICAgIHJpZ2h0U2VjYW50TGluZTIub3BhY2l0eSA9IDEKICAgICAgICB3YWl0KDIwMCkKICAgICAgICByaWdodFNlY2FudExpbmUyLm9wYWNpdHkgPSAwCiAgICAgICAgd2FpdCgyMDApCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMi5vcGFjaXR5ID0gMQogICAgICAgIHdhaXQoMjAwKQogICAgICAgIHdhaXQoMzUwMCkKICAgICAgICByaWdodFNlY2FudExpbmUxLm9wYWNpdHkgPSAwCiAgICAgICAgd2FpdCgyMDApCiAgICAgICAgcmlnaHRTZWNhbnRMaW5lMS5vcGFjaXR5ID0gMQogICAgICAgIHdhaXQoMjAwKQogICAgICAgIHJpZ2h0U2VjYW50TGluZTEub3BhY2l0eSA9IDAKICAgICAgICB3YWl0KDIwMCkKICAgICAgICByaWdodFNlY2FudExpbmUxLm9wYWNpdHkgPSAxCiAgICAgICAgd2FpdCgyMDApCiAgICAgICAgd2FpdCg1MDApCiAgICB9Cn0=</Code>
+          <Question uuid="68953d8c-9fac-4155-920a-d78041eb373e">
+            <MultipleChoice difficulty="easy" uuid="c04aaed7-811b-48f4-a1bb-b9af25e78879">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>Which expression represents <m>\text{rise}</m>, or the change in position?</question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>b - a</m>
+                  </label>
+                  <explanation> The expression <m>b - a</m> represents <m>\text{run}</m>, the length
+                    of the time interval, not the change in position. </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>s(b) - s(a)</m>
+                  </label>
+                  <explanation> The term <m>s(b)</m> gives the position at time <m>t = b \text{,}</m>
+                    and the term <m>s(a)</m> represents the position at time <m>t = a \text{.}</m>
+                    So <m>s(b) - s(a)</m> represents <m>\text{rise}</m>, the change in position. </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>s(a) - s(b)</m>
+                  </label>
+                  <explanation>This expression reverses the order in which the positions at each
+                    time are subtracted. The change in position should be the final position minus
+                    the initial position.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Question>
+          <Question uuid="4604d923-5908-4dcf-ae59-af92b0efa458">
+            <ShortAnswer difficulty="medium" uuid="de06f326-fbb6-46db-ae5d-7c914afe47c2">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>What is the average velocity of the ball on the interval <m>[1,5]</m>?
+                Recall that <m>s(t) = -16t^2 + 128t \text{.}</m></question>
+              <Suffix>ft/s</Suffix>
+              <Hints>
+                <hint>Use the formula <m>v_{ave} = \dfrac{s(b) - s(a)}{b-a} \text{.}</m></hint>
+                <hint>On the interval <m>[1,5]</m>, <m>v_{ave} = \dfrac{s(5) - s(1)}{5 - 1} \text{.}</m></hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>Use the formula <m>v_{ave} = \dfrac{s(b) - s(a)}{b-a}</m> given an interval <m>[a,b]
+                  \text{.} </m> Note that:</p>
+                <p>
+                  <m>s(5) = -16(5)^2 + 128(5) = 240 \text{ ft}</m>
+                </p>
+                <p>
+                  <m>s(1) = -16(1)^2 + 128(1) = 112 \text{ ft}</m>
+                </p>
+                <p>Substituting these values into the formula for <m>v_{ave}</m>, we get:</p>
+                <p>
+                  <me>\begin{align*}
+                    v_{ave} &amp; = \dfrac{s(5) - s(1)}{5 - 1} \\
+                    &amp; = \dfrac{240 - 112}{4} \\
+                    &amp; = \dfrac{128}{4} \\
+                    &amp; = 32 \text{ }\dfrac{\text{ft}}{\text{s}} \\
+                    \end{align*}</me>
+                </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Decimal expected="32" tolerance="0" toleranceType="absolute" />
+              </Evaluation>
+            </ShortAnswer>
+          </Question>
+        </ArcResource>
+        <TextResource duration="2" uuid="9a607356-807f-4197-a1a1-e3d8d185ceb4">
+          <Text uuid="434fa64e-4c42-4f7d-a4e8-5628a7229af6"> The term <m>s(t)</m> represents the
+            height of the ball in feet <m>t</m> seconds after the ball is thrown. </Text>
+          <Questions locked-steps="true" uuid="38425156-23cb-4399-9711-cd99230c8c58">
+            <MultipleChoice difficulty="easy" uuid="6f816d91-1eaa-468d-b2ae-789ea3a225a8">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The average velocity on the time interval <m>[a,b]</m> will be negative when <m>\underline{\phantom{XXXXXX}}
+                \text{.}</m></question>
+              <Choices>
+                <choice correct="true">
+                  <label>
+                    <m>s(a) &gt; s(b)</m>
+                  </label>
+                  <explanation>If <m>s(a) &gt; s(b) \text{,}</m> then the change in position <m>s(b)
+                    - s(a)</m> will be negative. So the average velocity will also be negative.</explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>s(a) &lt; s(b)</m>
+                  </label>
+                  <explanation>If <m>s(a) &lt; s(b) \text{,}</m> then the average velocity will be
+                    positive, not negative. The expression <m>s(a) &lt; s(b)</m> means the change in
+                    position <m>s(b) - s(a)</m> will be positive, so the average velocity must also
+                    be positive.</explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>s(a) = s(b)</m>
+                  </label>
+                  <explanation>If <m>s(a) = s(b) \text{,}</m> then the change in average velocity
+                    would be zero, not negative. If <m>s(a) = s(b) \text{,}</m> then the change in
+                    position is <m>s(b)-s(a) = 0</m>. Because this change in position is the
+                    numerator of the average velocity, the average velocity will also be zero.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="cc96c0bc-9ac0-4ba0-a1cc-ab989af52fd1">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>If the average velocity of the ball on the time interval <m>[a,b]</m> is
+                zero, the ball will <m>\underline{\phantom{XXXXXX}} \text{.}</m></question>
+              <Choices>
+                <choice>
+                  <label> be on the ground at <m>t=a</m> and <m>t=b</m>
+                  </label>
+                  <explanation>While the average velocity in this situation would be zero, the
+                    average velocity is also zero at other time intervals. Consider what must be
+                    true of the numerator of the average velocity if the average velocity is zero.</explanation>
+                </choice>
+                <choice>
+                  <label> have maximum height at both <m>t=a</m> and <m>t=b</m>
+                  </label>
+                  <explanation>The ball only has one maximum height. So if both <m>t=a</m> and <m>
+                    t=b</m> correspond to the maximum height, then <m>a = b \text{.}</m> So the
+                    length of the time interval is zero. The length of the time interval is the
+                    denominator of the average velocity fraction, so the average velocity would not
+                    be defined on this time interval.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label> have the same height at <m>t=a</m> and <m>t=b</m>
+                  </label>
+                  <explanation>If these heights are the same, then <m>s(a) = s(b)</m> and the change
+                    in position is <m>s(b)-s(a) = 0 \text{.}</m> So the average velocity is also
+                    zero.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="356cfb0f-bd99-4875-ad87-6bbf5b39c86a">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p>The graph of <m>s(t)</m> is provided, along with points <m>(a,s(a))</m> and <m>(b,s(b))
+                  \text{.}</m></p>
+                <image source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P1_Q3.png">
+                  <description>Function &lt;m&gt;s(t)&lt;/m&gt; on a coordinate plane, showing
+                    points &lt;m&gt;(a, s(a))&lt;/m&gt; and &lt;m&gt;(b, s(b))&lt;/m&gt; for average
+                    velocity via secant line.</description>
+                </image>
+                <p>The average velocity of the ball from <m>t=a</m> to <m>t=b</m> is <m>\underline{\phantom{XXXXXX}}
+                  \text{.}</m></p>
+              </question>
+              <Choices>
+                <choice>
+                  <label>negative</label>
+                  <explanation>If the average velocity were negative, then the change in position
+                    would also have to be negative. Consider whether this change in position is
+                    positive, negative, or zero.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label>positive</label>
+                  <explanation>
+                    <m>s(b)</m> is greater than <m>s(a) \text{,}</m> so the change in position will
+                    be positive. The average velocity will also be positive. </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    zero
+                  </label>
+                  <explanation>If the average velocity were zero, then the heights of the ball would
+                    need to be the same at the two times: <m>s(a) = s(b) \text{,}</m> which is not
+                    the case.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Questions>
+        </TextResource>
+        <TextResource duration="2" uuid="dde4e596-5b42-44be-b71a-87e2763ea953">
+          <Text uuid="3e03df42-7af0-419b-9e28-5be478a3febe"> The graph of the height of a ball <m>
+            s(t)</m> in feet <m>t</m> seconds after the ball is thrown is provided, along with
+            several points on the graph: <image
+              source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P2_Intro.png">
+              <description>5, 115)&lt;/m&gt;, &lt;m&gt;(3, 111)&lt;/m&gt;, &lt;m&gt;(4,
+            79)&lt;/m&gt;, &lt;m&gt;(5, 15)&lt;/m&gt;; function increases then decreases.</description>
+            </image>
+          </Text>
+          <Questions locked-steps="true" uuid="cbab88a2-499d-4e13-bf40-769ddf6098bd">
+            <MultipleChoice difficulty="easy" uuid="e234a7be-3088-47f1-b15a-ee8bbbd87056">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The average velocity is greatest on the interval <m>\underline{\phantom{XXXXXX}}
+                \text{.}</m></question>
+              <Choices>
+                <choice correct="true">
+                  <label>
+                    <m>[0,1]</m>
+                  </label>
+                  <explanation> The secant line on <m>[0,1]</m> is steeper than the secant lines on <m>
+                    [0,2]</m> and <m>[0,2.5] \text{.}</m>
+                        
+                        <image
+                      source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P2_Q1_OptionA.png">
+                      <description>5,115)&lt;/m&gt;, &lt;m&gt;(3,111)&lt;/m&gt;,
+                    &lt;m&gt;(4,79)&lt;/m&gt;, &lt;m&gt;(5,15)&lt;/m&gt;; secant lines from
+                    &lt;m&gt;(0,15)&lt;/m&gt; to others show average velocity.</description>
+                    </image>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>[0,2]</m>
+                  </label>
+                  <explanation> The secant line on the interval <m>[0,2]</m> is not the steepest
+                    secant line. Another interval has a steeper secant line. Draw the secant lines
+                    to identify which rises most quickly. A steeper secant line corresponds to a
+                    greater average velocity. </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>[0,2.5]</m>
+                  </label>
+                  <explanation>While the slope of the secant line on <m>[0,2.5]</m> is positive,
+                    that slope is not the largest. Draw the two other secant lines to identify which
+                    is steepest. A steeper secant line corresponds to a greater average velocity.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <MultipleChoice difficulty="easy" uuid="9f14dc3b-a5cd-45c2-b146-88d446c0e05e">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The average velocity will be zero on the interval <m>\underline{\phantom{XXXXXX}}
+                \text{.}</m></question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>[1,2.5]</m>
+                  </label>
+                  <explanation> The slope of the secant line on <m>[1,2.5]</m> is positive, and
+                    therefore not zero. So the average velocity is not zero. <image
+                      source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P2_Q2_OptionC.png">
+                      <description>Function &lt;m&gt;s(t)&lt;/m&gt; with labeled points, showing a
+                    secant line between &lt;m&gt;(1, 79)&lt;/m&gt; and &lt;m&gt;(3, 111)&lt;/m&gt;
+                        on a coordinate plane.</description>
+                    </image>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>[1,3]</m>
+                  </label>
+                  <explanation> The slope of the secant line on <m>[1,3]</m> is positive, and
+                    therefore not zero. So the average velocity is not zero. <image
+                      source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P2_Q2_OptionB.png">
+                      <description>Function &lt;m&gt;s(t)&lt;/m&gt; on a coordinate plane with a
+                    secant line connecting points &lt;m&gt;(1, 79)&lt;/m&gt; and &lt;m&gt;(3,
+                    111)&lt;/m&gt;; labeled critical point at &lt;m&gt;(2.</description>
+                    </image>
+                  </explanation>
+                </choice>
+                <choice correct="true">
+                  <label>
+                    <m>[1,4]</m>
+                  </label>
+                  <explanation> Because <m>s(1) = s(4) \text{,}</m> the change in position will be
+                    zero, so the velocity will be zero. We can also notice that the secant line is
+                    horizontal, indicating a slope of zero. <image
+                      source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P2_Q2_OptionA.png">
+                      <description>5, 115)&lt;/m&gt;, labeled points at &lt;m&gt;(0, 15)&lt;/m&gt;,
+                    &lt;m&gt;(1, 79)&lt;/m&gt;, &lt;m&gt;(2, 111)&lt;/m&gt;, &lt;m&gt;(3,
+                    111)&lt;/m&gt;, &lt;m&gt;(4, 79)&lt;/m&gt;, &lt;m&gt;(5, 15)&lt;/m&gt;, and a
+                    secant line from &lt;m&gt;(1, 79)&lt;/m&gt; to &lt;m&gt;(4, 79)&lt;/m&gt; on a
+                    coordinate plane.</description>
+                    </image>
+                  </explanation>
+                </choice>
+                <choice>
+                  <label>
+                    <m>[2,5]</m>
+                  </label>
+                  <explanation> The slope of the secant line on <m>[2,5]</m> is negative, and
+                    therefore not zero. So the average velocity is not zero. <image
+                      source="https://d66ukmsdxccfj.cloudfront.net/Module2.3.4_FU_P2_Q2_OptionD.png">
+                      <description>5, 115)&lt;/m&gt; and &lt;m&gt;(5, 15)&lt;/m&gt;; the secant line
+                    between these points shows average velocity.</description>
+                    </image>
+                  </explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Questions>
+        </TextResource>
+        <TextResource duration="3" uuid="ed0189ba-ce19-43ac-a474-fa344c7117b0">
+          <Text uuid="4b97d467-d03f-417d-a2e9-244422705bbf"> The function <m>s(t) = -16t^2 + 128t</m>
+            represents the height in feet <m>t</m> seconds after a ball is thrown. Find the average
+            velocity of the ball from <m>t=1</m> to <m>t=5 \text{.}</m>
+
+          </Text>
+          <Questions locked-steps="true" uuid="997a723f-7d9b-4e63-9d83-49ba74451b6b">
+            <ShortAnswer difficulty="easy" uuid="d62f00ed-0eb5-48d8-8969-46e1475ef8cc">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p>The change in position of the ball from <m>t=1</m> to <m>t=5</m> is <m>
+                  \underline{\phantom{XXXXXX}}</m> feet.</p>
+              </question>
+              <Hints>
+                <hint>The change in position is <m>s(5) - s(1) \text{.}</m></hint>
+                <hint><m>s(t) = -16t^2 + 128t \text{.}</m> So <m>s(1) = -16(1)^2 + 128(1)</m> and <m>s(5)
+                  = -16(5)^2 + 128(5).</m></hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 + 128t\\
+                  s(1) &amp;= -16(1)^2 + 128(1) \\
+                  &amp;= 112 \\
+                  s(5) &amp;= -16(5)^2 + 128(5) \\
+                  &amp;= 240 \\
+                  \text{Change in position} &amp;= s(5) - s(1)
+                  \\&amp;= 240 - 112 \\
+                  &amp;= 128 \text{ feet}\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="128" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="51feff3f-c36d-4d7a-8d14-694ae1116695">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>The length of the time interval from <m>t=1</m> to <m>t=5</m> is <m>
+                \underline{\phantom{XXXXXX}}</m> seconds.</question>
+              <Hints>
+                <hint>Subtract the smaller time from the larger time.</hint>
+              </Hints>
+              <CorrectExplanation>The length of the time interval is the larger time minus the
+                smaller time: <m>5-1 = 4</m> seconds.</CorrectExplanation>
+              <Evaluation>
+                <Expression expected="4" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="9100730f-6b48-429d-8ff3-3a341226422a">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p>The average velocity from <m>t=1</m> to <m>t=5</m> is <m>v_{\text{ave}} =
+                  \underline{\phantom{XXXXXX}} \dfrac{\text{feet}}{\text{second}} \text{.}</m></p>
+              </question>
+              <Hints>
+                <hint>
+                  <m>v_{\text{ave}} = \dfrac{\text{Change in position}}{\text{Length of time
+                    interval}}</m>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 + 128t\\
+                  s(1) &amp;= -16(1)^2 + 128(1) \\
+                  &amp;= 112 \\
+                  s(5) &amp;= -16(5)^2 + 128(5) \\
+                  &amp;= 240 \\
+                  v_{\text{ave}} &amp;= \dfrac{\text{Change in position}}{\text{Length of time
+                  interval}}\\
+                  &amp;= \dfrac{240 - 112}{5-1}\\
+                  &amp;= \dfrac{128}{4} \\
+                  &amp;= 32 \, \dfrac{\text{feet}}{\text{second}}\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="32" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="75cf5f0e-c23a-481b-ba74-a07ab01d36d2">
+          <KSAs primary="KSA2.3.1" secondary="Todo" uuid="2ba4654d-1cbb-468b-8629-ac4b65c175a2" />
+          <Text uuid="f2b6adee-f2d8-44bc-aed9-cc4d9e6e4a37">
+            <p>Lesson summary</p>
+
+
+            <list type="bullet">
+              <item>A secant line is a line that passes through any two points of a function.</item>
+              <item>The average velocity can be interpreted graphically as the slope of the secant
+                line between two points on the graph of <m>s(t)</m>: <m>v_{ave} = \dfrac{s(b) -
+                s(a)}{b-a} \text{.}</m></item>
+              <item>The steepness of the secant line’s slope gives information about how fast an
+                object is moving. The steeper the slope, the greater the average velocity is on that
+                interval.</item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="lesson" when="pre" uuid="429a343f-d26d-4ca6-877c-f974412fcf06">
+      <title>Instantaneous velocity and the tangent line</title>
+      <LearningOutcomes ids="2.3.2" />
+      <Resources>
+        <TextResource duration="1" uuid="9f7ff291-de53-44a9-ae1a-95c08cd78704">
+          <KSAs primary="KSA2.3.3" secondary="KSA2.3.4,KSA2.3.2"
+            uuid="d1341c07-aa89-4128-a51b-f5b3d67f166b" />
+          <Text uuid="71bd9bea-e1d4-4e80-92b3-54e54e87482b">
+            <p>In previous lessons we talked about how to find the average velocity. But sometimes
+              we’d like to find the velocity at a specific time instead over of a time interval. <definition>An
+              object’s <b>instantaneous velocity</b> determines how fast the object is moving at
+              time <m>t = a \text{.}</m></definition></p>
+            <p>In this lesson, we will examine the average velocity on the interval <m>[a,t]</m> for
+              different values of <m>t</m> that are close to <m>a \text{.}</m> We end by providing a
+              more formal definition of instantaneous velocity and the graphical representation of
+              instantaneous velocity as the slope of a tangent line.</p>
+          </Text>
+        </TextResource>
+        <ArcResource duration="2" uuid="c5167a99-21c4-40cc-8127-605cfd696d5b">
+          <title>Instantaneous velocity and the tangent line</title>
+          <KSAs primary="Todo" secondary="Todo" />
+          <Track kind="narration" src="tracks/c5167a99-21c4-40cc-8127-605cfd696d5b_narration.vtt" />
+          <Track kind="description"
+            src="tracks/c5167a99-21c4-40cc-8127-605cfd696d5b_description.vtt" />
+          <Code>
+            Ly9DVEQ6IExpemJldGgKLy9Db252ZXJ0ZWQgdG8gQXJjIDEwLzIyLzIwMjUKQ2FudmFzKHdpbmRvd3M6IDApClNjZW5lKCkgewogIEluaXQoCiAgICAvL2NvbG9ycwogICAgdENvbG9yOiBDb2xvci5wdXJwbGUKICAgIHNDb2xvcjogQ29sb3IuZ3JlZW4KICAgIGJhbGxDb2xvcjogQ29sb3IucmVkCiAgICBzZWNhbnRDb2xvcjogQ29sb3IuYmx1ZQogICAgdGFuZ2VudENvbG9yOiBDb2xvci5vcmFuZ2UKICAgIAogICAgdGl0bGU6IFRleHQoIkVzdGltYXRpbmcgdGhlIGluc3RhbnRhbmVvdXMgdmVsb2NpdHkgdXNpbmcgZGlmZmVyZW50IGludGVydmFscyAkWzEsIHRdJCIsIHBvc2l0aW9uOiBWZWMyKDAuMjM3NSwgMCkpCgogICAgcm91bmRWYWw6IDAgLy90byBkeW5hbWljYWxseSByb3VuZCBvdXIgdmFyaWFibGVzCiAgICBzOiAoLTE2ICogKHgpXjIpICsgKDEyOCAqIHgpCiAgICB0VmFsOiAzCiAgICBwMTogUG9pbnQoVmVjMigxLCBzKDEpKSwgbGFiZWw6ICIkKDEsIHMoMSkpJCIsIGxhYmVsQW5jaG9yOiAidG9wLWxlZnQiKQogICAgcHQ6IFBvaW50KFZlYzIoYHRWYWxgLCBgcyh0VmFsKWApLCBsYWJlbDogIiQodCwgcyh0KSkkIiwgbGFiZWxBbmNob3I6ICJ0b3AtbGVmdCIpCiAgICByaXNlTGluZTogVkxpbmUoeDogYHB0LmNvb3JkaW5hdGVzLnhgLCByYW5nZTogSW50ZXJ2YWwocDEuY29vcmRpbmF0ZXMueSwgcDEuY29vcmRpbmF0ZXMueSksIGNvbG9yOiBzQ29sb3IpCiAgICBydW5MaW5lOiBITGluZSh5OiBwMS5jb29yZGluYXRlcy55LCBkb21haW46IEludGVydmFsKHAxLmNvb3JkaW5hdGVzLngsIHAxLmNvb3JkaW5hdGVzLngpLCBjb2xvcjogdENvbG9yKQogICAgc2VjYW50TGluZTogTGluZShwMS5jb29yZGluYXRlcywgYHB0LmNvb3JkaW5hdGVzYCwgY29sb3I6IHNlY2FudENvbG9yLCBkYXNoZWQ6IHRydWUpCiAgICB0YW5nZW50TGluZTogRnVuYyh0YW5saW5lKHMsIHAxLmNvb3JkaW5hdGVzLngpLCBjb2xvcjogdGFuZ2VudENvbG9yLCBkYXNoZWQ6IHRydWUpCiAgICBncmFwaDogR3JhcGgoCiAgICAgIGluZGVudDogZmFsc2UKICAgICAgc2l6ZTogVmVjMigwLjUsIDAuNSkKICAgICAgcG9zaXRpb246IFZlYzIoMC4wNSwgMC4xKQogICAgICBjaGlsZHJlbjogWwogICAgICAgIEZ1bmMocykKICAgICAgICByaXNlTGluZQogICAgICAgIHJ1bkxpbmUKICAgICAgICBzZWNhbnRMaW5lCiAgICAgICAgdGFuZ2VudExpbmUKICAgICAgICBwMQogICAgICAgIHB0CiAgICAgIF0KICAgICAgZG9tYWluOiBJbnRlcnZhbCgwLCA4KQogICAgICByYW5nZTogSW50ZXJ2YWwoMCwgMzAwLCA2MCkKICAgICAgeEF4aXM6IFRleHQoIiR0JCIpCiAgICAgIHlBeGlzOiBUZXh0KCIkcyQiKQogICAgICBzaG93WEF4aXNOdW1iZXJzOiBmYWxzZQogICAgICBzaG93WUF4aXNOdW1iZXJzOiBmYWxzZQogICAgKQogICAgcmlzZUxhYmVsOiBUZXh0KGNvbnRlbnQ6IFtUZXh0KCIkcyh0KSQiLCBjb2xvcjogc0NvbG9yKSwgVGV4dCgiJFw6LVw6JCIpLCBUZXh0KCIkcygjcDEuY29vcmRpbmF0ZXMueCMpJCIsIGNvbG9yOiBzQ29sb3IpXSwgcG9zaXRpb246IFZlYzIoMC4yNCwgMC4yOSkpCiAgICBydW5MYWJlbDogVGV4dChjb250ZW50OiBbVGV4dCgiJHQkIiwgY29sb3I6IHRDb2xvciksIFRleHQoIiRcOi1cOiQiKSwgVGV4dCgiJCNwMS5jb29yZGluYXRlcy54IyQiLCBjb2xvcjogdENvbG9yKV0sIHBvc2l0aW9uOiBWZWMyKDAuMTUsIDAuNDI1KSkKICAgIHJpc2VMYWJlbEZseTogcmlzZUxhYmVsLmNvcHkoKQogICAgcnVuTGFiZWxGbHk6IHJ1bkxhYmVsLmNvcHkoKQogICAgdGFuZ2VudExhYmVsOiBUZXh0KCJUYW5nZW50IGxpbmUiLCBwb3NpdGlvbjogVmVjMigwLjI0LCAwLjA1KSwgY29sb3I6IHRhbmdlbnRDb2xvcikKICAgIHNsb3BlTGFiZWw6IFRleHQoY29udGVudDogW1RleHQoIlNsb3BlICQ9IFw7JCIpLCBUZXh0KCI/IildLCBwb3NpdGlvbjogVmVjMigwLjI0LCAwLjEpLCBjb2xvcjogdGFuZ2VudENvbG9yKQogICAgem9vbUltZzogSW1hZ2Uoc291cmNlOiAiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0L21hZ25pZnlpbmdfZ2xhc3NfYmxhY2tfb3V0bGluZS5wbmciLCBzY2FsZTogMC43NSwgcG9zaXRpb246IFZlYzIoMC4yNDIsIDAuMTIpKQogICAgem9vbVZhbDogVGV4dCgiJDEwJHgiLCBwb3NpdGlvbjogVmVjMigwLjI4NSwgMC4xMykpCgogICAgdGFibGUxOiBUYWJsZSgKICAgICAgW1JvdyhbVGV4dCgiSW50ZXJ2YWwiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJFsxLCAyXSQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJFsxLCAxLjFdJCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkWzEsIDEuMDFdJCIsIGNvbG9yOiB0Q29sb3IpLCBUZXh0KCIkWzEsIDEuMDAxXSQiLCBjb2xvcjogdENvbG9yKSwgVGV4dCgiJFsxLCAxLjAwMDFdJCIsIGNvbG9yOiB0Q29sb3IpXSksCiAgICAgIFJvdyhbVGV4dCgiJHZfe1x0ZXh0e2F2ZX19JCIpLCBUZXh0KCIkODAgXGRmcmFje1x0ZXh0e2Z0fX17XHRleHR7c319JCIpLCBUZXh0KCIkOTQuNCBcZGZyYWN7XHRleHR7ZnR9fXtcdGV4dHtzfX0kIiksIFRleHQoIiQ5NS44NCBcZGZyYWN7XHRleHR7ZnR9fXtcdGV4dHtzfX0kIiksIFRleHQoIiQ5NS45ODQgXGRmcmFje1x0ZXh0e2Z0fX17XHRleHR7c319JCIpLCBUZXh0KCIkOTUuOTk4IFxkZnJhY3tcdGV4dHtmdH19e1x0ZXh0e3N9fSQiKV0pXSwKICAgICAgcG9zaXRpb246IFZlYzIoMC4xMzc1LCAwLjc1KSwKICAgICAgY2VsbFdpZHRoOiAxNTAsIGNlbGxIZWlnaHQ6IDY1CiAgICApCiAgICB0YWJsZUhpZ2hsaWdodDogQm94KHdpZHRoOiAwLjEyLCBoZWlnaHQ6IDAuMTksIHBvc2l0aW9uOiBWZWMyKDAuMjYsIDAuNzUpLCBzdHJva2U6IDUsIGNvbG9yOiBDb2xvci5yZWQpCiAgICBzbG9wZVZhbDogVGV4dChjb250ZW50OiBbVGV4dCgiJFxsZG90c1w7JCIsIGNvbG9yOiB0YW5nZW50Q29sb3IpLCBUZXh0KCIkOTYgXGRmcmFje1x0ZXh0e2Z0fX17XHRleHR7c319JCIsIGNvbG9yOiB0YW5nZW50Q29sb3IpXSwgcG9zaXRpb246IFZlYzIoMC44NzUsIDAuODU3NSkpCiAgICBzbG9wZVZhbEZseTogc2xvcGVWYWwuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuODk4NSwgMC44NTcyNSkpCgogICAgbGVmdFN0YXJ0WDogMC43CiAgICBsZWZ0U3RhcnRZOiAwLjEKICAgIGxlZnRTcGFjaW5nOiAwLjEKICAgIHN0ZXAxOiBUZXh0KCIkdl97XHRleHR7YXZlfX0gPSBcZGZyYWN7XHRleHR7Q2hhbmdlIGluIHBvc2l0aW9ufX17XHRleHR7Q2hhbmdlIGluIHRpbWV9fSQiLCBwb3NpdGlvbjogVmVjMihsZWZ0U3RhcnRYLCBsZWZ0U3RhcnRZKSkKICAgIC8vIHN0ZXAyOiBUZXh0KCIkXHBoYW50b217dl97XHRleHR7YXZlfX19XDsgPSBcZGZyYWN7XHBoYW50b217cygjdFZhbCMpIC0gcygjcDEuY29vcmRpbmF0ZXMueCMpfX17XHBoYW50b217I3RWYWwjIC0gI3AxLmNvb3JkaW5hdGVzLngjfX0kIiwgcG9zaXRpb246IFZlYzIobGVmdFN0YXJ0WCwgbGVmdFN0YXJ0WSArIGxlZnRTcGFjaW5nKSkKICAgIHN0ZXAyOiBUZXh0KCIkXHBoYW50b217dl97XHRleHR7YXZlfX19XDsgPSBcZGZyYWN7XHBoYW50b217cyh0KSAtIHMoI3AxLmNvb3JkaW5hdGVzLngjKX19e1xwaGFudG9te3QgLSAjcDEuY29vcmRpbmF0ZXMueCN9fSQiLCBwb3NpdGlvbjogVmVjMihsZWZ0U3RhcnRYLCBsZWZ0U3RhcnRZICsgbGVmdFNwYWNpbmcpKQogICAgc3RlcDM6IFRleHQoY29udGVudDogW1RleHQoIiRccGhhbnRvbXt2X3tcdGV4dHthdmV9fX1cOyA9XDskIiksIFRleHQoIiQgI3JvdW5kKChzKGB0VmFsYCkgLSBzKHAxLmNvb3JkaW5hdGVzLngpKS8oYHRWYWxgIC0gcDEuY29vcmRpbmF0ZXMueCksIGByb3VuZFZhbGApIyBcZGZyYWN7XHRleHR7ZnR9IH17XHRleHR7c319JCIpXSwgcG9zaXRpb246IFZlYzIobGVmdFN0YXJ0WCwgbGVmdFN0YXJ0WSArIGxlZnRTcGFjaW5nICogMikpCiAgCiAgICBhcnJ3MTogUnVsZShWZWMyKDAuMDUsIDAuNjUpLCBzdHJva2U6IDIuNSwgcmlnaHRFbmQ6ICJhcnJvdyIpCiAgICBhcnJ3MjogUnVsZShWZWMyKDAuNTUsIDAuNjUpLCBzdHJva2U6IDIuNSwgcmlnaHRFbmQ6ICJhcnJvdyIpCiAgICBhcnJ3MUxhYmVsOiBUZXh0KCIkW3QsIDFdJCIsIHBvc2l0aW9uOiBWZWMyKDAuMDU4LCAwLjY1KSkKICAgIGFycncyTGFiZWw6IFRleHQoIiRbMSwgdF0kIiwgcG9zaXRpb246IFZlYzIoMC4xMzcsIDAuNjUpKQogICkgewoJCXAxLmhpZGUoKQoJCXB0LmhpZGUoKQoJCXJpc2VMaW5lLmhpZGUoKQoJCXJ1bkxpbmUuaGlkZSgpCgkJc2VjYW50TGluZS5oaWRlKCkKCQl0YW5nZW50TGluZS5oaWRlKCkKCQlyaXNlTGFiZWwuaGlkZSgpCgkJcnVuTGFiZWwuaGlkZSgpCiAgICByaXNlTGFiZWxGbHkuaGlkZSgpCiAgICBydW5MYWJlbEZseS5oaWRlKCkKCQl0YW5nZW50TGFiZWwuaGlkZSgpCgkJc2xvcGVMYWJlbC5oaWRlKCkKICAgIHpvb21JbWcuaGlkZSgpCiAgICB6b29tVmFsLmhpZGUoKQoJCXRhYmxlMS5oaWRlKCkKICAgIHRhYmxlMVsxXVsxXS5oaWRlKCkKICAgIHRhYmxlMVsxXVsyXS5oaWRlKCkKICAgIHRhYmxlMVsxXVszXS5oaWRlKCkKICAgIHRhYmxlMVsxXVs0XS5oaWRlKCkKICAgIHRhYmxlMVsxXVs1XS5oaWRlKCkKICAgIHRhYmxlSGlnaGxpZ2h0LmhpZGUoKQoJCXNsb3BlVmFsLmhpZGUoKQogICAgc2xvcGVWYWxGbHkuaGlkZSgpCgkJc3RlcDEuaGlkZSgpCgkJc3RlcDIuaGlkZSgpCgkJc3RlcDMuaGlkZSgpCgkJYXJydzEuaGlkZSgpCgkJYXJydzIuaGlkZSgpCgkJYXJydzFMYWJlbC5oaWRlKCkKCQlhcnJ3MkxhYmVsLmhpZGUoKQoJIH0KCiAgQW5pbWF0ZSgpIHsKICAgIC8vIDEtYQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYV9pbnN0YW50YW5lb3VzX3ZlbG9jaXR5X2FuZF90aGVfdGFuZ2VudF9saW5lLm1wMyIpCiAgICB3YWl0KDMwMDApCiAgICBwMS5zaG93KCkKICAgIHdhaXQoNTAwKQogICAgCiAgICAvLyAxLWIKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWJfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgd2FpdCgyMDAwKQogICAgcHQuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBzZWNhbnRMaW5lLnNob3coKQogICAgd2FpdCgyMDAwKQogICAgc3RlcDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBzdGVwMi5zaG93KCkKICAgIHJ1bkxpbmUub3BhY2l0eSA9IDEKICAgIHJ1bkxpbmUuZG9tYWluLnJlc2l6ZShJbnRlcnZhbChwMS5jb29yZGluYXRlcy54LCBgcHQuY29vcmRpbmF0ZXMueGApLCBkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBydW5MYWJlbC5zaG93KGR1cmF0aW9uOiA1MDApCiAgICBydW5MaW5lLmRvbWFpbiA9IEludGVydmFsKHAxLmNvb3JkaW5hdGVzLngsIGBwdC5jb29yZGluYXRlcy54YCkgLy9uZWVkZWQgYmMgYnVnIGluIHJlc2l6ZSBkb2Vzbid0IG1ha2UgaW50ZXJ2YWwgcmVhY3RpdmUKICAgIHJpc2VMaW5lLm9wYWNpdHkgPSAxCiAgICByaXNlTGluZS5yYW5nZS5yZXNpemUoSW50ZXJ2YWwocDEuY29vcmRpbmF0ZXMueSwgYHB0LmNvb3JkaW5hdGVzLnlgKSwgZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcmlzZUxhYmVsLnNob3coZHVyYXRpb246IDUwMCkKICAgIHJpc2VMaW5lLnJhbmdlID0gSW50ZXJ2YWwocDEuY29vcmRpbmF0ZXMueSwgYHB0LmNvb3JkaW5hdGVzLnlgKSAvL25lZWRlZCBiYyBidWcgaW4gcmVzaXplIGRvZXNuJ3QgbWFrZSBpbnRlcnZhbCByZWFjdGl2ZQogICAgcmlzZUxhYmVsRmx5Lm9wYWNpdHkgPSAxCiAgICByaXNlTGFiZWxGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNzUxLCAwLjE5KSkKICAgIHJ1bkxhYmVsRmx5Lm9wYWNpdHkgPSAxCiAgICBydW5MYWJlbEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC43NzEsIDAuMjI4NSkpCiAgICB3YWl0KDUwMCkKICAgIAogICAgLy8gMS1jCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1jX2luc3RhbnRhbmVvdXNfdmVsb2NpdHlfYW5kX3RoZV90YW5nZW50X2xpbmUubXAzIikKICAgIHdhaXQoMTUwMCkKICAgIAogICAgLy8gMS1kCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1kX2luc3RhbnRhbmVvdXNfdmVsb2NpdHlfYW5kX3RoZV90YW5nZW50X2xpbmUubXAzIikKICAgIHdhaXQoMzAwMCkKICAgIHB0LmxhYmVsID0gIiQoI3JvdW5kKGB0VmFsYCwgYHJvdW5kVmFsYCkjLCBzKCNyb3VuZChgdFZhbGAsIGByb3VuZFZhbGApIykpJCIKICAgIHJ1bkxhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcmlzZUxhYmVsLmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcmlzZUxhYmVsRmx5LmhpZGUoZHVyYXRpb246IDUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgcnVuTGFiZWxGbHkuaGlkZShkdXJhdGlvbjogNTAwKQogICAgcnVuTGFiZWwuY29udGVudFswXSA9IFRleHQoIiQjcm91bmQoYHRWYWxgLCBgcm91bmRWYWxgKSMkIiwgY29sb3I6IHRDb2xvcikKICAgIHJpc2VMYWJlbC5jb250ZW50WzBdID0gVGV4dCgiJHMoI3JvdW5kKGB0VmFsYCwgYHJvdW5kVmFsYCkjKSQiLCBjb2xvcjogc0NvbG9yKQogICAgcnVuTGFiZWxGbHkuY29udGVudFswXSA9IFRleHQoIiQjcm91bmQoYHRWYWxgLCBgcm91bmRWYWxgKSMkIiwgY29sb3I6IHRDb2xvcikKICAgIHJpc2VMYWJlbEZseS5jb250ZW50WzBdID0gVGV4dCgiJHMoI3JvdW5kKGB0VmFsYCwgYHJvdW5kVmFsYCkjKSQiLCBjb2xvcjogc0NvbG9yKQogICAgcnVuTGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICByaXNlTGFiZWwuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICByaXNlTGFiZWxGbHkuc2hvdyhkdXJhdGlvbjogNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBydW5MYWJlbEZseS5zaG93KGR1cmF0aW9uOiA1MDApCiAgICAKICB9CgogIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHt9Cn0KClNjZW5lKCkgewogIEluaXQoCiAgKSB7CiAgfQoKICBBbmltYXRlKCkgewogICAgLy8gMi1hCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1hX2luc3RhbnRhbmVvdXNfdmVsb2NpdHlfYW5kX3RoZV90YW5nZW50X2xpbmUubXAzIikKICAgIHdhaXQoNDUwMCkKICAgIHN0ZXAzLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgCiAgICAvLyAyLWIKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWJfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgd2FpdCg1MDAwKQogICAgCiAgICAvLyAyLWMKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWNfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgd2FpdCgzNTAwKQogICAgCiAgICAvLyAyLWQKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWRfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgdGFibGUxLnNob3coKQogICAgd2FpdCgzNTAwKQogICAgCiAgICAvLyAyLWUKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWVfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgdFZhbC5pbnRlcnBvbGF0ZSgyLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAyMDAwLCBibG9ja2luZzogZmFsc2UpCiAgICBydW5MYWJlbC5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4xMiwgMC40MjUpLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAyMDAwLCBibG9ja2luZzogZmFsc2UpCiAgICByaXNlTGFiZWwucG9zaXRpb24ubW92ZShWZWMyKDAuMTc5LCAwLjMyKSwgY3VydmU6ICJsaW5lYXIiLCBkdXJhdGlvbjogMjAwMCkKICAgIHdhaXQoMTUwMCkKICAgIC8vZmx5IHZfYXZlIHZhbHVlIHRvIHRhYmxlCiAgICB2Rmx5OiBzdGVwMy5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC43NDksIGxlZnRTdGFydFkgKyBsZWZ0U3BhY2luZyAqIDIpKQogICAgdkZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4yOTQ1LCAwLjg1OCksIGR1cmF0aW9uOiAxNTAwKQogICAgdGFibGUxWzFdWzFdLm9wYWNpdHkgPSAxCiAgICB2Rmx5Lm9wYWNpdHkgPSAwCiAgICB3YWl0KDEwMDApCiAgICAKICAgIC8vIDItZgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItZl9pbnN0YW50YW5lb3VzX3ZlbG9jaXR5X2FuZF90aGVfdGFuZ2VudF9saW5lLm1wMyIpCiAgICByb3VuZFZhbCA9IDEKICAgIHRWYWwuaW50ZXJwb2xhdGUoMS4xLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAyMDAwKQogICAgLy96b29tIGludG8gbmV4dCBpbnRlcnZhbAogICAgZ3JhcGguc2hvd1hBeGlzTnVtYmVycyA9IHRydWUKICAgIHpvb21JbWcuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB6b29tVmFsLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgZ3JhcGgucmFuZ2UucmVzaXplKEludGVydmFsKDEwMC44LCAxMzAuOCwgNiksIGR1cmF0aW9uOiAxNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBncmFwaC5kb21haW4ucmVzaXplKEludGVydmFsKDAuOSwgMS43LCAwLjEpLCBkdXJhdGlvbjogMTUwMCkKICAgIC8vZmx5IHZfYXZlIHZhbHVlIHRvIHRhYmxlCiAgICB2Rmx5OiBzdGVwMy5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC43NDksIGxlZnRTdGFydFkgKyBsZWZ0U3BhY2luZyAqIDIpKQogICAgdkZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC40MDksIDAuODU4KSwgZHVyYXRpb246IDE1MDApCiAgICB0YWJsZTFbMV1bMl0ub3BhY2l0eSA9IDEKICAgIHZGbHkub3BhY2l0eSA9IDAKICAgIHdhaXQoMjAwMCkKICAgIAogICAgLy8gMi1nCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1nX2luc3RhbnRhbmVvdXNfdmVsb2NpdHlfYW5kX3RoZV90YW5nZW50X2xpbmUubXAzIikKICAgIHJvdW5kVmFsID0gMgogICAgdFZhbC5pbnRlcnBvbGF0ZSgxLjAxLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAyMDAwKQogICAgLy96b29tIGludG8gbmV4dCBpbnRlcnZhbAogICAgem9vbVZhbC5jb250ZW50ID0gIiQxMDAkeCIKICAgIGdyYXBoLnJhbmdlLnJlc2l6ZShJbnRlcnZhbCgxMTAuODgsIDExMy44OCwgMC42KSwgZHVyYXRpb246IDIwMDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIGdyYXBoLmRvbWFpbi5yZXNpemUoSW50ZXJ2YWwoMC45OSwgMS4wNywgMC4wMSksIGR1cmF0aW9uOiAyMDAwKQogICAgLy9mbHkgdl9hdmUgdmFsdWUgdG8gdGFibGUKICAgIHZGbHk6IHN0ZXAzLmNvbnRlbnRbMV0uY29weShwb3NpdGlvbjogVmVjMigwLjc0OSwgbGVmdFN0YXJ0WSArIGxlZnRTcGFjaW5nICogMikpCiAgICB2Rmx5LnBvc2l0aW9uLm1vdmUoVmVjMigwLjUyNSwgMC44NTgpLCBkdXJhdGlvbjogMTUwMCkKICAgIHRhYmxlMVsxXVszXS5vcGFjaXR5ID0gMQogICAgdkZseS5vcGFjaXR5ID0gMAogICAgd2FpdCgxNTAwKQogICAgCiAgICAvLyAyLWgKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWhfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgcm91bmRWYWwgPSAzCiAgICB0VmFsLmludGVycG9sYXRlKDEuMDAxLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAyMDAwKQogICAgLy96b29tIGludG8gbmV4dCBpbnRlcnZhbAogICAgem9vbVZhbC5jb250ZW50ID0gIiQxMDAwJHgiCiAgICBncmFwaC5yYW5nZS5yZXNpemUoSW50ZXJ2YWwoMTExLjg4OCwgMTEyLjE4OCwgMC4wNiksIGR1cmF0aW9uOiAyNTAwLCBibG9ja2luZzogZmFsc2UpCiAgICBncmFwaC5kb21haW4ucmVzaXplKEludGVydmFsKDAuOTk5LCAxLjAwNywgMC4wMDEpLCBkdXJhdGlvbjogMjUwMCkKICAgIC8vZmx5IHZfYXZlIHZhbHVlIHRvIHRhYmxlCiAgICB2Rmx5OiBzdGVwMy5jb250ZW50WzFdLmNvcHkocG9zaXRpb246IFZlYzIoMC43NDksIGxlZnRTdGFydFkgKyBsZWZ0U3BhY2luZyAqIDIpKQogICAgdkZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC42NDIsIDAuODU4KSwgZHVyYXRpb246IDE1MDApCiAgICB0YWJsZTFbMV1bNF0ub3BhY2l0eSA9IDEKICAgIHZGbHkub3BhY2l0eSA9IDAKICAgIHdhaXQoMTUwMCkKICAgIAogICAgLy8gMi1pCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1pX2luc3RhbnRhbmVvdXNfdmVsb2NpdHlfYW5kX3RoZV90YW5nZW50X2xpbmUubXAzIikKICAgIHJvdW5kVmFsID0gNAogICAgc3RlcDMuY29udGVudFsxXSA9IFRleHQoIiQgI3JvdW5kKChzKGB0VmFsYCkgLSBzKHAxLmNvb3JkaW5hdGVzLngpKS8oYHRWYWxgIC0gcDEuY29vcmRpbmF0ZXMueCksIDMpIyBcZGZyYWN7XHRleHR7ZnR9IH17XHRleHR7c319JCIpCiAgICB0VmFsLmludGVycG9sYXRlKDEuMDAwMSwgY3VydmU6ICJsaW5lYXIiLCBkdXJhdGlvbjogMjAwMCkKICAgIC8vem9vbSBpbnRvIG5leHQgaW50ZXJ2YWwKICAgIHpvb21WYWwuY29udGVudCA9ICIkMTAwMDAkeCIKICAgIGdyYXBoLnJhbmdlLnJlc2l6ZShJbnRlcnZhbCgxMTEuOTg4OCwgMTEyLjAxODgsIDAuMDA2KSwgZHVyYXRpb246IDI1MDAsIGJsb2NraW5nOiBmYWxzZSkKICAgIGdyYXBoLmRvbWFpbi5yZXNpemUoSW50ZXJ2YWwoMC45OTk5LCAxLjAwMDcsIDAuMDAwMSksIGR1cmF0aW9uOiAyNTAwKQogICAgZ3JhcGguc2hvd1hBeGlzTnVtYmVycyA9IGZhbHNlIC8vIGRvbWFpbiBzdGVwIHRvbyBzbWFsbCB0byByZW5kZXIgY29ycmVjdGx5CiAgICAvL2ZseSB2X2F2ZSB2YWx1ZSB0byB0YWJsZQogICAgdkZseTogc3RlcDMuY29udGVudFsxXS5jb3B5KHBvc2l0aW9uOiBWZWMyKDAuNzQ5LCBsZWZ0U3RhcnRZICsgbGVmdFNwYWNpbmcgKiAyKSkKICAgIHZGbHkucG9zaXRpb24ubW92ZShWZWMyKDAuNzYyLCAwLjg1OCksIGR1cmF0aW9uOiAxNTAwKQogICAgdGFibGUxWzFdWzVdLm9wYWNpdHkgPSAxCiAgICB2Rmx5Lm9wYWNpdHkgPSAwCiAgICAvLyB3YWl0KDgwMDApCiAgICAKICB9CgogIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHt9Cn0KClNjZW5lKCkgewogIEluaXQoCiAgKSB7CiAgfQoKICBBbmltYXRlKCkgewogICAgLy8gMy1hCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1hX2luc3RhbnRhbmVvdXNfdmVsb2NpdHlfYW5kX3RoZV90YW5nZW50X2xpbmUubXAzIikKICAgIHRWYWwgPSAzCiAgICBwdC5sYWJlbCA9ICIkKHQsIHModCkpJCIKICAgIHJ1bkxpbmUub3BhY2l0eSA9IDAKICAgIHJpc2VMaW5lLm9wYWNpdHkgPSAwCiAgICBydW5MYWJlbC5vcGFjaXR5ID0gMAogICAgcmlzZUxhYmVsLm9wYWNpdHkgPSAwCiAgICBzdGVwMi5vcGFjaXR5ID0gMAogICAgc3RlcDMub3BhY2l0eSA9IDAKICAgIHJpc2VMYWJlbEZseS5vcGFjaXR5ID0gMAogICAgcnVuTGFiZWxGbHkub3BhY2l0eSA9IDAKICAgIHpvb21JbWcuaGlkZShibG9ja2luZzogZmFsc2UpCiAgICB6b29tVmFsLmhpZGUoYmxvY2tpbmc6IGZhbHNlKQogICAgZ3JhcGguZG9tYWluLnJlc2l6ZShJbnRlcnZhbCgwLCA4KSwgYmxvY2tpbmc6IGZhbHNlKQogICAgZ3JhcGgucmFuZ2UucmVzaXplKEludGVydmFsKDAsIDMwMCwgNjApKQogICAgd2FpdCgxMDAwKQogICAgZ3JhcGguc2hvd1hBeGlzTnVtYmVycyA9IGZhbHNlCiAgICB3YWl0KDMwMDApCiAgICB0VmFsLmludGVycG9sYXRlKDEuMDAwMDAxLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiAzMDAwKQogICAgd2FpdCgyMDAwKQogICAgCiAgICAvLyAzLWIKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8zLWJfaW5zdGFudGFuZW91c192ZWxvY2l0eV9hbmRfdGhlX3RhbmdlbnRfbGluZS5tcDMiKQogICAgdFZhbCA9IDMKICAgIHRhYmxlSGlnaGxpZ2h0LnNob3coKQogICAgdFZhbC5pbnRlcnBvbGF0ZSgxLjAwMDAwMSwgY3VydmU6ICJsaW5lYXIiLCBkdXJhdGlvbjogMzUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgdGFibGVIaWdobGlnaHQucG9zaXRpb24ubW92ZShWZWMyKDAuNzQyLCAwLjc1KSwgY3VydmU6ICJsaW5lYXIiLCBkdXJhdGlvbjogMzUwMCkKICAgIHNlY2FudExpbmUuaGlkZShibG9ja2luZzogZmFsc2UpCiAgICBwdC5oaWRlKGJsb2NraW5nOiBmYWxzZSkKICAgIHRhbmdlbnRMaW5lLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgdGFuZ2VudExhYmVsLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgc2xvcGVMYWJlbC5zaG93KCkKICAgIHRhYmxlSGlnaGxpZ2h0LnBvc2l0aW9uLm1vdmUoVmVjMigwLjg2MywgMC43NSksIGN1cnZlOiAibGluZWFyIikKICAgIHNsb3BlVmFsLnNob3coKQogICAgdGFibGVIaWdobGlnaHQuaGlkZShkdXJhdGlvbjogNTAwKQogICAgc2xvcGVMYWJlbC5jb250ZW50WzFdID0gVGV4dCgiIikKICAgIHNsb3BlVmFsRmx5Lm9wYWNpdHkgPSAxCiAgICBzbG9wZVZhbEZseS5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4zMDI1LCAwLjEpKQogICAgd2FpdCg1MDApCiAgICAKICAgIC8vIDMtYwogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtY19pbnN0YW50YW5lb3VzX3ZlbG9jaXR5X2FuZF90aGVfdGFuZ2VudF9saW5lLm1wMyIpCiAgICB3YWl0KDc1MDApCiAgICBhcnJ3MS5vcGFjaXR5ID0gMQogICAgYXJydzEucDIubW92ZShWZWMyKDAuMTEsIDAuNjUpLCBibG9ja2luZzogZmFsc2UpCiAgICBhcnJ3MUxhYmVsLnNob3coKQogICAgYXJydzIub3BhY2l0eSA9IDEKICAgIGFycncyLnAyLm1vdmUoVmVjMigwLjExNSwgMC42NSksIGJsb2NraW5nOiBmYWxzZSkKICAgIGFycncyTGFiZWwuc2hvdygpCiAgICB3YWl0KDE1MDApCiAgICAKICB9Cn0K</Code>
+          <Question uuid="634c2363-779f-4859-ab07-2784ace6b21c">
+            <ShortAnswer difficulty="medium" uuid="924e6856-d4b6-459e-b32c-9849332fb507">
+              <KSAs primary="KSA2.3.1" secondary="Todo" uuid="ede3369d-6115-4d95-aaa3-732809c99e48" />
+              <question>What is the average velocity of the ball on the interval <m>[1,3]</m>?
+                Recall that <m>s(t) = -16t^2 + 128t \text{.}</m></question>
+              <Suffix>
+                <m>\dfrac{\text{ft}}{\text{s}}</m>
+              </Suffix>
+              <Hints>
+                <hint>Use the formula <m>v_{ave} = \dfrac{s(b) - s(a)}{b-a} \text{.}</m></hint>
+                <hint>On the interval <m>[1,3] \text{,}</m> <m>v_{ave} = \dfrac{s(3) - s(1)}{3 - 1}
+                  \text{.}</m></hint>
+              </Hints>
+              <CorrectExplanation>
+                <p>Use the formula <m>v_{ave} = \dfrac{s(b) - s(a)}{b-a}</m> given an interval <m>[a,b]
+                  \text{.}</m> Note that:</p>
+                <p>
+                  <m>s(3) = -16(3)^2 + 128(3) = 240 \text{ ft}</m>
+                </p>
+                <p>
+                  <m>s(1) = -16(1)^2 + 128(1) = 112 \text{ ft}</m>
+                </p>
+                <p>Substituting these values into the formula for <m>v_{ave}</m>, we get:</p>
+                <p>
+                  <me>\begin{align*}
+                    v_{ave} &amp; = \dfrac{s(3) - s(1)}{3 - 1} \\
+                    &amp; = \dfrac{240 \text{ ft} - 112 \text{ ft}}{2 \text{ s}} \\
+                    &amp; = \dfrac{128 \text{ ft}}{2 \text{ s}} \\
+                    &amp; = 64 \dfrac{\text{ft}}{\text{s}} \\
+                    \end{align*}</me>
+                </p>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="64" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Question>
+          <Question uuid="5a0d9522-24f5-470b-a09a-70e5f3a5762f">
+            <ShortAnswer difficulty="medium" uuid="a4f64e90-9a76-4354-8732-f4d4dbfd9a82">
+              <KSAs primary="KSA2.3.2" secondary="KSA2.3.4,KSA2.3.3" />
+              <question>What value does <m>v_{ave}</m> approach as <m>t</m> becomes closer to <m>1</m>
+                ?</question>
+              <Suffix>
+                <m>\dfrac{\text{ft}}{\text{s}}</m>
+              </Suffix>
+              <Hints>
+                <hint>Try finding the average velocity for <m>[1,1.00001] \text{.}</m></hint>
+                <hint>Try finding the average velocity for <m>[1,1.000001] \text{.}</m></hint>
+              </Hints>
+              <CorrectExplanation>As time approaches closer and closer to <m>t = 1</m> from the
+                right on the number line, the value of <m>\dfrac{s(t) - s(1)}{t-1}</m> approaches <m>96
+                \dfrac{\text{ft}}{\text{s}} \text{.}</m> We can do a similar analysis using values
+                to the left of <m>t = 1 \text{,}</m> such as <m>0.99</m>, <m>0.999</m>, and so on.</CorrectExplanation>
+              <Evaluation>
+                <Expression expected="96" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Question>
+        </ArcResource>
+        <TextResource duration="1" uuid="7c666759-57ff-4d8c-8f6b-b7ad43cab87a">
+          <Questions uuid="c1247454-5f5b-401b-9e42-afe721e70c4d">
+            <MultipleChoice difficulty="easy" uuid="fec19ac7-923c-4229-b343-0c803f0779d8">
+              <KSAs primary="KSA2.3.3" secondary="Todo" />
+              <question> The function <m>s(t)</m> represents the height of a ball in feet at <m>t</m>
+                seconds. The instantaneous velocity of the ball at <m>t = 2</m> is <m>\underline{\phantom{XXXXXX}}
+                \text{.}</m>
+
+              </question>
+              <Choices>
+                <choice>
+                  <label> the slope of the secant line on the interval <m>[1.99,2]</m>
+                  </label>
+                  <explanation>The slope of this secant line on the interval <m>[1.99,2]</m>​​​​​ is
+                    the average velocity, not the instantaneous velocity. To get the instantaneous
+                    velocity, we must determine what happens to the average velocities as the
+                    interval gets even smaller.</explanation>
+                </choice>
+                <choice>
+                  <label> the slope of the secant line on the interval <m>[2,2.01]</m>
+                  </label>
+                  <explanation>The slope of this secant line on the interval <m>[2,2.01]</m>​​​​ is
+                    the average velocity, not the instantaneous velocity. To get the instantaneous
+                    velocity, we must determine what happens to the average velocities as the
+                    interval gets even smaller.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label> the slope of the tangent line at <m>t=2</m>
+                  </label>
+                  <explanation>The instantaneous velocity is found by finding average velocities
+                    over smaller intervals. These average velocities are slopes of secant lines that
+                    approach the slope of the tangent line.</explanation>
+                </choice>
+                <choice>
+                  <label>the velocity the instant the ball is thrown</label>
+                  <explanation>The ball is thrown at <m>t=0 \text{,}</m> so the velocity the instant
+                    the ball is thrown is the slope of the tangent line at <m>t=0 \text{,}</m> not <m>t=2
+                    \text{.}</m></explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+          </Questions>
+        </TextResource>
+        <TextResource duration="4" uuid="08aac839-523c-4878-afed-3530f06b97cc">
+          <Text uuid="19c7fc70-6f52-45d2-920a-78927591f8ae"> The function <m>s(t) = -16t^2 +96t</m>
+            represents the height in feet of a ball <m>t</m> seconds after the ball is thrown. Find
+            the instantaneous velocity of the ball at <m>t=2</m> seconds. </Text>
+          <Questions locked-steps="true" uuid="890be020-2d67-47e1-bfe9-85f80499bb6a">
+            <MultipleChoice difficulty="medium" uuid="213d26fa-6d9b-43d9-b3a5-a8bab27a766a">
+              <KSAs primary="KSA2.3.3" secondary="KSA2.3.4" />
+              <question>A good strategy for finding the instantaneous velocity at <m>t=2</m> is to
+                compute <m>\underline{\phantom{XXXXXX}} \text{.}</m></question>
+              <Choices>
+                <choice>
+                  <label>
+                    <m>\dfrac{s(2)-s(0)}{2}</m>
+                  </label>
+                  <explanation>This option represents only a single average velocity, not the
+                    instantaneous velocity. Several average velocities need to be computed to find
+                    the instantaneous velocity.</explanation>
+                </choice>
+                <choice correct="true">
+                  <label> the average velocities on intervals <m>[t,2]</m> and <m>[2,t]</m> as <m>t</m>
+                    gets closer to <m>2</m>
+                  </label>
+                  <explanation>The instantaneous velocity at <m>t=2</m> is the number that the
+                    average velocities on intervals <m>[t,2]</m> and <m>[2,t]</m> approach as <m>t</m>
+                    gets closer to <m>2 \text{.}</m></explanation>
+                </choice>
+                <choice>
+                  <label> the average velocity from <m>t = 0</m> to <m>t = 2</m>
+                  </label>
+                  <explanation>This option will only yield an average velocity, not the
+                    instantaneous velocity. The instantaneous velocity is found by computing several
+                    average velocities over shrinking intervals.</explanation>
+                </choice>
+                <choice>
+                  <label> the height <m>s(t)</m> of the ball as <m>t</m> gets closer to <m>2</m>
+                  </label>
+                  <explanation>This option only considers the heights and not the average velocities
+                    of the ball. The instantaneous velocity is computed by finding several average
+                    velocities over shrinking intervals.</explanation>
+                </choice>
+              </Choices>
+            </MultipleChoice>
+            <ShortAnswer difficulty="medium" uuid="e1d44708-9536-4085-a5b9-e663e61ffd74">
+              <KSAs primary="KSA2.3.4" secondary="KSA2.3.1" />
+              <question>
+                <p>To find the instantaneous velocity of the ball at <m>t=2 \text{,}</m> find the
+                  average velocities over intervals <m>[t,2]</m> and <m>[2,t]</m> as <m>t</m> gets
+                  closer to <m>2 \text{.}</m> To that end, the average velocity on <m>[2,2.1]</m> is <m>v_{\text{ave}}
+                  = \underline{\phantom{XXXXXX}} \dfrac{\text{feet}}{\text{second}}</m>. Enter your
+                  answer as ##.#.</p>
+              </question>
+              <Hints>
+                <hint>
+                  <m>v_{\text{ave}} = \dfrac{s(2.1)-s(2)}{2.1-2}</m>
+                </hint>
+                <hint>
+                  <m>s(2) = -16(2)^2 + 96(2)</m> and <m>s(2.1) = -16(2.1)^2 + 96(2.1)</m>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 +96t \\
+                  s(2) &amp;= -16(2)^2 + 96(2) \\
+                  &amp;= 128 \\
+                  s(2.1) &amp;= -16(2.1)^2 + 96(2.1) \\
+                  &amp;= 131.04 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(2.1)-s(2)}{2.1-2}\\
+                  &amp;= \dfrac{131.04-128}{2.1-2}\\
+                  &amp;= \dfrac{3.04}{.1} \\
+                  &amp;= 30.4 \, \dfrac{\text{feet}}{\text{second}}\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="30.4" tolerance="0.1" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="f761f892-fd71-4af8-b4d2-1a9b6c7953d7">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p>Similarly, the average velocity on <m>[1.9,2]</m> is <m>v_{\text{ave}} =
+                  \underline{\phantom{XXXXXX}} \dfrac{\text{feet}}{\text{second}}</m>. Enter your
+                  answer as ##.#.</p>
+              </question>
+              <Hints>
+                <hint>
+                  <m>v_{\text{ave}} = \dfrac{s(2)-s(1.9)}{2-1.9}</m>
+                </hint>
+                <hint>
+                  <m>s(2) = -16(2)^2 + 96(2)</m> and <m>s(1.9) = -16(1.9)^2 + 96(1.9)</m>
+                </hint>
+              </Hints>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 +96t \\
+                  s(1.9) &amp;= -16(1.9)^2 + 96(1.9)) \\
+                  &amp;= 124.64 \\
+                  s(2) &amp;= -16(2)^2 + 96(2) \\
+                  &amp;= 128 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(2)-s(1.9)}{2-1.9}\\
+                  &amp;= \dfrac{128-124.64}{2-1.9}\\
+                  &amp;= \dfrac{3.36}{.1} \\
+                  &amp;= 33.6 \, \dfrac{\text{feet}}{\text{second}}\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+              <Evaluation>
+                <Expression expected="33.6" tolerance="0.1" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="5ac0f45a-e6ae-4c22-bca7-8c02ded544c9">
+              <KSAs primary="KSA2.3.4" secondary="Todo" />
+              <question>
+                <p>We have found two helpful average velocities. The following table includes these
+                  two average velocities and four others over smaller time intervals.</p>
+                <table>
+                  <Row>
+                    <Header scope="col">Interval</Header>
+                    <Header scope="col">
+                      <m>[1.9,2]</m>
+                    </Header>
+                    <Header scope="col">
+                      <m>[1.99,2]</m>
+                    </Header>
+                    <Header scope="col">
+                      <m>[1.999,2]</m>
+                    </Header>
+                    <Header scope="col">
+                      <m>[2,2.001]</m>
+                    </Header>
+                    <Header scope="col">
+                      <m>[2,2.01]</m>
+                    </Header>
+                    <Header scope="col">
+                      <m>[2,2.1]</m>
+                    </Header>
+                  </Row>
+                  <Row>
+                    <Cell>
+                      <m>v_{\text{ave}}</m>
+                    </Cell>
+                    <Cell>
+                      <m>33.6</m>
+                    </Cell>
+                    <Cell>
+                      <m>32.16</m>
+                    </Cell>
+                    <Cell>
+                      <m>32.016</m>
+                    </Cell>
+                    <Cell>
+                      <m>31.984</m>
+                    </Cell>
+                    <Cell>
+                      <m>31.84</m>
+                    </Cell>
+                    <Cell>
+                      <m>30.4</m>
+                    </Cell>
+                  </Row>
+                </table>
+                <p>Using this table, the instantaneous velocity of the ball at <m>t=2</m> seconds is <m>\underline{\phantom{XXXXXX}}
+                  \dfrac{\text{feet}}{\text{second}} \text{.}</m></p>
+              </question>
+              <Hints>
+                <hint>Find the number the average velocities are approaching as the intervals shrink
+                  in size and the endpoints get closer to <m>2 \text{.}</m></hint>
+              </Hints>
+              <CorrectExplanation>As the length of the intervals shrink and the endpoints get closer
+                to <m>2 \text{,}</m> the average velocities seem to get closer to <m>32
+                \dfrac{\text{feet}}{\text{second}} \text{.}</m></CorrectExplanation>
+              <Evaluation>
+                <Expression expected="32" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="1" uuid="02567d91-d9d9-43f5-8dc8-e05ec4caf19e">
+          <KSAs primary="KSA2.3.2" secondary="KSA2.3.3,KSA2.3.4"
+            uuid="2847d9bc-485a-4a6a-99c1-8d6bd425bac0" />
+          <Text uuid="e0b11362-23da-4356-b461-ca99601ff627">
+            <p>Lesson summary</p>
+
+            <list type="bullet">
+              <item> An object’s instantaneous velocity determines how fast the object is moving at
+                time <m>t=a \text{.}</m>
+              </item>
+              <item>The instantaneous velocity at <m>t=a</m> is the value the average velocities
+                approach on the intervals of the form <m>[t,a]</m> and <m>[a,t]</m> as <m>t</m>
+                becomes close to <m>a \text{.}</m></item>
+              <item>The slopes of the secant lines associated with the average velocities on
+                intervals like <m>[a,t]</m> and <m>[t,a]</m> as <m>t</m> gets close to <m>a</m>
+                approach the slope of the tangent line at <m>t=a \text{.}</m></item>
+            </list>
+          </Text>
+        </TextResource>
+      </Resources>
+    </Activity>
+    <Activity type="homework" when="post" uuid="0a1fca50-3af6-4424-bd95-e66f3ebe94cb">
+      <title>Average and instantaneous velocity</title>
+      <LearningOutcomes ids="1.3.2" />
+      <Resources>
+        <TextResource duration="2" uuid="97d2c449-5e01-440b-adc4-657b8d6b2f67">
+          <Text uuid="9f8b23b7-0808-4ab1-a0b9-19027d414a86">
+            <p> A table of values for the linear function <m>f(x)</m> is given. </p>
+            <table>
+              <Row>
+                <Header scope="row">
+                  <m>x</m>
+                </Header>
+                <Cell>
+                  <m>0</m>
+                </Cell>
+                <Cell>
+                  <m>1</m>
+                </Cell>
+                <Cell>
+                  <m>2</m>
+                </Cell>
+                <Cell>
+                  <m>3</m>
+                </Cell>
+              </Row>
+              <Row>
+                <Header scope="row">
+                  <m>f(x)</m>
+                </Header>
+                <Cell>
+                  <m>5</m>
+                </Cell>
+                <Cell>
+                  <m>3</m>
+                </Cell>
+                <Cell>
+                  <m>1</m>
+                </Cell>
+                <Cell>
+                  <m>-1</m>
+                </Cell>
+              </Row>
+            </table>
+          </Text>
+          <Questions locked-steps="true" uuid="b0016c9d-ed77-4350-a2c5-9f4cf4af403e">
+            <ShortAnswer difficulty="easy" uuid="cc816464-7f42-4dff-abb1-a3fa8f713b32">
+              <KSAs primary="KSA1.3.1" secondary="Todo" />
+              <question>
+                <p> The rate of change of <m>f</m> is <m>\underline{\phantom{XXXXXX}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-2" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p>The rate of change is the slope of the function.</p>
+                <p> Using the points <m>(1, 3)</m> and <m>(2, 1)</m> gives: </p>
+                <me>\begin{align*}
+                  \dfrac{\text{Change in } y}{\text{Change in } x} &amp;= \dfrac{1 - 3}{2 - 1} \\
+                  &amp;= -\dfrac{2}{1} \\
+                  &amp;= -2 \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="50cbd9c5-8979-44f4-8f34-45a96f695507">
+              <KSAs primary="KSA1.3.3" secondary="Todo" />
+              <question>
+                <p> The algebraic representation of the linear function is <m>f(x) =
+                  \underline{\phantom{XXXXXX}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+                <m>f(x) =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-2x + 5" toleranceType="absolute" tolerance="0">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The linear function can be written as <m>f(x) = mx + b \text{.}</m>
+
+                </p>
+                <p> The slope (rate of change) was previously computed to be <m>m = -2 \text{.}</m>
+                  The constant <m>b</m> is the <m>y\text{-intercept}</m> and can be found on the
+                  table: <m>b = f(0) = 5 \text{.}</m>
+
+                </p>
+                <p> So <m>f(x) = mx + b = -2x + 5 \text{.}</m>
+
+                </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="4" uuid="933e7552-9561-4820-ab96-4996e31e556f">
+          <Text uuid="0a1479c5-3585-405e-b1eb-7814454b3af5">
+            <p> The graph of the linear function <m>f(x)</m> : </p>
+            <image source="https://d66ukmsdxccfj.cloudfront.net/020306_HW_P2_Intro.png" width="400">
+              <description>Linear function &lt;m&gt;f(x)&lt;/m&gt; on an
+                &lt;m&gt;xy&lt;/m&gt;-plane, decreasing, y-intercept at &lt;m&gt;(0, 1)&lt;/m&gt;,
+                no critical points or asymptotes.<m>f(x) = -\dfrac{1}{3} x + 1</m> . </description>
+            </image>
+          </Text>
+          <Questions locked-steps="true" uuid="92904668-efa1-4491-99fb-05e513df5be2">
+            <ShortAnswer difficulty="easy" uuid="08c30efa-d59e-4064-878d-f46abfa7e54d">
+              <KSAs primary="KSA1.3.1" secondary="Todo" />
+              <question>
+                <p> The rate of change of <m>f</m> is <m>\underline{\phantom{XXXXXX}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-\dfrac{1}{3}" toleranceType="absolute" tolerance="0" />
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The rate of change is the slope of the graph. The graph goes through <m>(0, 1)</m>
+                  and <m>(3, 0) \text{.}</m>
+
+                </p>
+                <p>Using these two points gives the slope:</p>
+                <me>\begin{align*}
+                  \dfrac{\text{Change in } y}{\text{Change in } x} &amp;= \dfrac{0 - 1}{3 - 0} \\
+                  &amp;= -\dfrac{1}{3} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="90054fae-3a1f-4317-b76d-027ffc5725fa">
+              <KSAs primary="KSA1.3.3" secondary="Todo" />
+              <question>
+                <p> The algebraic representation for the linear function is <m>f(x) =
+                  \underline{\phantom{XXXXXX}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+                <m>f(x) =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-\dfrac{1}{3} x + 1" toleranceType="absolute" tolerance="0">
+                  <Tests>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>-1</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>100</Equals>
+                      </Variable>
+                    </Test>
+                    <Test>
+                      <Variable>
+                        <Name>x</Name>
+                        <Equals>1</Equals>
+                      </Variable>
+                    </Test>
+                  </Tests>
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The linear function can be written as <m>f(x) = mx + b \text{.}</m>
+
+                </p>
+                <p> The slope (rate of change) was previously computed to be <m>m = -\dfrac{1}{3}
+                  \text{.}</m> The constant <m>b</m> is the <m>y\text{-intercept}</m> and can be
+                  found on the graph: <m>b = f(0) = 1 \text{.}</m>
+
+                </p>
+                <p> So <m>f(x) = mx + b = -\dfrac{1}{3} x + 1 \text{.}</m>
+
+                </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="9fe3047a-3185-494f-82a3-1fd8caa63f24">
+              <KSAs primary="KSA1.2.1" secondary="Todo" />
+              <question>
+                <p>
+                  <m>f(30) = \underline{\phantom{XXXXXX}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+                <m>f(30) =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-9" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  f(x) &amp;= -\dfrac{1}{3} x + 1 \\
+                  f(30) &amp;= -\dfrac{1}{3} (30) + 1 \\
+                  &amp;= -10 + 1 \\
+                  &amp;= -9 \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="6" uuid="c08c8029-6e14-470c-809d-893477766375">
+          <Text uuid="34408db4-80d8-43fc-a4ef-29af2991d287">
+            <p> The height of a ball thrown into the air is modeled by <m>s(t) = -16t^2 + 80t + 10
+              \text{,}</m> where <m>s</m> is given in feet and <m>t</m> is given in seconds after
+              the ball is thrown. </p>
+
+            <image source="https://d66ukmsdxccfj.cloudfront.net/020306_HW_P3_Intro.png">
+              <description>Function &lt;m&gt;s(t) = -16t^2 + 80t + 10&lt;/m&gt; on &lt;m&gt;(t,
+                s)&lt;/m&gt; axes, showing a maximum at the critical point &lt;m&gt;(2.5, 110)<m>f(x)
+                = -16x^2 + 80x + 10</m> . </description>
+            </image>
+          </Text>
+          <Questions locked-steps="true" uuid="0d46bdcd-5286-4ab6-97f7-8456121d7f39">
+            <ShortAnswer difficulty="easy" uuid="5af08b64-a633-4991-b62d-bbbbac436098">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The height of the ball the instant the ball is thrown is <m>
+                  \underline{\phantom{XXXXXX}}</m> feet. </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="10" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The ball is thrown at <m>t = 0</m> seconds. So the height the instant the ball
+                  is thrown is <m>s(0) = -16(0)^2 + 80(0) + 10 = 10</m> feet. </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="0c2b3b60-dae3-4034-907f-c9e6584672ed">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The maximum height of the ball is <m>\underline{\phantom{XXXXXX}}</m> feet. </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="110" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The maximum of the graph is <m>(2.5, 110) \text{.}</m> The maximum height is the
+                  second coordinate: <m>110\text{ feet.}</m>
+                </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="7819b4fc-6e39-4789-8718-13cd11c092a6">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The maximum height of the ball is achieved at <m>\underline{\phantom{XXXXXX}}</m>
+                  seconds. </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="2.5" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The highest point on the graph is <m>(2.5, 110) \text{.}</m> The first
+                  coordinate is the time the maximum height is achieved: <m>2.5 \text{ seconds.}</m>
+                </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="a3faed4a-076c-4dbb-8b3a-1ed15ed289d9">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The height of the ball <m>1</m> second after the ball is thrown is <m>
+                  \underline{\phantom{XXXXXX}}</m> feet. </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="74" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The height of the ball after <m>1</m> second is <m>s(1) = -16(1)^2 + 80(1) + 10
+                    = 74 \text{.}</m>
+
+                </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="e32e2ab0-3cc7-442a-a527-cbe8892cca57">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The ball will be at the same height at <m>t = 1</m> second and <m>t =
+                  \underline{\phantom{XXXXXX}}</m> seconds. </p>
+              </question>
+              <Prefix>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="4" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> The graph of <m>h</m> has the same height at <m>t = 1</m> as the graph has at <m>t
+                  = 4 \text{.}</m>
+
+                </p>
+                <image source="https://d66ukmsdxccfj.cloudfront.net/020306_HW_P3_Q5Explanation.png"
+                  width="400">
+                  <description>(2.5, 110)&lt;/m&gt;; &lt;m&gt;s(1) = s(4)&lt;/m&gt;; concave down
+                    between &lt;m&gt;t = 0&lt;/m&gt; and &lt;m&gt;t = 5&lt;/m&gt;.<m>f(x) = -16x^2 +
+                    80x + 10</m> . Dashed line at <m>y = 74</m> . </description>
+                </image>
+              </CorrectExplanation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="4" uuid="24e992aa-804c-4fa9-8a25-c7fcbbd038d7">
+          <Text uuid="a9c77e5a-26c9-4ed5-9507-56953da0f63c">
+            <p> A table of values of the height <m>s(t)</m> of a ball <m>t</m> seconds after the
+              ball is thrown: </p>
+            <table>
+              <Row>
+                <Header scope="row">
+                  <m>t</m>
+                </Header>
+                <Cell>
+                  <m>0</m>
+                </Cell>
+                <Cell>
+                  <m>1</m>
+                </Cell>
+                <Cell>
+                  <m>2</m>
+                </Cell>
+                <Cell>
+                  <m>3</m>
+                </Cell>
+                <Cell>
+                  <m>4</m>
+                </Cell>
+                <Cell>
+                  <m>5</m>
+                </Cell>
+              </Row>
+              <Row>
+                <Header scope="row">
+                  <m>s(t)</m>
+                </Header>
+                <Cell>
+                  <m>15</m>
+                </Cell>
+                <Cell>
+                  <m>79</m>
+                </Cell>
+                <Cell>
+                  <m>111</m>
+                </Cell>
+                <Cell>
+                  <m>111</m>
+                </Cell>
+                <Cell>
+                  <m>79</m>
+                </Cell>
+                <Cell>
+                  <m>15</m>
+                </Cell>
+              </Row>
+            </table>
+          </Text>
+          <Questions locked-steps="true" uuid="881c6f24-e062-432e-9083-933a5ccbbaf7">
+            <ShortAnswer difficulty="easy" uuid="b29acb06-7f93-4d30-9ebc-08c1a3cbe7ab">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball from <m>t = 0</m> to <m>t = 3</m> seconds is <m>\underline{\phantom{XXXXXX}}
+                  \, \dfrac{\text{feet}}{\text{seconds}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="32" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(0) &amp;= 15 \\
+                  s(3) &amp;= 111 \\
+                  \text{Average velocity} &amp;= \dfrac{\text{Change in position}}{\text{Length of
+                  time interval}} \\
+                  &amp;= \dfrac{s(3) - s(0)}{3 - 0} \\
+                  &amp;= \dfrac{111 - 15}{3} \\
+                  &amp;= \dfrac{96}{3} \\
+                  &amp;= 32 \, \dfrac{\text{feet}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="5280ae12-a1e0-46f9-b50b-7977bd3defce">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball from <m>t = 3</m> to <m>t = 5</m> seconds is <m>\underline{\phantom{XXXXXX}}
+                  \, \dfrac{\text{feet}}{\text{seconds}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="-48" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(3) &amp;= 111 \\
+                  s(5) &amp;= 15 \\
+                  \text{Average velocity} &amp;= \dfrac{\text{Change in position}}{\text{Length of
+                  time interval}} \\
+                  &amp;= \dfrac{s(5) - s(3)}{5 - 3} \\
+                  &amp;= \dfrac{15 - 111}{2} \\
+                  &amp;= \dfrac{-96}{2} \\
+                  &amp;= -48 \, \dfrac{\text{feet}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="95b58b3b-c00a-4890-afe3-21584d42b96a">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball from <m>t = 1</m> to <m>t = 4</m> seconds is <m>\underline{\phantom{XXXXXX}}
+                  \, \dfrac{\text{feet}}{\text{seconds}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="0" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(1) &amp;= 79 \\
+                  s(4) &amp;= 79 \\
+                  \text{Average velocity} &amp;= \dfrac{\text{Change in position}}{\text{Length of
+                  time interval}} \\
+                  &amp;= \dfrac{s(4) - s(1)}{4 - 1} \\
+                  &amp;= \dfrac{79 - 79}{3} \\
+                  &amp;= \dfrac{0}{3} \\
+                  &amp;= 0\\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="6" uuid="519e31bc-1bea-4f30-a00d-b0b47e4f0614">
+          <Text uuid="08017e53-1d1f-4948-bcf0-690a65ba1df9">
+            <p>
+              <m>s(t) = -16t^2 + 96t + 15</m> represents the height in feet of a ball <m>t</m>
+              seconds after the ball is thrown. </p>
+          </Text>
+          <Questions locked-steps="true" uuid="4740a082-975d-4ad5-bee1-5afdae968874">
+            <ShortAnswer difficulty="medium" uuid="dec7b286-a326-4202-bfb3-b7f746e8d801">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball from <m>t = 1</m> to <m>t = 3</m> seconds is <m>v_{\text{ave}}
+                  = \underline{\phantom{XXXXXX}} \, \dfrac{\text{feet}}{\text{second}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+                <m>v_{\text{ave}} =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="32" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 + 96t + 15 \\
+                  s(1) &amp;= -16(1)^2 + 96(1) + 15 \\
+                  &amp;= 95 \\
+                  s(3) &amp;= -16(3)^2 + 96(3) + 15 \\
+                  &amp;= 159 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(3) - s(1)}{3 - 1} \\
+                  &amp;= \dfrac{159 - 95}{3 - 1} \\
+                  &amp;= \dfrac{64}{2} \\
+                  &amp;= 32 \, \dfrac{\text{feet}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="f74ceb4f-af0f-4e0a-9117-d8cdfdfdb73e">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball from <m>t = 2</m> to <m>t = 5</m> seconds is <m>v_{\text{ave}}
+                  = \underline{\phantom{XXXXXX}} \, \dfrac{\text{feet}}{\text{second}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+                <m>v_{\text{ave}} =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-16" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 + 96t + 15 \\
+                  s(2) &amp;= -16(2)^2 + 96(2) + 15 \\
+                  &amp;= 143 \\
+                  s(5) &amp;= -16(5)^2 + 96(5) + 15 \\
+                  &amp;= 95 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(5) - s(2)}{5 - 2} \\
+                  &amp;= \dfrac{95 - 143}{5 - 2} \\
+                  &amp;= \dfrac{-48}{3} \\
+                  &amp;= -16 \, \dfrac{\text{feet}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="medium" uuid="eda23340-9f86-44bf-b29a-4d3fd6131f8c">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball from <m>t = 1</m> to <m>t = 5</m> seconds is <m>v_{\text{ave}}
+                  = \underline{\phantom{XXXXXX}} \, \dfrac{\text{feet}}{\text{second}} \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix>
+                <m>v_{\text{ave}} =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="0" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -16t^2 + 96t + 15 \\
+                  s(1) &amp;= -16(1)^2 + 96(1) + 15 \\
+                  &amp;= 95 \\
+                  s(5) &amp;= -16(5)^2 + 96(5) + 15 \\
+                  &amp;= 95 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(5) - s(1)}{5 - 1} \\
+                  &amp;= \dfrac{95 - 95}{5 - 1} \\
+                  &amp;= \dfrac{0}{4} \\
+                  &amp;= 0 \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+        <TextResource duration="6" uuid="7c896fe0-633e-4fa2-b46a-63d0d9b711bc">
+          <Text uuid="1c76671c-ce3d-4c5f-a1d4-414fbb78c10f">
+            <p>When using meters instead of feet, the equation for the height of a ball is slightly
+              different.</p>
+            <p> The equation <m>s(t) = -4.9t^2 + 20t</m> represents the height of the ball in meters <m>
+              t</m> seconds after the ball is thrown. </p>
+            <p> Find the instantaneous velocity of the ball at <m>t = 2.5</m> seconds. </p>
+          </Text>
+          <Questions locked-steps="true" uuid="b4bc6255-3dd3-4855-99e8-c7b36c572fa4">
+            <ShortAnswer difficulty="easy" uuid="2763d6cd-c502-4d76-9b91-91a7a157a876">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball on the interval <m>[2.49,2.5]</m> is <m>v_{\text{ave}}
+                  = \underline{\phantom{XXXXXX}} \, \dfrac{\text{meters}}{\text{second}} \text{.}</m>
+
+                </p>
+                <p>Enter your answer as #.###.</p>
+              </question>
+              <Prefix>
+                <m>v_{\text{ave}} =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-4.451" tolerance="0.001" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -4.9t^2 + 20t \\
+                  s(2.49) &amp;= -4.9(2.49)^2 + 20(2.49) \\
+                  &amp;= 19.41951 \\
+                  s(2.5) &amp;= -4.9(2.5)^2 + 20(2.5) \\
+                  &amp;= 19.375 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(2.5) - s(2.49)}{2.5 - 2.49} \\
+                  &amp;= \dfrac{19.375 - 19.41951}{2.5 - 2.49} \\
+                  &amp;= \dfrac{-0.04451}{0.01} \\
+                  &amp;= -4.451 \, \dfrac{\text{meters}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="66c2c7ea-8331-47d8-a06d-56fef72c326c">
+              <KSAs primary="KSA2.3.1" secondary="Todo" />
+              <question>
+                <p> The average velocity of the ball on the interval <m>[2.5,2.51]</m> is <m>v_{\text{ave}}
+                  = \underline{\phantom{XXXXXX}} \, \dfrac{\text{meters}}{\text{second}} \text{.}</m>
+
+                </p>
+                <p>Enter your answer as #.###.</p>
+              </question>
+              <Prefix>
+                <m>v_{\text{ave}} =</m>
+              </Prefix>
+              <Evaluation>
+                <Expression expected="-4.549" tolerance="0.001" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <me>\begin{align*}
+                  s(t) &amp;= -4.9t^2 + 20t \\
+                  s(2.5) &amp;= -4.9(2.5)^2 + 20(2.5) \\
+                  &amp;= 19.375 \\
+                  s(2.51) &amp;= -4.9(2.51)^2 + 20(2.51) \\
+                  &amp;= 19.32951 \\
+                  v_{\text{ave}} &amp;= \dfrac{s(2.51) - s(2.5)}{2.51 - 2.5} \\
+                  &amp;= \dfrac{19.32951 - 19.375}{2.51 - 2.5} \\
+                  &amp;= \dfrac{-0.04549}{0.01} \\
+                  &amp;= -4.549 \, \dfrac{\text{meters}}{\text{second}} \\
+                  \end{align*}</me>
+              </CorrectExplanation>
+            </ShortAnswer>
+            <ShortAnswer difficulty="easy" uuid="5092a9f5-ce14-485d-a256-3aee156bfeb3">
+              <KSAs primary="KSA2.3.4" secondary="Todo" />
+              <question>
+                <p>The following table includes the two average velocities found earlier in addition
+                  to four other average velocities over smaller time intervals.</p>
+                <table>
+                  <Row>
+                    <Header scope="row">Interval</Header>
+                    <Cell>
+                      <m>[2.49,2.5]</m>
+                    </Cell>
+                    <Cell>
+                      <m>[2.499,2.5]</m>
+                    </Cell>
+                    <Cell>
+                      <m>[2.4999,2.5]</m>
+                    </Cell>
+                    <Cell>
+                      <m>[2.5,2.5001]</m>
+                    </Cell>
+                    <Cell>
+                      <m>[2.4,2.501]</m>
+                    </Cell>
+                    <Cell>
+                      <m>[2.5,2.51]</m>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Header scope="row">
+                      <m>v_{\text{ave}}</m>
+                    </Header>
+                    <Cell>
+                      <m>-4.451</m>
+                    </Cell>
+                    <Cell>
+                      <m>-4.4951</m>
+                    </Cell>
+                    <Cell>
+                      <m>-4.49951</m>
+                    </Cell>
+                    <Cell>
+                      <m>-4.50049</m>
+                    </Cell>
+                    <Cell>
+                      <m>-4.5049</m>
+                    </Cell>
+                    <Cell>
+                      <m>-4.549</m>
+                    </Cell>
+                  </Row>
+                </table>
+                <p> Using the table, the instantaneous velocity of the ball at <m>t = 2.5</m>
+                  seconds is <m>\underline{\phantom{XXXXXX}} \, \dfrac{\text{meters}}{\text{second}}
+                  \text{.}</m>
+
+                </p>
+              </question>
+              <Prefix />
+              <Evaluation>
+                <Expression expected="-4.5" tolerance="0" toleranceType="absolute">
+
+                </Expression>
+              </Evaluation>
+              <CorrectExplanation>
+                <p> As the length of the intervals shrink and the endpoints get closer to <m>2.5
+                  \text{,}</m> the average velocities seem to get closer to <m>-4.5 \,
+                  \dfrac{\text{meters}}{\text{second}} \text{.}</m>
+
+                </p>
+              </CorrectExplanation>
+            </ShortAnswer>
+          </Questions>
+        </TextResource>
+      </Resources>
+    </Activity>
+  </Activities>
+</Module>

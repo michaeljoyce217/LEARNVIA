@@ -1,0 +1,89 @@
+# Learnvia Product Vision - AI Context Version
+
+## CORE MISSION
+Serve non-traditional learners who struggle with traditional math education, particularly students from underserved communities with fewer opportunities to build strong foundations.
+
+## TARGET STUDENT PROFILE (USE FOR ALL EVALUATIONS)
+- Studying home alone
+- Low confidence in math
+- Scared of failing
+- Limited time availability
+- May do substantial coursework on mobile devices
+- Different from well-supported, motivated students
+
+## CONTENT PHILOSOPHY
+
+### Bite-Sized Learning (Chunking)
+- Lessons: 5-10 minute activities
+- Modules: ~50 minutes total
+- Activities: ~10 minutes each
+- Designed for interrupted study sessions
+
+### Progressive Building (Scaffolding)
+- Start simple, build slowly
+- No big conceptual jumps
+- Each step prepares for next
+- Extensive support at each level
+
+### Purpose-Driven (Alignment)
+- Backwards design approach
+- Lessons → Homework → Quizzes → Exams
+- Every element serves learning outcomes
+- No tangential content
+
+## KEY PRINCIPLES FOR REVIEW
+
+### Obsessive Conciseness
+"Any intelligent fool can make things bigger and more complex. It takes a touch of genius - and a lot of courage - to move in the opposite direction." --Einstein
+- Remove rather than add
+- Simplest possible explanations
+- Minimal cognitive load
+
+### Mobile-First Design
+- Content must work on small screens
+- Avoid elements that break on mobile
+- Consider vertical viewing
+- No complex layouts requiring rotation
+
+### Support Not Gatekeeping
+- Built-in help via AI tutor
+- Multiple attempts allowed
+- Hints and scaffolding provided
+- Focus on learning, not filtering
+
+### Accessibility Priority
+- 8th grade reading level
+- Clear, simple language
+- Visual + text explanations
+- Multiple learning pathways
+
+## MODULE EVALUATION CRITERIA
+
+### Good Module Characteristics
+- Clear progression from simple to complex
+- Concrete, student-relevant examples
+- Interactive elements every few minutes
+- Addresses common misconceptions explicitly
+- Prepares directly for assessments
+
+### Red Flags to Identify
+- Abstract concepts without concrete examples
+- Large conceptual jumps
+- Overly complex language
+- Instructor-focused rather than student-focused
+- Assumes strong prior knowledge
+- Lengthy calculations without concept teaching
+
+## REVIEW PRIORITIES
+1. Will struggling students understand this?
+2. Is this as simple as possible?
+3. Does this build appropriately from prior knowledge?
+4. Are examples relevant to target students?
+5. Is this aligned with learning outcomes?
+6. Can this work on mobile devices?
+7. Does this empower rather than discourage?
+
+## REMEMBER
+Every review should consider: "Does this serve the student studying alone at home, with low confidence and limited time?"
+
+Content should feel supportive and achievable, not overwhelming or elitist.

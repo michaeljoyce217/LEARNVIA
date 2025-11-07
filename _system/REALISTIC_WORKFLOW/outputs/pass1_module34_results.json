@@ -1,0 +1,1584 @@
+{
+  "timestamp": "2025-11-06T21:17:51.240010",
+  "module": {
+    "title": "Basic Rules of Finding Derivatives (Module 3.4)",
+    "module_id": "3.4",
+    "original_char_count": 46531,
+    "readable_char_count": 46531,
+    "line_count": 802,
+    "format": "Plain Text (Human-Readable)",
+    "preview": "Module: Basic Rules of Finding Derivatives\nLesson 3.4.1: The Constant Rule and Derivative Notation \nFraming text (just a few sentences. Should not exceed this box (min 14 pt font). \n<p>Calculating derivatives directly from the limit definition, <m>f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) \u2013 f(x)}{h}</m>, can be slow and complex for even simple functions. To make finding derivatives easier, mathematicians have developed rules that allow us to work more efficiently. In this lesson, we\u2019ll focus on the constant rule and learn about the different notations used for derivatives.</p> \n\n<p>There are several ways to write the derivative of a function, and it\u2019s important to recognize and use them. If <m>y = f(x)</m>, the derivative can be written as <m>f'(x)</m>, <m>y'</m>, <m>\\frac{dy}{dx}</m>, or <m>\\frac{d}{dx} f(x)</m>. Each notation is useful in different contexts, such as when working with implicit differentiation which we will learn about in a future module or when emphasizing the variable with respect to which you are differentiating.</p>\n\n<b>Constant Rule</b>\n<p>The constant rule states that the derivative of any constant function is zero. In other words, if <m>f(x) = c</m> where <m>c</m> is a constant, then <m>f'(x) = 0</m>. This can also be written as <m>\\frac{d}{dx} c = 0</m>. This rule reflects the fact that constant functions have no rate of change\u2014their graphs are perfectly flat.</p>\n\nAnimated figure spec\n1: (A) Let\u2019s begin with the constant rule. The derivative of a function is the slope, or the instantaneous rate of change, at any point on the graph. For constant functions, this slope is always the same. \nB) Consider the function f of x equals 2. This graph is a horizontal line at y equals 2.\nC) No matter which point is chosen on the graph, the slope of the tangent is always 0 - the function never changes - the output is always 2.\nD) This means, the derivative of f is 0 everywhere.\n\n1A) Have the box for the constant rule show up (don\u2019t show the rule yet) and draw in the graph of f(x) = 2 (don\u2019t label it yet). \nB) Label the graph of f(x) = 2 https://docs.google.com/document/d/1Iv91vf-iHPok5IRVowclkWEA1u2p0_e3NBcfrZ-au-k/edit?usp=sharingas such. \nC) Have the wording \u201cslope = 0\u201d come up with the f(x)=2 line.\nD) Have the f\u2019(x)=0 show up on the left under the slope = 0.\n\n2A) Now look at the constant function g of x equals 3. This is also a horizontal line, but at y = 3. \nB) Again, the slope at every point is zero.\nC) The function does not rise or fall, so the rate of change, in other words the derivative, is 0 everywhere.\n\n2A) Draw the graph of y = 3 - label it g(x)=3. \nB) Show the \u201cslope = 0\u201d\nC) Show g\u2019(x)=0.\n\n3A) Last, let\u2019s look at h(x) = 1. The graph of h is a horizontal line at y = 1.\n\n3A) Graph h(x) = 1.\n\nQ: What is the derivative of <m>h(x)=1</m>?\nH: The graph of <m>h(x)=1</m> is a horizontal line. Horizontal lines have slopes of 0. \nH: The derivative of a function gives the slope, or the instantaneous rate of change, at any point on its graph. \nE: 0. The derivative of a function gives the slope, or the instantaneous rate of change, at any point on its graph. Because <m>h(x)</m> is a horizontal line, the slope is always 0 because the function never changes. \n\n\n\nAnimated figure spec\n4: (A) We can generalize our findings to say the derivative of any constant is always 0. \nB) This leads to the constant rule: the derivative of any constant function is always zero. In mathematical terms, the derivative with respect to x of c equals 0.\n\n4A) Display slope - 0 and h\u2019(x) = 0 and highlight the f\u2019(x)=0, h\u2019(x)=0 and g\u2019(x)=0.\nB) Display the constant rule. \n\n5A) The constant rule shows that the derivative of a constant function is always zero, and this result can be expressed using several different notations. B) Prime notation, like f prime of x emphasizes the function\u2019s name and the variable.\nC) The shorthand, y prime, is often used when the function is written as y equal f of x.\nD) For example, if f of x equals 2, we could write its derivative in prime notation as f prime of x equals 0.\n\u000bPAUSE (NEW SCENE)\nE) Leibniz notation, written as d-y over d-x, makes it clear which variable is dependent and which is independent. We say this as the derivative of y with respect to x.\nF) Leibniz notation can also be written as d over d-x of f of x. This way highlights differentiation as an operation applied to a function f of x.\nG) For example, for f(x)=2, the derivative in leibniz notation can be written as d over d-x of 2 equals 0. We would say this as the derivative with respect to x of 2 is 0.\n\n\n5A) Show the derivative notation box and the first table - however only display the left column values and display them as the narrator states them.\nB) Show the first bullet point in the prime box\nC) Show the second bullet in the prime box.\nD) Show the f(x)=2 and the first row of the second table.\nE) display the first bullet for Leibniz\nF) Display the second bullet for leibniz\nG) Show the second row for the f(x) = 2.\n\n\n\n\nEnd of Lesson Summary\nIf <m>c</m> is any constant, then <m>\\frac{d}{dx} c = 0</m>.\n \n\n\n\nModule: Basic Rules of Finding Derivatives\nLesson 3.4.2: The Power Rule\nFraming text (just a few sentences. Should not exceed this box (min 14 pt font). \n<p>Another useful rule in calculus is the power rule, which streamlines the process of finding derivatives for functions involving powers of <m>x</m>. Instead of repeatedly applying the limit definition, the power rule offers a direct and efficient method for differentiation for power functions.</p>\n\n<b>Power Rule</b>\n\n<p>The power rule states that if <m>f(x) = x^n</m>, where <m>n</m> is any positive integer, then the derivative is <m>f'(x) = nx^{n-1}</m>. Another way to write this with Leibniz notation is <m>\\frac{d}{dx} x^n = nx^{n-1}</m>. \n\nAnimated figure spec (cont)\n2: (E) Now l Previously, we\u2019ve found (F) the derivative of x is 1. (G)The derivative of x squared is 2x. (H) and the derivative of x cubed is 3 x squared. (I) And the derivative with respect to x of x to the fourth is 4 x cubed. \n\n(E) Have the box for the power rule show up. .  \n(F) Have the example show up <m> \\frac{d}{dx} x = 1x^0 = 1 \u2013 if you\u2019re able to animate it in some way that would be awesome. \n(G) Have the example show up  <m> \\frac{d}{dx} x^2 = 2x^1 = 2x </m> \u2013 if you\u2019re able to animate it in some way that would be awesome. \n(H) Have the example show up <m> \\frac{d}{dx} x^3=3x^2 </m> \u2013 if you\u2019re able to animate it in some way that would be awesome. Have the box for x^4 show up when the embedded question pops up but don\u2019t show the f\u2019(x) of it (the 4x^3) until after the embedded question.\n(I) Have the example show up <m> \\frac{d}{dx} x^4 = 4x^3 </m>  \u2013 if you\u2019re able to animate it in some way that would be awesome. \n\n\nQ: Given the pattern in the table, what is </m> \\frac{d}{dx} x^4 </m>?\n* <m> \\frac{d}{dx} x^4 =4x^3</m> E*: The exponent, 4, becomes the coefficient, and the new exponent is one less than the original exponent \n* <m> \\frac{d}{dx} x^4 = x^3</m>. E: Look at the pattern. For example, for the derivative of <m>x^2</m>, the exponent became the coefficient, and the power decreased by one.\n* <m> \\frac{d}{dx} x^4 =4x^4</m> E: The derivative does not keep the same power; the power decreases by one. Look back at the patterns from the previous derivatives. \n* <m> \\frac{d}{dx} x^4 =4x^5</m> E: The derivative exponent decreases by one. Observe how the pattern worked for <m>x^2</m> and <m>x^3</m>. \n\n\nAnimated figure spec (cont)\n3: (J) Notice the exponent in the original function becomes the coefficient in the derivative and the exponent in the derivative is one less than in the original function. (K) This pattern leads us to the power rule: If n is a positive integer, then the derivative of x to the n is n times x to the n-1 power. \n\n\n(J) Animate the coefficients and powers as the narrator states the pattern and display the derivative of x^4.. \n(K) Have the power rule fade in:  If <m>n</m> is a positive integer, then <m> \\dfrac{x}{dx} x^n = n /cdot x ^{n-1}</m>. \n\n\nFollow-up questions (typically 3-7)\nQ1: If <m>f(x)= \u20133</m>, what is <m>f\u2019(x)</m>?\n* f\u2019(x) = 0 E*: The derivative of a constant function is zero because its slope is zero everywhere.  The slope of a constant function never changes.\n* <m>f\u2019(x) = \u20133</m> E: -3 is the value of the function, not its slope.  The graph of <m> f(x) = -3 </m> is a horizontal line.  What is the slope of a horizontal line?  Think about how the slope of a horizontal line behaves. Does it change as the value of <m>x</m> changes? \n* <m>f\u2019(x) = \u20133x</m>  E: This is a function that has <m> -3 </m> as its slope.  Instead, find the slope of the graph of <m>f(x) = -3</m>, which is a horizontal line.\nQ2: What is the power rule formula for finding the derivative of a function in the form <m> f(x)=x^n</m>, where <m>n</m> is a positive integer? \n\n* <m> f\u2019(x)=n \\cdot x^{n-1} </m> E*: To apply the power rule, multiply <m>x</m> by the original exponent and then reduce the power by 1. \n* <m> f(x)=n \\cdot x^n </m> E: Look at the power of <m>x</m>. Does the power of <m>x</m> remain the same after differentiation?\n* <m> f\u2019(x)=n \\cdot x^{n+1} </m> E: When finding the derivative, think about whether the power of <m>x</m> increases or decreases. \n\u000b\nQ3: Find <m> \\frac{d}{dx} x^10</m>. \n\nHint 1: Note the power rule: the derivative of <m> x^n </m> involves multiplying by the exponent and then reducing the power by 1.\n\nHint 2: When differentiating <m>x^10</m>, consider how the exponent 10 affects both the coefficient and the new power of <m>x</m>. \n\nAnswer: <m> \\frac{d}{dx} x^{10} =10x^9</m>\nExplanation: The power rule states if <m>n</m> is any positive integer and <m>f(x)=x^n</m>, then <m>f'(x)=nx^{n-1}</m>.  Applying the rule,  <m> \\dfrac{d}{dx} x^{10} = 10x^{10-1} = 10x^9 </m>.\n\nQ4: Which of the following is true about the slope of any tangent line on the graph of <m>f(x) = x^7 </m>?\n\nChoice*: The slope of a tangent line to <m>f(x)=x^7<m> line will never be negative.\nExplanation: By the power rule, <m>\\dfrac{d}{dx} x^7 = 7x^6 </m>.  Because <m>6 </m> is even, <m>x^6 \\geq 0 </m>. Thus, <m>f\u2019(x) = 7x^6 \\geq 0 <m>.  So, the slope of the tangent line will be either <m>0 </m> or positive, and therefore never negative.\n\nChoice: The slope of every tangent line of <m>f(x) = x^7 </m> will be positive.\nExplanation: By the power rule, <m>f\u2019(x) = 7x^6</m>.  At <m>x=0 </m>, <m>f\u2019(0) = 7 \\cdot 0^6 = 0,</m> which is not a positive number.\n\nChoice: The slope of a tangent line will be negative at a negative <m>x-<m>value and will be positive at a positive <m>x-<m>value.\nExplanation: While the values of <m>f(x) <m> are negative at negative <m>x-</m>values and positive at positive <m>x-</m>values, this is not true of the derivative <m>f\u2019(x) = 7x^6</m>.\n\nChoice: The slope of a tangent line will be positive at a negative <m>x-<m>value and will be negative at a positive <m>x-<m>value.\nExplanation: By the power rule, the derivative is <m>f\u2019(x) = 7x^6 </m>, which gives the slope of the tangent line at any <m>x</m>.\nQ5: This is the graph of the derivative <m>f\u2019(x)<m>.\n\n\n\n\n\n\n\n\nImage description: Graph of f(x) = 6x^5; do not include any numbers on the axes. Only the basic shape should be given.\n\nWhich of the following might be <m>f(x)</m>?\n\nChoice*: <m>f(x)=x^6 <m>\nExplanation: The derivative <m>f\u2019(x) </m> is an odd-degree power function.  So, the function <m>f(x)<m> must be a power function with an even degree.  The only other even-power option for this question is <m>f(x) = x^2 <m>, whose <m>f\u2019(x) = 2x </m> is a line.\n\nChoice: <m>f(x) = x^7</m>\nExplanation: The derivative of <m>f(x) = x^7</m> is <m>f\u2019(x) = 7x^6 </m>, which has an even-degree.  The graph displayed is an odd-degree power function.\n\nChoice: <m>f(x)=x^2</m>\nExplanation: The derivative of <m>f(x) = x^2 </m> is <m>f\u2019(x) = 2x </m>, whose graph is a line.\n\nChoice: <m>f(x)=x^5 </m>\nExplanation: The derivative of <m>f(x) = x^5 </m> is <m>f\u2019(x) = 5x^4 </m>, which has an even-degree. The graph displayed is an odd-degree power function.  \n\n\n\nFollow-up questions (typically 3-7)\nQ6: Which of the following represents the limit definition of the derivative for the constant function <m>f(x) = c</m>?\n\nChoice*: <m>f\u2019(x) = \\lim_{h \\to} \\dfrac{c \u2013 c}{h} </m>\nExplanation: Because <m>f(x) = c </m> is a constant function, <m>f(x+h) = c </m>. The limit definition of the derivative is therefore <m>f\u2019(x) = \\lim_{h \\to 0} \\dfrac{f(x+h)-f(x)}{h} = \\lim_{h \\to 0} \\dfrac{c \u2013 c}{h}</m>\n\nChoice: <m>f\u2019(x) = \\lim_{h \\to 0} \\dfrac{(c+h) \u2013 c}{h} </m>\nExplanation: Because <m>f(x) = c </m> is a constant function, <m>f(x+h) = c </m>.\n\nChoice: <m>f\u2019(x) = \\lim_{h \\to 0} \\dfrac{(c(x+h) \u2013 c}{h} </m>\nExplanation: The constant function <m> f(x) = c </m> will always output <m> c </m>, regardless of the input.  So, <m> f(x+h) = c</m>.\n\nChoice: <m> f\u2019(x) = \\lim_{h \\to 0} \\dfrac{c}{h}</m>\nExplanation: The numerator in the limit definition of the derivative is <m>f(x+h) \u2013 f(x) </m>. Because <m>f(x) = c </m> is a constant function, <m>f(x+h) = c </m>.\n\n\n\n\nEnd of Lesson Summary\n\nIf <m>n</m> is any positive integer, then <m>\\frac{d}{dx} x^n = nx^{n-1}</m>.\n\n\nModule: Basic Rules of Finding Derivatives\nLesson 3.4.3: Sum, Difference, and Constant Multiple Rules\nFraming text (just a few sentences. Should not exceed this box (min 14 pt font). \n<Text>\n<p>This lesson will explore three important derivative rules which allow us to break down complex functions into simpler components and find derivatives more efficiently.</p> \n \n<b>Constant Multiple Rule</b> \n<p>If <m>c</m> is a constant and <m>f(x)</m> is a differentiable function, then  \n<m> \\frac{d}{dx} (c \\cdot f(x))=c \\cdot \\frac{d}{dx} f(x)</m>. </p>\n \n<p>If <m>f(x)</m> and <m>g(x)</m> are both differentiable functions, then\n  <b>Sum Rule</b> \n<m> \\frac{d}{dx} (f(x)+g(x))= \\frac{d}{dx} f(x)+ \\frac{d}{dx} g(x) </m> and  \n<b>Difference Rule</b>\n<m> \\frac{d}{dx} (f(x)-g(x))= \\frac{d}{dx} f(x)- \\frac{d}{dx} g(x) </m>.</p>\n</Text>\n\nAnimated figure spec\n1: (A) The constant rule states that if c is a constant and f is a differentiable function, then the derivative with respect to x is c times the derivative of f of x. (B) Let\u2019s look at why this rule works. The graph shows the function f of x.  (C) Compare that to the graph of  2 times f. (D) Multiplying f by 2 stretches the graph vertically by a factor of 2. (E) Now let\u2019s focus on the derivatives of both functions at x = 2 by drawing their respective tangent lines. (F) For f at x equals 2, the slope of the tangent line has a rise of 1 and a run of 1 giving a slope of 1. (G) So, the derivative of f at 2 is 1.\n\n\n(A) Show the definition of the constant multiple rule:  If <m>c</m> is constant and <m>f</m> is a differentiable function, then <m> \\frac{d}{dx} (c \\cdot f(x))=c \\cdot \\frac{d}{dx} f(x)</m>\n(B) Animate drawing the Graph f(x)=(1/2x)^2 \n(C) Animate drawing the Graph <m>2f(x)</m>\n(D) Show how 2f(x) is the graph of f(x) stretched by 2. \n(E) Show the tangent line being drawn from left to right for each function. \n(F) Draw the slope triangle of a rise of 1/1 on the graph \n(G)  Show that at x = 2, <m>\\dfrac{d}{dx}f(x)=1</m>. \n\n\nQ: Find the slope of the tangent line at <m>x = 2</m> for <m>2f(x)</m>, given that the points <m>(2,2)</m> and <m>(3,4)</m> are on the tangent line.\nHint #1: The slope formula is <m>m = \\frac{y_2 \u2013  y_1}{x_2 \u2013 x_1}</m>.\nHint #2: Substitute the given points <m>(2,2)</m> and <m>(3,4)</m> into the slope formula. \n \nCorrect Answer/Explanation: The slope of the tangent line is 2. <m>m = \\frac{y_2 \u2013 y_1}{x_2 \u2013 x_1} = \\frac{4 \u2013 2}{3 \u2013 2} = 2</m>. \n\n\nAnimated figure spec (cont)\n2: (H) For 2 times f at x equals 2, the slope of the tangent line has a rise of 2 and a run of 1. (I) So, the derivative of 2 times f equals 2. (J) Comparing these slopes, the derivative of 2 times f is twice the derivative of f at the same point. (K) This example illustrates the constant multiple rule \u2013 the derivative of 2 times f is 2 times the derivative of f.\n\n(H) Draw the slope triangle of a rise of 2/1 on the graph of the tangent line for 2f(x) \n(I) <m> \\frac{d}{dx} (2f(x))=2</m> at <m>x = 2</m>\n(J) Animate the 1 and the 2 for the derivative equations and next to the d/dx 2f(x) = 2 put = 2(1) to illustrate it\u2019s twice the value of f(x) at x = 2. <m>\\dfrac{d}{dx} 2 \\cdot f(x) = 2 = 2 /cdot 1</m>\n(K) Fade in or animate: <m>\\dfrac{d}{dx} 2 \\cdot f(x) = 2 \\dfrac{d}{dx} f(x) </m>.\n\nQ: Assume <m>g(x)</m> is a differentiable function and <m>\\frac{d}{dx} g(x) = \u2013 3x </m>. Find <m> \\frac{d}{dx} (2 \\cdot g(x))</m>.  \nHint #1: We are looking to find the derivative of the function <m> g(x) </m> multiplied by a constant. Recall the Constant Multiple Rule for Derivatives. \nHint #2: The Constant Multiple Rule states that for a constant <m>c</m> and a differentiable function <m>f(x)</m>, <m>\\frac{d}{dx}(c \\cdot f(x)) = c \\cdot \\frac{d}{dx}f(x)</m>. \n \nCorrect Answer/Explanation: <m>\\frac{d}{dx} (2 \\cdot g(x)) = -6x</m>.  \n\\begin{align} \u000b\\frac{d}{dx}[2 \\cdot g(x)] &= 2 \\cdot \\frac{d}{dx}g(x) && \\text{Apply the Constant Multiple Rule.} \\\\ \u000b&= 2 \\cdot (\u20133x) && \\text{Substitute the given derivative of } g(x). \\\\ \u000b&= \u20136x && \\text{Simplify}\\\\ \u000b\\end{align} \n\n\nAnimated figure spec (cont)\n3: (L) Now let\u2019s explore two additional rules for calculating derivatives: the Sum and Difference Rules (M) If f and g are both differentiable, then the derivative of f plus g is equal to the derivative of f plus the derivative of g (N) And, the derivative of f minus g is equal to the derivative of f minus the derivative of g (O) Let\u2019s apply these rules to find the derivative of x squared plus 5x minus 3 (P) First, apply the sum and difference rule to separate the terms. (Q) Now differentiate each term. The derivative of x^2 is 2x, the derivative of 5x is 5 and the derivative of 3 is 0. (R) Therefore, the derivative is 2x plus 5. \n\n\n(L) Have the sum and difference rule box show up on the screen. \n(M) Fade in the sum rule: If <m>f</m> and <m>g</m> are both differentiable, then <m> \\frac{d}{dx} (f(x)+g(x))= \\frac{d}{dx} f(x)+ \\frac{d}{dx} g(x) </m>\n(N) Fade in the difference rule: <m> \\frac{d}{dx} (f(x) \u2013 g(x))= \\frac{d}{dx} f(x)- \\frac{d}{dx} g(x) </m> \n(O) Have the example problem display: <m>\\dfrac{d}{dx} (x^2+2x \u2013 3)</m>\n(P) Animate the separation of each term. <m> \\frac{d}{dx} x^2 + frac{d}{dx} 5x \u2013 frac{d}{dx} 3\n(Q) Animate the following or just have fade all at the same time <m> 2x +5 \\dfrac{d}{dx} - 0 </m>; <m> 2x +5(1) </m>  \n(R) Have the last line show. <m>2x+5</m>\n\n\n\nAnimated figure spec (cont)\n3: (cont)\n\n\n(O)\n(P)\n(R)\n(Q)\n\nFollow-up questions (typically 3-7)\nQ1: Find <m> \\dfrac{d}{dx} 7x^3</m>. \n\n* <m> \\dfrac{d}{dx} 7x^3 = 21x^2 </m> E*: <me> \n\\begin{align*} \n\\frac{d}{dx}(7x^3) &= 7 \\cdot (3x^2) && \\text{Apply the constant multiple and power rules} \\\\ \n&= 21x^2 && \\text{Multiply to simplify} \n\\end{align*} \n</me>\n\n* <m> \\dfrac{d}{dx} 7x^3 = 7x^2 </m> E: Recall the power rule states that if <m>n</m> is any positive integer, then <m>\\frac{d}{dx} x^n = nx^{n \u2013 1}</m>.\n\n* <m> \\dfrac{d}{dx} 7x^3 = 14x^3 </m> E: When differentiating <m>7x^3</m>, multiply 7 by 3 to get the coefficient of the derivative. \n\n* <m> \\dfrac{d}{dx} 7x^3 = 3x^2 </m>. E: Remember to multiply the derivative by the constant factor from the original function.\n\nQ2: If <m>f(x)</m> and <m>g(x)</m> are differentiable functions, what is the correct expression for <m> \\frac{d}{dx} [3f(x) \u2013 2g(x)] </m>?\n\n* <m> 3 \\cdot \\frac{d}{dx} f(x) \u2013 2 \\cdot \\frac{d}{dx} g(x)] </m> \nE*: Combining the constant multiple rule and the difference rule yields <m> 3 \\cdot \\frac{d}{dx} f(x) \u2013 2 \\cdot \\frac{d}{dx} g(x)</m>.\n\n* <m> 3 \\cdot f(x) \u2013 2 \\cdot g(x)] </m> \nE: When using with the difference rule, the derivative <m>\\dfrac{d}{dx}</m> will be applied to both <m> 3 \\cdot f(x) </m> and <m> 2 \\cdot g(x) </m>.\n\n*<m> \\frac{d}{dx} f(x) \u2013 \\frac{d}{dx} g(x) </m>\nE: When applying the constant multiple rule, the constants are pulled out of the derivative.  They do not go away.\n\n*<m> 3 \\cdot \\frac{d}{dx} f(x) + 2 \\cdot \\frac{d}{dx} g(x)] </m> \nE: The derivative of a difference is the difference (not the sum) of the derivatives.  \nQ3: Find <m>f\u2019(x) <m> when <m> f(x) = 6x^3 - 2x^2 + 5x - 1 <m>.\n\nHint 1: The sum and difference rules make it possible to focus on each term of the polynomial individually.\n\nHint 2: To compute the derivative of a term like <m> \\dfrac{d}{dx} (6x^3) </m>, use the constant multiple rule and power rule: <m> \\dfrac{d}{dx} (6x^3) = 6 \\dfrac{d}{dx}(x^3) = 6 \\cdot(3x^2) </m>.\n\nExplanation: <m>f\u2019(x) = 18x^2 \u2013 4x + 5 </m>.  Using the sum and difference rules, we can break up the derivative polynomial by its individual terms and then apply the constant multiple and power rules:\n\n<me>\n\\begin{align*}\nf\u2019(x) &= \\dfrac{d}{dx} \\left(6x^3 - 2x^2 + 5x - 1 \\right) \\\\\n&= \\dfrac{d}{dx} (6x^3) \u2013 \\dfrac{d}{dx}(2x^2) + \\dfrac{d}{dx}(5x)  \u2013 \\dfrac{d}{dx}(1) && \\text{Sum and difference rules} \\\\\n&= 6 \\dfrac{d}{dx}(x^3)  \u2013 2\\dfrac{d}{dx}(x^2) + 5 \\dfrac{d}{dx}(x) - \\dfrac{d}{dx}(1) && \\text{Constant multiple rule}\\\\\n&= 6 \\cdot (3x^2) - 2 \\cdot (2x) + 5 \\cdot (1) - 0 && \\text{Power rule and constant rule} \\\\\n&= 18x^2 - 4x + 5 && \\text{Simplify} \\\\\n\\end{align*}\n</me>\nQ4: This is the graph of <m> f(x) = x^3-3x^2-x+5 </m> and the tangent line at <m> x = 1 </m>. \n\n\n\n\n\n\n\n\n\n\n\nImage description: graph of f(x) = x^3-3x^2-x+5 in black with x-axis from \u20132.5 to 4 and y-axis from \u20132 to 6, and dashed tangent line with equation y=-4(x-1)+2.\n\nUsing the graph, what must be true about the sign of <m>f\u2019(1)</m>?\n\nChoice*: <m>f\u2019(1)</m> is negative.\nExplanation: The tangent line of <m>f</m> at <m> x = 1</m> has a negative slope since it is decreasing.\nChoice: <m>f\u2019(1)</m> is positive.\nExplanation: <m>f\u2019(1)</m> would only be positive if the slope of the tangent line at <m> x = 1</m> was positive.\nChoice: <m>f\u2019(1)</m> is zero.\nExplanation: <m>f\u2019(1)</m> would only be zero if the tangent line at <m> x = 1</m> was horizontal and had a slope of zero.\nQ5: Find the derivative of <m> f(x) = x^3-3x^2-x+5 </m>.\n\nHint 1: The sum and difference rules allow us to focus on each term of the polynomial individually.\n\nHint 2: To compute the derivative of <m> 3x^2 <m>, for example, use the power and constant multiple rules: <m>\\dfrac{d}{dx} (3x^2) = 3 \\dfrac{d}{dx}(x^2) = 3 \\cdot 2x</m>.\n\nExplanation: <m> f\u2019(x) = 3x^2 \u2013 6x \u2013 1</m>. Using the sum, difference, and constant multiple rules, the derivative can be computed as follows:\n\n<me>\n\\begin{align*}\nf'(x) &= \\dfrac{d}{dx}\\left( x^3 \u2013 3x^2 \u2013 x+5 \\right)\\\\\n&= \\dfrac{d}{dx}(x^3) \u2013 \\dfrac{d}{dx}(3x^2) \u2013 \\dfrac{d}{dx} (x) + \\dfrac{d}{dx} (5) && \\text{Use the sum and difference rules\\\\\n&= \\dfrac{d}{dx}(x^3) \u2013 3\\dfrac{d}{dx}(x^2) \u2013 \\dfrac{d}{dx} (x) + \\dfrac{d}{dx} (5) && \\text{Use the constant multiple rule} \\\\\n&= 3x^2 \u2013 3(2x) \u2013 1 + 0 && \\text{Use the power rule.} \\\\\n&= 3x^2 \u2013 6x \u2013 1 && \\text{Simplify}\n\\end{align*}\n</me>\n\nFollow-up questions (typically 3-7)\nQ6: Previously, the derivative of <m> f(x) = x^3-3x^2-x+5 </m> was computed.  Use that computation to find <m> f\u2019(1) </m>.  Ensure that your answer matches your prediction from the graph about whether the slope of the tangent line of <m> f </m> at <m> x= 1</m> is negative or positive.\n\n\n\n\n\n\n\n\n\nImage description: graph of f(x) = x^3-3x^2-x+5 in black with x-axis from \u20132.5 to 4 and y-axis from \u20132 to 6, and dashed tangent line with equation y=-4(x-1)+2.\n\n  \nHint 1: <m>f\u2019(1)</m> can be computed by substituting <m> x = 1</m> into <m>f\u2019(x) = 3x^2 \u2013 6x \u2013 1 </m>.\nHint 2: Substituting <m> x= 1 </m> into <m>f\u2019(x) </m> yields <m> f\u2019(1) = 3(1)^2 \u2013 6(1) \u2013 1 </m>.\nExplanation: <m>f\u2019(1) = -4</m>. Because <m> f\u2019(x) = 3x^2 \u2013 6x - 1</m>, then <m> f\u2019(1) = 3(1)^2 \u2013 6(1) - 1 = 3 \u2013 6 \u2013 1 = \u20134</m>.  In Part A, the negative slope of the tangent line of <m> f </m> at <m> x = 1 </m> indicated that <m> f\u2019(1) </m> would be negative, which is indeed true.\n\n\n \nQ7: Which of the following functions has the same derivative as <m> f(x) = 3x^2 + 5x + 2 </m>? \nChoice*: <m> g(x) = 3x^2 + 5x \u2013 9 </m>\nExplanation: Both functions have the same derivative: <m>6x + 5</m>.  The constant term (2 or \u20139) makes no difference to the derivative because the derivative of all constant terms is zero.\nChoice: <m> g(x) = \u20133x^2 + 5x + 2 </m>\nExplanation: For this option, <m>g\u2019(x) = \u20136x + 5</m>, which is different from <m>f\u2019(x) = 6x + 5</m>. Think about which term in the quadratic will become zero when taking a derivative.\nChoice: <m> g(x) = 3x^2 \u2013 5x + 2 </m>.\nExplanation: For this option, <m>g\u2019(x) = 6x \u2013 5</m>, which is different from <m>f\u2019(x) = 6x + 5</m>. Think about which term in the quadratic will become zero when taking a derivative.\nChoice: <m> g(x) = \u20133x^2 \u2013 5x \u2013 5 </m>\nExplanation: For this option, <m>g\u2019(x) = \u20136x \u2013 5</m>, which is different from <m>f\u2019(x) = 6x + 5</m>.   Remember, the derivative of all constants is zero.\n\n\n\nEnd of Lesson Summary\nConstant Multiple Rule: If <m>c</m> is constant and <m>f</m> is a differentiable function, then <m> \\frac{d}{dx} (c \\cdot f(x))=c \\cdot \\frac{d}{dx} f(x)</m>. \nSum and Difference Rules: If <m>f</m> and <m>g</m> are both differentiable, then  \n<m> \\frac{d}{dx} (f(x)+g(x))= \\frac{d}{dx} f(x)+ \\frac{d}{dx} g(x) </m> and  \n<m> \\frac{d}{dx} (f(x)-g(x))= \\frac{d}{dx} f(x)- \\frac{d}{dx} g(x) </m>.\n\n\nModule: Basic Rules of Finding Derivatives\nLesson 3.4.4: The Equation of a Tangent Line to a Point\nFraming text (just a few sentences. Should not exceed this box (min 14 pt font). \n<Text>\n<p> For a smooth function <m>f(x)</m>, the tangent line at a point <m>(a,f(a))</m> on the graph of <m>f(x)</m> is the straight line containing the point with the same slope as the graph at that point. The slope of the tangent line is the derivative of the function at the point <m>(a,f(a))</m>, which measures the instantaneous rate of change of <m>f(x)</m> with respect to <m>x</m>.\n\n</p> \n \n<p>The equation of a tangent line to a graph at a point <m>(a,f(a))</m> is given by: <m>y=f\u2032(a)(x \u2013 a)+f(a)</m>.</p>\n</Text>\n\nAnimated figure spec\n1: (A) The equation of the tangent line may look familiar, it is a modified version of the point-slope formula. B) Here, the slope is the derivative of f at a. (C) Let\u2019s use this formula to find the equation of the tangent line to the graph of f of x equals 3x squared at x = 1. (D) First, we need to find f of 1.\n\n(A) Have the equation of a tangent line formula show up:. The equation of a tangent line to a graph at a point <m>(a,f(a))</m> is given by: <m>y=f\u2032(a)(x \u2013 a)+f(a)</m>. \n(B) Highlight f^\u2032 (a)</m> and f(a).\n(C) Display equation. And the example:  <m>f(x)=3x^2</m> at <m>x=1</m>.\n(D) Animate the substitution of x = 1 into the function. \n \n\nQ: Calculate <m>f(1)</m> for the function <m>f(x)=3x^2</m>. \nHint #1: Substitute <m>x=1</m> into the function <m>f(x)=3x^2</m>. \n \nHint #2: Square the value of <m>x</m> before multiplying by 3. \n \nCorrect Answer/Explanation: <m>f(1)=3</m>.  \n<me> \n\\begin{align*} \nf(x) &= 3x^2 && \\\\ \n &= 3(1)^2 && \\text{Substitute } x = 1 \\text{ into the function.} \\\\ \n &= 3 && \\text{Simplify} \\\\ \n\\end{align*} \n</me>  \n \n\n\nAnimated figure spec (cont)\n2: (E) Now that we have a point, find the derivative of f at 1. (F) f prime of x equals 6x.  (G) So, f prime of 1 is 6.. (H) We now have all components for the tangent line equation. (I) Substituting into the tangent line equation yields y equals 6 times x minus 1 plus 3 (J) Simplified: y equals 6 x minus 3.\n\n(E) Show the point <m>(a,f(a))=(1,3)</m> when the narrator states (F) Animate the derivative is 6x. <m>f\u2019(x)=6x</m>.\n(G) Animate the steps for f\u2019(1)=6 by replacing the x with 1 and simplifying. <m>f\u2019(1)=6</m>.\n(H) Animate the pieces- (1,3), f\u2019(1) = 6. \n(I) Animate the equation of the tangent line. <m>y=6(x \u2013 1)+3</m>.\n(J) Animate the simplification. <m>y=6x \u2013 3</m>.\n\n\n\nFollow-up questions (typically 3-7)\nQ1: Which of the following statements best explains why the derivative of a function at a given point is necessary to find the equation of the tangent line at that point?  \n\n* The derivative represents the function's rate of change and is equal to the slope of the tangent line. \nE*: The equation of the tangent line is <m> y = f\u2019(a) (x-a) + f(a) </m>.  The value <m>f\u2019(a)</m> is the derivative of <m> f </m> at <m> a </m> and gives the slope of the tangent line. \n\n* The derivative gives the function's maximum value, which is essential for determining the tangent line\u2019s equation. \nE: The derivative shows a function\u2019s rate of change at a point. \n\n* The derivative provides the function's minimum value, which is needed to identify the tangency point. \nE: The derivative reveals how a function changes, not just where its extrema occur.\n\n* The derivative determines the function's intercepts which help to plot the tangent line. \nE: While intercepts are important for graphing, the derivative indicates how a function behaves at each point. \nQ2: In the tangent line equation <m>y=f\u2019(a)(x \u2013 a)+f(a)</m>, what does <m>f\u2019(a)</m> represent?\n\n* <m>f\u2019(a)</m> represents the slope of the tangent line. E*: <m>f\u2019(a)</m> is the derivative evaluated at <m>x=a</m>, which gives the tangent line's slope by definition.\n* <m>f\u2019(a)</m> represents the <m>y</m>-intercept of the tangent line E: Consider what the derivative represents in the context of tangent lines. \n* <m>f\u2019(a)</m> represents the <m>x</m>-intercept of the tangent line. E: How does the derivative at a point relate to the tangent line? \n* <m>f\u2019(a)</m> represents the <m>y</m>-coordinate of the point of tangency. E: Consider how the derivative at this point determines a key characteristic of the tangent line. \nQ3: Which of the following statements about the tangent line to a function <m> f </m> at <m> x = 3 </m> is true?\n\nChoice*: The slope of the tangent line is <m> f\u2019(3) </m>.\nExplanation: The slope of the tangent line is exactly the instantaneous rate of change of <m>f</m>, which is the derivative of <m> f </m> evaluated at <m> x = 3 </m>.\n\nChoice: The slope of the tangent line is <m> f(3) </m>.\nExplanation: The slope of the tangent line is directly related to the derivative of the function, not the function itself.\n\nChoice: The tangent line will go through the point <m>(3,f\u2019(3))</m>.\nExplanation: The tangent line goes through <m> (3,f(3)) </m>, which is different than <m> (3,f\u2019(3)) </m>.\n\nChoice: The equation of the tangent line at <m> x = 3 </m> is given by <m> y = f(3)(x \u20133) + f\u2019(3) </m>.\nExplanation: This answer choice has the role of <m> f(3) </m> and <m> f\u2019(3) </m> swapped.\nQ4: Given the function <m>f(x)=x^3 \u20135x+10</m>, what is the tangent line\u2019s equation at the point <m>(1,6)</m>?\n\nHint 1: The equation of a tangent line to a curve <m>y=f(x)</m> at a point <m>(a,f(a))</m> is given by: <m>y=f\u2019(a)(x \u2013 a)+f(a)</m>. \n\nHint 2: Calculate <m>f\u2019(1)</m> to determine the tangent line\u2019s slope at <m>x=1</m>. \n\nAnswer: <m>y = -2x + 8</m> \nExplanation: The slope of the tangent line, <m> f\u2019(1) </m> can be computed as follows:\n\n<me> \n\\begin{align*} \nf(x) &= x^3 - 5x + 10  &&\\\\ \nf'(x) &= 3x^2 - 5 && \\text{Differentiate} \\\\ \nf'(1) &= 3(1)^2 - 5 && \\text{Substitute <m> x = 1 </m>} \\\\ \n&= -2 && \\text{Simplify} \\\\ \n\\end{align*} \n</me> \n\nSince <m>f(1) = 6</m>, the equation of the tangent line is given by <m> y = f\u2019(1)(x-1) + f(1) = -2(x-1) + 6 = -2x + 8</m>.\n\nQ5: Given the function <m>f(x) = 2x^3 - x^2 + 6x - 1</m>, find the equation of the tangent line at <m> x = -1 </m>.\n\nHint 1: Calculate <m>f\u2019(-1)</m> to determine the tangent line\u2019s slope at <m>x=-1</m>.\n\nHint 2: The function value <m> f(-1) </m> will also be needed in the computation.  Find this by substituting <m> x = -1 </m> into <m>f(x) = 2x^3 - x^2 + 6x - 1</m>.\n\nExplanation: <m> y = 14(x+1) - 10</m>\n\nThe slope of the tangent line, <m> f\u2019(1) </m> can be computed as follows:\n\n<me> \n\\begin{align*} \nf(x) &= 2x^3 - x^2 + 6x - 1  &&\\\\ \nf'(x) &= 6x^2 - 2x + 6 && \\text{Differentiate} \\\\ \nf'(1) &= 6(-1)^2 - 2(-1) + 6 && \\text{Substitute <m> x = -1 </m>} \\\\ \n&= 14 && \\text{Simplify} \\\\ \n\\end{align*} \n</me> \n\nNext, we compute the function value <m>f(-1) = 2(-1)^3 - (-1)^2 + 6(-1) - 1 = -10 </m>.  Thus, the equation of the tangent line is <m> y = f\u2019(-1)(x - (-1)) + f(-1) = 14(x+1) - 10 = 14x + 4 </m>\n\n\nFollow-up questions (typically 3-7)\nQ6: Find the equation of the line that goes through the point <m> (2,1) </m> and is parallel to the tangent line of <m> f(x) = 2x^2 + 3x \u2013 4 </m> at <m> x = \u2013\\frac{3}{2} </m>.\nHint 1: Parallel lines have the same slope.\nHint 2: The slope of the desired line and the tangent line are the same.  So, the slope of both lines will be <m> f\u2019\\left(\u2013\\frac{3}{2}\\right) </m>.\nExplanation: The equation of the line is <m> y = \u20133(x \u2013 2) + 1 </m>. Computing the derivative of <m> f </m> yields <m> f\u2019(x) = 4x + 3 </m>.  So, <m> f\u2019\\left(\u2013\\frac{3}{2}\\right) = 4 \\left(\u2013\\frac{3}{2}\\right) + 3 = \u20136 + 3 = \u20133.<m>. Thus, the slope of the tangent line is <m> \u20133 </m>.  The desired line is parallel to the tangent line and therefore has the same slope.  Since the desired line goes through <m>(2,1)</m>, its equation is given by <m> y = \u20133(x-2) + 1 </m>.\n\nQ7: What is the <m>y</m>-intercept of the tangent line of <m> f(x) = 3x^2 \u2013 3x+1 </m> at <m> x = 2 </m>? Write the answer as a coordinate point.\n\nHint 1: First, find the equation of the tangent line.  The <m>y</m>-coordinate can be found by substituting <m>x = 0 </m> into the equation of the tangent line.\n\nHint 2: The derivative of <m> f </m> is <m> f\u2019(x) = 6x \u2013 3 </m>.  The equation of the tangent line is <m> y = f\u2019(2)(x \u2013 2)+f(2) </m>.  After this is computed, substituting in <m> x = 0 </m> will yield the <m> y</m>-coordinate of the <m>y</m>-intercept.\n\nExplanation: The <m>y</m>-intercept is <m>(0, \u20139)</m>. The equation of the tangent line can be found as follows:\n<me>\n\\begin{align*}\nf(x) &= 3x^2 \u2013 3x + 1 \\\\\nf(2) &= 3(2)^2 \u2013 3(2) + 1 && \\text{Substitute <m> x = 2 </m>}\\\\\n&= 7 && \\text{Simplify} \\\\\nf'(x) &= 6x \u2013 3 && \\text{Compute derivative} \\\\\nf'(2) &= 6(2) \u2013 3 && \\text{Substitute <m> x = 2 </m>} \\\\\n&= 9 && \\text{Simplify}\\\\\ny &= f\u2019(2)(x \u2013 2) + f(2) && \\text{Equation of tangent line at m> x = 2 </m>} \\\\\n&= 9(x \u2013 2) + 7 && \\text{Substitute <m> f\u2019(2) </m> and <m>f(2) </m>} \\\\\n&= 9x \u2013 9 && \\text{Simplify}\\\\\n\\end{align*}\n</me>\n\nAs the tangent line <m> y = 9x \u2013 9 </m> is written in slope-intercept form, the <m>y</m>-intercept occurs at <m> (0, \u20139) </m>.\n\n\n\nEnd of Lesson Summary\nThe equation of a tangent line to a graph at a point <m>(a,f(a))</m> is given by: <m>y=f\u2032(a)(x \u2013 a)+f(a)</m>.\n\nModule: Basic Rules of Finding Derivatives\nLesson 3.4.5: Higher Order Derivatives\n\nFraming text (just a few sentences. Should not exceed this box (min 14 pt font). \n<Text>\n<p>Higher-order derivatives come from taking successive derivatives. The second derivative<m>f\u2032\u2032(x)</m> or, in Leibniz notation <m>\\frac{d^2y}{dx^2}</m>, is the derivative of <m>f\u2019(x)</m>. The third derivative <m>f\u2032\u2032\u2032(x)</m> or <m>\\frac{d^3y}{dx^3}</m>, is the derivative of <m>f\u2019\u2019(x)</m>. This continues to the <m>n</m>-th derivative, written as <m>f^{(n)}(x)</m> or <m>\\frac{d^ny}{dx^n}</m>.</p>  \n \n<p>The real power of higher-order derivatives manifests in physics, particularly in motion analysis. Consider an object's movement:</p>\n<ul>  \n<li>The position function is given as <m>s(t)</m>. \n<li>The first derivative, <m>v(t)=s\u2032(t)</m>, is the velocity function. \n<li>The second derivative, <m>a(t)=s\u2032\u2032(t)</m>, is the acceleration function <m>a(t)=s\u2032\u2032(t)</m>. \n</ul> \n<p>Higher derivatives help us predict and understand motion.</p>\n</Text>\n\nAnimated figure spec\n1: (A) The derivative function, f prime of x, or in Leibniz notation d-y over d-x., represents the rate of change of the function of x. (B) The second derivative represents the derivative of the first derivative function. (C) The third derivative is the derivative of the second derivative. (D) This pattern continues for higher-order derivatives. Each new derivative is found by differentiating the previous one. (E) Let\u2018s find the second derivative of f if f of x equals 2 x cubed minus 2 x squared plus 1. (F) First find the first derivative. (G) Now, differentiate a second time: The second derivative of f is 12x minus 4.\n\n(A) Show the first derivative line animating each piece as its stated. <m>f\u2019(x)</m>, \\dfrac{dy}{dx}</m>\n(B) Show the second derivative line animating each piece as its stated. <m>f\u2019\u2019(x)</m> or <m> \\frac{d^2y}{dx^2}</m>\n(C) Show the third derivative line animating each piece as its stated. <m>f\u2019\u2019\u2019(x)</m> or <m> \\frac{d^3y}{dx^3}</m>\n(D) Show the nth derivative line animating each piece as its stated. <m>f^{(n)}(x)</m> or <m>\\frac{d^ny}{dx^n}</m>.\n\n(E) Have the example show up. <m>f\u2019\u2019(x)</m> if <m>f(x)=2x^3-2x^2+1</m>. \n(F) Animate finding <m>f\u2019(x)=6x^2-4x</m>\n(G) Animate finding f\u2019\u2019(x). <m>f\u2019\u2019(x)=12x-4</m>\n\nQ: Find <m>f\u2019\u2019(x)</m> of <m>f(x)=x^2+ax</m>.\nHint #1: Start by finding the first derivative. \nHint #2: Find the derivative of the first derivative to get the second derivative. \nCorrect Answer/Explanation: <m>f\u2019\u2019(x) = 2</m> \n<me> \n\\begin{align*} \nf'(x) & = 2x+a &&\\text{Find the first derivative.} \\\\ \nf'\u2019(x) &=2 &&\\{Find the second derivative.}  \n\\end{align*} \n</me> \n\nAnimated figure spec (cont)\n2: (H) Now let\u2019s look at a real-world scenario that involves derivatives. A ball is thrown from the ground. The height, h, of the ball in feet at time t seconds can be modeled by the equation h of t equals negative 16 t squared plus 64 t. Find its velocity and acceleration functions. (I) The velocity function is the derivative of the height function. So, v of t equals negative 32 t plus 64. (J) The acceleration function measures how quickly the velocity is changing and is the derivative of the velocity function, or the second derivative of the height function. (K) So, the acceleration is negative 32 feet per second squared. (L) The acceleration of a ball dropping under the force of gravity is constant, which is an important Physics fact.\n\n(H) Have the example problem come up on the screen. A ball is thrown from the ground. The height, <m>h</m>, of the ball in feet at time t seconds can be modeled by the equation <m>h(t)= \u201316t^2+64t</m>. Find its velocity and acceleration functions. \n(I) Animate the equation <m>v(t)=h\u2019(t)=-32t+64</m>\n(J) Animate the equation <m>a(t)=v\u2019(t)=h\u201d(t)</m>\n(K) Animate the equation <m>= - 32 </m>\n(L) Animate the arrow going down and the earth\u2019s gravitational pull showing up (if you want to be fancy you can add a spinning earth if it isn\u2019t too crowded) \n\n\nFollow-up questions (typically 3-7)\nQ1: What does <m> f^{(5)}(x) </m> represent?\n\n* The rate of change of the fourth derivative.\nE*: Each derivative gives the rate of change of the previous derivative.\n\n* The function <m> f </m> raised to the fifth power.\nE: <m> f^{(5)}(x)</m> means taking the derivative five times. \n\n* The rate of change of the fifth derivative.\nE: The rate of change of the fifth derivative would be the sixth derivative since it would be the derivative of the fifth derivative.\n\n* Composing the function <m> f </m> with itself five times.\nE: <m>f^{(5)}(x)</m> represents the 5th derivative of <m>f</m>, not composition of functions. \n\n\nQ2: Compute <m> \\dfrac{d^3y}{dx^3} </m> for <m> y = -2x^6 + x^5 - 2x^3 + 2x - 7 </m>\n\nHint 1: <m> \\dfrac{d^3y}{dx^3} </m> is the third derivative of <m> y = -2x^6 + x^5 - 2x^3 + 2x - 7 </m>.\n\nHint 2: The first derivative is <m> \\dfrac{dy}{dx} = -12x^5 + 5x^4 - 6x^2 + 2 </m>.  Take two more derivatives to find <m> \\dfrac{d^3y}{dx^3} </m>.\n\nExplanation: <m>\\dfrac{d^3y}{dx^3} &= -240x^3 + 120x^2 - 12x </m>. The third derivative <m>\\dfrac{d^3y}{dx^3} </m> can be computed by taking three consecutive derivatives.\n\n<me>\n\\begin{align*}\ny &= -2x^6 + 2x^5 - x^3 + 2x - 7 \\\\\n\\dfrac{dy}{dx} &= -12x^5 + 10x^4 - 3x^2 + 2 && \\text{First derivative} \\\\\n\\dfrac{d^2y}{dx^2} &= -60x^4 + 40x^3 - 6x^2 && \\text{Second derivative} \\\\\n\\dfrac{d^3y}{dx^3} &= -240x^3 + 120x^2 - 12x && \\text{Third derivative} \\\\\n\\end{align*}\n</me>\nQ3: If <m> f(x) </m> is a 10-th degree polynomial, what would be the degree of <m> f^{(4)}(x)</m>?\n\nChoice*: <m> f^{(4)}(x)</m> would be a sixth-degree polynomial.\nExplanation: Because <m> \\dfrac{d}{dx} x^n = nx^{n-1} </m>, every derivative will decrease the exponent by <m> 1 </m>.  So, applying the derivative four times to a tenth-degree polynomial will decrease the degree by <m>4</m> to <m>6</m>.\n\nChoice: <m> f^{(4)}(x)</m> would be a fifth-degree polynomial.\nExplanation: Each time a derivative of a polynomial is taken, the degree goes down by <m> 1 </m>.  What happens to a degree <m> 10 </m> polynomial if <m> 4 </m> derivatives are taken?\n\nChoice: <m> f^{(4)}(x)</m> would be a fourth-degree polynomial.\nExplanation: The degree of the polynomial is not the number of times the derivative is taken.  Rather, each time a derivative is taken, the degree will decrease by <m> 1 </m>.\n\nChoice: <m> f^{(4)}(x)</m> would be a seventh-degree polynomial.\nExplanation: Let <m> f(x) = x^{10} </m> and take <m> 4 </m> derivatives. What is the degree of the fourth-derivative of <m> f </m>?\nQ4: The first derivative of <m> f </m> is <m> f\u2019(x) = x^3 \u2013 3x^2 + 2x \u2013 1 </m>. What is <m> f\u2019\u2019\u2019(x) </m>?\n\nHint 1: Because <m> f\u2019(x) = x^3 \u2013 3x^2 + 2x \u2013 1 </m> is the first derivative, only two more derivatives are needed to find the third derivative <m> f\u2019\u2019\u2019(x) </m>.\n\nHint 2: Because the first derivative is <m> f\u2019(x) = x^3 \u2013 3x^2 + 2x \u2013 1 </m>, the second derivative is <m> f\u2019\u2019(x) = 3x^2 \u2013 6x + 2 </m>. What is the third derivative? \n\nExplanation: <m> f'\u2019\u2019(x) = 6x \u2013 6 </m>. Because the first derivative is <m> f\u2019(x) = x^3 \u2013 3x^2 + 2x \u2013 1 </m>, two more derivatives are needed to find <m> f\u2019\u2019\u2019(x) </m>.\n<me>\n\\begin{align*}\nf\u2019(x) &= x^3 \u2013 3x^2 + 2x \u2013 1 && \\text{Given first derivative} \\\\\nf'\u2019(x) &= 3x^2 \u2013 6x + 2 && \\text{Second derivative} \\\\\nf'\u2019\u2019(x) &= 6x \u2013 6 && \\text{Third derivative}\\\\\n\\end{align*}\n</me>\nQ5: Let <m> s(t) </m> represent the position of a car, in miles, along a road as a function of time, in hours.  The car is said to have constant acceleration if the second derivative <m> s\u2019\u2019(t) </m> of the position function is a constant function.  Which of the following position functions has constant acceleration?\n\nChoice*: <m> s(t) = 30t \u2013 t^2 </m>\nExplanation: Taking derivatives yields the following\n\n<me>\n\\begin{align*}\ns\u2019(t) &= 20 \u2013 2t && \\text{Velocity, first derivative}\\\\\ns\u2019\u2019(t) &= \u2013 2 && \\text{Acceleration, second derivative}]]\n\\end{align*}\n<\\me>\nNote that <m> s\u2019\u2019(t) </m> is a constant function.   \n\nChoice: <m> s(t) = 30t^2 \u2013 t^3 </m>\nExplanation: Taking derivatives yields the following\n<me>\n\\begin{align*}\ns\u2019(t) &= 60t \u2013 3t^2 && \\text{Velocity, first derivative}\\\\\ns\u2019\u2019(t) &= 60t \u2013 3t^2\u2013 2 && \\text{Acceleration, second derivative}]]\n\\end{align*}\n<\\me>\nNote that <m> s\u2019\u2019(t) </m> is not a constant function.\n\nChoice: <m> s(t) = 30 \u2013 t^3 </m>\nExplanation: \nTaking derivatives yields the following\n<me>\n\\begin{align*}\ns\u2019(t) &= \u2013 3t^2 && \\text{Velocity, first derivative}\\\\\ns\u2019\u2019(t) &= \u2013 6t  && \\text{Acceleration, second derivative}]]\n\\end{align*}\n<\\me>\nNote that <m> s\u2019\u2019(t) </m> is not a constant function.\n\nChoice: <m> s(t) = 30t^3 \u2013 t^2 </m>\nExplanation: \nTaking derivatives yields the following\n<me>\n\\begin{align*}\ns\u2019(t) &= 90t^2  \u2013 2t && \\text{Velocity, first derivative}\\\\\ns\u2019\u2019(t) &= 180t - 2 && \\text{Acceleration, second derivative}]]\n\\end{align*}\n<\\me>\nNote that <m> s\u2019\u2019(t) </m> is not a constant function.\n\nFollow-up questions (typically 3-7)`\nQ6: If a polynomial function <m> f(x) </m> has as its third derivative <m>f\u2019\u2019\u2019(x) = 0 </m> for all <m>x</m>, what must be true about <m>f(x)</m>?\n\nChoice*: <m> f </m> is a polynomial function of degree 2 or less.\nExplanation: Taking three derivatives of any polynomial of the form <m> f(x) = ax^2 + bx + c </m> yields the following:\n<me>\n\\begin{align*}\nf'(x) &= 2ax + b \\\\\nf'\u2019(x) &= 2a \\\\\nf'\u2019\u2019(x) &= 0 \\\\\n\\end{align*}\n</me>\nSo any polynomial of degree 2 or less will have <m>f\u2019\u2019\u2019(x) = 0</m>.\n\nChoice: <m> f </m> is a polynomial function of degree 3 or less.\nExplanation: The degree 3 polynomial <m> f(x) = x^3 </m> has the following derivatives:\n<me>\n\\begin{align*}\nf'(x) &= 3x^2 \\\\\nf'\u2019(x) &= 6x \\\\\nf'\u2019\u2019(x) &= 6 \\\\\n\\end{align*}\n</me>\nSince <m> f\u2019\u2019\u2019(x) </m> is not a zero function, then it is not true that all polynomial functions of degree 3 or less have <m> f\u2019\u2019\u2019(x) = 0 </m>.\n\n\nChoice: <m> f </m> is a linear function.\nExplanation: While all linear functions have third derivatives equal to zero (in fact, second derivatives equal to <m> 0 </m> as well), so do quadratic functions.  For example, if <m> f(x) = x^2 </m>, then\n<me>\n\\begin{align*}\nf'(x) &= 2x \\\\\nf'\u2019(x) &= 2 \\\\\nf'\u2019\u2019(x) &= 0 \\\\\n\\end{align*}\n</me>.\nSo, it is not necessarily true that <m> f </m> must be a linear function.\n\nChoice: <m> f </m> is a constant function.\nExplanation: While all constant functions have third derivatives equal to zero (in fact, first and second derivatives equal to <m> 0 </m>), so do quadratic functions.  For example, if <m> f(x) = x^2 </m>, then\n<me>\n\\begin{align*}\nf'(x) &= 2x \\\\\nf'\u2019(x) &= 2 \\\\\nf'\u2019\u2019(x) &= 0 \\\\\n\\end{align*}\n</me>.\nSo, it is not necessarily true that <m> f </m> must be a constant function.\nQ7: Which of the following functions has <m> f\u2019\u2019(x) = 12x</m> as its second derivative?\n\nChoice*: <m> f(x) = 2x^3 + 5x \u2013 1 </m>\nExplanation: Taking two derivatives yields \n<me>\n\\begin{align*}\nf'(x) &= 6x^2 + 5 \\\\\nf'\u2019(x) &= 12x \\\\\n\\end{align*}\n</me>\n\nChoice: <m> f(x) = 2x^3 + 5x^2 \u2013 1 </m>\nExplanation: Taking two derivatives yields\n<me>\n\\begin{align*}\nf'(x) &= 6x^2 + 10x \\\\\nf'\u2019(x) &= 12 x + 10\\\\\n\\end{align*}\n</me>\nThis does not produce the desired second derivative of <m> f\u2019\u2019(x) = 12x</m>.\n\nChoice: <m> f(x) = 6x^2 + 5x \u2013 1 </m>\nExplanation: Taking two derivatives yields\n<me>\n\\begin{align*}\nf'(x) &= 12x + 5 \\\\\nf'\u2019(x) &= 12\\\\\n\\end{align*}\n</me>\nThis does not produce the desired second derivative of <m> f\u2019\u2019(x) = 12x</m>.\n\n\nChoice: <m> f(x) = 6x^2 + 5 </m>\nExplanation: Taking two derivatives yields\n<me>\n\\begin{align*}\nf'(x) &= 12x \\\\\nf'\u2019(x) &= 12\\\\\n\\end{align*}\n</me>\nThis does not produce the desired second derivative of <m> f\u2019\u2019(x) = 12x</m>.\n\nEnd of Lesson Summary\nHigher-order derivatives involve repeated differentiation, with each derivative building upon the previous one (2nd derivative is the derivative of the 1st, 3rd derivative is the derivative of the 2nd, etc.) \nTwo notation systems exist for higher derivatives: \nStandard notation: <m>f''(x)</m>, <m>f'''(x)</m>, <m>f^{(n)}(x)</m> \nLeibniz notation: <m>\\frac{d^2y}{dx^2}</m>, <m>\\frac{d^3y}{dx^3}</m>, <m>\\frac{d^ny}{dx^n}</m> \nIn physics, higher derivatives of position describe motion: \nPosition <m>s(t)</m> \u2192 Velocity <m>s'(t)</m> \u2192 Acceleration <m>s''(t)</m>.\n"
+  },
+  "pass1": {
+    "authoring_agents": 15,
+    "style_agents": 15,
+    "total_agents": 30,
+    "total_findings": 150,
+    "authoring_findings": 135,
+    "style_findings": 15
+  },
+  "consensus": {
+    "total_issues": 17,
+    "noise_reduction_pct": 88.67,
+    "issues": [
+      {
+        "issue": "Missing clear learning objectives at module start",
+        "severity": 5,
+        "confidence": 0.32,
+        "location": "Module introduction",
+        "suggestions": [
+          "Add explicit learning objectives: 'After this module, you will be able to...'"
+        ],
+        "issue_type": "missing_objectives",
+        "agreeing_reviewers": 9,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+        "severity": 4,
+        "confidence": 0.32,
+        "location": "Limit introduction",
+        "suggestions": [
+          "Show example where limit exists but function undefined (removable discontinuity)"
+        ],
+        "issue_type": "misconception_not_addressed",
+        "agreeing_reviewers": 9,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+        "severity": 3,
+        "confidence": 0.32,
+        "location": "U-substitution section",
+        "suggestions": [
+          "Explain u-substitution as 'undoing the chain rule' before showing procedure"
+        ],
+        "issue_type": "procedural_only",
+        "agreeing_reviewers": 9,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Content mentions 'plot' but no image embedded",
+        "severity": 3,
+        "confidence": 0.29,
+        "location": "Near 'plot'",
+        "suggestions": [
+          "Add actual plot or remove the reference"
+        ],
+        "issue_type": "missing_visual",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Content mentions 'figure' but no image embedded",
+        "severity": 3,
+        "confidence": 0.29,
+        "location": "Near 'figure'",
+        "suggestions": [
+          "Add actual figure or remove the reference"
+        ],
+        "issue_type": "missing_visual",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Content mentions 'curve' but no image embedded",
+        "severity": 3,
+        "confidence": 0.29,
+        "location": "Near 'curve'",
+        "suggestions": [
+          "Add actual curve or remove the reference"
+        ],
+        "issue_type": "missing_visual",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Module lacks proper title header",
+        "severity": 3,
+        "confidence": 0.25,
+        "location": "Beginning of module",
+        "suggestions": [
+          "Improve the structure to support diverse learners.",
+          "Review the structure and ensure it meets calculus pedagogy standards for non-traditional learners.",
+          "Consider refining the structure for consistency."
+        ],
+        "issue_type": "structure",
+        "agreeing_reviewers": 7,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Content mentions 'graph' but no image embedded",
+        "severity": 3,
+        "confidence": 0.21,
+        "location": "Near 'graph'",
+        "suggestions": [
+          "Add actual graph or remove the reference"
+        ],
+        "issue_type": "missing_visual",
+        "agreeing_reviewers": 6,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Abstract context 'function f' where concrete example would aid understanding",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Near 'function f'",
+        "suggestions": [
+          "Use specific function (parabola, exponential) or real scenario (temperature, speed)"
+        ],
+        "issue_type": "abstract_context",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Paragraph 13",
+        "suggestions": [
+          "Break into smaller paragraphs, each focusing on one idea"
+        ],
+        "issue_type": "structure",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Paragraph 54",
+        "suggestions": [
+          "Break into smaller paragraphs, each focusing on one idea"
+        ],
+        "issue_type": "structure",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Vague language: 'different' - be more specific",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Search for 'different'",
+        "suggestions": [
+          "Replace 'different' with specific quantities or examples"
+        ],
+        "issue_type": "clarity",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Vague language: 'several' - be more specific",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Search for 'several'",
+        "suggestions": [
+          "Replace 'several' with specific quantities or examples"
+        ],
+        "issue_type": "clarity",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Vague language: 'some' - be more specific",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Search for 'some'",
+        "suggestions": [
+          "Replace 'some' with specific quantities or examples"
+        ],
+        "issue_type": "clarity",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Vague language: 'few' - be more specific",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Search for 'few'",
+        "suggestions": [
+          "Replace 'few' with specific quantities or examples"
+        ],
+        "issue_type": "clarity",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Some sentences are very long - consider breaking them up for readability",
+        "severity": 2,
+        "confidence": 0.29,
+        "location": "Throughout module",
+        "suggestions": [
+          "Break complex sentences into simpler, shorter sentences"
+        ],
+        "issue_type": "style_grammar",
+        "agreeing_reviewers": 8,
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Inconsistent paragraph spacing detected",
+        "severity": 1,
+        "confidence": 0.54,
+        "location": "Throughout module",
+        "suggestions": [
+          "Standardize to double newlines between paragraphs"
+        ],
+        "issue_type": "style_consistency",
+        "agreeing_reviewers": 15,
+        "should_provide_solution": false
+      }
+    ]
+  },
+  "individual_findings": [
+    {
+      "finding_id": 1,
+      "reviewer_id": "specialist_0",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 2,
+      "reviewer_id": "specialist_0",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 3,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 3,
+      "reviewer_id": "specialist_0",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 4,
+      "reviewer_id": "specialist_0",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 1,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 5,
+      "reviewer_id": "specialist_1",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 4,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 6,
+      "reviewer_id": "specialist_1",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 7,
+      "reviewer_id": "specialist_1",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 1,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 8,
+      "reviewer_id": "specialist_1",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 3,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 9,
+      "reviewer_id": "specialist_1",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 10,
+      "reviewer_id": "specialist_1",
+      "issue": "Module lacks proper title header",
+      "severity": 2,
+      "location": "Beginning of module",
+      "suggestion": "Consider refining the structure for consistency.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 11,
+      "reviewer_id": "specialist_1",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 2,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 12,
+      "reviewer_id": "specialist_2",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 3,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 13,
+      "reviewer_id": "specialist_2",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 2,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 14,
+      "reviewer_id": "specialist_2",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 2,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 15,
+      "reviewer_id": "specialist_2",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 2,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 16,
+      "reviewer_id": "specialist_2",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 17,
+      "reviewer_id": "specialist_4",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 18,
+      "reviewer_id": "specialist_4",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 19,
+      "reviewer_id": "specialist_4",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 20,
+      "reviewer_id": "specialist_4",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 2,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 21,
+      "reviewer_id": "specialist_5",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 22,
+      "reviewer_id": "specialist_5",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 23,
+      "reviewer_id": "specialist_5",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 3,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 24,
+      "reviewer_id": "specialist_5",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 3,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 25,
+      "reviewer_id": "specialist_5",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 3,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 26,
+      "reviewer_id": "specialist_5",
+      "issue": "Module lacks proper title header",
+      "severity": 3,
+      "location": "Beginning of module",
+      "suggestion": "Improve the structure to support diverse learners.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 27,
+      "reviewer_id": "specialist_6",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 1,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 28,
+      "reviewer_id": "specialist_6",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 2,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 29,
+      "reviewer_id": "specialist_6",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 2,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 30,
+      "reviewer_id": "specialist_6",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 2,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 31,
+      "reviewer_id": "specialist_6",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 32,
+      "reviewer_id": "specialist_8",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 33,
+      "reviewer_id": "specialist_8",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 34,
+      "reviewer_id": "specialist_8",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 35,
+      "reviewer_id": "specialist_8",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 2,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 36,
+      "reviewer_id": "generalist_0",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 37,
+      "reviewer_id": "generalist_0",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 38,
+      "reviewer_id": "generalist_0",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 4,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 39,
+      "reviewer_id": "generalist_0",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 2,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 40,
+      "reviewer_id": "generalist_0",
+      "issue": "Module lacks proper title header",
+      "severity": 3,
+      "location": "Beginning of module",
+      "suggestion": "Improve the structure to support diverse learners.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 41,
+      "reviewer_id": "generalist_0",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 1,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 42,
+      "reviewer_id": "generalist_0",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 43,
+      "reviewer_id": "generalist_0",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 44,
+      "reviewer_id": "generalist_0",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 3,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 45,
+      "reviewer_id": "generalist_0",
+      "issue": "Content mentions 'graph' but no image embedded",
+      "severity": 3,
+      "location": "Near 'graph'",
+      "suggestion": "Add actual graph or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 46,
+      "reviewer_id": "generalist_0",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 2,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 47,
+      "reviewer_id": "generalist_0",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 3,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 48,
+      "reviewer_id": "generalist_0",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 2,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 49,
+      "reviewer_id": "generalist_0",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 2,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 50,
+      "reviewer_id": "generalist_0",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 3,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 51,
+      "reviewer_id": "generalist_0",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 2,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 52,
+      "reviewer_id": "generalist_0",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 53,
+      "reviewer_id": "generalist_1",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 54,
+      "reviewer_id": "generalist_1",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 55,
+      "reviewer_id": "generalist_1",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 3,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 56,
+      "reviewer_id": "generalist_1",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 3,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 57,
+      "reviewer_id": "generalist_1",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 3,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 58,
+      "reviewer_id": "generalist_1",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 4,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 59,
+      "reviewer_id": "generalist_1",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 2,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 60,
+      "reviewer_id": "generalist_1",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 61,
+      "reviewer_id": "generalist_1",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 62,
+      "reviewer_id": "generalist_1",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 2,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 63,
+      "reviewer_id": "generalist_1",
+      "issue": "Content mentions 'graph' but no image embedded",
+      "severity": 4,
+      "location": "Near 'graph'",
+      "suggestion": "Add actual graph or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 64,
+      "reviewer_id": "generalist_1",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 65,
+      "reviewer_id": "generalist_1",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 66,
+      "reviewer_id": "generalist_1",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 67,
+      "reviewer_id": "generalist_1",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 2,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 68,
+      "reviewer_id": "generalist_1",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 3,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 69,
+      "reviewer_id": "generalist_2",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 2,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 70,
+      "reviewer_id": "generalist_2",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 3,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 71,
+      "reviewer_id": "generalist_2",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 72,
+      "reviewer_id": "generalist_2",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 3,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 73,
+      "reviewer_id": "generalist_2",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 74,
+      "reviewer_id": "generalist_2",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 3,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 75,
+      "reviewer_id": "generalist_2",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 76,
+      "reviewer_id": "generalist_2",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 77,
+      "reviewer_id": "generalist_2",
+      "issue": "Content mentions 'graph' but no image embedded",
+      "severity": 3,
+      "location": "Near 'graph'",
+      "suggestion": "Add actual graph or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 78,
+      "reviewer_id": "generalist_2",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 79,
+      "reviewer_id": "generalist_2",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 80,
+      "reviewer_id": "generalist_2",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 1,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 81,
+      "reviewer_id": "generalist_2",
+      "issue": "Module lacks proper title header",
+      "severity": 3,
+      "location": "Beginning of module",
+      "suggestion": "Improve the structure to support diverse learners.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 82,
+      "reviewer_id": "generalist_2",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 4,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 83,
+      "reviewer_id": "generalist_2",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 84,
+      "reviewer_id": "generalist_2",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 1,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 85,
+      "reviewer_id": "generalist_3",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 86,
+      "reviewer_id": "generalist_3",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 87,
+      "reviewer_id": "generalist_3",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 88,
+      "reviewer_id": "generalist_3",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 2,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 89,
+      "reviewer_id": "generalist_3",
+      "issue": "Module lacks proper title header",
+      "severity": 2,
+      "location": "Beginning of module",
+      "suggestion": "Consider refining the structure for consistency.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 90,
+      "reviewer_id": "generalist_3",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 91,
+      "reviewer_id": "generalist_3",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 92,
+      "reviewer_id": "generalist_3",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 93,
+      "reviewer_id": "generalist_3",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 3,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 94,
+      "reviewer_id": "generalist_3",
+      "issue": "Content mentions 'graph' but no image embedded",
+      "severity": 4,
+      "location": "Near 'graph'",
+      "suggestion": "Add actual graph or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 95,
+      "reviewer_id": "generalist_3",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 3,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 96,
+      "reviewer_id": "generalist_3",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 2,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 97,
+      "reviewer_id": "generalist_3",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 2,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 98,
+      "reviewer_id": "generalist_3",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 2,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 99,
+      "reviewer_id": "generalist_3",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 2,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 100,
+      "reviewer_id": "generalist_3",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 2,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 101,
+      "reviewer_id": "generalist_3",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 102,
+      "reviewer_id": "generalist_4",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 103,
+      "reviewer_id": "generalist_4",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 104,
+      "reviewer_id": "generalist_4",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 105,
+      "reviewer_id": "generalist_4",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 2,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 106,
+      "reviewer_id": "generalist_4",
+      "issue": "Module lacks proper title header",
+      "severity": 4,
+      "location": "Beginning of module",
+      "suggestion": "Review the structure and ensure it meets calculus pedagogy standards for non-traditional learners.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 107,
+      "reviewer_id": "generalist_4",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 108,
+      "reviewer_id": "generalist_4",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 109,
+      "reviewer_id": "generalist_4",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 110,
+      "reviewer_id": "generalist_4",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 3,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 111,
+      "reviewer_id": "generalist_4",
+      "issue": "Content mentions 'graph' but no image embedded",
+      "severity": 3,
+      "location": "Near 'graph'",
+      "suggestion": "Add actual graph or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 112,
+      "reviewer_id": "generalist_4",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 3,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 113,
+      "reviewer_id": "generalist_4",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 3,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 114,
+      "reviewer_id": "generalist_4",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 2,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 115,
+      "reviewer_id": "generalist_4",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 2,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 116,
+      "reviewer_id": "generalist_4",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 2,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 117,
+      "reviewer_id": "generalist_4",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 2,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 118,
+      "reviewer_id": "generalist_4",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 119,
+      "reviewer_id": "generalist_5",
+      "issue": "Missing clear learning objectives at module start",
+      "severity": 5,
+      "location": "Module introduction",
+      "suggestion": "Add explicit learning objectives: 'After this module, you will be able to...'",
+      "issue_type": "missing_objectives"
+    },
+    {
+      "finding_id": 120,
+      "reviewer_id": "generalist_5",
+      "issue": "Limit concept lacks clarification that lim f(x) \u2260 f(a) at discontinuities",
+      "severity": 4,
+      "location": "Limit introduction",
+      "suggestion": "Show example where limit exists but function undefined (removable discontinuity)",
+      "issue_type": "misconception_not_addressed"
+    },
+    {
+      "finding_id": 121,
+      "reviewer_id": "generalist_5",
+      "issue": "U-substitution taught without connecting to chain rule (reverse process)",
+      "severity": 3,
+      "location": "U-substitution section",
+      "suggestion": "Explain u-substitution as 'undoing the chain rule' before showing procedure",
+      "issue_type": "procedural_only"
+    },
+    {
+      "finding_id": 122,
+      "reviewer_id": "generalist_5",
+      "issue": "Abstract context 'function f' where concrete example would aid understanding",
+      "severity": 3,
+      "location": "Near 'function f'",
+      "suggestion": "Use specific function (parabola, exponential) or real scenario (temperature, speed)",
+      "issue_type": "abstract_context"
+    },
+    {
+      "finding_id": 123,
+      "reviewer_id": "generalist_5",
+      "issue": "Module lacks proper title header",
+      "severity": 3,
+      "location": "Beginning of module",
+      "suggestion": "Improve the structure to support diverse learners.",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 124,
+      "reviewer_id": "generalist_5",
+      "issue": "Paragraph 13 is very long (946 chars) - may overwhelm students",
+      "severity": 3,
+      "location": "Paragraph 13",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 125,
+      "reviewer_id": "generalist_5",
+      "issue": "Paragraph 26 is very long (816 chars) - may overwhelm students",
+      "severity": 1,
+      "location": "Paragraph 26",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 126,
+      "reviewer_id": "generalist_5",
+      "issue": "Paragraph 54 is very long (831 chars) - may overwhelm students",
+      "severity": 2,
+      "location": "Paragraph 54",
+      "suggestion": "Break into smaller paragraphs, each focusing on one idea",
+      "issue_type": "structure"
+    },
+    {
+      "finding_id": 127,
+      "reviewer_id": "generalist_5",
+      "issue": "Content mentions 'figure' but no image embedded",
+      "severity": 3,
+      "location": "Near 'figure'",
+      "suggestion": "Add actual figure or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 128,
+      "reviewer_id": "generalist_5",
+      "issue": "Content mentions 'graph' but no image embedded",
+      "severity": 3,
+      "location": "Near 'graph'",
+      "suggestion": "Add actual graph or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 129,
+      "reviewer_id": "generalist_5",
+      "issue": "Content mentions 'plot' but no image embedded",
+      "severity": 3,
+      "location": "Near 'plot'",
+      "suggestion": "Add actual plot or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 130,
+      "reviewer_id": "generalist_5",
+      "issue": "Content mentions 'curve' but no image embedded",
+      "severity": 3,
+      "location": "Near 'curve'",
+      "suggestion": "Add actual curve or remove the reference",
+      "issue_type": "missing_visual"
+    },
+    {
+      "finding_id": 131,
+      "reviewer_id": "generalist_5",
+      "issue": "Vague language: 'different' - be more specific",
+      "severity": 2,
+      "location": "Search for 'different'",
+      "suggestion": "Replace 'different' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 132,
+      "reviewer_id": "generalist_5",
+      "issue": "Vague language: 'several' - be more specific",
+      "severity": 3,
+      "location": "Search for 'several'",
+      "suggestion": "Replace 'several' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 133,
+      "reviewer_id": "generalist_5",
+      "issue": "Vague language: 'some' - be more specific",
+      "severity": 2,
+      "location": "Search for 'some'",
+      "suggestion": "Replace 'some' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 134,
+      "reviewer_id": "generalist_5",
+      "issue": "Vague language: 'few' - be more specific",
+      "severity": 2,
+      "location": "Search for 'few'",
+      "suggestion": "Replace 'few' with specific quantities or examples",
+      "issue_type": "clarity"
+    },
+    {
+      "finding_id": 135,
+      "reviewer_id": "generalist_5",
+      "issue": "Some sentences are very long - consider breaking them up for readability",
+      "severity": 2,
+      "location": "Throughout module",
+      "suggestion": "Break complex sentences into simpler, shorter sentences",
+      "issue_type": "style_grammar"
+    },
+    {
+      "finding_id": 136,
+      "reviewer_id": "style_reviewer_0",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 137,
+      "reviewer_id": "style_reviewer_1",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 138,
+      "reviewer_id": "style_reviewer_2",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 139,
+      "reviewer_id": "style_reviewer_3",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 140,
+      "reviewer_id": "style_reviewer_4",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 141,
+      "reviewer_id": "style_reviewer_5",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 142,
+      "reviewer_id": "style_reviewer_6",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 143,
+      "reviewer_id": "style_reviewer_7",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 144,
+      "reviewer_id": "style_reviewer_8",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 145,
+      "reviewer_id": "style_reviewer_9",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 146,
+      "reviewer_id": "style_reviewer_10",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 147,
+      "reviewer_id": "style_reviewer_11",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 148,
+      "reviewer_id": "style_reviewer_12",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 149,
+      "reviewer_id": "style_reviewer_13",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    },
+    {
+      "finding_id": 150,
+      "reviewer_id": "style_reviewer_14",
+      "issue": "Inconsistent paragraph spacing detected",
+      "severity": 1,
+      "location": "Throughout module",
+      "suggestion": "Standardize to double newlines between paragraphs",
+      "issue_type": "style_consistency"
+    }
+  ]
+}

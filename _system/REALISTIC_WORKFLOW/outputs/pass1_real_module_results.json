@@ -1,0 +1,343 @@
+{
+  "timestamp": "2025-11-06T14:25:52.952077",
+  "module": {
+    "title": "Basic Rules of Finding Derivatives",
+    "word_count": 7933,
+    "line_count": 797,
+    "preview": "Module: Basic Rules of Finding Derivatives Lesson 3.4.1: The Constant Rule and Derivative Notation Framing text (just a few sentences. Should not exceed this box (min 14 pt font). <p>Calculating derivatives directly from the limit definition, <m>f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) \u2013 f(x)}{h}</m>, can be slow and complex for even simple functions. To make finding derivatives easier, mathematicians have developed rules that allow us to work more efficiently. In this lesson, we\u2019ll focus on the constant rule and learn about the different notations used for derivatives.</p> <p>There are several ways to write the derivative of a function, and it\u2019s important to recognize and use them. If <m>y = f(x)</m>, the derivative can be written as <m>f'(x)</m>, <m>y'</m>, <m>\\frac{dy}{dx}</m>, or <m>\\frac{d}{dx} f(x)</m>. Each notation is useful in different contexts, such as when working with implicit differentiation which we will learn about in a future module or when emphasizing the variable with respect to which you are differentiating.</p> <b>Constant Rule</b> <p>The constant rule states that the derivative of any constant function is zero. In other words, if <m>f(x) = c</m> where <m>c</m> is a constant, then <m>f'(x) = 0</m>. This can also be written as <m>\\frac{d}{dx} c = 0</m>. This rule..."
+  },
+  "pass1": {
+    "agents": [
+      {
+        "agent_id": "auth_rubric_1",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "structural_integrity",
+        "findings": 2
+      },
+      {
+        "agent_id": "auth_rubric_2",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "pedagogical_flow",
+        "findings": 1
+      },
+      {
+        "agent_id": "auth_rubric_3",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "conceptual_clarity",
+        "findings": 2
+      },
+      {
+        "agent_id": "auth_rubric_4",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "assessment_quality",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_rubric_5",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "student_engagement",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_rubric_6",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "structural_integrity",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_rubric_7",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "pedagogical_flow",
+        "findings": 2
+      },
+      {
+        "agent_id": "auth_rubric_8",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "conceptual_clarity",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_rubric_9",
+        "type": "rubric_focused",
+        "role": "authoring",
+        "competency": "assessment_quality",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_general_1",
+        "type": "generalist",
+        "role": "authoring",
+        "competency": "all",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_general_2",
+        "type": "generalist",
+        "role": "authoring",
+        "competency": "all",
+        "findings": 3
+      },
+      {
+        "agent_id": "auth_general_3",
+        "type": "generalist",
+        "role": "authoring",
+        "competency": "all",
+        "findings": 4
+      },
+      {
+        "agent_id": "auth_general_4",
+        "type": "generalist",
+        "role": "authoring",
+        "competency": "all",
+        "findings": 4
+      },
+      {
+        "agent_id": "auth_general_5",
+        "type": "generalist",
+        "role": "authoring",
+        "competency": "all",
+        "findings": 4
+      },
+      {
+        "agent_id": "auth_general_6",
+        "type": "generalist",
+        "role": "authoring",
+        "competency": "all",
+        "findings": 3
+      },
+      {
+        "agent_id": "style_rubric_1",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "mechanical_compliance",
+        "findings": 1
+      },
+      {
+        "agent_id": "style_rubric_2",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "mathematical_formatting",
+        "findings": 3
+      },
+      {
+        "agent_id": "style_rubric_3",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "punctuation_grammar",
+        "findings": 2
+      },
+      {
+        "agent_id": "style_rubric_4",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "accessibility",
+        "findings": 1
+      },
+      {
+        "agent_id": "style_rubric_5",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "consistency",
+        "findings": 2
+      },
+      {
+        "agent_id": "style_rubric_6",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "mechanical_compliance",
+        "findings": 2
+      },
+      {
+        "agent_id": "style_rubric_7",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "mathematical_formatting",
+        "findings": 2
+      },
+      {
+        "agent_id": "style_rubric_8",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "punctuation_grammar",
+        "findings": 3
+      },
+      {
+        "agent_id": "style_rubric_9",
+        "type": "rubric_focused",
+        "role": "style",
+        "competency": "accessibility",
+        "findings": 2
+      },
+      {
+        "agent_id": "style_general_1",
+        "type": "generalist",
+        "role": "style",
+        "competency": "all",
+        "findings": 3
+      },
+      {
+        "agent_id": "style_general_2",
+        "type": "generalist",
+        "role": "style",
+        "competency": "all",
+        "findings": 4
+      },
+      {
+        "agent_id": "style_general_3",
+        "type": "generalist",
+        "role": "style",
+        "competency": "all",
+        "findings": 4
+      },
+      {
+        "agent_id": "style_general_4",
+        "type": "generalist",
+        "role": "style",
+        "competency": "all",
+        "findings": 3
+      },
+      {
+        "agent_id": "style_general_5",
+        "type": "generalist",
+        "role": "style",
+        "competency": "all",
+        "findings": 3
+      },
+      {
+        "agent_id": "style_general_6",
+        "type": "generalist",
+        "role": "style",
+        "competency": "all",
+        "findings": 4
+      }
+    ],
+    "total_agents": 30,
+    "authoring_agents": 15,
+    "style_agents": 15,
+    "total_findings": 98
+  },
+  "consensus": {
+    "consensus_issues": [
+      {
+        "issue": "Missing clear learning objectives at module start",
+        "severity": 5,
+        "confidence": 0.95,
+        "confidence_level": "very_high",
+        "agreeing_reviewers": 30,
+        "total_reviewers": 30,
+        "location": "Module introduction",
+        "suggestions": [
+          "Add explicit learning objectives stating what students will know and be able to do"
+        ],
+        "issue_type": "structural_integrity",
+        "should_provide_solution": true
+      },
+      {
+        "issue": "Mismatched mathematical notation tags",
+        "severity": 4,
+        "confidence": 0.5499999999999999,
+        "confidence_level": "low",
+        "agreeing_reviewers": 11,
+        "total_reviewers": 30,
+        "location": "Mathematical expressions",
+        "suggestions": [],
+        "issue_type": "all",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Term 'derivative' used before formal definition",
+        "severity": 3,
+        "confidence": 0.7,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 14,
+        "total_reviewers": 30,
+        "location": "Line 1",
+        "suggestions": [],
+        "issue_type": "all",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Figures may lack alt text for accessibility",
+        "severity": 3,
+        "confidence": 0.65,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 13,
+        "total_reviewers": 30,
+        "location": "Figure descriptions",
+        "suggestions": [],
+        "issue_type": "all",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Animation specifications need clarity review (12 animations)",
+        "severity": 2,
+        "confidence": 0.6000000000000001,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 12,
+        "total_reviewers": 30,
+        "location": "Animation sections",
+        "suggestions": [],
+        "issue_type": "all",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Consider adding more real-world applications",
+        "severity": 2,
+        "confidence": 0.30000000000000004,
+        "confidence_level": "low",
+        "agreeing_reviewers": 6,
+        "total_reviewers": 30,
+        "location": "Examples section",
+        "suggestions": [],
+        "issue_type": "all",
+        "should_provide_solution": false
+      },
+      {
+        "issue": "Missing punctuation at end of sentence",
+        "severity": 1,
+        "confidence": 0.6000000000000001,
+        "confidence_level": "moderate",
+        "agreeing_reviewers": 12,
+        "total_reviewers": 30,
+        "location": "Line 1",
+        "suggestions": [],
+        "issue_type": "all",
+        "should_provide_solution": false
+      }
+    ],
+    "metrics": {
+      "total_findings": 98,
+      "consensus_count": 7,
+      "noise_reduction": 92.85714285714286,
+      "average_confidence": 0.6214285714285713
+    },
+    "severity_breakdown": {
+      "5": 1,
+      "4": 1,
+      "3": 2,
+      "2": 2,
+      "1": 1
+    }
+  },
+  "competency_breakdown": {
+    "Structural Integrity": 0,
+    "Pedagogical Flow": 1,
+    "Conceptual Clarity": 2,
+    "Assessment Quality": 0,
+    "Student Engagement": 1,
+    "Mechanical Compliance": 0,
+    "Mathematical Formatting": 1,
+    "Punctuation & Grammar": 1,
+    "Accessibility": 1,
+    "Consistency": 0
+  },
+  "execution_time": 0.4121818542480469
+}

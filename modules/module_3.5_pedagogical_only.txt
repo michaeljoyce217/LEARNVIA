@@ -1,0 +1,30 @@
+Product and quotient rules
+Product and quotient rules
+The product rule
+Some functions are written as a product of two functions, such as
+h(x) =
+              (x^2+1)(5x-3)
+. Multiplying the derivatives of each factor does not give the
+              correct derivative. The product rule gives a direct way to find the derivative without
+              first expanding the expression.
+In this lesson, we will practice using the product rule with polynomial functions,
+              but this technique also works for other types of functions. This rule will allow us to
+              find derivatives more efficiently and will prepare us for more complex problems later.
+Product rule
+If
+f
+and
+g
+are differentiable functions, then the derivative of the
+              product is
+\dfrac{d}{dx}[f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+Note that
+f'(x) \cdot g(x) \ + \
+              f(x) \cdot g'(x)
+can be written as
+f'g + fg'
+.
+In this lesson, we will use the product rule to compute derivatives
+            of products
+              of two functions.
+The product rule
