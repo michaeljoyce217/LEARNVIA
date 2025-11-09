@@ -27,7 +27,6 @@ The original, authoritative documents that define what Learnvia is and how conte
 **What's in it:**
 - `authoring_guide_full.txt` - Complete authoring guidelines
 - `style_guide_full.txt` - Complete style guidelines
-- `product_vision.txt` - Product vision and target audience
 - `README.md` - Explains these documents
 
 **When to use it:**

@@ -1,0 +1,14 @@
+Module 5.6 - The Fundamental Theorem of Calculus Beta Review,,,,,,,,Adjustment Actions (not for reviewers),,,
+Lesson,Section,"Question #
+(If Applicable)","Location
+
+Part, caption, location in question","Issue
+
+Refer to specific text where possible.","Recommended Edit
+
+Add actionable guidance where possible",Author Response,,OS: Category,OS: Assignee,Status,Assignee Notes and Resolution Confirmation
+5.6.2,Framing Text,,,"In the code at line 209, there seems to be a ""<TheoremResource>"" but it is not rendering in the text.",,,,,,,
+5.6.4,Framing Text,,,"In the code at line 903, there seems to be a ""<TheoremResource>"" but it is not rendering in the text.",,,,,,,
+5.6.5,Framing Text,,,"In the code at line 1194, there seems to be an ""<image source>"" but it is not rendering in the text.",,,,,,,
+5.6.5,Follow-Up Question,,"P1_Q3, choices (a), (b), and (c)","The problem refers to the graph of y = 1/x, but the graph of y = -1/x is shown.",Create a new graph.,,,Content Change,Author,Resolved,Changed graph. 
+5.6.6,Homework Problem,,P5_Q2,"Q1 asks to verify a function is even. Q2 should probably use this fact.  It only asks for a definite integral on [0,a] which does not rely on even/odd.","Rewrite Q2 to evaluate the integral on the symmetric interval [-a,a].",,,Content Change,Author,Resolved,Added a question.

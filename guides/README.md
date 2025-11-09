@@ -6,7 +6,6 @@ This folder contains the **authoritative source documents** that define Learnvia
 
 - `authoring_guide_full.txt` - Complete authoring guidelines
 - `style_guide_full.txt` - Complete style guidelines
-- `product_vision.txt` - Product vision and target audience
 
 ## Key Principle
 

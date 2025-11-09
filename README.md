@@ -20,7 +20,6 @@ View a complete example of the system reviewing actual calculus content:
 Human-readable guides that define what makes good calculus content:
 - **authoring_guide_full.txt** - How to create effective calculus lessons
 - **style_guide_full.txt** - Writing standards for clarity and consistency
-- **product_vision.txt** - Our mission and approach to calculus education
 
 ### 📖 **[rubrics/](rubrics/)** - Review Standards (Human-Readable)
 Markdown files explaining how content is evaluated:
