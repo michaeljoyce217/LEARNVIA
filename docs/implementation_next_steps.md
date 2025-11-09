@@ -128,38 +128,48 @@ Since we don't have explicit false positives from these logs, we can:
 
 ---
 
-### 6. Run First Iteration Test
+### 6. Run AI Review on New, Unreviewed Module
 
-**Why Manual:** Need to review results and manually refine prompts
+**Why Manual:** Need actual feedback quality assessment from human expert
 
 **Prerequisites:**
 - Task 3 completed (test scripts working)
 - API key configured
+- At least 1 new, unreviewed module available
+
+**Important:** Modules 5.6 and 5.7 are **exemplars** used to ground the prompts (extract patterns, populate rubrics). They should NOT be used for iteration testing.
 
 **Steps:**
-1. Run: `./scripts/run_iteration_test.sh modules/module_5.6_exemplary.xml "modules/Chapter 5 Review Log - 5.6 Beta.csv"`
-2. Read comparison report: `docs/comparison_module_5.6_exemplary.md`
-3. Identify new false positive patterns
-4. Add to master prompt anti-pattern guards
-5. Re-run test
-6. Compare results (should see fewer false positives)
+1. Run AI review on a NEW module: `python scripts/test_sonnet_review.py --module modules/new_module.xml --output outputs/review_new.json`
+2. Human expert reviews AI feedback for quality:
+   - Are issues specific (line numbers, quotes, student impact, suggestions)?
+   - Are flagged issues legitimate?
+   - What real issues did AI miss?
+   - Any false positives?
+3. Identify false positive patterns
+4. Add patterns to master prompt anti-pattern guards
+5. Re-run AI review on same module
+6. Compare results (should see improvement)
 
-**Time Estimate:** 2-3 hours (including analysis and refinement)
+**Time Estimate:** 2-3 hours (including human expert review)
 
 ---
 
-### 7. Run Second Iteration with Module 5.7
+### 7. Validate with Additional New Modules
 
-**Why Manual:** Validation on second exemplar
+**Why Manual:** Confirm improvements generalize
 
 **Steps:**
-1. Run: `./scripts/run_iteration_test.sh modules/module_5.7_exemplary.xml "modules/Chapter 5 Review Log - 5.7 Beta.csv"`
-2. Compare results with module 5.6 iteration
-3. Look for common patterns across both
-4. Refine master prompt further
+1. Run AI review on 2-3 more NEW modules
+2. Human expert reviews each
+3. Track metrics:
+   - False positive rate
+   - Specificity compliance (4 components present)
+   - Coverage (what % of real issues caught)
+4. Refine prompts based on patterns
 5. Document improvement metrics
 
-**Time Estimate:** 1-2 hours
+**Time Estimate:** 2-4 hours
 
 ---
 
