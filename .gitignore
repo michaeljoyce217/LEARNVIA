@@ -65,3 +65,4 @@ feedback/metrics/*.json
 # Temporary files
 *.tmp
 *.temp
+outputs/*.json
