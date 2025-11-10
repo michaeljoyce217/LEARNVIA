@@ -2,7 +2,7 @@
 
 ## What This Is
 
-An intelligent review system that helps calculus content authors improve their work through educational AI feedback. The system reviews Calculus I-IV educational content using 30 AI agents focused on calculus pedagogy and teaching quality.
+A 30-agent AI review system that helps calculus content authors improve their work through educational feedback. The system reviews Calculus I-IV educational content using specialized AI agents focused on calculus pedagogy and writing quality.
 
 ### Core Philosophy
 
@@ -12,54 +12,62 @@ This system is designed to support non-traditional learners who struggle with tr
 
 ## Quick Navigation
 
-### 📊 **[demo/](demo/)** - See the System in Action
-View a complete example of the system reviewing actual calculus content:
-- **[MODULE34_TABBED_REPORT.html](demo/MODULE34_TABBED_REPORT.html)** - Open this in your browser to see the review system's output
+### 📊 **[test_review/](test_review/)** - Active Review System
+Complete simulation system for testing and running reviews:
+- **simulate_30_agent_review.py** - 30-agent review engine with consensus mechanism
+- **output/** - Generated HTML reports and JSON data
+- **QUICKSTART.md** - How to run reviews
+- **IMPLEMENTATION_SUMMARY.md** - Technical architecture details
 
 ### 📚 **[guides/](guides/)** - Educational Content Guidelines
 Human-readable guides that define what makes good calculus content:
-- **authoring_guide_full.txt** - How to create effective calculus lessons
-- **style_guide_full.txt** - Writing standards for clarity and consistency
-
-### 📖 **[rubrics/](rubrics/)** - Review Standards (Human-Readable)
-Markdown files explaining how content is evaluated:
-- Pedagogical Flow
-- Conceptual Clarity
-- Assessment Quality
-- Student Engagement
-- Accessibility and more...
+- **authoring_guide_full.txt** - How to create effective calculus lessons (35KB)
+- **style_guide_full.txt** - Writing standards for clarity and consistency (56KB)
 
 ### 🎓 **[modules/](modules/)** - Sample Calculus Content
-Example calculus modules that have been reviewed by the system.
+Example calculus modules including:
+- **5.6/** and **5.7/** - Exemplar modules demonstrating quality standards
+- Test modules used for system development
 
 ### ⚙️ **[config/](config/)** - System Configuration
-XML-formatted rubrics and prompts used by the AI review system:
-- `rubrics/` - Machine-readable rubric definitions
-- `prompts/` - Specialized reviewer instructions
-- `agent_configuration.xml` - AI agent setup
+Prompts and rubrics used by the AI review system:
+- `prompts/` - Master review context, authoring rules, style rules
+- `rubrics/` - XML-formatted rubric definitions (5 authoring + 5 style)
+- `agent_configuration.xml` - 30-agent setup specification
 
 ## How the Review System Works
 
-The system uses a **4-pass review process**:
+The system uses a **4-pass review architecture**:
 
-1. **Pass 1: Content Review** (30 agents)
-   - 15 authoring agents check pedagogy, clarity, and teaching quality
-   - 15 style agents check writing, formatting, and consistency
-   - Agents identify potential issues independently
+### Pass 1: Initial 30-Agent Content Review (CURRENT FOCUS)
 
-2. **Consensus Aggregation**
-   - Multiple agents finding the same issue = high confidence
-   - Single agent findings = flagged for human review
-   - Result: ~90% reduction in false positives
+- **15 authoring agents** check pedagogy, clarity, and teaching quality
+- **15 style agents** check writing, formatting, and consistency
+- Each agent independently identifies issues
+- **Consensus mechanism** aggregates findings:
+  - Issues flagged by 2+ agents = high-confidence consensus issues
+  - Single-agent findings = flagged for review (may include false positives)
+- **Priority ranking** = Severity × Consensus (0-5 scale)
 
-3. **Author Review**
-   - Author receives educational feedback explaining WHY something matters
-   - Author decides which issues to address
-   - Human stays in control
+**Human Review Checkpoint**: Author reviews flagged issues and makes fixes
 
-4. **Passes 2-4**
-   - Follow-up reviews ensure improvements are working
-   - Progressive refinement toward publication quality
+### Pass 2: Refinement Review
+
+- Same 30-agent review on revised content
+- Ensures initial fixes are working
+- Identifies any new issues introduced
+
+**Human Review Checkpoint**: Author addresses remaining issues
+
+### Passes 3-4: Copy Editor Focus
+
+- **Style guide only** - mimics professional copy editor
+- Focus on writing mechanics, formatting, and consistency
+- Final polish before publication
+
+**Human Review Checkpoint**: Final approval
+
+**Output**: Publication-ready calculus content
 
 ## Key Principles for Calculus Content
 
@@ -73,30 +81,44 @@ The system checks for critical calculus pedagogy best practices:
 
 ## Technical Implementation
 
-All technical code, scripts, and implementation details are in **[_system/](_system/)**.
+### Running Reviews
 
-This includes:
-- Python source code
-- Test suites
-- Implementation scripts
-- Technical documentation
-- Development history
+See **[test_review/QUICKSTART.md](test_review/QUICKSTART.md)** for how to run the review system.
+
+**Key file**: `test_review/simulate_30_agent_review.py` (957 lines)
+- Currently generates realistic simulated findings for testing
+- In production: Replace with actual Anthropic API calls
+- Outputs 8-tab HTML report + JSON data
+
+**Note on Performance**: The current simulation demonstrates the consensus mechanism and priority ranking system working effectively. Real Anthropic API calls (Claude Opus/Sonnet) would provide significantly more nuanced issue detection, deeper pedagogical analysis, and more contextual suggestions than the simulated findings.
+
+### Repository Structure
+
+- **test_review/** - Active simulation system
+- **config/** - Prompts and rubrics
+- **guides/** - Human-readable authoring and style guides
+- **modules/** - Sample calculus content
+- **docs/** - Architecture documentation and expert reviews
+- **scripts/** - Analysis and testing utilities
+- **archive/** - Historical implementation artifacts
 
 ---
 
 ## Success Metrics
 
-- **90% reduction** in false positive issues through consensus
+- **Consensus-based confidence** - 2+ agents = high-confidence issues
+- **Priority-driven workflow** - Severity × Consensus ranking
 - **Calculus-specific** pedagogical feedback (not generic or CS-focused)
 - **Educational approach** - every issue explains why it matters
 - **Author empowerment** - humans make final decisions
+- **Liberal flagging** - Better to flag and dismiss than to miss real issues
 
 ## Questions?
 
-1. **See it in action**: Open [demo/MODULE34_TABBED_REPORT.html](demo/MODULE34_TABBED_REPORT.html)
-2. **Understand the standards**: Read [guides/authoring_guide_full.txt](guides/authoring_guide_full.txt)
-3. **Review the rubrics**: Browse [rubrics/](rubrics/)
-4. **Technical details**: Explore [_system/](_system/)
+1. **See the latest output**: Open `test_review/output/test_module_review_report.html`
+2. **Run a review**: Follow [test_review/QUICKSTART.md](test_review/QUICKSTART.md)
+3. **Understand the standards**: Read [guides/authoring_guide_full.txt](guides/authoring_guide_full.txt)
+4. **Review the rubrics**: Browse [config/rubrics/](config/rubrics/)
 
 ---
 

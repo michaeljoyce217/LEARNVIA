@@ -1,0 +1,109 @@
+MODULE: Power Series Radius and Interval of Convergence
+========================================================
+
+MODULE METADATA:
+- Title: Todo
+- Description: Todo
+- KSAs: Todo
+- LearningOutcomes: Todo
+
+LESSON: Power Series Radius and Interval of Convergence
+Pacing: 20-25 minutes
+
+---
+
+FRAMING TEXT (Lines 10-15):
+
+Power series, written as ∑ aₙ(x - c)ⁿ from n=0 to infinity, are foundational tools in calculus, enabling us to represent complex functions in simpler terms. Each power series has a center c and a set of values for which the series converges. We call this the interval of convergence.
+
+Central to understanding power series is the radius of convergence, R. This represents the distance from the center c within which the series converges. Outside this radius, the series diverges. Mathematically, the radius of convergence can be found using the ratio test or the root test. For many series, we compute:
+
+R = lim |aₙ / aₙ₊₁| as n → ∞, when this limit exists.
+
+The interval of convergence is then (c - R, c + R), but we must test the endpoints separately. At x = c - R and x = c + R, the series may converge or diverge depending on the specific coefficients aₙ.
+
+---
+
+ANIMATED FIGURE 1 (Lines 17-21): Visualizing Radius of Convergence
+Specification: Show a number line centered at c with a shaded interval from c - R to c + R. Animate the expansion of this interval as R increases. Label the regions of convergence and divergence.
+
+---
+
+INSTRUCTIONAL TEXT (Lines 23-27):
+
+Consider the power series ∑ (xⁿ / n!) from n=0 to infinity. To find the radius of convergence, we apply the ratio test:
+
+lim |xⁿ⁺¹ / (n+1)! × n! / xⁿ| = lim |x / (n+1)| = 0 for all x.
+
+Since the limit is 0, which is less than 1, the series converges for all real x. Thus, R = ∞ and the interval of convergence is (-∞, ∞).
+
+---
+
+SHORT ANSWER QUESTION 1 (Lines 29-35):
+
+Q: What is the radius of convergence for the power series ∑ xⁿ from n=0 to infinity?
+
+Hint 1: Consider the geometric series and for what values of x it converges.
+Hint 2: The geometric series ∑ rⁿ converges when |r| < 1.
+
+Answer: R = 1
+
+Explanation: The series ∑ xⁿ is a geometric series with ratio x. It converges when |x| < 1, so the radius of convergence is R = 1.
+
+---
+
+INSTRUCTIONAL TEXT (Lines 37-46):
+
+Now let's examine a more complex example. Consider ∑ ((-1)ⁿ xⁿ / n) from n=1 to infinity, centered at 0. Using the ratio test:
+
+lim |((-1)ⁿ⁺¹ xⁿ⁺¹ / (n+1)) × (n / ((-1)ⁿ xⁿ))| = lim |x × n / (n+1)| = |x|.
+
+The series converges when |x| < 1, so R = 1. The interval is (-1, 1), but we must test the endpoints:
+
+• At x = 1: ∑ ((-1)ⁿ / n) converges by the alternating series test.
+• At x = -1: ∑ (-1 / n) diverges (harmonic series with alternating signs becomes the negative harmonic series).
+
+Therefore, the interval of convergence is (-1, 1].
+
+---
+
+MULTIPLE CHOICE QUESTION 1 (Lines 48-66):
+
+Q: For the power series ∑ (xⁿ / 2ⁿ) from n=0 to infinity, what is the interval of convergence?
+
+Choice A (Incorrect): (-1, 1)
+Explanation: Remember to account for the coefficient 1/2ⁿ when determining where |x/2| < 1.
+
+Choice B (CORRECT): (-2, 2)
+Explanation: The series can be rewritten as ∑ (x/2)ⁿ, which converges when |x/2| < 1, giving |x| < 2. Testing endpoints shows both diverge, so the interval is (-2, 2).
+
+Choice C (Incorrect): [-2, 2]
+Explanation: Check the endpoints carefully. At x = ±2, the series becomes ∑ (±1)ⁿ, which diverges.
+
+Choice D (Incorrect): All real numbers
+Explanation: This series does not converge for all x. Apply the ratio test to find where it converges.
+
+---
+
+ANIMATED FIGURE 2 (Lines 68-72): Endpoint Testing Visualization
+Specification: Display three number lines showing intervals: one with open endpoints, one with one closed endpoint, and one with both closed endpoints. Animate testing at endpoints with visual indication of convergence/divergence.
+
+---
+
+INSTRUCTIONAL TEXT (Lines 74-76):
+
+It's important to distinguish between the radius of convergence and the interval of convergence. The radius tells us the distance from the center, while the interval includes information about endpoint behavior. Two series with the same radius might have different intervals depending on endpoint convergence.
+
+---
+
+SHORT ANSWER QUESTION 2 (Lines 78-83):
+
+Q: A power series centered at x = 3 has radius of convergence R = 5. What is the guaranteed interval where the series converges, excluding endpoint considerations?
+
+Hint: The interval is (c - R, c + R) where c is the center.
+
+Answer: (-2, 8)
+
+Explanation: With center c = 3 and radius R = 5, the interval before testing endpoints is (3 - 5, 3 + 5) = (-2, 8). The endpoints would need to be tested separately to determine if they should be included.
+
+===== END OF MODULE =====
