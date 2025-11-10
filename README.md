@@ -10,6 +10,91 @@ A 30-agent AI review system that helps calculus content authors improve their wo
 
 This system is designed to support non-traditional learners who struggle with traditional math education, particularly students from underserved communities.
 
+## The Problem We're Solving
+
+### Current Manual Review Process
+
+Learnvia's calculus content currently goes through a manual review workflow:
+1. **Author creates content** - Often new authors unfamiliar with all guidelines
+2. **Human reviewer examines content** - Time-intensive, ~2-3 hours per module
+3. **Author revises** - Based on reviewer feedback
+4. **Second review** - Ensures fixes are working
+5. **Copy editor polish** - Final mechanical cleanup
+6. **Final approval** - Publication readiness
+
+### Key Challenges
+
+- **Reviewer bottleneck**: 2-3 hours per module, limited reviewer availability
+- **Copy editor bottleneck**: Additional 1-2 hours for mechanical issues
+- **Inconsistent feedback**: Different reviewers emphasize different issues
+- **Author frustration**: Waiting days/weeks for feedback on fixable issues
+- **Scaling limitations**: Can't add content faster than reviewers can review
+- **High cognitive load**: Reviewers must juggle 10 competencies simultaneously
+
+## Our Solution: AI-Augmented Review
+
+### Why This Architecture
+
+**4-Pass Structure**: Mirrors the natural revision cycle (rough draft → pedagogical refinement → mechanical polish)
+
+**30-Agent Consensus**: 
+- Simulates having 30 expert reviewers independently flag issues
+- Issues found by 2+ agents = high confidence (likely real problems)
+- Single-agent findings = flagged but may be false positives
+- Reduces false positives while maintaining liberal flagging
+
+**Author Self-Review First**:
+- Authors fix obvious issues independently before meeting reviewers
+- Reduces reviewer workload by 50-70% (estimate)
+- Authors learn faster through immediate feedback
+- Reviewers focus on complex pedagogical decisions, not mechanical fixes
+
+**Specialized + Generalist Agents**:
+- 60% specialists (deep expertise in one competency)
+- 40% generalists (holistic view, catch interactions)
+- Mimics having both subject experts and experienced editors
+
+### Goals & Benefits
+
+**Primary Goals**:
+1. **Reduce reviewer time** from 2-3 hours to 30-45 minutes per module
+2. **Reduce copy editor time** from 1-2 hours to 15-30 minutes per module
+3. **Accelerate author iteration** from days to hours
+4. **Scale content production** without proportionally scaling human reviewers
+5. **Maintain quality standards** through consensus mechanism
+
+**Secondary Benefits**:
+- Consistent feedback across all modules (same rubrics, every time)
+- New authors learn guidelines faster through immediate, detailed feedback
+- Reviewers focus on high-value pedagogical decisions, not mechanical issues
+- Reduced author frustration through faster feedback cycles
+- Better work-life balance for reviewers (less tedious mechanical checking)
+
+### Expected KPIs
+
+**Efficiency Metrics**:
+- **Reviewer time per module**: 2-3 hours → 30-45 minutes (75% reduction)
+- **Copy editor time per module**: 1-2 hours → 15-30 minutes (75% reduction)
+- **Author iteration cycle**: 3-7 days → same day (10x faster)
+- **Modules per week capacity**: 2-3 → 10-15 (3-5x increase)
+
+**Quality Metrics**:
+- **Issues caught before human review**: 50-70% of mechanical/obvious issues
+- **Consistency**: 100% of modules checked against all 10 competencies
+- **False positive rate**: <30% (acceptable with priority ranking)
+- **Missed critical issues**: <5% (consensus mechanism catches most)
+
+**Author Experience**:
+- **Time to first feedback**: 3-7 days → <1 hour
+- **Revision cycles to publication**: 3-4 → 2-3 (faster learning)
+- **Author satisfaction**: Reduced waiting, clearer feedback, faster iteration
+
+**Business Impact**:
+- **Content production rate**: 3-5x increase without hiring more reviewers
+- **Reviewer hiring needs**: Flat instead of linear with content growth
+- **Quality maintenance**: Consistent application of all guidelines
+- **Scalability**: System handles 10 modules or 100 modules at same cost
+
 ## Quick Navigation
 
 ### 📊 **Demo Output** - See the System in Action
