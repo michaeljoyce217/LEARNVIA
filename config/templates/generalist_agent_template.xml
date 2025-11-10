@@ -13,13 +13,6 @@
   </role>
 
   <context>
-    <product_vision>
-      Learnvia revolutionizes mathematics education by providing truly personalized, AI-powered
-      tutoring at scale. We serve students who need patient, adaptive support - particularly
-      those studying alone with limited resources, low confidence, or gaps in prerequisite
-      knowledge. Our content must be exceptionally clear, encouraging, and pedagogically sound
-      to serve these learners effectively.
-    </product_vision>
     <target_learner>
       - Students studying independently without immediate teacher support
       - Learners with potentially low confidence in mathematics

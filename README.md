@@ -12,10 +12,12 @@ This system is designed to support non-traditional learners who struggle with tr
 
 ## Quick Navigation
 
-### 📊 **[test_review/](test_review/)** - Active Review System
+### 📊 **Demo Output** - See the System in Action
+**[test_review/output/test_module_review_report.html](test_review/output/test_module_review_report.html)** - Open this in your browser to see the 8-tab review report
+
+### 🔬 **[test_review/](test_review/)** - Active Review System
 Complete simulation system for testing and running reviews:
 - **simulate_30_agent_review.py** - 30-agent review engine with consensus mechanism
-- **output/** - Generated HTML reports and JSON data
 - **QUICKSTART.md** - How to run reviews
 - **IMPLEMENTATION_SUMMARY.md** - Technical architecture details
 
@@ -39,33 +41,33 @@ Prompts and rubrics used by the AI review system:
 
 The system uses a **4-pass review architecture**:
 
-### Pass 1: Initial 30-Agent Content Review (CURRENT FOCUS)
+### Passes 1-2: Full Content Review (CURRENT FOCUS)
 
-- **15 authoring agents** check pedagogy, clarity, and teaching quality
-- **15 style agents** check writing, formatting, and consistency
-- Each agent independently identifies issues
-- **Consensus mechanism** aggregates findings:
-  - Issues flagged by 2+ agents = high-confidence consensus issues
-  - Single-agent findings = flagged for review (may include false positives)
+**30 AI agents review content against both guides:**
+- **15 authoring agents** - Check pedagogy, clarity, and teaching quality (Authoring Guide)
+- **15 style agents** - Check writing, formatting, and consistency (Style Guide)
+
+**Consensus mechanism** aggregates findings:
+- Issues flagged by 2+ agents = high-confidence consensus issues
+- Single-agent findings = flagged for review (may include false positives)
 - **Priority ranking** = Severity × Consensus (0-5 scale)
 
-**Human Review Checkpoint**: Author reviews flagged issues and makes fixes
+**Pass 1**: Initial review identifies all issues
 
-### Pass 2: Refinement Review
+**Human Review**: Author addresses flagged issues
 
-- Same 30-agent review on revised content
-- Ensures initial fixes are working
-- Identifies any new issues introduced
+**Pass 2**: Follow-up review ensures fixes are working and catches any new issues
 
-**Human Review Checkpoint**: Author addresses remaining issues
+**Human Review**: Author addresses remaining issues
 
 ### Passes 3-4: Copy Editor Focus
 
-- **Style guide only** - mimics professional copy editor
+**Style Guide only** - Mimics professional copy editor
 - Focus on writing mechanics, formatting, and consistency
 - Final polish before publication
+- No pedagogical review in these passes
 
-**Human Review Checkpoint**: Final approval
+**Human Review**: Final approval
 
 **Output**: Publication-ready calculus content
 
@@ -117,7 +119,9 @@ See **[test_review/QUICKSTART.md](test_review/QUICKSTART.md)** for how to run th
 
 1. **See the latest output**: Open `test_review/output/test_module_review_report.html`
 2. **Run a review**: Follow [test_review/QUICKSTART.md](test_review/QUICKSTART.md)
-3. **Understand the standards**: Read [guides/authoring_guide_full.txt](guides/authoring_guide_full.txt)
+3. **Understand the standards**: 
+   - [guides/authoring_guide_full.txt](guides/authoring_guide_full.txt) - Pedagogy (Passes 1-2)
+   - [guides/style_guide_full.txt](guides/style_guide_full.txt) - Writing quality (Passes 1-4)
 4. **Review the rubrics**: Browse [config/rubrics/](config/rubrics/)
 
 ---
