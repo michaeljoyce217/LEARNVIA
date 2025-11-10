@@ -13,7 +13,9 @@ This system is designed to support non-traditional learners who struggle with tr
 ## Quick Navigation
 
 ### 📊 **Demo Output** - See the System in Action
-**[test_review/output/test_module_review_report.html](test_review/output/test_module_review_report.html)** - Open this in your browser to see the 8-tab review report
+**Download and open in browser**: [test_review/output/test_module_review_report.html](test_review/output/test_module_review_report.html)
+- Download the HTML file and open it in your browser to see the 8-tab review report
+- GitHub will show raw HTML; you need to download and open locally
 
 ### 🔬 **[test_review/](test_review/)** - Active Review System
 Complete simulation system for testing and running reviews:
@@ -41,9 +43,8 @@ Prompts and rubrics used by the AI review system:
 
 The system uses a **4-pass review architecture** designed to reduce the workload on human reviewers and copy editors:
 
-### Passes 1-2: Full Content Review (CURRENT FOCUS)
+### Pass 1: Initial AI Review
 
-**Pass 1: AI Review**
 - **30 AI agents** (15 authoring + 15 style) review content against both guides
 - **Consensus mechanism** aggregates findings:
   - Issues flagged by 2+ agents = high-confidence consensus issues
@@ -52,23 +53,32 @@ The system uses a **4-pass review architecture** designed to reduce the workload
 
 **Author Self-Review**: Author addresses AI-flagged issues independently
 
-**Pass 2: Human Reviewer Meeting**
-- Human reviewer checks author's fixes and remaining issues
-- Reduced workload - many issues already fixed by author
+### Pass 2: Second AI Review
+
+- **30 AI agents** run again on revised content (both guides)
+- Results sent to **both author and human reviewer**
+- Ensures fixes are working, catches new issues
+
+**Human Reviewer Meeting**: Reviewer and author discuss remaining issues together
+- Reduced workload - most issues already fixed
 - Focus on complex pedagogical decisions
 
-### Passes 3-4: Copy Editor Focus
+### Pass 3: Third AI Review (Style Focus)
 
-**Pass 3: AI Review (Style Guide Only)**
-- **30 AI agents** focus only on writing mechanics, formatting, and consistency
+- **30 AI agents** focus on style guide only
 - No pedagogical review in this pass
-- Identifies mechanical issues before copy editor review
+- Author revises based on findings
 
 **Author Self-Review**: Author addresses AI-flagged style issues independently
 
-**Pass 4: Copy Editor Meeting**
-- Professional copy editor reviews final polish
-- Reduced workload - mechanical issues already fixed by author
+### Pass 4: Fourth AI Review (Final Style Check)
+
+- **30 AI agents** run again on revised content (style guide only)
+- Results sent to **both author and copy editor**
+- Final mechanical polish
+
+**Copy Editor Meeting**: Copy editor and author discuss final polish
+- Reduced workload - mechanical issues already fixed
 - Focus on nuanced style decisions
 
 **Output**: Publication-ready calculus content
@@ -119,7 +129,7 @@ See **[test_review/QUICKSTART.md](test_review/QUICKSTART.md)** for how to run th
 
 ## Questions?
 
-1. **See the latest output**: Open `test_review/output/test_module_review_report.html`
+1. **See the latest output**: Download and open `test_review/output/test_module_review_report.html` in your browser
 2. **Run a review**: Follow [test_review/QUICKSTART.md](test_review/QUICKSTART.md)
 3. **Understand the standards**: 
    - [guides/authoring_guide_full.txt](guides/authoring_guide_full.txt) - Pedagogy (Passes 1-2)
