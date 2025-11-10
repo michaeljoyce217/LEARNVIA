@@ -39,35 +39,37 @@ Prompts and rubrics used by the AI review system:
 
 ## How the Review System Works
 
-The system uses a **4-pass review architecture**:
+The system uses a **4-pass review architecture** designed to reduce the workload on human reviewers and copy editors:
 
 ### Passes 1-2: Full Content Review (CURRENT FOCUS)
 
-**30 AI agents review content against both guides:**
-- **15 authoring agents** - Check pedagogy, clarity, and teaching quality (Authoring Guide)
-- **15 style agents** - Check writing, formatting, and consistency (Style Guide)
+**Pass 1: AI Review**
+- **30 AI agents** (15 authoring + 15 style) review content against both guides
+- **Consensus mechanism** aggregates findings:
+  - Issues flagged by 2+ agents = high-confidence consensus issues
+  - Single-agent findings = flagged for review (may include false positives)
+  - **Priority ranking** = Severity × Consensus (0-5 scale)
 
-**Consensus mechanism** aggregates findings:
-- Issues flagged by 2+ agents = high-confidence consensus issues
-- Single-agent findings = flagged for review (may include false positives)
-- **Priority ranking** = Severity × Consensus (0-5 scale)
+**Author Self-Review**: Author addresses AI-flagged issues independently
 
-**Pass 1**: Initial review identifies all issues
-
-**Human Review**: Author addresses flagged issues
-
-**Pass 2**: Follow-up review ensures fixes are working and catches any new issues
-
-**Human Review**: Author addresses remaining issues
+**Pass 2: Human Reviewer Meeting**
+- Human reviewer checks author's fixes and remaining issues
+- Reduced workload - many issues already fixed by author
+- Focus on complex pedagogical decisions
 
 ### Passes 3-4: Copy Editor Focus
 
-**Style Guide only** - Mimics professional copy editor
-- Focus on writing mechanics, formatting, and consistency
-- Final polish before publication
-- No pedagogical review in these passes
+**Pass 3: AI Review (Style Guide Only)**
+- **30 AI agents** focus only on writing mechanics, formatting, and consistency
+- No pedagogical review in this pass
+- Identifies mechanical issues before copy editor review
 
-**Human Review**: Final approval
+**Author Self-Review**: Author addresses AI-flagged style issues independently
+
+**Pass 4: Copy Editor Meeting**
+- Professional copy editor reviews final polish
+- Reduced workload - mechanical issues already fixed by author
+- Focus on nuanced style decisions
 
 **Output**: Publication-ready calculus content
 
