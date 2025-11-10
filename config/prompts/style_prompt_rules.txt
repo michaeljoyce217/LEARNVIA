@@ -2,13 +2,20 @@
 
 ## CRITICAL MECHANICAL RULES (HIGH SEVERITY)
 
-### Contractions - NEVER ALLOWED
-**Rule**: Do not use contractions in instructional text. Spell out full expression.
-- BAD: "What's the best way..." / "Let's examine..."
-- GOOD: "What is the best way..." / "The next example..."
-- **EXCEPTION**: Possessives ARE necessary and preferred
-  - GOOD: "the square's area"
-  - BAD: "the area of the square"
+### CRITICAL DISTINCTION: Contractions vs. Possessives
+
+**NEVER use contractions** - Spell out full expression:
+- BAD: "What's the best way..." (what's = what is)
+- BAD: "Let's examine..." (let's = let us)
+- GOOD: "What is the best way..."
+- GOOD: "The next example..."
+
+**ALWAYS use possessives** - The apostrophe is CORRECT and REQUIRED:
+- GOOD: "the function's derivative" (possessive - shows ownership)
+- GOOD: "the square's area" (possessive)
+- BAD: "the area of the square" (unnecessarily wordy)
+
+**The apostrophe in possessives is NOT a contraction - it is grammatically necessary.**
 
 ### Imperative Voice - RESTRICTED USE
 **FORBIDDEN** in general instruction:
@@ -161,7 +168,9 @@
 - x-variable, y-variable
 
 ### LaTeX Coding
-**ALL numerals and mathematics MUST be coded in LaTeX**
+**ALL numerals and mathematics in instructional content MUST be coded in LaTeX**
+
+Brief textual references in surrounding prose are acceptable (ex: "The 2 methods shown..." or "3 key concepts").
 
 **Units**:
 - Code using `\text{__}`
@@ -367,14 +376,20 @@
 - **When identifying visual element, use labeled names**: f(x) and g(x) (not "the red and blue functions")
 
 ### Directional Language
-- **Do NOT use language referencing visual location**:
-  - BAD: "In the graph below...", "The equation above...", "The function on the left..."
-  - GOOD: "In the following graph...", "The given equation...", "The function f(x)..."
+- **Do NOT use language referencing spatial/visual location on the page**:
+  - BAD: "In the graph below..." (refers to page layout)
+  - BAD: "The equation above..." (refers to page layout)
+  - BAD: "The function on the left..." (refers to page layout)
+  - GOOD: "In the following graph..."
+  - GOOD: "The given equation..."
+  - GOOD: "The function f(x)..."
 - Consider accessibility for screenreader users
 - **EXCEPTION**: Mathematical directional language IS allowed:
-  - "The left-hand / right-hand limit"
-  - "As x approaches 2 from the left..."
-  - "Divide the right-hand side of the equation by 3..."
+  - ALLOWED: "The left-hand limit" (mathematical concept)
+  - ALLOWED: "As x approaches 2 from the left..." (mathematical direction)
+  - ALLOWED: "The left-hand side of the equation" (mathematical reference)
+  - ALLOWED: "Divide the right-hand side of the equation by 3..." (mathematical reference)
+  - NOT ALLOWED: "The equation on the left side of the page" (spatial reference)
 
 ## SEVERITY INDICATORS
 
@@ -387,7 +402,7 @@
 - Missing space in coordinates
 - Mixed numbers instead of improper fractions
 - Beginning sentences with mathematical symbols
-- Directional language (below/above/left/right)
+- Directional language (spatial page references like below/above/left/right - NOT mathematical directional language)
 
 ### MEDIUM SEVERITY (Should Fix):
 - Missing serial comma

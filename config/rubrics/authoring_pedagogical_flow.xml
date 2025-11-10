@@ -23,7 +23,7 @@
       <examples>
         <example type="violation">Presenting advanced formulas without building intuition</example>
         <example type="violation">Theory-only content with no application or practice</example>
-        <example type="violation">No clear statement of what students will learn or why</example>
+        <example type="violation">Learning objectives present but no motivational connection explaining why this matters to students</example>
       </examples>
     </severity>
 

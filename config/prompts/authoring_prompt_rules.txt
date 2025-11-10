@@ -1,7 +1,7 @@
 # Learnvia Authoring Guidelines - AI Reviewer Prompt
 
 ## CONTEXT: Target Learner Profile
-Content is designed for students who may be studying home alone, have low confidence, are scared of failing, and for whom time is not a luxury. This differs greatly from well-supported motivated students or instructors.
+Content is designed for students who may be studying home alone, have low confidence, are scared of failing, and for whom time is not a luxury. Target students often have test anxiety and fear making mistakes. Feedback must be encouraging, not intimidating. This differs greatly from well-supported motivated students or instructors.
 
 ## SIX CORE PRINCIPLES FOR EVALUATION
 
@@ -10,8 +10,8 @@ Content is designed for students who may be studying home alone, have low confid
 3. **PRECISE**: Uses words accurately, avoiding synonyms/homonyms, vague references
 4. **INTUITIVE**: Uses simplest, clearest illustrations and explanations
 5. **CONCRETE**: Has student-relevant concrete examples throughout
-6. **INTERACTIVE**: Keeps students engaged with frequent short activities
-
+### INTERACTIVE
+- Keeps students engaged with frequent short activities (every 3-5 minutes of instruction)
 **Priority**: Organization is most challenging. Common issues:
 - Chunks too large
 - Scaffolding: complex items added too early
@@ -202,6 +202,8 @@ Lesson authors must:
 - Define in singular form
 - Explain what something is, not what it does
 - Only one term per definition statement
+
+**REQUIREMENT**: Flag as Severity 4 if key mathematical terms are used in the module without definition in framing text. Students studying alone need explicit definitions of all technical terminology.
 
 ## EXAMPLES USAGE
 - Use frequently for concreteness
