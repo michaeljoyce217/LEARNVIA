@@ -72,28 +72,30 @@ Learnvia's calculus content currently goes through a manual review workflow:
 
 ### Expected KPIs
 
+> **Note**: The following estimates are based on initial testing with 1-2 example modules and expert review of the system architecture. Actual performance will be validated through broader testing and real-world deployment. These represent our best current projections, not guaranteed outcomes.
+
 **Efficiency Metrics**:
-- **Reviewer time per module**: 2-3 hours → 30-45 minutes (75% reduction)
-- **Copy editor time per module**: 1-2 hours → 15-30 minutes (75% reduction)
-- **Author iteration cycle**: 3-7 days → same day (10x faster)
-- **Modules per week capacity**: 2-3 → 10-15 (3-5x increase)
+- **Reviewer time per module**: 2-3 hours → 30-45 minutes (estimated 75% reduction)
+- **Copy editor time per module**: 1-2 hours → 15-30 minutes (estimated 75% reduction)
+- **Author iteration cycle**: 3-7 days → same day (estimated 10x faster)
+- **Modules per week capacity**: 2-3 → 10-15 (estimated 3-5x increase)
 
 **Quality Metrics**:
-- **Issues caught before human review**: 50-70% of mechanical/obvious issues
-- **Consistency**: 100% of modules checked against all 10 competencies
-- **False positive rate**: <30% (acceptable with priority ranking)
-- **Missed critical issues**: <5% (consensus mechanism catches most)
+- **Issues caught before human review**: 50-70% of mechanical/obvious issues (based on current simulation)
+- **Consistency**: 100% of modules checked against all 10 competencies (architectural guarantee)
+- **False positive rate**: <30% target (acceptable with priority ranking)
+- **Missed critical issues**: <5% target (consensus mechanism designed to catch most)
 
 **Author Experience**:
-- **Time to first feedback**: 3-7 days → <1 hour
-- **Revision cycles to publication**: 3-4 → 2-3 (faster learning)
-- **Author satisfaction**: Reduced waiting, clearer feedback, faster iteration
+- **Time to first feedback**: 3-7 days → <1 hour (system capability)
+- **Revision cycles to publication**: 3-4 → 2-3 (projected based on earlier issue detection)
+- **Author satisfaction**: Expected improvements in waiting time, feedback clarity, and iteration speed
 
 **Business Impact**:
-- **Content production rate**: 3-5x increase without hiring more reviewers
-- **Reviewer hiring needs**: Flat instead of linear with content growth
-- **Quality maintenance**: Consistent application of all guidelines
-- **Scalability**: System handles 10 modules or 100 modules at same cost
+- **Content production rate**: Projected 3-5x increase without proportional reviewer hiring
+- **Reviewer hiring needs**: Flat scaling instead of linear growth with content volume
+- **Quality maintenance**: Consistent application of guidelines across all modules
+- **Scalability**: System cost per module decreases as volume increases
 
 ## Quick Navigation
 
