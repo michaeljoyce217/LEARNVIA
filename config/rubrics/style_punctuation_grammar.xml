@@ -64,6 +64,11 @@
       <examples>
         <example type="violation">Could improve sentence variety</example>
         <example type="violation">Minor comma placement issues</example>
+        <example type="real" source="5.6_CE_line_12">
+          Issue: The end of the sentence is unclear: In this lesson, we will explore how to use the FTC together with the chain rule to find derivatives of integrals with upper a function as an upper limit
+          Impact: Grammatical error ("upper a function") confuses meaning
+          Fix: Revise sentence for clarity
+        </example>
       </examples>
     </severity>
 

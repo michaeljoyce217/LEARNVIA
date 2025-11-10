@@ -38,6 +38,11 @@
         <example type="violation">Practice problems much harder than examples</example>
         <example type="violation">No problems testing key concepts</example>
         <example type="violation">Vague instructions for open-ended questions</example>
+        <example type="real" source="5.7_Beta_resolved">
+          Issue: The answers do not include explanations
+          Impact: Students can't learn from mistakes without explanations
+          Fix: Add explanations
+        </example>
       </examples>
     </severity>
 
@@ -52,6 +57,16 @@
         <example type="violation">80% of questions test only 20% of content</example>
         <example type="violation">Only multiple choice when skills need demonstration</example>
         <example type="violation">Slightly confusing wording in some problems</example>
+        <example type="real" source="5.7_Beta_resolved">
+          Issue: It looks like most of these were copied and pasted from 5.7.3 as displacement questions, but this is the total distance section
+          Impact: Questions don't match lesson topic; students practice wrong concept
+          Fix: Rewrite questions for total distance
+        </example>
+        <example type="real" source="5.6_Beta_resolved">
+          Issue: Q1 asks to verify a function is even. Q2 should probably use this fact. It only asks for a definite integral on [0,a] which does not rely on even/odd
+          Impact: Questions don't build on each other; missed pedagogical opportunity
+          Fix: Rewrite Q2 to evaluate the integral on the symmetric interval [-a,a]
+        </example>
       </examples>
     </severity>
 

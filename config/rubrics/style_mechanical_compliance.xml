@@ -64,6 +64,16 @@
       <examples>
         <example type="violation">Could use more semantic commands</example>
         <example type="violation">Minor spacing adjustments in math</example>
+        <example type="real" source="5.6_CE_line_10">
+          Issue: Should a \ be added before the comma between the 2 and the dt in the following? F(x) = \int_0^x 2,dt\text{,}
+          Impact: Minor readability issue in mathematical notation
+          Fix: Add \, before dt: F(x) = \int_0^x 2\,dt\text{,}
+        </example>
+        <example type="real" source="5.6_CE_line_31">
+          Issue: The spacing command ";" is showing as text in all parts of this question
+          Impact: Confusing display error that distracts from content
+          Fix: Adjust LaTeX to fix spacing; remove ";" from integrals
+        </example>
       </examples>
     </severity>
 

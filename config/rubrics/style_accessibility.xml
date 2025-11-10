@@ -53,6 +53,21 @@
         <example type="violation">Very long paragraphs without breaks</example>
         <example type="violation">Limited visual alternatives for text</example>
         <example type="violation">Some undefined abbreviations</example>
+        <example type="real" source="5.6_CE_line_23">
+          Issue: Reading level is 11.09
+          Impact: Content inaccessible to target audience of struggling students
+          Fix: Simplify vocabulary and sentence construction to bring this down to within desired 8-10th grade level range
+        </example>
+        <example type="real" source="5.6_CE_line_16">
+          Issue: Can "its" be replaced with f(x)'s in the following sentence? The Fundamental Theorem of Calculus, Part 2 connects the definite integral of f(x) with the values of its antiderivative at the endpoints
+          Impact: Pronoun "its" may be ambiguous; explicit reference clearer for struggling students
+          Fix: Replace "its" with "f(x)'s": ...with the values of f(x)'s antiderivative at the endpoints
+        </example>
+        <example type="real" source="5.6_CE_line_19">
+          Issue: To what is "it" referring in the following sentence? We need to double it because f is even
+          Impact: Unclear pronoun reference forces students to backtrack and re-read
+          Fix: Replace "it" for clarity
+        </example>
       </examples>
     </severity>
 

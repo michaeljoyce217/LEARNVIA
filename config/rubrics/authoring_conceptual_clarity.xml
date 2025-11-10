@@ -52,6 +52,31 @@
         <example type="violation">Using technical terms before defining them</example>
         <example type="violation">Switching between formal and informal definitions</example>
         <example type="violation">Minor gaps in logical explanation</example>
+        <example type="real" source="5.6_CE_line_14">
+          Issue: To what does "property" refer? The word "property" hasn't been used in this lesson so far. Will students understand what property means in this context?
+          Impact: Undefined mathematical jargon confuses students who don't have context
+          Fix: Replace the word property if appropriate, x2
+        </example>
+        <example type="real" source="5.6_CE_line_15">
+          Issue: Uses the term "splitting"; will students know what this means in this context?
+          Impact: Technical term used without definition or context
+          Fix: Replace the word splitting if appropriate
+        </example>
+        <example type="real" source="5.6_CE_line_22">
+          Issue: Will students know "the sum property of integrals"? A google search doesn't net any results. Does this go by another name, like "sum rule"?
+          Impact: Non-standard terminology that students won't recognize
+          Fix: Replace "the sum property of integrals" if appropriate
+        </example>
+        <example type="real" source="5.6_CE_line_20">
+          Issue: The use "part" is confusing here, since it makes me think of the FTC Part 1 or Part 2. Can "part" be replaced with "problem" or "question"?
+          Impact: Word choice creates confusion with lesson-specific terminology
+          Fix: Replace "part" with "question" or "problem" as appropriate
+        </example>
+        <example type="real" source="5.6_CE_line_13">
+          Issue: Should the chain rule be defined/redefined within the framing text?
+          Impact: References concept students may not recall; definition would help
+          Fix: Add definition if appropriate
+        </example>
       </examples>
     </severity>
 

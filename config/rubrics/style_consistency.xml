@@ -52,6 +52,16 @@
         <example type="violation">Mixed bullet point styles</example>
         <example type="violation">Inconsistent capitalization patterns</example>
         <example type="violation">Variable example formatting</example>
+        <example type="real" source="5.6_CE_line_30">
+          Issue: "Fundamental Theorem of Calculus" appears in several different ways in this module (with and without "Part 1", with and without a comma before "Part 1")
+          Impact: Inconsistent terminology can confuse students about whether these refer to the same concept
+          Fix: Review and update all instances of "Fundamental Theorem of Calculus, Part 1" for consistency
+        </example>
+        <example type="real" source="5.6_CE_line_25">
+          Issue: Final sentence describes theorem as "Fundamental Theorem of Calculus (FTC)" but rest of lesson describes it as "Fundamental Theorem of Calculus, Part 1" and the abbreviation "FTC" only appears in one follow up question
+          Impact: Introducing an abbreviation that's not consistently used creates cognitive overhead
+          Fix: Replace "Fundamental Theorem of Calculus (FTC)" with "Fundamental Theorem of Calculus, Part 1"
+        </example>
       </examples>
     </severity>
 

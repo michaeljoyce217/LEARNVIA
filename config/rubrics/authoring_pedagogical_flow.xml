@@ -38,6 +38,11 @@
         <example type="violation">One example for a complex multi-step process</example>
         <example type="violation">No worked examples before practice problems</example>
         <example type="violation">Missing explanations of real-world relevance</example>
+        <example type="real" source="5.6_CE_line_11">
+          Issue: Question hint and explanation both refer to the "Fundamental Theorem of Calculus Part 1," which students do not learn until the next lesson
+          Impact: References concept students haven't learned yet; breaks scaffolding
+          Fix: Rewrite Hint 1 and Explanation if appropriate
+        </example>
       </examples>
     </severity>
 
