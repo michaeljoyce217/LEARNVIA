@@ -104,6 +104,10 @@ Learnvia's calculus content currently goes through a manual review workflow:
 - Download the HTML file and open it in your browser to see the 8-tab review report
 - GitHub will show raw HTML; you need to download and open locally
 
+### 🧭 **/explore Prompt** - Guided Repository Exploration
+- Prompt file: `config/prompts/explore_prompt.txt`
+- Use this to map the repo, run a quick pass, inspect outputs, compare against human logs, and produce a prioritized plan (Day 1/Day 2 milestones, quick wins, and open questions).
+
 ### 🔬 **[test_review/](test_review/)** - Active Review System
 Complete simulation system for testing and running reviews:
 - **simulate_30_agent_review.py** - 30-agent review engine with consensus mechanism
