@@ -117,8 +117,8 @@ Human-readable guides that define what makes good calculus content:
 
 ### 🎓 **[modules/](modules/)** - Sample Calculus Content
 Example calculus modules including:
-- **5.6/** and **5.7/** - Exemplar modules demonstrating quality standards
-- Test modules used for system development
+- **module_5_6_exemplary.xml** and **module_5_7_exemplary.xml** - Exemplar modules demonstrating quality standards
+- Review logs and helper scripts for module processing
 
 ### ⚙️ **[config/](config/)** - System Configuration
 Prompts and rubrics used by the AI review system:
