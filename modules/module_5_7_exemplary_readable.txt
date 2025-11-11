@@ -1,0 +1,2553 @@
+Net Change Theorem
+Net change theorem
+Net change
+Checking a stock market investment every day can be stressful. The value might go up on Monday, drop on Tuesday, rise again on Wednesday, and fall on Thursday. The daily ups and downs can be overwhelming. But what really matters to an investor is simple. When it is time to sell, the investor wants to know if the investment gained or lost value relative to the purchase price. The investor is only interested in the net change, or overall change, in the value of the investment.
+The
+net change
+in a function
+F(x)
+over an interval
+[a, b]
+is
+F(b) - F(a).
+Net change measures the overall gain or loss between the starting value
+x = a
+and the ending value
+x = b.
+This lesson will demonstrate how to find the net change of a function.
+Todo
+Ly8gQ1REOiBBcmNoaWUKLy8gQ3JlYXRlZCAxMC8yLzI1CgpDYW52YXMod2luZG93czogMSkKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIC8vIERlZmluZSB0aGUgZnVuY3Rpb24gRih4KSAtIGFwcHJveGltYXRpbmcgdGhlIGN1cnZlIGluIHRoZSBpbWFnZQogICAgICAgIGZfeDogKDAuMjUpKih4LTEpKih4LTIpKih4LTMpXjIqKHgtNS41KSooeC02KSsyCgogICAgICAgIC8vIFBvaW50cyBhdCB4PTEgYW5kIHg9NQogICAgICAgIHBvaW50X2E6IFBvaW50KFZlYzIoMSwgZl94KDEpKSwgY29sb3I6IENvbG9yLmJsdWUpCiAgICAgICAgcG9pbnRfYjogUG9pbnQoVmVjMig1LCBmX3goNSkpLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICB0cmFja194OiAxCiAgICAgICAgcG9pbnRfdHJhY2s6IFBvaW50KFZlYzIoYHRyYWNrX3hgLCBgZl94KHRyYWNrX3gpYCkpCiAgICAgICAgLy8gRGFzaGVkIGhvcml6b250YWwgbGluZXMgYXQgeSB2YWx1ZXMKICAgICAgICBsaW5lX2F0XzI6IEhMaW5lKHk6IDIsIGRvbWFpbjogSW50ZXJ2YWwoMCwgMSksIGRhc2hlZDogdHJ1ZSwgY29sb3I6IENvbG9yLmdyYXkpCiAgICAgICAgbGluZV9hdF84OiBITGluZSh5OiA4LCBkb21haW46IEludGVydmFsKDAsIDUpLCBkYXNoZWQ6IHRydWUsIGNvbG9yOiBDb2xvci5ncmF5KQogICAgICAgIHJhbmdlTGluZTogVkxpbmUoeDogLTAuNywgcmFuZ2U6IEludGVydmFsKDIsIDgpLCBjb2xvcjogQ29sb3IuZ3JheSkKICAgICAgICAvLyBNYWluIGdyYXBoCiAgICAgICAgbWFpbl9ncmFwaDogR3JhcGgoCiAgICAgICAgICAgIGNoaWxkcmVuOiBbCiAgICAgICAgICAgICAgICBGdW5jKGZfeCwgY29sb3I6IENvbG9yLmJsdWUsIGRvbWFpbjogSW50ZXJ2YWwoMSw1KSkKICAgICAgICAgICAgICAgIHBvaW50X2EKICAgICAgICAgICAgICAgIHBvaW50X2IKICAgICAgICAgICAgICAgIGxpbmVfYXRfMgogICAgICAgICAgICAgICAgbGluZV9hdF84CiAgICAgICAgICAgICAgICByYW5nZUxpbmUsCiAgICAgICAgICAgICAgICBwb2ludF90cmFjawogICAgICAgICAgICBdCiAgICAgICAgICAgIGRvbWFpbjogSW50ZXJ2YWwoLTAuNzUsIDcsIDEpCiAgICAgICAgICAgIHJhbmdlOiBJbnRlcnZhbCgtMiwgMTAsIDEpCiAgICAgICAgICAgIHhBeGlzOiBUZXh0KCIkeCQiKQogICAgICAgICAgICB5QXhpczogVGV4dCgiJHkkIikKICAgICAgICAgICAgaW5kZW50OiBmYWxzZQogICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjQ1LCAwLjE1KQogICAgICAgICAgICBzaXplOiBWZWMyKDAuNSwgMC43NSkKICAgICAgICApCgogICAgICAgIHNwYWNlOiBUZXh0KCIkXHRleHR7IH0kIikKCiAgICAgICAgLy8gVGl0bGUgYXQgdG9wCiAgICAgICAgdGl0bGU6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIlRoZSBuZXQgY2hhbmdlIGluIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgib3ZlciAkW2EsYl0kIGlzICIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkRihiKSAtIEYoYSkkIiwgY29sb3I6IENvbG9yLmJsdWUpLAogICAgICAgICAgICAgICAgVGV4dCgiLiIpCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMiwgMC4wMiksCiAgICAgICAgICAgIGZvbnRTaXplOiAyMCwKICAgICAgICApCgogICAgICAgIC8vIExlZnQgc2lkZSB0ZXh0IGNhbGN1bGF0aW9ucwogICAgICAgIHNwYWNpbmc6IDAuMDYKICAgICAgICB5U3RhcnQ6IDAuMzUKICAgICAgICBjYWxjX3RpdGxlOiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCJOZXQgY2hhbmdlIGluICIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkRiQiLCBjb2xvcjogQ29sb3IuYmx1ZSksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiBvbiAkWzEsNV0kIikKICAgICAgICAgICAgXSwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4wMywgeVN0YXJ0KSkKICAgICAgICBjYWxjX2xpbmUxOiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCIkPSQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJEYoNSkkIiwgY29sb3I6IENvbG9yLmJsdWUpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkIC0gJCIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkRigxKSQiLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICAgICAgXSwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4wNiwgeVN0YXJ0ICsgc3BhY2luZykpCiAgICAgICAgY2FsY19saW5lMjogVGV4dCgKICAgICAgICAgICAgY29udGVudDogWwogICAgICAgICAgICAgICAgVGV4dCgiJD0kIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGKDUpJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJCAtICQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJEYoMSkkIiwgY29sb3I6IENvbG9yLmJsdWUpCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMDYsIHlTdGFydCArIHNwYWNpbmcgKiAyKSkKICAgICAgICBjYWxjX3Jlc3VsdDogVGV4dCgKICAgICAgICAgICAgY29udGVudDogWwogICAgICAgICAgICAgICAgVGV4dCgiJD0kIiksIAogICAgICAgICAgICAgICAgc3BhY2UsIAogICAgICAgICAgICAgICAgVGV4dCgiJFwsXCw2XCxcLCQiKQogICAgICAgICAgICBdCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMDYsIHlTdGFydCArIHNwYWNpbmcgKiAzKSwKICAgICAgICApCgogICAgICAgIC8vIEYoeCkgbGFiZWwgb24gZ3JhcGgKICAgICAgICBmeF9sYWJlbDogVGV4dCgiJEYoeCkkIiwgcG9zaXRpb246IFZlYzIoMC44MiwgMC4yKSkKCiAgICApIHsKICAgICAgICBtYWluX2dyYXBoLmhpZGUoKQogICAgICAgIHBvaW50X2EuaGlkZSgpCiAgICAgICAgcG9pbnRfYi5oaWRlKCkKICAgICAgICBwb2ludF90cmFjay5oaWRlKCkKICAgICAgICBsaW5lX2F0XzIuaGlkZSgpCiAgICAgICAgbGluZV9hdF84LmhpZGUoKQogICAgICAgIHJhbmdlTGluZS5oaWRlKCkKICAgICAgICB0aXRsZS5oaWRlKCkKICAgICAgICBjYWxjX3RpdGxlLmhpZGUoKQogICAgICAgIGNhbGNfbGluZTEuaGlkZSgpCiAgICAgICAgY2FsY19saW5lMi5oaWRlKCkKICAgICAgICBjYWxjX3Jlc3VsdC5oaWRlKCkKICAgICAgICBmeF9sYWJlbC5oaWRlKCkKICAgIH0KCiAgIEFuaW1hdGUoKSB7CiAgICAvLyAxLWEKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfbmV0X2NoYW5nZS5tcDMiKQogICAgdGl0bGUuc2hvdygpCiAgICB3YWl0KDEwMDApCiAgICB0aXRsZS5kcmF3T3V0bGluZSgpCiAgICB3YWl0KDIwMDApCiAgICAKICAgIC8vIDEtYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYl9uZXRfY2hhbmdlLm1wMyIpCiAgICBtYWluX2dyYXBoLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgZnhfbGFiZWwuc2hvdygpCiAgICB3YWl0KDI1MDApCiAgICBwb2ludF9hLnNob3coZHVyYXRpb246IDI1MCkKICAgIHdhaXQoMjUwKQogICAgcG9pbnRfYi5zaG93KGR1cmF0aW9uOiAyNTApCiAgICB3YWl0KDIwMDApCiAgICAKICAgIC8vIDEtYzogbWFrZSBwb2ludCBydW4sIHdyaXRlIHRleHQxLCB3cml0ZSB0ZXh0MiBhbmQgZW1waGFzaXplIGVuZHBvaW50cwogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtY19uZXRfY2hhbmdlLm1wMyIpCiAgICB3YWl0KDEwMDApCiAgICBwb2ludF90cmFjay5zaG93KGJsb2NraW5nOiBmYWxzZSwgZHVyYXRpb246IDI1MCkKICAgIHRyYWNrX3guaW50ZXJwb2xhdGUoNSwgZHVyYXRpb246IDMwMDApCiAgICBwb2ludF90cmFjay5oaWRlKGJsb2NraW5nOiBmYWxzZSwgZHVyYXRpb246IDI1MCkKICAgIGNhbGNfdGl0bGUuc2hvdygpCiAgICB3YWl0KDIwMDApCiAgICBwb2ludF9iLnJhZGl1cy5pbnRlcnBvbGF0ZSgxMCwgZHVyYXRpb246IDUwMCkKICAgIHBvaW50X2IucmFkaXVzLmludGVycG9sYXRlKDUsIGR1cmF0aW9uOiA1MDApCiAgICBwb2ludF9hLnJhZGl1cy5pbnRlcnBvbGF0ZSgxMCwgZHVyYXRpb246IDUwMCkKICAgIHBvaW50X2EucmFkaXVzLmludGVycG9sYXRlKDUsIGR1cmF0aW9uOiA1MDApCiAgICB3YWl0KDEwMDApCiAgICBjYWxjX2xpbmUxLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgCiAgICAvLyAxLWQKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWRfbmV0X2NoYW5nZS5tcDMiKQogICAgY2FsY19saW5lMi5zaG93KGR1cmF0aW9uOiA1MDApCiAgICBjYWxjX2xpbmUyLmNvbnRlbnRbMl0uaGlkZShkdXJhdGlvbjogNTAwKQogICAgY2FsY19saW5lMi5jb250ZW50WzJdID0gVGV4dCgiJDgkIikKICAgIGNhbGNfbGluZTIuY29udGVudFsyXS5zaG93KCkKCiAgfQogIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHt9Cn0KClNjZW5lKCkgewogIEluaXQoCiAgKSB7CiAgfQoKICBBbmltYXRlKCkgewogICAgLy8gMi1hCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1hX25ldF9jaGFuZ2UubXAzIikKICAgIGNhbGNfbGluZTIuY29udGVudFs2XS5oaWRlKCkKICAgIGNhbGNfbGluZTIuY29udGVudFs2XSA9IFRleHQoIiQyJCIpCiAgICBjYWxjX2xpbmUyLmNvbnRlbnRbNl0uc2hvdygpCiAgICBjYWxjX3Jlc3VsdC5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIAogICAgLy8gMi1iCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1iX25ldF9jaGFuZ2UubXAzIikKICAgIHdhaXQoMjAwMCkKICAgIGxpbmVfYXRfMi5zaG93KCkKICAgIGxpbmVfYXRfOC5zaG93KCkKICAgIHJhbmdlTGluZS5zaG93KCkKICAgIGNhbGNfcmVzdWx0LmNvbnRlbnRbMl0uZHJhd091dGxpbmUoKQogICAgCiAgfQp9
+Using the graph of
+F(x)
+the value of
+F(1)
+is
+\underline{\phantom{XXXXXX}} \text{.}
+F(1) =
+Locate the function value corresponding to
+x = 1 \text{.}
+The function value
+F(1)
+is the height of the graph of
+F(x)
+when
+x = 1 \text{.}
+The height of the graph of
+F(x)
+is
+2
+when
+x = 1 \text{,}
+so
+F(1) = 2 \text{.}
+The graph of
+F(x)
+is given. Determine if the net change is a gain, loss, or equal to
+0
+in each example.
+Graph of F(x) passing through (2, 6), (3, 5), (4, 8), (5, 2), (6, 4), and (7,5)
+The net change in
+F(x)
+over
+[2, 7]
+is
+\underline{\phantom{XXXXXX}} \text{.}
+a gain
+The net change is a gain if
+F(7)
+is greater than
+F(2) \text{.}
+Here
+F(7) = 5,
+which is less than
+F(2) = 6 \text{.}
+a loss
+The function value at the end of the interval,
+F(7) = 5\text{,}
+is less than the function value at the start of the interval,
+F(2) = 6\text{,}
+so the net change in
+F(x)
+over
+[2, 7]
+is a loss.
+Net change in F on [2, 7] is a loss
+equal to
+0
+The net change is equal to
+0
+if
+F(7)
+is equal to
+F(2)\text{.}
+Here
+F(7) = 5
+is less than
+F(2) = 6\text{.}
+The net change in
+F(x)
+over
+[2, 4]
+is
+\underline{\phantom{XXXXXX}} \text{.}
+a gain
+The function value at the end of the interval,
+F(4) = 8\text{,}
+is greater than the function value at the start of the interval,
+F(2) = 6\text{,}
+so the net change in
+F(x)
+over
+[2, 4]
+is a gain.
+Net change in F on [2, 4] is a gain
+a loss
+The net change is a loss if
+F(4)
+is less than
+F(2) \text{.}
+Here
+F(4) = 8
+is greater than
+F(2) = 6 \text{.}
+equal to
+0
+The net change is equal to
+0
+if
+F(4)
+is equal to
+F(2)\text{.}
+Here
+F(4) = 8
+is greater than
+F(2) = 6\text{.}
+The net change in
+F(x)
+over
+[3, 7]
+is
+\underline{\phantom{XXXXXX}}\text{.}
+a gain
+The net change is a gain if
+F(7)
+is greater than
+F(3)\text{.}
+Here
+F(7) = 5
+is equal to
+F(3) = 5\text{.}
+a loss
+The net change is a loss if
+F(7)
+is less than
+F(3)\text{.}
+Here
+F(7) = 5
+is equal to
+F(3) = 5\text{.}
+equal to
+0
+The function value at the end of the interval,
+F(7) = 5\text{,}
+is equal to the function value at the start of the interval,
+F(3) = 5\text{,}
+so the net change in
+F(x)
+over
+[3, 7]
+is equal to
+0.
+Net change in F on [3, 7] is equal to zero
+Find the net change in
+F(x)
+over the given interval.
+The graph of
+F(x)
+is given. The net change in
+F(x)
+over
+[2, 7]
+is
+\underline{\phantom{XXXXXX}}\text{.}
+Graph of F(x) passing through (2, 6), (3, 5), (4, 8), (5, 2), (6, 4), and (7,5)
+1
+The absolute value of
+F(2) - F(7)
+is
+1\text{.}
+However, the net change in
+F(x)
+over
+[2, 7]
+is equal to
+F(7) - F(2)\text{,}
+or the function value at the end of the interval minus the function value at the start.
+0
+The net change is equal to
+0
+if
+F(7)
+is equal to
+F(2)\text{.}
+Here
+F(7)=5
+is less than
+F(2) = 6\text{.}
+-1
+The net change in
+F(x)
+over
+[2, 7]
+is
+F(7)  - F(2) = 5 - 6 = -1
+Net change in F on [2, 7] is -1
+The graph of
+F(x)
+is given. The net change in
+F(x)
+over
+[3, 4]
+is
+\underline{\phantom{XXXXXX}}\text{.}
+Graph of F(x) passing through (2, 6), (3, 5), (4, 8), (5, 2), (6, 4), and (7,5)
+Using the graph,
+F(3) = 5
+and
+F(4) = 8\text{.}
+So the net change in
+F(x)
+over
+[3, 4]
+is
+F(4) - F(3) = 8 - 5 = 3
+Net change in F on [3, 4] is 3
+The net change in
+F(x)
+over
+[3, 4]
+is
+F(4) - F(3)\text{.}
+The net change over
+[3, 4]
+is a gain.
+The net change in
+F(x) = x^2
+over
+[1, 3]
+is
+\underline{\phantom{XXXXXX}}\text{.}
+Substituting
+x = 3
+and
+x = 1
+in
+F(x) = x^2
+gives
+F(3) = 3^2 = 9 \text{ and } F(1) = 1^2 = 1
+So the net change in
+F(x) = x^2
+over
+[1, 3]
+is
+F(3) - F(1) = 9 - 1 = 8
+Net change in F(x) = x^2 on [1, 3] is 8
+The net change in
+F(x)
+over
+[1, 3]
+is
+F(3) - F(1)\text{.}
+Substitute
+x = 3
+and
+x = 1
+into
+F(x) = x^2
+to find
+F(3) - F(1)\text{.}
+Values of
+F(x)
+are given in the table.
+Values of
+F(x)
+x
+-2
+1
+3
+6
+F(x)
+5
+7
+-5
+4
+The net change in
+F
+over
+[1, 6]
+is
+\underline{\phantom{XXXXXX}}\text{.}
+Using the table,
+F(6) = 4 \text{ and } F(1) = 7
+So the net change in
+F(x)
+over
+[1, 6]
+is
+F(6) - F(1) = 4 - 7 = -3
+The net change in
+F(x)
+over
+[1, 6]
+is
+F(6) - F(1)\text{.}
+Use the table to find
+F(6)
+and
+F(1)\text{.}
+Then substitute into
+F(6) - F(1)\text{.}
+The price of a stock at the beginning of each day is given in the graph. An investor checks on the stock once every
+2
+weeks. Investigate the net change in the stock price.
+Stock price at open
+The net change in the price of the stock over the
+2
+-week period from Monday, April 15th, to Friday, April 26th, is
+\underline{\phantom{XXXXXX}}\text{.}
+a gain
+The stock price on the 26th,
+\$170.00\text{,}
+is greater than the price on the 15th,
+\$157.64\text{,}
+so the net change over the
+2
+weeks is a gain.
+a loss
+The net change is a loss if the stock price on April 26th is less than the stock price on April 15th. Here the price on the 26th,
+\$170.00\text{,}
+is greater than the price on the 15th,
+\$157.64\text{.}
+equal to
+0
+The net change is equal to
+0
+if the stock price on April 26th is equal to the stock price on April 15th. Here the price on the 26th,
+\$170.00\text{,}
+is greater than the price on the 15th,
+\$157.64\text{.}
+The value of the net change in the price of the stock over the
+2
+-week period from Monday, April 15th, to Friday, April 26th is
+\underline{\phantom{XXXXXX}}\text{.}
+The net change in the stock price between April 15th and April 26th is
+170.00 - 157.64 = 12.36\text{.}
+While the daily price of the stock has had many rises and falls throughout the
+2
+-week period, the investor is only interested in the
+\$12.36
+net gain over those
+2
+weeks.
+The net change is equal to the stock price on April 26th minus the stock price on April 15th.
+The stock price on April 26th is
+\$170.00,
+and the price on April 15th is
+\$157.64\text{.}
+\$
+Lesson summary
+Net change is the overall change in a function between
+2
+values.
+The net change in
+F
+over the interval
+[a, b]
+is
+F(b) - F(a)\text{.}
+The Net Change Theorem
+Given the function
+F(x),
+the net change of
+F
+on
+[a, b]
+is
+F(b) - F(a)\text{.}
+But sometimes we know the rate of change and we don't know the function. Ex: A car’s speedometer shows the car's speed. However, the speedometer does not directly give the change in the position of the car over a given time period.
+Fortunately, we can still find the net change using the rate of change
+F^\prime(x)\text{.}
+The Fundamental Theorem of Calculus (Part II) gives the key relationship:
+\displaystyle \int_a^b F^\prime(x) \, dx = F(b) - F(a)
+To find the net change, integrate the rate of change over
+[a, b]\text{.}
+This lesson will explain how to use rates of change to find net change.
+FOLLOW UP TEXT (NOT PART OF FRAMING TEXT)
+To find the net change given the rate of change, we use the Net Change Theorem.
+Net Change Theorem
+If
+F^\prime(x)
+is the rate of change of
+F(x)\text{,}
+then the net change in
+F
+over
+[a, b]
+is
+F(b) - F(a) = \displaystyle \int_a^b F^\prime(x) \, dx
+Todo
+Ly8gQ1REOiBBcmNoaWUKLy8gQ3JlYXRlZCAxMC8yLzI1CgpDYW52YXMod2luZG93czogMikKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIC8vID09PT09PT09PT0gTEVGVCBTSURFIChXaW5kb3cgMCkgPT09PT09PT09PQogICAgICAgIHhTdGFydDogMC4wMgogICAgICAgIHlTdGFydDogMC4wMgogICAgICAgIHNwYWNpbmc6IDAuMDcKICAgICAgICBzcGFjZTogVGV4dCgiJFx0ZXh0eyB9JCIpCgogICAgICAgIC8vIE5ldCBDaGFuZ2UgVGhlb3JlbSBib3gKICAgICAgICB0aGVvcmVtX2JveDogQm94KHg6IDAuMDIsIHk6IDAuMDIsIHdpZHRoOiAwLjk2LCBoZWlnaHQ6IDAuMjUpCiAgICAgICAgdGhlb3JlbV90aXRsZTogVGV4dCgiKkZ1bmRhbWVudGFsIFRoZW9yZW0gb2YgQ2FsY3VsdXMgKFBhcnQgSUkpOioiLCBwb3NpdGlvbjogVmVjMih4U3RhcnQsIHlTdGFydCkpCiAgICAgICAgdGhlb3JlbV90ZXh0MTogVGV4dCgKICAgICAgICAgICAgY29udGVudDogWwogICAgICAgICAgICAgICAgVGV4dCgiSWYiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJEYnKHgpJCIsIGNvbG9yOiBDb2xvci5vcmFuZ2UpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIgaXMgdGhlIHJhdGUgb2YgY2hhbmdlIG9mIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGKHgpJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwgCiAgICAgICAgICAgICAgICBUZXh0KCIsIHRoZW4gdGhlIG5ldCIpLAogICAgICAgICAgICBdLAogICAgICAgICAgICBwb3NpdGlvbjogVmVjMih4U3RhcnQsIHlTdGFydCArIHNwYWNpbmcpLAogICAgICAgICkKICAgICAgICB0aGVvcmVtX3RleHQyOiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCJjaGFuZ2UgaW4gIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgib3ZlciAkW2EsIGJdJCBpcyIpLAogICAgICAgICAgICBdLAogICAgICAgICAgICBwb3NpdGlvbjogVmVjMih4U3RhcnQsIHlTdGFydCArIHNwYWNpbmcgKiAyKQogICAgICAgICkKCiAgICAgICAgdGhlb3JlbV9lcV9sZWZ0OiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCIkRihiKSQiLCBjb2xvcjogQ29sb3IuYmx1ZSksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiQtJCIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkRihhKSQiLCBjb2xvcjogQ29sb3IuYmx1ZSksCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuNTE2LCAwLjEyKQogICAgICAgICkKCiAgICAgICAgdGhlb3JlbV9lcTogVGV4dCgiJD0kIiwgcG9zaXRpb246IFZlYzIoMC40NywgMC4xMikpCgogICAgICAgICB0aGVvcmVtX2VxX3JpZ2h0OiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCIkXGludF9hXmIgJCIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkRicoeCkkIiwgY29sb3I6IENvbG9yLm9yYW5nZSksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRkeCQiKQogICAgICAgICAgICBdLAogICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjI1LCAwLjEwMykKICAgICAgICApCgoKICAgICAgICAvLyBFeGFtcGxlIHRleHQKICAgICAgICBleGFtcGxlX3RleHQxOiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCJFeDogIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGJyh4KSQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJCA9ICQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJDJ4IC0gMyQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiIGlzIHRoZSBkZXJpdmF0aXZlIG9mIGEgZnVuY3Rpb24gIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGKHgpJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwKICAgICAgICAgICAgICAgIFRleHQoIi4iKQogICAgICAgICAgICBdLAogICAgICAgICAgICBwb3NpdGlvbjogVmVjMih4U3RhcnQsIHlTdGFydCArIHNwYWNpbmcgKiA0KSwKICAgICAgICApCgogICAgICAgIGV4YW1wbGVfdGV4dDI6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIkZpbmQgdGhlIG5ldCBjaGFuZ2UgaW4gIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRGJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiIG92ZXIgIiksCiAgICAgICAgICAgICAgICBzcGFjZSwKICAgICAgICAgICAgICAgIFRleHQoIiRbMSwgNV0kLiIpLCAgICAgICAgICAgICAgICAKICAgICAgICAgICAgXSwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoeFN0YXJ0LCB5U3RhcnQgKyBzcGFjaW5nICogNSksCiAgICAgICAgKQoKICAgICAgICAvLyBMZWZ0IGdyYXBoIC0gbGluZWFyIGZ1bmN0aW9uIHdpdGggc2hhZGVkIGFyZWEKICAgICAgICBmX3ByaW1lOiAyKnggLSAzCiAgICAgICAgYXVjMTogQVVDKGZfcHJpbWUsIGNvbG9yOiBDb2xvci5ibHVlLCBkb21haW46IEludGVydmFsKDEuNSwgNSksIHJhbmdlOiBJbnRlcnZhbCgwLDcpLCBvcGFjaXR5OiAwLjMpCiAgICAgICAgYXVjMjogQVVDKGZfcHJpbWUsIGNvbG9yOiBDb2xvci5ncmVlbiwgZG9tYWluOiBJbnRlcnZhbCgxLCAxLjUpLCByYW5nZTogSW50ZXJ2YWwoLTIsMCksIG9wYWNpdHk6IDAuMywgaW52ZXJ0OiB0cnVlKQoKICAgICAgICBsZWZ0X2dyYXBoOiBHcmFwaCgKICAgICAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgICAgICAgIGF1YzEKICAgICAgICAgICAgICAgIGF1YzIKICAgICAgICAgICAgICAgIEZ1bmMoZl9wcmltZSwgY29sb3I6IENvbG9yLm9yYW5nZSkKICAgICAgICAgICAgXQogICAgICAgICAgICBkb21haW46IEludGVydmFsKC0xLCA2LCAxKQogICAgICAgICAgICByYW5nZTogSW50ZXJ2YWwoLTIsIDgsIDIpCiAgICAgICAgICAgIGluZGVudDogZmFsc2UKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4zLCAwLjUyKQogICAgICAgICAgICBzaXplOiBWZWMyKDAuNCwgMC40KQogICAgICAgICAgICB3aW5kb3c6IDAKICAgICAgICApCgogICAgICAgIC8vIEYnKHgpIGxhYmVsIGZvciBsZWZ0IGdyYXBoCiAgICAgICAgbGVmdF9sYWJlbDogVGV4dCgiJEYnKHgpID0gMnggLSAzJCIsIHBvc2l0aW9uOiBWZWMyKDAuNywgMC40OCksIHdpbmRvdzogMCwgY29sb3I6IENvbG9yLm9yYW5nZSkKCiAgICAgICAgLy8gPT09PT09PT09PSBSSUdIVCBTSURFIChXaW5kb3cgMSkgPT09PT09PT09PQoKICAgICAgICAvLyBOZXQgY2hhbmdlIGNhbGN1bGF0aW9uCiAgICAgICAgY2FsY190aXRsZTogVGV4dCgiTmV0IGNoYW5nZToiLCBwb3NpdGlvbjogVmVjMih4U3RhcnQsIHlTdGFydCksIHdpbmRvdzogMSkKCiAgICAgICAgY2FsY19saW5lMTogVGV4dCgKICAgICAgICAgICAgY29udGVudDogWwogICAgICAgICAgICAgICAgVGV4dCgiJEYoNSkkIiwgY29sb3I6IENvbG9yLmJsdWUpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkLSQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJEYoMSkkIiwgY29sb3I6IENvbG9yLmJsdWUpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkPSBcaW50XzFeNSQiKSwKICAgICAgICAgICAgICAgIFRleHQoIiRGJyh4KSQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJGR4JCIpCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKHhTdGFydCwgeVN0YXJ0ICsgc3BhY2luZyksCiAgICAgICAgICAgIHdpbmRvdzogMSwKICAgICAgICApCiAgICAgICAgb2Zmc2V0OiAwLjIxNQogICAgICAgIGNhbGNfbGluZTI6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiQ9IFxpbnRfMV41ICQiKSwKICAgICAgICAgICAgICAgIFRleHQoIiQoMnggLSAzKSQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJGR4JCIpLAogICAgICAgICAgICBdCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKHhTdGFydCArIG9mZnNldCwgeVN0YXJ0ICsgc3BhY2luZyAqIDIuNSksCiAgICAgICAgICAgIHdpbmRvdzogMSwKICAgICAgICApCgogICAgICAgIGNhbGNfbGluZTM6IFRleHQoCiAgICAgICAgICAgICIkPSB4XjIgLSAzeCBcYmlnfF8xXjUkIiwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoeFN0YXJ0ICsgb2Zmc2V0LCB5U3RhcnQgKyBzcGFjaW5nICogNCksCiAgICAgICAgICAgIHdpbmRvdzogMSwKICAgICAgICApCgogICAgICAgIGNhbGNfbGluZTQ6IFRleHQoCiAgICAgICAgICAgICIkPSAoNV4yIC0gMyg1KSkgLSAoMV4yIC0gMygxKSkkIiwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoeFN0YXJ0ICsgb2Zmc2V0LCB5U3RhcnQgKyBzcGFjaW5nICogNSksCiAgICAgICAgICAgIHdpbmRvdzogMSwKICAgICAgICApCgogICAgICAgIGNhbGNfbGluZTU6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiQ9JCIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkXCxcLDEyXCxcLCQiKSwKICAgICAgICAgICAgXQogICAgICAgICAgICBwb3NpdGlvbjogVmVjMih4U3RhcnQgKyBvZmZzZXQsIHlTdGFydCArIHNwYWNpbmcgKiA2KSwKICAgICAgICAgICAgd2luZG93OiAxLAogICAgICAgICkKCiAgICAgICAgLy8gUmlnaHQgZ3JhcGggLSBwYXJhYm9sYSBmdW5jdGlvbgogICAgICAgIGZfcmlnaHQ6IHheMiAtIDMqeCArIDMKICAgICAgICBmOiBGdW5jKGZfcmlnaHQsIGNvbG9yOiBDb2xvci5ibHVlLCBkb21haW46IEludGVydmFsKDAsNikpCgogICAgICAgIC8vIERhc2hlZCBsaW5lcwogICAgICAgIGRhc2hfbGluZTE6IEhMaW5lKHk6IGZfcmlnaHQoMSksIGRvbWFpbjogSW50ZXJ2YWwoMCwgMSksIGRhc2hlZDogdHJ1ZSwgY29sb3I6IENvbG9yLmdyYXkpCiAgICAgICAgZGFzaF9saW5lMjogSExpbmUoeTogZl9yaWdodCg1KSwgZG9tYWluOiBJbnRlcnZhbCgwLCA1KSwgZGFzaGVkOiB0cnVlLCBjb2xvcjogQ29sb3IuZ3JheSkKICAgICAgICByYW5nZV9saW5lOiBWTGluZSh4OiAtMC41LCByYW5nZTogSW50ZXJ2YWwoZl9yaWdodCgxKSwgZl9yaWdodCg1KSksIGNvbG9yOiBDb2xvci5ncmF5LCBsZWZ0RW5kOiAicG9pbnQiLCByaWdodEVuZDogInBvaW50IikKICAgICAgICAKICAgICAgICBwMTogUG9pbnQoVmVjMigxLCBmX3JpZ2h0KDEpKSwgY29sb3I6IENvbG9yLmJsdWUpCiAgICAgICAgcDI6IFBvaW50KFZlYzIoNSwgZl9yaWdodCg1KSksIGNvbG9yOiBDb2xvci5ibHVlKQogICAgICAgIHJpZ2h0X2dyYXBoOiBHcmFwaCgKICAgICAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgICAgICAgIGYKICAgICAgICAgICAgICAgIHAxLAogICAgICAgICAgICAgICAgcDIsCiAgICAgICAgICAgICAgICBkYXNoX2xpbmUxLAogICAgICAgICAgICAgICAgZGFzaF9saW5lMiwKICAgICAgICAgICAgICAgIHJhbmdlX2xpbmUKICAgICAgICAgICAgXQogICAgICAgICAgICBkb21haW46IEludGVydmFsKC0wLjksIDYsIDEpCiAgICAgICAgICAgIHJhbmdlOiBJbnRlcnZhbCgwLCAxNSkKICAgICAgICAgICAgaW5kZW50OiBmYWxzZQogICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjM1LCAwLjU1KQogICAgICAgICAgICBzaXplOiBWZWMyKDAuNCwgMC4zNSkKICAgICAgICAgICAgc2hvd1lBeGlzTnVtYmVyczogZmFsc2UKICAgICAgICAgICAgd2luZG93OiAxCiAgICAgICAgKQoKICAgICAgICAvLyBGKHgpIGxhYmVsIGZvciByaWdodCBncmFwaAogICAgICAgIHJpZ2h0X2xhYmVsOiBUZXh0KCIkRih4KSQiLCBwb3NpdGlvbjogVmVjMigwLjY1MywgMC43NDYpLCB3aW5kb3c6IDEsIGNvbG9yOiBDb2xvci5ibHVlKQoKICAgICAgICAvLyBOZXQgY2hhbmdlIHJlc3VsdCB0ZXh0CiAgICAgICAgbmV0X2NoYW5nZV90ZXh0OiBUZXh0KCJOZXQgY2hhbmdlOiAxMiIsIHBvc2l0aW9uOiBWZWMyKDAuMDY1LCAwLjcpLCB3aW5kb3c6IDEpCgogICAgKXsKCQlzcGFjZS5oaWRlKCkKCQl0aGVvcmVtX2JveC5oaWRlKCkKCQl0aGVvcmVtX3RpdGxlLmhpZGUoKQoJCXRoZW9yZW1fdGV4dDEuaGlkZSgpCgkJdGhlb3JlbV90ZXh0Mi5oaWRlKCkKCQl0aGVvcmVtX2VxX2xlZnQuaGlkZSgpCgkJdGhlb3JlbV9lcS5oaWRlKCkKCQl0aGVvcmVtX2VxX3JpZ2h0LmhpZGUoKQoJCWV4YW1wbGVfdGV4dDEuaGlkZSgpCgkJZXhhbXBsZV90ZXh0Mi5oaWRlKCkKCQlhdWMxLmhpZGUoKQoJCWF1YzIuaGlkZSgpCgkJbGVmdF9ncmFwaC5oaWRlKCkKCQlsZWZ0X2xhYmVsLmhpZGUoKQoJCWNhbGNfdGl0bGUuaGlkZSgpCgkJY2FsY19saW5lMS5oaWRlKCkKCQljYWxjX2xpbmUyLmhpZGUoKQoJCWNhbGNfbGluZTMuaGlkZSgpCgkJY2FsY19saW5lNC5oaWRlKCkKCQljYWxjX2xpbmU1LmhpZGUoKQoJCWYuaGlkZSgpCgkJZGFzaF9saW5lMS5oaWRlKCkKCQlkYXNoX2xpbmUyLmhpZGUoKQoJCXJhbmdlX2xpbmUuaGlkZSgpCgkJcDEuaGlkZSgpCgkJcDIuaGlkZSgpCgkJcmlnaHRfZ3JhcGguaGlkZSgpCgkJcmlnaHRfbGFiZWwuaGlkZSgpCgkJbmV0X2NoYW5nZV90ZXh0LmhpZGUoKQoJIH0KCiAgICBBbmltYXRlKCkgewogICAgICAgIC8vIDEtYQogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfdGhlX25ldF9jaGFuZ2VfdGhlb3JlbS5tcDMiKQogICAgICAgIHRoZW9yZW1fYm94LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHRoZW9yZW1fdGl0bGUuc2hvdygpCiAgICAgICAgd2FpdCgyMDAwKQogICAgICAgIHRoZW9yZW1fZXEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgdGhlb3JlbV9lcV9yaWdodC5zaG93KCkKICAgICAgICB3YWl0KDEwMDApCiAgICAgICAgdGhlb3JlbV9lcV9sZWZ0LnNob3coKQogICAgICAgIHdhaXQoMTAwMCkKICAgICAgICAKICAgICAgICAvLyAxLWI6IHN3YXAsIG1vdmUgZXF1YXRpb24sIGFkZCB0ZXh0CiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYl90aGVfbmV0X2NoYW5nZV90aGVvcmVtLm1wMyIpCiAgICAgICAgdGhlb3JlbV9lcV9sZWZ0LnBvc2l0aW9uLm1vdmUoVmVjMigwLjIzOCwgMC4xMiksIGJsb2NraW5nOiBmYWxzZSkKICAgICAgICB0aGVvcmVtX2VxX3JpZ2h0LnBvc2l0aW9uLm1vdmUoVmVjMigwLjUxNiwgMC4xMDMpKQogICAgICAgIHdhaXQoMTAwMCkKICAgICAgICB0aGVvcmVtX2VxX2xlZnQucG9zaXRpb24ubW92ZShWZWMyKDAuMjM4ICsgMC4yMjUsIDAuMTIgKyAwLjA0KSwgYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHRoZW9yZW1fZXEucG9zaXRpb24ubW92ZShWZWMyKDAuNDcgKyAwLjIyNSwgMC4xMiArIDAuMDQpLCBibG9ja2luZzogZmFsc2UpCiAgICAgICAgdGhlb3JlbV9lcV9yaWdodC5wb3NpdGlvbi5tb3ZlKFZlYzIoMC41MTYgKyAwLjIyNSwgMC4xMDMgKyAwLjA0KSkKICAgICAgICB0aGVvcmVtX3RleHQxLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHRoZW9yZW1fdGV4dDIuc2hvdygpCiAgICAgICAgd2FpdCg3MDAwKQogICAgICAgIAogICAgICAgIC8vIDEtYwogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWNfdGhlX25ldF9jaGFuZ2VfdGhlb3JlbS5tcDMiKQogICAgICAgIHdhaXQoMjAwMCkKICAgICAgICB0aGVvcmVtX3RpdGxlLmhpZGUoKQogICAgICAgIHRoZW9yZW1fdGl0bGUuY29udGVudCA9ICIqTmV0IENoYW5nZSBUaGVvcmVtOioiCiAgICAgICAgdGhlb3JlbV90aXRsZS5zaG93KCkKICAgICAgICB3YWl0KDEwMDApCiAgICAgICAgCiAgICAgICAgLy8gMS1kCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZF90aGVfbmV0X2NoYW5nZV90aGVvcmVtLm1wMyIpCiAgICAgICAgd2FpdCgxMDAwKQogICAgICAgIGV4YW1wbGVfdGV4dDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgZXhhbXBsZV90ZXh0Mi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBjYWxjX3RpdGxlLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGNhbGNfbGluZTEuc2hvdygpCiAgICAgICAgd2FpdCg4MDAwKQogICAgICAgIAogICAgICAgIC8vIDEtZQogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWVfdGhlX25ldF9jaGFuZ2VfdGhlb3JlbS5tcDMiKQogICAgICAgIGxlZnRfZ3JhcGguc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgbGVmdF9sYWJlbC5zaG93KCkgICAgCiAgICB9CiAgUXVlc3Rpb24oaWQ6ICIgIiwgdHlwZTogIm11bHRpcGxlQ2hvaWNlIikge30KfQoKU2NlbmUoKSB7CiAgSW5pdCgKICApIHsKICB9CgogIEFuaW1hdGUoKSB7CiAgICAvLyAyLWEKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWFfdGhlX25ldF9jaGFuZ2VfdGhlb3JlbS5tcDMiKQogICAgd2FpdCgxMDAwKQogICAgYXVjMS5vcGFjaXR5LmludGVycG9sYXRlKDAuMykKICAgIHdhaXQoMTAwMCkKICAgIGF1YzIub3BhY2l0eS5pbnRlcnBvbGF0ZSgwLjMpCiAgICB3YWl0KDQwMDApCiAgICAKICAgIC8vIDItYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYl90aGVfbmV0X2NoYW5nZV90aGVvcmVtLm1wMyIpCiAgICB3YWl0KDEwMDApCiAgICBjYWxjX2xpbmUyLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgCiAgICAvLyAyLWMKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWNfdGhlX25ldF9jaGFuZ2VfdGhlb3JlbS5tcDMiKQogICAgd2FpdCgyMDAwKQogICAgY2FsY19saW5lMy5zaG93KCkKICAgIHdhaXQoMzAwMCkKICAgIGNhbGNfbGluZTQuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBjYWxjX2xpbmU1LnNob3coKQogICAgd2FpdCgzMDAwKQogICAgY2FsY19saW5lNS5jb250ZW50WzJdLmRyYXdPdXRsaW5lKCkKICAgIAogIH0KICBRdWVzdGlvbihpZDogIiAiLCB0eXBlOiAibXVsdGlwbGVDaG9pY2UiKSB7fQp9CgpTY2VuZSgpIHsKICBJbml0KAogICkgewogIH0KCiAgQW5pbWF0ZSgpIHsKICAgIC8vIDMtYQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzMtYV90aGVfbmV0X2NoYW5nZV90aGVvcmVtLm1wMyIpCiAgICByaWdodF9ncmFwaC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHJpZ2h0X2xhYmVsLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgd2FpdCgyMDAwKQogICAgcmFuZ2VfbGluZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIG5ldF9jaGFuZ2VfdGV4dC5zaG93KCkKICAgIHdhaXQoNDAwMCkKICAgIAogICAgLy8gMy1iCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMy1iX3RoZV9uZXRfY2hhbmdlX3RoZW9yZW0ubXAzIikKICAgIHdhaXQoMzAwMCkKICAgIGYuc2hvdygpCiAgICB3YWl0KDEwMDAwKQogICAgcDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBkYXNoX2xpbmUxLnNob3coKQogICAgcDIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBkYXNoX2xpbmUyLnNob3coKQogICAgCiAgfQp9Cgp9Cg==
+The graph of
+F^\prime(x) = 2x - 3
+suggests that the signed area between
+F^\prime(x)
+and the
+x
+-axis over
+[1, 5]
+will be
+\underline{\phantom{XXXXXX}} \text{.}
+positive
+The region that lies above the
+x
+-axis is much larger than the region that lies below the
+x
+-axis, which indicates that the signed area will be positive.
+negative
+The signed area would be negative if the region below the
+x
+-axis was larger than the region above the
+x
+-axis. Here the region above the
+x
+-axis is larger.
+0
+The signed area would be
+0
+if the area below the
+x
+-axis was exactly equal to the area above the
+x
+-axis. Here the area above the
+x
+-axis is larger.
+The net change in
+F
+over
+[1, 5]
+is positive, so the function value at the end,
+F(5) \text{,}
+is
+\underline{\phantom{XXXXXX}}
+the function value at the start,
+F(1)\text{.}
+greater than
+The net change
+F(5) - F(1)
+is positive, so
+F(5)
+must be greater than
+F(1),
+and the overall change in
+F
+on
+[1, 5]
+is a gain.
+less than
+If
+F(5)
+was less than
+F(1)\text{,}
+then the net change
+F(5) - F(1)
+would be negative, not positive.
+equal to
+If
+F(5)
+was equal to
+F(1)\text{,}
+then the net change
+F(5) - F(1)
+would be
+0,
+not positive.
+Interpret each integral using the given context.
+The function
+F^\prime(x)
+is the derivative of a function
+F(x)\text{.}
+The definite integral
+\displaystyle \int_2^5 F^\prime(x) \ dx
+is the
+\underline{\phantom{XXXXXX}}
+over
+[2, 5]\text{.}
+average value of
+F
+The average value of
+F
+over
+[2, 5]
+is given by
+\displaystyle \frac{1}{5-2} \int_2^5 F(x) \ dx\text{,}
+not
+\displaystyle \int_2^5 F^\prime(x) \ dx\text{.}
+net change in
+F
+By the Net Change Theorem, the net change in
+F
+over
+[2, 5]
+is given by the definite integral
+\displaystyle \int_2^5 F^\prime(x) \ dx \text{.}
+signed area under
+F
+The signed area under
+F
+over
+[2, 5]
+is given by
+\displaystyle \int_2^5 F(x) \ dx \text{,}
+not
+\displaystyle \int_2^5 F^\prime(x) \ dx \text{.}
+The function
+F^\prime(x)
+is the derivative of a function
+F(x)\text{.}
+The definite integral
+\displaystyle \int_1^7 F^\prime(x) \ dx
+is the net change in
+F
+over
+\underline{\phantom{XXXXXX}}\text{.}
+[-7, -1]
+The net change in
+F
+over
+[-7, -1]
+would be
+\displaystyle \int_{-7}^{-1} F^\prime(x) \ dx\text{,}
+not
+\displaystyle \int_1^7 F^\prime(x) \ dx \text{.}
+Use the limits of integration to find the interval.
+[1, 7]
+The limits of integration of
+\displaystyle \int_1^7 F^\prime(x) \ dx
+are
+x =1
+and
+x =7\text{,}
+so the integral gives the net change in
+F
+over the interval from
+x = 1
+to
+x = 7\text{,}
+or
+[1, 7]\text{.}
+[0, 1]
+The net change in
+F
+over
+[0, 1]
+would be
+\displaystyle \int_{0}^{1} F^\prime(x) \ dx\text{,}
+not
+\displaystyle \int_1^7 F^\prime(x) \ dx\text{.}
+Use the limits of integration to find the interval.
+The cost of manufacturing
+x
+laptops is given by the function
+C(x)\text{.}
+The definite integral
+\displaystyle \int_{15}^{30} C^\prime(x) \ dx
+gives the net change in
+\underline{\phantom{XXXXXX}}
+if production increases from
+15
+to
+30
+laptops.
+cost
+The integrand
+C^\prime(x)
+is the rate of change of the cost function
+C(x)\text{,}
+so
+\displaystyle \int_{15}^{30} C^\prime(x) \ dx
+gives the net change in cost if production increases from
+15
+to
+30
+laptops.
+profit
+The integrand is
+C^\prime(x)\text{,}
+or the rate of change of the cost function, not the rate of change of the profit function,
+P^\prime(x)\text{.}
+The integral
+\displaystyle \int_{15}^{30} P^\prime(x) \ dx
+would give the net change in profit.
+revenue
+The integrand is
+C^\prime(x)\text{,}
+or the rate of change of the cost function, not the rate of change of the revenue function,
+R^\prime(x) \text{.}
+The integral
+\displaystyle \int_{15}^{30} R^\prime(x) \ dx
+would give the net change in revenue.
+Water is leaking out of a tank at a rate of
+V^\prime(t)\text{ liters/hour.}
+The definite integral
+\displaystyle \int_{0}^{2} V^\prime(t) \ dt
+gives the net change in
+\underline{\phantom{XXXXXX}}
+of water in the tank in the first
+2
+hours.
+density
+The rate at which the water is leaking out of the tank,
+V^\prime(t)\text{,}
+is measured in liters/hour. Liters are not a unit for density, so the definite integral
+\displaystyle \int_{0}^{2} V^\prime(t) \ dt
+does not give the net change in the density of water.
+height
+The rate at which the water is leaking out of the tank,
+V^\prime(t)\text{,}
+is measured in liters/hour. Liters are not a unit for height, so the definite integral
+\displaystyle \int_{0}^{2} V^\prime(t) \  dt
+does not give the net change in the height of water.
+volume
+The rate at which the water is leaking out of the tank,
+V^\prime(t)\text{,}
+is the rate of change of the volume
+V(t)
+of water in the tank at time
+t\text{.}
+So the definite integral
+\displaystyle \int_{0}^{2} V^\prime(t) \ dt
+gives the net change in volume of water in the tank in the first
+2
+hours.
+The number of individuals in a population at time
+t
+(in years) is given by the function
+P(t)\text{.}
+The definite integral
+\displaystyle \int_0^{10} P^\prime(t) \ dt
+gives the change in population size over the first
+\underline{\phantom{XXXXXX}}
+years.
+The limits of integration of
+\displaystyle \int_0^{10} P^\prime(t) \ dt
+are
+t=0
+and
+t=10\text{,}
+so the integral gives the net change in
+P
+over the interval from
+t =0
+to
+t = 10\text{,}
+or
+[0, 10]\text{.}
+That is, the integral gives the change in population size over the first
+10
+years.
+Use the limits of integration to find the interval of time for the net change in
+P\text{.}
+The limits of integration are
+t = 0
+and
+t = 10
+years.
+Find the net change in
+F
+over
+[0, 3]
+if
+F^\prime(x) = 1 - 2x\text{.}
+This problem gives a formula for
+\underline{\phantom{XXXXXX}}\text{.}
+the function
+F(x)
+Given is
+F^\prime(x) = 1 - 2x,
+which is a formula for the derivative of
+F\text{,}
+not the function
+F(x)\text{.}
+the derivative of
+F(x)
+The prime notation
+F^\prime(x)
+is used for the derivative. The given formula is
+F^\prime(x) = 1 - 2x\text{,}
+or a formula for the derivative of
+F(x)\text{.}
+an antiderivative of
+F(x)
+The given formula is
+F^\prime(x) = 1 - 2x,
+which is a formula for the derivative of
+F\text{,}
+not an antiderivative of
+F(x)\text{.}
+Find the net change in
+F
+using the derivative
+F^\prime(x)\text{.}
+By the Net Change Theorem, the net change in
+F
+over
+[0, 3]
+is
+F(3) - F(0) = \underline{\phantom{XXXXXX}}\text{.}
+\displaystyle \int_0^3 F(x) \ dx
+To find the net change, integrate the rate of change,
+F^\prime(x),
+not the function
+F(x).
+\displaystyle \int_0^3 (1 - 2x) \ dx
+By the Net Change Theorem, the net change in
+F
+over
+[0, 3]
+is
+\displaystyle \int_0^3 F^\prime(x) \, dx = \displaystyle \int_0^3 (1 - 2x) \, dx
+\displaystyle \int_1^{-2x} F^\prime(x) \ dx
+To find the net change over
+[0, 3],
+use a definite integral from
+x = 0
+to
+x = 3,
+not
+x = 1
+to
+x = -2x.
+The net change in
+F
+over
+[0, 3]
+can be visualized as
+\underline{\phantom{XXXXXX}}\text{.}
+the difference in derivative values
+F^\prime(3) - F^\prime(1)
+Change in value of F'(x) = 1 - 2x from x = 0 to x = 3
+The difference in derivative values,
+F^\prime(3) - F^\prime(1)\text{,}
+would be the net change in the derivative
+F^\prime
+over
+[0, 3]\text{.}
+Find the net change
+F(3) - F(1)
+in
+F
+instead. By the Net Change Theorem,
+F(3) - F(1) = \displaystyle \int_0^3 (1 - 2x) \ dx\text{.}
+the slope of the tangent line to
+F^\prime(x) = 1 - 2x
+from
+x = 0
+to
+x =3
+Slope of tangent line to F'(x) = 1 - 2x is -2 at every point
+The slope of the tangent line to
+F^\prime(x)
+would be the value of the derivative of
+F^\prime(x)\text{,}
+or the value of
+F^{\prime \prime}(x)\text{.}
+Find the net change
+F(3) - F(1)
+in
+F
+instead. By the Net Change Theorem,
+F(3) - F(1) = \displaystyle \int_0^3 (1 - 2x) \ dx\text{.}
+the signed area under
+F^\prime(x) = 1 - 2x
+from
+x = 0
+to
+x = 3
+The signed area under F'(x) = 1 - 2x over [0,3]
+Find the net change
+F(3) - F(1)
+in
+F \text{.}
+By the Net Change Theorem,
+F(3) - F(1) = \displaystyle \int_0^3 (1 - 2x) \ dx \text{.}
+This definite integral is equal to the signed area under
+F^\prime(x) = 1- 2x
+from
+x=0
+to
+x=3\text{.}
+The net change in
+F
+over
+[0, 3]
+can be visualized as the signed area under
+F^\prime(x) = 1 - 2x
+from
+x = 0
+to
+x =3\text{.}
+Signed area under 1 - 2x
+Based on the signed area in the figure, the net change is expected to be
+\underline{\phantom{XXXXXX}}\text{.}
+a gain
+The net change would be a gain if the signed area is positive. So the net change is a gain if the area above the
+x
+-axis is larger than the area below the
+x
+-axis. Here the area below the
+x
+-axis is larger.
+a loss
+The area below the
+x
+-axis is larger than the area above the
+x
+-axis. So the signed area under
+F^\prime(x) = 1 - 2x
+from
+x = 0
+to
+x =3
+is negative, and the net change is a loss.
+equal to
+0
+The net change would be equal to
+0
+if the signed area is
+0.
+So the net change is equal to
+0
+if the area above the
+x
+-axis is exactly equal to the area below the
+x
+-axis. Here the area below the
+x
+-axis is larger.
+To find the net change in
+F
+using the Net Change Theorem, integrate
+F^\prime(x) = 1 -2x
+to get
+\displaystyle \int_0^3 (1 - 2x) \, dx = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_0^3
+An antiderivative of
+1
+is
+x
+by the constant rule. An antiderivative of
+-2x
+is
+(-2)\left( \frac{1}{2} \right) x^2 = -x^2
+by the constant multiple and power rules for integrals.
+Using these antiderivative and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_0^3 (1 - 2x) \, dx = \left( x - x^2 \right){\Large|}_0^3
+To integrate, find an antiderivative of
+(1 - 2x)
+using the constant and power rules for integrals.
+Do not include the arbitrary constant,
++ C\text{,}
+when working with a definite integral.
+100
+x
+1
+x
+-1
+x
+The net change in
+F
+over
+[0, 3]
+is
+F(3) - F(0) = \displaystyle \int_0^3 (1 - 2x) \, dx = (x - x^2) {\Large|}_0^3
+Completing the integration gives
+\underline{\phantom{XXXXXX}}\text{.}
+Completing the integration gives the net change in
+F
+over
+[0, 3]\text{:}
+\begin{align*}F(3) - F(0) & = \displaystyle \int_0^3 (1 - 2x) \, dx \\& = (x - x^2) {\Large|}_0^3 \\& = (3 - 3^2) - (0 - 0^2) \\& = 3 - 9 \\& = -6\end{align*}
+Note that the net change is a loss, which matches what was expected based on the signed area.
+Substitute the limits of integration,
+x = 0
+and
+x = 3\text{,}
+into
+x - x^2\text{.}
+After substituting,
+F(3) - F(0) = (3 - 3^2) - (0 - 0^2) \text{.}
+F(3) - F(0) =
+Lesson summary
+Integrate the rate of change of a function to find the net change.
+Net Change Theorem: If
+F^\prime(x)
+is the rate of change of
+F(x)\text{,}
+then the net change in
+F
+over
+[a, b]
+is
+F(b) - F(a) = \displaystyle \int_a^b F^\prime(x) \, dx\text{.}
+The Net Change Theorem is a reorganization of the Fundamental Theorem of Calculus (Part II). Net change is so powerful in applications that the result is renamed to emphasize the theorem’s usefulness.
+Velocity and displacement
+Speed describes how fast an object moves. Velocity describes how fast and in which direction an object moves. Ex: A car travels east at
+40\text{ mph }
+for
+3\text{ hours,}
+then turns around and travels west at
+40\text{ mph }
+for
+2\text{ hours.}
+The speed of the car is always
+40\text{ mph,}
+but the velocity changes direction:
+v(t) = \begin{cases} \, \, \, \, 40  \qquad 0 \leq t <3 \quad \text{ driving east} \\ -40 \qquad 3 < t \leq 5 \quad \text{ driving west} \end{cases}
+If we integrate the velocity, we get the net change in position of the car. This net change is the displacement, or the distance between the car’s starting point and ending point. The direction of travel will affect the displacement.
+This lesson explains how to integrate velocity to find displacement.
+Todo
+Ly8gQ1REOiBBcmNoaWUKLy8gQ3JlYXRlZCAxMC8yLzI1CgpDYW52YXMod2luZG93czogMCkKClNjZW5lKCkgewogICAgSW5pdCgKICAgICAgICAvLyBOdW1iZXIgbGluZQogICAgICAgIHAxOiBQb2ludChWZWMyKDAsIDApLCBjb2xvcjogQ29sb3IucmVkKQogICAgICAgIHAyOiBQb2ludChWZWMyKDQwLCAwKSwgY29sb3I6IENvbG9yLnJlZCkKICAgICAgICBjYXJfZW5kOiAwLjA2NQogICAgICAgIHNlZ19ibHVlX2VuZDogMAogICAgICAgIHNlZ19ncmVlbl9zdGFydDogMTIwCiAgICAgICAgc2VnX2dyZWVuX2VuZDogMTIwCgogICAgICAgIGJsdWVfbGluZTogSExpbmUoeTogMCwgc3Ryb2tlOiAzLCBkb21haW46IEludGVydmFsKDAsIGBzZWdfYmx1ZV9lbmRgKSwgY29sb3I6IENvbG9yLmJsdWUpCiAgICAgICAgZ3JlZW5fbGluZTogSExpbmUoeTogMCwgc3Ryb2tlOiAzLCBkb21haW46IEludGVydmFsKGBzZWdfZ3JlZW5fc3RhcnRgLCBgc2VnX2dyZWVuX2VuZGApLCBjb2xvcjogQ29sb3IuZ3JlZW4pCgogICAgICAgIG51bWJlcl9saW5lOiBHcmFwaCgKICAgICAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgICAgICAgIGJsdWVfbGluZQogICAgICAgICAgICAgICAgZ3JlZW5fbGluZQogICAgICAgICAgICAgICAgcDEKICAgICAgICAgICAgICAgIHAyCiAgICAgICAgICAgIF0KICAgICAgICAgICAgZG9tYWluOiBJbnRlcnZhbCgtMTAsIDIxMCwgMTApCiAgICAgICAgICAgIHJhbmdlOiBJbnRlcnZhbCgtMSwgMSwgMSkKICAgICAgICAgICAgeEF4aXM6IFRleHQoIlxuXG5cblxubWlsZXMiKQogICAgICAgICAgICBzaG93WUF4aXM6IGZhbHNlCgogICAgICAgICAgICBwb3NpdGlvbjogVmVjMigwLjA1LCAwLjA4KQogICAgICAgICAgICBzaXplOiBWZWMyKDAuOSwgMC4wOCkKICAgICAgICAgICAgaW5kZW50OiBmYWxzZQogICAgICAgICkKCiAgICAgICAgY2FyOiBJbWFnZShzb3VyY2U6ICJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvcmVkX2Nhci5wbmciLCBzY2FsZTogMC41LCBwb3NpdGlvbjogVmVjMihgY2FyX2VuZGAsIDAuMDUpKQoKICAgICAgICAvLyBTdGFydCBhbmQgRW5kIGxhYmVscwogICAgICAgIHN0YXJ0X2xhYmVsOiBUZXh0KCJTdGFydCIsIHBvc2l0aW9uOiBWZWMyKDAuMDYsIDAuMDIpLCBjb2xvcjogQ29sb3IucmVkKQogICAgICAgIGVuZF9sYWJlbDogVGV4dCgiRW5kIiwgcG9zaXRpb246IFZlYzIoMC4yMywgMC4wMiksIGNvbG9yOiBDb2xvci5yZWQpCgogICAgICAgIC8vIERpc3BsYWNlbWVudAogICAgICAgIGRpc3BsYWNlbWVudF90ZXh0OiBUZXh0KCJEaXNwbGFjZW1lbnQiLCBwb3NpdGlvbjogVmVjMigwLjEyLCAwLjIzKSwgY29sb3I6IENvbG9yLnJlZCkKICAgICAgICBkaXNwbGFjZW1lbnRfbGluZTogUnVsZShwMTogVmVjMigwLjA5LCAwLjIpLCBwMjogVmVjMigwLjI1NSwgMC4yKSwgY29sb3I6IENvbG9yLnJlZCwgbGVmdEVuZDogInBvaW50IiwgcmlnaHRFbmQ6ICJwb2ludCIpCgogICAgICAgIC8vIFZlbG9jaXR5IGZ1bmN0aW9ucwogICAgICAgIHZfdF9wb3M6IDQwICogKHgveCkKICAgICAgICB2X3RfbmVnOiAtNDAgKiAoeC94KQoKICAgICAgICAvLyBWZWxvY2l0eSBncmFwaCB3aXRoIHNoYWRlZCBhcmVhcwogICAgICAgIGFyZWExOiBBVUModl90X3BvcywgY29sb3I6IENvbG9yLmJsdWUsIGRvbWFpbjogSW50ZXJ2YWwoMCwgMyksIHJhbmdlOiBJbnRlcnZhbCgwLCA0MCksIG9wYWNpdHk6IDAuMykKICAgICAgICB0b3AxOiBITGluZSh5OiA0MCwgZG9tYWluOiBJbnRlcnZhbCgwLCAzKSwgY29sb3I6IENvbG9yLm9yYW5nZSkKICAgICAgICBhcmVhMjogQVVDKHZfdF9uZWcsIGNvbG9yOiBDb2xvci5ncmVlbiwgZG9tYWluOiBJbnRlcnZhbCgzLCA1KSwgcmFuZ2U6IEludGVydmFsKC00MCwgMCksIG9wYWNpdHk6IDAuMywgaW52ZXJ0OiB0cnVlKQogICAgICAgIGJvdHRvbTI6IEhMaW5lKHk6IC00MCwgZG9tYWluOiBJbnRlcnZhbCgzLCA1KSwgY29sb3I6IENvbG9yLm9yYW5nZSkKICAgICAgICBkaXY6IFZMaW5lKHg6IDMsIGRvbWFpbjogSW50ZXJ2YWwoLTQwLCA0MCksIGRhc2hlZDogdHJ1ZSwgY29sb3I6IENvbG9yLmJsdWUsIHJhbmdlOiBJbnRlcnZhbCgtNDAsIDQwKSkKCiAgICAgICAgdmVsb2NpdHlfZ3JhcGg6IEdyYXBoKAogICAgICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgICAgICAgYXJlYTEKICAgICAgICAgICAgICAgIHRvcDEKICAgICAgICAgICAgICAgIGFyZWEyCiAgICAgICAgICAgICAgICBib3R0b20yCiAgICAgICAgICAgICAgICBkaXYKICAgICAgICAgICAgXQogICAgICAgICAgICBkb21haW46IEludGVydmFsKDAsIDYsIDEpCiAgICAgICAgICAgIHJhbmdlOiBJbnRlcnZhbCgtNTAsIDUwLCAxMCkKICAgICAgICAgICAgeEF4aXM6IFRleHQoIlxuXG5cblxuJHQkIChob3VycykiKQogICAgICAgICAgICB5QXhpczogVGV4dCgiJHYodCkkIChtcGgpIikKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4xLCAwLjQpCiAgICAgICAgICAgIHNpemU6IFZlYzIoMC42LCAwLjUpCiAgICAgICAgICAgIGluZGVudDogZmFsc2UKICAgICAgICApCgogICAgICAgIC8vIFRleHQgbGFiZWxzIG9uIHZlbG9jaXR5IGdyYXBoCiAgICAgICAgZHJpdmVzX2Vhc3Q6IFRleHQoImRyaXZlcyBlYXN0IGZvciAzIGhvdXJzIiwgcG9zaXRpb246IFZlYzIoMC4xNTUsIDAuNCksIGNvbG9yOiBDb2xvci5ibHVlKQogICAgICAgIGRyaXZlc193ZXN0OiBUZXh0KCJkcml2ZXMgd2VzdCBmb3IgMiBob3VycyIsIHBvc2l0aW9uOiBWZWMyKDAuNDA1LCAwLjg1KSwgY29sb3I6IENvbG9yLmdyZWVuKQogICAgICAgIHZfbGFiZWw6IFRleHQoIiR2KHQpJCIsIHBvc2l0aW9uOiBWZWMyKDAuNCwgMC40KSwgY29sb3I6IENvbG9yLm9yYW5nZSkKCiAgICAgICAgbWlsZXNfMTIwX2xhYmVsOiBUZXh0KCIxMjAgbWlsZXMiLCBwb3NpdGlvbjogVmVjMigwLjIsIDAuNTIpLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICBtaWxlc184MF9sYWJlbDogVGV4dCgiODAgbWlsZXMiLCBwb3NpdGlvbjogVmVjMigwLjQ2LCAwLjczKSwgY29sb3I6IENvbG9yLmdyZWVuKQoKICAgICAgICAvLyBSaWdodCBzaWRlIGNhbGN1bGF0aW9uCiAgICAgICAgeFN0YXJ0OiAwLjY4CiAgICAgICAgeVN0YXJ0OiAwLjM4CiAgICAgICAgb2Zmc2V0OiAwLjA4CiAgICAgICAgc3BhY2luZzogMC4wOAogICAgICAgIHNwYWNlOiBUZXh0KCIkXHRleHR7IH0kIikKCiAgICAgICAgY2FsY190aXRsZTogVGV4dCgiTmV0IGNoYW5nZToiLCBwb3NpdGlvbjogVmVjMih4U3RhcnQsIHlTdGFydCkpCgogICAgICAgIGNhbGNfbGluZTE6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiRzKDUpJCIsIGNvbG9yOiBDb2xvci5ibHVlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJCAtICQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJHMoMCkkIiwgY29sb3I6IENvbG9yLmJsdWUpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkPSQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJFxpbnRfMF41JCIpLAogICAgICAgICAgICAgICAgc3BhY2UsCiAgICAgICAgICAgICAgICBUZXh0KCIkdih0KSQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJGR0JCIpCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKHhTdGFydCwgeVN0YXJ0ICsgc3BhY2luZykKICAgICAgICApCgogICAgICAgIGNhbGNfbGluZTI6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiQ9IFxpbnRfMF4zJCIpCiAgICAgICAgICAgICAgICBzcGFjZQogICAgICAgICAgICAgICAgVGV4dCgiJDQwJCIsIGNvbG9yOiBDb2xvci5vcmFuZ2UpCiAgICAgICAgICAgICAgICBzcGFjZQogICAgICAgICAgICAgICAgVGV4dCgiJGR0ICsgXGludF8zXjUkIikKICAgICAgICAgICAgICAgIHNwYWNlCiAgICAgICAgICAgICAgICBUZXh0KCIkKC00MCkkIiwgY29sb3I6IENvbG9yLm9yYW5nZSkKICAgICAgICAgICAgICAgIHNwYWNlCiAgICAgICAgICAgICAgICBUZXh0KCIkZHQkIikKICAgICAgICAgICAgXSwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoeFN0YXJ0ICsgb2Zmc2V0LCB5U3RhcnQgKyBzcGFjaW5nICogMikKICAgICAgICApCgogICAgICAgIGNhbGNfbGluZTNfcDE6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiQgXGludF8wXjMkIikKICAgICAgICAgICAgICAgIFRleHQoIiQ0MCQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKQogICAgICAgICAgICAgICAgc3BhY2UKICAgICAgICAgICAgICAgIFRleHQoIiRkdCQiKQogICAgICAgICAgICBdLAogICAgICAgICAgICBvcGFjaXR5OiAwCiAgICAgICAgKQoKICAgICAgICBjYWxjX2xpbmUzX3AyOiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCIkXGludF8zXjUkIikKICAgICAgICAgICAgICAgIFRleHQoIiQoLTQwKSQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKQogICAgICAgICAgICAgICAgc3BhY2UKICAgICAgICAgICAgICAgIFRleHQoIiRkdCQiKQogICAgICAgICAgICBdLAogICAgICAgICAgICBvcGFjaXR5OiAwCiAgICAgICAgKQoKICAgICAgICBjYWxjX2xpbmUzOiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCIkPSQiKQogICAgICAgICAgICAgICAgY2FsY19saW5lM19wMS5jb3B5KG9wYWNpdHk6IDEpCiAgICAgICAgICAgICAgICBUZXh0KCIkICsgJCIpCiAgICAgICAgICAgICAgICBjYWxjX2xpbmUzX3AyLmNvcHkob3BhY2l0eTogMSkKICAgICAgICAgICAgXSwKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoeFN0YXJ0ICsgb2Zmc2V0LCB5U3RhcnQgKyBzcGFjaW5nICogMykKICAgICAgICApCgogICAgICAgIGNhbGNfcmVzdWx0OiBUZXh0KAogICAgICAgICAgICBjb250ZW50OiBbCiAgICAgICAgICAgICAgICBUZXh0KCIkPSQiKSwKICAgICAgICAgICAgICAgIHNwYWNlLAogICAgICAgICAgICAgICAgVGV4dCgiJFwsXCw0MCQgbWlsZXMgJFwsJCIpCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKHhTdGFydCArIG9mZnNldCwgeVN0YXJ0ICsgc3BhY2luZyAqIDMuNykKICAgICAgICApCgogICAgKSB7CiAgICAgICAgcDEuaGlkZSgpCiAgICAgICAgcDIuaGlkZSgpCiAgICAgICAgbnVtYmVyX2xpbmUuaGlkZSgpCiAgICAgICAgY2FyLmhpZGUoKQogICAgICAgIHN0YXJ0X2xhYmVsLmhpZGUoKQogICAgICAgIGVuZF9sYWJlbC5oaWRlKCkKICAgICAgICBkaXNwbGFjZW1lbnRfdGV4dC5oaWRlKCkKICAgICAgICBkaXNwbGFjZW1lbnRfbGluZS5oaWRlKCkKICAgICAgICBhcmVhMS5oaWRlKCkKICAgICAgICB0b3AxLmhpZGUoKQogICAgICAgIGFyZWEyLmhpZGUoKQogICAgICAgIGJvdHRvbTIuaGlkZSgpCiAgICAgICAgZGl2LmhpZGUoKQogICAgICAgIHZlbG9jaXR5X2dyYXBoLmhpZGUoKQogICAgICAgIGRyaXZlc19lYXN0LmhpZGUoKQogICAgICAgIGRyaXZlc193ZXN0LmhpZGUoKQogICAgICAgIHZfbGFiZWwuaGlkZSgpCiAgICAgICAgbWlsZXNfMTIwX2xhYmVsLmhpZGUoKQogICAgICAgIG1pbGVzXzgwX2xhYmVsLmhpZGUoKQogICAgICAgIHNwYWNlLmhpZGUoKQogICAgICAgIGNhbGNfdGl0bGUuaGlkZSgpCiAgICAgICAgY2FsY19saW5lMS5oaWRlKCkKICAgICAgICBjYWxjX2xpbmUyLmhpZGUoKQogICAgICAgIGNhbGNfbGluZTMuaGlkZSgpCiAgICAgICAgY2FsY19yZXN1bHQuaGlkZSgpCiAgICB9CgogICAgQW5pbWF0ZSgpIHsKICAgICAgICAvLyAxLWEKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1hX3ZlbG9jaXR5X2FuZF9kaXNwbGFjZW1lbnQubXAzIikKICAgICAgICBudW1iZXJfbGluZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBwMS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBzdGFydF9sYWJlbC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBjYXIuc2hvdygpCiAgICAgICAgc2VnX2JsdWVfZW5kLmludGVycG9sYXRlKDEyMCwgZHVyYXRpb246IDMwMDAsIGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBjYXJfZW5kLmludGVycG9sYXRlKDAuNTYsIGR1cmF0aW9uOiAzMDAwKQogICAgICAgIGNhci5zb3VyY2UgPSAiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0L3JlZF9jYXJfcmV2ZXJzZWQucG5nIgogICAgICAgIHNlZ19ncmVlbl9zdGFydC5pbnRlcnBvbGF0ZSgxMjAsIGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBzZWdfZ3JlZW5fZW5kLmludGVycG9sYXRlKDQwLCBkdXJhdGlvbjogMjAwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGNhcl9lbmQuaW50ZXJwb2xhdGUoMC4yMywgZHVyYXRpb246IDIwMDApCiAgICAgICAgcDIuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgZW5kX2xhYmVsLnNob3coKQogICAgICAgIHdhaXQoMTAwMCkKICAgICAgICB2ZWxvY2l0eV9ncmFwaC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICB2X2xhYmVsLnNob3coKQogICAgICAgIHdhaXQoMTAwMCkKICAgICAgICBhcmVhMS5vcGFjaXR5LmludGVycG9sYXRlKDAuMywgYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIHRvcDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgZHJpdmVzX2Vhc3Quc2hvdygpCiAgICAgICAgd2FpdCgzMDAwKQogICAgICAgIGFyZWEyLm9wYWNpdHkuaW50ZXJwb2xhdGUoMC4zLCBibG9ja2luZzogZmFsc2UpCiAgICAgICAgYm90dG9tMi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBkaXYuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICAgICAgZHJpdmVzX3dlc3Quc2hvdygpCiAgICAgICAgd2FpdCgzMDAwKQoKICAgICAgICAvLyAxLWIKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1iX3ZlbG9jaXR5X2FuZF9kaXNwbGFjZW1lbnQubXAzIikKICAgICAgICBjYWxjX3RpdGxlLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGNhbGNfbGluZTEuc2hvdygpCiAgICAgICAgd2FpdCgxMTAwMCkKCiAgICAgICAgLy8gMS1jCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtY192ZWxvY2l0eV9hbmRfZGlzcGxhY2VtZW50Lm1wMyIpCiAgICAgICAgd2FpdCgxMDAwKQogICAgICAgIGNhbGNfdGl0bGUuY29udGVudCA9ICJEaXNwbGFjZW1lbnQgKG5ldCBjaGFuZ2UpOiIKICAgICAgICBkaXNwbGFjZW1lbnRfdGV4dC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBkaXNwbGFjZW1lbnRfbGluZS5zaG93KCkKICAgICAgICB3YWl0KDcwMDApCgogICAgICAgIC8vIDEtZAogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWRfdmVsb2NpdHlfYW5kX2Rpc3BsYWNlbWVudC5tcDMiKQogICAgICAgIHdhaXQoMjAwMCkKICAgICAgICBjYWxjX2xpbmUyLnNob3coKQogICAgICAgIHdhaXQoNDAwMCkKCiAgICAgICAgLy8gMS1lCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtZV92ZWxvY2l0eV9hbmRfZGlzcGxhY2VtZW50Lm1wMyIpCiAgICAgICAgY2FsY19saW5lMy5zaG93KCkKICAgICAgICBjYWxjX2xpbmUzLmNvbnRlbnRbMV0uaGlkZSgpCiAgICAgICAgY2FsY19saW5lMy5jb250ZW50LnJlbW92ZSgxKQogICAgICAgIGNhbGNfbGluZTMuY29udGVudC5pbnNlcnQoaW5kZXg6IDEsIHZhbHVlOiBUZXh0KCIkXCxcLDEyMFwsXCwkIikpCiAgICAgICAgY2FsY19saW5lMy5jb250ZW50WzFdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIG1pbGVzXzEyMF9sYWJlbC5zaG93KCkKICAgIH0KICAgIFF1ZXN0aW9uKGlkOiAiICIsIHR5cGU6ICJzaG9ydEFuc3dlciIpIHt9Cn0KClNjZW5lKCkgewogICAgSW5pdCgKICAgICkgewogICAgfQogICAgQW5pbWF0ZSgpIHsKICAgICAgICAvLyAyLWEKICAgICAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMi1hX3ZlbG9jaXR5X2FuZF9kaXNwbGFjZW1lbnQubXAzIikKICAgICAgICB3YWl0KDIwMDApCiAgICAgICAgY2FsY19saW5lMy5jb250ZW50WzJdLmhpZGUoYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGNhbGNfbGluZTMuY29udGVudFszXS5oaWRlKCkKICAgICAgICBjYWxjX2xpbmUzLmNvbnRlbnQucmVtb3ZlKDIpCiAgICAgICAgY2FsY19saW5lMy5jb250ZW50LnJlbW92ZSgyKQogICAgICAgIGNhbGNfbGluZTMuY29udGVudC5pbnNlcnQoaW5kZXg6IDIsIHZhbHVlOiBUZXh0KCIkLSQiKSkKICAgICAgICBjYWxjX2xpbmUzLmNvbnRlbnQuaW5zZXJ0KGluZGV4OiAzLCB2YWx1ZTogVGV4dCgiJFwsXCw4MFwsXCwkIikpCiAgICAgICAgY2FsY19saW5lMy5jb250ZW50WzJdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgICAgIGNhbGNfbGluZTMuY29udGVudFszXS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBtaWxlc184MF9sYWJlbC5zaG93KCkKICAgICAgICB3YWl0KDEwMDApCiAgICAgICAgLy8gMi1iCiAgICAgICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYl92ZWxvY2l0eV9hbmRfZGlzcGxhY2VtZW50Lm1wMyIpCiAgICAgICAgd2FpdCgxMDAwKQogICAgICAgIGNhcl9lbmQgPSAwLjA2NQogICAgICAgIGNhci5zb3VyY2UgPSAiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0L3JlZF9jYXIucG5nIgogICAgICAgIGNhcl9lbmQuaW50ZXJwb2xhdGUoMC41NiwgZHVyYXRpb246IDMwMDApCiAgICAgICAgY2FyLnNvdXJjZSA9ICJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvcmVkX2Nhcl9yZXZlcnNlZC5wbmciCiAgICAgICAgY2FyX2VuZC5pbnRlcnBvbGF0ZSgwLjIzLCBkdXJhdGlvbjogMjAwMCkKICAgICAgICBjYWxjX3Jlc3VsdC5zaG93KCkKICAgICAgICB3YWl0KDIwMDApCgogICAgICAgIC8vIDItYwogICAgICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWNfdmVsb2NpdHlfYW5kX2Rpc3BsYWNlbWVudC5tcDMiKQogICAgICAgIHdhaXQoMjAwMCkKICAgICAgICBjYWxjX3Jlc3VsdC5jb250ZW50WzJdLmRyYXdPdXRsaW5lKGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBkaXNwbGFjZW1lbnRfdGV4dC5wb3NpdGlvbi5tb3ZlKFZlYzIoMC4wNiwgMC4yMyksIGJsb2NraW5nOiBmYWxzZSkKICAgICAgICBkaXNwbGFjZW1lbnRfdGV4dC5jb250ZW50ID0gIkRpc3BsYWNlbWVudDogNDAgbWlsZXMgZWFzdCIKICAgIH0KfQo=
+Integrating gives
+\displaystyle \int_3^5 (-40) \, dt = \underline{\phantom{XXXXXX}} \text{.}
+Integrating gives
+\displaystyle \int_3^5 (-40) \, dt = (-40t) {\large|}_3^5
+Complete the integration by substituting the endpoints to get
+(-40t) {\large|}_3^5 = (-40(5)) - (-40(3))
+and simplifying.
+Integrating and simplifying gives:
+\begin{align*}
+          \displaystyle \int_3^5 (-40) \, dt &= (-40t) {\large|}_3^5 \\
+          &= (-40(5)) - (-40(3)) \\
+          &= -200 + 120 \\
+          &= -80
+        \end{align*}
+A car travels north at
+60\text{ mph}
+for
+2\text{ hours.}
+The car then turns around and travels south at
+40\text{ mph}
+for
+3\text{ hours.}
+Find the car’s displacement at the end of the drive.
+The car’s velocity at time
+t
+(in hours) can be described using the function
+\underline{\phantom{XXXXXX}} \text{.}
+v(t) = \begin{cases}  60 \qquad 0 \leq t <2 \quad \\ 40 \qquad 2 < t \leq 5 \quad \end{cases}
+Velocity includes direction. The car changes direction after
+2\text{ hours,}
+so the velocity will change signs at
+t = 2.
+v(t) = \begin{cases} \, \, \, \, 60 \qquad 0 \leq t <2 \quad  \\ -40 \qquad 2 < t \leq 5 \quad  \end{cases}
+Driving north corresponds to a positive velocity. Driving south corresponds to a negative velocity. Therefore, the the velocity of the car is
++60\text{ mph}
+for the first
+2\text{ hours}
+and
+-40\text{ mph}
+for the last
+3\text{ hours.}
+v(t) = \begin{cases} 2 \qquad 0 \leq t  \leq 60 \quad \\ 3 \qquad 0 \leq t \leq 40 \quad \end{cases}
+This option indicates the car was driving at
+2\text{ mph}
+for
+60 \text{ hours}
+and
+3\text{ mph}
+for
+40\text{ hours.}
+Instead, the car drives at
+60\text{ mph}
+for
+2\text{ hours,}
+and then
+40\text{ mph}
+for
+3\text{ hours.}
+The car’s velocity at time
+t
+(in hours) is
+v(t) = \begin{cases} \, \, \, \, 60 \qquad 0 \leq t <2 \quad \\ -40 \qquad 2 < t \leq 5 \quad \end{cases}
+The car’s displacement at the end of the
+5\text{-hour}
+drive can be found using
+\underline{\phantom{XXXXXX}} \text{.}
+\displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 (-40) \, dt
+The car’s velocity is
+60\text{ mph}
+from
+t = 0
+to
+t = 2\text{ hours}
+and
+-40\text{ mph}
+from
+t = 2
+to
+t = 5\text{ hours}
+Displacement is the net change in velocity, so the car’s displacement can be found using the integral
+\displaystyle \int_0^5 v(t) \, dt =  \displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 (-40) \, dt
+\displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 40 \, dt
+The second integral,
+\displaystyle \int_2^5 40 \ dt,
+is missing a negative sign. The car travels south, so the velocity is negative from
+t=2
+to
+t = 5.
+\displaystyle \int_0^2 (-40) \, dt + \displaystyle \int_2^5 60 \, dt
+This option indicates the car drives south at
+40\text{ mph}
+for
+2\text{ hours}
+and north at
+60\text{ mph}
+for
+3\text{ hours.}
+Instead, the car drives north at
+60\text{ mph}
+from
+t = 0
+to
+t = 2,
+then drives south at
+40\text{ mph}
+from
+t =2
+to
+t = 5.
+\displaystyle \int_0^2 40 \, dt + \displaystyle \int_2^5 60 \, dt
+This option indicates the car drives at
+40\text{ mph}
+for
+2\text{ hours}
+and
+60\text{ mph}
+for
+3\text{ hours.}
+Instead, the car drives at
+60\text{ mph}
+for
+2\text{ hours}
+and
+40\text{ mph}
+for
+3\text{ hours.}
+Also, velocity includes direction, so one of the integrals will have a negative sign.
+The car’s displacement at the end of the
+5\text{-hour}
+drive is
+\displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 (-40) \, dt  = 60t {\Large|}_0^2 + (-40t) {\Large|}_2^5
+So the displacement is
+\underline{\phantom{XXXXXX}} \text{.}
+The car’s displacement is
+\begin{align*} \displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 (-40) \, dt  & = 60t {\Large|}_0^2 + (-40t) {\Large|}_2^5 \\& = \left(60(2) - 60(0) \right) +  \left( -40(5) - (-40)(2) \right) \\& = (120 - 0) + (-200 + 80) \\& = 0 \text{ miles}\end{align*}
+Velocity is 60 from t = 0 to t = 2 and -40 from t = 2 to t = 5. Area under velocity is +120 from t = 0 to t = 2 and -120 from t = 2 to t = 5.
+Substitute
+t = 0
+and
+t = 2
+in
+60t,
+and
+t = 2
+and
+t = 5
+in
+(-40t) \text{.}
+After substituting, the displacement is
+\left(60(2) - 60(0) \right) +  \left( -40(5) - (-40)(2) \right) \text{.}
+Now simplify.
+miles
+The car’s displacement is
+0 \text{ miles}
+miles. So the car ends the drive
+\underline{\phantom{XXXXXX}}
+where the car started the drive.
+north of
+The car ends the drive north of where the car started if the displacement is positive, not
+0.
+south of
+The car ends the drive south of where the car started if the displacement is negative, not
+0.
+exactly
+The displacement is
+0\text{ miles,}
+so the distance between where the car starts and ends the drive is
+0\text{ miles.}
+The car ends the drive exactly where the car started the drive.
+A particle moves along a straight line with a velocity (in m/s)
+v(t) = 2t - 6 \text{.}
+Find the particle’s displacement between
+0
+and
+4\text{ seconds.}
+The velocity function
+v(t) = 2t - 6
+is
+\underline{\phantom{XXXXXX}}
+on the interval
+[0, 4].
+always positive
+The velocity function is not positive on the entire interval
+[0, 4].
+Ex:
+v(0) = 2(0) - 6 = -6,
+so the velocity is negative at time
+t = 0\text{ seconds.}
+always negative
+The velocity function is not negative on the entire interval
+[0, 4].
+Ex:
+v(4) = 2(4) - 6 = 2,
+so the velocity is positive at time
+t = 4\text{ seconds.}
+sometimes positive and sometimes negative
+The velocity function
+v(t) = 2t  - 6 = 0
+when
+t = 3\text{ seconds.}
+If
+t < 3,
+then the velocity is negative. If
+t >3,
+then the velocity is positive. So the velocity is sometimes positive and sometimes negative on
+[0,4].
+Graph of the velocity function v(t) = 2t - 6
+To find the particle’s displacement using the Net Change Theorem, integrate
+v^\prime(t) = 2t -6
+to get
+\displaystyle \int_0^{4} (2t - 6) \, dt = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_0^{4}
+An antiderivative of
+2t
+is
+t^2
+by the constant multiple and power rules. An antiderivative of
+-6
+is
+-6t
+by the constant rule.
+Using these antiderivatives and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_0^{4} (2t-6) \, dt = (t^2 - 6t) {\Large|}_0^{4}
+To integrate, find an antiderivative of
+(2t -6)
+using the constant and power rules for integrals. Note that the integration is taking place with respect to the variable
+t.
+Do not include the arbitrary constant,
++ C,
+when working with a definite integral.
+100
+t
+1
+t
+-1
+t
+The car’s displacement over
+[0, 4]
+is
+\displaystyle \int_0^{4} (2t - 6) \, dt = (t^2 - 6t) {\Large|}_0^{4}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}} \text{.}
+Completing the integration gives the displacement over
+[0, 4] \text{:}
+\begin{align*} \displaystyle \int_0^{4} (2t - 6) \, dt & = (t^2 - 6t) {\Large|}_0^{4} \\& = \left( 4^2 - 6(4) \right) - \left(0^2 - 6(0) \right) \\& =(16 - 24) - (0 - 0) \\ & = -8\end{align*}
+So the particle’s displacement is
+-8\text{ meters.}
+If movement to the right corresponds to a positive velocity, and movement to the left corresponds to a negative velocity, then the particle ends
+8\text{ meters}
+to the left of where the particle starts.
+The negative value makes sense when considering the graph of
+v(t).
+Note that the area below the
+t
+-axis is larger than the area above the
+t
+-axis.
+Signed area under v(t) = 2t - 6 from t = 0 to t=4
+Substitute the limits of integration,
+t = 0
+and
+t = 4,
+into
+(t^2 - 6t) \text{.}
+After substituting, the displacement is
+\left( 4^2 - 6(4) \right) - \left(0^2 - 6(0) \right) \text{.}
+meters
+A ball is thrown straight up in the air. The velocity of the ball at time
+t
+is given by
+v(t) = 64 - 32t
+feet per second. Find the ball’s displacement between
+t = 1
+and
+t = 3\text{ seconds.}
+The ball’s displacement over
+[1, 3]
+can be found using
+\underline{\phantom{XXXXXX}} \text{.}
+\displaystyle \int_1^3 {\large|} 64 - 32t {\large|} \, dt
+Using an absolute value around the velocity function ignores the direction of travel. The direction of travel will affect displacement, so do not include an absolute value in the integral.
+\displaystyle \int_1^2 (64 - 32t) \, dt + \displaystyle \int_2^3 -(64 - 32t) \, dt
+The velocity function changes from positive to negative at
+t = 2.
+If
+(64 - 32t)
+is negative on
+[ 2, 3],
+then
+-(64 - 32t)
+is positive on
+[2, 3].
+This option always integrates a positive function, so the direction of travel is not included. The direction of travel will affect displacement, so be sure to integrate positive functions.
+\displaystyle \int_1^3 (64 - 32t) \, dt
+The displacement over
+[1, 3]
+is equal to the integral of the velocity over
+[1, 3],
+or
+\displaystyle \int_1^3 (64 - 32t) \ dt \text{.}
+To find the ball’s displacement using the Net Change Theorem, integrate
+v^\prime(t) = 64 - 32t
+to get
+\displaystyle \int_1^{3} (64-32t) \, dt = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_1^{3}
+An antiderivative of
+64
+is
+64t
+by the constant rule. An antiderivative of
+-32t
+is
+-16t^2
+by the constant  multiple and power rules.
+Using these antiderivatives and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_1^{3} (64 - 32t) \, dt = (64t - 16t^2) {\Large|}_1^{3}
+To integrate, find an antiderivative of
+(64 - 32t)
+using the constant and power rules for integrals. The goal is to integrate with respect to the variable
+t \text{.}
+Do not include the arbitrary constant,
++ C \text{,}
+when working with a definite integral.
+100
+t
+1
+t
+-1
+t
+The ball’s displacement over
+[1, 3]
+is
+\displaystyle \int_1^{3} (64 - 32t) \, dt = (64t - 16t^2) {\Large|}_1^{3}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}} \text{.}
+Completing the integration gives the displacement over
+[1, 3] \text{:}
+\begin{align*} \displaystyle \int_1^{3} (64 - 32t) \, dt & = (64t - 32t^2) {\Large|}_1^{3} \\& = \left( 64(3) - 16(3^2) \right) - \left(64(1) - 16(1^2) \right)\\& =(192 - 144) - (64 - 16) \\ & = 0\end{align*}
+The ball’s displacement is
+0\text{ meters,}
+so the ball ends at the same height at which it started.
+A displacement of
+0
+makes sense when considering the graph of
+v(t).
+Note that the area below the
+t
+-axis is equal to the area above the
+t
+-axis.
+Signed area under v(t) = 64 - 32t from t = 1 to t=3
+Substitute the limits of integration,
+t = 1
+and
+t = 3 \text{,}
+into
+(64t - 16t^2) \text{.}
+After substituting, the displacement is
+\left( 192 - 144 \right) - \left(64 - 16 \right) \text{.}
+meters
+Lesson summary
+Speed describes how fast an object moves.
+Velocity describes both how fast and in what direction an object moves.
+The integral of velocity over
+[a,b ] \text{,}
+or
+\displaystyle \int_a^b v(t) \, dt,
+gives displacement, or net change in position,
+s(b) - s(a) \text{.}
+Displacement depends on the direction of motion.
+Speed and total distance traveled
+Unlike velocity, speed does not take the direction of motion into account. Speed only tells us how fast an object is moving. The previous lesson explained that integrating the velocity yields displacement.
+Integrating the speed, or absolute value of velocity, will give the total distance traveled. The absolute value ensures that the direction of travel does not affect the total distance.
+Ex: A car travels east at
+40\text{ mph}
+for
+3\text{ hours,}
+then turns around and travels west at
+40\text{ mph}
+for
+2\text{ hours.}
+While the velocity of the car changes signs, the speed of the car is a constant
+40\text{ mph.}
+Integrating the speed function over
+[0, 5]
+will give the total number of miles traveled by the car during the
+5\text{-hour}
+trip.
+This lesson will demonstrate how to integrate speed to find the total distance traveled.
+Todo
+Ly8gQ1REOiBBcmNoaWUKLy8gQ3JlYXRlZCAxMC8yLzI1CgpDYW52YXMod2luZG93czogMCkKU2NlbmUoKSB7CiAgICBJbml0KAogICAgICAgIC8vIE51bWJlciBsaW5lCiAgICAgICAgcDE6IFBvaW50KFZlYzIoMCwgMCksIGNvbG9yOiBDb2xvci5yZWQpCiAgICAgICAgcDI6IFBvaW50KFZlYzIoMjAwLCAwKSwgY29sb3I6IENvbG9yLnJlZCkKICAgICAgICBjYXJfZW5kOiAwLjA2NQogICAgICAgIHNlZ19lbmQ6IDAKICAgICAgICAvLyBwX21vdmU6IFBvaW50KFZlYzIoMCwgYGVuZGApLCBjb2xvcjogQ29sb3IucmVkKQogICAgICAgIG51bWJlcl9saW5lOiBHcmFwaCgKICAgICAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgICAgICAgIEhMaW5lKHk6IDAsIHN0cm9rZTogMywgZG9tYWluOiBJbnRlcnZhbChzZWdfZW5kLCBgc2VnX2VuZGApLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICAgICAgICAgIHAxCiAgICAgICAgICAgICAgICBwMgogICAgICAgICAgICBdCiAgICAgICAgICAgIGRvbWFpbjogSW50ZXJ2YWwoLTEwLCAyMTAsIDEwKQogICAgICAgICAgICByYW5nZTogSW50ZXJ2YWwoLTEsIDEsIDEpCiAgICAgICAgICAgIHhBeGlzOiBUZXh0KCJcblxuXG5cbm1pbGVzIikKICAgICAgICAgICAgc2hvd1lBeGlzOiBmYWxzZQoKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4wNSwgMC4wOCkKICAgICAgICAgICAgc2l6ZTogVmVjMigwLjksIDAuMDgpCiAgICAgICAgICAgIGluZGVudDogZmFsc2UKICAgICAgICApCgogICAgICAgIGNhcjogSW1hZ2Uoc291cmNlOiAiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0L3JlZF9jYXIucG5nIiwgc2NhbGU6IDAuNSwgcG9zaXRpb246IFZlYzIoYGNhcl9lbmRgLCAwLjA1KSkKCiAgICAgICAgLy8gU3RhcnQgYW5kIEVuZCBsYWJlbHMKICAgICAgICBzdGFydF9sYWJlbDogVGV4dCgiU3RhcnQiLCBwb3NpdGlvbjogVmVjMigwLjA2LCAwLjAyKSwgY29sb3I6IENvbG9yLnJlZCkKICAgICAgICBlbmRfbGFiZWw6IFRleHQoIkVuZCIsIHBvc2l0aW9uOiBWZWMyKDAuODg1LCAwLjAyKSwgY29sb3I6IENvbG9yLnJlZCkKCiAgICAgICAgLy8gRGlzdGFuY2UgdHJhdmVsZWQKICAgICAgICBkaXN0YW5jZV90ZXh0OiBUZXh0KCJEaXN0YW5jZSB0cmF2ZWxlZDoiLCBwb3NpdGlvbjogVmVjMigwLjQsIDAuMjMpLCBjb2xvcjogQ29sb3IucmVkKQogICAgICAgIGRpc3RhbmNlX2xpbmU6IFJ1bGUocDE6IFZlYzIoMC4wOSwgMC4yKSwgcDI6IFZlYzIoMC45MSwgMC4yKSwgY29sb3I6IENvbG9yLnJlZCwgbGVmdEVuZDogInBvaW50IiwgcmlnaHRFbmQ6ICJwb2ludCIpCgogICAgICAgIC8vIERpc3BsYWNlbWVudAogICAgICAgIGRpc3BsYWNlbWVudF90ZXh0OiBUZXh0KCJEaXNwbGFjZW1lbnQiLCBwb3NpdGlvbjogVmVjMigwLjEyLCAwLjIzKSkKICAgICAgICBkaXNwbGFjZW1lbnRfbGluZTogUnVsZShwMTogVmVjMigwLjA5LCAwLjIpLCBwMjogVmVjMigwLjI1NSwgMC4yKSwgbGVmdEVuZDogInBvaW50IiwgcmlnaHRFbmQ6ICJwb2ludCIpCgogICAgICAgIC8vIFZlbG9jaXR5IGZ1bmN0aW9uIChjb25zdGFudCBhdCA0MCBmb3IgMyBob3VycywgdGhlbiBjb25zdGFudCBhdCA0MCBmb3IgMiBtb3JlIGhvdXJzKQogICAgICAgIHZfdDogNDAgKiAoeC94KQoKICAgICAgICAvLyBWZWxvY2l0eSBncmFwaCB3aXRoIHNoYWRlZCBhcmVhcwogICAgICAgIGFyZWExOiBBVUModl90LCBjb2xvcjogQ29sb3IuYmx1ZSwgZG9tYWluOiBJbnRlcnZhbCgwLCAzKSwgcmFuZ2U6IEludGVydmFsKDAsNDApLCBvcGFjaXR5OiAwLjMpCiAgICAgICAgdG9wMTogSExpbmUoeTogNDAsIGRvbWFpbjogSW50ZXJ2YWwoMCwgMyksIGNvbG9yOiBDb2xvci5vcmFuZ2UpCiAgICAgICAgYXJlYTI6IEFVQyh2X3QsIGNvbG9yOiBDb2xvci5ibHVlLCBkb21haW46IEludGVydmFsKDMsIDUpLCByYW5nZTogSW50ZXJ2YWwoMCw0MCksIG9wYWNpdHk6IDAuMykKICAgICAgICB0b3AyOiBITGluZSh5OiA0MCwgZG9tYWluOiBJbnRlcnZhbCgzLCA1KSwgY29sb3I6IENvbG9yLm9yYW5nZSkKICAgICAgICBkaXY6IFZMaW5lKHg6IDMsIGRvbWFpbjogSW50ZXJ2YWwoMCwgNDApLCBkYXNoZWQ6IHRydWUsIGNvbG9yOiBDb2xvci5ibHVlLCByYW5nZTogSW50ZXJ2YWwoMCw0MCkpCiAgICAgICAgCiAgICAgICAgdmVsb2NpdHlfZ3JhcGg6IEdyYXBoKAogICAgICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgICAgICAgYXJlYTEKICAgICAgICAgICAgICAgIHRvcDEKICAgICAgICAgICAgICAgIGFyZWEyCiAgICAgICAgICAgICAgICB0b3AyCiAgICAgICAgICAgICAgICBkaXYgICAgICAgIAogICAgICAgICAgICBdCiAgICAgICAgICAgIGRvbWFpbjogSW50ZXJ2YWwoMCwgNiwgMSkKICAgICAgICAgICAgcmFuZ2U6IEludGVydmFsKC05LCA1MCwgMTApCiAgICAgICAgICAgIHhBeGlzOiBUZXh0KCJcblxuXG5cbiR0JCAoaG91cnMpIikKICAgICAgICAgICAgeUF4aXM6IFRleHQoInNwZWVkIChtcGgpIikKICAgICAgICAgICAgcG9zaXRpb246IFZlYzIoMC4xLCAwLjQpCiAgICAgICAgICAgIHNpemU6IFZlYzIoMC42LCAwLjUpCiAgICAgICAgICAgIGluZGVudDogZmFsc2UKICAgICAgICApCgogICAgICAgIC8vIFRleHQgbGFiZWxzIG9uIHZlbG9jaXR5IGdyYXBoCiAgICAgICAgZHJpdmVzXzNoOiBUZXh0KCJkcml2ZXMgZm9yIDMgaG91cnMiLCBwb3NpdGlvbjogVmVjMigwLjE3NSwgMC40MyksIGNvbG9yOiBDb2xvci5ibHVlKQogICAgICAgIGRyaXZlc18yaDogVGV4dCgiZHJpdmVzIDIgbW9yZSBob3VycyIsIHBvc2l0aW9uOiBWZWMyKDAuNDIsIDAuNDMpLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICB2X2xhYmVsOiBUZXh0KCIkfHYodCl8JCIsIHBvc2l0aW9uOiBWZWMyKDAuNjAyLCAwLjQ1KSwgY29sb3I6IENvbG9yLm9yYW5nZSkKCiAgICAgICAgLy8gUmlnaHQgc2lkZSBjYWxjdWxhdGlvbgogICAgICAgIHhTdGFydDogMC42OAogICAgICAgIHlTdGFydDogMC40NQogICAgICAgIHNwYWNpbmc6IDAuMQogICAgICAgIHNwYWNlOiBUZXh0KCIkXHRleHR7IH0kIikKCiAgICAgICAgY2FsY190aXRsZTogVGV4dCgiRGlzdGFuY2UgdHJhdmVsZWQgKHRvdGFsIGNoYW5nZSk6IiwgcG9zaXRpb246IFZlYzIoeFN0YXJ0LCB5U3RhcnQgKyBzcGFjaW5nICogMC4yNSkpCgogICAgICAgIGNhbGNfbGluZTE6IFRleHQoCiAgICAgICAgICAgIGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiRcaW50XzBeNSB8JCIpLAogICAgICAgICAgICAgICAgVGV4dCgiJHYodCkkIiwgY29sb3I6IENvbG9yLm9yYW5nZSksCiAgICAgICAgICAgICAgICBUZXh0KCIkfCBkdCQiKSwKICAgICAgICAgICAgICAgIC8vIHNwYWNlCiAgICAgICAgICAgICAgICAvLyBUZXh0KCIkID0gXGludF8wXjMgfCQiKSwKICAgICAgICAgICAgICAgIC8vIFRleHQoIiQ0MCQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwKICAgICAgICAgICAgICAgIC8vIFRleHQoIiR8IGR0ICsgXGludF8zXjUgfCQiKSwKICAgICAgICAgICAgICAgIC8vIFRleHQoIiQtNDAkIiwgY29sb3I6IENvbG9yLm9yYW5nZSksCiAgICAgICAgICAgICAgICAvLyBUZXh0KCIkfGR0JCIpCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgIHBvc2l0aW9uOiBWZWMyKHhTdGFydCwgeVN0YXJ0ICsgc3BhY2luZykKICAgICAgICApCgogICAgICAgIGNhbGNfbGluZTI6IFRleHQoIiQ9IDEyMCArIDgwJCIsIHBvc2l0aW9uOiBWZWMyKHhTdGFydCArIDAuMDc3LCB5U3RhcnQgKyBzcGFjaW5nICogMikpCgogICAgICAgIGNhbGNfcmVzdWx0OiBUZXh0KGNvbnRlbnQ6IFsKICAgICAgICAgICAgICAgIFRleHQoIiQ9JCIpLAogICAgICAgICAgICAgICAgc3BhY2UKICAgICAgICAgICAgICAgIFRleHQoIiRcLFwsMjAwJCBtaWxlcyAkXCwkIiksCiAgICAgICAgICAgIF0KICAgICAgICAgICAgcG9zaXRpb246ICBWZWMyKHhTdGFydCArIDAuMDc3LCB5U3RhcnQgKyBzcGFjaW5nICogMi41KQogICAgICAgICkKCiAgICApIHsKCQlwMS5oaWRlKCkKCQlwMi5oaWRlKCkKCQludW1iZXJfbGluZS5oaWRlKCkKCQljYXIuaGlkZSgpCgkJc3RhcnRfbGFiZWwuaGlkZSgpCgkJZW5kX2xhYmVsLmhpZGUoKQoJCWRpc3RhbmNlX3RleHQuaGlkZSgpCgkJZGlzdGFuY2VfbGluZS5oaWRlKCkKCQlkaXNwbGFjZW1lbnRfdGV4dC5oaWRlKCkKCQlkaXNwbGFjZW1lbnRfbGluZS5oaWRlKCkKCQlhcmVhMS5oaWRlKCkKCQl0b3AxLmhpZGUoKQoJCWFyZWEyLmhpZGUoKQoJCXRvcDIuaGlkZSgpCgkJZGl2LmhpZGUoKQoJCXZlbG9jaXR5X2dyYXBoLmhpZGUoKQoJCWRyaXZlc18zaC5oaWRlKCkKCQlkcml2ZXNfMmguaGlkZSgpCgkJdl9sYWJlbC5oaWRlKCkKCQlzcGFjZS5oaWRlKCkKCQljYWxjX3RpdGxlLmhpZGUoKQoJCWNhbGNfbGluZTEuaGlkZSgpCgkJY2FsY19saW5lMi5oaWRlKCkKCQljYWxjX3Jlc3VsdC5oaWRlKCkKCSB9CgogICBBbmltYXRlKCkgewogICAgLy8gMS1hCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1hX3NwZWVkX2FuZF90b3RhbF9kaXN0YW5jZV90cmF2ZWxlZC5tcDMiKQogICAgd2FpdCg0MDAwKQogICAgY2FsY190aXRsZS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIGNhbGNfbGluZTEuc2hvdygpCiAgICB3YWl0KDQwMDApCiAgICAKICAgIC8vIDEtYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYl9zcGVlZF9hbmRfdG90YWxfZGlzdGFuY2VfdHJhdmVsZWQubXAzIikKICAgIG51bWJlcl9saW5lLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgcDEuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBzdGFydF9sYWJlbC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIGNhci5zaG93KCkKICAgIHNlZ19lbmQuaW50ZXJwb2xhdGUoMTIwLCBkdXJhdGlvbjogMzAwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgY2FyX2VuZC5pbnRlcnBvbGF0ZSgwLjU2LCBkdXJhdGlvbjogMzAwMCkKICAgIHdhaXQoMTAwMCkKICAgIHNlZ19lbmQuaW50ZXJwb2xhdGUoMjAwLCBkdXJhdGlvbjogMjAwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgY2FyX2VuZC5pbnRlcnBvbGF0ZSgwLjg4NSwgZHVyYXRpb246IDIwMDApCiAgICBwMi5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIGVuZF9sYWJlbC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIGRpc3RhbmNlX3RleHQuc2hvdyhibG9ja2luZzogZmFsc2UpCglkaXN0YW5jZV9saW5lLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgCiAgICAvLyAxLWMKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWNfc3BlZWRfYW5kX3RvdGFsX2Rpc3RhbmNlX3RyYXZlbGVkLm1wMyIpCiAgICB3YWl0KDIwMDApCiAgICB2ZWxvY2l0eV9ncmFwaC5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIHZfbGFiZWwuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICBhcmVhMS5vcGFjaXR5LmludGVycG9sYXRlKDAuMywgYmxvY2tpbmc6IGZhbHNlKQogICAgdG9wMS5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIGRyaXZlc18zaC5zaG93KCkKICAgIHdhaXQoMjAwMCkKICAgIGFyZWEyLm9wYWNpdHkuaW50ZXJwb2xhdGUoMC4zLCBibG9ja2luZzogZmFsc2UpCiAgICB0b3AyLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgZGl2LnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgZHJpdmVzXzJoLnNob3coKQogICAgd2FpdCgzMDAwKQogICAgCiAgICAvLyAxLWQKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWRfc3BlZWRfYW5kX3RvdGFsX2Rpc3RhbmNlX3RyYXZlbGVkLm1wMyIpCiAgICB3YWl0KDMwMDApCiAgICBjYWxjX2xpbmUxLmNvbnRlbnQucHVzaChzcGFjZSkKICAgIGNhbGNfbGluZTEuY29udGVudC5wdXNoKFRleHQoIiQgPSBcaW50XzBeMyB8JCIpKQogICAgY2FsY19saW5lMS5jb250ZW50LnB1c2goVGV4dCgiJDQwJCIsIGNvbG9yOiBDb2xvci5vcmFuZ2UpKQogICAgY2FsY19saW5lMS5jb250ZW50LnB1c2goVGV4dCgiJHwgZHQgKyBcaW50XzNeNSB8JCIpKQogICAgY2FsY19saW5lMS5jb250ZW50LnB1c2goVGV4dCgiJC00MCQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSkKICAgIGNhbGNfbGluZTEuY29udGVudC5wdXNoKFRleHQoIiR8ZHQkIikpICAgIAogIH0KICBRdWVzdGlvbihpZDogIiAiLCB0eXBlOiAibXVsdGlwbGVDaG9pY2UiKSB7fQp9CgpTY2VuZSgpIHsKICBJbml0KAogICkgewogIH0KCiAgQW5pbWF0ZSgpIHsKICAgIC8vIDItYQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYV9zcGVlZF9hbmRfdG90YWxfZGlzdGFuY2VfdHJhdmVsZWQubXAzIikKICAgIHdhaXQoMzAwMCkKICAgIGNhbGNfbGluZTIuc2hvdygpCiAgICB3YWl0KDEwMDApCiAgICBkaXN0YW5jZV90ZXh0LmNvbnRlbnQgPSAiRGlzdGFuY2UgdHJhdmVsZWQ6IDIwMCBtaWxlcyIKICAgIGNhbGNfcmVzdWx0LnNob3coKQogICAgY2FsY19yZXN1bHQuY29udGVudFsyXS5kcmF3T3V0bGluZSgpCiAgICAKICAgIC8vIDItYgogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzItYl9zcGVlZF9hbmRfdG90YWxfZGlzdGFuY2VfdHJhdmVsZWQubXAzIikKICAgIHdhaXQoMjAwMCkKICAgIGRpc3BsYWNlbWVudF90ZXh0LnNob3coYmxvY2tpbmc6IGZhbHNlKQoJZGlzcGxhY2VtZW50X2xpbmUuc2hvdygpCiAgICB3YWl0KDEwMDApCiAgICBkaXNwbGFjZW1lbnRfdGV4dC5oaWRlKGJsb2NraW5nOiBmYWxzZSkKCWRpc3BsYWNlbWVudF9saW5lLmhpZGUoKQogICAgCiAgICAKICB9Cn0K
+In this example, the total distance traveled is expected to be
+\underline{\phantom{XXXXXX}}
+the displacement.
+more than
+The total distance traveled adds all positive values. In displacement, distance traveled in the positive direction can cancel with distance traveled in the negative direction. So the total distance traveled is expected to be more than the displacement.
+less than
+The total distance traveled uses an absolute value. So the distance can never be less than the displacement, which can include both positive and negative terms.
+equal to
+If the car only drives in the positive direction, then the total distance traveled will be equal to the displacement. In this example, the car does travel for
+2\text{ hours}
+in the negative direction, so distance and displacement cannot be equal.
+In
+15\text{ minutes,}
+an athlete runs east (positive direction) along a straight track for
+1\text{ mile,}
+then turns around and runs west (negative direction) for
+1.5\text{ miles.}
+The total distance traveled by the athlete during the
+15\text{ minute}
+period is
+\underline{\phantom{XXXXXX}}\text{ miles.}
+0.5
+The total distance traveled is the sum of the distance the athlete ran heading east and the distance run heading west. This sum is more than
+0.5\text{ miles.}
+1.5
+The total distance traveled is the sum of the distance the athlete ran heading east and the distance run heading west. This sum is more than
+1.5\text{ miles.}
+2.5
+The total distance traveled is the sum of the distance the athlete ran heading east and the distance run heading west. This sum is
+1 + 1.5 = 2.5\text{ miles.}
+The displacement of the athlete after the
+15\text{-minute}
+period is
+\underline{\phantom{XXXXXX}}\text{ miles.}
+-0.5
+The athlete runs
+1\text{ mile}
+in the positive direction, then
+1.5\text{ miles}
+back in the negative direction. So the athlete’s displacement at the end of the
+15\text{-minute}
+period is
+1 - 1.5 = -0.5\text{ miles.}
+Athlete runs 1 mile east and 1.5 miles west. Displacement is 1 - 1.5 = -0.5 miles.
+0.5
+The athlete runs
+1\text{ mile}
+in the positive direction, then
+1.5\text{ miles}
+back in the negative direction. So the athlete’s displacement at the end of the
+15\text{-minute}
+period is
+1 - 1.5\text{ miles,}
+which is not equal to
+0.5\text{ miles.}
+2.5
+The total distance traveled by the athlete is
+2.5\text{ miles.}
+The total distance ignores direction. The displacement includes direction, so the displacement will be less than the total distance traveled.
+The athlete’s displacement after the
+15\text{-minute}
+period is
+-0.5\text{ miles.}
+So the athlete ends the run
+\underline{\phantom{XXXXXX}}
+where the athlete started the run.
+0.5\text{ miles}
+east of
+East is the positive direction. So if the athlete ended
+0.5\text{ miles}
+east of where the athlete started, the displacement would be
+0.5\text{ miles,}
+not
+-0.5\text{ miles.}
+0.5\text{ miles}
+west of
+West is the negative direction. So a displacement of
+-0.5\text{ miles}
+indicates the athlete ends the run
+0.5\text{ miles}
+west of where the athlete started the run.
+exactly
+If the athlete ended the run exactly where the athlete started, then the displacement would be
+0\text{ miles,}
+not
+-0.5\text{ miles.}
+A car travels north at
+60\text{ mph}
+for
+2\text{ hours,}
+then turns around and travels south at
+40\text{ mph}
+for
+3\text{ hours.}
+Find the car’s total distance traveled at the end of the drive.
+The car’s velocity at time
+t
+(in hours) is
+v(t) = \begin{cases} \, \, \, \, 60 \qquad 0 \leq t <2 \quad \\ -40 \qquad 2 < t \leq 5 \quad \end{cases}
+The car’s total distance traveled at the end of the
+5\text{-hour}
+drive can be found using
+\underline{\phantom{XXXXXX}} \text{.}
+\displaystyle \int_0^2 60 \ dt + \displaystyle \int_2^5 (-40) \ dt
+The second integral,
+\displaystyle \int_2^5 (-40) \ dt,
+should not include a negative sign. The total distance traveled does not depend on direction. Distance traveled is the integral of speed, or the absolute value of velocity.
+\displaystyle \int_0^2 60 \ dt + \displaystyle \int_2^5 40 \ dt
+The total distance traveled does not depend on direction. Distance traveled is the integral of speed, or the absolute value of velocity, so the car’s distance traveled can be found using the integral
+\begin{align*} \displaystyle \int_0^5 {\large|} v(t) {\large|} \, dt & =  \displaystyle \int_0^2 {\large|} 60 {\large|} \, dt + \displaystyle \int_2^5 {\large|} -40 {\large|} \, dt \\ & = \displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 40 \, dt \end{align*}
+\displaystyle \int_0^2 (-40) \ dt + \displaystyle \int_2^5 60 \ dt
+This option indicates the car drives south at
+40\text{ mph}
+for
+2\text{ hours}
+and north at
+60\text{ mph}
+for
+3\text{ hours.}
+Instead, the car drives north at
+60\text{ mph}
+from
+t = 0
+to
+t = 2,
+then drives south at
+40\text{ mph}
+from
+t =2
+to
+t = 5.
+Also, total distance traveled ignores direction, so both integrals will not have a negative sign.
+\displaystyle \int_0^2 40 \ dt + \displaystyle \int_2^5 60 \ dt
+This option indicates the car drives at
+40\text{ mph}
+for
+2\text{ hours}
+and
+60\text{ mph}
+for
+3\text{ hours.}
+Instead, the car drives at
+60\text{ mph}
+for
+2\text{ hours}
+and
+40\text{ mph}
+for
+3\text{ hours.}
+The car’s total distance traveled at the end of the
+5\text{-hour}
+drive is
+\displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 40 \, dt  = 60t {\Large|}_0^2 + 40t {\Large|}_2^5
+So the total distance is
+\underline{\phantom{XXXXXX}} \text{.}
+The car’s total distance traveled is
+\begin{align*} \displaystyle \int_0^2 60 \, dt + \displaystyle \int_2^5 40 \, dt  & = 60t {\Large|}_0^2 + 40t {\Large|}_2^5 \\& = \left(60(2) - 60(0) \right) +  \left( 40(5) - (40)(2) \right) \\& = (120 - 0) + (200 - 80) \\& = 240 \text{ miles}\end{align*}
+Speed is 60 from t = 0 to t = 2 and 40 from t = 2 to t = 5. Area under speed is 120 from t = 0 to t = 2 and 120 from t = 2 to t = 5.
+Substitute
+t = 0
+and
+t = 2
+in
+60t,
+and
+t = 2
+and
+t = 5
+in
+40t \text{.}
+After substituting, the displacement is
+\left(60(2) - 60(0) \right) +  \left( 40(5) - (40)(2) \right) \text{.}
+Now simplify.
+miles
+A ball is thrown straight up in the air. The velocity of the ball at time
+t
+is given by
+v(t) = 64 - 32t\text{ feet per second.}
+Find the total distance traveled by the ball between
+t = 1
+and
+t = 3\text{ seconds.}
+The ball’s total distance traveled over
+[1, 3]
+can found using
+\underline{\phantom{XXXXXX}} \text{.}
+\displaystyle \int_1^3 {\large|} 64 - 32t {\large|} \ dt
+Using an absolute value around the velocity function ignores the direction of travel. Since direction of travel does not affect the total distance traveled, an absolute value is included in the integral.
+\displaystyle \int_1^3 32 \ dt
+The integral
+\displaystyle \int_1^3 32 \ dt
+integrates the acceleration,
+a(t) = v^\prime(t) = 32.
+To find the total distance traveled, integrate the speed, or absolute value of velocity.
+\displaystyle \int_1^3 (64 - 32t) \ dt
+The displacement over
+[1, 3]
+is equal to the integral of the velocity over
+[1, 3],
+or
+\displaystyle \int_1^3 (64 - 32t) \, dt.
+The total distance traveled should ignore the direction of travel and will be different from the displacement.
+The velocity
+v(t) = 64 - 32t
+changes sign at
+\underline{\phantom{XXXXXX}}\text{.}
+The velocity can change signs at values of
+t
+where
+v(t) = 0 \text{.}
+Setting
+v(t) = 0
+gives
+\begin{align*}64 - 32t & = 0 \\ 64 & = 32t && \text{Add} \\ \frac{64}{32} & = t && \text{Divide} \\ 2 & = t && \text{Simplify}\end{align*}
+So the velocity is equal to
+0
+at
+t = 2.
+Checking the sign of the velocity on either side of
+t = 2
+reveals that the velocity is positive before
+t = 2
+and negative after
+t = 2.
+So the velocity does change signs at
+t =2 \text{.}
+The velocity can change signs at values of
+t
+where
+v(t) = 0 \text{.}
+There is one value of
+t
+where
+64 - 32t = 0,
+and one value where the velocity changes signs.
+t =
+seconds
+The ball’s velocity
+v(t)
+is positive before
+t = 2 \text{,}
+changes signs at
+t = 2 \text{,}
+and
+is negative after
+t = 2
+To find the ball’s total distance traveled using the Net Change Theorem, integrate
+|v^\prime(t) |= |64 - 32t|
+to get
+\displaystyle \int_1^{3} |64-32t| \, dt = \underline{\phantom{XXXXXX}}.
+\displaystyle \int_1^2 (64 - 32t) \, dt + \displaystyle \int_2^3 -(64 - 32t) \, dt
+The ball’s velocity changes signs at
+t = 2 \text{,}
+so the definite integral should be split at
+2 \text{.}
+The velocity is positive before
+t = 2 \text{,}
+so
+|64 - 32t| = 64 - 32t
+on
+[1, 2] \text{.}
+The velocity is negative after
+t=2 \text{,}
+so the absolute value will change the sign, and
+|64 - 32t| = -(64 - 32t)
+on
+[2, 3]\text{.}
+\displaystyle \int_1^2 -(64 - 32t) \, dt + \displaystyle \int_2^3 (64 - 32t) \, dt
+The ball’s velocity changes signs at
+t = 2 \text{,}
+so the definite integral should be split at
+2\text{.}
+However, the velocity is already positive before
+t = 2 \text{,}
+so
+|64 - 32t| = 64 - 32t \text{,}
+not
+-(64 - 32t) \text{,}
+on
+[1, 2] \text{.}
+Similarly, the velocity is negative after
+t=2 \text{,}
+so the absolute value will change the sign, and
+|64 - 32t| = -(64 - 32t) \text{,}
+not
+64 - 32t \text{,}
+on
+[2, 3] \text{.}
+\displaystyle \int_1^3 (64 - 32t) \, dt
+The ball’s velocity changes signs at
+t = 2 \text{,}
+so the absolute value
+|64 - 32t|
+is not equal to
+64 - 32t
+on
+[1, 3] \text{.}
+Instead, the definite integral should be split at
+2 \text{.}
+The ball’s total distance over
+[1, 3]
+is
+\begin{align*} \displaystyle \int_1^{3} |64 - 32t)| \, dt & = \displaystyle \int_1^2 (64 - 32t) \, dt + \displaystyle \int_2^3 -(64 - 32t) \, dt \\ & = (64t - 16t^2) {\Large|}_1^{2} + (-64t +16t^2) {\Large|}_2^3 \end{align*}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}}\text{ feet.}
+-32
+The total distance traveled is always nonnegative, so the distance traveled cannot be
+-32\text{ feet.}
+0
+The ball’s displacement over
+[1, 3]
+is
+0\text{ feet.}
+The ball’s total distance traveled over
+[1, 3]
+will be more than the displacement.
+32
+Completing the integration gives the total distance traveled over
+[1, 3] \text{:}
+\begin{align*} \displaystyle \int_1^{3} |64 - 32t)| \, dt & = \displaystyle \int_1^2 (64 - 32t) \, dt + \displaystyle \int_2^3 -(64 - 32t) \, dt \\ & = (64t - 16t^2) {\Large|}_1^{2} + (-64t +16t^2) {\Large|}_2^3 \\ & = \left( 64(2) - 16(2^2) \right) - \left(64(1) - 16(1^2) \right) \\ & \qquad \quad + \left( -64(3) + 16(3^2) \right) - \left(-64(2) + 16(2^2) \right) \\ & = (128 - 64) - (64 - 16) \\ & \qquad \quad + (-192 + 144) - (-128 +64) \\ & = 32 \end{align*}
+So the ball’s total distance traveled is
+32\text{ feet.}
+Lesson summary
+Speed describes how fast an object moves, while velocity describes both how fast and in what direction the object moves.
+The integral of speed over
+[a, b],
+\displaystyle \int_a^b {\large|} v(t) {\large|} \, dt,
+gives the total distance traveled.
+The total distance does not depend on direction.
+The total distance traveled will always be greater than or equal to the displacement and will always be nonnegative.
+Net change and area or volume problems
+Sometimes measuring how fast an area or volume is changing is easier than measuring the area or volume.
+Ex: A faucet is turned on, and water begins flowing out of a hot water heater. A flow meter can measure how quickly the water is flowing out of the tank, or the rate of change of the volume,
+V^\prime(t) \text{.}
+The water tank is not transparent, so we cannot measure the volume
+V(t)
+of water left in the tank directly.
+One way to determine the change in volume of water in the tank is to integrate the rate of change. This lesson will explain how to use the Net Change Theorem for area and volume problems.
+Todo
+Ly9XZXN0aW4gMTAvMDMvMjUKQ2FudmFzKHdpbmRvd3M6IDEpClNjZW5lKCkgewogIEluaXQoCiAgICB4VmFsOiAzLjUKICAgIGZpbGxMaW5lOiAyIAogICAgCiAgICBmX3Q6IEhMaW5lKHk6IDIsIGRvbWFpbjogSW50ZXJ2YWwoMCwgYHhWYWxgKSkKICAgIGJvdW5kOiBWTGluZSh4OiBgeFZhbGAsIHJhbmdlOiBJbnRlcnZhbCgwLCAyKSwgY29sb3I6IENvbG9yLnByaW1hcnkpCiAgICB0YW5rTGVmdDogVkxpbmUoeDogMCwgcmFuZ2U6IEludGVydmFsKDAsIDIpLCBjb2xvcjogQ29sb3IucHJpbWFyeSkKICAgIHRhbmtCb3R0b206IEhMaW5lKHk6IDAsIGRvbWFpbjogSW50ZXJ2YWwoMCwgYHhWYWxgKSkKCiAgICB3YXRlcjogUmllbWFublN1bSgKICAgICAgZXhwcjogKHggKyBgZmlsbExpbmVgKSAKICAgICAgY291bnQ6IDEKICAgICAgZG9tYWluOiBJbnRlcnZhbCgwLCBgeFZhbGApCiAgICAgIGFuY2hvcjogMAogICAgICBzaG93UG9pbnRzOiBmYWxzZQogICAgICBjb2xvcjogQ29sb3IuYmx1ZQogICAgICBvcGFjaXR5OiAwLjUKICAgICkKICAgIHRhbms6IEdyYXBoKAogICAgICAgIGluZGVudDpmYWxzZQogICAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMCwgMC4wKQogICAgICAgIHNpemU6IFZlYzIoOS8xNiAtIDAuMTUsIDAuNSkKICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgICB3YXRlcgogICAgICAgICAgICAvL2ZfdAogICAgICAgICAgICBib3VuZAogICAgICAgICAgICB0YW5rTGVmdAogICAgICAgICAgICB0YW5rQm90dG9tCiAgICAgICAgICAgIAogICAgICAgIF0KICAgICAgICBkb21haW46IEludGVydmFsKC0wLjEsIDMuNikKICAgICAgICByYW5nZTogSW50ZXJ2YWwoLTAuMDUsIDIpCiAgICAgICAgc2hvd1hBeGlzTnVtYmVyczogZmFsc2UKICAgICAgICBzaG93WUF4aXNOdW1iZXJzOiBmYWxzZQogICAgICAgIHNob3dYQXhpczogZmFsc2UKICAgICAgICBzaG93WUF4aXM6IGZhbHNlCiAgICApCgogICAgZmF1Y2V0OiBJbWFnZShzb3VyY2U6ICJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvZmF1Y2V0X291dGxpbmVfdHJhbnNwYXJlbnQucG5nIiwgcG9zaXRpb246IFZlYzIoMC4zNjc1LCAwLjM3NSkpCgogICAgYXJyb3dZOiAwLjUgLy8gbW92ZXMgZG93biAwLjEyNQogICAgYXJyb3dEb3duOiBSdWxlKGNvbG9yOiBDb2xvci5vcmFuZ2UsIHN0cm9rZTogMiwgcDE6IFZlYzIoMC40OSwgYXJyb3dZKSwgcDI6IFZlYzIoMC40OSwgYGFycm93WWApLCByaWdodEVuZDogImFycm93IikKCiAgICBmbG93UmF0ZTogVGV4dCgiJFYnKHQpID0gLTEgLSAydCBcZGZyYWN7XHRleHR7bGl0ZXJzfX17XHRleHR7aG91cn19JCIsIHBvc2l0aW9uOiBWZWMyKDAuNDksIDAuNTI1KSwgY29sb3I6IENvbG9yLm9yYW5nZSkKCiAgICAvL3RleHQgb2JqZWN0cwogICAgeTE6IDAuMjUKICAgIHNwYWNpbmc6IDAuMDQKICAgIGNvc3RTaXplOiAyMAogICAgd2F0ZXJJblRhbms6IFRleHQoW1RleHQoIlZvbHVtZSBvZiB3YXRlciBpbiB0aGUgdGFuazogIiksIFRleHQoIiRcOlYodCkkIiwgY29sb3I6IENvbG9yLmJsdWUpXSwgZm9udFNpemU6IGBjb3N0U2l6ZWAsIHBvc2l0aW9uOiBWZWMyKDAuNDUsIHkxKSkKICAgIHdhdGVyTGVhdmluZzogVGV4dCgiV2F0ZXIgaXMgbGVhdmluZyB0aGUgdGFuayBhdCBhIHJhdGUgb2Y6IiwgcG9zaXRpb246IFZlYzIoMC40NSwgeTEgKyBzcGFjaW5nKSkKICAgIHdhdGVyTGVhdmluZ0VxdWF0aW9uOiBUZXh0KFtUZXh0KCIkVicodClcOiQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwgVGV4dCgiJD0kIiksIFRleHQoIiRcOi0xIC0gMnQkIiwgY29sb3I6IENvbG9yLm9yYW5nZSldLCBwb3NpdGlvbjogVmVjMigwLjYyNSAsIHkxICsgc3BhY2luZyAqIDIpKQogIAogICAgCiAgICB5MjogMC42CiAgICBuZXRYOiAwLjA1CiAgICBuZXRDaGFuZ2U6IFRleHQoW1RleHQoIk5ldCBjaGFuZ2UgaW4iKSwgVGV4dCgiJFw6Vlw6JCIsIGNvbG9yOiBDb2xvci5ibHVlLCBvdXRsaW5lOiBPdXRsaW5lKGNvbG9yOiBDb2xvci5ibHVlLCBzdHJva2U6IDIpKSwgVGV4dCgib3ZlciAkWzAsNV0kOiIpXQogICAgICBwb3NpdGlvbjogVmVjMihuZXRYLCB5MikKICAgICkKCiAgICB3b3JrMTogVGV4dChbCiAgICAgICAgICAgIFRleHQoIiRWKDUpXDokIiwgY29sb3I6IENvbG9yLmJsdWUpCiAgICAgICAgICAgIFRleHQoIiQtJCIpCiAgICAgICAgICAgIFRleHQoIiRcOlYoMClcOiQiLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICAgICAgVGV4dCgiJD0gXGludF8wXjUoJCIsIG9wYWNpdHk6IDApCiAgICAgICAgICAgIFRleHQoIiRWJyh0KSQiLCBjb2xvcjogQ29sb3Iub3JhbmdlLCBvcGFjaXR5OiAwKQogICAgICAgICAgICBUZXh0KCIkKWR0JCIsIG9wYWNpdHk6IDApCiAgICBdCiAgICBwb3NpdGlvbjogVmVjMihuZXRYLCB5MiArIHNwYWNpbmcpCiAgICApCgogICAgd29ya1g6IG5ldFggKyAwLjE2CiAgICB3b3JrMjogVGV4dChbIFRleHQoIiQ9IFxpbnRfMF41KCQiKQogICAgICAgICAgICBUZXh0KCIkLTEgLTJ0JCIsIGNvbG9yOiBDb2xvci5vcmFuZ2UsIG9wYWNpdHk6IDApCiAgICAgICAgICAgIFRleHQoIiQpZHQkIikKICAgICAgXQogICAgICBwb3NpdGlvbjogVmVjMih3b3JrWCwgeTIgKyBzcGFjaW5nICogMykKICAgICkKCiAgICB3b3JrMzogVGV4dCgiJD0oLXQgLXReMil8XzBeNSQiLCBwb3NpdGlvbjogVmVjMih3b3JrWCwgeTIgKyBzcGFjaW5nICogNSkpCgogICAgd29yazQ6IFRleHQoIiQ9XGxlZnQoLTUtKDVeMilccmlnaHQpLVxsZWZ0KDAgLSgwXjIpXHJpZ2h0KSQiLCBwb3NpdGlvbjogVmVjMih3b3JrWCwgeTIgKyBzcGFjaW5nICogNi41KSkKICAgIHdvcms1OiBUZXh0KCIkPSAtMzAkIGxpdGVycyIsIHBvc2l0aW9uOiBWZWMyKHdvcmtYLCB5MiArIHNwYWNpbmcgKiA4LjE1KSwgb3V0bGluZTogT3V0bGluZShzdHJva2U6IDIpKQogICkgewoJCWZfdC5oaWRlKCkKCQl0YW5rLmhpZGUoKQoJCWZhdWNldC5oaWRlKCkKCQlhcnJvd0Rvd24uaGlkZSgpCgkJZmxvd1JhdGUuaGlkZSgpCgkJd2F0ZXJJblRhbmsuaGlkZSgpCgkJd2F0ZXJMZWF2aW5nLmhpZGUoKQoJCXdhdGVyTGVhdmluZ0VxdWF0aW9uLmhpZGUoKQoJCW5ldENoYW5nZS5oaWRlKCkKCQl3b3JrMS5oaWRlKCkKCQl3b3JrMi5oaWRlKCkKCQl3b3JrMy5oaWRlKCkKCQl3b3JrNC5oaWRlKCkKCQl3b3JrNS5oaWRlKCkKCX0KICBBbmltYXRlKCkgewogICAgLy8xQQogICAgcGxheSgiaHR0cHM6Ly9kNjZ1a21zZHhjY2ZqLmNsb3VkZnJvbnQubmV0LzEtYV9uZXRfY2hhbmdlX2FuZF9hcmVhX29yX3ZvbHVtZV9wcm9ibGVtcy5tcDMiKQogICAgdGFuay5zaG93KGJsb2NraW5nOiBmYWxzZSkKICAgIGZhdWNldC5zaG93KCkKICAgIGZpbGxMaW5lLmludGVycG9sYXRlKHRvOiAxLCBjdXJ2ZTogImxpbmVhciIsIGR1cmF0aW9uOiA0MDAwLCBibG9ja2luZzogZmFsc2UpCiAgICB3YXRlckluVGFuay5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIGFycm93RG93bi5zaG93KGR1cmF0aW9uOiAxLCBibG9ja2luZzogZmFsc2UpCiAgICBhcnJvd1kuaW50ZXJwb2xhdGUodG86IDAuNjI1LCBkdXJhdGlvbjogMjUwMCwgYmxvY2tpbmc6IGZhbHNlKQogICAgd2FpdCgxMDAwKQogICAgZmxvd1JhdGUuc2hvdygpCiAgICB3YWl0KDI1MDApCgogICAgCiAgICB3YXRlckxlYXZpbmcuc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB3YXRlckxlYXZpbmdFcXVhdGlvbi5zaG93KCkKCiAgICAvLzFCCiAgICBwbGF5KCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvMS1iX25ldF9jaGFuZ2VfYW5kX2FyZWFfb3Jfdm9sdW1lX3Byb2JsZW1zLm1wMyIpCiAgICBuZXRDaGFuZ2Uuc2hvdygpCiAgICB3b3JrMS5zaG93KCkKICAgIHdhaXQoMTUwMCkKICAgIHdvcmsxLmNvbnRlbnRbM10uc2hvdyhibG9ja2luZzogZmFsc2UpCiAgICB3b3JrMS5jb250ZW50WzVdLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgd29yazEuY29udGVudFs0XS5zaG93KCkKICB9CgogIFF1ZXN0aW9uKGlkID0gIiAiLCB0eXBlOiAibXVsdGlwbGVDaG9pY2UiKSB7CiAgICAKICB9Cn0KClNjZW5lKCkgewogIEluaXQoCiAgICAKICApIHt9CiAgQW5pbWF0ZSgpIHsKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWFfbmV0X2NoYW5nZV9hbmRfYXJlYV9vcl92b2x1bWVfcHJvYmxlbXMubXAzIikKICAgIAogICAgd29yazIuc2hvdygpCiAgICB3b3JrMi5jb250ZW50WzFdLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgd29yazMuc2hvdygpCiAgICB3b3JrNC5zaG93KCkKICAgIHdvcms1LnNob3coKQogICAgd2FpdCg1MDApCiAgICB3b3JrNS5kcmF3T3V0bGluZSgpCiAgICB3YWl0KDEwMDApCiAgICBmaWxsTGluZS5pbnRlcnBvbGF0ZSh0bzowLjUsIGN1cnZlOiAibGluZWFyIiwgZHVyYXRpb246IDQwMDAsYmxvY2tpbmc6IGZhbHNlKQogICAgYXJyb3dZLmludGVycG9sYXRlKHRvOiAwLjgsIGN1cnZlOiAibGluZWFyIiwgZHVyYXRpb246IDQwMDApCiAgICB3YWl0KDE1MDApCiAgICAKICB9Cn0=
+The net change in
+V
+over the first
+5\text{ hours}
+is expected to be
+\underline{\phantom{XXXXXX}} \text{.}
+negative
+Water is flowing out of the tank, so the volume of water will decrease over time. The net change in
+V
+over the first
+5\text{ hours}
+is expected to be negative to indicate the volume has decreased.
+0
+If the net change in
+V
+was
+0,
+then there would be exactly the same volume of water in the tank at the end of the
+5\text{ hours}
+as was in the tank at the start. Water is flowing out of the tank (and no additional water is being added into the tank), so the expectation is that there will be less water in the tank after
+5\text{ hours,}
+not the same amount of water.
+positive
+If the net change in
+V
+was positive, then there would be more water in the tank at the end of the
+5\text{ hours}
+than in the tank at the start. Water is flowing out of the tank (and no additional water is being added into the tank), so the expectation is that there will be less water in the tank after
+5\text{ hours,}
+not more water.
+Determine if each area or volume problem requires the Net Change Theorem.
+The use of wind speed and fuel moisture content data estimates the area of land burned by a forest fire is increasing at a rate of
+A^\prime(t) = 5\text{ acres per minute.}
+Find the net change in the area of land burned over
+1\text{ hour.}
+This problem
+\underline{\phantom{XXXXXX}}
+require the Net Change Theorem.
+does
+Only the rate of change of the area is given in the problem. There is no formula given for the area itself. So the Net Change Theorem is required to find the net change in area.
+does not
+Only the rate of change of the area is given in the problem. There is no formula given for the area itself. So the Net Change Theorem is required to find the net change in area.
+Water is being added to a rectangular fish tank so that the volume of water in the tank at time
+t
+(in minutes) is
+V(t) = 5 + 2t\text{ gallons.}
+Find the net change in the volume of water in the tank over
+10\text{ minutes.}
+This problem
+\underline{\phantom{XXXXXX}}
+require the Net Change Theorem.
+does
+A formula for the volume of water in the tank is given in the problem. This volume formula can be used to find the net change. So the Net Change Theorem does not need to be used.
+does not
+A formula for the volume of water in the tank is given in the problem. This volume formula can be used to find the net change. So the Net Change Theorem does not need to be used.
+A power plant is capturing
+\text{CO}_2
+emissions and injecting them deep underground into a porous rock formation. The injection rate is measured as
+V^\prime(t) = 100\text{ tons per day.}
+Find the net change in the volume of
+\text{CO}_2
+stored in the formation over
+2\text{ days.}
+This problem
+\underline{\phantom{XXXXXX}}
+require the Net Change Theorem.
+does
+Only the rate of change of the volume is given in the problem. There is no formula given for the volume itself. So the Net Change Theorem is required to find the net change in volume.
+does not
+Only the rate of change of the volume is given in the problem. There is no formula given for the volume itself. So the Net Change Theorem is required to find the net change in volume.
+A forest fire is spreading outward. The use of wind speed and fuel moisture content data estimates the area of land burned by the fire is increasing at a rate of
+A^\prime(t) = 5\text{ acres per minute.}
+Find the net change in the area of land burned over
+1\text{ hour.}
+Given
+A^\prime(t) = 5\text{ acres per minute,}
+the net change in area of land burned over
+1\text{ hour}
+(or
+60\text{ minutes}
+) can be found using the definite integral
+\underline{\phantom{XXXXXX}} \text{.}
+\displaystyle \int_0^5 60 \ dt
+The locations of the time and the rate of change have been swapped in this option. The limits of integration correspond to the interval of time, so the limits of integration are
+0
+and
+60 \text{,}
+not
+0
+and
+5 \text{.}
+The integrand corresponds to the rate of change,
+A^\prime(t) \text{.}
+So the integrand is
+5 \text{,}
+not
+60 \text{.}
+\displaystyle \int_0^{60} 5 \ dt
+The rate of change
+A^\prime(t)
+is given in acres per minute, so first convert the time from
+1\text{ hour}
+to
+60\text{ minutes.}
+Using the Net Change Theorem and
+A^\prime(t) = 5 \text{,}
+the net change in area over
+60\text{ minutes}
+is
+\displaystyle \int_0^{60} A^\prime(t) \, dt = \displaystyle \int_0^{60} 5 \, dt
+\displaystyle \int_5^{60} 1 \ dt
+The definite integral
+\displaystyle \int_5^{60} 1 \ dt
+gives the net change in a function with rate of change
+A^\prime(t) = 1
+over
+[5, 60] \text{.}
+Instead, find the net change in a function with
+A^\prime(t) = 5
+over
+[0, 60] \text{.}
+To find the net change in
+A
+using the Net Change Theorem, integrate
+A^\prime(t) = 5
+to get
+\displaystyle \int_0^{60} 5 \, dt = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_0^{60}
+An antiderivative of
+5
+is
+5t
+by the constant rule.
+Using this antiderivative and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_0^{60} 5 \, dt = 5t {\Large|}_0^{60}
+To integrate, find an antiderivative of
+5
+using the constant and power rules for integrals. Note that the problem is integrating with respect to the variable
+t \text{.}
+Do not include the arbitrary constant,
++ C \text{,}
+when working with a definite integral.
+100
+t
+1
+t
+-1
+t
+The net change in
+A
+over
+[0, 60]
+is
+\displaystyle \int_0^{60} 5 \, dt = 5t {\Large|}_0^{60}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}} \text{.}
+Completing the integration gives the net change in
+A
+over
+[0, 60] \text{:}
+\begin{align*} \displaystyle \int_0^{60} 5 \, dt & = 5t {\Large|}_0^{60} \\& = 5(60) - 5(0) \\& =300\end{align*}
+So the net change in the area of land burned by the fire over
+1\text{ hour}
+is
+300\text{ acres.}
+Substitute the limits of integration,
+t = 0
+and
+t = 60 \text{,}
+into
+5t \text{.}
+After substituting, the net change is
+5(60) - 5(0) \text{.}
+acres
+A power plant is capturing
+\text{CO}_2
+emissions and injecting them deep underground into a porous rock formation. The injection rate is measured as
+V^\prime(t) = 100\text{ tons per day.}
+Find the net change in the volume of
+\text{CO}_2
+stored in the formation over
+2\text{ days.}
+To find the net change in
+V
+over
+2
+days using the Net Change Theorem, integrate
+V^\prime(t) = 100
+over
+[0, 2]
+to get
+\displaystyle \int_0^{2} 100 \, dt = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_0^{2}
+An antiderivative of
+100
+is
+100t
+by the constant rule.
+Using this antiderivative and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_0^{2} 100 \, dt = 100t {\Large|}_0^{2}
+To integrate, find an antiderivative of
+100
+using the constant and power rules for integrals. Note that the problem is integrating with respect to the variable
+t \text{.}
+Do not include the arbitrary constant,
++ C \text{,}
+when working with a definite integral.
+100
+t
+1
+t
+-1
+t
+The net change in
+V
+over
+[0, 2]
+is
+\displaystyle \int_0^{2} 100 \, dt = 100t {\Large|}_0^{2}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}}.
+Completing the integration gives the net change in
+V
+over
+[0, 2]\text{:}
+\begin{align*} \displaystyle \int_0^{2} 100 \, dt & = 100t {\Large|}_0^{2} \\& = 100(2) - 100(0) \\& =200\end{align*}
+So the net change in the volume of
+\text{CO}_2
+stored in the underground rock formation over
+2\text{ days}
+is
+200\text{ tons.}
+Substitute the limits of integration,
+t = 0
+and
+t = 2,
+into
+100t.
+After substituting, the net change is
+100(2) - 100(0).
+tons
+Lesson summary
+Measuring the rate of change of a volume can be easier than measuring the volume itself. Ex: Measuring a flow rate with a flow meter is easier than measuring the volume of water.
+The Net Change Theorem can be used to integrate the rate of change of a volume to find the net change in volume.
+We can also integrate the rate of change of an area to find the net change in area.
+Additional applications using net change
+In many real-world situations we know how fast a quantity is changing but don't know the function itself. Luckily, we can find the net change by integrating the rate of change.
+In economics, marginal functions are used to describe how quantities change with each additional unit produced or sold:
+Marginal cost
+C^\prime(x)\text{:}
+the cost of producing one more unit.
+Marginal revenue
+R^\prime(x)\text{:}
+the revenue from selling one more unit.
+Marginal profit
+P^\prime(x)\text{:}
+the profit from producing and selling one more unit.
+The net change in cost, revenue, or profit can be found by integrating these marginal functions.
+Ex: A shipping company finds that the base shipping cost is
+\$3
+per box, and each additional box costs a bit more to ship. The company's marginal cost function for shipping
+x\text{ boxes per day}
+is
+C^\prime(x) = 3 + x \text{.}
+We can use this information to find the change in cost when increasing shipments from
+4
+to
+8\text{ boxes per day.}
+This lesson will explore this example and additional applications that use the Net Change Theorem.
+Todo
+Ly9XZXN0aW4gMTAvMDEvMjAyNQpDYW52YXMod2luZG93czogMSkKU2NlbmUoKSB7CiAgSW5pdCgKICAgIGV4cDogMysgeAogICAgcHF1YWQ6IFBvaW50KGNvb3JkaW5hdGVzOiBWZWMyKDEsIGV4cCgxKSksIGxhYmVsOiAiMSwgI3JvdW5kKGV4cCgxKSwgMykjIikKICAgIGxpbmVJbnRlcnA6IDAKICAgIGZ1bmNMaW5lOiBGdW5jKGV4cCwgY29sb3I6IENvbG9yLm9yYW5nZSwgZG9tYWluOiBJbnRlcnZhbChsaW5lSW50ZXJwLCBgbGluZUludGVycGApKQogICAgYXVjSW50ZXJwOiA0CiAgICBmdW5jQVVDOiBBVUMoY29sb3I6IENvbG9yLmJsdWUsIGRvbWFpbjogSW50ZXJ2YWwoYXVjSW50ZXJwLCBgYXVjSW50ZXJwYCksIGV4cHI6IGV4cCkKICAgIGc6IEdyYXBoKAogICAgICBjaGlsZHJlbjogWwogICAgICAgIGZ1bmNBVUMKICAgICAgICBmdW5jTGluZQogICAgICAgIAogICAgICBdCiAgICAgIGRvbWFpbjogSW50ZXJ2YWwoLTEsIDEwLCAxKQogICAgICByYW5nZTogSW50ZXJ2YWwoMCwgMTUsIDIpCiAgICAgIHhBeGlzOiBUZXh0KCIkeCQiKQogICAgICB5QXhpczogVGV4dCgiJHkkIikKICAgICAgaW5kZW50OiBmYWxzZQogICAgICBzaXplOiBWZWMyKDAuNDUsIDAuNDUpCiAgICAgIHBvc2l0aW9uOiBWZWMyKDAuMDUsIDAuMDc1KQogICAgKQogICAgZnVuY0xhYmVsOiBUZXh0KCIkQycoeCkkIiwgY29sb3I6IENvbG9yLm9yYW5nZSwgcG9zaXRpb246IFZlYzIoMC4zOSwgMC4xKSkKICAgIHkxOiAwLjM1CiAgICBzcGFjaW5nOiAwLjA0CiAgICBjb3N0U2l6ZTogMjAKICAgIGNvc3Q6IFRleHQoW1RleHQoIkNvc3Q6ICIpLCBUZXh0KCIkXDpDKHgpJCIsIGNvbG9yOiBDb2xvci5ibHVlKV0sIGZvbnRTaXplOiBgY29zdFNpemVgLCBwb3NpdGlvbjogVmVjMigwLjU1LCB5MSkpCiAgICBjb3N0TWFyZ2luYWw6IFRleHQoIk1hcmdpbmFsIGNvc3Q6IiwgcG9zaXRpb246IFZlYzIoMC41NSwgeTEgKyBzcGFjaW5nKSkKICAgIGNvc3RNYXJnaW5hbEVxdWF0aW9uOiBUZXh0KFtUZXh0KCIkQycoeClcOiQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKSwgVGV4dCgiJD0kIiksIFRleHQoIiRcOjMreCQiLCBjb2xvcjogQ29sb3Iub3JhbmdlKV0sIHBvc2l0aW9uOiBWZWMyKDAuNTUgKyAwLjIsIHkxICsgc3BhY2luZyAqIDEpKQogIAogICAgCiAgICB5MjogMC42CiAgICBuZXRYOiAwLjEKICAgIG5ldENoYW5nZTogVGV4dChbVGV4dCgiTmV0IGNoYW5nZSBpbiIpLCBUZXh0KCIkXDpDXDokIiwgY29sb3I6IENvbG9yLmJsdWUsIG91dGxpbmU6IE91dGxpbmUoY29sb3I6IENvbG9yLmJsdWUsIHN0cm9rZTogMikpLCBUZXh0KCJvdmVyICRbNCw4XSQ6IildCiAgICAgIHBvc2l0aW9uOiBWZWMyKG5ldFgsIHkyKQogICAgKQoKICAgIHdvcmsxOiBUZXh0KFsKICAgICAgICAgICAgVGV4dCgiJEMoOClcOiQiLCBjb2xvcjogQ29sb3IuYmx1ZSkKICAgICAgICAgICAgVGV4dCgiJC0kIikKICAgICAgICAgICAgVGV4dCgiJFw6Qyg0KVw6JCIsIGNvbG9yOiBDb2xvci5ibHVlKQogICAgICAgICAgICBUZXh0KCIkPSBcaW50XzReOCgkIiwgb3BhY2l0eTogMCkKICAgICAgICAgICAgVGV4dCgiJEMnKHgpJCIsIGNvbG9yOiBDb2xvci5vcmFuZ2UsIG9wYWNpdHk6IDApCiAgICAgICAgICAgIFRleHQoIiQpZHgkIiwgb3BhY2l0eTogMCkKICAgIF0KICAgIHBvc2l0aW9uOiBWZWMyKG5ldFgsIHkyICsgc3BhY2luZykKICAgICkKCiAgICB3b3JrWDogbmV0WCArIDAuMTYKICAgIHdvcmsyOiBUZXh0KFsgVGV4dCgiJD0gXGludF80XjgoJCIpCiAgICAgICAgICAgIFRleHQoIiQzK3gkIiwgY29sb3I6IENvbG9yLm9yYW5nZSwgb3BhY2l0eTogMCkKICAgICAgICAgICAgVGV4dCgiJClkeCQiKQogICAgICBdCiAgICAgIHBvc2l0aW9uOiBWZWMyKHdvcmtYLCB5MiArIHNwYWNpbmcgKiAzKQogICAgKQoKICAgIHdvcmszOiBUZXh0KCIkPSgzeCtcZGZyYWN7MX17Mn14XjIpfF80XjgkIiwgcG9zaXRpb246IFZlYzIod29ya1gsIHkyICsgc3BhY2luZyAqIDUpKQoKICAgIHdvcms0OiBUZXh0KCIkPVxsZWZ0KDMoOCkrIFxkZnJhY3sxfXsyfSg4XjIpXHJpZ2h0KS1cbGVmdCgzKDQpKyBcZGZyYWN7MX17Mn0oNF4yKVxyaWdodCkkIiwgcG9zaXRpb246IFZlYzIod29ya1gsIHkyICsgc3BhY2luZyAqIDYuNSkpCiAgICB3b3JrNTogVGV4dCgiJD0zNiQgZG9sbGFycyIsIHBvc2l0aW9uOiBWZWMyKHdvcmtYLCB5MiArIHNwYWNpbmcgKiA4LjE1KSwgb3V0bGluZTogT3V0bGluZShzdHJva2U6IDIpKQogICAgCiAgICBpbmNyZWFzZTogVGV4dChbVGV4dCgiSW5jcmVhc2UgaW4gcmV2ZW51ZSIpLCBUZXh0KCIkXDo8XDokIiwgb3BhY2l0eTogMCksIFRleHQoIiQzNiQgZG9sbGFycz8iLCBvcGFjaXR5OiAwKV0sIHBvc2l0aW9uOiBWZWMyKDAuNTI1LCAwLjU1KSkKICAgIHJlZFg6IEltYWdlKCJodHRwczovL2Q2NnVrbXNkeGNjZmouY2xvdWRmcm9udC5uZXQvcmVkeC5wbmciLCBwb3NpdGlvbjogVmVjMigwLjcsIDAuNSkpCiAgCiAgKSB7CgkJcHF1YWQuaGlkZSgpCgkJZnVuY0xpbmUuaGlkZSgpCgkJZy5oaWRlKCkKCQlmdW5jTGFiZWwuaGlkZSgpCgkJY29zdC5oaWRlKCkKCQljb3N0TWFyZ2luYWwuaGlkZSgpCgkJY29zdE1hcmdpbmFsRXF1YXRpb24uaGlkZSgpCgkJbmV0Q2hhbmdlLmhpZGUoKQoJCXdvcmsxLmhpZGUoKQoJCXdvcmsyLmhpZGUoKQoJCXdvcmszLmhpZGUoKQoJCXdvcms0LmhpZGUoKQoJCXdvcms1LmhpZGUoKQogICAgaW5jcmVhc2UuaGlkZSgpCiAgICByZWRYLmhpZGUoKQoJfQogIEFuaW1hdGUoKSB7CiAgICAvLzFBCiAgICB3YWl0KDI1MCkKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWFfYWRkaXRpb25hbF9hcHBsaWNhdGlvbnNfdXNpbmdfbmV0X2NoYW5nZS5tcDMiKQogICAgY29zdC5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIGNvc3RNYXJnaW5hbC5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIGNvc3RNYXJnaW5hbEVxdWF0aW9uLnNob3coKQogICAgd2FpdCgxMDAwKQogICAgZy5zaG93KCkKICAgIGZ1bmNMaW5lLnNob3coYmxvY2tpbmc6IGZhbHNlLCBkdXJhdGlvbjogMSkKICAgIGxpbmVJbnRlcnAuaW50ZXJwb2xhdGUodG86IDEwKQogICAgZnVuY0xhYmVsLnNob3coKQogICAgd2FpdCg1MDApCiAgICBjb3N0U2l6ZS5pbnRlcnBvbGF0ZSh0bzogMjgsIGR1cmF0aW9uOiA1MDApCiAgICB3YWl0KDUwMCkKICAgIGNvc3RTaXplLmludGVycG9sYXRlKHRvOjIwLCBkdXJhdGlvbjogNTAwKQogICAgd2FpdCgxMDAwKQoKICAgIC8vMUIKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8xLWJfYWRkaXRpb25hbF9hcHBsaWNhdGlvbnNfdXNpbmdfbmV0X2NoYW5nZS5tcDMiKQogICAgd2FpdCgxNTAwKQogICAgd29yazEuc2hvdygpCiAgICB3YWl0KDIwMDApCiAgICB3b3JrMS5jb250ZW50WzNdLnNob3coYmxvY2tpbmc6IGZhbHNlKQogICAgd29yazEuY29udGVudFs1XS5zaG93KCkKICAgIHdhaXQoNTAwKQogICAgd29yazEuY29udGVudFs0XS5zaG93KCkKICAgIHdhaXQoMTAwMCkKICAgIG5ldENoYW5nZS5zaG93KCkKICAgIHdhaXQoMjUwMCkKCiAgfQogIFF1ZXN0aW9uKGlkID0gIiAiLCB0eXBlOiAibXVsdGlwbGVDaG9pY2UiKSB7CiAgICAKICB9Cn0KClNjZW5lKCkgewogIEluaXQoCiAgICAKICApIHt9CiAgQW5pbWF0ZSgpIHsKICAgIC8vMkEKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWFfYWRkaXRpb25hbF9hcHBsaWNhdGlvbnNfdXNpbmdfbmV0X2NoYW5nZS5tcDMiKQogICAgd2FpdCgyMDAwKQogICAgCiAgICB3YWl0KDUwMCkKICAgIG5ldENoYW5nZS5jb250ZW50WzFdLmRyYXdPdXRsaW5lKCkKICAgIG5ldENoYW5nZS5jb250ZW50WzFdLm91dGxpbmUuaGlkZSgpCiAgICAKICAgIHdvcmsyLnNob3coKQogICAgd29yazIuY29udGVudFsxXS5zaG93KCkKICAgIHdhaXQoNTAwKQogICAgYXVjSW50ZXJwLmludGVycG9sYXRlKHRvOiA4KQogICAgd2FpdCgzNTAwKQoKICAgIC8vMkIKICAgIHBsYXkoImh0dHBzOi8vZDY2dWttc2R4Y2Nmai5jbG91ZGZyb250Lm5ldC8yLWJfYWRkaXRpb25hbF9hcHBsaWNhdGlvbnNfdXNpbmdfbmV0X2NoYW5nZS5tcDMiKQogICAgd29yazMuc2hvdygpCiAgICB3b3JrNC5zaG93KCkKICAgIHdvcms1LnNob3coKQogICAgd29yazUuZHJhd091dGxpbmUoKQogICAgd2FpdCgyMDAwKQogICAgaW5jcmVhc2Uuc2hvdygpCiAgICBpbmNyZWFzZS5jb250ZW50WzFdLnNob3coKQogICAgaW5jcmVhc2UuY29udGVudFsyXS5zaG93KCkKICAgIHdhaXQoMTUwMCkKICAgIHJlZFguc2hvdygpCiAgICB3YWl0KDQ1MDApCiAgfQp9
+The net change in
+C
+over
+[4, 8]
+is represented by the shaded area in the figure:
+Signed area under C'(x) from x = 0 to x =8
+This figure shows the signed area under
+C^\prime(x)
+over the interval
+[0, 8]\text{.}
+This would give the net change in cost
+C(8) - C(0)
+if the company goes from shipping
+0\text{ boxes per day}
+to
+8\text{ boxes per day,}
+not
+4\text{ boxes per day}
+to
+8\text{ boxes per day.}
+Signed area under C'(x) from x = 0 to x =4
+This figure shows the signed area under
+C^\prime(x)
+over the interval
+[0, 4]\text{.}
+This would give the net change in cost
+C(4) - C(0)
+if the company goes from shipping
+0\text{ boxes per day}
+to
+4\text{ boxes per day,}
+not
+4\text{ boxes per day}
+to
+8\text{ boxes per day.}
+Signed area under C'(x) from x = 4 to x =8
+This figure shows the signed area under
+C^\prime(x)
+over the interval
+[4, 8]\text{.}
+This represents the net change in cost
+C(8) - C(4)
+if the company goes from shipping
+4\text{ boxes per day}
+to
+8\text{ boxes per day.}
+Determine if each application requires the Net Change Theorem.
+An artist finds that profit increases from
+\$150
+to
+\$400
+when the number of paintings sold changes from
+2
+to
+5 \text{.}
+Find the net change in profit between
+2
+and
+5\text{ paintings sold.}
+This problem
+\underline{\phantom{XXXXXX}}
+require the Net Change Theorem.
+does
+The profits from selling
+2\text{ paintings}
+and
+5\text{ paintings}
+are both known. This problem does not require the Net Change Theorem.
+does not
+The profits from selling
+2\text{ paintings}
+and
+5\text{ paintings}
+are both known. The net change is
+\$400
+-
+\$150
+=
+\$250 \text{.}
+This problem does not require the Net Change Theorem.
+A population of salmonella bacteria is growing at a rate of
+P^\prime(t) = 2e^t\text{ thousand bacteria per hour.}
+Find the net change in population size over the first
+4\text{ hours.}
+This problem
+\underline{\phantom{XXXXXX}}
+require the Net Change Theorem.
+does
+Only the growth rate of the population is given in the problem. There is no formula given for the population size itself. So this problem does require the Net Change Theorem to find the net change in population.
+does not
+Only the growth rate of the population is given in the problem. There is no formula given for the population size itself. So this problem does require the Net Change Theorem to find the net change in population.
+A small online business sells custom printed T-shirts. The business runs a market research study, and it finds that the marginal revenue from selling
+x\text{ shirts per week}
+is
+R^\prime(x) = 9 + 2x \text{.}
+Find the net change in revenue if sales increase from
+5\text{ shirts per week}
+to
+10\text{ shirts per week.}
+This problem
+\underline{\phantom{XXXXXX}}
+require the Net Change Theorem.
+does
+Only the marginal revenue is given in the problem. There is no formula given for the revenue itself. So this problem does require the Net Change Theorem to find the net change in revenue.
+does not
+Only the marginal revenue is given in the problem. There is no formula given for the revenue itself. So this problem does require the Net Change Theorem to find the net change in revenue.
+A small online business sells custom printed T-shirts. The business runs a market research study and finds that the marginal revenue from selling
+x\text{ shirts per week}
+is
+R^\prime(x) = 9 + 2x
+Find the net change in revenue if sales increase from
+5\text{ shirts per week}
+to
+10\text{ shirts per week}
+To find the net change in revenue if sales increase from
+5\text{ shirts per week}
+to
+10\text{ shirts per week,}
+integrate
+R^\prime(x) = 9 + 2x
+over the interval
+\underline{\phantom{XXXXXX}} \text{.}
+[0, 5]
+Integrating
+R^\prime(x)
+over
+[0, 5]
+would give the net change if sales increased from
+0
+to
+5\text{ shirts per week,}
+not
+5
+to
+10\text{ shirts per week.}
+[0, 10]
+Integrating
+R^\prime(x)
+over
+[0, 10]
+would give the net change if sales increased from
+0
+to
+10\text{ shirts per week,}
+not
+5
+to
+10\text{ shirts per week.}
+[5, 10]
+This problem seeks to find the net change when sales increase from
+x = 5
+to
+x = 10\text{ shirts per week.}
+The interval that includes all values of
+x
+between
+5
+and
+10
+is
+[5, 10] \text{.}
+To find the net change in
+R
+if sales increase from
+5
+to
+10\text{ shirts per week}
+using the Net Change Theorem, integrate
+R^\prime(x)=9 + 2x
+over
+[5, 10]
+to get
+\displaystyle \int_5^{10} (9 + 2x) \, dx = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_5^{10}
+An antiderivative of
+9
+is
+9x
+by the constant rule. An antiderivative of
+2x
+is
+x^2
+by the power rule.
+Using these antiderivatives and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_5^{10} (9+2x) \, dx =  (9x + x^2){\Large|}_5^{10}
+To integrate, find an antiderivative of
+9+2x
+using the constant and power rules for integrals.
+Do not include the arbitrary constant,
++ C \text{,}
+when working with a definite integral.
+100
+x
+1
+x
+-1
+x
+The net change in
+R
+over
+[5, 10]
+is
+\displaystyle \int_5^{10} (9+2x) \, dx = (9x + x^2){\Large|}_5^{10}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}} \text{.}
+Completing the integration gives the net change in
+R
+over
+[5, 10] \text{:}
+\begin{align*} \displaystyle \int_5^{10} (9+2x) \, dx & = (9x+x^2) {\Large|}_5^{10} \\& = \left( 9(10) + (10)^2 \right) - \left( 9(5) + 5^2 \right)\\& = 190 - 70 \\ & = 120\end{align*}
+So the net change in the revenue if sales increase from
+5
+to
+10\text{ shirts per week}
+is
+\$120 \text{.}
+If this increase in revenue is larger than the corresponding increase in cost, the business will know that it is profitable to increase sales to
+10\text{ shirts per week.}
+Substitute the limits of integration,
+x=5
+and
+x=10,
+into
+(9x + x^2) \text{.}
+After substituting, the results are
+\left( 9(10) + (10)^2 \right) - \left( 9(5) + 5^2 \right) \text{.}
+Now simplify.
+dollars
+Salmonella bacteria multiply very quickly under the right conditions, so that the growth rate of the bacteria initially resembles exponential growth.
+Ex: A population
+P(t)
+of salmonella bacteria is growing at a rate of
+P^\prime(t) = 2e^t\text{ thousand bacteria per hour.}
+Find the net change in population size over the first
+4\text{ hours.}
+Initial growth rate P'(t) = 2e^t of a population of salmonella bacteria
+The net change in
+P
+over the first
+4\text{ hours}
+is
+\underline{\phantom{XXXXXX}} \text{.}
+P(0) - P(4)
+The net change in
+P
+over the interval
+[a, b]
+is the population at the end minus the population at the start, or
+P(b) - P(a) \text{,}
+not
+P(a) - P(b) \text{.}
+P(4) - P(0)
+The net change in
+P
+over the interval
+[0, 4]
+is the population at the end minus the population at the start, or
+P(4) - P(0) \text{.}
+P^\prime(0) - P^\prime(4)
+The net change in
+P
+is given by a difference in values of the population
+P \text{,}
+not the population’s growth rate
+P^\prime \text{.}
+P^\prime(4) - P^\prime(0)
+The net change in
+P
+is given by a difference in values of the population
+P \text{,}
+not the population’s growth rate
+P^\prime \text{.}
+To find the net change in
+P
+over
+4\text{ hours}
+using the Net Change Theorem,  integrate
+P^\prime(t) = 2e^t
+over
+[0, 4]
+to get
+\displaystyle \int_0^{4} 2e^t \, dt = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_0^{4}
+An antiderivative of
+2e^t
+is
+2e^t
+by the constant and exponential rules.
+Using this antiderivative and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_0^{4} 2e^t \, dt =  2e^t {\Large|}_0^{4}
+To integrate, find an antiderivative of
+2e^t
+using the constant and exponential rules for integrals.
+The exponential function
+e^t
+is its own antiderivative.
+100
+t
+1
+t
+-1
+t
+The net change in
+P
+over
+[0, 4]
+is
+\displaystyle \int_0^{4} 2e^t \, dt = 2e^t{\Large|}_0^{4}
+Completing the integration gives the net change as
+\underline{\phantom{XXXXXX}} \text{.}
+Completing the integration gives the net change in
+P
+over
+[0, 4] \text{:}
+\begin{align*} \displaystyle \int_0^{4} 2e^t \, dt & = 2e^t {\Large|}_0^{4} \\& = 2e^4 - 2e^0 \\& = 2e^4 - 2\end{align*}
+So the net change in the salmonella bacteria population over the first
+4\text{ hours}
+is
+2e^4 - 2 \approx 107\text{ thousand bacteria.}
+This rapid bacterial growth is what makes salmonella bacteria so dangerous.
+Substitute the limits of integration,
+t = 0
+and
+t = 4 \text{,}
+into
+2e^t \text{.}
+Your answer will include
+e \text{.}
+\text {thousand bacteria}
+An athlete is running on a treadmill. A metabolic analyzer is used to measure the athlete’s oxygen consumption during the workout. The rate of oxygen consumption at time t is
+V^\prime(t) = -0.01t^2+0.4t+0.5\text{ liters per minute.}
+Find the total volume of oxygen consumed during a
+30\text{-minute}
+workout.
+Oxygen consumption over time V'(t) = -0.01t^2 + 0.4t + 0.5
+Given the rate of oxygen consumption,
+V^\prime(t) \text{,}
+the net change in the volume
+V
+of oxygen  over
+[0, 30]
+can be found using
+\underline{\phantom{XXXXXX}} \text{.}
+V^\prime(30) - V^\prime(0)
+The difference in derivatives
+V^\prime(30) - V^\prime(0)
+gives the net change in the derivative
+V^\prime \text{,}
+not the net change in the volume
+V
+over
+[0, 30] \text{.}
+\displaystyle \int (V^\prime(30) - V^\prime(0) ) \ dt
+To find the net change in
+V
+using an integral, a definite integral is needed from
+t = 0
+to
+t = 30 \text{.}
+This indefinite integral will not give the net change.
+\displaystyle \int_0^{30} V^\prime(t) \ dt
+By the Net Change Theorem, the net change in the volume
+V
+of oxygen over
+[0, 30]
+is
+V(30) - V(0) = \displaystyle \int_0^{30} V^\prime(t) \, dt
+To find the net change in
+V
+over
+30\text{ minutes}
+using the Net Change Theorem, integrate
+V^\prime(t) = -0.01t^2 + 0.4t +0.5
+over
+[0, 30]
+to get
+\displaystyle \int_0^{30} (-0.01t^2 + 0.4t + 0.5) \, dt = \left( \underline{\phantom{XXXXXX}}  \right){\Large|}_0^{30}
+An antiderivative of
+-0.01t^2
+is
+\frac{-0.01}{3}t^3
+by the power rule. An antiderivative of
+0.4t
+is
+\frac{0.4}{2}t^2
+by the power rule. An antiderivative of
+0.5
+is
+0.5t
+by the constant rule.
+Using these antiderivatives and the Fundamental Theorem of Calculus, the definite integral is
+\displaystyle \int_0^{30} (-0.01t^2 + 0.4t + 0.5) \, dt =  \left( -\frac{0.01}{3}t^3 + \frac{0.4}{2}t^2 + 0.5t \right) {\Large|}_0^{30}
+To integrate, find an antiderivative of
+(-0.01t^2 + 0.4t + 0.5)
+using the constant and power rules for integrals.
+After using the power rule, it is acceptable to leave the coefficients as fractions and not simplify further.
+100
+t
+1
+t
+-1
+t
+The net change in
+V
+over [0, 30] is
+\left( -\frac{0.01}{3}t^3 + \frac{0.4}{2}t^2 + 0.5t \right) {\Large|}_0^{30} = \underline{\phantom{XXXXXX}} \text{ liters of oxygen.}
+105
+Substituting
+t = 0
+and
+t = 30
+gives
+\begin{align*} \Bigg(  & -\frac{0.01}{3}t^3 + \frac{0.4}{2}t^2 + 0.5t \Bigg) {\Large|}_0^{30}  \\ & = \left( -\frac{0.01}{3}(30)^3 + \frac{0.4}{2}(30)^2 + 0.5(30) \right)- \left( -\frac{0.01}{3}0^3 + \frac{0.4}{2}0^2 + 0.5(0) \right)  \\ & = 105 \text{ liters of oxygen} \end{align*}
+Note that the oxygen consumption rate
+V^\prime(t)
+is always positive, the net change in volume of oxygen consumed is expected to be a gain, or positive value.  Then
+105\text{ liters}
+of oxygen is a reasonable value for the net change.
+0
+A net change of
+0\text{ liters}
+would mean that the volume of oxygen at the end of the workout is equal to the volume at the start. But the oxygen consumption rate
+V^\prime(t)
+is always positive, so the net change in volume of oxygen consumed is expected to be a gain, or positive value.
+-105
+A net change of
+-125\text{ liters}
+would mean that the volume of oxygen at the end of the workout is less than the volume at the start. But the oxygen consumption rate
+V^\prime(t)
+is always positive, so the net change in volume of oxygen consumed is expected to be a gain, or positive value, and not a loss.
+Lesson summary
+In many real-world situations, an integral of a rate of change can be used to find the net change.
+In economics, marginal functions are used to determine if increasing production will be profitable. Use the Net Change Theorem to integrate a marginal function and find the net change in the corresponding function.
+In biology, populations are frequently described by growth rates. Use the Net Change Theorem to integrate the growth rate and find the net change in population size.
+Net Change Theorem
+Use the following table of values for
+f(x) \text{.}
+x
+#a#
+#da1#
+#da2#
+#da3#
+#da4#
+f(x)
+#b#
+#c#
+#d#
+#e#
+#f#
+The net change in
+f(x)
+over the interval
+[#da1#, #da3#]
+is
+\underline{\phantom{XXXXXX}} \text{.}
+Use the table to find
+f( #da1# )
+and
+f(#da3#) \text{.}
+Then substitute these values into the formula for the net change over
+[#da1#, #da3#] \text{:}
+f(#da3#) - f(#da1#) \text{.}
+From the table:
+When
+x = #da1# \text{,}
+f(#da1#) = #c# \text{.}
+When
+x = #da3# \text{,}
+f(#da3#) = #e# \text{.}
+\begin{align*}
+                          \text{Net change} &= f(#da3#) - f(#da1#) \\
+                          &= #e# - #c# && \text{Substitute} \\
+                          &=#dc1# && \text{Subtract} \\
+                        \end{align*}
+c not in (da1, da3, b)
+d not in (da1, da3, b, c)
+e not in (da1, da3, b, c, d)
+f not in (da1, da3, b, c, d, e)
+A function
+F(x)
+has the derivative
+F^\prime(x) = 2x - #c#\text{.}
+The net change in
+F
+over
+[#a#, #b#]
+is
+\underline{\phantom{XXXXXX}} \text{.}
+By the Net Change Theorem, the net change in
+F
+over [#a#, #b#] is
+\begin{align*} F(#b#) - F(#a#)  & = \displaystyle \int^{#b#}_{#a#}  (2x - #c#) \, dx && \text{Net change}\\& = \left( x^2 - #c#x \right) {\Large|}_{#a#}^{#b#} && \text{Integrate} \\& = \left( #b#^2 - #c#(#b#) \right) - \left( #a#^2 - #c#(#a#) \right) && \text{Substitute} \\& = #s1# - #s2# && \text{Simplify} \\& = #ans# && \text{Combine}\end{align*}
+The Net Change Theorem states that the net change is
+F(#b#) - F(#a#) = \displaystyle \int^{#b#}_{#a#}  (2x - #c#) \, dx
+c not in (a, b, 2)
+A car drives east (in the positive direction) at
+#E#\text{ mph}
+for
+#ehr#\text{ hours,}
+then turns around and drives west (in the negative direction) at
+#W#\text{ mph}
+for
+#whr#\text{ hours.}
+The car’s displacement at the end of the drive is
+\underline{\phantom{XXXXXX}} \text{.}
+A car drives east (in the positive direction) at
+#E#\text{ mph}
+for
+#ehr#\text{ hours,}
+then drives west (in the negative direction) at
+#W#\text{ mph}
+for
+#whr#\text{ hours,}
+so the car’s velocity at time
+t
+(in hours) is
+v(t) = \begin{cases} \,\,\,\, #E# \quad 0 \leq t < #ehr# \\ -#W# \quad #ehr# \leq t < #thr# \end{cases}
+The car’s displacement over the
+#thr#\text{-hour}
+drive is
+\begin{align*} s(#thr#) - s(0) & = \displaystyle \int_0^{#thr#} v(t) \, dt && \text{Net change} \\& = \displaystyle \int_0^{#ehr#} #E# \, dt + \displaystyle \int_{#ehr#}^{#thr#} (-#W#) \, dt && \text{Split} \\& = #E#t {\Large|}_0^{#ehr#} + (-#W#){\Large|}_{#ehr#}^{#thr#} && \text{Integrate} \\& = \left( #E#(#ehr#) - #E#(0) \right) + \left( -#W#(#thr#) - (-#W#)(#ehr#) \right) && \text{Substitute} \\& = (#s1# - 0) + (-#s2# + #s3#) && \text{Simplify} \\& = #ans# \text{ miles} && \text{Combine}\end{align*}
+The car’s velocity at time
+t
+(in hours) is
+v(t) = \begin{cases} \,\,\,\, #E# \quad 0 \leq t < #ehr# \\ -#W# \quad #ehr# \leq t < #thr# \end{cases}
+Integrate the velocity over the appropriate interval to find the car’s displacement.
+miles
+A car drives east (in the positive direction) at
+#E#\text{ mph}
+for
+#ehr#\text{ hours,}
+then turns around and drives west (in the negative direction) at
+#W#\text{ mph}
+for
+#whr#\text{ hours.}
+The total distance traveled by the car by the end of the drive is
+\underline{\phantom{XXXXXX}} \text{.}
+A car drives east (in the positive direction) at
+#E#\text{ mph}
+for
+#ehr#\text{ hours,}
+then drives west (in the negative direction) at
+#W#\text{ mph}
+for
+#whr#\text{ hours,}
+so the car’s velocity at time
+t
+(in hours) is
+v(t) = \begin{cases} \,\,\,\, #E# \quad 0 \leq t < #ehr# \\ -#W# \quad #ehr# \leq t < #thr# \end{cases}
+The car’s total distance traveled over the
+#thr#\text{-hour}
+drive is
+\begin{align*}  \displaystyle \int_0^{#thr#} {\large|} v(t) {\large|} \, dt & = \displaystyle \int_0^{#ehr#} {\large|} #E# {\large|} \, dt + \displaystyle \int_{#ehr#}^{#thr#} {\large|} -#W# {\large|} \, dt && \text{Split } \\ & = \displaystyle \int_0^{#ehr#} #E# \, dt + \displaystyle \int_{#ehr#}^{#thr#} #W# \, dt && \text{Absolute value} \\ & = #E#t {\Large|}_0^{#ehr#} + #W#{\Large|}_{#ehr#}^{#thr#} && \text{Integrate} \\& = \left( #E#(#ehr#) - #E#(0) \right) + \left( #W#(#thr#) - (#W#)(#ehr#) \right) && \text{Substitute} \\& = (#s1# - 0) + (#s2# - #s3#) && \text{Simplify} \\& = #ans# \text{ miles} && \text{Combine}\end{align*}
+The car’s velocity at time
+t
+(in hours) is
+v(t) = \begin{cases} \,\,\,\, #E# \quad 0 \leq t < #ehr# \\ -#W# \quad #ehr# \leq t < #thr# \end{cases}
+Integrate the absolute value of the velocity over the appropriate interval to find the car’s distance traveled.
+miles
+A pool is being drained, and water is leaving the pool at a rate of
+V^\prime(t) = -#c# - 2t\text{ hundred gallons per hour.}
+The net change in the volume
+V(t)
+of water in the tank from
+t = #a#
+to
+t = #b#
+hours is
+\underline{\phantom{XXXXXX}} \text{.}
+By the Net Change Theorem, the net change in
+V
+over
+[#a#, #b#]
+is
+\begin{align*}V(#b#) - V(#a#) & = \displaystyle \int_{#a#}^{#b#} V^\prime (t) \, dt && \text{Net change} \\& = \displaystyle \int_{#a#}^{#b#} (-#c# - 2t)  \, dt && \text{Substitute} \\& = \left( -#c#t - t^2 \right) {\Large|}_{#a#}^{#b#} && \text{Integrate} \\& = \left(-#c#(#b#) - #b#^2 \right) - \left(-#c#(#a#) - #a#^2 \right) && \text{Substitute} \\& = #s1# - (#s2#) && \text{Simplify} \\& = #ans# \text{ hundred gallons} && \text{Combine}\end{align*}
+The Net Change Theorem states that the net change is
+V(#b#) - V(#a#) = \displaystyle \int^{#b#}_{#a#} (-#c# - 2t) \, dt
+\text{ hundred gallons}
+c not in (a, 2)
+A small publishing company finds that the marginal revenue function for selling
+x\text{ books}
+is
+R^\prime(x) = #r1# + #r2#x\text{ dollars per book,}
+and the marginal cost function for printing
+x\text{ books}
+is
+C^\prime(x) = #c1# - #c2#x\text{ dollars per book.}
+The net change in profit between
+x = #a#
+and
+x = #b#\text{ books}
+is
+\underline{\phantom{XXXXXX}} \text{.}
+Given the marginal revenue and marginal cost functions, the marginal profit function is
+\begin{align*}P^\prime(x) & = R^\prime(x) - C^\prime(x) && \text{Def. of } P^\prime \\& = (#r1# + #r2#x) - (#c1# - #c2#x) && \text{Substitute} \\& = #m1# + #m2#x && \text{Combine} \end{align*}
+By the Net Change Theorem, the net change in profit
+P
+over
+[#a#, #b#]
+is
+\begin{align*} P(#b#) - P(#a#) & = \displaystyle \int_{#a#}^{#b#} P^\prime(x) \, dx && \text{Net change} \\& = \displaystyle \int_{#a#}^{#b#} (#m1# + #m2#x) \, dx && \text{Substitute} \\ & = \left( #m1#x + #m3#x^2 \right) {\Large|}_{#a#}^{#b#} && \text{Integrate} \\ & = \left( #m1#(#b#) + #m3#(#b#^2) \right) - \left( #m1#(#a#) + #m3#(#a#^2) \right) && \text{Substitute} \\ & = #s1# - #s2# && \text{Simplify} \\& = #ans# \text{ dollars} && \text{Combine}  \\\end{align*}
+First find the marginal profit function, which is
+P^\prime(x) = R^\prime(x) - C^\prime(x) \text{.}
+Then, by the Net Change Theorem, the net change in profit
+P
+over
+[#a#, #b#]
+is
+P(#b#) - P(#a#) = \displaystyle \int_{#a#}^{#b#} P^\prime(x) \, dx
+\$
+r1 not in (r2, c1, c2, a, b)
+r2 not in (c1, c2, a, b)
+c1 not in (c2, a, b)
+Some rabbits reproduce so quickly that the rabbit population size explodes at an exponential rate. For
+1
+rabbit population, the growth rate is given by
+P^\prime(t) = (\ln (#r#) ) #r#^t\text{ rabbits per month.}
+The change in population size
+P
+between
+t =0
+and
+t = #b#\text{ months}
+is
+\underline{\phantom{XXXXXX}} \text{.}
+By the Net Change Theorem, the net change in population size
+P
+over
+[0, #b#]
+is
+\begin{align*} P(#b#) - P(0) & = \displaystyle \int_{0}^{#b#} P^\prime(t) \, dt && \text{Net change} \\& = \displaystyle \int_{0}^{#b#} (\ln (#r#))#r#^t \, dt && \text{Substitute} \\ & = (\ln (#r#)) \displaystyle \int_{0}^{#b#} #r#^t \, dt && \text{Constant multiple} \\& = (\ln (#r#))\left( \frac{1}{\ln (#r#)} #r#^t \right) {\Large|}_{0}^{#b#} && \text{Integrate} \\ & = \left( #r#^t \right) {\Large|}_{0}^{#b#} && \text{Simplify} \\ & = \left( #r#^{#b#} \right) - \left( #r#^{0} \right) && \text{Substitute}  \\ & = \left( #r#^{#b#} \right) - 1 && \text{Simplify}  \\ & = #ans# \text{ rabbits} && \text{Combine} \\\end{align*}
+To integrate
+P^\prime(t) = (\ln (#r#)) #r#^t \text{,}
+use the constant multiple rule to move the constant
+(\ln (#r#))
+to the front of the integral. Then use the integration law for exponential functions:
+\displaystyle \int #r#^t \, dt = \dfrac{1}{\ln (#r#)} #r#^t + C
+rabbits
+b not in (r, 2)

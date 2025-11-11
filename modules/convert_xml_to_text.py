@@ -68,8 +68,14 @@ def parse_xml_module(xml_path):
 
 
 def main():
-    xml_path = Path("/Users/michaeljoyce/Desktop/LEARNVIA/modules/module_3.5.xml")
-    output_path = Path("/Users/michaeljoyce/Desktop/LEARNVIA/modules/module_3.5_readable.txt")
+    import sys
+    
+    if len(sys.argv) < 3:
+        print("Usage: python3 convert_xml_to_text.py <input_xml> <output_txt>")
+        sys.exit(1)
+    
+    xml_path = Path(sys.argv[1])
+    output_path = Path(sys.argv[2])
 
     print(f"Converting {xml_path.name} to readable text...")
 

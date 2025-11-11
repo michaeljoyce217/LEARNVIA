@@ -17,6 +17,10 @@ parallel execution benefits of true independent agent instances.
 import xml.etree.ElementTree as ET
 import json
 import re
+import math
+import html as html_module
+import random
+import hashlib
 from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
@@ -80,7 +84,7 @@ def load_module_content(filepath: Path) -> str:
 
 
 def extract_text_from_module(xml_content: str) -> str:
-    """Extract human-readable text from module XML for line-based review."""
+    """Extract human-readable text from module XML for line-based review, with line numbers."""
     lines = []
     try:
         root = ET.fromstring(xml_content)
@@ -103,16 +107,26 @@ def extract_text_from_module(xml_content: str) -> str:
         
     except ET.ParseError as e:
         print(f"Warning: XML parsing error: {e}")
-        lines = xml_content.split('\n')
+        # Fallback: strip XML tags into human-readable text
+        cleaned = re.sub(r'<[^>]+>', '', xml_content)
+        cleaned = cleaned.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')\
+                         .replace('&quot;', '"').replace('&apos;', "'")
+        # Normalize excessive blank lines
+        cleaned = re.sub(r'\n\s*\n\s*\n+', '\n\n', cleaned)
+        lines = cleaned.split('\n')
     
-    return '\n'.join(lines)
+    # Prefix each line with a 1-indexed line number to make agent references precise
+    numbered_lines = [f"{i+1:04d}| {line}" for i, line in enumerate(lines)]
+    return '\n'.join(numbered_lines)
 
 
-def build_agent_prompt(agent_type: str, agent_focus: str, master_prompt: str, 
-                       domain_prompt: str, rubric_content: str, module_content: str) -> str:
+def build_agent_prompt(agent_type: str, agent_focus: str, exemplar_anchors: str,
+                       master_prompt: str, domain_prompt: str, rubric_content: str,
+                       module_content: str) -> str:
     """
     Build the complete prompt for a single agent.
     
+    Layer 0: Exemplar anchors (gold-standard patterns and few-shots)
     Layer 1: Master review context (universal guardrails)
     Layer 2: Domain-specific rules (authoring or style)
     Layer 3: Rubric specifics (if rubric-focused agent)
@@ -123,6 +137,10 @@ You are Agent {agent_focus} in a {agent_type} review team.
 Type: {"Rubric-Focused Specialist" if rubric_content else "Generalist Cross-Cutting Reviewer"}
 
 # LAYERED INSTRUCTIONS
+
+## Layer 0: Exemplar Anchors (Reference Only)
+Use these exemplars and few-shot issues to calibrate judgments. Do not flag patterns that match these exemplars. Prefer fixes that align to their style and structure.
+{exemplar_anchors}
 
 ## Layer 1: Universal Review Context
 {master_prompt}
@@ -147,7 +165,7 @@ patterns that span categories, and problems that specialist reviewers might miss
     
     prompt += f"""
 
-# MODULE TO REVIEW
+# MODULE TO REVIEW (line-numbered)
 
 {module_content}
 
@@ -169,9 +187,9 @@ Provide your findings as a JSON array of issues:
 ]
 
 CRITICAL REQUIREMENTS:
-1. Every issue MUST include specific line numbers
+1. Every issue MUST include specific line numbers (refer to the prefixed numbers like "0042|")
 2. Every issue MUST include quoted text from the module
-3. Be specific, not vague (e.g., "Line 42: 'some students' should specify which students")
+3. Be specific, not vague (e.g., "Line 0042: 'some students' should specify which students")
 4. Focus on learning impact, not nitpicking
 5. If no issues found, return empty array: []
 """
@@ -191,6 +209,14 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
     # For demonstration, we'll generate realistic findings based on the test module
     
     findings = []
+    
+    # Per-agent deterministic variability to reduce overlap
+    seed = int(hashlib.md5(agent_id.encode("utf-8")).hexdigest()[:8], 16)
+    rng = random.Random(seed)
+    
+    # Helper to pick a line from candidates with variability
+    def pick_line(candidates: list[int]) -> int:
+        return candidates[rng.randrange(0, len(candidates))]
     
     # Check for common issues in the test module
     # Being more liberal with flagging - let human reviewers decide
@@ -237,7 +263,7 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
                 "severity": 4,
                 "student_impact": "Students may misunderstand why series diverges at x=-1, confusing alternating series with sign-flipped harmonic series",
                 "suggested_fix": "At x = -1: ∑ (1/n) diverges as the harmonic series (the (-1)^n and -1 terms cancel).",
-                "confidence": 0.85
+                "confidence": 0.75 + 0.2 * rng.random()
             })
             findings.append({
                 "issue_description": "Line 10: Term 'foundational tools' is vague - doesn't explain why power series matter",
@@ -247,8 +273,54 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
                 "severity": 2,
                 "student_impact": "Students miss motivation for why they're learning this topic",
                 "suggested_fix": "Replace with: 'power series let us represent complicated functions as infinite polynomials, making them easier to analyze'",
-                "confidence": 0.65
+                "confidence": 0.55 + 0.2 * rng.random()
             })
+            # More license to tag possible misalignments with Authoring Guide (variable lines)
+            if any(token in agent_id.lower() for token in ["authoring", "conceptual", "pedagogical", "generalist"]):
+                findings.append({
+                    "issue_description": "Abstract definition appears before a concrete example (authoring guideline prefers concrete→general)",
+                    "line_numbers": [pick_line([14, 15, 16])],
+                    "quoted_text": "A power series is written as ∑ a_n (x - c)^n ...",
+                    "category": "Pedagogical Flow",
+                    "severity": 2,
+                    "student_impact": "Abstract-first increases cognitive load for target learners",
+                    "suggested_fix": "Introduce a concrete example (e.g., geometric series) before presenting the general definition",
+                    "confidence": 0.58 + 0.1 * rng.random()
+                })
+                # Optional authoring heuristics (probabilistic)
+                if rng.random() < 0.6:
+                    findings.append({
+                        "issue_description": "Jump to test application without bridging why it is needed (missing rationale before ratio test)",
+                        "line_numbers": [pick_line([23, 24, 26])],
+                        "quoted_text": "To find the radius of convergence, we apply the ratio test:",
+                        "category": "Pedagogical Flow",
+                        "severity": 3,
+                        "student_impact": "Students may not connect the test to the learning goal",
+                        "suggested_fix": "Add a one-sentence rationale linking convergence to the ratio test before applying it",
+                        "confidence": 0.6 + 0.15 * rng.random()
+                    })
+                if rng.random() < 0.4:
+                    findings.append({
+                        "issue_description": "Lazy start ('There is/are') reduces clarity",
+                        "line_numbers": [pick_line([28, 30, 31])],
+                        "quoted_text": "There is a horizontal asymptote at y = 0",
+                        "category": "Conceptual Clarity",
+                        "severity": 1,
+                        "student_impact": "Less direct phrasing adds cognitive load",
+                        "suggested_fix": "Use subject-verb order: 'The graph of f has a horizontal asymptote at y = 0'",
+                        "confidence": 0.55 + 0.1 * rng.random()
+                    })
+                if rng.random() < 0.5:
+                    findings.append({
+                        "issue_description": "Vague reference ('it/this') without clear antecedent",
+                        "line_numbers": [pick_line([11, 12, 13])],
+                        "quoted_text": "It shows the behavior near c",
+                        "category": "Conceptual Clarity",
+                        "severity": 2,
+                        "student_impact": "Ambiguity makes self-study harder for low-confidence learners",
+                        "suggested_fix": "Replace with explicit noun: 'The graph shows the behavior of the function near c'",
+                        "confidence": 0.58 + 0.12 * rng.random()
+                    })
         
         if "pedagogical" in agent_id.lower() or "generalist" in agent_id.lower():
             findings.append({
@@ -312,39 +384,106 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
         
         if "consistency" in agent_id.lower() or "generalist" in agent_id.lower():
             findings.append({
-                "issue_description": "Lines 10, 38: Inconsistent series notation - sometimes '∑ ((-1)ⁿ xⁿ / n)', sometimes '∑ aₙ(x - c)ⁿ'",
-                "line_numbers": [10, 38],
+                "issue_description": "Inconsistent series notation between general and specific examples",
+                "line_numbers": [10, pick_line([36, 38, 40])],
                 "quoted_text": "∑ aₙ(x - c)ⁿ... ∑ ((-1)ⁿ xⁿ / n)",
                 "category": "Consistency",
                 "severity": 2,
                 "student_impact": "Notation switches may confuse students about whether different symbols represent different concepts",
                 "suggested_fix": "Establish consistent notation early: use aₙ for general case, then show specific examples",
-                "confidence": 0.70
+                "confidence": 0.65 + 0.1 * rng.random()
             })
         
         if "mechanical" in agent_id.lower():
             findings.append({
-                "issue_description": "Line 11: Sentence fragment 'This represents the distance...' - should connect to previous sentence",
-                "line_numbers": [11],
+                "issue_description": "Sentence fragment 'This represents the distance...' - should connect to previous sentence",
+                "line_numbers": [pick_line([11, 12])],
                 "quoted_text": "This represents the distance from the center c",
                 "category": "Mechanical Compliance",
                 "severity": 2,
                 "student_impact": "Choppy flow may distract struggling readers",
                 "suggested_fix": "Combine: 'The radius of convergence R represents the distance...'",
-                "confidence": 0.65
+                "confidence": 0.6 + 0.1 * rng.random()
             })
         
         if "punctuation" in agent_id.lower() or "generalist" in agent_id.lower():
             findings.append({
-                "issue_description": "Line 38: Missing comma after introductory phrase 'Now let's examine'",
-                "line_numbers": [38],
+                "issue_description": "Missing comma after introductory phrase",
+                "line_numbers": [pick_line([36, 38, 39])],
                 "quoted_text": "Now let's examine a more complex example.",
                 "category": "Punctuation & Grammar",
                 "severity": 1,
                 "student_impact": "Minor clarity issue, may slow reading",
                 "suggested_fix": "Consider: 'Now, let's examine a more complex example.'",
-                "confidence": 0.60
+                "confidence": 0.55 + 0.1 * rng.random()
             })
+            # More license to tag possible misalignments with Style Guide (probabilistic)
+            if rng.random() < 0.5:
+                findings.append({
+                    "issue_description": "Potential contraction usage — ensure no contractions per style guide",
+                    "line_numbers": [pick_line([18, 20, 22])],
+                    "quoted_text": "Now let's examine a more complex example.",
+                    "category": "Mechanical Compliance",
+                    "severity": 1,
+                    "student_impact": "Consistency with style guide improves clarity for ESL learners",
+                    "suggested_fix": "Rewrite to avoid contractions: 'Now, let us examine a more complex example.' or remove 'let us' entirely.",
+                    "confidence": 0.58 + 0.1 * rng.random()
+                })
+            if rng.random() < 0.45:
+                findings.append({
+                    "issue_description": "Check serial comma usage for lists (style requires Oxford comma)",
+                    "line_numbers": [pick_line([24, 25, 27])],
+                    "quoted_text": "… power series, intervals and coefficients …",
+                    "category": "Punctuation & Grammar",
+                    "severity": 1,
+                    "student_impact": "Missing serial comma can introduce ambiguity",
+                    "suggested_fix": "Use the serial comma: 'power series, intervals, and coefficients'",
+                    "confidence": 0.6 + 0.1 * rng.random()
+                })
+            if rng.random() < 0.4:
+                findings.append({
+                    "issue_description": "Pronoun usage ('you/they/it') discouraged by style guide unless unavoidable",
+                    "line_numbers": [pick_line([44, 46, 47])],
+                    "quoted_text": "It shows… / You can see…",
+                    "category": "Mechanical Compliance",
+                    "severity": 2,
+                    "student_impact": "Pronouns can introduce ambiguity for struggling readers",
+                    "suggested_fix": "Replace with explicit nouns where possible, keep 'we' minimal and purposeful",
+                    "confidence": 0.6 + 0.15 * rng.random()
+                })
+            if rng.random() < 0.35:
+                findings.append({
+                    "issue_description": "Use of 'thus/therefore/hence' — prefer 'so' per style guide",
+                    "line_numbers": [pick_line([33, 34, 35])],
+                    "quoted_text": "Therefore, the series converges…",
+                    "category": "Punctuation & Grammar",
+                    "severity": 1,
+                    "student_impact": "Simpler connectors improve readability",
+                    "suggested_fix": "Use 'so' instead of 'therefore', 'thus', or 'hence'",
+                    "confidence": 0.55 + 0.1 * rng.random()
+                })
+            if rng.random() < 0.3:
+                findings.append({
+                    "issue_description": "Semicolon usage discouraged by style guide",
+                    "line_numbers": [pick_line([51, 52, 53])],
+                    "quoted_text": "… the test applies; next we …",
+                    "category": "Punctuation & Grammar",
+                    "severity": 1,
+                    "student_impact": "Semicolons can increase complexity for mobile readers",
+                    "suggested_fix": "Split into two sentences or use a comma with conjunction",
+                    "confidence": 0.55 + 0.1 * rng.random()
+                })
+            if rng.random() < 0.4:
+                findings.append({
+                    "issue_description": "Mathematical symbol or numeral outside <m>…</m> tags",
+                    "line_numbers": [pick_line([12, 13, 26])],
+                    "quoted_text": "R = lim |aₙ / aₙ₊₁| as n → ∞",
+                    "category": "Mathematical Formatting",
+                    "severity": 2,
+                    "student_impact": "Raw unicode or plain text math may not render consistently",
+                    "suggested_fix": "Wrap math/ numerals in <m>…</m> as per style guide",
+                    "confidence": 0.65 + 0.1 * rng.random()
+                })
     
     return findings
 
@@ -384,9 +523,9 @@ def aggregate_consensus_issues(all_findings: List[Dict[str, Any]],
         # Consensus percentage
         consensus_pct = (agent_count / total_agents)
         
-        # Calculate priority score: severity × consensus percentage
-        # This gives higher priority to severe issues with strong consensus
-        priority = max_severity * consensus_pct
+        # Priority (1–5 scale): ceil(severity × consensus_pct), clamped to 1–5
+        priority_raw = max_severity * consensus_pct
+        priority = max(1, min(5, int(math.ceil(priority_raw))))
         
         issue = {
             "priority": priority,
@@ -403,11 +542,12 @@ def aggregate_consensus_issues(all_findings: List[Dict[str, Any]],
             "agent_count": agent_count
         }
         
-        # Consensus threshold: at least 2 agents OR severity 5
-        if agent_count >= 2 or max_severity == 5:
+        # Consensus threshold: at least 4 agents OR severity 5
+        # Rationale: encourage more non-consensus (flagged) issues to surface
+        if agent_count >= 4 or max_severity == 5:
             consensus_issues.append(issue)
         else:
-            # Single-agent findings go to non-consensus flagged issues
+            # Single/dual/tri-agent findings go to non-consensus flagged issues
             non_consensus_issues.append(issue)
     
     # Sort by priority (descending)
@@ -458,6 +598,9 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
     
     # Generate timestamp
     timestamp = datetime.now().strftime("%B %d, %Y at %I:%M %p")
+    
+    # Escape module content for Original Input tab
+    escaped_module = html_module.escape(module_content)
     
     # Severity badge helper
     def severity_badge(sev):
@@ -574,6 +717,7 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
             <button class="nav-tab" onclick="showSection('categories')">Rubric Categories</button>
             <button class="nav-tab" onclick="showSection('consensus')">Consensus Issues</button>
             <button class="nav-tab" onclick="showSection('flagged')">Flagged Issues</button>
+            <button class="nav-tab" onclick="showSection('original-input')">Original Input</button>
             <button class="nav-tab" onclick="showSection('next-steps')">Next Steps</button>
             <button class="nav-tab" onclick="showSection('flowchart')">System Flowchart</button>
         </div>
@@ -638,14 +782,14 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                 </h2>
                 <div class="note-box">
                     <p><strong>How Priority is Calculated:</strong></p>
-                    <p style="margin-top: 10px;"><code>Priority = Severity × (Agents Agreeing / Total Agents)</code></p>
-                    <p style="margin-top: 10px;">This gives higher priority to severe issues with strong consensus. For example, a Severity 5 issue flagged by 7 agents gets priority = 5 × (7/30) = 1.17</p>
+                    <p style="margin-top: 10px;"><code>Priority (1–5) = ceil(Severity × (Agents Agreeing / Total Agents))</code> (clamped to 1–5)</p>
+                    <p style="margin-top: 10px;">This preserves a 1–5 scale while still reflecting consensus. Example: Severity 5 flagged by 7 of 30 agents → ceil(5 × 7/30) = 2.</p>
                 </div>
                 <div class="note-box">
                     <p><strong>Consensus vs. Flagged:</strong></p>
                     <ul style="margin-left: 30px; margin-top: 10px;">
-                        <li><strong>Consensus Issues:</strong> Flagged by 2+ agents OR severity 5 (high confidence)</li>
-                        <li><strong>Flagged Issues:</strong> All issues detected, including single-agent findings</li>
+                        <li><strong>Consensus Issues:</strong> Flagged by 4+ agents OR severity 5 (high confidence)</li>
+                        <li><strong>Flagged Issues:</strong> All other issues, including single- and dual-agent findings</li>
                     </ul>
                 </div>
             </section>
@@ -830,7 +974,19 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                 </table>
             </section>
             
-            <!-- Tab 7: Next Steps -->
+            <!-- Tab 7: Original Input (human-readable) -->
+            <section id="original-input" class="section">
+                <h2 class="section-header">
+                    <div class="icon">📄</div>
+                    Original Module Text (Human-Readable)
+                </h2>
+                <div class="note-box">
+                    <strong>Note:</strong> This is the line-numbered text extracted from the module for precise referencing.
+                </div>
+                <pre style="white-space: pre-wrap; background: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #e9ecef; max-height: 500px; overflow: auto;">{ORIGINAL_ESCAPED_MODULE}</pre>
+            </section>
+            
+            <!-- Tab 8: Next Steps -->
             <section id="next-steps" class="section">
                 <h2 class="section-header">
                     <div class="icon">🚀</div>
@@ -845,6 +1001,7 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                         <li>Check <strong>Other Flagged</strong> tab for single-agent findings</li>
                         <li>Use your judgment on low-priority items - some may be false positives</li>
                         <li>Re-run review after fixes to validate improvements</li>
+                        <li>Review results with your reviewer</li>
                     </ol>
                 </div>
                 <div class="note-box" style="background: #e7f3ff; border-left-color: #667eea;">
@@ -858,7 +1015,7 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                 </div>
             </section>
             
-            <!-- Tab 8: System Flowchart -->
+            <!-- Tab 9: System Flowchart -->
             <section id="flowchart" class="section">
                 <h2 class="section-header">
                     <div class="icon">📊</div>
@@ -885,14 +1042,16 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 1: Initial Review</strong><br>
                             <span style="color: #666; font-size: 0.9rem;">30 agents (15 authoring + 15 style)</span><br>
-                            <span style="color: #4caf50; font-weight: 700;">← YOU ARE HERE (This Simulation)</span>
+                            <span style="color: #4caf50; font-weight: 700;">← YOU ARE HERE (This Simulation)</span><br>
+                            <span style="color: #2e7d32; font-size: 0.9rem;">Covers Authoring + Style (for author + reviewer)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #4caf50; margin: 10px 0;">↓</div>
                         
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 2: Verification Review</strong><br>
-                            <span style="color: #666; font-size: 0.9rem;">10 agents verify fixes from Pass 1</span>
+                            <span style="color: #666; font-size: 0.9rem;">30 agents (same as Pass 1) verify fixes</span><br>
+                            <span style="color: #2e7d32; font-size: 0.9rem;">Covers Authoring + Style (for author + reviewer)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #4caf50; margin: 10px 0;">↓</div>
@@ -910,14 +1069,16 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                         
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 1: Initial Review</strong><br>
-                            <span style="color: #666; font-size: 0.9rem;">30 agents (fresh perspective)</span>
+                            <span style="color: #666; font-size: 0.9rem;">30 agents (fresh perspective)</span><br>
+                            <span style="color: #01579b; font-size: 0.9rem;">Copy editing — Style only (for author + copy editor)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #0288d1; margin: 10px 0;">↓</div>
                         
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 2: Verification Review</strong><br>
-                            <span style="color: #666; font-size: 0.9rem;">10 agents verify fixes</span>
+                            <span style="color: #666; font-size: 0.9rem;">30 agents (same as Pass 1) verify fixes</span><br>
+                            <span style="color: #01579b; font-size: 0.9rem;">Copy editing — Style only (for author + copy editor)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #0288d1; margin: 10px 0;">↓</div>
@@ -942,7 +1103,7 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                         <li><strong>2 Modules:</strong> Fresh AI perspectives catch issues missed the first time</li>
                         <li><strong>2 Passes Each:</strong> Pass 1 finds issues, Pass 2 verifies fixes worked</li>
                         <li><strong>Human Review:</strong> Expert validation after each module ensures quality</li>
-                        <li><strong>30 + 10 Agents:</strong> Redundancy and verification prevent false negatives</li>
+                        <li><strong>30 + 30 Agents:</strong> Redundancy and verification prevent false negatives</li>
                     </ul>
                 </div>
             </section>
@@ -962,6 +1123,9 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
 </html>
 '''
     
+    # Substitute placeholder for Original Input (works even in non-f string segments)
+    html = html.replace("{ORIGINAL_ESCAPED_MODULE}", escaped_module)
+    
     return html
 def main():
     """Main execution function."""
@@ -976,9 +1140,14 @@ def main():
     master_prompt = load_prompt_file("master_review_context.txt")
     authoring_prompt = load_prompt_file("authoring_prompt_rules.txt")
     style_prompt = load_prompt_file("style_prompt_rules.txt")
+    try:
+        exemplar_anchors = load_prompt_file("exemplar_anchors.txt")
+    except FileNotFoundError:
+        exemplar_anchors = ""
     print(f"✓ Master context: {len(master_prompt)} chars")
     print(f"✓ Authoring rules: {len(authoring_prompt)} chars")
     print(f"✓ Style rules: {len(style_prompt)} chars")
+    print(f"✓ Exemplar anchors: {len(exemplar_anchors)} chars")
     print()
     
     # Load module content
@@ -987,6 +1156,37 @@ def main():
     module_text = extract_text_from_module(module_xml)
     print(f"✓ Module loaded: {len(module_text)} chars")
     print()
+
+    # Save human-readable module text for reference
+    try:
+        OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        pass
+    readable_file = OUTPUT_PATH / "test_module_readable.txt"
+    with open(readable_file, 'w', encoding='utf-8') as f:
+        f.write(module_text)
+    print(f"✓ Readable text saved: {readable_file}")
+    print()
+
+    # Prefer an existing human-readable source in test_review/module_files if present
+    preferred_readable = LEARNVIA_PATH / "test_review/module_files/test_module_readable.txt"
+    if preferred_readable.exists():
+        try:
+            with open(preferred_readable, 'r', encoding='utf-8') as f:
+                module_text_for_display = f.read()
+            print(f"✓ Using preferred readable source: {preferred_readable}")
+        except Exception:
+            module_text_for_display = module_text
+    else:
+        # Fallback to just-saved readable, else extracted text
+        if readable_file.exists():
+            try:
+                with open(readable_file, 'r', encoding='utf-8') as f:
+                    module_text_for_display = f.read()
+            except Exception:
+                module_text_for_display = module_text
+        else:
+            module_text_for_display = module_text
     
     # Simulate 30 agent reviews
     print("Simulating 30 agent reviews...")
@@ -1016,7 +1216,7 @@ def main():
             agent_type = "authoring"
             focus = "Generalist (Cross-Cutting)"
         
-        prompt = build_agent_prompt(agent_type, focus, master_prompt, authoring_prompt, 
+        prompt = build_agent_prompt(agent_type, focus, exemplar_anchors, master_prompt, authoring_prompt, 
                                      rubric_content, module_text)
         
         findings = simulate_agent_review(agent_id, prompt)
@@ -1046,7 +1246,7 @@ def main():
             agent_type = "style"
             focus = "Generalist (Cross-Cutting)"
         
-        prompt = build_agent_prompt(agent_type, focus, master_prompt, style_prompt, 
+        prompt = build_agent_prompt(agent_type, focus, exemplar_anchors, master_prompt, style_prompt, 
                                      rubric_content, module_text)
         
         findings = simulate_agent_review(agent_id, prompt)
@@ -1068,7 +1268,7 @@ def main():
     
     # Generate HTML report
     print("Generating HTML report...")
-    html_report = generate_html_report(consensus_issues, non_consensus, all_findings, AGENT_CONFIG, module_text)
+    html_report = generate_html_report(consensus_issues, non_consensus, all_findings, AGENT_CONFIG, module_text_for_display)
     
     output_file = OUTPUT_PATH / "test_module_review_report.html"
     with open(output_file, 'w', encoding='utf-8') as f:

@@ -2,7 +2,8 @@
 
 ## Overview
 
-The AI review system uses a 3-layer prompt architecture to improve review quality through:
+The AI review system uses a layered prompt architecture to improve review quality through:
+0. **Exemplar anchors** - Gold-standard excerpts and few-shot issues for calibration
 1. **Master guardrails** - Specificity, anti-patterns, severity calibration
 2. **Domain guidelines** - Authoring and style rules
 3. **Competency rubrics** - Specific evaluation criteria
@@ -12,6 +13,16 @@ The AI review system uses a 3-layer prompt architecture to improve review qualit
 ## Architecture Diagram
 
 ```
+┌─────────────────────────────────────────────────────────┐
+│  Layer 0: Exemplar Anchors                               │
+│  ─────────────────────────────────────────────────────  │
+│  • Short excerpts from exemplary modules (5.6, 5.7)      │
+│  • Positive patterns to mirror (do-not-flag list)        │
+│  • Few-shot compliant issue examples                     │
+│                                                          │
+│  Purpose: Calibrate judgments and reduce false positives │
+└─────────────────────────────────────────────────────────┘
+                            ↓
 ┌─────────────────────────────────────────────────────────┐
 │  Layer 1: Master Review Context                         │
 │  ─────────────────────────────────────────────────────  │
@@ -65,6 +76,15 @@ The AI review system uses a 3-layer prompt architecture to improve review qualit
 ```
 
 ## Component Details
+
+### Layer 0: Exemplar Anchors
+
+**File:** `config/prompts/exemplar_anchors.txt`
+
+Purpose:
+- Provide gold-standard excerpts (5.6, 5.7) and few-shot issue examples
+- Reduce false positives by showing correct patterns to mirror
+- Align fixes to preferred style and structure
 
 ### Layer 1: Master Review Context
 

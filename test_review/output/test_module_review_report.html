@@ -99,6 +99,7 @@
             <button class="nav-tab" onclick="showSection('categories')">Rubric Categories</button>
             <button class="nav-tab" onclick="showSection('consensus')">Consensus Issues</button>
             <button class="nav-tab" onclick="showSection('flagged')">Flagged Issues</button>
+            <button class="nav-tab" onclick="showSection('original-input')">Original Input</button>
             <button class="nav-tab" onclick="showSection('next-steps')">Next Steps</button>
             <button class="nav-tab" onclick="showSection('flowchart')">System Flowchart</button>
         </div>
@@ -120,18 +121,18 @@
                     </div>
                     <div class="metric-card">
                         <div class="metric-label">Consensus Issues</div>
-                        <div class="metric-value">13</div>
+                        <div class="metric-value">17</div>
                         <div class="metric-change">2+ agents agreeing</div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-label">Other Flagged</div>
-                        <div class="metric-value">0</div>
+                        <div class="metric-value">6</div>
                         <div class="metric-change">Single-agent findings</div>
                     </div>
                 </div>
                 
                 <div class="note-box">
-                    <strong>Review Timestamp:</strong> Generated on November 09, 2025 at 03:47 PM
+                    <strong>Review Timestamp:</strong> Generated on November 11, 2025 at 12:10 AM
                 </div>
                 
                 <div class="note-box" style="background: #fff3cd; border-left-color: #ffc107;">
@@ -163,14 +164,14 @@
                 </h2>
                 <div class="note-box">
                     <p><strong>How Priority is Calculated:</strong></p>
-                    <p style="margin-top: 10px;"><code>Priority = Severity × (Agents Agreeing / Total Agents)</code></p>
-                    <p style="margin-top: 10px;">This gives higher priority to severe issues with strong consensus. For example, a Severity 5 issue flagged by 7 agents gets priority = 5 × (7/30) = 1.17</p>
+                    <p style="margin-top: 10px;"><code>Priority (1–5) = ceil(Severity × (Agents Agreeing / Total Agents))</code> (clamped to 1–5)</p>
+                    <p style="margin-top: 10px;">This preserves a 1–5 scale while still reflecting consensus. Example: Severity 5 flagged by 7 of 30 agents → ceil(5 × 7/30) = 2.</p>
                 </div>
                 <div class="note-box">
                     <p><strong>Consensus vs. Flagged:</strong></p>
                     <ul style="margin-left: 30px; margin-top: 10px;">
-                        <li><strong>Consensus Issues:</strong> Flagged by 2+ agents OR severity 5 (high confidence)</li>
-                        <li><strong>Flagged Issues:</strong> All issues detected, including single-agent findings</li>
+                        <li><strong>Consensus Issues:</strong> Flagged by 4+ agents OR severity 5 (high confidence)</li>
+                        <li><strong>Flagged Issues:</strong> All other issues, including single- and dual-agent findings</li>
                     </ul>
                 </div>
             </section>
@@ -204,30 +205,30 @@
 
                 <div style="margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600;">
-                        <span><strong>Conceptual Clarity</strong></span>
-                        <span>2 issues</span>
+                        <span><strong>Pedagogical Flow</strong></span>
+                        <span>4 issues</span>
                     </div>
                     <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
-                        <div style="height: 100%; width: 50.0%;
+                        <div style="height: 100%; width: 100.0%;
                                    background: linear-gradient(90deg, #4caf50, #2e7d32);
                                    display: flex; align-items: center; justify-content: flex-end;
                                    padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
-                            2
+                            4
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600;">
-                        <span><strong>Pedagogical Flow</strong></span>
-                        <span>2 issues</span>
+                        <span><strong>Conceptual Clarity</strong></span>
+                        <span>3 issues</span>
                     </div>
                     <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
-                        <div style="height: 100%; width: 50.0%;
+                        <div style="height: 100%; width: 75.0%;
                                    background: linear-gradient(90deg, #4caf50, #2e7d32);
                                    display: flex; align-items: center; justify-content: flex-end;
                                    padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
-                            2
+                            3
                         </div>
                     </div>
                 </div>
@@ -240,10 +241,25 @@
                 <div style="margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600;">
                         <span><strong>Mathematical Formatting</strong></span>
-                        <span>2 issues</span>
+                        <span>3 issues</span>
                     </div>
                     <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
                         <div style="height: 100%; width: 100.0%;
+                                   background: linear-gradient(90deg, #0288d1, #01579b);
+                                   display: flex; align-items: center; justify-content: flex-end;
+                                   padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
+                            3
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600;">
+                        <span><strong>Punctuation & Grammar</strong></span>
+                        <span>2 issues</span>
+                    </div>
+                    <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
+                        <div style="height: 100%; width: 66.66666666666666%;
                                    background: linear-gradient(90deg, #0288d1, #01579b);
                                    display: flex; align-items: center; justify-content: flex-end;
                                    padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
@@ -258,37 +274,7 @@
                         <span>1 issue</span>
                     </div>
                     <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
-                        <div style="height: 100%; width: 50.0%;
-                                   background: linear-gradient(90deg, #0288d1, #01579b);
-                                   display: flex; align-items: center; justify-content: flex-end;
-                                   padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
-                            1
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 20px;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600;">
-                        <span><strong>Punctuation & Grammar</strong></span>
-                        <span>1 issue</span>
-                    </div>
-                    <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
-                        <div style="height: 100%; width: 50.0%;
-                                   background: linear-gradient(90deg, #0288d1, #01579b);
-                                   display: flex; align-items: center; justify-content: flex-end;
-                                   padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
-                            1
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 20px;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600;">
-                        <span><strong>Mechanical Compliance</strong></span>
-                        <span>1 issue</span>
-                    </div>
-                    <div style="height: 30px; background: #f0f0f0; border-radius: 15px; overflow: hidden;">
-                        <div style="height: 100%; width: 50.0%;
+                        <div style="height: 100%; width: 33.33333333333333%;
                                    background: linear-gradient(90deg, #0288d1, #01579b);
                                    display: flex; align-items: center; justify-content: flex-end;
                                    padding-right: 10px; color: white; font-weight: 700; font-size: 0.85rem;">
@@ -322,15 +308,7 @@
                     <tbody>
 
                         <tr>
-                            <td><strong>1.17</strong></td>
-                            <td><strong>Line 3: Module Title is 'Todo' placeholder - blocks student understanding of content scope</strong></td>
-                            <td><a href="../config/rubrics/authoring_structural_integrity.xml" class="rubric-link">Structural Integrity</a></td>
-                            <td>Lines 3</td>
-                            <td style="font-size: 0.85rem;">Change to: <Title>Power Series: Radius and Interval of Convergence</Title></td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>1.07</strong></td>
+                            <td><strong>2.00</strong></td>
                             <td><strong>Lines 42-43: Explanation of x=-1 endpoint is misleading - states 'negative harmonic series' incorrectly</strong></td>
                             <td><a href="../config/rubrics/authoring_conceptual_clarity.xml" class="rubric-link">Conceptual Clarity</a></td>
                             <td>Lines 42, 43</td>
@@ -338,23 +316,15 @@
                         </tr>
 
                         <tr>
-                            <td><strong>0.93</strong></td>
-                            <td><strong>Line 4: Description is 'Todo' placeholder - missing module overview</strong></td>
+                            <td><strong>2.00</strong></td>
+                            <td><strong>Line 3: Module Title is 'Todo' placeholder - blocks student understanding of content scope</strong></td>
                             <td><a href="../config/rubrics/authoring_structural_integrity.xml" class="rubric-link">Structural Integrity</a></td>
-                            <td>Lines 4</td>
-                            <td style="font-size: 0.85rem;">Add: <Description>Learn to determine where power series converge using radius and interval of convergence tests</Description></td>
+                            <td>Lines 3</td>
+                            <td style="font-size: 0.85rem;">Change to: <Title>Power Series: Radius and Interval of Convergence</Title></td>
                         </tr>
 
                         <tr>
-                            <td><strong>0.93</strong></td>
-                            <td><strong>Line 5: KSAs is 'Todo' placeholder - missing learning prerequisites</strong></td>
-                            <td><a href="../config/rubrics/authoring_structural_integrity.xml" class="rubric-link">Structural Integrity</a></td>
-                            <td>Lines 5</td>
-                            <td style="font-size: 0.85rem;">Add: <KSAs>Sequences and series, ratio test, geometric series</KSAs></td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>0.80</strong></td>
+                            <td><strong>1.00</strong></td>
                             <td><strong>Lines 10-14: Four dense paragraphs of abstract definitions before any concrete example</strong></td>
                             <td><a href="../config/rubrics/authoring_pedagogical_flow.xml" class="rubric-link">Pedagogical Flow</a></td>
                             <td>Lines 10, 11, 12, 13, 14</td>
@@ -362,7 +332,7 @@
                         </tr>
 
                         <tr>
-                            <td><strong>0.80</strong></td>
+                            <td><strong>1.00</strong></td>
                             <td><strong>Line 24: Jumps to applying ratio test without explaining why we need it</strong></td>
                             <td><a href="../config/rubrics/authoring_pedagogical_flow.xml" class="rubric-link">Pedagogical Flow</a></td>
                             <td>Lines 24</td>
@@ -370,39 +340,7 @@
                         </tr>
 
                         <tr>
-                            <td><strong>0.53</strong></td>
-                            <td><strong>Line 10: Term 'foundational tools' is vague - doesn't explain why power series matter</strong></td>
-                            <td><a href="../config/rubrics/authoring_conceptual_clarity.xml" class="rubric-link">Conceptual Clarity</a></td>
-                            <td>Lines 10</td>
-                            <td style="font-size: 0.85rem;">Replace with: 'power series let us represent complicated functions as infinite polynomials, making them easier to analyze'</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>0.53</strong></td>
-                            <td><strong>Line 13: Mathematical notation inconsistent - uses |aₙ / aₙ₊₁| without <m> LaTeX tags</strong></td>
-                            <td><a href="../config/rubrics/authoring_mathematical_formatting.xml" class="rubric-link">Mathematical Formatting</a></td>
-                            <td>Lines 13</td>
-                            <td style="font-size: 0.85rem;">R = lim <m>|a_n / a_{n+1}|</m> as <m>n \to \infty</m></td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>0.53</strong></td>
-                            <td><strong>Line 24: Infinity symbol ∞ used without LaTeX tags</strong></td>
-                            <td><a href="../config/rubrics/authoring_mathematical_formatting.xml" class="rubric-link">Mathematical Formatting</a></td>
-                            <td>Lines 24</td>
-                            <td style="font-size: 0.85rem;">Use <m>\infty</m> or write '...from n=0 to <m>\infty</m>'</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>0.47</strong></td>
-                            <td><strong>Lines 10, 38: Inconsistent series notation - sometimes '∑ ((-1)ⁿ xⁿ / n)', sometimes '∑ aₙ(x - c)ⁿ'</strong></td>
-                            <td><a href="../config/rubrics/authoring_consistency.xml" class="rubric-link">Consistency</a></td>
-                            <td>Lines 10, 38</td>
-                            <td style="font-size: 0.85rem;">Establish consistent notation early: use aₙ for general case, then show specific examples</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>0.33</strong></td>
+                            <td><strong>1.00</strong></td>
                             <td><strong>Line 6: LearningOutcomes is 'Todo' placeholder - students don't know what they'll achieve</strong></td>
                             <td><a href="../config/rubrics/authoring_structural_integrity.xml" class="rubric-link">Structural Integrity</a></td>
                             <td>Lines 6</td>
@@ -410,19 +348,99 @@
                         </tr>
 
                         <tr>
-                            <td><strong>0.27</strong></td>
-                            <td><strong>Line 38: Missing comma after introductory phrase 'Now let's examine'</strong></td>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Line 10: Term 'foundational tools' is vague - doesn't explain why power series matter</strong></td>
+                            <td><a href="../config/rubrics/authoring_conceptual_clarity.xml" class="rubric-link">Conceptual Clarity</a></td>
+                            <td>Lines 10</td>
+                            <td style="font-size: 0.85rem;">Replace with: 'power series let us represent complicated functions as infinite polynomials, making them easier to analyze'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Abstract definition appears before a concrete example (authoring guideline prefers concrete→general)</strong></td>
+                            <td><a href="../config/rubrics/authoring_pedagogical_flow.xml" class="rubric-link">Pedagogical Flow</a></td>
+                            <td>Lines 14</td>
+                            <td style="font-size: 0.85rem;">Introduce a concrete example (e.g., geometric series) before presenting the general definition</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Jump to test application without bridging why it is needed (missing rationale before ratio test)</strong></td>
+                            <td><a href="../config/rubrics/authoring_pedagogical_flow.xml" class="rubric-link">Pedagogical Flow</a></td>
+                            <td>Lines 23</td>
+                            <td style="font-size: 0.85rem;">Add a one-sentence rationale linking convergence to the ratio test before applying it</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Vague reference ('it/this') without clear antecedent</strong></td>
+                            <td><a href="../config/rubrics/authoring_conceptual_clarity.xml" class="rubric-link">Conceptual Clarity</a></td>
+                            <td>Lines 11</td>
+                            <td style="font-size: 0.85rem;">Replace with explicit noun: 'The graph shows the behavior of the function near c'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Line 4: Description is 'Todo' placeholder - missing module overview</strong></td>
+                            <td><a href="../config/rubrics/authoring_structural_integrity.xml" class="rubric-link">Structural Integrity</a></td>
+                            <td>Lines 4</td>
+                            <td style="font-size: 0.85rem;">Add: <Description>Learn to determine where power series converge using radius and interval of convergence tests</Description></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Line 5: KSAs is 'Todo' placeholder - missing learning prerequisites</strong></td>
+                            <td><a href="../config/rubrics/authoring_structural_integrity.xml" class="rubric-link">Structural Integrity</a></td>
+                            <td>Lines 5</td>
+                            <td style="font-size: 0.85rem;">Add: <KSAs>Sequences and series, ratio test, geometric series</KSAs></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Line 13: Mathematical notation inconsistent - uses |aₙ / aₙ₊₁| without <m> LaTeX tags</strong></td>
+                            <td><a href="../config/rubrics/authoring_mathematical_formatting.xml" class="rubric-link">Mathematical Formatting</a></td>
+                            <td>Lines 13</td>
+                            <td style="font-size: 0.85rem;">R = lim <m>|a_n / a_{n+1}|</m> as <m>n \to \infty</m></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Line 24: Infinity symbol ∞ used without LaTeX tags</strong></td>
+                            <td><a href="../config/rubrics/authoring_mathematical_formatting.xml" class="rubric-link">Mathematical Formatting</a></td>
+                            <td>Lines 24</td>
+                            <td style="font-size: 0.85rem;">Use <m>\infty</m> or write '...from n=0 to <m>\infty</m>'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Missing comma after introductory phrase</strong></td>
                             <td><a href="../config/rubrics/authoring_punctuation_&_grammar.xml" class="rubric-link">Punctuation & Grammar</a></td>
-                            <td>Lines 38</td>
+                            <td>Lines 36</td>
                             <td style="font-size: 0.85rem;">Consider: 'Now, let's examine a more complex example.'</td>
                         </tr>
 
                         <tr>
-                            <td><strong>0.13</strong></td>
-                            <td><strong>Line 11: Sentence fragment 'This represents the distance...' - should connect to previous sentence</strong></td>
-                            <td><a href="../config/rubrics/authoring_mechanical_compliance.xml" class="rubric-link">Mechanical Compliance</a></td>
-                            <td>Lines 11</td>
-                            <td style="font-size: 0.85rem;">Combine: 'The radius of convergence R represents the distance...'</td>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Inconsistent series notation between general and specific examples</strong></td>
+                            <td><a href="../config/rubrics/authoring_consistency.xml" class="rubric-link">Consistency</a></td>
+                            <td>Lines 10, 36</td>
+                            <td style="font-size: 0.85rem;">Establish consistent notation early: use aₙ for general case, then show specific examples</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Use of 'thus/therefore/hence' — prefer 'so' per style guide</strong></td>
+                            <td><a href="../config/rubrics/authoring_punctuation_&_grammar.xml" class="rubric-link">Punctuation & Grammar</a></td>
+                            <td>Lines 34</td>
+                            <td style="font-size: 0.85rem;">Use 'so' instead of 'therefore', 'thus', or 'hence'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Mathematical symbol or numeral outside <m>…</m> tags</strong></td>
+                            <td><a href="../config/rubrics/authoring_mathematical_formatting.xml" class="rubric-link">Mathematical Formatting</a></td>
+                            <td>Lines 13</td>
+                            <td style="font-size: 0.85rem;">Wrap math/ numerals in <m>…</m> as per style guide</td>
                         </tr>
 
                     </tbody>
@@ -452,11 +470,186 @@
                     </thead>
                     <tbody>
 
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Lazy start ('There is/are') reduces clarity</strong></td>
+                            <td><a href="../config/rubrics/authoring_conceptual_clarity.xml" class="rubric-link">Conceptual Clarity</a></td>
+                            <td>Lines 28</td>
+                            <td><strong>3</strong> / 30</td>
+                            <td style="font-size: 0.85rem;">Use subject-verb order: 'The graph of f has a horizontal asymptote at y = 0'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Sentence fragment 'This represents the distance...' - should connect to previous sentence</strong></td>
+                            <td><a href="../config/rubrics/authoring_mechanical_compliance.xml" class="rubric-link">Mechanical Compliance</a></td>
+                            <td>Lines 11</td>
+                            <td><strong>2</strong> / 30</td>
+                            <td style="font-size: 0.85rem;">Combine: 'The radius of convergence R represents the distance...'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Potential contraction usage — ensure no contractions per style guide</strong></td>
+                            <td><a href="../config/rubrics/authoring_mechanical_compliance.xml" class="rubric-link">Mechanical Compliance</a></td>
+                            <td>Lines 22</td>
+                            <td><strong>1</strong> / 30</td>
+                            <td style="font-size: 0.85rem;">Rewrite to avoid contractions: 'Now, let us examine a more complex example.' or remove 'let us' entirely.</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Check serial comma usage for lists (style requires Oxford comma)</strong></td>
+                            <td><a href="../config/rubrics/authoring_punctuation_&_grammar.xml" class="rubric-link">Punctuation & Grammar</a></td>
+                            <td>Lines 27</td>
+                            <td><strong>3</strong> / 30</td>
+                            <td style="font-size: 0.85rem;">Use the serial comma: 'power series, intervals, and coefficients'</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Pronoun usage ('you/they/it') discouraged by style guide unless unavoidable</strong></td>
+                            <td><a href="../config/rubrics/authoring_mechanical_compliance.xml" class="rubric-link">Mechanical Compliance</a></td>
+                            <td>Lines 46</td>
+                            <td><strong>2</strong> / 30</td>
+                            <td style="font-size: 0.85rem;">Replace with explicit nouns where possible, keep 'we' minimal and purposeful</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>1.00</strong></td>
+                            <td><strong>Semicolon usage discouraged by style guide</strong></td>
+                            <td><a href="../config/rubrics/authoring_punctuation_&_grammar.xml" class="rubric-link">Punctuation & Grammar</a></td>
+                            <td>Lines 51</td>
+                            <td><strong>1</strong> / 30</td>
+                            <td style="font-size: 0.85rem;">Split into two sentences or use a comma with conjunction</td>
+                        </tr>
+
                     </tbody>
                 </table>
             </section>
             
-            <!-- Tab 7: Next Steps -->
+            <!-- Tab 7: Original Input (human-readable) -->
+            <section id="original-input" class="section">
+                <h2 class="section-header">
+                    <div class="icon">📄</div>
+                    Original Module Text (Human-Readable)
+                </h2>
+                <div class="note-box">
+                    <strong>Note:</strong> This is the line-numbered text extracted from the module for precise referencing.
+                </div>
+                <pre style="white-space: pre-wrap; background: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #e9ecef; max-height: 500px; overflow: auto;">MODULE: Power Series Radius and Interval of Convergence
+========================================================
+
+MODULE METADATA:
+- Title: Todo
+- Description: Todo
+- KSAs: Todo
+- LearningOutcomes: Todo
+
+LESSON: Power Series Radius and Interval of Convergence
+Pacing: 20-25 minutes
+
+---
+
+FRAMING TEXT (Lines 10-15):
+
+Power series, written as ∑ aₙ(x - c)ⁿ from n=0 to infinity, are foundational tools in calculus, enabling us to represent complex functions in simpler terms. Each power series has a center c and a set of values for which the series converges. We call this the interval of convergence.
+
+Central to understanding power series is the radius of convergence, R. This represents the distance from the center c within which the series converges. Outside this radius, the series diverges. Mathematically, the radius of convergence can be found using the ratio test or the root test. For many series, we compute:
+
+R = lim |aₙ / aₙ₊₁| as n → ∞, when this limit exists.
+
+The interval of convergence is then (c - R, c + R), but we must test the endpoints separately. At x = c - R and x = c + R, the series may converge or diverge depending on the specific coefficients aₙ.
+
+---
+
+ANIMATED FIGURE 1 (Lines 17-21): Visualizing Radius of Convergence
+Specification: Show a number line centered at c with a shaded interval from c - R to c + R. Animate the expansion of this interval as R increases. Label the regions of convergence and divergence.
+
+---
+
+INSTRUCTIONAL TEXT (Lines 23-27):
+
+Consider the power series ∑ (xⁿ / n!) from n=0 to infinity. To find the radius of convergence, we apply the ratio test:
+
+lim |xⁿ⁺¹ / (n+1)! × n! / xⁿ| = lim |x / (n+1)| = 0 for all x.
+
+Since the limit is 0, which is less than 1, the series converges for all real x. Thus, R = ∞ and the interval of convergence is (-∞, ∞).
+
+---
+
+SHORT ANSWER QUESTION 1 (Lines 29-35):
+
+Q: What is the radius of convergence for the power series ∑ xⁿ from n=0 to infinity?
+
+Hint 1: Consider the geometric series and for what values of x it converges.
+Hint 2: The geometric series ∑ rⁿ converges when |r| &lt; 1.
+
+Answer: R = 1
+
+Explanation: The series ∑ xⁿ is a geometric series with ratio x. It converges when |x| &lt; 1, so the radius of convergence is R = 1.
+
+---
+
+INSTRUCTIONAL TEXT (Lines 37-46):
+
+Now let&#x27;s examine a more complex example. Consider ∑ ((-1)ⁿ xⁿ / n) from n=1 to infinity, centered at 0. Using the ratio test:
+
+lim |((-1)ⁿ⁺¹ xⁿ⁺¹ / (n+1)) × (n / ((-1)ⁿ xⁿ))| = lim |x × n / (n+1)| = |x|.
+
+The series converges when |x| &lt; 1, so R = 1. The interval is (-1, 1), but we must test the endpoints:
+
+• At x = 1: ∑ ((-1)ⁿ / n) converges by the alternating series test.
+• At x = -1: ∑ (-1 / n) diverges (harmonic series with alternating signs becomes the negative harmonic series).
+
+Therefore, the interval of convergence is (-1, 1].
+
+---
+
+MULTIPLE CHOICE QUESTION 1 (Lines 48-66):
+
+Q: For the power series ∑ (xⁿ / 2ⁿ) from n=0 to infinity, what is the interval of convergence?
+
+Choice A (Incorrect): (-1, 1)
+Explanation: Remember to account for the coefficient 1/2ⁿ when determining where |x/2| &lt; 1.
+
+Choice B (CORRECT): (-2, 2)
+Explanation: The series can be rewritten as ∑ (x/2)ⁿ, which converges when |x/2| &lt; 1, giving |x| &lt; 2. Testing endpoints shows both diverge, so the interval is (-2, 2).
+
+Choice C (Incorrect): [-2, 2]
+Explanation: Check the endpoints carefully. At x = ±2, the series becomes ∑ (±1)ⁿ, which diverges.
+
+Choice D (Incorrect): All real numbers
+Explanation: This series does not converge for all x. Apply the ratio test to find where it converges.
+
+---
+
+ANIMATED FIGURE 2 (Lines 68-72): Endpoint Testing Visualization
+Specification: Display three number lines showing intervals: one with open endpoints, one with one closed endpoint, and one with both closed endpoints. Animate testing at endpoints with visual indication of convergence/divergence.
+
+---
+
+INSTRUCTIONAL TEXT (Lines 74-76):
+
+It&#x27;s important to distinguish between the radius of convergence and the interval of convergence. The radius tells us the distance from the center, while the interval includes information about endpoint behavior. Two series with the same radius might have different intervals depending on endpoint convergence.
+
+---
+
+SHORT ANSWER QUESTION 2 (Lines 78-83):
+
+Q: A power series centered at x = 3 has radius of convergence R = 5. What is the guaranteed interval where the series converges, excluding endpoint considerations?
+
+Hint: The interval is (c - R, c + R) where c is the center.
+
+Answer: (-2, 8)
+
+Explanation: With center c = 3 and radius R = 5, the interval before testing endpoints is (3 - 5, 3 + 5) = (-2, 8). The endpoints would need to be tested separately to determine if they should be included.
+
+===== END OF MODULE =====
+</pre>
+            </section>
+            
+            <!-- Tab 8: Next Steps -->
             <section id="next-steps" class="section">
                 <h2 class="section-header">
                     <div class="icon">🚀</div>
@@ -471,6 +664,7 @@
                         <li>Check <strong>Other Flagged</strong> tab for single-agent findings</li>
                         <li>Use your judgment on low-priority items - some may be false positives</li>
                         <li>Re-run review after fixes to validate improvements</li>
+                        <li>Review results with your reviewer</li>
                     </ol>
                 </div>
                 <div class="note-box" style="background: #e7f3ff; border-left-color: #667eea;">
@@ -484,7 +678,7 @@
                 </div>
             </section>
             
-            <!-- Tab 8: System Flowchart -->
+            <!-- Tab 9: System Flowchart -->
             <section id="flowchart" class="section">
                 <h2 class="section-header">
                     <div class="icon">📊</div>
@@ -511,14 +705,16 @@
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 1: Initial Review</strong><br>
                             <span style="color: #666; font-size: 0.9rem;">30 agents (15 authoring + 15 style)</span><br>
-                            <span style="color: #4caf50; font-weight: 700;">← YOU ARE HERE (This Simulation)</span>
+                            <span style="color: #4caf50; font-weight: 700;">← YOU ARE HERE (This Simulation)</span><br>
+                            <span style="color: #2e7d32; font-size: 0.9rem;">Covers Authoring + Style (for author + reviewer)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #4caf50; margin: 10px 0;">↓</div>
                         
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 2: Verification Review</strong><br>
-                            <span style="color: #666; font-size: 0.9rem;">10 agents verify fixes from Pass 1</span>
+                            <span style="color: #666; font-size: 0.9rem;">30 agents (same as Pass 1) verify fixes</span><br>
+                            <span style="color: #2e7d32; font-size: 0.9rem;">Covers Authoring + Style (for author + reviewer)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #4caf50; margin: 10px 0;">↓</div>
@@ -536,14 +732,16 @@
                         
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 1: Initial Review</strong><br>
-                            <span style="color: #666; font-size: 0.9rem;">30 agents (fresh perspective)</span>
+                            <span style="color: #666; font-size: 0.9rem;">30 agents (fresh perspective)</span><br>
+                            <span style="color: #01579b; font-size: 0.9rem;">Copy editing — Style only (for author + copy editor)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #0288d1; margin: 10px 0;">↓</div>
                         
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: center;">
                             <strong>Pass 2: Verification Review</strong><br>
-                            <span style="color: #666; font-size: 0.9rem;">10 agents verify fixes</span>
+                            <span style="color: #666; font-size: 0.9rem;">30 agents (same as Pass 1) verify fixes</span><br>
+                            <span style="color: #01579b; font-size: 0.9rem;">Copy editing — Style only (for author + copy editor)</span>
                         </div>
                         
                         <div style="text-align: center; font-size: 1.5rem; color: #0288d1; margin: 10px 0;">↓</div>
@@ -568,7 +766,7 @@
                         <li><strong>2 Modules:</strong> Fresh AI perspectives catch issues missed the first time</li>
                         <li><strong>2 Passes Each:</strong> Pass 1 finds issues, Pass 2 verifies fixes worked</li>
                         <li><strong>Human Review:</strong> Expert validation after each module ensures quality</li>
-                        <li><strong>30 + 10 Agents:</strong> Redundancy and verification prevent false negatives</li>
+                        <li><strong>30 + 30 Agents:</strong> Redundancy and verification prevent false negatives</li>
                     </ul>
                 </div>
             </section>
