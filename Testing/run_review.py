@@ -1953,6 +1953,41 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
             {_format_issues_html(consensus_issues, total_agents, show_all=False, max_issues=50)}
 
             {f'<p style="text-align: center; color: #6c757d; margin-top: 30px;"><em>Showing {min(50, len(consensus_issues))} of {len(consensus_issues)} consensus issues</em></p>' if len(consensus_issues) > 50 else ''}
+
+            <div class="info-box" style="margin-top: 40px;">
+                <h3>How Priority is Calculated</h3>
+                <p>Each issue receives a priority score from 1 (lowest) to 5 (highest) based on two factors:</p>
+
+                <div style="display: flex; gap: 40px; margin-top: 20px;">
+                    <div style="flex: 1;">
+                        <h4>1. Issue Severity (1-5)</h4>
+                        <ul style="margin-top: 10px;">
+                            <li><strong>5 - Critical:</strong> Blocks understanding</li>
+                            <li><strong>4 - Major:</strong> Significantly hinders learning</li>
+                            <li><strong>3 - Moderate:</strong> Creates confusion</li>
+                            <li><strong>2 - Minor:</strong> Slight improvement needed</li>
+                            <li><strong>1 - Trivial:</strong> Nice to fix</li>
+                        </ul>
+                    </div>
+
+                    <div style="flex: 1;">
+                        <h4>2. Agent Consensus</h4>
+                        <ul style="margin-top: 10px;">
+                            <li><strong>20+ agents (67%+):</strong> No reduction</li>
+                            <li><strong>12-19 agents (40-66%):</strong> -1 priority</li>
+                            <li><strong>8-11 agents (27-39%):</strong> -2 priority</li>
+                            <li><strong>4-7 agents (13-26%):</strong> -3 priority</li>
+                            <li><strong>1-3 agents (&lt;13%):</strong> -4 priority</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 4px; margin-top: 20px;">
+                    <strong>Formula:</strong> Priority = Severity + Consensus Adjustment (clamped to 1-5)<br>
+                    <strong>Example:</strong> A severity 5 issue with 15 agents (50% consensus) = 5 + (-1) = Priority 4<br>
+                    <strong>Result:</strong> High severity issues with strong consensus get highest priority for fixes.
+                </div>
+            </div>
         </div>
 
         <!-- Tab 7: Flagged Issues -->
