@@ -33,17 +33,26 @@
         <criterion>Poor balance between instruction and practice</criterion>
         <criterion>Weak or missing motivational elements</criterion>
         <criterion>Inadequate feedback mechanisms</criterion>
+        <criterion>BACKWARD DESIGN VIOLATIONS: Lesson teaches concepts not in homework/quiz (tangent)</criterion>
+        <criterion>BACKWARD DESIGN VIOLATIONS: Homework requires skills not taught in lessons (gap)</criterion>
       </criteria>
       <examples>
         <example type="violation">One example for a complex multi-step process</example>
         <example type="violation">No worked examples before practice problems</example>
         <example type="violation">Missing explanations of real-world relevance</example>
+        <example type="violation">Lesson content tangential to homework - teaches material not assessed</example>
+        <example type="violation">Follow-up questions don't prepare for homework complexity</example>
         <example type="real" source="5.6_CE_line_11">
           Issue: Question hint and explanation both refer to the "Fundamental Theorem of Calculus Part 1," which students do not learn until the next lesson
           Impact: References concept students haven't learned yet; breaks scaffolding
           Fix: Rewrite Hint 1 and Explanation if appropriate
         </example>
       </examples>
+      <backward_design_note>
+        Content uses backward design: Exam → Quiz → Homework → Lessons.
+        Lessons must directly prepare students for homework. Tangential content
+        or insufficient preparation for homework are MAJOR violations.
+      </backward_design_note>
     </severity>
 
     <severity level="3" label="Moderate">
@@ -92,6 +101,10 @@
     <question>Does the content connect to what students already know?</question>
     <question>Is feedback provided at appropriate intervals?</question>
     <question>Are there opportunities for self-assessment?</question>
+    <question>BACKWARD DESIGN: Can students complete homework after this lesson?</question>
+    <question>BACKWARD DESIGN: Does every concept taught connect to an assessment?</question>
+    <question>BACKWARD DESIGN: Are there tangential topics not in homework/quiz?</question>
+    <question>BACKWARD DESIGN: Do follow-up questions build toward homework complexity?</question>
   </diagnostic_questions>
 
   <common_patterns>

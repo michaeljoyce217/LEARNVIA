@@ -47,12 +47,28 @@
         <criterion>Some markdown convention violations</criterion>
         <criterion>Inconsistent code formatting</criterion>
         <criterion>Minor environment misuse</criterion>
+        <criterion>UNITS OF MEASURE: Incorrect abbreviations (e.g., "meters" instead of "m")</criterion>
+        <criterion>UNITS OF MEASURE: Inconsistent singular/plural forms (e.g., "secs" with 's')</criterion>
+        <criterion>UNITS OF MEASURE: Periods after abbreviations (except at sentence end)</criterion>
+        <criterion>UNITS OF MEASURE: Spelled out units when preceded by numbers</criterion>
       </criteria>
       <examples>
         <example type="violation">Inconsistent use of \text{} vs \mathrm{}</example>
         <example type="violation">Mixed heading styles in markdown</example>
         <example type="violation">Inconsistent spacing in equations</example>
+        <example type="violation">"The ball travels 5 meters" (should be "5 m")</example>
+        <example type="violation">"2 secs" (should be "2 sec" - no 's' for plural)</example>
+        <example type="violation">"Distance: 10 cm." mid-sentence (no period after cm unless ending sentence)</example>
+        <example type="violation">"The object moves several m" (spell out: "several meters")</example>
       </examples>
+      <units_reference>
+        See style guide for complete abbreviations table:
+        Length (mm, cm, m, km, in, ft, yd, mi)
+        Time (sec, min, hr)
+        Volume (cm³, m³, L, mL)
+        Weight (g, kg, lb, oz)
+        Rules: No periods, identical singular/plural, spell out when not preceded by number
+      </units_reference>
     </severity>
 
     <severity level="2" label="Minor">

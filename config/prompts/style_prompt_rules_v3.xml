@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Learnvia Style Guide - AI Reviewer Prompt (Version 3.0)
+  PRIMARY FORMAT: This XML file is the source of truth
+
+  SCOPE: Writing mechanics and mathematical notation for CORRECTNESS
+  OUT OF SCOPE: Accessibility (ableist language, color references) - handled separately
+
+  NOTE: This is a streamlined version capturing critical rules.
+  For comprehensive mathematical style details, agents also reference full guidelines.
+-->
+
+<style_guide version="3.0">
+
+  <!-- ================================================================ -->
+  <!-- CRITICAL MECHANICAL RULES (HIGH SEVERITY)                        -->
+  <!-- These are the most common and impactful style issues             -->
+  <!-- ================================================================ -->
+
+  <critical_rules priority="highest">
+
+    <rule id="contractions_vs_possessives" severity="5">
+      <title>CRITICAL DISTINCTION: Contractions vs. Possessives</title>
+
+      <never_contractions>
+        <description>NEVER use contractions - Spell out full expression</description>
+        <bad_example>What's the best way... (what's = what is)</bad_example>
+        <bad_example>Let's examine... (let's = let us)</bad_example>
+        <good_example>What is the best way...</good_example>
+        <good_example>The next example...</good_example>
+      </never_contractions>
+
+      <always_possessives>
+        <description>ALWAYS use possessives - The apostrophe is CORRECT and REQUIRED</description>
+        <good_example>the function's derivative (possessive - shows ownership)</good_example>
+        <good_example>the square's area (possessive)</good_example>
+        <bad_example>the area of the square (unnecessarily wordy)</bad_example>
+        <critical_note>
+          The apostrophe in possessives is NOT a contraction - it is grammatically necessary.
+        </critical_note>
+      </always_possessives>
+    </rule>
+
+    <rule id="imperative_voice" severity="4">
+      <title>Imperative Voice - RESTRICTED USE</title>
+
+      <forbidden_in>
+        General instruction
+      </forbidden_in>
+
+      <bad_example>Find the equation. State the equation in slope-intercept form</bad_example>
+      <good_example>The equation of the graph in slope-intercept form is _____</good_example>
+
+      <allowed_only_in>
+        <location>Teaching techniques/procedures</location>
+        <location>Embedded questions</location>
+        <location>Follow-up questions</location>
+        <location>Homework questions</location>
+      </allowed_only_in>
+    </rule>
+
+    <rule id="pronouns" severity="4">
+      <title>Pronouns - RESTRICTED</title>
+
+      <do_not_use>you, she, he, they, or it</do_not_use>
+
+      <minimal_use>
+        <pronoun>we</pronoun>
+        <when>Only when truly referring to ourselves as people</when>
+        <example_acceptable>We read f' aloud as f prime</example_acceptable>
+        <example_avoid>We define slope as... (use "Slope is defined as...")</example_avoid>
+      </minimal_use>
+    </rule>
+
+  </critical_rules>
+
+  <!-- ================================================================ -->
+  <!-- WRITING MECHANICS                                                -->
+  <!-- Grammar, sentence structure, and clarity guidelines              -->
+  <!-- ================================================================ -->
+
+  <writing_mechanics>
+
+    <vague_references severity="high">
+      <rule>Do NOT use "it" or "they" as vague references</rule>
+
+      <bad_example>
+        The expression has one term. It uses two variables (it could refer to expression or term)
+      </bad_example>
+      <good_example>The term uses two variables</good_example>
+
+      <exception>
+        Sometimes yields simplicity without ambiguity:
+        - "A function and its inverse..." (obviously refers to function)
+        - "Gastroenteritis is common. Its symptoms include..." (not vague, not plural)
+      </exception>
+
+      <avoid_this_as_subject>
+        <bad_example>This qualifies as a simple expression</bad_example>
+        <good_example>An expression with one term qualifies as a simple expression</good_example>
+      </avoid_this_as_subject>
+    </vague_references>
+
+    <sentence_structure>
+      <preference>Subject-verb-object construction</preference>
+
+      <avoid_introductory_clauses>
+        <bad_example>While we can approximate the area using rectangles, the difference...</bad_example>
+        <good_example>We can approximate the area using rectangles. However, the difference...</good_example>
+      </avoid_introductory_clauses>
+
+      <no_lazy_starts>
+        <bad_example>There is a horizontal asymptote</bad_example>
+        <good_example>The graph of f has a horizontal asymptote at y = 0</good_example>
+      </no_lazy_starts>
+
+      <reading_level>8th grade target</reading_level>
+    </sentence_structure>
+
+    <word_choice>
+      <substitution old="thus/hence/therefore" new="so"/>
+      <substitution old="e.g." new="Ex:"/>
+      <substitution old="i.e." new="specifically or that is"/>
+      <substitution old="plug in or replace" new="substitute"/>
+    </word_choice>
+
+    <punctuation>
+      <rule>Commas/periods OUTSIDE quotation marks (unless comma in quotation)</rule>
+      <example>Write "the limit does not exist".</example>
+
+      <rule>Serial (Oxford) comma ALWAYS</rule>
+      <example>...cereal, pancakes, and bread with cheese</example>
+
+      <rule>Single space between sentences</rule>
+      <rule>No semicolons</rule>
+    </punctuation>
+
+    <singular_form severity="medium">
+      <description>Write in singular whenever possible</description>
+      <bad_example>All quadratic equations have solutions...</bad_example>
+      <good_example>Every quadratic equation has a solution...</good_example>
+    </singular_form>
+
+    <synonyms_and_homonyms severity="high">
+      <rule>One term per concept, use exclusively</rule>
+      <rule>Ensure terminology consistent throughout</rule>
+      <bad_example>Alternating "average" and "mean"</bad_example>
+      <bad_example>Same word for two different concepts</bad_example>
+    </synonyms_and_homonyms>
+
+    <consistency severity="high">
+      <rule>Maintain consistent tone throughout the module</rule>
+      <rule>Avoid significant shifts in formality, style, or reading level</rule>
+
+      <bad_example>
+        Starting conversationally ("Imagine a ball rolling down a hill...") then switching
+        to formal academic language ("The aforementioned kinematic principles demonstrate...")
+      </bad_example>
+
+      <good_example>
+        Maintain same conversational, friendly tone from introduction through examples and practice
+      </good_example>
+
+      <check_for>
+        <item>Consistent reading level (~8th grade throughout)</item>
+        <item>Consistent use of "we" (either minimal throughout, or consistent purpose)</item>
+        <item>Consistent sentence structure patterns</item>
+        <item>Consistent formality level</item>
+      </check_for>
+
+      <student_impact>
+        Sudden tone shifts increase cognitive load and reduce trust for struggling learners
+      </student_impact>
+    </consistency>
+
+  </writing_mechanics>
+
+  <!-- ================================================================ -->
+  <!-- DEFINITIONS FORMAT                                               -->
+  <!-- ================================================================ -->
+
+  <definitions>
+    <format>&lt;definition&gt;&lt;b&gt;[Term]&lt;/b&gt; is [definition].&lt;/definition&gt;</format>
+
+    <rules>
+      <rule>Key terms appear in framing text between definition tags</rule>
+      <rule>Standalone statement when first used</rule>
+      <rule>Begin with key term and verb "is"</rule>
+      <rule>Article (a, an, the) may appear before term</rule>
+      <rule>Define in singular form</rule>
+      <rule>Explain what something IS, not what it DOES</rule>
+    </rules>
+  </definitions>
+
+  <!-- ================================================================ -->
+  <!-- EXAMPLES USAGE                                                   -->
+  <!-- ================================================================ -->
+
+  <examples>
+    <rule>Use "Ex:" not "e.g." or "for example"</rule>
+    <rule>Use "specifically" instead of "i.e."</rule>
+    <rule>Examples should be concrete and student-relevant</rule>
+  </examples>
+
+  <!-- ================================================================ -->
+  <!-- MATHEMATICAL STYLE RULES                                         -->
+  <!-- Specific guidelines for mathematical notation and formatting     -->
+  <!-- ================================================================ -->
+
+  <mathematical_style>
+
+    <functions_and_equations>
+      <rule>Use f(x) notation, not y alone</rule>
+      <rule>Define functions before using them</rule>
+      <rule>Be consistent with function names throughout</rule>
+    </functions_and_equations>
+
+    <absolute_value>
+      <preferred>absolute value of x</preferred>
+      <avoid>magnitude of x (unless in physics/vector context)</avoid>
+    </absolute_value>
+
+    <annotations severity="medium">
+      <rule>Keep annotations concise (&lt; 10 characters preferred)</rule>
+      <rule>Use abbreviations when appropriate</rule>
+      <bad_example>Split the integral into two parts</bad_example>
+      <good_example>Split integral</good_example>
+    </annotations>
+
+    <blank_spaces>
+      <rule>Use \underline{\phantom{XXXXXX}} for fill-in-the-blank</rule>
+      <rule>Adjust number of X's to approximate expected answer length</rule>
+    </blank_spaces>
+
+    <latex_coding>
+      <spacing>
+        <rule>Use \, for thin space in integrals: \int f(x)\,dx</rule>
+        <rule>Use proper spacing around operators</rule>
+      </spacing>
+
+      <delimiters>
+        <rule>Use \left and \right for auto-sizing: \left(\frac{a}{b}\right)</rule>
+      </delimiters>
+
+      <fractions>
+        <rule>Use \frac{}{} for display fractions</rule>
+        <rule>Use / for inline fractions when appropriate</rule>
+      </fractions>
+    </latex_coding>
+
+    <mathematical_symbols>
+      <rule>Place mathematical symbols IN LaTeX tags &lt;m&gt;...&lt;/m&gt;</rule>
+      <rule>Do not write symbols in plain text</rule>
+      <bad_example>The value of π is approximately 3.14</bad_example>
+      <good_example>The value of &lt;m&gt;\pi&lt;/m&gt; is approximately &lt;m&gt;3.14&lt;/m&gt;</good_example>
+    </mathematical_symbols>
+
+    <numbers>
+      <small_numbers>
+        <rule>Spell out zero through nine in prose</rule>
+        <exception>Use numerals in mathematical expressions</exception>
+        <example_prose>The function has three zeros</example_prose>
+        <example_math>Evaluate f(3)</example_math>
+      </small_numbers>
+
+      <large_numbers>
+        <rule>Use numerals for 10 and above</rule>
+        <rule>Use commas for thousands: 1,000 not 1000</rule>
+      </large_numbers>
+
+      <decimals>
+        <rule>Always include leading zero: 0.5 not .5</rule>
+        <rule>No trailing zeros unless significant: 2.5 not 2.50</rule>
+      </decimals>
+    </numbers>
+
+    <fractions_in_text>
+      <rule>Use "one half" not "1/2" in prose</rule>
+      <rule>Use LaTeX for mathematical fractions: &lt;m&gt;\frac{1}{2}&lt;/m&gt;</rule>
+    </fractions_in_text>
+
+    <units_of_measure severity="3">
+      <title>Units of Measure Formatting</title>
+
+      <rules>
+        <rule>Include units when appropriate</rule>
+        <rule>Spell out unit not preceded by a number</rule>
+        <rule>No period after abbreviation (unless ending sentence)</rule>
+        <rule>Abbreviations identical for singular/plural (no 's')</rule>
+        <rule>In stepped solutions, units only in final answer</rule>
+        <rule>Use slash for ratios: cm³/sec</rule>
+      </rules>
+
+      <common_abbreviations>
+        <category name="Length">
+          <unit abbr="mm" full="millimeter"/>
+          <unit abbr="cm" full="centimeter"/>
+          <unit abbr="m" full="meter"/>
+          <unit abbr="km" full="kilometer"/>
+          <unit abbr="in" alt="″" full="inch"/>
+          <unit abbr="ft" alt="'" full="foot"/>
+          <unit abbr="yd" full="yard"/>
+          <unit abbr="mi" full="mile"/>
+        </category>
+
+        <category name="Area">
+          <unit abbr="mm²" full="square millimeter"/>
+          <unit abbr="cm²" full="square centimeter"/>
+          <unit abbr="m²" full="square meter"/>
+          <unit abbr="km²" full="square kilometer"/>
+          <unit abbr="in²" full="square inch"/>
+          <unit abbr="ft²" full="square foot"/>
+          <unit abbr="yd²" full="square yard"/>
+          <unit abbr="mi²" full="square mile"/>
+        </category>
+
+        <category name="Volume">
+          <unit abbr="mm³" full="cubic millimeter"/>
+          <unit abbr="cm³" full="cubic centimeter"/>
+          <unit abbr="m³" full="cubic meter"/>
+          <unit abbr="in³" full="cubic inch"/>
+          <unit abbr="ft³" full="cubic foot"/>
+          <unit abbr="yd³" full="cubic yard"/>
+        </category>
+
+        <category name="Weight or mass">
+          <unit abbr="mg" full="milligram"/>
+          <unit abbr="g" full="gram"/>
+          <unit abbr="kg" full="kilogram"/>
+          <unit abbr="oz" full="ounce"/>
+          <unit abbr="lb" full="pound"/>
+          <unit abbr="tn" full="ton"/>
+        </category>
+
+        <category name="Dry and liquid measure">
+          <unit abbr="mL" full="milliliter" note="with capital L"/>
+          <unit abbr="L" full="liter" note="capitalized to avoid confusion with number 1"/>
+          <unit abbr="tbsp" full="tablespoon"/>
+          <unit abbr="tsp" full="teaspoon"/>
+          <unit abbr="c" full="cup"/>
+          <unit abbr="fl oz" full="fluid ounce"/>
+          <unit abbr="oz" full="ounce"/>
+          <unit abbr="pt" full="pint"/>
+          <unit abbr="qt" full="quart"/>
+          <unit abbr="gal" full="gallon"/>
+        </category>
+
+        <category name="Time">
+          <unit abbr="ms" full="millisecond" note="metric context only"/>
+          <unit abbr="s" full="second" note="metric context only"/>
+          <unit abbr="sec" full="second"/>
+          <unit abbr="min" full="minute"/>
+          <unit abbr="hr" full="hour"/>
+          <unit abbr="d" alt="day" full="day"/>
+        </category>
+      </common_abbreviations>
+
+      <examples>
+        <good>The ball travels 5 m in 2 sec</good>
+        <good>The ball travels several meters</good>
+        <bad>The ball travels 5 meters in 2 seconds</bad>
+        <bad>The ball travels 5 ms in 2 secs</bad>
+      </examples>
+
+      <student_impact>
+        Inconsistent or incorrect unit abbreviations create confusion and undermine
+        professionalism of materials. Students rely on consistent notation to recognize
+        patterns and build confidence.
+      </student_impact>
+    </units_of_measure>
+
+    <multiplication_symbols>
+      <rule>Use \cdot for scalar multiplication: &lt;m&gt;3 \cdot x&lt;/m&gt;</rule>
+      <rule>Use \times for cross product or dimensions: &lt;m&gt;2 \times 3&lt;/m&gt; matrix</rule>
+      <rule>Avoid * in final content</rule>
+    </multiplication_symbols>
+
+    <coordinate_notation>
+      <rule>Use parentheses for coordinates: (3, 5)</rule>
+      <rule>Use angle brackets for vectors: &lt;3, 5&gt;</rule>
+    </coordinate_notation>
+
+    <interval_notation>
+      <rule>Use brackets/parentheses consistently</rule>
+      <rule>Closed interval: [a, b]</rule>
+      <rule>Open interval: (a, b)</rule>
+      <rule>Half-open: [a, b) or (a, b]</rule>
+    </interval_notation>
+
+    <greek_symbols>
+      <rule>Spell out in prose: "theta" not θ</rule>
+      <rule>Use LaTeX in math: &lt;m&gt;\theta&lt;/m&gt;</rule>
+    </greek_symbols>
+
+    <theorem_names>
+      <rule>Capitalize theorem names: Fundamental Theorem of Calculus</rule>
+      <rule>Capitalize rule names when formal: L'Hôpital's Rule</rule>
+      <rule>Lowercase for general rules: chain rule (unless starting sentence)</rule>
+    </theorem_names>
+
+    <prime_notation>
+      <rule>Use f' for first derivative</rule>
+      <rule>Use f'' for second derivative</rule>
+      <rule>Avoid f prime prime - say f double prime</rule>
+    </prime_notation>
+
+    <parentheses_in_math>
+      <rule>Use proper nesting: {[()]}</rule>
+      <rule>Use \left and \right for auto-sizing</rule>
+      <rule>Be consistent with parentheses vs. brackets in different contexts</rule>
+    </parentheses_in_math>
+
+  </mathematical_style>
+
+  <!-- ================================================================ -->
+  <!-- TONE AND VOICE                                                   -->
+  <!-- ================================================================ -->
+
+  <tone_and_voice>
+    <tone>
+      <guideline>Conversational and friendly, not elevated and formal</guideline>
+      <guideline>Dialogue with students, not textbook lecture</guideline>
+      <remember>Diverse population from underserved communities</remember>
+    </tone>
+
+    <voice>
+      <preference>Generally active for clarity</preference>
+      <passive_acceptable>
+        When not specifying the actor: "Multiplication is applied first in an expression..."
+      </passive_acceptable>
+    </voice>
+
+    <consistency>
+      <guideline>Maintain consistent tone throughout the module</guideline>
+      <guideline>Avoid sudden shifts in formality or complexity</guideline>
+    </consistency>
+  </tone_and_voice>
+
+  <!-- ================================================================ -->
+  <!-- ADDITIONAL STYLE GUIDANCE                                        -->
+  <!-- ================================================================ -->
+
+  <additional_guidance>
+
+    <parallelism>
+      <rule>Similar ideas follow same grammatical pattern</rule>
+      <bad_example>identifying, then simplify, and solving</bad_example>
+      <good_example>identifying, simplifying, and solving</good_example>
+    </parallelism>
+
+    <sentence_case>
+      <rule>In labels/titles: capitalize ONLY first word (except proper nouns)</rule>
+      <example>Figure 1.1. A function approaching a limit</example>
+      <not>Figure 1.1. A Function Approaching a Limit</not>
+    </sentence_case>
+
+    <that_vs_which>
+      <that>
+        <use>Essential clause, NO comma before</use>
+        <example>The limit of a function f(x) is a value that f(x) approaches...</example>
+      </that>
+      <which>
+        <use>Non-essential clause, comma before</use>
+        <example>...approaches π, which means lim...</example>
+      </which>
+    </that_vs_which>
+
+  </additional_guidance>
+
+  <!-- ================================================================ -->
+  <!-- REMINDER: SCOPE                                                  -->
+  <!-- ================================================================ -->
+
+  <scope_reminder>
+    <in_scope>
+      <item>Writing mechanics (grammar, clarity, consistency)</item>
+      <item>Mathematical notation correctness</item>
+      <item>LaTeX formatting correctness</item>
+      <item>Tone and voice appropriateness</item>
+    </in_scope>
+
+    <out_of_scope note="handled by separate reviewers">
+      <item>Accessibility (ableist language, color references)</item>
+      <item>Visual elements (graphs, animations, figures)</item>
+      <item>Technical rendering issues (LaTeX not displaying)</item>
+    </out_of_scope>
+  </scope_reminder>
+
+</style_guide>

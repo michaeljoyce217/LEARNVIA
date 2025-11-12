@@ -33,17 +33,29 @@
         <criterion>Inappropriate difficulty progression</criterion>
         <criterion>Missing essential assessment components</criterion>
         <criterion>Unclear grading criteria or rubrics</criterion>
+        <criterion>CRITICAL: Short-answer questions with fewer than 2 hints (MANDATORY)</criterion>
+        <criterion>CRITICAL: Hints that are vague/general rather than concrete (frustrating to students)</criterion>
+        <criterion>CRITICAL: Hints that redirect elsewhere ("Read XYZ and try again" - demoralizing)</criterion>
       </criteria>
       <examples>
         <example type="violation">Practice problems much harder than examples</example>
         <example type="violation">No problems testing key concepts</example>
         <example type="violation">Vague instructions for open-ended questions</example>
+        <example type="violation">SA question with only 1 hint (minimum 2 required)</example>
+        <example type="violation">Hint says "Remember the precedence rules" (too general - needs concrete guidance)</example>
+        <example type="violation">Hint says "Read the previous section and try again" (never redirect)</example>
         <example type="real" source="5.7_Beta_resolved">
           Issue: The answers do not include explanations
           Impact: Students can't learn from mistakes without explanations
           Fix: Add explanations
         </example>
       </examples>
+      <hint_quality_note>
+        All short-answer questions MUST have at least 2 general hints. Each hint must CONCRETELY
+        lead students closer to the answer (not vague statements like "Remember the rules").
+        Think of a tutor teaching while having the student predict next steps. Err on the side
+        of helping - follow-up questions are "reading", not homework.
+      </hint_quality_note>
     </severity>
 
     <severity level="3" label="Moderate">

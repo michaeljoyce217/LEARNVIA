@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Exact Structure</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Test Exact HTML Structure from Report</h1>
+
+    <div class="original-input">
+        <div style="font-family: monospace; margin: 0;">
+            <span style="color: #666; margin-right: 10px; user-select: none;">0002</span>
+            <span>For any power series, \[\sum_{n=0}^{\infty} c_n (x-a)^n,\] there are three possibilities for convergence:</span>
+        </div>
+        <div style="font-family: monospace; margin: 0;">
+            <span style="color: #666; margin-right: 10px; user-select: none;">0003</span>
+            <span>the series converges only at the series center, \(x=a\);</span>
+        </div>
+    </div>
+
+    <hr>
+    <h2>Without spans:</h2>
+    <p>For any power series, \[\sum_{n=0}^{\infty} c_n (x-a)^n,\] there are three possibilities for convergence:</p>
+    <p>the series converges only at the series center, \(x=a\);</p>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const rendered = document.querySelectorAll('mjx-container');
+                console.log('Rendered math elements:', rendered.length);
+                if (rendered.length === 0) {
+                    console.log('No math rendered! HTML content:', document.body.innerHTML.substring(0, 500));
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

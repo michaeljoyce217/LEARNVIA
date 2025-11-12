@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MathJax Test</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>MathJax Test</h1>
+
+    <h2>Test 1: Standard delimiters</h2>
+    <p>Inline math: \(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+    <p>Display math: \[\sum_{n=0}^{\infty} c_n (x-a)^n\]</p>
+
+    <h2>Test 2: Escaped in a div</h2>
+    <div style="font-family: monospace;">
+        <span>For any power series, \[\sum_{n=0}^{\infty} c_n (x-a)^n,\] there are three possibilities</span>
+    </div>
+
+    <h2>Test 3: HTML entity test</h2>
+    <p>With entities: &#92;(x = 5&#92;)</p>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                console.log('MathJax:', typeof MathJax);
+                const rendered = document.querySelectorAll('mjx-container');
+                console.log('Rendered math elements:', rendered.length);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

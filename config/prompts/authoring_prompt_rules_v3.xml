@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Learnvia Authoring Guidelines - AI Reviewer Prompt (Version 3.0)
+  PRIMARY FORMAT: This XML file is the source of truth
+
+  SCOPE: Content and pedagogical quality only
+  OUT OF SCOPE: Visual elements, animations (handled by separate reviewer)
+-->
+
+<authoring_guidelines version="3.0">
+
+  <!-- ================================================================ -->
+  <!-- TARGET LEARNER PROFILE                                           -->
+  <!-- Every decision must consider THIS student                        -->
+  <!-- ================================================================ -->
+
+  <target_learner>
+    <profile>
+      Content is designed for students who may be studying alone at home, have low
+      confidence, are scared of failing, and for whom time is not a luxury. Target
+      students often have test anxiety and fear making mistakes. Feedback must be
+      encouraging, not intimidating.
+    </profile>
+    <key_difference>
+      This differs greatly from well-supported motivated students or instructors.
+      Always evaluate with the struggling, anxious, time-limited student in mind.
+    </key_difference>
+  </target_learner>
+
+  <!-- ================================================================ -->
+  <!-- SIX CORE PRINCIPLES FOR EVALUATION                               -->
+  <!-- ================================================================ -->
+
+  <core_principles>
+
+    <principle id="1" name="ORGANIZED">
+      <description>Well chunked, scaffolded, and aligned with learning outcomes</description>
+      <priority>Highest - Organization is most challenging</priority>
+      <common_issues>
+        <issue>Chunks too large for target learner</issue>
+        <issue>Scaffolding: complex items added too early</issue>
+        <issue>Alignment: tangents not relevant to learning outcomes</issue>
+      </common_issues>
+    </principle>
+
+    <principle id="2" name="CONCISE">
+      <description>Uses simplest words and clearest explanations to convey concepts</description>
+      <priority>High</priority>
+      <motto>"It's done when nothing more can be removed."</motto>
+    </principle>
+
+    <principle id="3" name="PRECISE">
+      <description>Uses words accurately, avoiding synonyms/homonyms, vague references</description>
+      <priority>High</priority>
+    </principle>
+
+    <principle id="4" name="INTUITIVE">
+      <description>Uses simplest, clearest explanations</description>
+      <priority>Medium</priority>
+    </principle>
+
+    <principle id="5" name="CONCRETE">
+      <description>Has student-relevant concrete examples throughout</description>
+      <priority>High</priority>
+      <guideline>Concrete before abstract progression</guideline>
+    </principle>
+
+    <principle id="6" name="INTERACTIVE">
+      <description>Keeps students engaged with frequent short activities (every 3-5 minutes)</description>
+      <priority>Medium</priority>
+    </principle>
+
+  </core_principles>
+
+  <!-- ================================================================ -->
+  <!-- MODULE STRUCTURE REQUIREMENTS                                    -->
+  <!-- What components must be present (content focus)                  -->
+  <!-- ================================================================ -->
+
+  <module_structure>
+
+    <core_lesson_components>
+      <component name="Framing text" required="true">
+        <description>100-150 words with key definitions and terminology</description>
+        <purpose>Set up the lesson and provide conceptual foundation</purpose>
+      </component>
+
+      <component name="Animated figure" required="true" note="OUT OF SCOPE for text review">
+        <description>2-3 min with 3-5 scenes, narrated captions, 1-3 brief embedded questions</description>
+        <scope>NOT reviewed by text reviewers - handled separately</scope>
+      </component>
+
+      <component name="Follow-up text" required="false">
+        <description>Additional definitions or explanations after animated figure</description>
+      </component>
+
+      <component name="Follow-up questions" required="true">
+        <description>5-10 questions continuing to teach</description>
+        <purpose>Reinforce concepts, address misconceptions, build skill</purpose>
+      </component>
+
+      <component name="Brief summary" required="true">
+        <description>Few-sentence bulleted summary of key ideas and terms</description>
+      </component>
+    </core_lesson_components>
+
+    <lesson_types>
+      <type name="Intro lesson">
+        Provides initial "anchor" experience before core concept
+      </type>
+      <type name="Core lesson">
+        Teaches the main concept (may be two core lessons for complex subjects)
+      </type>
+      <type name="Expansion lesson">
+        Provides further details, complexities, detailed examples
+      </type>
+    </lesson_types>
+
+  </module_structure>
+
+  <!-- ================================================================ -->
+  <!-- CRITICAL WRITING RULES                                           -->
+  <!-- High-priority style and clarity guidelines                       -->
+  <!-- ================================================================ -->
+
+  <writing_rules>
+
+    <rule id="no_synonyms" severity="high">
+      <title>No Synonyms</title>
+      <description>Create ONE term for each concept and use exclusively</description>
+      <bad_example>Alternating between "average" and "mean"</bad_example>
+      <good_example>Choose one term (e.g., "mean") and stick with it throughout</good_example>
+      <rationale>Synonyms create cognitive load and potential confusion about whether two terms mean the same thing or different things</rationale>
+    </rule>
+
+    <rule id="no_homonyms" severity="high">
+      <title>No Homonyms</title>
+      <description>Avoid same word for two different concepts</description>
+      <bad_example>
+        "The function's points are plotted. A key point is that the function's output is never negative."
+      </bad_example>
+      <good_example>
+        "The function's points are plotted. Notice that the function's output is never negative."
+      </good_example>
+      <rationale>Using "point" for both coordinate pairs and "important fact" creates ambiguity</rationale>
+    </rule>
+
+    <rule id="simple_sentences" severity="medium">
+      <title>Simple Sentences</title>
+      <description>Aim for subject-verb-object structure</description>
+      <bad_example>When planning a road trip, a first step is to check the tires</bad_example>
+      <good_example>Planning a trip involves several steps. The first step is to check the tires.</good_example>
+      <rationale>Introductory clauses increase cognitive load and can obscure main idea</rationale>
+    </rule>
+
+    <rule id="explicit_structure" severity="medium">
+      <title>Explicit Structure</title>
+      <guideline>Use bulleted lists wherever appropriate</guideline>
+      <guideline>Use numbered lists if order matters</guideline>
+      <rationale>Visual structure reduces cognitive load and improves scanability</rationale>
+    </rule>
+
+    <rule id="active_voice" severity="low">
+      <title>Active Voice (But Passive Sometimes OK)</title>
+      <description>Active reduces ambiguity</description>
+      <when_passive_ok>When not specifying the actor</when_passive_ok>
+      <passive_example>Multiplication is applied first in an expression having both + and *</passive_example>
+    </rule>
+
+    <rule id="singular_form" severity="medium">
+      <title>Singular Form</title>
+      <description>Reduces ambiguity vs plural</description>
+      <bad_example>All humans have noses (could include multiple noses per human)</bad_example>
+      <good_example>Every human has a nose</good_example>
+    </rule>
+
+    <rule id="avoid_vague_references" severity="high">
+      <title>Avoid Vague References</title>
+      <description>Avoid it, they, this, and other potentially vague references</description>
+      <bad_example>
+        The expression has one term. It uses two variables (it could refer to expression or term)
+      </bad_example>
+      <good_example>The term uses two variables</good_example>
+      <rationale>Even when not ambiguous, such words increase cognitive load</rationale>
+    </rule>
+
+    <rule id="no_lazy_starts" severity="medium">
+      <title>No Lazy Starts</title>
+      <description>Start with real subject, not "There is/are"</description>
+      <bad_example>There is a horizontal asymptote at y = 0</bad_example>
+      <good_example>The graph of f has a horizontal asymptote at y = 0</good_example>
+    </rule>
+
+    <rule id="serial_comma" severity="low">
+      <title>Serial Comma</title>
+      <description>Always use serial (Oxford) comma for clarity</description>
+      <example>...cereal, pancakes, and bread with cheese</example>
+    </rule>
+
+    <rule id="examples_via_ex" severity="low">
+      <title>Examples via Ex:</title>
+      <guideline>Use examples frequently for concreteness</guideline>
+      <guideline>Use "Ex:" for examples (not e.g.)</guideline>
+      <guideline>Use "specifically" instead of i.e.</guideline>
+    </rule>
+
+    <rule id="explaining_vs_we" severity="low">
+      <title>Explaining vs. We</title>
+      <description>Strive to describe without unnecessary "we"</description>
+      <bad_example>We define slope as…</bad_example>
+      <good_example>Slope is defined as…</good_example>
+      <when_we_ok>Occasional "we" is OK: "We read f' aloud as f prime"</when_we_ok>
+    </rule>
+
+    <rule id="no_other_pronouns" severity="high">
+      <title>No Pronouns Other Than We/Us</title>
+      <description>Do not use he, she, it, they, or you</description>
+      <exception>You may use "it" when the referent is crystal clear and just mentioned</exception>
+    </rule>
+
+  </writing_rules>
+
+  <!-- ================================================================ -->
+  <!-- LEARNING QUESTIONS REQUIREMENTS                                  -->
+  <!-- How to design effective assessment questions                     -->
+  <!-- ================================================================ -->
+
+  <learning_questions>
+
+    <general_guidelines>
+      <guideline>Replace reading with dialog - make content interactive</guideline>
+      <guideline>Should NOT involve lengthy calculations</guideline>
+      <guideline>Answerable directly, perhaps with very minimal calculation</guideline>
+      <guideline>Concise stems (usually one line or at most a few words)</guideline>
+    </general_guidelines>
+
+    <multiple_choice_questions>
+      <requirement id="short_choices">
+        Short choices: One word or at most a few words
+      </requirement>
+
+      <requirement id="factor_common_text">
+        Factor out common text: Move repeated text from choices to stem
+      </requirement>
+
+      <requirement id="usually_3_choices">
+        Usually 3 choices: 2 distractors (4 OK if more misconceptions exist, 2 OK if truly no more distractors)
+      </requirement>
+
+      <requirement id="explain_every_choice" severity="high">
+        <title>Always explain every choice</title>
+        <for_wrong_choices>Explicitly explain why wrong (addresses "learning moment")</for_wrong_choices>
+        <for_right_choice>Explain how to get answer (assume student guessed)</for_right_choice>
+        <keep_concise>Keep explanations concise (1-2 lines)</keep_concise>
+      </requirement>
+
+      <requirement id="real_misconceptions">
+        Common misconceptions as distractors: Focus on real mistakes, not nonsense
+      </requirement>
+
+      <requirement id="never_say_correct">
+        Never say "Correct" or "Incorrect" in explanations (platform does this)
+      </requirement>
+    </multiple_choice_questions>
+
+    <short_answer_questions>
+      <requirement id="single_precise_answer">
+        Single precise answer: Reduce ambiguity, indicate format
+      </requirement>
+
+      <requirement id="two_hints_minimum" severity="high">
+        <title>Two Hints Minimum (MANDATORY)</title>
+        <description>
+          Authors MUST provide at least two general hints and may provide a series.
+          Students reveal hints one at a time in series order.
+        </description>
+      </requirement>
+
+      <requirement id="hints_must_lead" severity="high">
+        <title>Hints Must Concretely Lead (CRITICAL)</title>
+        <description>
+          Each hint must explicitly lead students closer to the correct answer, usually concretely.
+          Follow-up questions are considered "reading", not homework. Think of a tutor teaching
+          while having the student predict next steps. Err on the side of helping.
+        </description>
+
+        <principles>
+          <principle>Be concrete, not general</principle>
+          <principle>Lead students step-by-step toward answer</principle>
+          <principle>Each hint moves closer to solution</principle>
+          <principle>Avoid frustrating vague statements</principle>
+        </principles>
+
+        <detailed_example question="Evaluate 3 + 4 * 7 - 2">
+          <hint1 quality="good">* has highest precedence, so start with 4 * 7</hint1>
+          <hint1 quality="acceptable">* comes before + and -</hint1>
+          <hint1 quality="frustrating">Remember the precedence rules</hint1>
+
+          <hint2 quality="good">3 + (4 * 7) - 2 = 3 + 28 - 2. With + and -, evaluate left to right, so evaluate 3 + 28</hint2>
+        </detailed_example>
+
+        <detailed_example question="Find d/dx(x) * d/dx(x²)">
+          <hint1 quality="good">d/dx(x) = 1. d/dx(x²) = ? Then multiply</hint1>
+          <hint1 quality="less_good">Find each derivative separately, then multiply</hint1>
+        </detailed_example>
+
+        <rationale>
+          General statements or questions frustrate students studying alone.
+          Without concrete guidance, struggling students give up rather than persist.
+        </rationale>
+      </requirement>
+
+      <requirement id="no_error_hints" severity="high">
+        <title>Never Suggest Student Made Error</title>
+        <description>
+          Don't create hints that suggest the student made an error, like "Remember to multiply first"
+          or "Include one place after the decimal point". Students may assume the hint is based on
+          their attempted answer and think the system is incorrectly faulting their work.
+        </description>
+        <guideline>
+          General hints should be obviously general and simply lead students a step toward the answer.
+        </guideline>
+      </requirement>
+
+      <requirement id="no_redirect_hints" severity="high">
+        <title>Never Redirect to Other Content</title>
+        <description>
+          NEVER say "Read XYZ and try again." Such hints are demoralizing.
+          The hint series should be self-contained and not refer students elsewhere.
+        </description>
+        <exception>
+          A hint may refer to a figure in explaining how to obtain the answer:
+          "In the figure above, count the items in the red box and multiply by 5."
+          But NOT: "The above figure has a clue. Can you find that clue?"
+        </exception>
+      </requirement>
+
+      <requirement id="declarative_hints" severity="medium">
+        <title>Declarative Form, Not Questions</title>
+        <description>
+          Hints written as questions could lead to further confusion or be too broad.
+          Aim for writing hints in declarative form instead.
+        </description>
+        <bad_example>What operation comes first?</bad_example>
+        <good_example>The * operation has highest precedence</good_example>
+      </requirement>
+    </short_answer_questions>
+
+    <follow_up_questions_design>
+      <requirement>5-10 questions total</requirement>
+      <requirement>Start simple, build harder (scaffolding)</requirement>
+      <requirement>Cover concepts AND calculations</requirement>
+      <requirement>Explicitly address common mistakes/misconceptions</requirement>
+      <requirement>Quickly answerable (not homework problems)</requirement>
+      <guideline>Look at homework/quiz questions to prepare students</guideline>
+    </follow_up_questions_design>
+
+  </learning_questions>
+
+  <!-- ================================================================ -->
+  <!-- LESSON AUTHORING PRINCIPLES                                      -->
+  <!-- Alignment and backwards design                                   -->
+  <!-- ================================================================ -->
+
+  <lesson_authoring>
+
+    <alignment note="Backwards Design">
+      <step order="1">Create exam-worthy questions for learning outcomes</step>
+      <step order="2">Create quiz questions to prepare for exams</step>
+      <step order="3">Create homework questions to prepare for quizzes</step>
+      <step order="4">Create lessons to prepare for homework</step>
+    </alignment>
+
+    <author_must_know>
+      <requirement>Know what KSAs (Knowledge, Skills, Abilities) the lesson covers</requirement>
+      <requirement>See relevant homework and quiz questions</requirement>
+      <requirement>Stay focused on KSAs and homework questions</requirement>
+      <requirement>Avoid teaching unnecessary topics</requirement>
+    </author_must_know>
+
+    <common_mistakes severity="high">
+      <title>Seven Common Authoring Mistakes (FLAG AS HIGH SEVERITY)</title>
+      <description>
+        These mistakes frequently occur in follow-up question design and significantly
+        impact student learning. Flag aggressively when detected.
+      </description>
+
+      <mistake id="1" severity="3">
+        <pattern>Too many questions</pattern>
+        <description>More than 10 questions in a single lesson's follow-up section</description>
+        <impact>Overwhelms students and violates the 5-10 question guideline</impact>
+      </mistake>
+
+      <mistake id="2" severity="4">
+        <pattern>Taking big jumps between questions (not building simple to harder)</pattern>
+        <description>Questions don't progressively scaffold - sudden difficulty increases</description>
+        <impact>Students cannot bridge conceptual gaps, leading to confusion and frustration</impact>
+        <flag_when>Question N requires skills not developed in questions 1 through N-1</flag_when>
+      </mistake>
+
+      <mistake id="3" severity="3">
+        <pattern>Forgetting to ask conceptual questions</pattern>
+        <description>Only calculation/procedural questions, no "why" or understanding questions</description>
+        <impact>Students learn procedures without understanding, cannot transfer knowledge</impact>
+        <flag_when>All questions are computational with no conceptual reasoning</flag_when>
+      </mistake>
+
+      <mistake id="4" severity="3">
+        <pattern>Forgetting to address common mistakes or misconceptions</pattern>
+        <description>Questions don't explicitly target known student errors</description>
+        <impact>Students don't confront and correct their misconceptions</impact>
+        <guideline>Authors should think of common errors from teaching experience</guideline>
+      </mistake>
+
+      <mistake id="5" severity="3">
+        <pattern>Too much calculation (these aren't homework problems)</pattern>
+        <description>Questions require lengthy multi-step calculations</description>
+        <impact>Follow-up questions should be "reading" not homework - quick checks of understanding</impact>
+        <flag_when>Questions take more than 1-2 minutes of calculation</flag_when>
+      </mistake>
+
+      <mistake id="6" severity="3">
+        <pattern>Combining too many things at once</pattern>
+        <description>Single questions testing multiple unrelated concepts simultaneously</description>
+        <impact>Students cannot isolate what they don't understand</impact>
+        <guideline>Build concepts separately first, then combine in later questions</guideline>
+      </mistake>
+
+      <mistake id="7" severity="2">
+        <pattern>Unnecessary complexity detracting from question's main point</pattern>
+        <description>Complex setup or numbers when simple would suffice</description>
+        <impact>Cognitive load on irrelevant details obscures the concept being taught</impact>
+        <example>Using f(x) = 3x³ - 2x² + 5x - 7 when f(x) = x² would demonstrate the concept</example>
+      </mistake>
+    </common_mistakes>
+
+  </lesson_authoring>
+
+  <!-- ================================================================ -->
+  <!-- DEFINITIONS FORMAT                                               -->
+  <!-- How to write proper mathematical definitions                     -->
+  <!-- ================================================================ -->
+
+  <definitions_format>
+
+    <structure>
+      <xml_format>&lt;definition&gt; &lt;b&gt;[Key term]&lt;/b&gt; is [definition].&lt;/definition&gt;</xml_format>
+      <location>Appear in framing text between tags</location>
+      <first_use>Standalone statement</first_use>
+      <begin_with>Key term and verb "is"</begin_with>
+      <form>Define in singular form</form>
+      <explain>Explain what something is, not what it does</explain>
+      <one_per_statement>Only one term per definition statement</one_per_statement>
+    </structure>
+
+    <when_to_require severity="4">
+      <title>REQUIREMENT: Flag as Severity 4 if key mathematical terms introduced in this module are used without definition</title>
+      <rationale>Students studying alone need explicit definitions of all technical terminology</rationale>
+    </when_to_require>
+
+    <prerequisite_exception>
+      <title>PREREQUISITE KNOWLEDGE EXCEPTION</title>
+      <description>
+        Before flagging a missing definition, consider standard Calculus 2 pedagogical progression
+      </description>
+
+      <how_to_identify>
+        <step>Examine the module title and learning objectives to determine the PRIMARY topic being taught</step>
+        <step>Ask: "What foundational concepts would students need to ALREADY know to learn this primary topic?"</step>
+        <step>If a term is a BUILDING BLOCK for the primary topic (not the topic itself), it is likely prerequisite knowledge</step>
+      </how_to_identify>
+
+      <pedagogical_progression_examples>
+        <example>
+          <module>Power Series Convergence</module>
+          <likely_prerequisites>limit, convergence, divergence, series</likely_prerequisites>
+        </example>
+        <example>
+          <module>Integration by Parts</module>
+          <likely_prerequisites>integral, derivative, antiderivative, product rule</likely_prerequisites>
+        </example>
+        <example>
+          <module>L'Hôpital's Rule</module>
+          <likely_prerequisites>limit, derivative, indeterminate form</likely_prerequisites>
+        </example>
+        <example>
+          <module>Taylor Series</module>
+          <likely_prerequisites>derivative, polynomial, power series, convergence</likely_prerequisites>
+        </example>
+      </pedagogical_progression_examples>
+
+      <what_to_flag>
+        <case severity="4">
+          <type>NEW terms specific to this module</type>
+          <action>Flag as Severity 4 if missing definition</action>
+          <example>In a "Power Series" module, flag "radius of convergence", "interval of convergence", "ratio test"</example>
+        </case>
+
+        <case severity="2">
+          <type>PREREQUISITE terms specific to Calc 2</type>
+          <action>Flag ONCE per term as Severity 2 with verification message</action>
+          <message>Please verify that '[term]' was defined in a prerequisite Calc 2 module. If not, add definition here.</message>
+          <example>
+            In a "Taylor Series" module, flag Calc 2-specific terms like "power series",
+            "convergence test", "series" (if not yet defined in this course)
+          </example>
+          <note>
+            Only flag terms that are specific to Calc 2 topics, not general Calc 1 fundamentals
+          </note>
+        </case>
+
+        <case severity="do_not_flag">
+          <type>FOUNDATIONAL terms (Calc 1 or earlier)</type>
+          <action>NEVER flag these - they are universal prerequisites</action>
+
+          <calc1_fundamentals note="DO NOT FLAG - taught in Calculus 1">
+            <term>limit</term>
+            <term>derivative</term>
+            <term>integral</term>
+            <term>function</term>
+            <term>continuous</term>
+            <term>differentiable</term>
+            <term>antiderivative</term>
+            <term>tangent line</term>
+            <term>secant line</term>
+            <term>rate of change</term>
+            <term>critical point</term>
+            <term>maximum</term>
+            <term>minimum</term>
+            <term>concave up</term>
+            <term>concave down</term>
+            <term>inflection point</term>
+            <term>definite integral</term>
+            <term>indefinite integral</term>
+            <term>Riemann sum</term>
+            <term>area under curve</term>
+            <term>substitution</term>
+            <term>chain rule</term>
+            <term>product rule</term>
+            <term>quotient rule</term>
+            <term>power rule</term>
+          </calc1_fundamentals>
+
+          <pre_calculus_fundamentals note="DO NOT FLAG - taught before Calculus">
+            <term>variable</term>
+            <term>equation</term>
+            <term>expression</term>
+            <term>graph</term>
+            <term>real number</term>
+            <term>complex number</term>
+            <term>polynomial</term>
+            <term>coefficient</term>
+            <term>term</term>
+            <term>number</term>
+            <term>interval</term>
+            <term>domain</term>
+            <term>range</term>
+            <term>slope</term>
+            <term>intercept</term>
+            <term>exponential</term>
+            <term>logarithm</term>
+            <term>trigonometric</term>
+            <term>sine</term>
+            <term>cosine</term>
+            <term>tangent</term>
+          </pre_calculus_fundamentals>
+
+          <critical_instruction>
+            If you are unsure whether a term is Calc 1 vs. Calc 2, DO NOT FLAG IT.
+            False positives waste author time. Only flag when confident the term is
+            NEW to this specific module.
+          </critical_instruction>
+        </case>
+      </what_to_flag>
+
+      <when_uncertain>
+        If uncertain whether a term is new or prerequisite, DO NOT FLAG IT.
+        False positives waste author time. Only flag when confident the term is NEW to this module.
+      </when_uncertain>
+
+      <typical_calc2_sequence note="Use this to determine what's likely prerequisite">
+        <title>Standard Calculus 2 Textbook Sequence</title>
+        <description>
+          If a term would naturally appear BEFORE the current module in a typical Calc 2 textbook,
+          it's likely prerequisite knowledge. Ask: "What chapters would come before this one?"
+        </description>
+
+        <early_calc2 note="Usually chapters 1-4">
+          <topic>Techniques of Integration (substitution, by parts, partial fractions, trig sub)</topic>
+          <topic>Applications of Integration (area, volume, work, arc length)</topic>
+          <topic>Sequences (convergence, limits, monotonic, bounded)</topic>
+          <topic>Infinite Series (convergence, divergence, geometric series, p-series)</topic>
+        </early_calc2>
+
+        <mid_calc2 note="Usually chapters 5-7">
+          <topic>Convergence Tests (ratio test, root test, comparison test, alternating series test, integral test)</topic>
+          <topic>Power Series (radius of convergence, interval of convergence)</topic>
+          <topic>Taylor and Maclaurin Series (Taylor polynomials, Taylor's theorem)</topic>
+        </mid_calc2>
+
+        <late_calc2 note="Usually chapters 8-10">
+          <topic>Parametric Equations and Polar Coordinates</topic>
+          <topic>Vectors and Space (if included in Calc 2)</topic>
+        </late_calc2>
+
+        <application_example>
+          <scenario>Reviewing a module titled "Taylor Series Convergence"</scenario>
+          <likely_prerequisites>
+            power series, radius of convergence, interval of convergence, ratio test,
+            derivative, series, convergence, limit
+          </likely_prerequisites>
+          <rationale>
+            Taylor series modules typically come AFTER power series modules in textbooks.
+            All these terms would have been covered in earlier chapters.
+          </rationale>
+          <do_not_flag>
+            power series, radius of convergence, ratio test (these came before Taylor series)
+          </do_not_flag>
+          <flag_only>
+            Terms specific to Taylor series that haven't been introduced yet, like
+            "Taylor polynomial", "Maclaurin series", "Taylor's theorem with remainder"
+          </flag_only>
+        </application_example>
+
+        <application_example>
+          <scenario>Reviewing a module titled "Ratio Test for Series Convergence"</scenario>
+          <likely_prerequisites>
+            series, convergence, divergence, limit, geometric series, p-series
+          </likely_prerequisites>
+          <rationale>
+            Ratio test modules come AFTER basic series introduction but BEFORE power series.
+            Students need to know what series and convergence mean.
+          </rationale>
+          <do_not_flag>
+            series, convergence, divergence, limit (introduced earlier in Calc 2)
+          </do_not_flag>
+          <flag_only>
+            "ratio test" itself (this is the NEW concept being taught)
+          </flag_only>
+        </application_example>
+
+        <decision_framework>
+          <step>1. Identify the module's PRIMARY topic from title/learning objectives</step>
+          <step>2. Ask: "In a standard Calc 2 textbook, what chapters would come BEFORE this module?"</step>
+          <step>3. Any terms from those prerequisite chapters should NOT be flagged</step>
+          <step>4. Only flag terms that are NEW to THIS module or LATER modules</step>
+          <step>5. When in doubt, DO NOT FLAG - pedagogical sequencing varies between textbooks</step>
+        </decision_framework>
+      </typical_calc2_sequence>
+    </prerequisite_exception>
+
+  </definitions_format>
+
+  <!-- ================================================================ -->
+  <!-- EXAMPLES USAGE                                                   -->
+  <!-- ================================================================ -->
+
+  <examples_usage>
+    <guideline>Use frequently for concreteness</guideline>
+    <guideline>Use simplest example when introducing concepts</guideline>
+    <progression>Start simple (x²) then move to complex (3x² + 2x + 1)</progression>
+  </examples_usage>
+
+  <!-- ================================================================ -->
+  <!-- KEY SEVERITY INDICATORS                                          -->
+  <!-- What severity to assign to different issue types                 -->
+  <!-- ================================================================ -->
+
+  <severity_indicators>
+
+    <high_severity note="Must Fix">
+      <indicator>Missing structural components (framing text, questions, etc.)</indicator>
+      <indicator>Large conceptual jumps (poor scaffolding)</indicator>
+      <indicator>Content not aligned with learning outcomes (tangents)</indicator>
+      <indicator>Chunks too large for target learner</indicator>
+      <indicator>Vague pronoun references that create ambiguity</indicator>
+      <indicator>Synonyms used for same concept</indicator>
+      <indicator>Complex items introduced too early</indicator>
+      <indicator>Missing concrete examples for abstract concepts</indicator>
+      <indicator>Key terms used without definition</indicator>
+    </high_severity>
+
+    <medium_severity note="Should Fix">
+      <indicator>Questions with ambiguous answers</indicator>
+      <indicator>Insufficient scaffolding in question progression</indicator>
+      <indicator>Missing explanations for distractors</indicator>
+      <indicator>Overly complex language</indicator>
+      <indicator>Unnecessary complexity</indicator>
+      <indicator>Lazy sentence starts ("There is/are")</indicator>
+    </medium_severity>
+
+    <low_severity note="Polish">
+      <indicator>Style inconsistencies (Ex: vs e.g.)</indicator>
+      <indicator>Missing serial commas</indicator>
+      <indicator>Excessive use of "we"</indicator>
+      <indicator>Could be more concise</indicator>
+    </low_severity>
+
+  </severity_indicators>
+
+  <!-- ================================================================ -->
+  <!-- CORE EVALUATION QUESTION                                         -->
+  <!-- ================================================================ -->
+
+  <evaluation_principle>
+    <question>
+      Will a student studying alone at home, with low confidence and limited time,
+      be able to understand and succeed with this?
+    </question>
+    <instruction>
+      Evaluate all content by asking this question. If the answer is "no" or "uncertain",
+      you have likely found an issue worth flagging.
+    </instruction>
+  </evaluation_principle>
+
+</authoring_guidelines>

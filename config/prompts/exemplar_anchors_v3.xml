@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Exemplar Anchors - Real Human Review Examples from Modules 5.6 and 5.7
+  PRIMARY FORMAT: This XML file is the source of truth
+
+  PURPOSE: Teach agents what actual expert human reviewers flagged,
+           how they described issues, and what student impact looks like.
+-->
+
+<exemplar_anchors version="3.0">
+
+  <metadata>
+    <source>Modules 5.6 (Fundamental Theorem of Calculus) and 5.7 (Net Change Theorem)</source>
+    <review_type>Expert human review - Beta and Copyedit passes</review_type>
+    <total_issues_reviewed>47</total_issues_reviewed>
+    <content_pedagogical_issues>25</content_pedagogical_issues>
+    <filtered_out note="visual/animation/accessibility/technical">22</filtered_out>
+  </metadata>
+
+  <!-- ================================================================ -->
+  <!-- REAL HUMAN REVIEW EXAMPLES BY CATEGORY                           -->
+  <!-- Study the structure, specificity, and student impact reasoning   -->
+  <!-- ================================================================ -->
+
+  <human_review_examples>
+
+    <!-- ASSESSMENT QUALITY: Scaffolding -->
+
+    <example id="scaffolding_1" severity="3" confidence="0.8">
+      <category>Assessment Quality - Scaffolding</category>
+      <module>5.6</module>
+      <lesson>5.6.6</lesson>
+      <section>Homework Problem</section>
+      <location>Question Set P5, Questions Q1 and Q2</location>
+
+      <issue>
+        Q1 asks to verify a function is even. Q2 should probably use this fact.
+        It only asks for a definite integral on [0,a] which does not rely on even/odd.
+      </issue>
+
+      <student_impact>
+        Missed scaffolding opportunity—students cannot apply the even/odd insight
+        they just developed in Q1 to Q2. This reduces learning reinforcement and makes
+        Q1 seem disconnected from Q2, when they should build on each other.
+      </student_impact>
+
+      <recommended_fix>
+        Rewrite Q2 to evaluate the integral on the symmetric interval [-a,a] so
+        students can leverage the evenness property from Q1.
+      </recommended_fix>
+
+      <resolution status="resolved">
+        <action>Author added a question that uses the scaffolding</action>
+      </resolution>
+    </example>
+
+    <!-- CONCEPTUAL CLARITY: Undefined Terms -->
+
+    <example id="undefined_term_1" severity="3" confidence="0.85">
+      <category>Conceptual Clarity - Undefined Terms</category>
+      <module>5.6</module>
+      <lesson>5.6.3</lesson>
+      <section>Follow-Up Question</section>
+      <question>Q1:MC</question>
+      <location>Options 1 and 2 Explanation</location>
+
+      <quoted_text>Uses the word "property" in explanation</quoted_text>
+
+      <issue>
+        To what does "property" refer? The word "property" hasn't been used in this
+        lesson so far. Will students understand what property means in this context?
+      </issue>
+
+      <student_impact>
+        Students studying alone have no reference for what "property" means in this
+        mathematical context (is it the sum property? power property? general theorem?).
+        Without definition, they cannot understand the explanation and may give up or
+        develop misconceptions.
+      </student_impact>
+
+      <recommended_fix>
+        Replace "property" with explicit language (e.g., "sum rule for integrals",
+        "linearity property of integration") or define "property" earlier in the lesson.
+        Term appears in multiple questions—search and adjust throughout module.
+      </recommended_fix>
+    </example>
+
+    <example id="undefined_term_2" severity="3" confidence="0.75">
+      <category>Conceptual Clarity - Undefined Technical Terminology</category>
+      <module>5.6</module>
+      <lesson>5.6.6</lesson>
+      <section>Homework Problem</section>
+      <question>Q1:RSA</question>
+      <location>Answer explanation</location>
+
+      <quoted_text>"the sum property of integrals"</quoted_text>
+
+      <issue>
+        Will students know "the sum property of integrals"? A google search doesn't
+        net any results. Does this go by another name, like "sum rule"?
+      </issue>
+
+      <student_impact>
+        This terminology may not match what students learned in previous courses.
+        Students will be confused trying to recall "sum property" when they learned
+        it as "sum rule" or "linearity", disrupting their problem-solving flow.
+      </student_impact>
+
+      <recommended_fix>
+        Replace "the sum property of integrals" with more standard terminology like
+        "sum rule for integrals" or define the term first. Note: referenced multiple
+        times in explanation—requires multiple edits.
+      </recommended_fix>
+    </example>
+
+    <!-- CLARITY: Vague Pronouns -->
+
+    <example id="vague_pronoun_1" severity="2" confidence="0.75">
+      <category>Clarity - Vague Pronouns</category>
+      <module>5.6</module>
+      <lesson>5.6.4</lesson>
+      <section>Follow-Up Question</section>
+      <question>Q1:MC</question>
+      <location>Option 3 Explanation, second sentence</location>
+
+      <quoted_text>
+        The Fundamental Theorem of Calculus, Part 2 connects the definite integral
+        of f(x) with the values of its antiderivative at the endpoints.
+      </quoted_text>
+
+      <issue>
+        Can "its" be replaced with f(x)'s in the following sentence?
+      </issue>
+
+      <student_impact>
+        Pronoun "its" creates ambiguity—students may wonder if "its" refers to f(x),
+        the definite integral, or the FTC itself. This ambiguity forces rereading and
+        disrupts comprehension flow for students with lower reading skills.
+      </student_impact>
+
+      <recommended_fix>
+        Replace "its" with "f(x)'s" for clarity: "...with the values of f(x)'s
+        antiderivative at the endpoints."
+      </recommended_fix>
+    </example>
+
+    <example id="vague_pronoun_2" severity="2" confidence="0.8">
+      <category>Clarity - Vague Pronouns</category>
+      <module>5.6</module>
+      <lesson>5.6.5</lesson>
+      <section>Animated Figure</section>
+      <question>Embedded Q2:MC</question>
+      <location>Option 2 Explanation, second sentence</location>
+
+      <quoted_text>We need to double it because f is even.</quoted_text>
+
+      <issue>
+        To what is "it" referring in the following sentence?
+      </issue>
+
+      <student_impact>
+        The pronoun "it" could refer to the function, the integral, or the interval.
+        Students must pause to decode the reference instead of focusing on the
+        mathematical concept of even functions and integration.
+      </student_impact>
+
+      <recommended_fix>
+        Replace "it" with explicit noun: "We need to double the integral from 0 to a
+        because f is even" or "We need to double this value because f is even."
+      </recommended_fix>
+    </example>
+
+    <!-- CLARITY: Confusing/Unclear Text -->
+
+    <example id="unclear_text_1" severity="3" confidence="0.85">
+      <category>Clarity - Confusing Sentence Structure</category>
+      <module>5.6</module>
+      <lesson>5.6.3</lesson>
+      <section>Framing Text</section>
+      <location>Framing text, last sentence</location>
+
+      <quoted_text>
+        In this lesson, we will explore how to use the FTC together with the chain rule
+        to find derivatives of integrals with upper a function as an upper limit.
+      </quoted_text>
+
+      <issue>
+        The end of the sentence is unclear: "...with upper a function as an upper limit."
+      </issue>
+
+      <student_impact>
+        Grammatically awkward phrasing ("upper a function as an upper limit") confuses
+        students. They must spend cognitive energy parsing the sentence structure instead
+        of understanding the mathematical concept being introduced.
+      </student_impact>
+
+      <recommended_fix>
+        Revise for clarity: "...to find derivatives of integrals that have a function
+        as their upper limit" or "...with a function serving as the upper limit of
+        integration."
+      </recommended_fix>
+    </example>
+
+    <example id="terminology_confusion_1" severity="2" confidence="0.75">
+      <category>Clarity - Terminology Confusion</category>
+      <module>5.6</module>
+      <lesson>5.6.5</lesson>
+      <section>Follow-Up Question</section>
+      <question>QS3, Q2:SA</question>
+      <location>Prompt, first sentence</location>
+
+      <quoted_text>
+        In the previous part, we considered the integral of the odd function f(x) = 2x
+        over the interval [-5, 5].
+      </quoted_text>
+
+      <issue>
+        The use of "part" is confusing here, since it makes me think of the FTC Part 1
+        or Part 2. Can "part" be replaced with "problem" or "question"?
+      </issue>
+
+      <student_impact>
+        The word "part" triggers students to think about "FTC Part 1" and "FTC Part 2"
+        (key concepts in this module), causing momentary confusion about whether this
+        references a theorem part or just the previous question.
+      </student_impact>
+
+      <recommended_fix>
+        Replace "part" with "question" or "problem": "In the previous question, we
+        considered..." This eliminates the terminology collision.
+      </recommended_fix>
+    </example>
+
+    <example id="grammatical_error_1" severity="2" confidence="0.9">
+      <category>Clarity - Grammatical Errors</category>
+      <module>5.7</module>
+      <lesson>5.7.4</lesson>
+      <section>Follow-Up Question</section>
+      <location>Explanation, second sentence</location>
+
+      <quoted_text>
+        The displacement includes direction to the displacement will be less than the
+        total distance traveled.
+      </quoted_text>
+
+      <issue>
+        Explanation is unclear. See second sentence.
+      </issue>
+
+      <student_impact>
+        Ungrammatical sentence ("direction to the displacement") obscures the relationship
+        between displacement and distance. Students with lower reading skills may
+        misunderstand this key concept for net change problems.
+      </student_impact>
+
+      <recommended_fix>
+        Displacement includes direction, so the displacement will be less than the total
+        distance traveled.
+      </recommended_fix>
+    </example>
+
+    <!-- PEDAGOGICAL FLOW: Forward References -->
+
+    <example id="forward_reference_1" severity="3" confidence="0.9">
+      <category>Pedagogical Flow - Forward References</category>
+      <module>5.6</module>
+      <lesson>5.6.1</lesson>
+      <section>Animated Figure</section>
+      <question>Embedded Q2:SA</question>
+      <location>Question Hint 1 and Explanation</location>
+
+      <issue>
+        Question hint and explanation both refer to the "Fundamental Theorem of Calculus
+        Part 1," which students do not learn until the next lesson.
+      </issue>
+
+      <student_impact>
+        Students cannot use a hint that references a theorem they haven't learned yet.
+        This creates frustration and undermines the scaffolding purpose of hints.
+        Students may incorrectly assume they should already know FTC Part 1.
+      </student_impact>
+
+      <recommended_fix>
+        Rewrite Hint 1 and Explanation to use concepts already covered in this lesson,
+        or add a brief preview statement: "The next lesson will formalize this
+        relationship as FTC Part 1."
+      </recommended_fix>
+    </example>
+
+    <!-- STYLE: Question Format -->
+
+    <example id="question_format_1" severity="1" confidence="0.7">
+      <category>Style - Question Format</category>
+      <module>5.6</module>
+      <lesson>5.6.1</lesson>
+      <section>Animated Figure</section>
+      <question>Embedded Q1:MC</question>
+      <location>Question prompt</location>
+
+      <quoted_text>
+        &lt;question&gt;How many liters of water is in the tank after 3\text{ minutes?}&lt;/question&gt;
+      </quoted_text>
+
+      <issue>
+        Prompt is in the form of a question instead of a statement.
+      </issue>
+
+      <student_impact>
+        Minor style inconsistency. Statement format is preferred for embedded questions
+        as it better integrates with the fill-in-the-blank answer structure.
+      </student_impact>
+
+      <recommended_fix>
+        Rewrite into statement form: After &lt;m&gt;3\text{ minutes,}&lt;/m&gt;
+        &lt;m&gt;\underline{\phantom{XXXXXX}}&lt;/m&gt; &lt;m&gt;\text{liters}&lt;/m&gt;
+        of water is in the tank.
+      </recommended_fix>
+    </example>
+
+    <!-- CONCEPTUAL CLARITY: Content Accuracy -->
+
+    <example id="content_accuracy_1" severity="4" confidence="1.0">
+      <category>Conceptual Clarity - Incorrect Reference</category>
+      <module>5.6</module>
+      <lesson>5.6.5</lesson>
+      <section>Follow-Up Question</section>
+      <question>P1_Q3</question>
+      <location>All answer choices (a), (b), (c)</location>
+
+      <issue>
+        The problem refers to the graph of y = 1/x, but the graph of y = -1/x is shown.
+      </issue>
+
+      <student_impact>
+        Students cannot correctly answer the question because the visual contradicts
+        the problem statement. This creates confusion about which function to analyze
+        and undermines trust in the materials.
+      </student_impact>
+
+      <recommended_fix>
+        Create a new graph showing y = 1/x.
+      </recommended_fix>
+
+      <resolution status="resolved">
+        <action>Changed graph</action>
+      </resolution>
+    </example>
+
+    <!-- OTHER CONTENT ISSUES -->
+
+    <example id="chain_rule_definition" severity="2" confidence="0.6">
+      <category>Pedagogical Flow - Prerequisites</category>
+      <module>5.6</module>
+      <lesson>5.6.3</lesson>
+      <section>Framing Text</section>
+      <location>Framing text</location>
+
+      <issue>
+        Should the chain rule be defined/redefined within the framing text?
+      </issue>
+
+      <student_impact>
+        If chain rule is not fresh in students' memory, they may struggle to follow
+        the derivation. A brief reminder could reduce cognitive load.
+      </student_impact>
+
+      <recommended_fix>
+        Add definition if appropriate: "Recall the chain rule: if h(x) = f(g(x)),
+        then h'(x) = f'(g(x)) · g'(x)."
+      </recommended_fix>
+    </example>
+
+    <example id="latex_spacing" severity="1" confidence="0.6">
+      <category>Style - Mathematical Notation</category>
+      <module>5.6</module>
+      <lesson>5.6.1</lesson>
+      <section>Animated Figure</section>
+      <question>Embedded Q2:MC</question>
+      <location>Question prompt</location>
+
+      <quoted_text>F(x) = \int_0^x 2,dt\text{,}</quoted_text>
+
+      <issue>
+        Should a \ be added before the comma between the 2 and the dt?
+      </issue>
+
+      <student_impact>
+        Improper LaTeX spacing may make the integral appear cramped. Minor readability issue.
+      </student_impact>
+
+      <recommended_fix>
+        If appropriate, add \, before dt: F(x) = \int_0^x 2\,dt\text{,}
+      </recommended_fix>
+    </example>
+
+  </human_review_examples>
+
+  <!-- ================================================================ -->
+  <!-- PATTERN SUMMARY: What to Learn from These Examples               -->
+  <!-- ================================================================ -->
+
+  <pattern_summary>
+
+    <pattern type="student_impact">
+      <observation>Every human example explains HOW the issue hurts students</observation>
+      <instruction>
+        Always include explicit student impact. Don't just describe the problem—explain
+        the educational consequence for a struggling student studying alone.
+      </instruction>
+      <examples>
+        <example>"Students cannot apply insight from Q1" (scaffolding)</example>
+        <example>"Creates confusion about which function to analyze" (wrong graph)</example>
+        <example>"Forces rereading and disrupts comprehension flow" (vague pronouns)</example>
+      </examples>
+    </pattern>
+
+    <pattern type="specificity">
+      <observation>Reviewers quote exact text and give precise locations</observation>
+      <instruction>
+        Never say "the explanation is unclear" without quoting the exact unclear text
+        and explaining what makes it unclear.
+      </instruction>
+    </pattern>
+
+    <pattern type="fixes">
+      <observation>Most fixes provide exact replacement wording, not vague advice</observation>
+      <instruction>
+        Provide actual text the author can use, not generic suggestions like "improve
+        clarity" or "revise wording."
+      </instruction>
+    </pattern>
+
+    <pattern type="severity_calibration">
+      <severity_level value="1">
+        <description>Minor style issues (question format, LaTeX spacing)</description>
+        <student_impact>Minimal - slight inconsistency or readability issue</student_impact>
+      </severity_level>
+
+      <severity_level value="2">
+        <description>Clarity issues (vague pronouns, grammatical errors, terminology confusion)</description>
+        <student_impact>Moderate - requires rereading, disrupts flow, may confuse weaker students</student_impact>
+      </severity_level>
+
+      <severity_level value="3">
+        <description>Pedagogical issues (undefined terms, forward references, missed scaffolding)</description>
+        <student_impact>Significant - students may give up, develop misconceptions, or miss learning opportunities</student_impact>
+      </severity_level>
+
+      <severity_level value="4">
+        <description>Content accuracy (wrong graphs, incorrect explanations)</description>
+        <student_impact>High - students cannot answer correctly or will learn wrong concepts</student_impact>
+      </severity_level>
+
+      <severity_level value="5">
+        <description>Structural problems (missing titles, broken navigation)</description>
+        <student_impact>Critical - prevents students from accessing or organizing content</student_impact>
+      </severity_level>
+    </pattern>
+
+  </pattern_summary>
+
+  <!-- ================================================================ -->
+  <!-- CRITICAL REMINDERS                                               -->
+  <!-- ================================================================ -->
+
+  <critical_reminders>
+    <reminder priority="highest">
+      Always include line numbers and exact quoted text
+    </reminder>
+    <reminder priority="highest">
+      Always explain student impact (how does this hurt the struggling student studying alone?)
+    </reminder>
+    <reminder priority="high">
+      Provide exact wording for fixes (not vague advice like "revise for clarity")
+    </reminder>
+    <reminder priority="medium">
+      If confidence &lt; 0.6, do not flag the issue
+    </reminder>
+    <reminder priority="high">
+      Review ONLY content/pedagogy - visual, animation, accessibility, technical issues are OUT OF SCOPE
+    </reminder>
+  </critical_reminders>
+
+</exemplar_anchors>
