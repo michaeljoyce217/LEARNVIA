@@ -99,14 +99,14 @@ def extract_text_from_module(xml_content: str) -> str:
     try:
         root = ET.fromstring(xml_content)
 
-        # Extract text recursively, preserving <m> and <me> tags
+        # Extract text recursively, preserving <m>, <me>, and <b> tags
         def extract_text_with_latex(element):
-            """Recursively extract text, preserving <m> and <me> tags as strings."""
+            """Recursively extract text, preserving <m>, <me>, and <b> tags as strings."""
             result = element.text or ''
 
             for child in element:
-                # Preserve LaTeX tags
-                if child.tag in ['m', 'me']:
+                # Preserve LaTeX tags and bold tags (needed for definition detection)
+                if child.tag in ['m', 'me', 'b']:
                     result += f'<{child.tag}>'
                     result += (child.text or '')
                     result += f'</{child.tag}>'
@@ -141,10 +141,11 @@ def extract_text_from_module(xml_content: str) -> str:
 
     except ET.ParseError as e:
         print(f"Warning: XML parsing error: {e}")
-        # Fallback: preserve <m> and <me> tags but strip others
-        # First, protect <m> and <me> tags
+        # Fallback: preserve <m>, <me>, and <b> tags but strip others
+        # First, protect <m>, <me>, and <b> tags
         protected = xml_content.replace('<m>', '___M_START___').replace('</m>', '___M_END___')
         protected = protected.replace('<me>', '___ME_START___').replace('</me>', '___ME_END___')
+        protected = protected.replace('<b>', '___B_START___').replace('</b>', '___B_END___')
 
         # Strip all other XML tags
         cleaned = re.sub(r'<[^>]+>', '', protected)
@@ -152,6 +153,7 @@ def extract_text_from_module(xml_content: str) -> str:
         # Restore protected tags
         cleaned = cleaned.replace('___M_START___', '<m>').replace('___M_END___', '</m>')
         cleaned = cleaned.replace('___ME_START___', '<me>').replace('___ME_END___', '</me>')
+        cleaned = cleaned.replace('___B_START___', '<b>').replace('___B_END___', '</b>')
 
         # Clean up entities
         cleaned = cleaned.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')\
@@ -828,6 +830,26 @@ class RuleBasedDetector:
                 if match:
                     defined_terms.add(match.group(1).lower())
 
+            # ENHANCED: Recognize <b>Term</b> is/are patterns (inline definitions with bold)
+            # Pattern: "is/are the <b>term</b>" or "is/are <b>term</b>"
+            bold_term_patterns = [
+                r'(?:is|are)\s+(?:the\s+)?<b>([^<]+)</b>',  # "is the <b>term</b>" or "is <b>term</b>"
+                r'<b>([^<]+)</b>\s+(?:is|are)\s+',  # "<b>Term</b> is/are"
+                r'called\s+(?:the\s+)?<b>([^<]+)</b>',  # "called the <b>term</b>"
+            ]
+
+            for pattern in bold_term_patterns:
+                matches = re.finditer(pattern, content, re.IGNORECASE)
+                for match in matches:
+                    term = match.group(1).strip().lower()
+                    # Only capture multi-word technical phrases (helps avoid single-word variables)
+                    if len(term.split()) >= 2:
+                        defined_terms.add(term)
+                        # Also add without articles for flexible matching
+                        term_no_article = re.sub(r'^(the|a|an)\s+', '', term)
+                        if term_no_article != term:
+                            defined_terms.add(term_no_article)
+
             # Informal definitions: Recognize natural ways of introducing/defining technical terms
             # These patterns catch definitions that don't use formal <definition> tags
             content_lower = content.lower()
@@ -875,15 +897,16 @@ class RuleBasedDetector:
                         defined_terms.add(term)
 
         # Collect occurrences of Calc 2 compound terms (mid and late only)
-        term_occurrences = {}
+        # Track separately to apply different severity levels
+        term_occurrences = {}  # For late Calc 2 (module-specific)
+        mid_term_occurrences = {}  # For mid Calc 2 (possibly prerequisite)
 
         for i, line in enumerate(self.lines):
             content = self.extract_line_content(i)
             line_num = self.get_line_number(line)
 
-            # Check mid and late Calc 2 terms
-            all_patterns = mid_calc2_terms + calc2_compound_terms
-            for pattern in all_patterns:
+            # Check LATE Calc 2 terms (module-specific, severity 4)
+            for pattern in calc2_compound_terms:
                 matches = list(re.finditer(pattern, content, re.IGNORECASE))
                 for match in matches:
                     term = match.group().lower()
@@ -894,44 +917,6 @@ class RuleBasedDetector:
 
                     # Skip if it's the module's main topic
                     if term in module_topic_terms:
-                        continue
-
-                    # Skip if it's a Calc 1 fundamental
-                    is_calc1 = False
-                    for calc1_pattern in calc1_fundamentals:
-                        if re.fullmatch(calc1_pattern, term, re.IGNORECASE):
-                            is_calc1 = True
-                            break
-                    if is_calc1:
-                        continue
-
-                    # Skip if it's a basic foundational term
-                    is_foundational = False
-                    for found_pattern in foundational_patterns:
-                        if re.fullmatch(found_pattern, term, re.IGNORECASE):
-                            is_foundational = True
-                            break
-                    if is_foundational:
-                        continue
-
-                    # Skip if it's basic Calc 2 vocabulary (convergence, divergence, sequence, series, etc.)
-                    # These are foundational concepts taught at the very beginning of Calc 2
-                    is_calc2_vocab = False
-                    for vocab_pattern in calc2_vocabulary:
-                        if re.fullmatch(vocab_pattern, term, re.IGNORECASE):
-                            is_calc2_vocab = True
-                            break
-                    if is_calc2_vocab:
-                        continue
-
-                    # Skip if it's an early Calc 2 fundamental (alternating series test, p-series, etc.)
-                    # These are typically covered before most modules
-                    is_early_calc2 = False
-                    for early_pattern in early_calc2_fundamentals:
-                        if re.fullmatch(early_pattern, term, re.IGNORECASE):
-                            is_early_calc2 = True
-                            break
-                    if is_early_calc2:
                         continue
 
                     # Collect occurrence
@@ -946,7 +931,33 @@ class RuleBasedDetector:
                         'line_index': i
                     })
 
-        # Classify terms by structure, frequency, and position
+            # Check MID Calc 2 terms (possibly prerequisite, severity 2)
+            for pattern in mid_calc2_terms:
+                matches = list(re.finditer(pattern, content, re.IGNORECASE))
+                for match in matches:
+                    term = match.group().lower()
+
+                    # Skip if already defined
+                    if term in defined_terms:
+                        continue
+
+                    # Skip if it's the module's main topic
+                    if term in module_topic_terms:
+                        continue
+
+                    # Collect occurrence (mid-level terms tracked separately)
+                    if term not in mid_term_occurrences:
+                        mid_term_occurrences[term] = []
+
+                    quote = content[max(0, match.start()-20):min(len(content), match.end()+20)]
+                    mid_term_occurrences[term].append({
+                        'line_num': line_num,
+                        'quote': quote,
+                        'original_case': match.group(),
+                        'line_index': i
+                    })
+
+        # Process LATE Calc 2 terms (module-specific, higher severity)
         for term, occurrences in term_occurrences.items():
             frequency = len(occurrences)
             first_appearance = min(occ['line_index'] for occ in occurrences)
@@ -957,10 +968,8 @@ class RuleBasedDetector:
             # Count words in term (multi-word phrases are likely module-specific)
             word_count = len(term.split())
 
-            # REFINED HEURISTIC:
-            # 1. Multi-word technical phrases (e.g., "radius of convergence") → likely NEW (Severity 4)
-            # 2. Single-word terms (e.g., "convergence", "limit") → likely PREREQUISITE (Severity 2)
-            #    UNLESS they appear very frequently (10+ times) AND early → may need verification
+            # REFINED HEURISTIC for LATE Calc 2 terms:
+            # Multi-word technical phrases (e.g., "radius of convergence") → likely NEW (Severity 4)
 
             if word_count >= 2:
                 # Multi-word phrase → likely module-specific concept
@@ -990,6 +999,28 @@ class RuleBasedDetector:
                         "suggested_fix": f"Verify: Has '{original_case}' been defined in this module or a prerequisite? If not, consider adding a brief definition or reminder of the concept.",
                         "confidence": 0.60
                     })
+
+        # Process MID Calc 2 terms (possibly prerequisite, lower severity)
+        for term, occurrences in mid_term_occurrences.items():
+            frequency = len(occurrences)
+            line_numbers = [occ['line_num'] for occ in occurrences]
+            original_case = occurrences[0]['original_case']
+            first_quote = occurrences[0]['quote']
+
+            # MID Calc 2 terms get severity 2 (verification) instead of 4 (missing definition)
+            # These are tests and techniques that might be prerequisites
+            severity = 2
+            if self.should_flag(severity):
+                findings.append({
+                    "issue_description": f"Verify prerequisite: '{original_case}' appears {frequency} times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: {', '.join(map(str, line_numbers[:5]))}{'...' if len(line_numbers) > 5 else ''}",
+                    "line_numbers": line_numbers,
+                    "quoted_text": first_quote,
+                    "category": "Structural Integrity",
+                    "severity": 2,
+                    "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
+                    "suggested_fix": f"Verify: Was '{original_case}' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
+                    "confidence": 0.55
+                })
 
         return findings
 
@@ -1165,6 +1196,76 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
     return unique_findings
 
 
+def consolidate_duplicate_issues(findings: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Consolidate duplicate issues that refer to the same problem WITHIN A SINGLE AGENT.
+
+    Merges issues if:
+    - Same agent (prevents breaking consensus counting)
+    - Same line number(s)
+    - Same category
+    - Very similar descriptions
+
+    Returns consolidated list of findings.
+    """
+    if not findings:
+        return []
+
+    consolidated = []
+    merged_indices = set()
+
+    for i, finding1 in enumerate(findings):
+        if i in merged_indices:
+            continue
+
+        # Start a group with this finding
+        group = [finding1]
+        agent1 = finding1.get('agent', '')
+
+        for j, finding2 in enumerate(findings[i+1:], start=i+1):
+            if j in merged_indices:
+                continue
+
+            agent2 = finding2.get('agent', '')
+
+            # CRITICAL: Only merge if from SAME agent (preserves consensus counting)
+            # Different agents should be counted separately even if they find the same thing
+            if agent1 and agent2 and agent1 == agent2:
+                # Check if they should be merged
+                same_lines = bool(set(finding1['line_numbers']) & set(finding2['line_numbers']))
+                same_category = finding1['category'] == finding2['category']
+
+                # Check description similarity
+                desc1 = finding1.get('issue_description', '').lower()
+                desc2 = finding2.get('issue_description', '').lower()
+                similar_desc = desc1[:50] == desc2[:50]  # Same first 50 chars
+
+                if same_lines and same_category and similar_desc:
+                    # Merge findings from same agent on same line (reduces noise)
+                    group.append(finding2)
+                    merged_indices.add(j)
+
+        # Merge the group into a single finding
+        if len(group) == 1:
+            consolidated.append(finding1)
+        else:
+            # Take highest confidence and severity from group
+            merged = {
+                'issue_description': group[0]['issue_description'],
+                'line_numbers': sorted(set(sum([f['line_numbers'] for f in group], []))),
+                'quoted_text': max(group, key=lambda x: len(x.get('quoted_text', '')))['quoted_text'],
+                'category': group[0]['category'],
+                'severity': max(f['severity'] for f in group),
+                'student_impact': group[0]['student_impact'],
+                'suggested_fix': group[0]['suggested_fix'],
+                'confidence': max(f['confidence'] for f in group),
+                'agent': agent1  # Preserve agent identity
+            }
+            consolidated.append(merged)
+
+    return consolidated
+
+
 def aggregate_consensus_issues(all_findings: List[Dict[str, Any]],
                                 total_agents: int) -> tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     """
@@ -1177,10 +1278,13 @@ def aggregate_consensus_issues(all_findings: List[Dict[str, Any]],
         (consensus_issues, non_consensus_issues)
     """
 
-    # Group similar issues by description similarity
+    # STEP 1: Consolidate duplicate issues (same line, same category, similar text)
+    consolidated_findings = consolidate_duplicate_issues(all_findings)
+
+    # STEP 2: Group similar issues by description similarity
     issue_groups = defaultdict(list)
 
-    for finding in all_findings:
+    for finding in consolidated_findings:
         # Simple similarity: group by first 50 chars of description
         key = finding["issue_description"][:50]
         issue_groups[key].append(finding)

@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-12T13:38:58.627239",
+  "timestamp": "2025-11-12T13:23:12.084370",
   "total_agents": 30,
-  "consensus_issues_count": 16,
+  "consensus_issues_count": 18,
   "non_consensus_issues_count": 3,
   "consensus_issues": [
     {
@@ -19,6 +19,89 @@
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
       "agent_count": 24
+    },
+    {
+      "priority": 3,
+      "severity": 4,
+      "confidence": 0.8,
+      "consensus_percentage": 46.666666666666664,
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "category": "Structural Integrity",
+      "location": "Lines 5, 5, 9, 10, 28, 29, 46, 48",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "agent_count": 14
+    },
+    {
+      "priority": 2,
+      "severity": 4,
+      "confidence": 0.7999999999999999,
+      "consensus_percentage": 36.666666666666664,
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "category": "Structural Integrity",
+      "location": "Lines 4, 5, 8, 9, 24, 27, 28, 46",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "agent_count": 11
+    },
+    {
+      "priority": 2,
+      "severity": 3,
+      "confidence": 0.7,
+      "consensus_percentage": 43.333333333333336,
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "category": "Pedagogical Flow",
+      "location": "Lines 29",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "agent_count": 13
+    },
+    {
+      "priority": 2,
+      "severity": 4,
+      "confidence": 0.7999999999999999,
+      "consensus_percentage": 33.33333333333333,
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "category": "Structural Integrity",
+      "location": "Lines 4, 5, 22, 41, 42, 47",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "agent_count": 10
     },
     {
       "priority": 2,
@@ -40,7 +123,7 @@
       "priority": 1,
       "severity": 2,
       "confidence": 0.7000000000000001,
-      "consensus_percentage": 30.0,
+      "consensus_percentage": 26.666666666666668,
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
       "category": "Conceptual Clarity",
       "location": "Lines 47",
@@ -50,7 +133,7 @@
       "quoted_text": "ries converges, and it may include one, both, or neither of the en",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 9
+      "agent_count": 8
     },
     {
       "priority": 1,
@@ -70,19 +153,19 @@
     },
     {
       "priority": 1,
-      "severity": 3,
-      "confidence": 0.7000000000000001,
-      "consensus_percentage": 36.666666666666664,
-      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "severity": 2,
+      "confidence": 0.65,
+      "consensus_percentage": 16.666666666666664,
+      "issue_description": "Line 5: Abstract definition appears before concrete example",
       "category": "Pedagogical Flow",
-      "location": "Lines 29",
+      "location": "Lines 5",
       "line_numbers": [
-        29
+        5
       ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
-      "agent_count": 11
+      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
+      "student_impact": "Abstract-first approach increases cognitive load",
+      "suggested_fix": "Introduce a concrete example before the abstract definition",
+      "agent_count": 5
     },
     {
       "priority": 1,
@@ -98,29 +181,6 @@
       "quoted_text": "anteed to converge. It is found using the Ratio Test.",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 5
-    },
-    {
-      "priority": 1,
-      "severity": 2,
-      "confidence": 0.55,
-      "consensus_percentage": 16.666666666666664,
-      "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
-      "category": "Structural Integrity",
-      "location": "Lines 5, 5, 9, 10, 28, 29, 46, 48",
-      "line_numbers": [
-        5,
-        5,
-        9,
-        10,
-        28,
-        29,
-        46,
-        48
-      ],
-      "quoted_text": "The Ratio Test is the primary tool",
-      "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
-      "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
       "agent_count": 5
     },
     {
@@ -142,24 +202,8 @@
     {
       "priority": 1,
       "severity": 2,
-      "confidence": 0.65,
+      "confidence": 0.7000000000000001,
       "consensus_percentage": 20.0,
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "category": "Pedagogical Flow",
-      "location": "Lines 5",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "agent_count": 6
-    },
-    {
-      "priority": 1,
-      "severity": 2,
-      "confidence": 0.7,
-      "consensus_percentage": 16.666666666666664,
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
       "category": "Conceptual Clarity",
       "location": "Lines 49",
@@ -169,7 +213,7 @@
       "quoted_text": "It is essential to test each endpoint by su",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 5
+      "agent_count": 6
     },
     {
       "priority": 1,
@@ -356,6 +400,56 @@
       "confidence": 0.7
     },
     {
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
+      "category": "Pedagogical Flow",
+      "severity": 2,
+      "student_impact": "Abstract-first approach increases cognitive load",
+      "suggested_fix": "Introduce a concrete example before the abstract definition",
+      "confidence": 0.65
+    },
+    {
       "issue_description": "Line 29: Jumps to applying test without explanation",
       "line_numbers": [
         29
@@ -404,7 +498,43 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
       "line_numbers": [
         5,
         5,
@@ -417,10 +547,22 @@
       ],
       "quoted_text": "The Ratio Test is the primary tool",
       "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
+      "category": "Pedagogical Flow",
       "severity": 2,
-      "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
-      "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "student_impact": "Abstract-first approach increases cognitive load",
+      "suggested_fix": "Introduce a concrete example before the abstract definition",
+      "confidence": 0.65
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -459,16 +601,71 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
       "line_numbers": [
-        5
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
       ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
       "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -507,7 +704,26 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
       "line_numbers": [
         5,
         5,
@@ -520,10 +736,10 @@
       ],
       "quoted_text": "The Ratio Test is the primary tool",
       "category": "Structural Integrity",
-      "severity": 2,
-      "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
-      "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -560,6 +776,44 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7
+    },
+    {
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -610,67 +864,43 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
       "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
-    },
-    {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
-      "line_numbers": [
-        29
-      ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
-    },
-    {
-      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
-      "line_numbers": [
-        1
-      ],
-      "quoted_text": "Todo",
-      "category": "UNFINISHED",
-      "severity": 3,
-      "student_impact": "Placeholder indicates unfinished content that students will see",
-      "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
-    },
-    {
-      "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
-      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
         46
       ],
-      "quoted_text": "aranteed to converge. It is found using the Ratio Test.",
-      "category": "Conceptual Clarity",
-      "severity": 2,
-      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
-      "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
-      "issue_description": "Line 47: Vague 'it' reference - 'it may'",
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
       "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
         47
       ],
-      "quoted_text": "ries converges, and it may include one, both, or neither of the en",
-      "category": "Conceptual Clarity",
-      "severity": 2,
-      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
-      "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
-      "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
       "line_numbers": [
         5,
         5,
@@ -683,10 +913,46 @@
       ],
       "quoted_text": "The Ratio Test is the primary tool",
       "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
+      "category": "Pedagogical Flow",
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        46
+      ],
+      "quoted_text": "aranteed to converge. It is found using the Ratio Test.",
+      "category": "Conceptual Clarity",
       "severity": 2,
-      "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
-      "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -701,31 +967,43 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
       "line_numbers": [
-        49
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
       ],
-      "quoted_text": "It is essential to test each endpoint by su",
-      "category": "Conceptual Clarity",
-      "severity": 2,
-      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
-      "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
-      "issue_description": "Line 49: Vague 'it' reference - 'It is'",
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
       "line_numbers": [
-        49
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
       ],
-      "quoted_text": "It is essential to test each endpoint by subs",
-      "category": "Conceptual Clarity",
-      "severity": 2,
-      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
-      "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
-      "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
       "line_numbers": [
         5,
         5,
@@ -738,10 +1016,10 @@
       ],
       "quoted_text": "The Ratio Test is the primary tool",
       "category": "Structural Integrity",
-      "severity": 2,
-      "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
-      "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -756,23 +1034,11 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "issue_description": "Line 47: Vague 'it' reference - 'it may'",
       "line_numbers": [
-        6
+        47
       ],
-      "quoted_text": "Todo",
-      "category": "UNFINISHED",
-      "severity": 3,
-      "student_impact": "Placeholder indicates unfinished content that students will see",
-      "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
-    },
-    {
-      "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
-      "line_numbers": [
-        46
-      ],
-      "quoted_text": "aranteed to converge. It is found using the Ratio Test.",
+      "quoted_text": "ries converges, and it may include one, both, or neither of the en",
       "category": "Conceptual Clarity",
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
@@ -780,11 +1046,11 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 46: Vague 'it' reference - 'It is'",
+      "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
       "line_numbers": [
-        46
+        49
       ],
-      "quoted_text": "anteed to converge. It is found using the Ratio Test.",
+      "quoted_text": "It is essential to test each endpoint by su",
       "category": "Conceptual Clarity",
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
@@ -804,7 +1070,26 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
       "line_numbers": [
         5,
         5,
@@ -817,10 +1102,125 @@
       ],
       "quoted_text": "The Ratio Test is the primary tool",
       "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
+      "category": "Pedagogical Flow",
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        46
+      ],
+      "quoted_text": "aranteed to converge. It is found using the Ratio Test.",
+      "category": "Conceptual Clarity",
       "severity": 2,
-      "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
-      "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 46: Vague 'it' reference - 'It is'",
+      "line_numbers": [
+        46
+      ],
+      "quoted_text": "anteed to converge. It is found using the Ratio Test.",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 49: Vague 'it' reference - 'It is'",
+      "line_numbers": [
+        49
+      ],
+      "quoted_text": "It is essential to test each endpoint by subs",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -847,11 +1247,11 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 47: Vague 'it' reference - 'it may'",
+      "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
       "line_numbers": [
-        47
+        49
       ],
-      "quoted_text": "ries converges, and it may include one, both, or neither of the en",
+      "quoted_text": "It is essential to test each endpoint by su",
       "category": "Conceptual Clarity",
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
@@ -893,6 +1293,61 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7
+    },
+    {
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -979,6 +1434,35 @@
       "confidence": 0.7
     },
     {
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
+      "category": "Pedagogical Flow",
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7
+    },
+    {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
       "line_numbers": [
         1
@@ -1025,6 +1509,54 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7
+    },
+    {
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
+      "line_numbers": [
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
+      ],
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
+      "category": "Pedagogical Flow",
+      "severity": 2,
+      "student_impact": "Abstract-first approach increases cognitive load",
+      "suggested_fix": "Introduce a concrete example before the abstract definition",
+      "confidence": 0.65
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -1087,28 +1619,40 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
       "line_numbers": [
-        5
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
       ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
       "line_numbers": [
-        29
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
       ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1145,6 +1689,44 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7
+    },
+    {
+      "issue_description": "Technical term 'radius of convergence' appears 8 times but may lack clear definition. Lines: 4, 5, 8, 9, 24...",
+      "line_numbers": [
+        4,
+        5,
+        8,
+        9,
+        24,
+        27,
+        28,
+        46
+      ],
+      "quoted_text": "his interval is the radius of convergence, <m>R</m>. The comp",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'radius of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>radius of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -1207,16 +1789,40 @@
       "confidence": 0.7
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "issue_description": "Technical term 'interval of convergence' appears 6 times but may lack clear definition. Lines: 4, 5, 22, 41, 42...",
       "line_numbers": [
-        5
+        4,
+        5,
+        22,
+        41,
+        42,
+        47
       ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "quoted_text": "es converges is the interval of convergence.",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'interval of convergence' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>interval of convergence</b> is ...</definition>",
+      "confidence": 0.8
+    },
+    {
+      "issue_description": "Technical term 'Ratio Test' appears 8 times but may lack clear definition. Lines: 5, 5, 9, 10, 28...",
+      "line_numbers": [
+        5,
+        5,
+        9,
+        10,
+        28,
+        29,
+        46,
+        48
+      ],
+      "quoted_text": "The Ratio Test is the primary tool",
+      "category": "Structural Integrity",
+      "severity": 4,
+      "student_impact": "Compound technical term is likely specific to this module. Students studying alone need explicit definitions to understand new concepts.",
+      "suggested_fix": "Has the term 'Ratio Test' been defined previously in this module or a prerequisite? If not, is the explanation provided here clear and straightforward? Consider adding formal definition: <definition><b>Ratio Test</b> is ...</definition>",
+      "confidence": 0.8
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
