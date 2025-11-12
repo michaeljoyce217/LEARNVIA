@@ -1832,15 +1832,14 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
 
         <div class="tabs">
             <button class="tab active" onclick="showTab(event, 'overview')">Overview</button>
+            <button class="tab" onclick="showTab(event, 'workflow')">Complete Workflow</button>
+            <button class="tab" onclick="showTab(event, 'architecture')">System Architecture</button>
+            <button class="tab" onclick="showTab(event, 'agent-breakdown')">Agent Breakdown</button>
+            <button class="tab" onclick="showTab(event, 'original-input')">Original Input</button>
             <button class="tab" onclick="showTab(event, 'consensus')">Consensus Issues</button>
             <button class="tab" onclick="showTab(event, 'flagged')">Flagged Issues</button>
             <button class="tab" onclick="showTab(event, 'all-findings')">All Findings</button>
-            <button class="tab" onclick="showTab(event, 'agent-breakdown')">Agent Breakdown</button>
             <button class="tab" onclick="showTab(event, 'category-analysis')">Category Analysis</button>
-            <button class="tab" onclick="showTab(event, 'original-input')">Original Input</button>
-            <button class="tab" onclick="showTab(event, 'next-steps')">Next Steps</button>
-            <button class="tab" onclick="showTab(event, 'architecture')">System Architecture</button>
-            <button class="tab" onclick="showTab(event, 'workflow')">Complete Workflow</button>
         </div>
 
         <!-- Tab 1: Overview -->
@@ -1892,50 +1891,7 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
             </div>
         </div>
 
-        <!-- Tab 2: Consensus Issues -->
-        <div id="consensus" class="tab-content">
-            <h2>Consensus Issues</h2>
-            <p>Issues identified by 4 or more agents, indicating high confidence in the finding.</p>
-
-            {_format_issues_html(consensus_issues, total_agents, show_all=False, max_issues=50)}
-
-            {f'<p style="text-align: center; color: #6c757d; margin-top: 30px;"><em>Showing {min(50, len(consensus_issues))} of {len(consensus_issues)} consensus issues</em></p>' if len(consensus_issues) > 50 else ''}
-        </div>
-
-        <!-- Tab 3: Flagged Issues -->
-        <div id="flagged" class="tab-content">
-            <h2>Flagged Issues</h2>
-            <p>Issues identified by 1-3 agents. These may require manual review to determine validity.</p>
-
-            {_format_issues_html(non_consensus_issues, total_agents, show_all=False, max_issues=30)}
-
-            {f'<p style="text-align: center; color: #6c757d; margin-top: 30px;"><em>Showing {min(30, len(non_consensus_issues))} of {len(non_consensus_issues)} flagged issues</em></p>' if len(non_consensus_issues) > 30 else ''}
-        </div>
-
-        <!-- Tab 4: All Findings -->
-        <div id="all-findings" class="tab-content">
-            <h2>All Findings by Category</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Total Issues</th>
-                        <th>Consensus</th>
-                        <th>Flagged</th>
-                        <th>Percentage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {_format_category_table_html(category_counts, consensus_issues, non_consensus_issues)}
-                </tbody>
-            </table>
-
-            <h3 style="margin-top: 40px;">Sample Issues by Category</h3>
-            {_format_issues_by_category_html(all_issues, authoring_categories, style_categories)}
-        </div>
-
-        <!-- Tab 5: Agent Breakdown -->
+        <!-- Tab 4: Agent Breakdown -->
         <div id="agent-breakdown" class="tab-content">
             <h2>Agent Type Analysis</h2>
 
@@ -1979,7 +1935,60 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
             </div>
         </div>
 
-        <!-- Tab 6: Category Analysis -->
+        <!-- Tab 5: Original Input -->
+        <div id="original-input" class="tab-content mathjax-process">
+            <h2>Original Input (What Agents Analyzed)</h2>
+            <p><strong>This is the extracted, human-readable text that all 30 agents analyzed.</strong> Line numbers here match the line numbers in all issue reports. LaTeX math is rendered for readability. XML tags have been removed to show the actual content.</p>
+
+            <button onclick="if(window.MathJax) {{ window.MathJax.typesetPromise().then(() => console.log('Manual typeset done')).catch(e => console.error('Typeset error:', e)); }} else {{ console.error('MathJax not loaded'); }}" style="background: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Force Render Math</button>
+
+            <div class="original-input mathjax-process">{escaped_module}</div>
+        </div>
+
+        <!-- Tab 6: Consensus Issues -->
+        <div id="consensus" class="tab-content">
+            <h2>Consensus Issues</h2>
+            <p>Issues identified by 4 or more agents, indicating high confidence in the finding.</p>
+
+            {_format_issues_html(consensus_issues, total_agents, show_all=False, max_issues=50)}
+
+            {f'<p style="text-align: center; color: #6c757d; margin-top: 30px;"><em>Showing {min(50, len(consensus_issues))} of {len(consensus_issues)} consensus issues</em></p>' if len(consensus_issues) > 50 else ''}
+        </div>
+
+        <!-- Tab 7: Flagged Issues -->
+        <div id="flagged" class="tab-content">
+            <h2>Flagged Issues</h2>
+            <p>Issues identified by 1-3 agents. These may require manual review to determine validity.</p>
+
+            {_format_issues_html(non_consensus_issues, total_agents, show_all=False, max_issues=30)}
+
+            {f'<p style="text-align: center; color: #6c757d; margin-top: 30px;"><em>Showing {min(30, len(non_consensus_issues))} of {len(non_consensus_issues)} flagged issues</em></p>' if len(non_consensus_issues) > 30 else ''}
+        </div>
+
+        <!-- Tab 8: All Findings -->
+        <div id="all-findings" class="tab-content">
+            <h2>All Findings by Category</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Total Issues</th>
+                        <th>Consensus</th>
+                        <th>Flagged</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {_format_category_table_html(category_counts, consensus_issues, non_consensus_issues)}
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Sample Issues by Category</h3>
+            {_format_issues_by_category_html(all_issues, authoring_categories, style_categories)}
+        </div>
+
+        <!-- Tab 9: Category Analysis -->
         <div id="category-analysis" class="tab-content">
             <h2>Category Analysis</h2>
 
@@ -1990,107 +1999,7 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
             {_format_category_details_html(consensus_issues + non_consensus_issues, style_categories, "style")}
         </div>
 
-        <!-- Tab 7: Original Input -->
-        <div id="original-input" class="tab-content mathjax-process">
-            <h2>Original Input (What Agents Analyzed)</h2>
-            <p><strong>This is the extracted, human-readable text that all 30 agents analyzed.</strong> Line numbers here match the line numbers in all issue reports. LaTeX math is rendered for readability. XML tags have been removed to show the actual content.</p>
-
-            <button onclick="if(window.MathJax) {{ window.MathJax.typesetPromise().then(() => console.log('Manual typeset done')).catch(e => console.error('Typeset error:', e)); }} else {{ console.error('MathJax not loaded'); }}" style="background: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Force Render Math</button>
-
-            <div class="original-input mathjax-process">{escaped_module}</div>
-        </div>
-
-        <!-- Tab 8: Next Steps -->
-        <div id="next-steps" class="tab-content">
-            <h2>Recommended Next Steps</h2>
-
-            <div class="workflow-section">
-                <div class="workflow-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Address Priority 5 Issues</h4>
-                        <p>Start with critical issues that have both high severity and strong consensus.
-                        These are most likely to impact student learning.</p>
-                    </div>
-                </div>
-
-                <div class="workflow-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>Review Consensus Issues</h4>
-                        <p>Work through issues flagged by 4+ agents in priority order.
-                        These have high confidence of being legitimate problems.</p>
-                    </div>
-                </div>
-
-                <div class="workflow-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>Evaluate Flagged Issues</h4>
-                        <p>Manually review issues flagged by fewer agents to determine if they are
-                        false positives or legitimate concerns worth addressing.</p>
-                    </div>
-                </div>
-
-                <div class="workflow-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h4>Run Follow-up Review</h4>
-                        <p>After making changes, run the review again to verify fixes and check for
-                        any new issues introduced during editing.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="warning-box">
-                <strong>Important:</strong> Not all flagged issues require action. Use your judgment to
-                balance perfectionism with practical content delivery timelines.
-            </div>
-        </div>
-
-        <!-- Tab 9: System Architecture -->
-        <div id="architecture" class="tab-content">
-            <h2>System Architecture</h2>
-
-            <div class="flowchart">
-                <div class="flowchart-box">Module Input</div>
-                <div class="flowchart-arrow">↓</div>
-                <div class="flowchart-box">30 AI Agents</div>
-                <div class="flowchart-arrow">↓</div>
-                <div class="flowchart-box">Individual Findings</div>
-                <div class="flowchart-arrow">↓</div>
-                <div class="flowchart-box">Consensus Algorithm</div>
-                <div class="flowchart-arrow">↓</div>
-                <div class="flowchart-box">Prioritized Issues</div>
-                <div class="flowchart-arrow">↓</div>
-                <div class="flowchart-box">Review Report</div>
-            </div>
-
-            <div class="info-box" style="margin-top: 40px;">
-                <h3>How the System Works</h3>
-                <ol>
-                    <li><strong>Multi-Agent Analysis:</strong> 30 specialized agents review the content from different perspectives</li>
-                    <li><strong>Layered Prompting:</strong> Each agent receives layered instructions including exemplars, domain rules, and specific rubrics</li>
-                    <li><strong>Independent Review:</strong> Agents work independently to avoid groupthink</li>
-                    <li><strong>Consensus Building:</strong> Issues are aggregated and ranked by agreement level</li>
-                    <li><strong>Priority Scoring:</strong> Combined severity and consensus determine priority (1-5 scale)</li>
-                    <li><strong>Report Generation:</strong> Findings are organized into actionable categories</li>
-                </ol>
-            </div>
-
-            <div class="success-box">
-                <h3>Key Benefits</h3>
-                <ul>
-                    <li>Reduces individual agent bias through multiple perspectives</li>
-                    <li>Identifies both obvious and subtle content issues</li>
-                    <li>Provides confidence scoring based on consensus</li>
-                    <li>Scales to any module size or complexity</li>
-                    <li>Produces consistent, objective reviews</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Tab 10: Complete Workflow -->
+        <!-- Tab 2: Complete Workflow -->
         <div id="workflow" class="tab-content">
             <h2>Complete 4-Pass Workflow</h2>
 
@@ -2176,6 +2085,48 @@ def generate_html_report(consensus_issues: List[Dict[str, Any]],
                 <p><strong>Currently implemented:</strong> Pass 1 only (Reviewer Phase, Initial Review)</p>
                 <p><strong>In development:</strong> Passes 2, 3, and 4 represent the planned production workflow</p>
                 <p>This report demonstrates the architecture and capabilities of the multi-agent system using rule-based detection.</p>
+            </div>
+        </div>
+
+        <!-- Tab 3: System Architecture -->
+        <div id="architecture" class="tab-content">
+            <h2>System Architecture</h2>
+
+            <div class="flowchart">
+                <div class="flowchart-box">Module Input</div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-box">30 AI Agents</div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-box">Individual Findings</div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-box">Consensus Algorithm</div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-box">Prioritized Issues</div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-box">Review Report</div>
+            </div>
+
+            <div class="info-box" style="margin-top: 40px;">
+                <h3>How the System Works</h3>
+                <ol>
+                    <li><strong>Multi-Agent Analysis:</strong> 30 specialized agents review the content from different perspectives</li>
+                    <li><strong>Layered Prompting:</strong> Each agent receives layered instructions including exemplars, domain rules, and specific rubrics</li>
+                    <li><strong>Independent Review:</strong> Agents work independently to avoid groupthink</li>
+                    <li><strong>Consensus Building:</strong> Issues are aggregated and ranked by agreement level</li>
+                    <li><strong>Priority Scoring:</strong> Combined severity and consensus determine priority (1-5 scale)</li>
+                    <li><strong>Report Generation:</strong> Findings are organized into actionable categories</li>
+                </ol>
+            </div>
+
+            <div class="success-box">
+                <h3>Key Benefits</h3>
+                <ul>
+                    <li>Reduces individual agent bias through multiple perspectives</li>
+                    <li>Identifies both obvious and subtle content issues</li>
+                    <li>Provides confidence scoring based on consensus</li>
+                    <li>Scales to any module size or complexity</li>
+                    <li>Produces consistent, objective reviews</li>
+                </ul>
             </div>
         </div>
     </div>
