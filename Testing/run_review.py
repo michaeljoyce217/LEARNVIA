@@ -1182,7 +1182,7 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
         # They already got some findings above, but with their reduced probability
         pass
 
-    # Remove duplicates (same line, same issue type)
+    # Remove duplicates (same line, same issue type) and add agent tracking
     seen = set()
     unique_findings = []
     for finding in findings:
@@ -1191,6 +1191,8 @@ def simulate_agent_review(agent_id: str, prompt: str) -> List[Dict[str, Any]]:
                finding["issue_description"][:30])
         if key not in seen:
             seen.add(key)
+            # Add agent identification to each finding
+            finding["agent"] = agent_id
             unique_findings.append(finding)
 
     return unique_findings
@@ -1301,6 +1303,28 @@ def aggregate_consensus_issues(all_findings: List[Dict[str, Any]],
         avg_confidence = sum(f["confidence"] for f in grouped_findings) / agent_count
         max_severity = max(f["severity"] for f in grouped_findings)
 
+        # Analyze agent breakdown: authoring vs style, rubric vs generalist
+        authoring_rubric = []
+        authoring_generalist = []
+        style_rubric = []
+        style_generalist = []
+
+        for finding in grouped_findings:
+            agent_name = finding.get("agent", "")
+            if "authoring" in agent_name.lower():
+                if "generalist" in agent_name.lower():
+                    authoring_generalist.append(agent_name)
+                else:
+                    authoring_rubric.append(agent_name)
+            elif "style" in agent_name.lower():
+                if "generalist" in agent_name.lower():
+                    style_generalist.append(agent_name)
+                else:
+                    style_rubric.append(agent_name)
+
+        authoring_count = len(authoring_rubric) + len(authoring_generalist)
+        style_count = len(style_rubric) + len(style_generalist)
+
         # Consensus percentage
         consensus_pct = (agent_count / total_agents)
 
@@ -1332,7 +1356,21 @@ def aggregate_consensus_issues(all_findings: List[Dict[str, Any]],
             "quoted_text": representative["quoted_text"],
             "student_impact": representative["student_impact"],
             "suggested_fix": representative["suggested_fix"],
-            "agent_count": agent_count
+            "agent_count": agent_count,
+            # Agent breakdown for detailed display
+            "agent_breakdown": {
+                "total": agent_count,
+                "authoring": {
+                    "total": authoring_count,
+                    "rubric": len(authoring_rubric),
+                    "generalist": len(authoring_generalist)
+                },
+                "style": {
+                    "total": style_count,
+                    "rubric": len(style_rubric),
+                    "generalist": len(style_generalist)
+                }
+            }
         }
 
         # Consensus threshold: at least 4 agents OR severity 5
@@ -2398,9 +2436,14 @@ def _format_issues_html(issues: List[Dict[str, Any]], total_agents: int,
                 <span class="badge priority-{issue['priority']}">Priority {issue['priority']}</span>
                 <span class="badge severity-{issue['severity']}">Severity {issue['severity']}</span>
                 <span class="badge category-badge">{issue['category']}</span>
-                <span class="consensus-meter">
-                    <strong>{issue['agent_count']}/{total_agents}</strong> agents
-                    ({issue['consensus_percentage']:.1f}% consensus)
+                <span class="consensus-meter" style="font-size: 0.8em;">
+                    <strong>{issue['agent_count']}/{total_agents}</strong> agents -
+                    {issue['agent_breakdown']['authoring']['total']}/15 authoring
+                    ({issue['agent_breakdown']['authoring']['rubric']}/9 rubric,
+                    {issue['agent_breakdown']['authoring']['generalist']}/6 generalist),
+                    {issue['agent_breakdown']['style']['total']}/15 style
+                    ({issue['agent_breakdown']['style']['rubric']}/9 rubric,
+                    {issue['agent_breakdown']['style']['generalist']}/6 generalist)
                 </span>
             </div>
 

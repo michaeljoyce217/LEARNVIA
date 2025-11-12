@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-12T13:38:58.627239",
+  "timestamp": "2025-11-12T13:44:34.728605",
   "total_agents": 30,
   "consensus_issues_count": 16,
   "non_consensus_issues_count": 3,
@@ -18,7 +18,20 @@
       "quoted_text": "Todo",
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "agent_count": 24
+      "agent_count": 24,
+      "agent_breakdown": {
+        "total": 24,
+        "authoring": {
+          "total": 11,
+          "rubric": 5,
+          "generalist": 6
+        },
+        "style": {
+          "total": 13,
+          "rubric": 8,
+          "generalist": 5
+        }
+      }
     },
     {
       "priority": 2,
@@ -34,7 +47,20 @@
       "quoted_text": "Todo",
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "agent_count": 16
+      "agent_count": 16,
+      "agent_breakdown": {
+        "total": 16,
+        "authoring": {
+          "total": 7,
+          "rubric": 3,
+          "generalist": 4
+        },
+        "style": {
+          "total": 9,
+          "rubric": 5,
+          "generalist": 4
+        }
+      }
     },
     {
       "priority": 1,
@@ -50,7 +76,20 @@
       "quoted_text": "ries converges, and it may include one, both, or neither of the en",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 9
+      "agent_count": 9,
+      "agent_breakdown": {
+        "total": 9,
+        "authoring": {
+          "total": 9,
+          "rubric": 6,
+          "generalist": 3
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -66,7 +105,20 @@
       "quoted_text": "It is essential to test each endpoint by subs",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 7
+      "agent_count": 7,
+      "agent_breakdown": {
+        "total": 7,
+        "authoring": {
+          "total": 7,
+          "rubric": 5,
+          "generalist": 2
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -82,7 +134,20 @@
       "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "agent_count": 11
+      "agent_count": 11,
+      "agent_breakdown": {
+        "total": 11,
+        "authoring": {
+          "total": 11,
+          "rubric": 6,
+          "generalist": 5
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -98,7 +163,20 @@
       "quoted_text": "anteed to converge. It is found using the Ratio Test.",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 5
+      "agent_count": 5,
+      "agent_breakdown": {
+        "total": 5,
+        "authoring": {
+          "total": 5,
+          "rubric": 2,
+          "generalist": 3
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -121,7 +199,20 @@
       "quoted_text": "The Ratio Test is the primary tool",
       "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
       "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "agent_count": 5
+      "agent_count": 5,
+      "agent_breakdown": {
+        "total": 5,
+        "authoring": {
+          "total": 5,
+          "rubric": 5,
+          "generalist": 0
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -137,7 +228,20 @@
       "quoted_text": "aranteed to converge. It is found using the Ratio Test.",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 7
+      "agent_count": 7,
+      "agent_breakdown": {
+        "total": 7,
+        "authoring": {
+          "total": 7,
+          "rubric": 5,
+          "generalist": 2
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -153,7 +257,20 @@
       "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "agent_count": 6
+      "agent_count": 6,
+      "agent_breakdown": {
+        "total": 6,
+        "authoring": {
+          "total": 6,
+          "rubric": 3,
+          "generalist": 3
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -169,7 +286,20 @@
       "quoted_text": "It is essential to test each endpoint by su",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 5
+      "agent_count": 5,
+      "agent_breakdown": {
+        "total": 5,
+        "authoring": {
+          "total": 5,
+          "rubric": 2,
+          "generalist": 3
+        },
+        "style": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -185,7 +315,20 @@
       "quoted_text": "er if the endpoints are included.",
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "agent_count": 8
+      "agent_count": 8,
+      "agent_breakdown": {
+        "total": 8,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 8,
+          "rubric": 5,
+          "generalist": 3
+        }
+      }
     },
     {
       "priority": 1,
@@ -201,7 +344,20 @@
       "quoted_text": "here a power series is guaranteed to converge. It is ",
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is guaranteed', specify who/what performs the action",
-      "agent_count": 4
+      "agent_count": 4,
+      "agent_breakdown": {
+        "total": 4,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 4,
+          "rubric": 3,
+          "generalist": 1
+        }
+      }
     },
     {
       "priority": 1,
@@ -217,7 +373,20 @@
       "quoted_text": " on the interval <m>-1 < x < 1</m>.",
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "agent_count": 9
+      "agent_count": 9,
+      "agent_breakdown": {
+        "total": 9,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 9,
+          "rubric": 5,
+          "generalist": 4
+        }
+      }
     },
     {
       "priority": 1,
@@ -233,7 +402,20 @@
       "quoted_text": "anteed to converge. It is found using the Ratio Tes",
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "agent_count": 7
+      "agent_count": 7,
+      "agent_breakdown": {
+        "total": 7,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 7,
+          "rubric": 4,
+          "generalist": 3
+        }
+      }
     },
     {
       "priority": 1,
@@ -249,7 +431,20 @@
       "quoted_text": "It is essential to test each endpoi",
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "agent_count": 7
+      "agent_count": 7,
+      "agent_breakdown": {
+        "total": 7,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 7,
+          "rubric": 5,
+          "generalist": 2
+        }
+      }
     },
     {
       "priority": 1,
@@ -265,7 +460,20 @@
       "quoted_text": " on the interval <m>1 < x < 3</m>.",
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "agent_count": 9
+      "agent_count": 9,
+      "agent_breakdown": {
+        "total": 9,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 9,
+          "rubric": 4,
+          "generalist": 5
+        }
+      }
     }
   ],
   "non_consensus_issues": [
@@ -283,7 +491,20 @@
       "quoted_text": "The open interval is <m>(1, 3)</m>; now consider if the endpoints are included.",
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "agent_count": 2
+      "agent_count": 2,
+      "agent_breakdown": {
+        "total": 2,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 2,
+          "rubric": 2,
+          "generalist": 0
+        }
+      }
     },
     {
       "priority": 1,
@@ -299,7 +520,20 @@
       "quoted_text": "the series converges only at the series center, <m>x=a</m>;the series converges for all <m>x</m>;or the series converges on a finite interval centered at <m>a</m>.",
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "agent_count": 3
+      "agent_count": 3,
+      "agent_breakdown": {
+        "total": 3,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 3,
+          "rubric": 1,
+          "generalist": 2
+        }
+      }
     },
     {
       "priority": 1,
@@ -315,7 +549,20 @@
       "quoted_text": "eed to converge. It is found using the Ratio Tes",
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
-      "agent_count": 2
+      "agent_count": 2,
+      "agent_breakdown": {
+        "total": 2,
+        "authoring": {
+          "total": 0,
+          "rubric": 0,
+          "generalist": 0
+        },
+        "style": {
+          "total": 2,
+          "rubric": 1,
+          "generalist": 1
+        }
+      }
     }
   ],
   "all_findings": [
@@ -329,7 +576,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-PedagogicalFlow-1"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -341,7 +589,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-PedagogicalFlow-1"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -353,7 +602,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-PedagogicalFlow-1"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -365,7 +615,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-PedagogicalFlow-1"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -377,7 +628,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-StructuralIntegrity-2"
     },
     {
       "issue_description": "Line 46: Vague 'it' reference - 'It is'",
@@ -389,7 +641,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StructuralIntegrity-2"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -401,7 +654,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StructuralIntegrity-2"
     },
     {
       "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
@@ -420,7 +674,8 @@
       "severity": 2,
       "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
       "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "confidence": 0.55,
+      "agent": "Authoring-Specialist-StructuralIntegrity-2"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -432,7 +687,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-StudentEngagement-3"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -444,7 +700,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StudentEngagement-3"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -456,7 +713,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StudentEngagement-3"
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -468,7 +726,8 @@
       "severity": 2,
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Authoring-Specialist-StudentEngagement-3"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -480,7 +739,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -492,7 +752,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -504,7 +765,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
     {
       "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
@@ -523,7 +785,8 @@
       "severity": 2,
       "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
       "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "confidence": 0.55,
+      "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -535,7 +798,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -547,7 +811,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-AssessmentQuality-5"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -559,7 +824,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-AssessmentQuality-5"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -571,7 +837,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-AssessmentQuality-5"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -583,7 +850,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-PedagogicalFlow-6"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -595,7 +863,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-PedagogicalFlow-6"
     },
     {
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
@@ -607,7 +876,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-PedagogicalFlow-6"
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -619,7 +889,8 @@
       "severity": 2,
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Authoring-Specialist-PedagogicalFlow-6"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -631,7 +902,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-PedagogicalFlow-6"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -643,7 +915,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-StructuralIntegrity-7"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -655,7 +928,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StructuralIntegrity-7"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -667,7 +941,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StructuralIntegrity-7"
     },
     {
       "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
@@ -686,7 +961,8 @@
       "severity": 2,
       "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
       "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "confidence": 0.55,
+      "agent": "Authoring-Specialist-StructuralIntegrity-7"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -698,7 +974,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StudentEngagement-8"
     },
     {
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
@@ -710,7 +987,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StudentEngagement-8"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -722,7 +1000,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StudentEngagement-8"
     },
     {
       "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
@@ -741,7 +1020,8 @@
       "severity": 2,
       "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
       "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "confidence": 0.55,
+      "agent": "Authoring-Specialist-StudentEngagement-8"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -753,7 +1033,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StudentEngagement-8"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -765,7 +1046,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -777,7 +1059,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Line 46: Vague 'it' reference - 'It is'",
@@ -789,7 +1072,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -801,7 +1085,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Verify prerequisite: 'Ratio Test' appears 8 times. This is a mid-Calc 2 technique that may have been covered in an earlier module. Lines: 5, 5, 9, 10, 28...",
@@ -820,7 +1105,8 @@
       "severity": 2,
       "student_impact": "If this technique hasn't been introduced in a prerequisite module, students may lack the necessary background knowledge.",
       "suggested_fix": "Verify: Was 'Ratio Test' taught in an earlier Calc 2 module? If this is the first introduction, add explanation or definition. If it's a prerequisite, consider adding a brief reminder.",
-      "confidence": 0.55
+      "confidence": 0.55,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -832,7 +1118,8 @@
       "severity": 2,
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -844,7 +1131,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -856,7 +1144,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -868,7 +1157,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-10"
     },
     {
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
@@ -880,7 +1170,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-10"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -892,7 +1183,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-10"
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -904,7 +1196,8 @@
       "severity": 2,
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Authoring-Generalist-10"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -916,7 +1209,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-10"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -928,7 +1222,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-11"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -940,7 +1235,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-11"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -952,7 +1248,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-11"
     },
     {
       "issue_description": "Line 46: Vague 'it' reference - 'It is'",
@@ -964,7 +1261,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-11"
     },
     {
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
@@ -976,7 +1274,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-11"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -988,7 +1287,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-12"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1000,7 +1300,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-12"
     },
     {
       "issue_description": "Line 46: Vague 'it' reference - 'It is'",
@@ -1012,7 +1313,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-12"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -1024,7 +1326,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-12"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -1036,7 +1339,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-12"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1048,7 +1352,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-13"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1060,7 +1365,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-13"
     },
     {
       "issue_description": "Line 46: Sentence starts with vague pronoun after period - '. It '",
@@ -1072,7 +1378,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-13"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -1084,7 +1391,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-13"
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -1096,7 +1404,8 @@
       "severity": 2,
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Authoring-Generalist-13"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -1108,7 +1417,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-13"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1120,7 +1430,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-14"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1132,7 +1443,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-14"
     },
     {
       "issue_description": "Line 49: Vague 'it' reference - 'It is'",
@@ -1144,7 +1456,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-14"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -1156,7 +1469,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-14"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1168,7 +1482,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Authoring-Generalist-15"
     },
     {
       "issue_description": "Line 46: Vague 'it' reference - 'It is'",
@@ -1180,7 +1495,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-15"
     },
     {
       "issue_description": "Line 47: Vague 'it' reference - 'it may'",
@@ -1192,7 +1508,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-15"
     },
     {
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
@@ -1204,7 +1521,8 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-15"
     },
     {
       "issue_description": "Line 5: Abstract definition appears before concrete example",
@@ -1216,7 +1534,8 @@
       "severity": 2,
       "student_impact": "Abstract-first approach increases cognitive load",
       "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Authoring-Generalist-15"
     },
     {
       "issue_description": "Line 29: Jumps to applying test without explanation",
@@ -1228,7 +1547,8 @@
       "severity": 3,
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-15"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1240,7 +1560,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-MechanicalCompliance-1"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1252,7 +1573,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MechanicalCompliance-1"
     },
     {
       "issue_description": "Passive voice construction: 'is guaranteed'",
@@ -1264,7 +1586,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is guaranteed', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MechanicalCompliance-1"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1276,7 +1599,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-MechanicalCompliance-1"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -1288,7 +1612,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MechanicalCompliance-1"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1300,7 +1625,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MechanicalCompliance-1"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1312,7 +1638,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-MathematicalFormatting-2"
     },
     {
       "issue_description": "Line 43: Semicolon usage discouraged",
@@ -1324,7 +1651,8 @@
       "severity": 1,
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Style-Specialist-MathematicalFormatting-2"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -1336,7 +1664,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MathematicalFormatting-2"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1348,7 +1677,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MathematicalFormatting-2"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1360,7 +1690,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-MathematicalFormatting-2"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1372,7 +1703,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1384,7 +1716,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1396,7 +1729,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1408,7 +1742,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1420,7 +1755,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "Line 3: Semicolon usage discouraged",
@@ -1432,7 +1768,8 @@
       "severity": 1,
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "Passive voice construction: 'is guaranteed'",
@@ -1444,7 +1781,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is guaranteed', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Punctuation&Grammar-3"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1456,7 +1794,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Accessibility-4"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1468,7 +1807,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Accessibility-4"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1480,7 +1820,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Accessibility-4"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -1492,7 +1833,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Accessibility-4"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1504,7 +1846,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-Accessibility-4"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1516,7 +1859,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Consistency-5"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1528,7 +1872,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Consistency-5"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1540,7 +1885,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-Consistency-5"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1552,7 +1898,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-MechanicalCompliance-6"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1564,7 +1911,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MechanicalCompliance-6"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1576,7 +1924,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MechanicalCompliance-6"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1588,7 +1937,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-MathematicalFormatting-7"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1600,7 +1950,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-MathematicalFormatting-7"
     },
     {
       "issue_description": "Passive voice construction: 'is guaranteed'",
@@ -1612,7 +1963,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is guaranteed', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-MathematicalFormatting-7"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1624,7 +1976,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-MathematicalFormatting-7"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1636,7 +1989,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Punctuation&Grammar-8"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1648,7 +2002,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Punctuation&Grammar-8"
     },
     {
       "issue_description": "Passive voice construction: 'is found'",
@@ -1660,7 +2015,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Punctuation&Grammar-8"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1672,7 +2028,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-Punctuation&Grammar-8"
     },
     {
       "issue_description": "Line 43: Semicolon usage discouraged",
@@ -1684,7 +2041,8 @@
       "severity": 1,
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Style-Specialist-Punctuation&Grammar-8"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -1696,7 +2054,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Specialist-Punctuation&Grammar-8"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1708,7 +2067,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Accessibility-9"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1720,7 +2080,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Specialist-Accessibility-9"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1732,7 +2093,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-Accessibility-9"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1744,7 +2106,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Specialist-Accessibility-9"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1756,7 +2119,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-10"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1768,7 +2132,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-10"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1780,7 +2145,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-10"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1792,7 +2158,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-10"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1804,7 +2171,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-10"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1816,7 +2184,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-11"
     },
     {
       "issue_description": "Passive voice construction: 'is guaranteed'",
@@ -1828,7 +2197,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is guaranteed', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-11"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -1840,7 +2210,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-11"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1852,7 +2223,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-11"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1864,7 +2236,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-11"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1876,7 +2249,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-12"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1888,7 +2262,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-12"
     },
     {
       "issue_description": "Line 3: Semicolon usage discouraged",
@@ -1900,7 +2275,8 @@
       "severity": 1,
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Style-Generalist-12"
     },
     {
       "issue_description": "Passive voice construction: 'It is essential'",
@@ -1912,7 +2288,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is essential', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-12"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -1924,7 +2301,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-12"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1936,7 +2314,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-12"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1948,7 +2327,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-13"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -1960,7 +2340,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-13"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -1972,7 +2353,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-13"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -1984,7 +2366,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
@@ -1996,7 +2379,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "Line 3: Semicolon usage discouraged",
@@ -2008,7 +2392,8 @@
       "severity": 1,
       "student_impact": "Semicolons increase complexity for mobile readers",
       "suggested_fix": "Split into two sentences or use comma with conjunction",
-      "confidence": 0.65
+      "confidence": 0.65,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "Passive voice construction: 'are included'",
@@ -2020,7 +2405,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'are included', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "Passive voice construction: 'is found'",
@@ -2032,7 +2418,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -2044,7 +2431,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -2056,7 +2444,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-14"
     },
     {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
@@ -2068,7 +2457,8 @@
       "severity": 3,
       "student_impact": "Placeholder indicates unfinished content that students will see",
       "suggested_fix": "Replace placeholder with actual content",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "agent": "Style-Generalist-15"
     },
     {
       "issue_description": "Passive voice construction: 'It is found'",
@@ -2080,7 +2470,8 @@
       "severity": 2,
       "student_impact": "Active voice is clearer and more direct for struggling readers",
       "suggested_fix": "Rewrite in active voice. Instead of 'It is found', specify who/what performs the action",
-      "confidence": 0.75
+      "confidence": 0.75,
+      "agent": "Style-Generalist-15"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '-1 < x < 1'",
@@ -2092,7 +2483,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '-1 < x < 1' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-15"
     },
     {
       "issue_description": "Inequality chain should use interval notation: '1 < x < 3'",
@@ -2104,7 +2496,8 @@
       "severity": 2,
       "student_impact": "Interval notation is standard in calculus and clearer for expressing ranges",
       "suggested_fix": "Replace '1 < x < 3' with open interval notation like (a, b)",
-      "confidence": 0.7
+      "confidence": 0.7,
+      "agent": "Style-Generalist-15"
     }
   ]
 }
