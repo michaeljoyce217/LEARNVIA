@@ -78,7 +78,7 @@ A **30-agent AI review system** for Calculus 2 educational content.
 - Working directory: `/Users/michaeljoyce/Desktop/LEARNVIA/Testing`
 - Main script: `Testing/run_review.py` (2200+ lines)
 - Test module: Power Series (Calc 2 content)
-- Exemplary modules: 5.6 (Definite Integral) & 5.7 (Net Change) in `exemplary_modules/`
+- Exemplary modules: 5.6 (Definite Integral) & 5.7 (Net Change) in `modules/exemplary/`
 
 ---
 
@@ -101,9 +101,9 @@ The two exemplary modules (5.6 and 5.7) are **pattern anchors**, not content tem
 - ❌ Copy architectural decisions that may not apply to other topics
 
 **Location:**
-- `exemplary_modules/module_5_6_exemplary.xml` (~270KB)
-- `exemplary_modules/module_5_7_exemplary.xml`
-- Human review logs: `exemplary_modules/*.csv`
+- `modules/exemplary/module_5_6_exemplary.xml` (~270KB)
+- `modules/exemplary/module_5_7_exemplary.xml`
+- Human review logs: `modules/exemplary/*.csv`
 
 ---
 
@@ -137,7 +137,7 @@ The two exemplary modules (5.6 and 5.7) are **pattern anchors**, not content tem
 - Calc 2 domain knowledge (e.g., `calc2_compound_terms`) is acceptable—this distinguishes Calc 2 from Calc 1/3/4
 
 ### 2. Prompt System
-**Location:** `ACTIVE_CONFIG/v2_master_prompts/` and `config/prompts/`
+**Location:** `config/prompts/`
 
 **Key prompts:**
 - `master_context.md` - Universal review context (27507 chars)
@@ -176,10 +176,10 @@ The two exemplary modules (5.6 and 5.7) are **pattern anchors**, not content tem
 
 **Use this workflow:**
 1. Read `config/prompts/explore_prompt.txt` for exploration structure
-2. Map the repository quickly (key dirs: `Testing/`, `ACTIVE_CONFIG/`, `exemplary_modules/`, `config/`)
-3. Run review if appropriate: `python Testing/run_review.py Power_Series power_series_original.xml power_series_original_readable.txt`
-4. Analyze HTML report: `Testing/Power_Series/output/test_module_review_report_generic.html`
-5. Compare against human review logs in `exemplary_modules/*.csv`
+2. Map the repository quickly (key dirs: `Testing/`, `modules/`, `config/`, `guides/`)
+3. Run review if appropriate: `./run_review.sh Power_Series power_series_original.xml`
+4. Analyze HTML report: `modules/test/Power_Series/output/test_module_review_report_generic.html`
+5. Compare against human review logs in `modules/exemplary/*.csv`
 6. Generate prioritized plan with Day 1/Day 2 milestones
 
 **Key questions to ask:**
@@ -258,25 +258,24 @@ The student:
 
 ---
 
-## 📁 REORGANIZED STRUCTURE (Nov 11, 2024 - Evening)
+## 📁 REPOSITORY STRUCTURE
 
-### New Folder Organization
+### Current Organization
 ```
 LEARNVIA/
-├── src/           # Modular source code (future)
+├── Testing/       # Main review script
+│   └── run_review.py
 ├── config/        # All configurations
-├── modules/       # exemplary/ and test/
-├── docs/          # architecture/ and guides/
-├── tests/         # Unit tests (future)
-├── output/        # Generated reports
-├── _deprecated/   # Old files (can delete)
-└── Testing/       # Current working directory
+│   ├── prompts/   # Review prompts
+│   ├── rubrics/   # XML rubrics
+│   └── templates/ # HTML templates
+├── modules/       # Content modules
+│   ├── exemplary/ # Example modules & review logs
+│   └── test/      # Test modules (Power_Series, etc.)
+├── guides/        # Authoring & style guides
+├── archive/       # Historical/unused files
+└── README.md      # Main documentation
 ```
-
-### Files Moved to _deprecated/
-- `archive/` (2.7 MB of obsolete code)
-- Backup scripts and test HTML files
-- Duplicate modules
 
 ## 🔍 Current Status
 
@@ -367,19 +366,19 @@ After discovering authoring/style guides were deleted and re-uploaded, conducted
 
 ### When reviewing content:
 - Your brain (XML): `config/prompts/claude_live_reviewer_system.xml` ⭐
-- Master context: `ACTIVE_CONFIG/v2_master_prompts/master_context.md`
-- Authoring rules: `ACTIVE_CONFIG/v2_master_prompts/authoring_rules.md`
-- Style rules: `ACTIVE_CONFIG/v2_master_prompts/style_rules.md`
+- Master context: `config/prompts/master_context.md`
+- Authoring rules: `config/prompts/authoring_rules.md`
+- Style rules: `config/prompts/style_rules.md`
 
 ### When running reviews:
 - Main script: `Testing/run_review.py`
-- Test module: `Testing/Power_Series/power_series_original.xml`
-- Latest report: `Testing/Power_Series/output/test_module_review_report_generic.html`
+- Test module: `modules/test/Power_Series/power_series_original.xml`
+- Latest report: `modules/test/Power_Series/output/test_module_review_report_generic.html`
 
 ### For pattern learning:
-- Exemplar 1: `exemplary_modules/module_5_6_exemplary.xml`
-- Exemplar 2: `exemplary_modules/module_5_7_exemplary.xml`
-- Human review logs: `exemplary_modules/*.csv`
+- Exemplar 1: `modules/exemplary/module_5_6_exemplary.xml`
+- Exemplar 2: `modules/exemplary/module_5_7_exemplary.xml`
+- Human review logs: `modules/exemplary/*.csv`
 
 ### Don't waste time on:
 - `archive/` - Historical artifacts, not current system
@@ -426,13 +425,12 @@ Uses `config/prompts/explore_prompt.txt` to map repo and generate prioritized pl
 
 **Run a review:**
 ```bash
-cd Testing
-python run_review.py Power_Series power_series_original.xml power_series_original_readable.txt
+./run_review.sh Power_Series power_series_original.xml
 ```
 
 **Open latest report:**
 ```bash
-open Testing/Power_Series/output/test_module_review_report_generic.html
+open modules/test/Power_Series/output/test_module_review_report_generic.html
 ```
 
 ---

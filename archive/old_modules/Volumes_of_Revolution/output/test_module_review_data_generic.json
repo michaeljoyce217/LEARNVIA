@@ -1,0 +1,3248 @@
+{
+  "timestamp": "2025-11-11T22:30:57.071889",
+  "total_agents": 30,
+  "consensus_issues_count": 23,
+  "non_consensus_issues_count": 3,
+  "consensus_issues": [
+    {
+      "priority": 3,
+      "severity": 3,
+      "confidence": 1.0,
+      "consensus_percentage": 80.0,
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "category": "UNFINISHED",
+      "location": "Lines 1",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "agent_count": 24
+    },
+    {
+      "priority": 2,
+      "severity": 3,
+      "confidence": 1.0,
+      "consensus_percentage": 50.0,
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "category": "UNFINISHED",
+      "location": "Lines 97",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "agent_count": 15
+    },
+    {
+      "priority": 2,
+      "severity": 3,
+      "confidence": 1.0,
+      "consensus_percentage": 53.333333333333336,
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "category": "UNFINISHED",
+      "location": "Lines 6",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "agent_count": 16
+    },
+    {
+      "priority": 2,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 110.00000000000001,
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 11",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "agent_count": 33
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 26.666666666666668,
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 68",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 8
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 23.333333333333332,
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 83",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 7
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 33.33333333333333,
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 99",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 10
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 23.333333333333332,
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "category": "Conceptual Clarity",
+      "location": "Lines 103",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 7
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 20.0,
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "category": "Conceptual Clarity",
+      "location": "Lines 8",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 6
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7,
+      "consensus_percentage": 16.666666666666664,
+      "issue_description": "Line 85: Sentence starts with vague pronoun after period - '. This '",
+      "category": "Conceptual Clarity",
+      "location": "Lines 85",
+      "line_numbers": [
+        85
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 5
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 33.33333333333333,
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 129",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 10
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 23.333333333333332,
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "category": "Conceptual Clarity",
+      "location": "Lines 89",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 7
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 26.666666666666668,
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 102",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 8
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 23.333333333333332,
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "category": "Conceptual Clarity",
+      "location": "Lines 70",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 7
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.7,
+      "consensus_percentage": 16.666666666666664,
+      "issue_description": "Line 118: Sentence starts with vague pronoun - 'This '",
+      "category": "Conceptual Clarity",
+      "location": "Lines 118",
+      "line_numbers": [
+        118
+      ],
+      "quoted_text": "This makes the area <m> A(x) = \\pi\\sqrt{x}^2 ",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 5
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 60.0,
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 3",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "agent_count": 18
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 16.666666666666664,
+      "issue_description": "Passive voice construction: 'are created'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 5",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": " machine parts that are created when rotating a 2d ",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are created', specify who/what performs the action",
+      "agent_count": 5
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 16.666666666666664,
+      "issue_description": "Passive voice construction: 'is found'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 96",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "e face of the slice is found, the volume is calc",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
+      "agent_count": 5
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 33.33333333333333,
+      "issue_description": "Passive voice construction: 'is given'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 98",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "agent_count": 10
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 36.666666666666664,
+      "issue_description": "Passive voice construction: 'is called'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 99",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "ice is a circle, it is called a disk. The area fu",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "agent_count": 11
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 13.333333333333334,
+      "issue_description": "Passive voice construction: 'is defined'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 8",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "hink of a 3D object is defined as having a base bo",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is defined', specify who/what performs the action",
+      "agent_count": 4
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 13.333333333333334,
+      "issue_description": "Passive voice construction: 'it is called'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 99",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "th a circular hole, it is called a washer. The area ",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'it is called', specify who/what performs the action",
+      "agent_count": 4
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 13.333333333333334,
+      "issue_description": "Passive voice construction: 'is generated'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 115",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "A solid is generated when the area betwe",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is generated', specify who/what performs the action",
+      "agent_count": 4
+    }
+  ],
+  "non_consensus_issues": [
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.6999999999999998,
+      "consensus_percentage": 10.0,
+      "issue_description": "Line 103: Vague 'it' reference - 'It is'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 103",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "e is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "agent_count": 3
+    },
+    {
+      "priority": 1,
+      "severity": 1,
+      "confidence": 0.6,
+      "consensus_percentage": 3.3333333333333335,
+      "issue_description": "Line 103: Lazy start with 'There is'",
+      "category": "Conceptual Clarity",
+      "location": "Lines 103",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "There is no difference. It is always <m",
+      "student_impact": "Less direct phrasing adds cognitive load",
+      "suggested_fix": "Start with the actual subject of the sentence",
+      "agent_count": 1
+    },
+    {
+      "priority": 1,
+      "severity": 2,
+      "confidence": 0.75,
+      "consensus_percentage": 6.666666666666667,
+      "issue_description": "Passive voice construction: 'are used'",
+      "category": "Mechanical Compliance",
+      "location": "Lines 3",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": " definite integrals are used to calculate volume",
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are used', specify who/what performs the action",
+      "agent_count": 2
+    }
+  ],
+  "all_findings": [
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 85: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        85
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "th a circular hole, it is called a washer. The area function for ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 85: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        85
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 118: Sentence starts with vague pronoun - 'This '",
+      "line_numbers": [
+        118
+      ],
+      "quoted_text": "This makes the area <m> A(x) = \\pi\\sqrt{x}^2 ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 118: Sentence starts with vague pronoun - 'This '",
+      "line_numbers": [
+        118
+      ],
+      "quoted_text": "This makes the area <m> A(x) = \\pi\\sqrt{x}^2 ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 85: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        85
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Vague 'it' reference - 'It is'",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "e is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 85: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        85
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 118: Sentence starts with vague pronoun - 'This '",
+      "line_numbers": [
+        118
+      ],
+      "quoted_text": "This makes the area <m> A(x) = \\pi\\sqrt{x}^2 ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 85: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        85
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Vague 'it' reference - 'It is'",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "e is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 102: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        102
+      ],
+      "quoted_text": "terms of y. Whether it is disks or washers depends on what the cr",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 118: Sentence starts with vague pronoun - 'This '",
+      "line_numbers": [
+        118
+      ],
+      "quoted_text": "This makes the area <m> A(x) = \\pi\\sqrt{x}^2 ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Sentence starts with vague pronoun after period - '. It '",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "ere is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 83: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        83
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 118: Sentence starts with vague pronoun - 'This '",
+      "line_numbers": [
+        118
+      ],
+      "quoted_text": "This makes the area <m> A(x) = \\pi\\sqrt{x}^2 ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 129: Use of 'they' pronoun - 'They'",
+      "line_numbers": [
+        129
+      ],
+      "quoted_text": "ral slicing method. They just are specific (and the most common)",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 8: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "ction <m> y = x </m>. This makes the area function <m> A(x) = \\frac",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 68: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        68
+      ],
+      "quoted_text": "twice the width, so it is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 70: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        70
+      ],
+      "quoted_text": ". This makes the area of the cross-sectional fa",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 89: Sentence starts with vague pronoun after period - '. This '",
+      "line_numbers": [
+        89
+      ],
+      "quoted_text": "of the area function. This is",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 99: Vague 'it' reference - 'it is'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area function for a ",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "Line 103: Vague 'it' reference - 'It is'",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "e is no difference. It is always <m> \\int_a^b A(x) dx </m>",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'are created'",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": " machine parts that are created when rotating a 2d ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are created', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is found'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "e face of the slice is found, the volume is calc",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "ice is a circle, it is called a disk. The area fu",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        104
+      ],
+      "quoted_text": "the axis the object is rotated around.",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "nd <m> y = x^2 </m> is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Line 103: Lazy start with 'There is'",
+      "line_numbers": [
+        103
+      ],
+      "quoted_text": "There is no difference. It is always <m",
+      "category": "Conceptual Clarity",
+      "severity": 1,
+      "student_impact": "Less direct phrasing adds cognitive load",
+      "suggested_fix": "Start with the actual subject of the sentence",
+      "confidence": 0.6
+    },
+    {
+      "issue_description": "Passive voice construction: 'is defined'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "hink of a 3D object is defined as having a base bo",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is defined', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        15
+      ],
+      "quoted_text": ". Since the solid is rotated around the x-axis, ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is found'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "e face of the slice is found, the volume is calc",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'it is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "th a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'it is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        104
+      ],
+      "quoted_text": "the axis the object is rotated around.",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is generated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "A solid is generated when the area betwe",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is generated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "When a shape is rotated around the x or y-a",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "ice is a circle, it is called a disk. The area fu",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is generated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "A solid is generated when the area betwe",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is generated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "e is 5 and the base is given by our function <m>",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "When a shape is rotated around the x or y-a",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "e is 5 and the base is given by our function <m>",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "nd <m> y = x^2 </m> is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "When a shape is rotated around the x or y-a",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'it is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area fu",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'it is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'are created'",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": " machine parts that are created when rotating a 2d ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are created', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        15
+      ],
+      "quoted_text": ". Since the solid is rotated around the x-axis, ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        104
+      ],
+      "quoted_text": "the axis the object is rotated around.",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'are used'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": " definite integrals are used to calculate volume",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are used', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is found'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "e face of the slice is found, the volume is calc",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is generated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "A solid is generated when the area betwe",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is generated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is defined'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "hink of a 3D object is defined as having a base bo",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is defined', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "When a shape is rotated around the x or y-a",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "ice is a circle, it is called a disk. The area fu",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        104
+      ],
+      "quoted_text": "the axis the object is rotated around.",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'are created'",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": " machine parts that are created when rotating a 2d ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are created', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        15
+      ],
+      "quoted_text": ". Since the solid is rotated around the x-axis, ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'are created'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": " machine parts that are created when rotating a 2d ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are created', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is found'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "e face of the slice is found, the volume is calc",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        104
+      ],
+      "quoted_text": "the axis the object is rotated around.",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is generated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "A solid is generated when the area betwe",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is generated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'it is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "th a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'it is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        104
+      ],
+      "quoted_text": "the axis the object is rotated around.",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'are used'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": " definite integrals are used to calculate volume",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are used', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'are created'",
+      "line_numbers": [
+        5
+      ],
+      "quoted_text": " machine parts that are created when rotating a 2d ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'are created', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "e is 5 and the base is given by our function <m>",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "When a shape is rotated around the x or y-a",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "ice is a circle, it is called a disk. The area fu",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "e is 5 and the base is given by our function <m>",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "s found, the volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        15
+      ],
+      "quoted_text": ". Since the solid is rotated around the x-axis, ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is found'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "e face of the slice is found, the volume is calc",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is found', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
+      "line_numbers": [
+        6
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        3
+      ],
+      "quoted_text": "lid object's volume is calculated using formulas from",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is defined'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "hink of a 3D object is defined as having a base bo",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is defined', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        11
+      ],
+      "quoted_text": "is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "When a shape is rotated around the x or y-a",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'it is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": " slice is a circle, it is called a disk. The area fu",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'it is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "nd <m> y = x^2 </m> is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
+      "line_numbers": [
+        1
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "UNFINISHED - Line 97: Contains 'Todo' placeholder",
+      "line_numbers": [
+        97
+      ],
+      "quoted_text": "Todo",
+      "category": "UNFINISHED",
+      "severity": 3,
+      "student_impact": "Placeholder indicates unfinished content that students will see",
+      "suggested_fix": "Replace placeholder with actual content",
+      "confidence": 1.0
+    },
+    {
+      "issue_description": "Passive voice construction: 'is defined'",
+      "line_numbers": [
+        8
+      ],
+      "quoted_text": "hink of a 3D object is defined as having a base bo",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is defined', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        13
+      ],
+      "quoted_text": "The volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        15
+      ],
+      "quoted_text": ". Since the solid is rotated around the x-axis, ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is calculated'",
+      "line_numbers": [
+        96
+      ],
+      "quoted_text": "s found, the volume is calculated by integrating the ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is calculated', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is given'",
+      "line_numbers": [
+        98
+      ],
+      "quoted_text": "e around the x-axis is given by <m> V = \\int_a^b",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is given', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is called'",
+      "line_numbers": [
+        99
+      ],
+      "quoted_text": "a circular hole, it is called a washer. The area ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is called', specify who/what performs the action",
+      "confidence": 0.75
+    },
+    {
+      "issue_description": "Passive voice construction: 'is rotated'",
+      "line_numbers": [
+        115
+      ],
+      "quoted_text": "nd <m> y = x^2 </m> is rotated around the x-axis. ",
+      "category": "Mechanical Compliance",
+      "severity": 2,
+      "student_impact": "Active voice is clearer and more direct for struggling readers",
+      "suggested_fix": "Rewrite in active voice. Instead of 'is rotated', specify who/what performs the action",
+      "confidence": 0.75
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+<Module uuid="dedc1288-4548-4ac4-974c-fe4d659e9aff">
+      <title>Todo</title>
+      <description/>
+      <LearningOutcomes ids="Todo"/>
+      <Activities>
+        <Activity type="lesson" when="pre" uuid="c161cf28-76ee-4730-8bd6-fd09483b74f7">
+  <title>General slicing method</title>
+  <LearningOutcomes ids="Todo"/>
+  <Resources>
+    <TextResource duration="1" uuid="3a70b4bc-bd04-4a17-be34-da0b89ce26ab">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Text><p>
+Not every solid object's volume is calculated using formulas from geometry. For objects that are more complicated than geometric solids like spheres and cylinders, definite integrals are used to calculate volume. The volume can be found by slicing the object, finding the area of the face of the slice, and integrating the area function
+<m> V = \int_a^b A(x) dx </m>
+. Volumes of solids of revolution can be used in engineering to find the volumes of objects like pipes, funnels, and specialized machine parts that are created when rotating a 2d object around an axis to create a 3d object.
+</p></Text>
+</TextResource>
+<ArcResource duration="2" uuid="16f7b347-182d-4267-8918-49ea29bd3a22">
+  <title>Todo</title>
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Track kind="narration" src="tracks/16f7b347-182d-4267-8918-49ea29bd3a22_narration.vtt"/>
+  <Track kind="description" src="tracks/16f7b347-182d-4267-8918-49ea29bd3a22_description.vtt"/>
+  <Code/>
+</ArcResource>
+<TextResource duration="3" uuid="30a7ce0e-796c-45d1-956a-dff90013ca26">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Text><p>To find the volume of a 3D object, slice the object and find the area function for the face of a cross-sectional slice. If you are slicing vertically, the area function will be <m> A(x) </m> and if you slice horizontally, the area function will be <m> A(y) </m>. </p>
+
+<p>For example, think of a 3D object is defined as having a base bounded by the graph of <m> y = x </m> and the x-axis from <m> x = 2 </m> to <m> x = 5 </m> with slices that have faces that are triangles with height 5. The area of the face of the slice can be found using the formula for the area of a triangle <m> \frac{1}{2}bh </m>. The height of the triangle is 5 and the base is given by our function <m> y = x </m>. This makes the area function <m> A(x) = \frac{1}{2}x\cdot 5 </m> which simplifies to <m> A(x) = \frac{5}{2}x </m>. Then the formula for the volume is <m>V = \int_a^b A(x)dx</m> which is <m>V = \int_2^5 \frac{5}{2}x dx</m>. </p></Text>
+  <Questions locked-steps="false">
+    <MultipleChoice difficulty="easy" uuid="65f907c1-bed8-4745-acbf-84ecf7736522">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <question>A region under the graph of
+<m>f(x)</m>
+is rotated around the x-axis. What is the formula to calculate the volume of the solid using slicing?</question>
+  <Choices>
+    <choice correct="true">
+      <label><m> V = \int_a^b A(x) dx </m></label>
+      <explanation>The volume is calculated by integrating the area function
+<m>A(x) </m>
+. Since the solid is rotated around the x-axis, the integral will be in terms of x.</explanation>
+    </choice>
+    <choice correct="false">
+  <label><m> V = \int_a^b A(y) dy </m></label>
+  <explanation>When rotating a region around the x-axis and using slicing, the integral will be in terms of x, not y.</explanation>
+</choice>
+    <choice correct="false">
+  <label><m> V = \int_a^b f(x) dx </m></label>
+  <explanation>To find the volume of the solid using slicing, find the area function
+<m>A(x)</m>
+.
+<m>A(x)</m>
+is the area of the face of a cross-sectional slice. The area function needs to be integrated to find the volume.</explanation>
+</choice>
+
+  </Choices>
+</MultipleChoice><MultipleChoice difficulty="easy" uuid="2f0652a5-7f52-4478-bee3-ba6d3506ea24">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <question>A solid object has a base bounded by the graph of
+<m> y = \sqrt{x} </m>
+and the x-axis between
+<m> x = 0</m>
+and
+<m> x = 4 </m>
+. What is the area function for the face of a cross-sectional slice if the slices are squares?</question>
+  <Choices>
+    <choice correct="false">
+      <label><m> A(x) = 4\sqrt{x} </m></label>
+      <explanation>The area of a square with side length
+<m> s </m>
+is equal to
+<m> s^2 </m>
+. The cross-sectional face is a square with side length
+<m> \sqrt{x} </m>
+and so the area is
+<m> A(x) = \sqrt{x}^2 </m>
+which simplifies to
+<m> A(x) = x </m>
+.</explanation>
+    </choice>
+    <choice correct="true">
+  <label><m> A(x) = x </m></label>
+  <explanation>The cross-sectional face is a square with side length
+<m> \sqrt{x} </m>
+and so the area is
+<m> A(x) = \sqrt{x}^2 </m>
+which simplifies to
+<m> A(x) = x </m>.</explanation>
+</choice>
+    <choice correct="false">
+  <label><m> A(x) = 4 </m></label>
+  <explanation>The cross-sectional face is a square with side length
+<m> \sqrt{x} </m>
+where the
+<m> x </m>
+varies from 0 to 4. The area is
+<m> A(x) = \sqrt{x}^2 </m>
+which simplifies to
+<m> A(x) = x </m>.</explanation>
+</choice>
+
+  </Choices>
+</MultipleChoice><ShortAnswer difficulty="medium" uuid="8a39157e-a040-47b9-8ca8-6687a37fddea">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <question>Find the volume of the solid object that has a base bounded by
+<m> x = y^2 </m>
+and the y-axis between
+<m> y = 0 </m>
+and
+<m> y = 2</m>
+, given that the slices are rectangles with height twice the width of the rectangle.</question>
+  <CorrectExplanation><p>The width of the rectangle is
+<m> y^2 </m>
+and the height is twice the width, so it is
+<m> 2y^2 </m>
+. This makes the area of the cross-sectional face
+<m> A(y) = y^2 \cdot 2y^2 </m>
+which simplifies to
+<m> A(y) = 2y^4 </m>
+. </p>
+
+<p>The antiderivative is
+<m> \dfrac{2}{5}y^5 </m>
+and so the volume is
+<m> \dfrac{2}{5}(2)^5 - \dfrac{2}{5}(0)^5 = \dfrac{64}{5} </m>
+or
+<m> 12.8 </m>. </p></CorrectExplanation>
+  <Hints>
+    <hint>The width of the rectangle is
+<m> y^2 </m>
+and the height is twice the width, so it is
+<m> 2y^2 </m>
+. This makes the area of the cross-sectional face
+<m> A(y) = y^2 \cdot 2y^2 </m>
+which simplifies to
+<m> A(y) = 2y^4 </m>.</hint>
+    <hint>The volume is the definite integral of the area function. This is
+<m> V = \int_0^2 2y^4 dy </m>
+.</hint>
+  </Hints>
+  <Prefix/>
+  <Evaluation><Decimal expected="12.8" tolerance="0" toleranceType="absolute"/></Evaluation>
+  <Suffix/>
+</ShortAnswer>
+  </Questions>
+</TextResource>
+<TextResource duration="1" uuid="46022f18-7103-4516-9a00-1941494ab6c9">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Text>
+    <p>Lesson Summary</p>
+    <list type="bullet">
+      <item>To find a volume of an object by slicing, find the area function for the face of a slice. Then take a definite integral of the area function, <m> V = \int_a^b A(x) dx </m> or <m> V = \int_a^b A(y) dy</m></item>
+      <item> When rotating around the x-axis, or slicing vertically, the area function is in terms of x. When rotating around the y-axis, or slicing horizontally, the area function is in terms of y. </item>
+    </list>
+  </Text>
+</TextResource>
+  </Resources>
+</Activity><Activity type="lesson" when="pre" uuid="c6e89f43-5af0-4de9-904d-220d8c4e5d5f">
+  <title>Disk and washer methods (around x or y axis)</title>
+  <LearningOutcomes ids="Todo"/>
+  <Resources>
+    <TextResource duration="1" uuid="cd5e316a-d090-4f2e-95d9-95eca1014758">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Text><p>When a shape is rotated around the x or y-axis, it creates a 3D object. The volume of the object can be found by slicing the object. The face of the slice will either be a disk (circle) or a washer (a circle with a circular hole in the middle). After the area of the face of the slice is found, the volume is calculated by integrating the area function, <m> V = \int_a^b A(x) dx </m>. Volumes of solids of revolution can be used in engineering to find the volumes of objects like pipes, funnels, and specialized machine parts that are created when rotating a 2d object around an axis to create a 3d object.</p></Text>
+</TextResource>
+<ArcResource duration="2" uuid="e82b900f-a874-40b7-b740-b4f7586760d5">
+  <title>Todo</title>
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Track kind="narration" src="tracks/e82b900f-a874-40b7-b740-b4f7586760d5_narration.vtt"/>
+  <Track kind="description" src="tracks/e82b900f-a874-40b7-b740-b4f7586760d5_description.vtt"/>
+  <Code/>
+</ArcResource>
+<TextResource duration="3" uuid="91e86292-8e4f-4864-98d7-4ac2523327c7">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Text><p> The Disk and Washer methods are the same thing as the General Slicing method. Disk and Washer refer to specific shapes of the cross-sectional faces of slices. In general, the volume of an object created by rotating a shape around the x-axis is given by <m> V = \int_a^b A(x) dx </m> where <m> A(x) </m> is the area of the face of the cross-sectional slice. If rotating around the y-axis, it becomes <m> V = \int_a^b A(y) dy </m> . </p>
+
+<p> If the face of a cross-sectional slice is a circle, it is called a disk. The area function for a disk is <m> A = \pi r^2 </m> where <m> r </m> is the radius of the circle. If the face of a cross-sectional slice is a circle with a circular hole, it is called a washer. The area function for a washer is <m> A = \pi R^2 - \pi r^2 </m> where <m> R </m> is the radius of the bigger circle and <m> r </m> is the radius of the ciruclar hole. </p> </Text>
+  <Questions locked-steps="true">
+    <MultipleChoice difficulty="easy" uuid="6729f413-9287-4c91-a582-a4c7b6320473">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <question>How do the volume integrals change when rotating around the y-axis instead of the x-axis?
+</question>
+  <Choices>
+    <choice correct="false">
+      <label>Rotating around the x-axis requires disks and rotating around the y-axis requires washers.
+</label>
+      <explanation>Rotating around the x-axis results in an integral in terms of x and rotating around the y-axis results in an integral in terms of y. Whether it is disks or washers depends on what the cross-sectional face looks like.</explanation>
+    </choice>
+    <choice correct="false">
+  <label>There is no difference. It is always <m> \int_a^b A(x) dx </m>
+</label>
+  <explanation>The variable used in the integral when slicing with either the disk or washer method changes depending on the axis the object is rotated around.
+Rotating around the x-axis results in an integral in terms of x and rotating around the y-axis results in an integral in terms of y.
+</explanation>
+</choice>
+    <choice correct="true">
+  <label>When rotating around the y-axis, the integral is with respect to y. When rotating around the x-axis, the area is with respect to x.</label>
+  <explanation>When using disks or washers (slicing) and rotating around the x-axis, the integral will be in terms of x. Rotating around the y-axis makes the integral with respect to y.</explanation>
+</choice>
+
+  </Choices>
+</MultipleChoice><MultipleChoice difficulty="easy" uuid="451f79cc-e654-4707-8375-ed42ca6b3f48">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <question>The cross-sectional slice of a solid is a washer with outer radius <m>R</m> and inner radius <m>r</m>. What is the area of the cross-sectional slice?
+</question>
+  <Choices>
+    <choice correct="false">
+      <label><m> A = \pi r^2 - \pi R^2 </m></label>
+      <explanation>The area of a washer is the area of the bigger circle minus the area of the smaller circle. The bigger circle has radius <m>R</m> and the smaller circle has radius <m>r</m>.</explanation>
+    </choice>
+    <choice correct="true">
+  <label><m> A = \pi R^2 - \pi r^2 </m>
+</label>
+  <explanation>The area of a washer is the area of the bigger circle minus the area of the smaller circle. The bigger circle has radius <m>R</m> and the smaller circle has radius <m>r</m>.</explanation>
+</choice>
+    <choice correct="false">
+  <label><m> A = \pi (R - r)^2 </m>
+</label>
+  <explanation>The area of a washer is the area of the bigger circle minus the area of the smaller circle. The area of the bigger circle is <m> \pi R^2 </m> and the area of the smaller circle is <m> \pi r^2 </m>.
+</explanation>
+</choice>
+
+  </Choices>
+</MultipleChoice><ShortAnswer difficulty="medium" uuid="7f8fddee-8c7d-4b10-905b-baac6b345004">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <question><p> A solid is generated when the area between <m> y = \sqrt{x} </m> and <m> y = x^2 </m> is rotated around the x-axis. What is an expression for the area of the cross-sectional face? </p>
+
+<p> <m> A(x) = \underline{\hspace{1.5in}} </m> . </p></question>
+  <CorrectExplanation><p>The face of the slice looks like a washer which has area <m> \pi R^2 - \pi r^2 </m> . The outer radius is <m> R = \sqrt{x} </m> and the inner radius is <m> r = x^2 </m>. </p>
+
+<p> This makes the area <m> A(x) = \pi\sqrt{x}^2 - \pi(x^2)^2</m>, which simplifies to <m> A(x) = \pi x - \pi x^4 </m> . </p>
+</CorrectExplanation>
+  <Hints>
+    <hint>Determine what the cross-sectional slice looks like. The face of the slice looks like a washer which has area <m> \pi R^2 - \pi r^2 </m>
+</hint>
+    <hint>The outer radius is <m> R = \sqrt{x} </m> and the inner radius is <m> r = x^2 </m>.
+</hint>
+  </Hints>
+  <Prefix/>
+  <Evaluation>
+    <Expression expected="&lt;m&gt; \pi x - \pi x^4 &lt;/m&gt;" tolerance="0" toleranceType="absolute">
+  <Tests><Test><Variable>
+  <Equals>2</Equals>
+  <Name>x</Name>
+</Variable></Test><Test><Variable>
+  <Equals>3</Equals>
+  <Name>x</Name>
+</Variable></Test><Test><Variable>
+  <Equals>-2</Equals>
+  <Name>x</Name>
+</Variable></Test></Tests>
+</Expression>
+  </Evaluation>
+  <Suffix/>
+</ShortAnswer>
+  </Questions>
+</TextResource>
+<TextResource duration="1" uuid="1decca8d-f8bc-430e-907a-d395511a4004">
+  <KSAs primary="Todo" secondary="Todo"/>
+  <Text>
+    <p>Lesson Summary</p>
+    <list type="bullet">
+      <item> When rotating around the x-axis, the area function is in terms of x. When rotating around the y-axis, the area function is in terms of y. </item>
+
+      <item> The disk and washer methods are the same as the general slicing method. They just are specific (and the most common) types of slices that can appear. </item>
+
+      <item> The area function for a disk is <m> A = \pi r^2 </m> and the area function for a washer is <m> A = \pi R^2 - \pi r^2 </m>. </item>
+
+    </list>
+  </Text>
+</TextResource>
+  </Resources>
+</Activity>
+      </Activities>
+    </Module>
