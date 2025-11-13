@@ -1035,6 +1035,25 @@ class RuleBasedDetector:
 
             # Look for abstract mathematical definitions without prior example
             if re.search(r'∑|∏|∫|lim', content) and i < 20:  # Early in module
+                # ENHANCED: Skip if this is explanatory/framing text (not a definition)
+                # Patterns that indicate explanation rather than abstract definition:
+                is_explanatory = any([
+                    'is the primary tool' in content.lower(),
+                    'to find' in content.lower(),
+                    'by solving' in content.lower(),
+                    'helps us' in content.lower(),
+                    'allows us to' in content.lower(),
+                    'we use' in content.lower(),
+                    'can be used' in content.lower(),
+                ])
+
+                # Skip if it's very early framing text (lines 1-6) that introduces concepts
+                is_early_framing = (i < 6)
+
+                # Only flag if it's NOT explanatory and NOT early framing
+                if is_explanatory or is_early_framing:
+                    continue
+
                 # Check if there's a concrete example before this
                 has_example = False
                 for j in range(max(0, i - 5), i):
@@ -1042,6 +1061,15 @@ class RuleBasedDetector:
                     if 'example' in prev_content.lower() or 'consider' in prev_content.lower():
                         has_example = True
                         break
+
+                # ENHANCED: Also check if examples come soon AFTER (within next 5 lines)
+                # Framing text often precedes examples
+                if not has_example:
+                    for j in range(i + 1, min(len(self.lines), i + 6)):
+                        next_content = self.extract_line_content(j)
+                        if 'example' in next_content.lower() or 'consider' in next_content.lower():
+                            has_example = True
+                            break
 
                 if not has_example and self.should_flag(2):
                     findings.append({
