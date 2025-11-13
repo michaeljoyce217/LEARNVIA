@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-12T13:44:34.728605",
+  "timestamp": "2025-11-12T18:33:51.145757",
   "total_agents": 30,
-  "consensus_issues_count": 16,
+  "consensus_issues_count": 15,
   "non_consensus_issues_count": 3,
   "consensus_issues": [
     {
@@ -124,7 +124,7 @@
       "priority": 1,
       "severity": 3,
       "confidence": 0.7000000000000001,
-      "consensus_percentage": 36.666666666666664,
+      "consensus_percentage": 30.0,
       "issue_description": "Line 29: Jumps to applying test without explanation",
       "category": "Pedagogical Flow",
       "location": "Lines 29",
@@ -134,13 +134,13 @@
       "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
       "student_impact": "Students may not understand why this test is needed",
       "suggested_fix": "Add explanation of what the test does and why we need it",
-      "agent_count": 11,
+      "agent_count": 9,
       "agent_breakdown": {
-        "total": 11,
+        "total": 9,
         "authoring": {
-          "total": 11,
-          "rubric": 6,
-          "generalist": 5
+          "total": 9,
+          "rubric": 5,
+          "generalist": 4
         },
         "style": {
           "total": 0,
@@ -246,37 +246,8 @@
     {
       "priority": 1,
       "severity": 2,
-      "confidence": 0.65,
-      "consensus_percentage": 20.0,
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "category": "Pedagogical Flow",
-      "location": "Lines 5",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "agent_count": 6,
-      "agent_breakdown": {
-        "total": 6,
-        "authoring": {
-          "total": 6,
-          "rubric": 3,
-          "generalist": 3
-        },
-        "style": {
-          "total": 0,
-          "rubric": 0,
-          "generalist": 0
-        }
-      }
-    },
-    {
-      "priority": 1,
-      "severity": 2,
-      "confidence": 0.7,
-      "consensus_percentage": 16.666666666666664,
+      "confidence": 0.7000000000000001,
+      "consensus_percentage": 23.333333333333332,
       "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
       "category": "Conceptual Clarity",
       "location": "Lines 49",
@@ -286,12 +257,12 @@
       "quoted_text": "It is essential to test each endpoint by su",
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "agent_count": 5,
+      "agent_count": 7,
       "agent_breakdown": {
-        "total": 5,
+        "total": 7,
         "authoring": {
-          "total": 5,
-          "rubric": 2,
+          "total": 7,
+          "rubric": 4,
           "generalist": 3
         },
         "style": {
@@ -678,6 +649,19 @@
       "agent": "Authoring-Specialist-StructuralIntegrity-2"
     },
     {
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
+      "category": "Pedagogical Flow",
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-StructuralIntegrity-2"
+    },
+    {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
       "line_numbers": [
         6
@@ -717,16 +701,16 @@
       "agent": "Authoring-Specialist-StudentEngagement-3"
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
+      "issue_description": "Line 29: Jumps to applying test without explanation",
       "line_numbers": [
-        5
+        29
       ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
       "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65,
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7,
       "agent": "Authoring-Specialist-StudentEngagement-3"
     },
     {
@@ -789,15 +773,15 @@
       "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
     {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
       "line_numbers": [
-        29
+        49
       ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "quoted_text": "It is essential to test each endpoint by su",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7,
       "agent": "Authoring-Specialist-ConceptualClarity-4"
     },
@@ -828,19 +812,6 @@
       "agent": "Authoring-Specialist-AssessmentQuality-5"
     },
     {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
-      "line_numbers": [
-        29
-      ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7,
-      "agent": "Authoring-Specialist-AssessmentQuality-5"
-    },
-    {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
       "line_numbers": [
         1
@@ -877,19 +848,6 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7,
-      "agent": "Authoring-Specialist-PedagogicalFlow-6"
-    },
-    {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65,
       "agent": "Authoring-Specialist-PedagogicalFlow-6"
     },
     {
@@ -1024,19 +982,6 @@
       "agent": "Authoring-Specialist-StudentEngagement-8"
     },
     {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
-      "line_numbers": [
-        29
-      ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
-      "confidence": 0.7,
-      "agent": "Authoring-Specialist-StudentEngagement-8"
-    },
-    {
       "issue_description": "UNFINISHED - Line 6: Contains 'Todo' placeholder",
       "line_numbers": [
         6
@@ -1109,19 +1054,6 @@
       "agent": "Authoring-Specialist-ConceptualClarity-9"
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65,
-      "agent": "Authoring-Specialist-ConceptualClarity-9"
-    },
-    {
       "issue_description": "Line 29: Jumps to applying test without explanation",
       "line_numbers": [
         29
@@ -1140,6 +1072,19 @@
         47
       ],
       "quoted_text": "ries converges, and it may include one, both, or neither of the en",
+      "category": "Conceptual Clarity",
+      "severity": 2,
+      "student_impact": "Vague pronouns increase cognitive load for struggling readers",
+      "suggested_fix": "Replace with explicit noun reference",
+      "confidence": 0.7,
+      "agent": "Authoring-Specialist-ConceptualClarity-9"
+    },
+    {
+      "issue_description": "Line 49: Sentence starts with vague pronoun - 'It '",
+      "line_numbers": [
+        49
+      ],
+      "quoted_text": "It is essential to test each endpoint by su",
       "category": "Conceptual Clarity",
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
@@ -1184,19 +1129,6 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7,
-      "agent": "Authoring-Generalist-10"
-    },
-    {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65,
       "agent": "Authoring-Generalist-10"
     },
     {
@@ -1278,6 +1210,19 @@
       "agent": "Authoring-Generalist-11"
     },
     {
+      "issue_description": "Line 29: Jumps to applying test without explanation",
+      "line_numbers": [
+        29
+      ],
+      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
+      "category": "Pedagogical Flow",
+      "severity": 3,
+      "student_impact": "Students may not understand why this test is needed",
+      "suggested_fix": "Add explanation of what the test does and why we need it",
+      "confidence": 0.7,
+      "agent": "Authoring-Generalist-11"
+    },
+    {
       "issue_description": "UNFINISHED - Line 1: Contains 'Todo' placeholder",
       "line_numbers": [
         1
@@ -1326,19 +1271,6 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7,
-      "agent": "Authoring-Generalist-12"
-    },
-    {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
-      "line_numbers": [
-        29
-      ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
       "confidence": 0.7,
       "agent": "Authoring-Generalist-12"
     },
@@ -1395,19 +1327,6 @@
       "agent": "Authoring-Generalist-13"
     },
     {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65,
-      "agent": "Authoring-Generalist-13"
-    },
-    {
       "issue_description": "Line 29: Jumps to applying test without explanation",
       "line_numbers": [
         29
@@ -1456,19 +1375,6 @@
       "severity": 2,
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
-      "confidence": 0.7,
-      "agent": "Authoring-Generalist-14"
-    },
-    {
-      "issue_description": "Line 29: Jumps to applying test without explanation",
-      "line_numbers": [
-        29
-      ],
-      "quoted_text": "Apply the Ratio Test by setting up the limit <m>L = \\lim_{n \\to \\infty} |\\frac{a",
-      "category": "Pedagogical Flow",
-      "severity": 3,
-      "student_impact": "Students may not understand why this test is needed",
-      "suggested_fix": "Add explanation of what the test does and why we need it",
       "confidence": 0.7,
       "agent": "Authoring-Generalist-14"
     },
@@ -1522,19 +1428,6 @@
       "student_impact": "Vague pronouns increase cognitive load for struggling readers",
       "suggested_fix": "Replace with explicit noun reference",
       "confidence": 0.7,
-      "agent": "Authoring-Generalist-15"
-    },
-    {
-      "issue_description": "Line 5: Abstract definition appears before concrete example",
-      "line_numbers": [
-        5
-      ],
-      "quoted_text": "The Ratio Test is the primary tool to find the radius of convergence, by solving",
-      "category": "Pedagogical Flow",
-      "severity": 2,
-      "student_impact": "Abstract-first approach increases cognitive load",
-      "suggested_fix": "Introduce a concrete example before the abstract definition",
-      "confidence": 0.65,
       "agent": "Authoring-Generalist-15"
     },
     {
