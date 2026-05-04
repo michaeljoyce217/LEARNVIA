@@ -483,7 +483,354 @@ Why this tip is needed: The style guide has a nuanced, important rule. The autho
 
 ---
 
-## Quick Reference: All 40 Tips at a Glance
+## SECTION 4: Tips from the Questions Guide (25 Tips)
+
+These tips target rules from the Learnvia Questions Guide (issued 2/26/26). They cover prompt format, multiple-choice mechanics, distractor design, feedback structure, hint scaffolding, and platform-specific question type rules. Many of these directly contradict habits authors carry over from textbook authoring or classroom test writing.
+
+---
+
+### Tip N1: MC Prompts Must Be Statements, Not Questions
+
+Multiple-choice prompts must take the form of a sentence with a blank, not the form of a question. The Questions Guide is explicit: prompts should NOT be grammatical questions.
+
+Wrong: What is the slope of the tangent line to f at x = 2?
+
+Right: The slope of the tangent line to f at x = 2 is _____.
+
+Why this tip is needed: Every standardized test, every quiz authors took in school, ended each item with a question mark. The instinct to write "What is...?" or "Which of the following...?" is so ingrained that authors will not even notice they have written a question. The fill-in-the-blank format is the Learnvia default for nearly every prompt — the only exception is long-answer questions.
+
+---
+
+### Tip N2: Answer Choices Must Read as a Grammatical Continuation of the Stem
+
+When you read the stem and any answer choice together as a single sentence, the result must be grammatically correct.
+
+Wrong:
+Stem: The limit of f at x = 3 is _____.
+Choice: does not exist
+(Reads as: "The limit of f at x = 3 is does not exist." Broken.)
+
+Right:
+Stem: The limit of f at x = 3 _____.
+Choices: is 3 / is 6 / does not exist
+(All three read as complete sentences.)
+
+Why this tip is needed: Authors write the stem and the choices in separate moments and never read them as joined sentences. A choice that breaks grammar is a tell the student can use to eliminate it, AND it confuses students who do not yet have native fluency in mathematical English. Reading every stem-plus-choice pair aloud catches this immediately.
+
+---
+
+### Tip N3: Parallel Length — Long Outliers Reveal the Correct Answer
+
+All answer choices in an MC question must be roughly the same length. A choice that is markedly longer or shorter than the others is a giveaway.
+
+Wrong:
+- "increases without bound, rising upward to the left"
+- "goes down"
+- "levels off"
+
+Right:
+- "increases"
+- "decreases"
+- "levels off"
+
+Why this tip is needed: Authors over-explain the correct answer because they want it to be unambiguous. The result is a long correct choice surrounded by short distractors. Test-taking strategy literature has trained students to pick the longest choice when in doubt — and they are usually right. Equal length removes the cue.
+
+---
+
+### Tip N4: Parallel Construction — All Gerunds OR All Noun Phrases, Never Mixed
+
+Every answer choice in an MC question must have the same grammatical structure. If one choice starts with a gerund ("subtracting…"), all choices must start with gerunds.
+
+Wrong:
+- "subtracting the area below the x-axis from the area above"
+- "the addition of the areas above and below the x-axis"
+- "average the values of the function on the interval"
+- "estimate the net area by summing rectangles"
+
+Right (all gerunds):
+- "subtracting the area below the x-axis from the area above"
+- "adding the areas above and below the x-axis"
+- "averaging the values of the function on the interval"
+- "estimating the net area by summing rectangles"
+
+Why this tip is needed: Authors focus on the meaning of each choice and overlook the grammar. Mixed construction (gerund + noun phrase + bare verb) is jarring to read, and the odd-one-out construction draws the student's eye for the wrong reasons.
+
+---
+
+### Tip N5: Don't Repeat Stem Language in an Answer Choice
+
+If a phrase appears in the question prompt, do not repeat that phrase in one of the answer choices. Word repetition is a clue that points students to the correct choice.
+
+Wrong:
+Stem: A limit describes a function's _____.
+Choices: output as the input gets closer to a value / range / domain
+(Repeating "input" or "function" in the correct choice clues the student.)
+
+Right: Use synonyms or generic phrasing in the correct choice; keep the language of the stem distinct.
+
+Why this tip is needed: Authors naturally echo the prompt language in the correct answer because it feels coherent. Standardized test design has long warned against this — repeated language is one of the most reliable cues a student can exploit without actually knowing the content.
+
+---
+
+### Tip N6: Banned Constructions: NOT, EXCEPT, Always, Sometimes, Never
+
+Minimize use of these in question prompts. They confuse target learners and invert the cognitive task.
+
+Banned by default:
+- "Which of the following is NOT…"
+- "All of the following EXCEPT…"
+- "Always," "Sometimes," "Never"
+- "All of the above," "None of the above," "Options a and b"
+
+Acceptable: "sufficient" and "necessary" in calculus questions.
+
+Why this tip is needed: Negative-form questions ("which is NOT") are well-known to inflate error rates that have nothing to do with content mastery. Authors who came up through traditional testing reach for these constructions reflexively because they make distractor-writing easier (just list four true things and one false one). Learnvia bans them because they assess reading comprehension instead of math.
+
+---
+
+### Tip N7: Avoid Opposites and Absolutes in Answer Choices
+
+Two answer choices that are direct opposites cue the student that the answer is one of the two. Absolutes ("always positive," "never negative") add unnecessary complexity that distracts from the actual concept.
+
+Wrong (opposites):
+- "the x-coordinate"
+- "the y-coordinate"
+(Acceptable only if you add a third plausible non-opposite, like "neither of the coordinates.")
+
+Wrong (absolutes):
+- "the derivative is always positive on the interval"
+- "the derivative is never positive on the interval"
+
+Right (no absolutes):
+- "the derivative is positive on the interval"
+- "the function is positive on the interval"
+
+Why this tip is needed: Opposites feel like clean, balanced distractors. They are not — they are a binary cue. Absolutes feel rigorous, but they shift the student's attention from the math to the quantifier. Both habits come from formal logic training and need to be unlearned for this audience.
+
+---
+
+### Tip N8: Distractors Are Common Misconceptions, Not Tricks
+
+Every incorrect answer must be plausible, must reflect a real student misconception or error, and must create a teaching moment. Distractors that are obviously wrong waste a slot. Distractors that are tricky or obscure punish students for noticing details that do not matter.
+
+Wrong: Random plausible-sounding answers, or answers designed to trap students who skim.
+
+Right: Each distractor maps to a specific, predictable error a student might make. The feedback for that distractor then addresses that exact misconception.
+
+Why this tip is needed: Authors write distractors as filler ("I need three more wrong choices"). Without a specific misconception in mind, the choice is either too easy to eliminate or weirdly tricky. The Questions Guide expects every distractor to teach. Effective authoring means asking, before writing each distractor: "What mistake would a student make to land here?"
+
+---
+
+### Tip N9: Randomize Answer Order — Alphabetize or Sort by Value
+
+The author must randomize the position of the correct answer across questions. Do not put the correct answer in the same slot every time. A useful default: alphabetize the choices, or order numerical choices smallest-to-largest.
+
+Why this tip is needed: Authors unconsciously place the correct answer in the same position (often A or the second-from-last). Across a question set this becomes a pattern students can exploit. Alphabetizing or sorting by value removes the author's bias from the equation entirely.
+
+---
+
+### Tip N10: Correct-Answer Feedback Restates the Answer in the Question's Terms FIRST
+
+Begin correct-answer feedback by restating the answer in the language of the question. Then explain why, with calculations as needed. Assume the student guessed.
+
+Wrong: "Correct! The two-sided limit does not exist."
+
+Right: "A two-sided limit exists only if the left-hand and right-hand limits are equal. Because they differ here, the function's two-sided limit does not exist."
+
+Why this tip is needed: This builds on Tip A8 with a specific structural rule the new guide makes explicit. The "restate first, explain second" pattern catches the student who guessed correctly without understanding. It also creates a repeated rhythm across all explanations that students learn to rely on.
+
+---
+
+### Tip N11: Incorrect-Answer Feedback Uses Magic Words: but, not, however, instead, so
+
+Incorrect feedback connects the student's choice back to the question with explicit logical connectors. Start by saying why the answer is wrong, then point toward the correct answer.
+
+Wrong: "The correct answer is f' is positive on the interval."
+
+Right: "f being positive does not tell us how f is changing. Instead, the sign of f' determines whether f is increasing or decreasing."
+
+Why this tip is needed: Without a connector word, feedback reads as two unrelated facts (one about the wrong choice, one about the right answer). The magic words — *but, not, however, instead, so* — explicitly link the misconception to the correction. This is a structural rule, not a stylistic one.
+
+---
+
+### Tip N12: Never Start Feedback with "Right," "Wrong," "Almost," or "Try Again"
+
+The platform automatically displays "Correct" or "Incorrect" and signals correctness with color. Do not duplicate that signal in your feedback text.
+
+Wrong: "Right! The derivative is 2x."
+
+Right: "The derivative of x² is 2x, found by applying the power rule."
+
+Why this tip is needed: Authors instinctively echo the correctness signal because every classroom interaction begins that way. The redundancy wastes prime real estate at the top of the feedback — the place where the explanation should start. Skip the verdict; the platform already gave it.
+
+---
+
+### Tip N13: Never Say "You" in Feedback — and Never Diagnose the Student's Specific Mistake
+
+Do not address the student as "you." Do not write feedback that assumes the student made a particular error ("This answer choice forgets to carry the…").
+
+Wrong: "You forgot to carry the 2."
+
+Right: "The correct calculation requires carrying the 2 through both terms."
+
+Why this tip is needed: "You forgot…" assumes the student made the exact error the author imagined. They may have made a different mistake — or guessed. Phrasing feedback in third person and focusing on the math (not the student's process) avoids the awkward case of telling a student they did something they did not do.
+
+---
+
+### Tip N14: Every Answer Choice Gets Its Own Unique Feedback
+
+Do not repeat the same feedback text across multiple answer choices. Even when distractors are similar, vary the feedback so each one targets its specific misconception.
+
+Wrong: All three wrong choices get "Incorrect. The correct answer is 2x."
+
+Right: Each wrong choice gets feedback explaining the specific error that produces that choice (sign error, missed exponent, applied wrong rule, etc.).
+
+Why this tip is needed: Copy-paste feedback wastes the most powerful teaching moment in the question — the moment a student got it wrong. The student deserves to know why their specific answer was wrong, not just that a different answer was right.
+
+---
+
+### Tip N15: Hints Scaffold — Hint 1 Gets the Student ⅓ of the Way, Hint 2 Gets Them ⅔
+
+When a question has two hints, they must form a ladder. Hint 1 nudges. Hint 2 commits. Together they should leave the student a small step from the answer, not at the answer.
+
+Wrong:
+Hint 1: "Use the chain rule."
+Hint 2: "The chain rule is f'(g(x)) · g'(x)."
+
+Right:
+Hint 1: "Because (3x²+5)⁴ is a composition of functions, the chain rule applies."
+Hint 2: "Use the chain rule with outer function f(u) = u⁴ and inner function g(x) = 3x²+5."
+
+Why this tip is needed: Authors write hints as a single-effort task and do not think in fractions of progress. The result is two hints at the same level of help, or two hints that together give away the answer. The ⅓ / ⅔ scaffold turns hints into a progression.
+
+---
+
+### Tip N16: Hint Counts Are Question-Type-Specific
+
+Different question types take different numbers of hints. Authors must know the rule for the type they are writing.
+
+- Embedded Question (EQ), SA: 2 hints
+- Follow-Up Question (FU), SA: 2 hints
+- Homework Question (HW), SA: 1 hint
+- Quiz Question, SA: 0 hints (no scaffolding)
+- Final Exam Question, SA: 0 hints
+
+Why this tip is needed: There is no universal "default number of hints." Authors writing a homework question who copy-paste structure from a follow-up question will accidentally double the hints. Authors writing a quiz question who carry over homework patterns will leave hints that should not be there. The count is part of the question type's identity.
+
+---
+
+### Tip N17: Avoid "Filler" Embedded Questions — EQs Must Hit the Lesson's Key Concept
+
+Every embedded question must directly reinforce the central concept of the animated figure. Do not ask the student to perform trivial side calculations the figure could just show.
+
+Wrong (in a chain rule lesson on x² + 2x cos(y) + 1 = 0):
+EQ: "What is the derivative of 1?"
+EQ: "What is the derivative of x²?"
+
+Right:
+EQ: "The term _____ requires the chain rule."
+
+Why this tip is needed: Authors write filler EQs because they need an EQ at a specific point in the animation and the obvious calculations are easy to ask about. But every EQ is real estate. Spending it on a derivative the student already knows wastes the engagement, and worse, signals that the lesson is about easy material when the actual learning target is harder.
+
+---
+
+### Tip N18: One Concept Per Question — One Possible Correct Answer
+
+Each question must test exactly one concept and have exactly one defensible correct answer. If a question tests two ideas at once, split it into two questions.
+
+Wrong: A single SA question that requires the student to (1) find a derivative AND (2) evaluate it at a point AND (3) interpret the result.
+
+Right: A multistep QS that breaks those into three connected steps, each with its own prompt and correct answer.
+
+Why this tip is needed: Authors compound questions because they want efficiency or a "challenging" feel. The result is a question where a student can be 80% right and still get the whole thing wrong. Splitting compound questions into a multistep set gives partial credit, surfaces the exact step where the student got stuck, and matches the Learnvia scaffolding model.
+
+---
+
+### Tip N19: MC Answer-Choice Capitalization Depends on Where the Blank Falls
+
+Capitalize the first letter of each answer choice — UNLESS the choice fills a blank that does not begin a sentence. Then lowercase.
+
+Capitalized (blank starts the sentence):
+Stem: "_____ is the first step in solving the equation."
+Choices: "Distributing 3 on both sides" / "Dividing both sides by 3"
+
+Lowercase (blank is mid-sentence):
+Stem: "While solving the equation, the first step is to ____."
+Choices: "use the one-to-one property" / "divide both sides by 3"
+
+Why this tip is needed: Authors apply one rule to all questions, usually capitalizing every choice. The result reads grammatically wrong when the choice slots into a mid-sentence blank ("While solving the equation, the first step is to Use the one-to-one property"). The rule is mechanical but easy to miss.
+
+---
+
+### Tip N20: Long-Answer Questions: No Math-Heavy Typing
+
+Students answering an LA question type into a plain text field with no virtual keyboard. Do not require lengthy equations, multiple notations, or symbol-heavy responses.
+
+Wrong: "Use the limit definition of the derivative to find f'(x) for f(x) = 3x² + 2. Show all work."
+
+Right: "Explain what the limit definition of the derivative represents in terms of slopes of secant lines."
+
+Why this tip is needed: Authors design LA questions like exam problems where students would handwrite a multi-line solution. Typing math without a virtual keyboard is slow and error-prone. The right LA question asks for explanation, comparison, or interpretation — the kinds of answers that suit a text field.
+
+---
+
+### Tip N21: Multistep Question Sets Are Allowed Only in FU and HW
+
+Multistep QS — a series of related questions building to a solution — are permitted only in Follow-Up sections and Homework sections. They are not allowed in Quizzes, EQs, or LAs as standalone constructs.
+
+Why this tip is needed: Authors who love the multistep structure will reach for it everywhere. The platform restricts it to the two contexts where scaffolded teaching is the intent. Writing a multistep QS for a quiz means the work has to be redone.
+
+---
+
+### Tip N22: SA Test Values Are Required When the Answer Contains a Variable
+
+For any SA question whose correct answer is an expression involving a variable, the author must supply 3 test values. The platform uses these to recognize mathematically equivalent answers.
+
+Required:
+- 3 test values
+- Never use 0
+- 1 and –1 are good defaults
+- Include at least one large value (e.g., 1500 or 10,000)
+
+Why this tip is needed: This is a platform-mechanics rule with no equivalent in any textbook. Without test values, the platform cannot accept "x² + 2x" and "2x + x²" as the same answer. Authors who skip test values cause student answers to be marked wrong when they are right.
+
+---
+
+### Tip N23: Set Tolerance to 0 for Exact Answers, .001 for "Round to 3 Decimal Places"
+
+For SA numerical answers, tolerance must match what the prompt asks for.
+
+- Exact answer (e.g., √2): tolerance 0
+- "Round to 3 decimal places" (e.g., 1.414): tolerance 0.001
+- "Round to the nearest tenth" (e.g., 2.2): tolerance 0.05 or as appropriate
+
+Why this tip is needed: Authors set tolerance once and forget it. A tolerance of 0.01 on an exact-answer question lets the student type the wrong digits and still pass. A tolerance of 0 on a "round to 3 decimals" question rejects the right answer because of float arithmetic. The tolerance is part of writing the correct prompt.
+
+---
+
+### Tip N24: At Least One LA Question Per Lesson — Scaffold Up to It
+
+Every lesson should include at least one long-answer question, preceded by scaffolding (short answers, multistep sets) that prepare the student to write the LA response.
+
+Why this tip is needed: LA questions take students more time and effort, so authors under deadline skip them. The Questions Guide makes them required at a minimum cadence (one per lesson). Authors need to plan the LA into the lesson architecture from the start, not append it at the end as filler.
+
+---
+
+### Tip N25: Use Italics for Emphasis — Never Bold
+
+When a word or phrase needs emphasis in a question stem, prompt, or feedback, italicize it. Do not bold.
+
+Wrong: "The slope is **negative** on this interval."
+
+Right: "The slope is *negative* on this interval."
+
+(Note: Bolding *is* used for the key term inside a definition tag, which is its own structural marker — but not for in-prose emphasis.)
+
+Why this tip is needed: Bolding pulls the eye too aggressively and clashes with the bold formatting reserved for defined terms. Italics is the universal academic convention for emphasis, and Learnvia is consistent with that convention.
+
+---
+
+## Quick Reference: All 65 Tips at a Glance
 
 ### Style Guide Tips (S1-S10)
 | # | Title | One-Line Summary |
@@ -536,3 +883,32 @@ Why this tip is needed: The style guide has a nuanced, important rule. The autho
 | C18 | Em-Dash Ban | Style guide bans what authoring guide models |
 | C19 | People Possessives | Role-based possessives for word problems |
 | C20 | "Because" Not "Since" | Style guide rule the authoring guide violates |
+
+### Questions Guide Tips (N1-N25)
+| # | Title | One-Line Summary |
+|---|-------|-----------------|
+| N1 | MC Prompts Are Statements | Fill-in-the-blank, never "What is…?" |
+| N2 | Choices Continue the Stem Grammatically | Stem + choice must read as one sentence |
+| N3 | Parallel Length | A long correct choice gives itself away |
+| N4 | Parallel Construction | All gerunds OR all noun phrases — never mix |
+| N5 | Don't Echo Stem Language in a Choice | Repeated wording cues the answer |
+| N6 | No NOT / EXCEPT / Always / Sometimes / Never | Banned constructions in prompts |
+| N7 | No Opposites or Absolutes in Choices | Both create cognitive cues unrelated to math |
+| N8 | Distractors = Misconceptions | Each wrong choice maps to a real student error |
+| N9 | Randomize Answer Order | Alphabetize or sort by value |
+| N10 | Correct Feedback: Restate, Then Explain | Assume the student guessed |
+| N11 | Incorrect Feedback Uses Magic Words | but, not, however, instead, so |
+| N12 | No "Right" / "Wrong" / "Almost" / "Try Again" | Platform handles the verdict |
+| N13 | No "You" — and No Diagnosing Mistakes | Third person, focused on math |
+| N14 | Unique Feedback per Choice | Never copy-paste across distractors |
+| N15 | Hints Scaffold ⅓ → ⅔ | Hint 1 nudges, Hint 2 commits |
+| N16 | Hint Counts by Question Type | EQ=2, FU=2, HW=1, Quiz=0 |
+| N17 | No Filler EQs | EQ must hit the lesson's key concept |
+| N18 | One Concept, One Correct Answer | Split compound questions into a multistep set |
+| N19 | Choice Capitalization Follows the Blank | Capital if blank starts the sentence, lowercase if mid-sentence |
+| N20 | LA Questions: No Math-Heavy Typing | No virtual keyboard — ask for explanation, not equations |
+| N21 | Multistep QS: FU and HW Only | Not allowed in EQ, Quiz, or standalone LA |
+| N22 | SA Variable Answers Need 3 Test Values | Never 0; use 1, –1, and a large value |
+| N23 | Tolerance Matches the Prompt | 0 for exact, 0.001 for "round to 3 decimals" |
+| N24 | At Least One LA Per Lesson | Scaffold up to it from SA and multistep |
+| N25 | Italics for Emphasis, Not Bold | Bold is reserved for defined terms |
